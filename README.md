@@ -1,2 +1,0 @@
-# sumpoorn_ui
-

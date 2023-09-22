@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sampoorn</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="">
+  <header class="container-fluid d-flex justify-content-between align-items-center px-5 app_header">
+    <div class="app_header_left">
+      <a href="home.html">
+        <img src="assets/images/logo.png" class="img-fluid app_logo" />
+      </a>
+    </div>
+    <div class="d-flex flex-column app_header_right">
+      <a class="align-self-end header_cta">Institution Login</a>
+      <ul class="nav nav-underline">
+        <li class="nav-ite">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Index</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="methodology.html">Methodology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="app_methodology text-center">
+    <div class="app_methodology_title_section">
+      <div class="row gx-0">
+        <p class="col-md-6">Jocata Sumpoorn is constructed using consent-enabled and anonymised GST return data of more
+          than <span class="fw-600">50,000 MSMEs</span>
+          seeking credit from financial institutions starting <span class="fw-600">from October 2019</span> to date</p>
+      </div>
+    </div>
+    <div class="app_methodology_tabs">
+      <div class="row gx-0 justify-content-center">
+        <div class="col-md-10 mt-3 mb-5">
+          <ul class="nav nav-pills justify-content-evenly p-2 mb-5" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link p-0 active" id="pills-geographic-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-geographic" type="button" role="tab" aria-controls="pills-geographic"
+                aria-selected="true">Geographic<br />Distribution</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link p-0" id="pills-turnover-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-turnover" type="button" role="tab" aria-controls="pills-turnover"
+                aria-selected="false">Turnover<br />Distribution</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link p-0" id="pills-industry-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-industry" type="button" role="tab" aria-controls="pills-industry"
+                aria-selected="false">Industry<br />Distribution</button>
+            </li>
+          </ul>
+          <div class="tab-content p-2" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-geographic" role="tabpanel"
+              aria-labelledby="pills-geographic-tab">
+              <h5 class="app_home_sec_title mb-4">Geographic Distribution of Sumpoorn MSMEs</h5>
+              <p class="app_methodology_caption pb-5">The sample is well-distributed across India ensuring
+                representativeness
+                of the Index.</p>
+                <div class="row">
+                  <div class="col-md-8"><img src="assets/images/chart-1.png" class="img-fluid mb-4" id="fixedImage" /></div>
+                  <div class="col-md-4 app_methodology_state_cities">
+                    <h6>States & UTs</h6>    
+                    <div class="scrollable-content" id="scrollableContent">
+                      <ul class="state-list ps-0 list-unstyled" id="stateList">
+                        <!-- State and city data will be populated here -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-turnover" role="tabpanel" aria-labelledby="pills-turnover-tab">
+              <h5 class="app_home_sec_title mb-4">Turnover Distribution of Sumpoorn MSMEs</h5>
+              <p class="app_methodology_caption col-md-5 mx-auto pb-5">The sample is well-distributed as per turnover
+                ensuring
+                representativeness and stability of the Index.</p>
+              <img src="assets/images/chart-2.png" class="img-fluid mb-4" />
+              <p class="chart_caption py-5">Fig.- % Distribution by turnover size within MSME sample</p>
+              <div class="app_roadmap_note col-md-10 mx-auto mb-5 px-0 py-3">
+                <div class="row gx-0 justify-content-between align-items-center">
+                  <div class="col-md-8 pe-2">
+                    <p><span class="fw-600">Note:</span> Above classification is based on the revised GoI definition of MSMEs (w.e.f 1st July 2020).
+                      However, as Investment in plant and machinery is not available in GST returns, the classification
+                      is limited to TTM turnover and may not accurately represent the MSME status in some cases. </p>
+                  </div>
+                  <div class="col-md-4 app_methodology_tbl_section">
+                    <h6>GOI Definition of MSME</h6>
+                    <table class="table table-borderless table-responsive">
+                      <thead>
+                        <tr>
+                          <th>Entity</th>
+                          <th>Turnover</th>
+                          <th>Investment*</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="fw-600">Micro</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 5</span> cr.</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 1</span> cr.</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-600">Small</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 50</span> cr.</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 10</span> cr.</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-600">Medium</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 250</span> cr.</td>
+                          <td>&lt;=  <span class="fw-bold">₹ 50</span> cr.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="tbl_caption">*Investment in Plant and Machinery or Equipment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-industry" role="tabpanel" aria-labelledby="pills-industry-tab">
+              <h5 class="app_home_sec_title col-md-6 mx-auto mb-4">Industry Distribution by value of Sumpoorn MSMEs (Top
+                7 HSNs)</h5>
+              <p class="app_methodology_caption col-md-8 mx-auto pb-5">The sample is well-distributed as per industry as
+                shown by the Top 7
+                HSN mix remaining largely stable over time ensuring representativeness and stability of the Index.</p>
+              <img src="assets/images/chart-1.png" class="img-fluid mb-4" />
+              <p class="chart_caption py-5">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p>
+              <div class="app_roadmap_note col-md-10 mx-auto mb-5">
+                <p>Note: A GSTIN is classified as belonging to an industry, if TTM sales of a particular HSN (2-digit
+                  level) in a month is > 50% of sum of TTM sales of all HSNs by that GSTIN for the same month. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app_methodology_section pt-5">
+      <div class="row gx-0 justify-content-center">
+        <div class="col-md-10 my-5">
+          <h5 class="app_home_sec_title mb-5">Methodology</h5>
+          <p class="app_methodology_caption col-md-6 mx-auto pb-5">Jocata Sumpoorn is a relative amplitude adjusted
+            composite diffusion index
+            that is developed using actual monthly sales data reflected in official GSTN returns of credit-seeking MSMEs
+            and is not based on survey data. </p>
+          <div class="app_methodology_cards my-5">
+            <div class="container">
+              <div class="row row-cols-5 gx-4">
+                <div class="col">
+                  <div class="p-4 app_methodology_card_box">
+                    <img src="" class="img-fluid">
+                    <p>Using GST Returns calculate MSME <span class="fw-bold">TTM sales</span> for current and previous
+                      month. </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 app_methodology_card_box">
+                    <img src="" class="img-fluid">
+                    <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs and delta of amplitude of
+                        sales</span> between them.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 app_methodology_card_box">
+                    <img src="" class="img-fluid">
+                    <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
+                        month</span> TTM sales</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 app_methodology_card_box">
+                    <img src="" class="img-fluid">
+                    <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index</span></p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 app_methodology_card_box">
+                    <img src="" class="img-fluid">
+                    <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 app_methodology_section_border"></div>
+      </div>
+    </div>
+    <div class="app_consideration_section py-5">
+      <div class="row gx-0 justify-content-center">
+        <div class="col-md-8 my-5">
+          <h5 class="app_home_sec_title mb-5 pb-3">Considerations</h5>
+          <div class="app_consideration_cards my-5">
+            <div class="container">
+              <div class="row row-cols-3 gx-4">
+                <div class="col">
+                  <h6 class="mb-4">Data Length & Sample</h6>
+                  <div class="px-4 py-5 app_consideration_card_box">
+                    <ul class="pl-2">
+                      <li>Minimum 13 months of sales data (GSTR1) is required to calculate the Index for a particular
+                        month.</li>
+                      <li>Minimum 1000 MSMEs are considered to release the Index for any month.</li>
+                      <li>Current monthly count of MSMEs is ~2500.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="mb-4">Approach Rationale</h6>
+                  <div class="px-4 py-5 app_consideration_card_box">
+                    <ul class="pl-2">
+                      <li>Using count and amplitude overcomes the shortcoming of a traditional count-based diffusion
+                        approach and captures the magnitude of economic activity more effectively.</li>
+                      <li>As ‘sales amplitude’ has been incorporated into the diffusion index methodology, outliers need
+                        to
+                        be handled and the output scaled using sigmoid function.</li>
+                      <li>TTM approach ensures business seasonality is captured and idiosyncratic fluctuations
+                        smoothened
+                        out using a moving average.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="mb-4">Data Source</h6>
+                  <div class="px-4 py-5 app_consideration_card_box">
+                    <ul class="pl-2">
+                      <li>GSTN is an authentic, reliable, and official source of MSME sales data.</li>
+                      <li>As a GST-ASP (Authorised Service Provider), Jocata fetches data digitally from the GSTN
+                        network,
+                        further ensuring data authenticity and accuracy.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app_methodology_index_bin">
+      <div class="row gx-0 justify-content-center">
+        <div class="col-md-12 my-5">
+          <h5 class="app_home_sec_title mb-5">Index bin ranges<br />
+            and their interpretation</h5>
+          <p class="app_methodology_caption col-md-4 mx-auto pb-5">The Index measures MSME sales performance on a scale
+            of 0 to 1, where the bin ranges represent the state of contraction or expansion of economic activity of the
+            sector.</p>
+          <img src="assets/images/chart-1.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="app_methodology_index_frequency">
+      <div class="row gx-0 justify-content-center">
+        <div class="col-md-12">
+          <h5 class="app_home_sec_title mb-5">Index publishing frequency</h5>
+          <p class="app_methodology_caption col-md-4 mx-auto">The Index will be released monthly with only a
+            four-week reporting cycle after the reference month ends (The Index for January will be published in the 1st
+            week of March).</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="app_footer">
+    <div class="container d-flex justify-content-between align-items-center">
+      <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
+        <li class="list-group-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="custom.js"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
