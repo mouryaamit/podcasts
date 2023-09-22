@@ -21,14 +21,17 @@
 </head>
 
 <body class="">
-  <header class="container-fluid d-flex justify-content-between align-items-center px-5 app_header">
+  <header class="container-fluid d-flex justify-content-between align-items-center app_header">
     <div class="app_header_left">
       <a href="home.html">
-        <img src="assets/images/logo.png" class="img-fluid app_logo" />
+        <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
       </a>
     </div>
-    <div class="d-flex flex-column app_header_right">
-      <a class="align-self-end header_cta">Institution Login</a>
+    <div class="d-flex flex-column align-self-end app_header_right">
+      <div class="header_links align-self-end">
+        <a class="header_cta">Institution Login</a>
+        <a href="contact.html" class="header_page_link">Contact</a>
+      </div>
       <ul class="nav nav-underline">
         <li class="nav-ite">
           <a class="nav-link" href="home.html">Home</a>
@@ -83,17 +86,18 @@
               <p class="app_methodology_caption pb-5">The sample is well-distributed across India ensuring
                 representativeness
                 of the Index.</p>
-                <div class="row">
-                  <div class="col-md-8"><img src="assets/images/chart-1.png" class="img-fluid mb-4" id="fixedImage" /></div>
-                  <div class="col-md-4 app_methodology_state_cities">
-                    <h6>States & UTs</h6>    
-                    <div class="scrollable-content" id="scrollableContent">
-                      <ul class="state-list ps-0 list-unstyled" id="stateList">
-                        <!-- State and city data will be populated here -->
-                      </ul>
-                    </div>
+              <div class="row">
+                <div class="col-md-8"><img src="assets/images/chart-1.png" class="img-fluid mb-4" id="fixedImage" />
+                </div>
+                <div class="col-md-4 app_methodology_state_cities">
+                  <h6>States & UTs</h6>
+                  <div class="scrollable-content" id="scrollableContent">
+                    <ul class="state-list ps-0 list-unstyled" id="stateList">
+                      <!-- State and city data will be populated here -->
+                    </ul>
                   </div>
                 </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="pills-turnover" role="tabpanel" aria-labelledby="pills-turnover-tab">
               <h5 class="app_home_sec_title mb-4">Turnover Distribution of Sumpoorn MSMEs</h5>
@@ -105,7 +109,8 @@
               <div class="app_roadmap_note col-md-10 mx-auto mb-5 px-0 py-3">
                 <div class="row gx-0 justify-content-between align-items-center">
                   <div class="col-md-8 pe-2">
-                    <p><span class="fw-600">Note:</span> Above classification is based on the revised GoI definition of MSMEs (w.e.f 1st July 2020).
+                    <p><span class="fw-600">Note:</span> Above classification is based on the revised GoI definition of
+                      MSMEs (w.e.f 1st July 2020).
                       However, as Investment in plant and machinery is not available in GST returns, the classification
                       is limited to TTM turnover and may not accurately represent the MSME status in some cases. </p>
                   </div>
@@ -122,18 +127,18 @@
                       <tbody>
                         <tr>
                           <td class="fw-600">Micro</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 5</span> cr.</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 1</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 5</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 1</span> cr.</td>
                         </tr>
                         <tr>
                           <td class="fw-600">Small</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 50</span> cr.</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 10</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 10</span> cr.</td>
                         </tr>
                         <tr>
                           <td class="fw-600">Medium</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 250</span> cr.</td>
-                          <td>&lt;=  <span class="fw-bold">₹ 50</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 250</span> cr.</td>
+                          <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
                         </tr>
                       </tbody>
                     </table>
@@ -288,7 +293,6 @@
       <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
-        <li class="list-group-item"><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </footer>

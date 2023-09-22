@@ -1,34 +1,37 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <title>Sampoorn</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="styles.css">
-      </head>
+<head>
+    <title>Sampoorn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body class="">
-    <header class="container-fluid d-flex justify-content-between align-items-center px-5 app_header">
+    <header class="container-fluid d-flex justify-content-between align-items-center app_header">
         <div class="app_header_left">
             <a href="home.html">
-                <img src="assets/images/logo.png" class="img-fluid app_logo" />
+                <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
             </a>
         </div>
-        <div class="d-flex flex-column app_header_right">
-            <a class="align-self-end header_cta">Institution Login</a>
+        <div class="d-flex flex-column align-self-end app_header_right">
+            <div class="header_links align-self-end">
+                <a class="header_cta">Institution Login</a>
+                <a href="contact.html" class="header_page_link">Contact</a>
+            </div>
             <ul class="nav nav-underline">
                 <li class="nav-item">
                     <a class="nav-link" href="home.html">Home</a>
@@ -48,12 +51,12 @@
             </ul>
         </div>
     </header>
-    <main class="app_tou py-5">
+    <main class="app_tou">
         <div class="row gx-0 justify-content-center">
             <div class="col-md-8">
                 <div class="app_tou_content">
                     <h4 class="app_tou_content_main_title mb-4">Terms of Use</h4>
-                    <h6 class="app_tou_content_sub_title">Disclaimer</h6>
+                    <h6 class="app_tou_content_sub_title mb-0">Disclaimer</h6>
                     <p class="mb-5">Terms of Use Disclaimer This Sumpoorn Index Report (“Sumpoorn”) is prepared by
                         Jocata Financial Advisory & Technology Services Private Limited (“Jocata”). Jocata is neither a
                         Credit Rating Agency nor an External Credit Assessment Institution. The Sumpoorn shall not be
@@ -76,7 +79,7 @@
                         own independent due diligence before using and making any decisions. Users are also advised to
                         consider the Sumpoorn as a supplementary business performance assessment tool only. The contents
                         of the Sumpoorn shall not be reproduced in part or whole without permission.</p>
-                    <h6 class="app_tou_content_sub_title">Privacy Policy</h6>
+                    <h6 class="app_tou_content_sub_title mb-0">Privacy Policy</h6>
                     <p class="mb-5">The personal data (Personal Identifiable Information) or PII collected for the
                         purpose of generating the Jocata Sumpoorn shall be protected by complying with relevant data
                         protection regulations. Jocata may retain Personal Identifiable Information for as long as there
@@ -86,30 +89,11 @@
                         protecting personal data. It is also secured against unauthorized access by third parties.
                         Jocata will be compliant with all data privacy and security regulations relating to access and
                         use of Customer’s data and/or Customer’s Client data.</p>
-                    <h6 class="app_tou_content_sub_title">Intellectual Property Rights</h6>
-                    <p class="mb-5">Jocata is and shall be the sole and exclusive owner of all the Intellectual Property
+                    <h6 class="app_tou_content_sub_title mb-0">Intellectual Property Rights</h6>
+                    <p>Jocata is and shall be the sole and exclusive owner of all the Intellectual Property
                         Rights (IPR) in the Jocata Sumpoorn Index including the form and format submitted, either any
                         documentation or derivative works performed based on the Sub-Indices. The content of Sumpoorn on
                         the website is protected by copyright.</p>
-                    <h6 class="app_tou_content_sub_title mb-3">Contact</h6>
-                    <div class="row row-cols-2">
-                        <div class="col">
-                            <h6 class="app_tou_content_sub_title">Jocata</h6>
-                            <p>Email: sumpoorn@jocata.com<br />
-                                Call: +91 40-23385581<br />
-                                Location: Roxana Fortune Complex, 2nd Floor, Road No. 12, Banjara Hills, Hyderabad,
-                                Telangana - 500034<br />
-                                Website: <a href="www.jocata.com" class="text-underline-with-cursor">www.jocata.com</a>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h6 class="app_tou_content_sub_title">SIDBI</h6>
-                            <p>Toll Free Number: 1800226753 (Timing: 10:30 am to 6:00 pm)<br />
-                                Location: Head Office - SIDBI Tower, 15, Ashok Marg, Lucknow, Uttar Pradesh -
-                                226001<br />
-                                Website: <a href="www.sidbi.in" class="text-underline-with-cursor">www.sidbi.in</a></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -119,7 +103,6 @@
             <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
-                <li class="list-group-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

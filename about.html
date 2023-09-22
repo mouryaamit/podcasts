@@ -1,34 +1,37 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <title>Sampoorn</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="styles.css">
-      </head>
+<head>
+    <title>Sampoorn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body class="">
-    <header class="container-fluid d-flex justify-content-between align-items-center px-5 app_header">
+    <header class="container-fluid d-flex justify-content-between align-items-center app_header">
         <div class="app_header_left">
             <a href="home.html">
-                <img src="assets/images/logo.png" class="img-fluid app_logo" />
+                <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
             </a>
         </div>
-        <div class="d-flex flex-column app_header_right">
-            <a class="align-self-end header_cta">Institution Login</a>
+        <div class="d-flex flex-column align-self-end app_header_right">
+            <div class="header_links align-self-end">
+                <a class="header_cta">Institution Login</a>
+                <a href="contact.html" class="header_page_link">Contact</a>
+            </div>
             <ul class="nav nav-underline">
                 <li class="nav-item">
                     <a class="nav-link" href="home.html">Home</a>
@@ -48,11 +51,11 @@
             </ul>
         </div>
     </header>
-    <main class="app_about py-5">
+    <main class="app_about">
         <div class="row gx-0 justify-content-center">
             <div class="col-md-5">
                 <div class="app_about_info">
-                    <img src="assets/images/logo.png" class="img-fluid jo-logo my-5" />
+                    <img src="assets/images/logo-jocata.png" class="img-fluid jo-logo my-5" />
                     <p class="mb-5"><span class="fw-600">Jocata,</span> a wholly owned subsidiary of <span
                             class="fw-600">BillDesk</span> (IndiaIdeas), is a fintech solution provider that
                         aids financial institutions in achieving their Digital Transformation objectives. Jocata powers
@@ -75,7 +78,7 @@
                         economy. </p>
                 </div>
                 <div class="app_about_info">
-                    <img src="assets/images/sidbi-logo.png" class="img-fluid jo-logo my-5" />
+                    <img src="assets/images/logo-sidbi.png" class="img-fluid jo-logo my-5" />
                     <p class="mb-5"><span class="fw-600">Small Industries Development Bank of India (SIDBI)</span>
                         established in 1990, is the Principal Financial
                         Institution engaged in executing the triple agenda of promotion, financing & development of the
@@ -93,18 +96,16 @@
                 </div>
             </div>
         </div>
-        <div class="row gx-0 my-5 justify-content-center">
-            <div class="col-md-8 app_about_gallery">
-                <div class="mt-5">
-                    <h6 class="app_about_gallery_title">Index Steering Group</h6>
-                    <p class="app_about_gallery_info mb-4">Steering Group comprising the two organisations behind
-                        Sumpoorn, and
-                        external members to oversee the launch and evolution of the Index.</p>
-                </div>
+        <div class="row gx-0 app_about_gallery">
+            <div class="col-md-10">
+                <h6 class="app_about_gallery_title">Index Steering Group</h6>
+                <p class="app_about_gallery_info mb-4">Steering Group comprising the two organisations behind
+                    Sumpoorn, and
+                    external members to oversee the launch and evolution of the Index.</p>
                 <div class="row row-cols-3 pb-5">
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-ramann.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Sh. Sivasubramanian Ramann</p>
                                 <p class="designation">Chairman & Managing Director, SIDBI</p>
@@ -113,7 +114,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-singh.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Sh. S.N. Singh</p>
                                 <p class="designation">CGM, SIDBI</p>
@@ -122,7 +123,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-prashant.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Prashant Muddu</p>
                                 <p class="designation">MD & CEO, Jocata</p>
@@ -131,7 +132,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-narasima.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Narasimhan V</p>
                                 <p class="designation">Principal Advisor, Jocata.
@@ -142,7 +143,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-sumita.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Dr. Sumita Kale </p>
                                 <p class="designation">CEO and Senior Fellow, Indicus Foundation.
@@ -160,7 +161,7 @@
                 <div class="row row-cols-3">
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-vivek.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Sh. Vivek Kumar Malhotra</p>
                                 <p class="designation">CGM, SIDBI</p>
@@ -169,7 +170,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-sanjay.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Sh. Sanjay Jain</p>
                                 <p class="designation">CGM, SIDBI</p>
@@ -178,7 +179,7 @@
                     </div>
                     <div class="col">
                         <figure class="figure">
-                            <img src="..." class="figure-img img-fluid mb-4" alt="...">
+                            <img src="assets/images/member-narasima.png" class="figure-img img-fluid mb-4" alt="...">
                             <figcaption class="figure-caption">
                                 <p class="name mb-0">Narasimhan V</p>
                                 <p class="designation">Principal Advisor, Jocata.
@@ -196,7 +197,6 @@
             <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
-                <li class="list-group-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>
