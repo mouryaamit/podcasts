@@ -900,7 +900,6 @@ div.tooltip-area {
     font-size: 1rem;
 }
 
-.focus circle,
 .flag1_focus circle,
 .flag2_focus circle {
     fill: #2FB36B;
@@ -927,7 +926,7 @@ div.tooltip-area {
     stroke-width: 0;
 }
 
-.mytext {
+/* .mytext {
     position: absolute;
     text-align: center;
     padding: .07rem .2rem;
@@ -937,7 +936,7 @@ div.tooltip-area {
     border-radius: 5px;
     pointer-events: none;
     font-size: 1rem;
-}
+} */
 
 .y-axis-titles {
     overflow-wrap: break-word;
@@ -968,7 +967,7 @@ div.tooltip-area {
     font-weight: bold;
 }
 
-.x_month_name.active {
+.x_month_name.active,.x_month_name_context.active {
     font-weight: bold;
     /* should remove color for x-axis selection */
     color: black;
@@ -1087,11 +1086,63 @@ div.tooltip-area {
 }
 
 .infoIcon {
-    background-image: url("assets/images/info.png");
-    /* background-image: url("D:/Jocata sumpoorn/my Sumpoorn code - v3 with real time data/code/src/assets/info.png"); */
+    background-image: url("/assets/icons/info.png");
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
 }
 
 /* End of graph css */
+
+/* start of context graph css */
+
+.float-chart {
+max-width: 100%;
+height: auto;  
+padding-left: 135px;
+}
+
+.float-checkboxes {
+width: 5%;
+float: left;
+margin-top: 100px;
+position: static;
+} 
+.y-axis-data{
+width: 55px;
+float: left;
+margin-top: 44px;
+margin-right: 10px;
+}
+
+.chart_desc {
+width: 100%;
+text-align: left;
+padding-left: 275px;
+}
+
+.iipColorClass {
+color:#87CEEB;
+}
+.pmiColorClass {
+color:#FFA500;
+float: left;
+}
+.gvaColorClass {
+color:#0000FF;
+float: right;
+
+}
+
+/* g.axis line {
+  stroke-dasharray: 1 1;
+} */
+
+#rect_xaxis_context { 
+  fill: #C8C8C8; 
+}
+
+/* End of context graph css */
+
+
+

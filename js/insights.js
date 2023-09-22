@@ -17,7 +17,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 right: 50,
                 bottom: 50,
                 left: 150
-            }
+            },
             width = 1100 - margin.left - margin.right,
                 height = 400 - margin.top - margin.bottom;
 
@@ -429,9 +429,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         .style("opacity", 0.9);
                     tooltip
                         .html(dataValue.value)
-                        .style("left", (mousePointer.x + 160) + "px") //(event.pageX) + 
-                        .style("top", (mousePointer.y + 190) + "px"); //(event.pageY - 30) +
-                    ;
+                        .style("left", (mousePointer.x + width) - 740 + "px") //(event.pageX) +
+                        .style("top", (mousePointer.y + height) - 100 + "px"); //(event.pageY - 30) +
+                        ;
                     radiation
                         .transition()
                         .duration(2000)
