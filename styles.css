@@ -41,6 +41,7 @@ main {
   height: 113px;
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
+  z-index: 999;
 }
 
 /* .app_header .app_header_left .app_logo {
@@ -79,10 +80,6 @@ main {
 .app_header .app_header_right .nav-item .nav-link.active {
   border-bottom: 3px solid var(--app-black);
 }
-
-/* .app_header .app_header_right .nav-item:last-child .nav-link {
-  padding-right: 0;
-} */
 
 /* Header Styles End */
 
@@ -144,33 +141,40 @@ main {
 
 .app_home_subscribe {
   background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app_home_subscribe p {
-  color: #282828;
-  font: 400 var(--font-size-24px) "Poppins", sans-serif;
+  color: #4a4a4a;
+  font: 600 var(--font-size-24px) "Poppins", sans-serif;
+  line-height: 120%;
+  margin-bottom: 0;
+  margin-right: 2rem;
 }
 
 .app_home_subscribe .subscribe_cta {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: #7b66ff;
+  background: #25bb61;
   color: var(--app-white);
   padding: 12px 24px;
   border-radius: 60px;
-  font: 600 var(--font-size-24px) "Poppins", sans-serif;
+  font: 500 var(--font-size-20px) "Poppins", sans-serif;
 }
 
 .app_home_sec_title {
-  color: var(--app-black);
-  font: 700 31px "Poppins", sans-serif;
+  color: #4a4a4a;
+  font: 700 var(--font-size-28px) "Poppins", sans-serif;
   line-height: 120%;
 }
 
 .app_home_info {
   margin: 5rem 0;
 }
+
 .app_home_info_content p {
   color: var(--app-black);
   font: 400 var(--font-size-24px) "Inter", sans-serif;
@@ -274,7 +278,7 @@ main {
 
 /* Terms of Use Styles Start Here */
 .app_tou {
-  background: #F2F2F2;
+  background: #f2f2f2;
   padding: 10rem 0;
 }
 
@@ -306,52 +310,57 @@ main {
 
 /* Roadmap Styles Start Here */
 .app_roadmap {
-  background: #f6f6f6;
-}
-.app_roadmap_bg_blue {
-  background: linear-gradient(0deg, #eef2ec -5.35%, #f6f6f6 137.43%);
+  background: #d1f2e8;
 }
 
-.app_roadmap_bg_blue .bg_blue_left_content {
-  color: #000;
-  font-size: var(--font-size-28px);
-  line-height: 38px;
+.app_roadmap .app_roadmap_title {
+  color: #194974;
+  font: 700 var(--font-size-28px) "Poppins", sans-serif;
+  line-height: 137.523%; /* 38.506px */
 }
 
-.app_roadmap_bg_blue .bg_blue_right_content {
-  color: #5a5a5a;
-  font-size: var(--font-size-18px);
-  line-height: 24px;
+.app_roadmap .app_roadmap_caption {
+  color: #194974;
+  font: 400 var(--font-size-28px) "Inter", sans-serif;
+  line-height: 137.523%; /* 38.506px */
 }
 
-.app_roadmap_bg_blue .bg_blue_caption {
-  color: #000;
-  font-size: var(--font-size-18px);
+.arrow_down:hover {
+  transform: translateY(10px);
+  -webkit-transition: transform 500ms;
+  -moz-transition: transform 500ms;
+  -o-transition: transform 500ms;
+  transition: transform 500ms;
 }
 
-.app_roadmap .app_roadmap_bg_blue .app_roadmap_chart_con {
-  background: #fff;
+.app_roadmap_chart_con {
   border-radius: 16px;
+  background: var(--app-white);
   box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.1),
     0px 34px 34px 0px rgba(0, 0, 0, 0.09), 0px 76px 46px 0px rgba(0, 0, 0, 0.05),
     0px 136px 54px 0px rgba(0, 0, 0, 0.01), 0px 212px 59px 0px rgba(0, 0, 0, 0);
 }
 
+.app_roadmap .app_roadmap_grey_section {
+  background: #f8f8f8;
+  padding-top: 4rem;
+}
+
 .chart_caption {
-  color: #000;
+  color: #4a4a4a;
   font-size: var(--font-size-16px);
-  font-weight: 600;
-  line-height: 140%;
+  font-weight: 700;
+  line-height: 140.523%;
 }
 
 .app_roadmap_note {
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
   padding: 2rem 5rem;
 }
 
 .app_roadmap_note p {
-  color: #767676;
+  color: #929292;
   font-size: var(--font-size-14px);
   line-height: 140.523%;
   margin-bottom: 0;
@@ -361,6 +370,10 @@ main {
 .app_roadmap .app_roadmap_hsn .app_roadmap_hsn_info {
   color: #000;
   font-size: var(--font-size-18px);
+}
+
+.app_roadmap_grey_text {
+  color: #a6a6a6;
 }
 
 .app_roadmap_hsn_link {
@@ -383,14 +396,18 @@ main {
 
 /* Methodology Styles Start Here */
 .app_methodology {
-  background: #f6f6f6;
+  background: #c4e2fd;
+}
+
+.blue-text {
+  color: #194974 !important;
 }
 
 .app_methodology_title_section p {
-  color: #000;
+  color: #194974;
   font-size: var(--font-size-28px);
-  font-weight: 300;
-  line-height: 120%; /* 33.6px */
+  font-family: "Poppins", sans-serif;
+  line-height: 130.5%; /* 33.6px */
   margin: 10rem auto;
 }
 
@@ -399,16 +416,15 @@ main {
 }
 
 .app_methodology_tabs .nav-pills .nav-link {
-  color: rgba(0, 0, 0, 0.8);
+  color: #4a4a4a;
   font: 400 var(--font-size-18px) "Poppins", sans-serif;
   text-align: left;
+  line-height: 120%;
+  margin-left: 1rem;
 }
 
 .app_methodology_tabs .nav-pills .nav-link.active {
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.8);
-  border-bottom: 2.5px solid var(--app-black);
-  border-radius: 0;
   font-weight: 700;
 }
 
@@ -456,9 +472,9 @@ main {
 }
 
 .app_methodology_caption {
-  color: #000;
+  color: #4a4a4a;
   font-size: var(--font-size-18px);
-  line-height: 119.2%; /* 21.456px */
+  line-height: normal;
 }
 
 .app_methodology_state_cities {
@@ -523,7 +539,7 @@ main {
 .app_methodology_cards .app_methodology_card_box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 7px;
   background: #fff;
@@ -550,23 +566,16 @@ main {
 }
 
 .app_consideration_cards h6 {
-  color: #000;
+  color: #194974;
   font: 600 var(--font-size-21px) "Poppins", sans-serif;
   line-height: 120%; /* 25.2px */
 }
 .app_consideration_cards .app_consideration_card_box {
-  border-radius: var(--Table-spacing, 8px);
-  background: linear-gradient(
-      0deg,
-      rgba(103, 155, 233, 0.2) 0%,
-      rgba(103, 155, 233, 0.2) 100%
-    ),
-    #fff;
-  min-height: 449px;
+  border-top: 1px solid #9CBDDA;
 }
 
 .app_consideration_cards .app_consideration_card_box ul li {
-  color: #072796;
+  color: #194974;
   font-size: var(--font-size-16px);
   line-height: 120%;
   text-align: start;
@@ -575,7 +584,7 @@ main {
 
 .app_methodology_index_bin {
   background: #ececec;
-  padding: 4rem 0;
+  padding-top: 4rem;
 }
 
 .app_methodology_index_frequency {
@@ -586,6 +595,18 @@ main {
 /* Index Styles Start Here */
 .app_index {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.app_index_chart_con .nav-pills .nav-link {
+  color: #717171;
+  font: 400 var(--font-size-16px) "Poppins", sans-serif;
+}
+
+.app_index_chart_con .nav-pills .nav-link.active {
+  background-color: #e1e1e1;
+  color: var(--app-black);
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .app_index_commentary_con {
@@ -606,7 +627,7 @@ main {
   background: #f1f1f1;
   border-radius: 2px;
   padding: 0 12px;
-  /* width: 50px; */
+  width: 50px;
   height: 72px;
 }
 
@@ -614,22 +635,16 @@ main {
   background-color: #e6e6e6;
 }
 
-.app_index
-  .carousel_commentary
-  .carousel_controls:hover
-  span.button_left_arrow {
-  transform: translateX(-10px);
+.app_index .carousel_commentary .carousel_controls:hover .button_left_arrow {
+  transform: translateX(-5px);
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
   -o-transition: transform 500ms;
   transition: transform 500ms;
 }
 
-.app_index
-  .carousel_commentary
-  .carousel_controls:hover
-  span.button_right_arrow {
-  transform: translateX(10px);
+.app_index .carousel_commentary .carousel_controls:hover .button_right_arrow {
+  transform: translateX(5px);
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
   -o-transition: transform 500ms;
@@ -637,8 +652,9 @@ main {
 }
 
 .carousel_commentary .carousel_controls span.control_name {
-  color: #000;
-  font: 500 var(--font-size-18px) "Alegreya Sans";
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: var(--font-size-16px);
 }
 
 .carousel_commentary .carousel-item.bg-body {
@@ -656,13 +672,16 @@ main {
 }
 
 .carousel_commentary .commentary_header p.commentary_month {
-  color: #000;
-  font: 500 var(--font-size-18px) "Alegreya Sans";
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: var(--font-size-16px);
+  line-height: normal;
 }
 
 .carousel_commentary .commentary_header p.commentary_title {
-  color: #000;
-  font: 700 var(--font-size-24px) "Alegreya Sans";
+  color: #2e2e2e;
+  font: 700 var(--font-size-20px) "Poppins", sans-serif;
+  line-height: normal;
 }
 
 .carousel_commentary .commentary_body {
@@ -672,7 +691,9 @@ main {
 
 .commentary_body .commentary_body_left_title {
   color: #119345;
-  font: 700 var(--font-size-20px) "Alegreya Sans";
+  font-weight: 700;
+  font-size: var(--font-size-18px);
+  line-height: normal;
   margin-bottom: 0;
 }
 
@@ -738,14 +759,14 @@ main {
 
 .commentary_body .commentary_body_left_detail {
   color: #505050;
-  font-family: "Alegreya Sans";
-  font-size: 20px;
-  line-height: normal;
+  font-size: 17px;
+  line-height: 130%;
 }
 
 .commentary_body .commentary_body_right .commentary_body_right_title {
-  color: #000;
-  font: 600 var(--font-size-18px) "Work Sans";
+  color: #2e2e2e;
+  font-weight: 700;
+  font-size: var(--font-size-18px);
   line-height: 120%; /* 21.6px */
   margin-left: 5px;
 }
@@ -756,16 +777,17 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
+  overflow: hidden;
 }
 
 .member_con .member_details .member_name {
-  color: #000;
+  color: #4a4a4a;
   font: 600 var(--font-size-18px) "Work Sans";
   line-height: 120%; /* 21.6px */
 }
 
 .member_con .member_details .member_title {
-  color: #000;
+  color: #4a4a4a;
   font: 400 var(--font-size-14px) "Work Sans";
   line-height: 120%; /* 21.6px */
 }
@@ -774,39 +796,44 @@ main {
   margin: 15px 5px;
 }
 .commentary_body_right .commentary_body_right_detail p {
-  color: #000;
-  font: 400 var(--font-size-20px) "Alegreya Sans";
-  line-height: normal;
+  color: #4a4a4a;
+  font-size: 17px;
+  line-height: 130%;
 }
 
 .app_index_context_con {
-  background: #fafafa;
+  background: #deefff;
 }
 
 .app_index_context_con .app_index_context_title {
-  color: var(--app-black);
+  color: #194974;
   font: 700 28px "Poppins", sans-serif;
   line-height: 120%;
 }
 
 .app_index_context_con .app_index_context_caption {
-  color: var(--app-black);
-  font-size: var(--font-size-16px);
+  color: #194974;
+  font-size: var(--font-size-18px);
   line-height: 130%;
 }
 
 .app_index_context_table {
   text-align: left;
   background: var(--app-white);
-  box-shadow: 0px 5px 9px 0px rgba(97, 97, 97, 0.18);
+  box-shadow: 0px 4px 9px 0px rgba(26, 73, 115, 0.1),
+    0px 16px 16px 0px rgba(26, 73, 115, 0.09),
+    0px 36px 22px 0px rgba(26, 73, 115, 0.05),
+    0px 64px 26px 0px rgba(26, 73, 115, 0.01),
+    0px 100px 28px 0px rgba(26, 73, 115, 0),
+    0px -3px 23px 0px rgba(25, 73, 116, 0.09);
 }
 .app_index_context_table thead {
-  background: #ededed;
+  background: #edf5fd;
 }
 
 .app_index_context_table thead th {
   vertical-align: baseline;
-  color: #000;
+  color: #194974;
   font-size: var(--font-size-18px);
   font-weight: 700;
   line-height: 120%;
@@ -880,7 +907,6 @@ main {
 .jo-logo {
   width: 196px;
 }
-
 /* Start of graph css */
 .x.axis line,
 .y.axis line {

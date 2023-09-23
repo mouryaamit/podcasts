@@ -161,7 +161,7 @@ function populateStatesAndCities(statesData) {
     const chevronIcon = document.createElement('img');
     chevronIcon.classList.add('toggle-icon');
      // Initial right chevron icon
-    chevronIcon.src = 'assets/icons/chevron-right.png';
+    chevronIcon.src = 'assets/icons/expand_more.png';
     stateName.appendChild(chevronIcon);
 
     stateName.addEventListener('click', () => toggleCities(stateName, chevronIcon));
@@ -186,7 +186,7 @@ function toggleCities(stateElement, chevronIcon) {
   const cityDropdown = stateElement.nextElementSibling;
 
   cityDropdown.style.display = cityDropdown.style.display === 'flex' ? 'none' : 'flex';
-  chevronIcon.src = cityDropdown.style.display === 'flex' ? 'assets/icons/chevron-down.png' : 'assets/icons/chevron-right.png'; // Change the icon based on dropdown display
+  chevronIcon.src = cityDropdown.style.display === 'flex' ? 'assets/icons/chevron-down.png' : 'assets/icons/expand_more.png'; // Change the icon based on dropdown display
 
   stateElement.classList.toggle('fw-bold');
 }
@@ -268,3 +268,6 @@ scrollableContent.addEventListener('scroll', function(event) {
     document.body.style.overflow = 'hidden';
   }
 });
+
+
+// Changing Active color of selected Methodology Distribution
