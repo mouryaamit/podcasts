@@ -41,6 +41,7 @@ main {
   height: 113px;
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
+  z-index: 999;
 }
 
 /* .app_header .app_header_left .app_logo {
@@ -171,6 +172,7 @@ main {
 .app_home_info {
   margin: 5rem 0;
 }
+
 .app_home_info_content p {
   color: var(--app-black);
   font: 400 var(--font-size-24px) "Inter", sans-serif;
@@ -588,6 +590,18 @@ main {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.app_index_chart_con .nav-pills .nav-link {
+  color: #717171;
+  font: 400 var(--font-size-16px) "Poppins", sans-serif;
+}
+
+.app_index_chart_con .nav-pills .nav-link.active {
+  background-color: #E1E1E1;
+  color: var(--app-black);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
 .app_index_commentary_con {
   background: #fafafa;
   padding-bottom: 10rem;
@@ -606,7 +620,7 @@ main {
   background: #f1f1f1;
   border-radius: 2px;
   padding: 0 12px;
-  /* width: 50px; */
+  width: 50px;
   height: 72px;
 }
 
@@ -617,8 +631,8 @@ main {
 .app_index
   .carousel_commentary
   .carousel_controls:hover
-  span.button_left_arrow {
-  transform: translateX(-10px);
+  .button_left_arrow {
+  transform: translateX(-5px);
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
   -o-transition: transform 500ms;
@@ -628,8 +642,8 @@ main {
 .app_index
   .carousel_commentary
   .carousel_controls:hover
-  span.button_right_arrow {
-  transform: translateX(10px);
+  .button_right_arrow {
+  transform: translateX(5px);
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
   -o-transition: transform 500ms;
@@ -637,8 +651,9 @@ main {
 }
 
 .carousel_commentary .carousel_controls span.control_name {
-  color: #000;
-  font: 500 var(--font-size-18px) "Alegreya Sans";
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: var(--font-size-16px);
 }
 
 .carousel_commentary .carousel-item.bg-body {
@@ -656,13 +671,16 @@ main {
 }
 
 .carousel_commentary .commentary_header p.commentary_month {
-  color: #000;
-  font: 500 var(--font-size-18px) "Alegreya Sans";
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: var(--font-size-16px);
+  line-height: normal;
 }
 
 .carousel_commentary .commentary_header p.commentary_title {
-  color: #000;
-  font: 700 var(--font-size-24px) "Alegreya Sans";
+  color: #2e2e2e;
+  font: 700 var(--font-size-20px) "Poppins", sans-serif;
+  line-height: normal;
 }
 
 .carousel_commentary .commentary_body {
@@ -672,7 +690,9 @@ main {
 
 .commentary_body .commentary_body_left_title {
   color: #119345;
-  font: 700 var(--font-size-20px) "Alegreya Sans";
+  font-weight: 700;
+  font-size: var(--font-size-18px);
+  line-height: normal;
   margin-bottom: 0;
 }
 
@@ -738,14 +758,14 @@ main {
 
 .commentary_body .commentary_body_left_detail {
   color: #505050;
-  font-family: "Alegreya Sans";
-  font-size: 20px;
-  line-height: normal;
+  font-size: 17px;
+  line-height: 130%;
 }
 
 .commentary_body .commentary_body_right .commentary_body_right_title {
-  color: #000;
-  font: 600 var(--font-size-18px) "Work Sans";
+  color: #2e2e2e;
+  font-weight: 700;
+  font-size: var(--font-size-18px);
   line-height: 120%; /* 21.6px */
   margin-left: 5px;
 }
@@ -756,16 +776,17 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
+  overflow: hidden;
 }
 
 .member_con .member_details .member_name {
-  color: #000;
+  color: #4a4a4a;
   font: 600 var(--font-size-18px) "Work Sans";
   line-height: 120%; /* 21.6px */
 }
 
 .member_con .member_details .member_title {
-  color: #000;
+  color: #4a4a4a;
   font: 400 var(--font-size-14px) "Work Sans";
   line-height: 120%; /* 21.6px */
 }
@@ -774,39 +795,39 @@ main {
   margin: 15px 5px;
 }
 .commentary_body_right .commentary_body_right_detail p {
-  color: #000;
-  font: 400 var(--font-size-20px) "Alegreya Sans";
-  line-height: normal;
+  color: #4a4a4a;
+  font-size: 17px;
+  line-height: 130%;
 }
 
 .app_index_context_con {
-  background: #fafafa;
+  background: #DEEFFF;
 }
 
 .app_index_context_con .app_index_context_title {
-  color: var(--app-black);
+  color: #194974;
   font: 700 28px "Poppins", sans-serif;
   line-height: 120%;
 }
 
 .app_index_context_con .app_index_context_caption {
-  color: var(--app-black);
-  font-size: var(--font-size-16px);
+  color: #194974;
+  font-size: var(--font-size-18px);
   line-height: 130%;
 }
 
 .app_index_context_table {
   text-align: left;
   background: var(--app-white);
-  box-shadow: 0px 5px 9px 0px rgba(97, 97, 97, 0.18);
+  box-shadow: 0px 4px 9px 0px rgba(26, 73, 115, 0.10), 0px 16px 16px 0px rgba(26, 73, 115, 0.09), 0px 36px 22px 0px rgba(26, 73, 115, 0.05), 0px 64px 26px 0px rgba(26, 73, 115, 0.01), 0px 100px 28px 0px rgba(26, 73, 115, 0.00), 0px -3px 23px 0px rgba(25, 73, 116, 0.09);
 }
 .app_index_context_table thead {
-  background: #ededed;
+  background: #EDF5FD;
 }
 
 .app_index_context_table thead th {
   vertical-align: baseline;
-  color: #000;
+  color: #194974;
   font-size: var(--font-size-18px);
   font-weight: 700;
   line-height: 120%;
