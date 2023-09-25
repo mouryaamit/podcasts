@@ -36,10 +36,6 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                             function (dataForGVA) {
                                                 var dataForGVA = dataForGVA.gvaValues;
 
-                                                //needs to monve code
-
-
-                                                console.log("ready!");
                                                 // set the dimensions and margins of the graph
                                                 const margin = {
                                                     top: 50,
@@ -47,9 +43,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     bottom: 50,
                                                     left: 70
                                                 },
-                                                    width = 900 - margin.left - margin.right,
-                                                    height = 400 - margin.top - margin.bottom;
-
+                                                width = 900 - margin.left - margin.right,
+                                                height = 400 - margin.top - margin.bottom;
+                                                
                                                 const parseDate = d3.timeParse("%m-%Y");
 
                                                 const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
@@ -181,7 +177,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     ;
                                                 const svg = d3.select("#my_dataviz_context")
                                                     .append("svg") //append svg element inside #chart
-                                                    .attr("width", width + margin.left + margin.right + 100) //set width
+                                                    .attr("width", width + margin.left + margin.right + 120) //set width
                                                     .attr("height", height + margin.top + margin.bottom + 30) //set height
                                                     .append("g")
                                                     .attr("id", "testg")
@@ -259,77 +255,14 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     .text("Jocata Sumpoorn")
                                                     ;
 
-                                                let iipYaxisTxt = svg.append("text")
-                                                    .attr("opacity", ".6")
-                                                    .attr("x", -(height + 10))
-                                                    .attr("y", width + 35)
-                                                    .attr("id", "iipYaxisTxt")
-                                                    .style("text-anchor", "end")
-                                                    .style('fill', '#87CEEB')
-                                                    .attr("transform", "rotate(-90)")
-                                                    .text("IIP")
-                                                    ;
-                                                svg.append("text").attr("opacity", ".6")
-                                                    .attr("x", -(height + 10))
-                                                    .attr("y", width + 62)
-                                                    .attr("id", "pmiYaxisTxt")
-                                                    .style("text-anchor", "end")
-                                                    .style('fill', '#FFA500')
-                                                    .attr("transform", "rotate(-90)")
-                                                    .text("PMI");
-
-                                                svg.append("text")
-                                                    .attr("opacity", ".6")
-                                                    .attr("x", -(height + 10))
-                                                    .attr("y", width + 92)
-                                                    .attr("id", "gvaYaxisTxt")
-                                                    .style("text-anchor", "end")
-                                                    .style('fill', '#0000FF')
-                                                    .attr("transform", "rotate(-90)")
-                                                    .text("GVA");
-
-                                                let yAxis_right_for_iip_tick = svg.append("g")
-                                                    //.attr("class", "y axis")
-                                                    //.attr("stroke","grey")
-                                                    .attr("stroke-width", "0.1")
-                                                    .attr("opacity", "1")
-                                                    .attr("transform", `translate(${width + 18},0)`) //+20
-                                                    .call(yAxis_right_for_iip)
-                                                    .selectAll("text")
-                                                    .style("color", "#87CEEB")
-                                                    // .attr("x", "1em")
-                                                    // .attr("y", "2em")
-                                                    ;
-
-                                                let yAxis_right_for_pmi_tick = svg.append("g")
-                                                    //.attr("class", "y axis")
-                                                    //.attr("stroke","grey")
-                                                    .attr("stroke-width", "0")
-                                                    //.attr("opacity",".6")
-                                                    .attr("transform", `translate(${width + 30},0)`) //+20
-                                                    .call(yAxis_right_for_pmi)
-                                                    //.selectAll("text")
-                                                    .style("color", "#FFA500")
-                                                    // .attr("x", "1em")
-                                                    // .attr("y", "2em")
-                                                    ;
-
-                                                let yAxis_right_for_gva_tick = svg.append("g")
-                                                    .attr("class", "gvaColorClass")
-                                                    //.attr("stroke","grey")
-                                                    .attr("stroke-width", "0")
-                                                    //.attr("opacity",".6")
-                                                    .attr("transform", `translate(${width + 70},0)`) //+20
-                                                    .call(yAxis_right_for_gva)
-                                                    //.selectAll("text")
-                                                    //.style("color","#FFA500")
-                                                    // .attr("x", "1em")
-                                                    // .attr("y", "2em")
-                                                    ;
-                                                //my commented code
-                                                //const div = d3.select("body").append("div")
-                                                //  .attr("class", "tooltip-donut")
-                                                //.style("opacity", 0);
+                                                var yAxisTickSpace = [width+18,width+45,width+70];
+                                                var yAxisTickNameSpace = [width+35,width+62,width+92];
+                                                var yAxis_right_for_iip_tick;
+                                                var yAxis_right_for_pmi_tick;
+                                                var yAxis_right_for_gva_tick;
+                                                refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
+                                                refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])
+                                                refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])
 
                                                 const tooltip = d3.select("#my_dataviz_context") // can be body
                                                     .append("div")
@@ -415,59 +348,169 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                 var IIPLine;
                                                 var PMILine;
                                                 var GVALine;
-                                                addIIPLine(dataForIIP)
-                                                addPMILine(dataForPMI)
-                                                addGVALine(dataForGVA)
-
-                                                d3.selectAll(".region_cb").on("change", function () {
-                                                    if (this.value == 'IIP' && this.checked) { // adding data points
-                                                        addIIPLine(dataForIIP);
+                                                
+                                                addIIPLine(dataForIIP,width + yAxisTickSpace[0])
+                                                addPMILine(dataForPMI,width + yAxisTickSpace[1])
+                                                addGVALine(dataForGVA,width + yAxisTickSpace[2])
+                                                var isIipCheckBoxEnabled = true,isPmiCheckBoxEnabled = true,isGvaCheckBoxEnabled = true;
+                                                d3.selectAll(".context_checkboxes").on("change", function () {
+                                                    if (this.value == 'IIP' && this.checked) {
+                                                        isIipCheckBoxEnabled = true;
+                                                        refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
+                                                        addIIPLine(dataForIIP,width + yAxisTickSpace[0]);                                
+                                                        if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+                                                            yAxis_right_for_pmi_tick.remove()
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])   
+                                                            yAxis_right_for_gva_tick.remove()
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])                                    
+                                                        } else if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                                                            yAxis_right_for_gva_tick.remove()
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
+                                                        } else if(isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                                                            yAxis_right_for_gva_tick.remove()
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                 
+                                                        }
                                                         document.getElementById("iipDescDiv").style.display = "block";
-                                                        d3.select("#iipYaxisTxt").style("opacity", .6);
                                                     } else if (this.value == 'IIP' && !this.checked) {
+                                                        isIipCheckBoxEnabled = false;
                                                         removeIIPLine();
+                                                        if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+                                                            yAxis_right_for_pmi_tick.remove()
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])                                                         
+                                                            yAxis_right_for_gva_tick.remove()
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
+                                                        } else if(isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                                                            yAxis_right_for_gva_tick.remove()
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0])                                    
+                                                        } else if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                                                            yAxis_right_for_pmi_tick.remove()
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])   
+                                                        }
+
                                                         document.getElementById("iipDescDiv").style.display = "none";
-                                                        d3.select("#iipYaxisTxt").style("opacity", 0);
+                                                        d3.select("#iipYaxisTxt").remove();
                                                     }
-                                                    if (this.value == 'PMI' && this.checked) { // adding data points
-                                                        addPMILine(dataForPMI);
+                                                    if (this.value == 'PMI' && this.checked) { 
+                                                        isPmiCheckBoxEnabled = true;
+                                                        addPMILine(dataForPMI,width + yAxisTickSpace[1]);
+                                                        if(isIipCheckBoxEnabled == true){
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])
+                                                            if(isGvaCheckBoxEnabled == true) {
+                                                                yAxis_right_for_gva_tick.remove()
+                                                                refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])                                    
+                                                            }
+                                                        } else {
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])
+                                                            if(isGvaCheckBoxEnabled == true) {
+                                                                yAxis_right_for_gva_tick.remove()
+                                                                refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
+                                                            }
+                                                        }
+                                                        
                                                         document.getElementById("pmiDescDiv").style.display = "block";
-                                                        d3.select("#pmiYaxisTxt").style("opacity", .6);
                                                     } else if (this.value == 'PMI' && !this.checked) {
+                                                        isPmiCheckBoxEnabled = false;
                                                         removePMILine();
+                                                        if(isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+                                                            yAxis_right_for_gva_tick.remove();
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);
+                                                        } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                                                            yAxis_right_for_gva_tick.remove();
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0]);
+                                                        }
                                                         document.getElementById("pmiDescDiv").style.display = "none";
-                                                        d3.select("#pmiYaxisTxt").style("opacity", 0);
+                                                        d3.select("#pmiYaxisTxt").remove();
                                                     }
-                                                    if (this.value == 'GVA' && this.checked) { // adding data points
-                                                        addGVALine(dataForGVA);
+                                                    if (this.value == 'GVA' && this.checked) {
+                                                        isGvaCheckBoxEnabled = true;
+                                                        if(isIipCheckBoxEnabled ==true && isPmiCheckBoxEnabled == true){                                                             
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2]);                                                        
+                                                        } else if (isIipCheckBoxEnabled ==true && isPmiCheckBoxEnabled == false){
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);                                                        
+                                                        } else if(isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true){
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);                                                        
+                                                        } else if(isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == false)  {
+                                                            refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0])
+                                                        }
+                                                        addGVALine(dataForGVA,width + yAxisTickSpace[2]);
                                                         document.getElementById("gvaDescDiv").style.display = "block";
-                                                        d3.select("#gvaYaxisTxt").style("opacity", .6);
                                                     } else if (this.value == 'GVA' && !this.checked) {
+                                                        isGvaCheckBoxEnabled = false;
                                                         removeGVALine();
                                                         document.getElementById("gvaDescDiv").style.display = "none";
-                                                        d3.select("#gvaYaxisTxt").style("opacity", 0);
+                                                        d3.select("#gvaYaxisTxt").remove();
                                                     }
-
-
 
                                                 });
 
+                                                function refreshYaxisTicks(tickName,tickWidth,yAxisTickNameSpace){
+                                                    if(tickName == 'iip'){
+                                                        yAxis_right_for_iip_tick = svg.append("g")
+                                                            .attr("stroke-width", "0.1")
+                                                            .attr("opacity", "1")
+                                                            .attr("transform", `translate(`+tickWidth+`,0)`) //+20
+                                                            .call(yAxis_right_for_iip)
+                                                            .selectAll("text")
+                                                            .style("color", "#87CEEB")
+                                                            ;
+                                                        
+                                                        d3.select("#iipYaxisTxt").remove();
+                                                        svg.append("text")
+                                                            .attr("opacity", ".6")
+                                                            .attr("x", -(height + 10))
+                                                            .attr("y", yAxisTickNameSpace)
+                                                            .attr("id", "iipYaxisTxt")
+                                                            .style("text-anchor", "end")
+                                                            .style('fill', '#87CEEB')
+                                                            .attr("transform", "rotate(-90)")
+                                                            .text("IIP")
+                                                            ;
+                                                    } else if(tickName == 'pmi'){
+                                                        yAxis_right_for_pmi_tick = svg.append("g")
+                                                            .attr("stroke-width", "0")
+                                                            //.attr("opacity",".6")
+                                                            .attr("transform", `translate(`+tickWidth+`,00)`) //+20
+                                                            .call(yAxis_right_for_pmi)
+                                                            .selectAll("text")
+                                                            .style("fill", "#FFA500")
+                                                            ;
+                                                        
+                                                        d3.select("#pmiYaxisTxt").remove();
+                                                        svg.append("text").attr("opacity", ".6")
+                                                            .attr("x", -(height + 10))
+                                                            .attr("y", yAxisTickNameSpace)
+                                                            .attr("id", "pmiYaxisTxt")
+                                                            .style("text-anchor", "end")
+                                                            .style('fill', '#FFA500')
+                                                            .attr("transform", "rotate(-90)")
+                                                            .text("PMI");
+
+                                               
+                                                    } else if(tickName == 'gva') {
+                                                        yAxis_right_for_gva_tick = svg.append("g")
+                                                            .attr("class", "gvaColorClass")
+                                                            .attr("stroke-width", "0")
+                                                            //.attr("opacity",".6")
+                                                            .attr("transform", `translate(`+tickWidth+`,00)`) //+20
+                                                            .call(yAxis_right_for_gva)
+                                                            .selectAll("text")
+                                                            .style("fill", "#0000FF")
+                                                            ;
+                                                        
+                                                        d3.select("#gvaYaxisTxt").remove();
+                                                        svg.append("text")
+                                                            .attr("opacity", ".6")
+                                                            .attr("x", -(height + 10))
+                                                            .attr("y", yAxisTickNameSpace)
+                                                            .attr("id", "gvaYaxisTxt")
+                                                            .style("text-anchor", "end")
+                                                            .style('fill', '#0000FF')
+                                                            .attr("transform", "rotate(-90)")
+                                                            .text("GVA");
+                                                    }
+                                                }
+
                                                 function addIIPLine(data) {
-
-                                                    yAxis_right_for_iip_tick.remove();
-
-                                                    yAxis_right_for_iip_tick = svg.append("g")
-                                                        //.attr("class", "y axis")
-                                                        //.attr("stroke","grey")
-                                                        .attr("stroke-width", "0.1")
-                                                        .attr("opacity", "1")
-                                                        .attr("transform", `translate(${width + 18},0)`) //+20
-                                                        .call(yAxis_right_for_iip)
-                                                        .selectAll("text")
-                                                        .style("color", "#87CEEB")
-                                                        // .attr("x", "1em")
-                                                        // .attr("y", "2em")
-                                                        ;
 
                                                     // Add the line 2
                                                     IIPLine = svg.append("path")
@@ -494,21 +537,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     yAxis_right_for_iip_tick.remove();
                                                 }
                                                 function addPMILine(data) {
-
-                                                    yAxis_right_for_pmi_tick.remove();
-                                                    yAxis_right_for_pmi_tick = svg.append("g")
-                                                        //.attr("class", "y axis")
-                                                        //.attr("stroke","grey")
-                                                        .attr("stroke-width", "0")
-                                                        //.attr("opacity",".6")
-                                                        .attr("transform", `translate(${width + 45},00)`) //+20
-                                                        .call(yAxis_right_for_pmi)
-                                                        .selectAll("text")
-                                                        .style("fill", "#FFA500")
-                                                        // .attr("x", "1em")
-                                                        // .attr("y", "2em")
-                                                        ;
-
+                                                    
                                                     // Add the line 2
                                                     PMILine = svg.append("path")
                                                         .datum(data)
@@ -536,21 +565,6 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                 }
 
                                                 function addGVALine(data) {
-
-                                                    yAxis_right_for_gva_tick.remove();
-
-                                                    yAxis_right_for_gva_tick = svg.append("g")
-                                                        .attr("class", "gvaColorClass")
-                                                        //.attr("stroke","grey")
-                                                        .attr("stroke-width", "0")
-                                                        //.attr("opacity",".6")
-                                                        .attr("transform", `translate(${width + 70},00)`) //+20
-                                                        .call(yAxis_right_for_gva)
-                                                        .selectAll("text")
-                                                        .style("fill", "#0000FF")
-                                                        // .attr("x", "1em")
-                                                        // .attr("y", "2em")
-                                                        ;
 
                                                     // Add the line 2
                                                     GVALine = svg.append("path")
@@ -714,8 +728,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                             .style("opacity", 0.9);
                                                         tooltip
                                                             .html(dataValue.value)
-                                                            .style("left", (mousePointer.x + width) - 620 + "px") //(event.pageX) +
-                                                            .style("top", (mousePointer.y + height) - 130 + "px"); //(event.pageY - 30) +
+                                                            .style("left", (mousePointer.x + width) - 640 + "px") //(event.pageX) +
+                                                            .style("top", (mousePointer.y + height) - 105 + "px"); //(event.pageY - 30) +
 
                                                         radiation
                                                             .transition()
@@ -730,8 +744,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                                 "<span class=\"circle_waves circle_two\"></span> " +
                                                                 "<span class=\"circle_waves circle_three\"></span>" +
                                                                 "</span>")
-                                                            .style("left", (mousePointer.x - width - 97) + "px") //(event.pageX) +
-                                                            .style("top", (mousePointer.y - height) + 132 + "px"); //(event.pageY - 30) +
+                                                            .style("left",(mousePointer.x-410)+"px")
+                                                            .style("top", (mousePointer.y-393) + "px"); //(event.pageY - 30) +
                                                     }
                                                 }
 
