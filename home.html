@@ -91,7 +91,7 @@
       </div>
       <div class="col-md-12 app_home_subscribe py-5">
         <p class="mb-4">For monthly updates on the Index and the MSME sector</p>
-        <a class="subscribe_cta">Subscribe</a>
+        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
       </div>
       <div class="col-md-6 app_home_info">
         <div class="app_home_info_content py-5">
@@ -152,6 +152,109 @@
       </ul>
     </div>
   </footer>
+
+
+  <!-- The Modal -->
+<div class="modal" id="successModal2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">You've successfully subscribed</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="my-3 text-center">
+          You will receive monthly updates of the Jocata Sampoorn Index.
+      </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Subscribe Modal popup -->
+<!-- The Modal -->
+<div class="modal" id="subscribeModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title black-text">Subscribe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="my-3">Complete the form to subscribe.</div>
+
+          <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="First Name *">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Last Name *">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Business Email *">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Job Title *">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Company *">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Industry">
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Contact number">
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                  <button class="sm-primary-button"  data-bs-toggle="modal" data-bs-target="#successModal2">Register</button>
+
+                  <label class="mt-20">
+                      <input type="checkbox" class="terms-checkbox">By submitting this request, I agree with the Jocata's
+                      <span class="custom-link" data-bs-toggle="modal" data-bs-target="#subscribeModal">Terms of use.</span>
+                  </label>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

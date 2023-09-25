@@ -907,3 +907,129 @@ main {
 .jo-logo {
   width: 196px;
 }
+
+
+/* New Styles starts here (Imran Shak - 403) */
+.custom-nav-link{
+  color: var(--app-black);
+    font: 500 var(--font-size-19px) "Poppins", sans-serif;
+    font-size: var(--font-size-16px);
+    margin-left: var(--font-size-15px);
+}
+
+
+.app_contact_cards .app_contact_card_box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
+    0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+    0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
+  min-height: 270px;
+}
+
+.app_contact_cards .app_contact_card_box p {
+  color: #494949;
+  font-family: "Alegreya Sans";
+  font-size: var(--font-size-16px);
+  line-height: 140.523%;
+}
+
+.app_contact_cards .app_contact_card_box .app_contact_card_box_title{
+  color: #000;
+    font-size: var(--font-size-20px);
+    font-weight: 700;
+    line-height: 119.2%;
+}
+
+.width-100{
+  width: 100%;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.form-group .form-control{
+  border-radius: 0;
+  border:none;
+  padding: 0px;
+  border-bottom: 1px solid #cccccc;
+  height: 30px;
+  line-height: 30px;
+}
+
+.form-group .form-control:focus{
+  box-shadow: none;
+  border-color: #000;
+}
+
+.form-group .form-control:active{}
+
+.form-group .form-control:disabled,
+.form-group .form-control[disabled],
+.form-group .form-control.disabled{}
+
+.form-group .form-control:hover{}
+
+.form-group .custom-label{ }
+
+.form-group textarea.form-control{
+  resize: none;
+}
+
+.form-group textarea.form-control.feedback{
+  height: 60px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.sm-primary-button{
+  border:none;
+
+  justify-content: center;
+  align-items: center;
+  background: #25bb61;
+  color: var(--app-white);
+  padding: 6px 35px;
+  border-radius: 8px;
+  font: 500 var(--font-size-16px) "Poppins", sans-serif;
+}
+
+.terms-checkbox{
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+
+.custom-link{
+  text-decoration: underline;
+}
+
+.custom-link:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.app-contact{
+  background-color: #f2f2f2;
+}
+
+.app-contact-block-margin{
+  padding: 10rem 0;
+}
+
+.black-text{
+  color: #000000;
+}
+
+.modal-body{
+  padding: 12px 20px;
+}
