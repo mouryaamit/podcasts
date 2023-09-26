@@ -489,7 +489,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 tooltip
                     .html(dataValue.value)
                     .style("left", (mousePointer.x + width) - 740 + "px") //(event.pageX) +
-                    .style("top", (mousePointer.y + height) - 100 + "px"); //(event.pageY - 30) +
+                    .style("top", (mousePointer.y + height) - 115 + "px"); //(event.pageY - 30) +
                 ;
                 radiation
                     .transition()
@@ -632,12 +632,11 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 return co_ord;
             }
 
-            function renderPointerOnLine(event, date) {
+            function renderPointerOnLine(date) {
                 d3.selectAll("#rect_xaxis").remove(); // to remove highlighting of already selected xaxis data
                 d3.selectAll("#rect_yaxis").remove(); // to remove highlighting of yaxis data
-                const formattedDate = d3.timeFormat("%m-%Y")(date);
-                const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
-
+                
+                const dataValue = mydata.filter((x) => x.category == date)[0];
                 const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
                 addTooltip(tooltip_pointer, dataValue, "", false);
 
@@ -796,23 +795,23 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
 
             function findClosestYvalue(goal) {
                 if (goal <= 0.25) {
-                    return 0;
-                } else if (goal > 0.25 && goal <= 0.45) {
                     return 1;
-                } else if (goal > 0.45 && goal <= 0.50) {
+                } else if (goal > 0.25 && goal <= 0.45) {
                     return 2;
-                } else if (goal > 0.50 && goal <= 0.52) {
+                } else if (goal > 0.45 && goal <= 0.50) {
                     return 3;
-                } else if (goal > 0.52 && goal <= 0.54) {
+                } else if (goal > 0.50 && goal <= 0.52) {
                     return 4;
-                } else if (goal > 0.54 && goal <= 0.60) {
+                } else if (goal > 0.52 && goal <= 0.54) {
                     return 5;
-                } else if (goal > 0.60 && goal <= 0.65) {
+                } else if (goal > 0.54 && goal <= 0.60) {
                     return 6;
-                } else if (goal > 0.65 && goal <= 0.75) {
+                } else if (goal > 0.60 && goal <= 0.65) {
                     return 7;
-                } else if (goal > 0.75 && goal <= 1.00) {
+                } else if (goal > 0.65 && goal <= 0.75) {
                     return 8;
+                } else if (goal > 0.75 && goal <= 1.00) {
+                    return 9;
                 }
                 return -1;
             };
@@ -866,7 +865,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                             // d3.selectAll(".x_month_name").classed("select", false);
                             d3.selectAll(".x_month_name").classed("select_g", false);
                             d3.selectAll(".x_month_name").classed("select_r", false);
-                            renderPointerOnLine(event, d);
+                            const formattedDate = d3.timeFormat("%m-%Y")(d);
+                            renderPointerOnLine(formattedDate);
                         })
                 });
             }
@@ -909,8 +909,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     ;
 
                 const ya_right = d3.axisRight(y2)
-                    .tickSize([-width - 20])
+                    .tickSize([-width])
                     .tickValues(y_right_coordinates)
+                    .tickFormat("")
                     ;
 
                 // append the svg object to the body of the page
@@ -957,7 +958,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("stroke", "grey")
                     .attr("stroke-width", "0.1")
                     .attr("opacity", "1")
-                    .attr("transform", `translate(${width + 20},0)`) //+20
+                    .attr("transform", `translate(${width},0)`) //+20
                     .call(ya_right)
                     ;
                 yaright_text.selectAll(".tick")._groups[0].forEach(function (d_child, i) {
@@ -965,7 +966,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     svg.append('rect')
                         .attr('x', 0)
                         .attr('y', handyValues.y) //225, 165, 150, 120, 105, 75, 0
-                        .attr('width', width + 18)
+                        .attr('width', width)
                         .attr('height', handyValues.h) //75, 60, 15, 19, 15, 30, 75
                         .attr("id", "rect_def_yaxis")
                         .attr('stroke', 'grey')
@@ -1103,7 +1104,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 // d3.selectAll(".x_month_name").classed("select", false);
                 d3.selectAll(".x_month_name").classed("select_g", false);
                 d3.selectAll(".x_month_name").classed("select_r", false);
-                renderPointerOnLine(event, x_orig);
+                renderPointerOnLine(formattedDate);
             };
 
             function addInfoIcon(icon_w, icon_h, graph_id, icon_id) {
@@ -1309,6 +1310,11 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 if (prevCommentaryData) {
                     setPrevAndNextMonthsSlider(prevCommentaryData);
                     addCommentary(prevCommentaryData);
+                    // kavya - need to avoid for month not having commentary data
+                    d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
+                    d3.selectAll(".x_month_name").classed("select_g", false);
+                    d3.selectAll(".x_month_name").classed("select_r", false);
+                    renderPointerOnLine(prevCommentaryData.category);
                 }
             });
             document.getElementById('#slide_next').addEventListener('click', function () {
@@ -1318,6 +1324,10 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 if (nextCommentaryData) {
                     setPrevAndNextMonthsSlider(nextCommentaryData);
                     addCommentary(nextCommentaryData);
+                    d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
+                    d3.selectAll(".x_month_name").classed("select_g", false);
+                    d3.selectAll(".x_month_name").classed("select_r", false);
+                    renderPointerOnLine(nextCommentaryData.category);
                 }
             });
 
