@@ -1156,22 +1156,20 @@ margin-right: 10px;
 }
 
 .chart_desc {
-width: 100%;
+width: 1064px;
 text-align: left;
-padding-left: 275px;
+padding-left: 175px;
+height: 145px;
 }
 
 .iipColorClass {
-color:#87CEEB;
+  color:#2E8DFF;
 }
 .pmiColorClass {
-color:#FFA500;
-float: left;
+  color:#E1861B;
 }
 .gvaColorClass {
-color:#0000FF;
-float: right;
-
+  color:#5451FF;
 }
 
 /* g.axis line {

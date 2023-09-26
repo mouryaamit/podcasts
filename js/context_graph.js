@@ -45,7 +45,10 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                 },
                                                 width = 900 - margin.left - margin.right,
                                                 height = 400 - margin.top - margin.bottom;
-                                                
+                                                const iipColorCode = '#2E8DFF';
+                                                const pmiColorCode = '#E1861B';
+                                                const gvaColorCode = '#5451FF';
+
                                                 const parseDate = d3.timeParse("%m-%Y");
 
                                                 const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
@@ -206,14 +209,41 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     .attr("opacity", ".6")
                                                     .attr("class", "x_month_name_context")
                                                     .call(xAxis_month_name)
-                                                    .selectAll("text")
+                                                    //.selectAll("text")
+                                                    .selectAll(".tick text") // select all the y tick texts
+                                                    .call(function(t){     
+                                                        t.each(function(d){ // for each one
+                                                        var self = d3.select(this);
+                                                        if(self.text() == 'May'){
+                                                            var s = self.text()
+                                                            self.text(''); 
+                                                            self.append("tspan")
+                                                                .attr("fill","currentColor")
+                                                                .attr("x", '-1.7em')
+                                                                .text(s);
+                                                        } else if(self.text() == 'Oct'){
+                                                            var s = self.text()
+                                                            self.text(''); 
+                                                            self.append("tspan")
+                                                                .attr("fill","currentColor")
+                                                                .attr("x", '-1.9em')
+                                                                .text(s);
+                                                        } else if(self.text() == 'Jul'){
+                                                            var s = self.text()
+                                                            self.text(''); 
+                                                            self.append("tspan")
+                                                                .attr("fill","currentColor")
+                                                                .attr("x", '-2em')
+                                                                .text(s);
+                                                        }
+                                                        })
+                                                    })
                                                     .attr("id", "xaxisMonths")
                                                     .attr("x", "-1.8em")
                                                     .attr("y", "0.5em")
                                                     .attr("transform", function (d) {
                                                         return "rotate(-90)"
-                                                    }
-                                                    )
+                                                    })
                                                     .attr("class", function (d, i) { return `x_month_name_context x_month_name_context_${i}`; })
                                                     //.on('click',clickMe)
                                                     .style("cursor", "pointer")
@@ -451,17 +481,17 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                             .attr("transform", `translate(`+tickWidth+`,0)`) //+20
                                                             .call(yAxis_right_for_iip)
                                                             .selectAll("text")
-                                                            .style("color", "#87CEEB")
+                                                            .style("color", iipColorCode)
                                                             ;
                                                         
                                                         d3.select("#iipYaxisTxt").remove();
                                                         svg.append("text")
-                                                            .attr("opacity", ".6")
+                                                            .attr("opacity", "1")
                                                             .attr("x", -(height + 10))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "iipYaxisTxt")
                                                             .style("text-anchor", "end")
-                                                            .style('fill', '#87CEEB')
+                                                            .style('fill', iipColorCode)
                                                             .attr("transform", "rotate(-90)")
                                                             .text("IIP")
                                                             ;
@@ -472,41 +502,59 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                             .attr("transform", `translate(`+tickWidth+`,00)`) //+20
                                                             .call(yAxis_right_for_pmi)
                                                             .selectAll("text")
-                                                            .style("fill", "#FFA500")
+                                                            .style("fill", pmiColorCode)
                                                             ;
                                                         
                                                         d3.select("#pmiYaxisTxt").remove();
-                                                        svg.append("text").attr("opacity", ".6")
+                                                        svg.append("text").attr("opacity", "1")
                                                             .attr("x", -(height + 10))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "pmiYaxisTxt")
                                                             .style("text-anchor", "end")
-                                                            .style('fill', '#FFA500')
+                                                            .style('fill', pmiColorCode)
                                                             .attr("transform", "rotate(-90)")
                                                             .text("PMI");
 
                                                
                                                     } else if(tickName == 'gva') {
                                                         yAxis_right_for_gva_tick = svg.append("g")
-                                                            .attr("class", "gvaColorClass")
                                                             .attr("stroke-width", "0")
                                                             //.attr("opacity",".6")
                                                             .attr("transform", `translate(`+tickWidth+`,00)`) //+20
                                                             .call(yAxis_right_for_gva)
                                                             .selectAll("text")
-                                                            .style("fill", "#0000FF")
+                                                            .style("fill", gvaColorCode)
                                                             ;
                                                         
                                                         d3.select("#gvaYaxisTxt").remove();
-                                                        svg.append("text")
-                                                            .attr("opacity", ".6")
+                                                        let gvaText = svg.append("text")
+                                                            .attr("opacity", "1")
                                                             .attr("x", -(height + 10))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "gvaYaxisTxt")
                                                             .style("text-anchor", "end")
-                                                            .style('fill', '#0000FF')
+                                                            .style('fill', gvaColorCode)
                                                             .attr("transform", "rotate(-90)")
-                                                            .text("GVA");
+                                                            .text("GVA Growth %")
+                                                            .call(function(t){     
+                                                                var self = d3.select(this);
+                                                                var s = t.text().split(' ');
+                                                                t.text(''); 
+                                                                t.append("tspan") 
+                                                                    .attr("fill","currentColor")
+                                                                    .attr("x", t._groups[0][0].x['animVal'][0]['value'])
+                                                                    .attr("y", t._groups[0][0].y['animVal'][0]['value']-12)
+                                                                    .attr("dy","1em")
+                                                                    .style('fill', gvaColorCode)
+                                                                    .text(s[0]);
+                                                                t.append("tspan")
+                                                                    .attr("fill","currentColor")
+                                                                    .attr("x", t._groups[0][0].x['animVal'][0]['value'])
+                                                                    .attr("y", t._groups[0][0].y['animVal'][0]['value'])
+                                                                    .attr("dy","1em")
+                                                                    .style('fill', gvaColorCode)
+                                                                    .text(s[1]+' '+s[2]);
+                                                            });
                                                     }
                                                 }
 
@@ -516,8 +564,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     IIPLine = svg.append("path")
                                                         .datum(data)
                                                         .attr("fill", "none")
-                                                        .style("stroke", "#87CEEB")
-                                                        .style("stroke-width", "1")
+                                                        .style("stroke", iipColorCode)
+                                                        .style("stroke-width", "1.5")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
@@ -542,8 +590,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     PMILine = svg.append("path")
                                                         .datum(data)
                                                         .attr("fill", "none")
-                                                        .style("stroke", "#FFA500")
-                                                        .style("stroke-width", "1")
+                                                        .style("stroke", pmiColorCode)
+                                                        .style("stroke-width", "1.5")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
@@ -570,8 +618,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     GVALine = svg.append("path")
                                                         .datum(data)
                                                         .attr("fill", "none")
-                                                        .style("stroke", "#0000FF")
-                                                        .style("stroke-width", "1")
+                                                        .style("stroke", gvaColorCode)
+                                                        .style("stroke-width", "1.5")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
