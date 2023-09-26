@@ -11,6 +11,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
             const jsondata = data;
             const mydata = jsondata.IndexGeneration;
             const indexData = jsondata.Commentary;
+            let prev_month_data;
+            let next_month_data;
             // set the dimensions and margins of the graph
             const margin = {
                 top: 50,
@@ -18,11 +20,11 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 bottom: 50,
                 left: 150
             },
-            width = 1100 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+                width = 1100 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
 
             const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
-            const y_right_coordinates = ['0.25', '0.45', '0.50', '0.52', '0.54', '0.60', '0.65', '0.75', '1.00']; //'0.00',
+            const y_right_coordinates = ['0.00', '0.25', '0.45', '0.50', '0.52', '0.54', '0.60', '0.65', '0.75', '1.00']; //'0.00',
             const y_com_coordinates = ['0.0', '0.2', '0.4', '0.6', '0.8', '1.0'];
             const parseDate = d3.timeParse("%m-%Y");
 
@@ -90,7 +92,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 .tickSize([-width - 20]) // +20
                 .tickValues(y_right_coordinates)
                 .tickFormat(
-                    function (d, i) {
+                    function (d) {
                         return formatYaxisForText(d);
                     }
                 )
@@ -128,7 +130,35 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 .attr("class", "x_month_name")
                 .call(xAxis_month_name)
                 // .selectAll("text")
-                .selectAll(".tick text")
+                // .selectAll(".tick text")
+                .selectAll(".tick text") // select all the y tick texts
+                .call(function (t) {
+                    t.each(function (d) { // for each one
+                        var self = d3.select(this);
+                        if (self.text() == 'May') {
+                            var s = self.text()
+                            self.text('');
+                            self.append("tspan")
+                                .attr("fill", "currentColor")
+                                .attr("x", '-1.7em')
+                                .text(s);
+                        } else if (self.text() == 'Oct') {
+                            var s = self.text()
+                            self.text('');
+                            self.append("tspan")
+                                .attr("fill", "currentColor")
+                                .attr("x", '-1.9em')
+                                .text(s);
+                        } else if (self.text() == 'Jul') {
+                            var s = self.text()
+                            self.text('');
+                            self.append("tspan")
+                                .attr("fill", "currentColor")
+                                .attr("x", '-2em')
+                                .text(s);
+                        }
+                    })
+                })
                 .attr("x", "-1.8em")
                 // .attr("y", "3em")
                 .attr("y", "0.5em")
@@ -449,32 +479,32 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 //         .style("top", (mousePointer.y - 391) + "px"); //(event.pageY - 30) +
                 // } 
                 // else {
-                    // focus.style("opacity", 0.9)
-                    //     .attr("transform", "translate(" + (mousePointer.x + 10) + "," + (mousePointer.y) + ")")
-                    // ;
-                    tooltip
-                        .transition()
-                        .duration(100)
-                        .style("opacity", 0.9);
-                    tooltip
-                        .html(dataValue.value)
-                        .style("left", (mousePointer.x + width) - 740 + "px") //(event.pageX) +
-                        .style("top", (mousePointer.y + height) - 100 + "px"); //(event.pageY - 30) +
-                        ;
-                    radiation
-                        .transition()
-                        .duration(2000)
-                        .attr('cx', function (d) {
-                            return d;
-                        }).style("opacity", 0.9)
-                    radiation
-                        .html("<span id=\"radiation\" class=\"animating_circle\">" +
-                            "<span class=\"circle_waves circle_one\"></span> " +
-                            "<span class=\"circle_waves circle_two\"></span> " +
-                            "<span class=\"circle_waves circle_three\"></span>" +
-                            "</span>")
-                        .style("left", (mousePointer.x - 1136) + "px") //(event.pageX) +
-                        .style("top", (mousePointer.y - 204) + "px"); //(event.pageY - 30) +
+                // focus.style("opacity", 0.9)
+                //     .attr("transform", "translate(" + (mousePointer.x + 10) + "," + (mousePointer.y) + ")")
+                // ;
+                tooltip
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 0.9);
+                tooltip
+                    .html(dataValue.value)
+                    .style("left", (mousePointer.x + width) - 740 + "px") //(event.pageX) +
+                    .style("top", (mousePointer.y + height) - 100 + "px"); //(event.pageY - 30) +
+                ;
+                radiation
+                    .transition()
+                    .duration(2000)
+                    .attr('cx', function (d) {
+                        return d;
+                    }).style("opacity", 0.9)
+                radiation
+                    .html("<span id=\"radiation\" class=\"animating_circle\">" +
+                        "<span class=\"circle_waves circle_one\"></span> " +
+                        "<span class=\"circle_waves circle_two\"></span> " +
+                        "<span class=\"circle_waves circle_three\"></span>" +
+                        "</span>")
+                    .style("left", (mousePointer.x - 1136) + "px") //(event.pageX) +
+                    .style("top", (mousePointer.y - 204) + "px"); //(event.pageY - 30) +
                 // }
             }
 
@@ -632,6 +662,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 d3.selectAll(".y-axis-titles").classed("active", false);
                 // d3.selectAll("#commentary_graph").remove();
                 checkSpecificPointOnYaxis(indexOfObj);
+                setPrevAndNextMonthsSlider(dataValue);
                 addCommentary(dataValue);
             }
 
@@ -669,6 +700,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 let dataValues = mydata.filter((e) => {
                     return (e.value >= beforeIndexValue && e.value <= d);
                 });
+                // console.log('dv', dataValues);
                 d3.selectAll("#rect_xaxis").remove();
                 d3.selectAll(".x_month_name").classed("active", false); // yaxis selection
                 // d3.selectAll(".x_month_name").classed("select", false);
@@ -825,6 +857,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         // highlight yaxis text
                         d3.selectAll(".y-axis-titles").classed("active", false);
                         checkSpecificPointOnYaxis(i);
+                        setPrevAndNextMonthsSlider(mydata[i]);
                         addCommentary(mydata[i]);
                     }
                     d3.select(d_child)
@@ -881,8 +914,10 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     ;
 
                 // append the svg object to the body of the page
+                d3.select('#monthly_commentary_chart').remove();
                 const svg = d3.select("#commentary_graph")
                     .append("svg")
+                    .attr('id', 'monthly_commentary_chart')
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
@@ -943,6 +978,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                             return d;
                         });
                 });
+                d3.selectAll("#infoIcon_2").remove();
+                addInfoIcon(width + 10, height - 80, "#commentary_graph", "infoIcon_2");
                 // Add the line
                 svg.append("path")
                     .datum(graphData)
@@ -1002,7 +1039,6 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     let graphC = graphData[0].monthList;
                     let current_month = d3.timeFormat('%b')(parseDate(expertC.Month));
                     let current_year = d3.timeFormat('%Y')(parseDate(expertC.Month));
-                    // setPrevAndNextMonthsSlider(expertC.previousMonth, expertC.nextMonth);
                     // Left data
                     d3.select(".mc_title")
                         .html(`Jocata Sumpoorn`)
@@ -1043,13 +1079,19 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 }
             }
 
-            function setPrevAndNextMonthsSlider(prev_month_ec, next_month_ec) {
-                console.log('setPrevAndNextMonthsSlider ', prev_month_ec, next_month_ec);
-                let prev_month = d3.timeFormat('%b')(parseDate(prev_month_ec));
-                let next_month = d3.timeFormat('%b')(parseDate(next_month_ec));
-                document.getElementById("prev_month").innerHTML = prev_month;
-                document.getElementById("next_month").innerHTML = next_month;
-                addSliderData(prev_month_ec, next_month_ec);
+            function setPrevAndNextMonthsSlider(dataValue) {
+                // console.log('setPrevAndNextMonthsSlider', dataValue);
+                let expertData = (indexData.ExpertCommentary).filter((e) => {
+                    return (e.Month == dataValue.category);
+                });
+                if (expertData.length > 0) {
+                    let expertC = expertData[0];
+                    let prev_month = d3.timeFormat('%b')(parseDate(expertC.previousMonth));
+                    let next_month = d3.timeFormat('%b')(parseDate(expertC.nextMonth));
+                    document.getElementById("prev_month").innerHTML = prev_month;
+                    document.getElementById("next_month").innerHTML = next_month;
+                    addSliderData(expertC.previousMonth, expertC.nextMonth);
+                }
             }
 
             const clickPoint = (event, d) => {
@@ -1064,26 +1106,36 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 renderPointerOnLine(event, x_orig);
             };
 
-            function addInfoIcon() {
-                let icon = d3.select("#my_dataviz_insights")
+            function addInfoIcon(icon_w, icon_h, graph_id, icon_id) {
+                let icon = d3.select(graph_id)
                     .append("div")
                     .attr("class", "infoIcon")
+                    .attr("id", icon_id)
                     .style("position", "relative")
                     .style("cursor", "pointer")
                     .style("opacity", 0.5)
                     // .style("left", (-(width - 820)) + "px")
-                    .style("left", (width + 335) + "px") //(event.pageX) +
+                    .style("left", icon_w + "px") //(event.pageX) +
                     // .style("top", (-(height + 135)) + "px")
-                    .style("top", -(height + 150) + "px") //(event.pageY - 30) +
+                    .style("top", -(icon_h) + "px") //(event.pageY - 30) +
                     .on("click", function (evt, d) {
+                        // console.log('comm ', evt);
                         // Position:
-                        const absX = evt.clientX + window.scrollX;
-                        const absY = evt.clientY + window.scrollY;
-                        document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY + 10) + 'px; left:' + (absX - 50) + 'px;');
-                        document.getElementById("contextMenu").style.display = 'block'
+                        // top: 280px; left: 360px; // 531, 154
+                        if (graph_id == "#my_dataviz_insights") {
+                            const absX = evt.clientX + window.scrollX;
+                            const absY = evt.clientY + window.scrollY;
+                            document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY + 10) + 'px; left:' + (absX - 50) + 'px;');
+                            document.getElementById("contextMenu").style.display = 'block'
+                        } else {
+                            const absX = evt.clientX + window.scrollX - 100;
+                            const absY = evt.clientY + window.scrollY + 15;
+                            document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY) + 'px; left:' + (absX) + 'px;');
+                            document.getElementById("contextMenu").style.display = 'block';
+                        }
 
                         let indexData = [];
-                        let startYaxisPoint = "0.00"
+                        let startYaxisPoint = ""
                         y_right_coordinates.forEach(function (index) {
                             let value = formatYaxisForText(index);
                             let da = new Object();
@@ -1114,7 +1166,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     document.getElementById("contextMenu").style.display = 'none';
                 });
             }
-            addInfoIcon();
+            addInfoIcon(width + 280, height + 140, "#my_dataviz_insights", "infoIcon_1");
 
             function addTextAfterYaxis() {
                 d3.select("#my_dataviz_insights")
@@ -1246,23 +1298,29 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
             addTextAfterYaxis();
 
             function addSliderData(prev_month_ec, next_month_ec) {
-                document.getElementById('#slide_prev').addEventListener('click', function() {
-                    console.log('on click prev slider', prev_month_ec);
-                    // now do something
-                    const prevCommentaryData = mydata.filter((x) => x.category == prev_month_ec)[0];
-                    if(prevCommentaryData) {
-                        addCommentary(prevCommentaryData);
-                    }
-                });
-                document.getElementById('#slide_next').addEventListener('click', function() {
-                    console.log('on click next slider', next_month_ec);
-                    // now do something
-                    const nextCommentaryData = mydata.filter((x) => x.category == next_month_ec)[0];
-                    if(nextCommentaryData) {
-                        addCommentary(nextCommentaryData);
-                    }
-                });
+                prev_month_data = prev_month_ec;
+                next_month_data = next_month_ec;
             }
+
+            document.getElementById('#slide_prev').addEventListener('click', function () {
+                // console.log('on click prev slider', prev_month_data);
+                // now do something
+                const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
+                if (prevCommentaryData) {
+                    setPrevAndNextMonthsSlider(prevCommentaryData);
+                    addCommentary(prevCommentaryData);
+                }
+            });
+            document.getElementById('#slide_next').addEventListener('click', function () {
+                // console.log('on click next slider', next_month_data);
+                // now do something
+                const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
+                if (nextCommentaryData) {
+                    setPrevAndNextMonthsSlider(nextCommentaryData);
+                    addCommentary(nextCommentaryData);
+                }
+            });
+
 
             // Add the line
             const path = svg.append("path")
