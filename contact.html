@@ -17,21 +17,21 @@
         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-     <!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="">
-    <header class="container-fluid d-flex justify-content-between align-items-center px-5 app_header">
+    <header class="container-fluid d-flex justify-content-between align-items-center app_header">
         <div class="app_header_left">
             <a href="home.html">
                 <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
             </a>
         </div>
-        <div class="d-flex flex-column app_header_right">
-            <div class="align-self-end">
+        <div class="d-flex flex-column align-self-end app_header_right">
+            <div class="header_links align-self-end">
                 <a class="header_cta">Institution Login</a>
-                <a class="custom-nav-link" href="contact.html">Contact</a>
+                <a href="contact.html" class="header_page_link">Contact</a>
             </div>
             <ul class="nav nav-underline">
                 <li class="nav-item">
@@ -128,10 +128,12 @@
                                     <div class="col-md-6">
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="sm-primary-button width-100"  data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
+                                        <button class="sm-primary-button width-100" data-bs-toggle="modal"
+                                            data-bs-target="#successModal">Submit</button>
 
                                         <label class="mt-20">
-                                            <input type="checkbox" class="terms-checkbox">By submitting this request, I agree with the Jocata's
+                                            <input type="checkbox" class="terms-checkbox">By submitting this request, I
+                                            agree with the Jocata's
                                             <span class="custom-link">Terms of use.</span>
                                         </label>
                                     </div>
@@ -147,31 +149,31 @@
     </main>
 
     <!-- Success Modal Popup  -->
-    
-<!-- The Modal -->
-<div class="modal" id="successModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Thanks !</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            <div class="my-4 text-center">
-            Someone from our team will contact you regarding the demo.
-        </div>
-        </div>
-  
-  
-      </div>
-    </div>
-  </div>
 
-      
+    <!-- The Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Thanks !</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="my-4 text-center">
+                        Someone from our team will contact you regarding the demo.
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
 
 
 
@@ -180,7 +182,6 @@
             <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
-                <li class="list-group-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </footer>

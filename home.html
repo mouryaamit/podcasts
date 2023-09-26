@@ -16,6 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -53,94 +55,145 @@
   </header>
   <main class="app_home text-center">
     <div class="row gx-0 justify-content-center">
-      <div class="col-md-12 my-5 app_home_main_title">
-        <p class="fw-500">Presenting</p>
-        <p>India’s only economic activity</p>
-        <p>index of credit seeking MSMEs</p>
-        <p>Jocata “Sumpoorn”</p>
+      <div class="col-md-7 app_home_main_title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+        <p> India’s only economic activity index of <br />credit seeking MSMEs - <span
+            class="fw-bold">Jocata “Sumpoorn”</span></p>
       </div>
-      <div class="col-md-10 my-5 app_home_chart_con">
-        <div class="app_home_chart mb-5">
-          <ul class="nav nav-pills justify-content-center p-2" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-insights-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-insights" type="button" role="tab" aria-controls="pills-insights"
-                aria-selected="true">Insights</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-context-tab" data-bs-toggle="pill" data-bs-target="#pills-context"
-                type="button" role="tab" aria-controls="pills-context" aria-selected="false">Context</button>
-            </li>
-          </ul>
-          <div class="tab-content p-2" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-insights" role="tabpanel"
-              aria-labelledby="pills-insights-tab">
-              <img src="assets/images/chart-1.png" class="img-fluid" />
-            </div>
-            <div class="tab-pane fade" id="pills-context" role="tabpanel" aria-labelledby="pills-context-tab">
-              <img src="assets/images/chart-2.png" class="img-fluid" />
+      <div class="col-md-10 app_home_chart_con" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+        <div class="app_home_chart p-5">
+          <img src="assets/images/home-chart.png" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-9 app_home_chart_info">
+        <a class="discover_cta my-5" href="index.html" data-aos="fade-up">Explore Index Features</a>
+        <p class="pt-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">A Digital Data Infrastructure Initiative by Jocata - one of India’s most trusted Digital Lending
+          Platform
+          providers, in association with SIDBI - the Principal Financial Institution for growth and development of
+          MSMEs.</p>
+      </div>
+    </div>
+    <div class="container-fluid app_home_msme_section">
+      <div class="row gx-0 text-start">
+        <div class="col-md-6 app_home_msme_chart" data-aos="fade-right" data-aos-easing="linear">
+          <img src="assets/images/home-msme-chart.png" class="img-fluid" />
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear">
+          <h4 class="app_home_section_title my-5 blue-text">Why Build an MSME Index?</h4>
+          <p class="app_home_section_caption w-75">Available macro indices measure production activity or capture
+            business
+            expectations and sentiment. There is no index that captures the lifeblood of the Indian economy – MSMEs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_eco_section">
+      <div class="col-md-9">
+        <h4 class="app_home_section_title mb-5" style="color: #25505c;" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">An MSME economic activity index is vital for
+        </h4>
+        <div class="app_eco_cards py-5">
+          <div class="container">
+            <div class="row row-cols-3 gx-5">
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/savings.png" class="img-fluid" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="500" data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Lenders</h6>
+                    <p class="app_eco_card_detail">To direct developmental and commercial capital to MSMEs</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/account_balance.png" class="img-fluid" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Policy makers</h6>
+                    <p class="app_eco_card_detail">To create tailored policies to propel MSME growth & development</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/currency_rupee.png" class="img-fluid" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Economists and Researchers</h6>
+                    <p class="app_eco_card_detail">To study policy and credit flow impact on the segment</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <a class="discover_cta" href="index.html">Discover the Index</a>
       </div>
-      <div class="col-md-8 app_home_chart_info">
-        <p>A “Data Analytics for Impact” Initiative by - one of India’s most trusted Digital Lending Platform providers,
-          in association with - the Principal Financial Institution for the promotion, financing and development of
-          MSMEs in the country. </p>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_minds_section">
+      <div class="col-md-8 d-flex justify-content-around">
+        <img src="assets/images/logo-jocata.png" class="img-fluid" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" />
+        <img src="assets/images/logo-sidbi.png" class="img-fluid" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" />
       </div>
-      <div class="col-md-12 app_home_subscribe py-5">
-        <p class="mb-4">For monthly updates on the Index and the MSME sector</p>
-        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
-      </div>
-      <div class="col-md-6 app_home_info">
-        <div class="app_home_info_content py-5">
-          <h5 class="app_home_sec_title mb-5">Why Build an MSME Specific Index?</h5>
-          <p>Unreliable, sporadic, and opinion or survey-based data indices and analytical reports are an incomplete
-            measure to duly capture the state of our MSMEs. The persistent data gap impacts lenders’ ability to lend and
-            the lack of dynamic information prevents policy makers, researchers, and institutions from understanding the
-            onground issues and formulating effective development plans. </p>
-        </div>
-        <div class="app_home_info_content py-5">
-          <h5 class="app_home_sec_title mb-5">Minds Behind the Index</h5>
-          <p>Jocata’s inhouse team of credit experts and data scientists, guided by our patrons - SIDBI, advisors and
-            senior economists, have developed Sumpoorn, a statistical measure to gauge MSME business activity levels by
-            using anonymised and aggregated GST sales data of credit-seeking MSMEs. We have patiently tracked the index
-            over the past 4 years to ensure its ability to represent the MSME economy and capture the impact of
-            macroeconomic conditions.</p>
-        </div>
-      </div>
-      <div class="col-md-10 app_home_association">
-        <p class="association_jocata">an <span class="fw-500">Initiative by</span> <span><img
-              src="assets/images/logo.png" class="img-fluid" /></span></p>
-        <p class="association_sidbi">In association with <span><img src="assets/images/logo.png" class="img-fluid" />
+      <div class="col-md-6 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="500">
+        <h4 class="app_home_section_title mb-5">Minds Behind the Index</h4>
+        <p class="app_home_section_caption text-black">A team of credit experts, data scientists and senior economists
+          have built and tracked the Index over the past 4 years to ensure its ability to represent the MSME economy and
+          capture the impact of macroeconomic conditions. <u><a href="about.html" class="text-black">Read More</a></u>
         </p>
       </div>
-      <div class="col-md-6 my-5 app_home_info">
-        <div class="app_home_info_content py-5">
-          <h5 class="app_home_sec_title mb-5">Index Methodology and Frequency</h5>
-          <p>Actual monthly sales data reflected in GSTN returns of credit-seeking MSMEs is used to calculate the delta
-            of percentage of growing and declining GSTINs and combined with amplitude of change in turnover to generate
-            Jocata Sumpoorn. The Index will be released monthly with only a four-week reporting cycle after the
-            reference month ends (The Index for August will be published in the 1st week of October). <a>Read more</a>
-          </p>
-          <a class="explore_cta mt-5" href="methodology.html">Explore Methodology</a>
+    </div>
+    <div class="container-fluid app_home_msme_section app_home_meth_section">
+      <div class="row gx-0 text-start">
+        <div class="col-md-6">
+          <img src="assets/images/home-meth-cards.png" class="img-fluid" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" />
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+          <h4 class="app_home_section_title mt-4 mb-5 blue-text">Index Methodology</h4>
+          <p class="app_home_section_caption w-75 mb-0">Jocata Sumpoorn is a 'relative amplitude adjusted diffusion
+            index' generated using monthly GST sales data of credit-seeking MSMEs.</p>
+          <a class="app_home_section_caption text-decoration-none" href="methodology.html"><u>Read More</u></a>
         </div>
       </div>
-      <div class="col-md-7 my-5 app_home_partners_con">
-        <h5 class="app_home_sec_title mb-0">Our Partner Network</h5>
-        <div class="app_home_partners">
-          <h6>Knowledge Partners</h6>
-          <img src="assets/images/gokhale.png" class="img-fluid" />
+    </div>
+    <div class="app_home_testimonial bg-white">
+      <div class="row gx-0">
+        <div class="col-md-7 text-start" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+          <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well acknowledged fact. However, data paucity
+            on the MSME sector often becomes a challenge for industry members and policymakers.</p>
+          <p class="testimonial_content">We at SIDBI have been constantly engaged for the development of the sector and have been partnering with
+            institutions to bridge the information asymmetry to enable informed decision-making by stakeholders. It is in
+            this spirit we have created ‘Sumpoorn’ with Jocata, that carries an index measuring economic activity of the
+            MSMEs leveraging the GST data.</p>
+          <p class="testimonial_content">The underlying authentic data of GST provides credibility to the Index. With time, the same can be expanded
+            to include more dimensions. I hope the publication shall be of value to the readers and provide a rich
+            perspective on the prevalent trends of the MSME sector.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Sh. Sivasubramanian Ramann</p>
+            <p class="testimonial-detail">Chairman & Managing Director, SIDBI</p>
+          </div>
         </div>
-        <div class="app_home_partners">
-          <h6>Affiliate Partners</h6>
-          <img src="assets/images/gokhale.png" class="img-fluid" />
+        <div class="col-md-5 align-self-end text-end overflow-hidden">
+          <img src="assets/images/home-testimonial.png" class="img-fluid" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000"/>
         </div>
-        <div class="app_home_partners">
-          <h6>Exclusive Bureau Partners</h6>
-          <img src="assets/images/gokhale.png" class="img-fluid" />
-        </div>
+      </div>
+    </div>
+    <div class="row gx-0">
+      <div class="col-md-12 app_home_subscribe">
+        <p>For monthly Index updates</p>
+        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+      </div>
+    </div>
+    <div class="row gx-0 app_home_marquee">
+      <div class="col-md-12">
+        <ul class="marquee-content">
+          <li>
+            <h6 class="marquee-content-title">Knowledge Partner</h6>
+            <img src="assets/images/partner-ceed.png" class="img-fluid">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Affliliate Partner</h6>
+            <img src="assets/images/partner-game.png" class="img-fluid">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Exclusive Partner</h6>
+            <img src="assets/images/partner-experian.png" class="img-fluid">
+          </li>
+        </ul>
       </div>
     </div>
   </main>
@@ -263,6 +316,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
+  
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+  </script>
 </body>
 
 </html>
