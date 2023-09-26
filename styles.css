@@ -1112,10 +1112,23 @@ div.tooltip-area {
 }
 
 .infoIcon {
-    background-image: url("/assets/icons/info.png");
+    background-image: url("assets/icons/info.png");
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
+}
+
+.y_month_value {
+  fill: white;
+}
+
+.y_month_value .tick text {
+  fill: #2FB36B;
+  font-size: 8px;
+}
+
+.x_month_value .tick text {
+  font-size: 8px;
 }
 
 /* End of graph css */

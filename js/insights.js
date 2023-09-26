@@ -19,12 +19,13 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 left: 150
             },
             width = 1100 - margin.left - margin.right,
-                height = 400 - margin.top - margin.bottom;
+            height = 400 - margin.top - margin.bottom;
 
             const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
             const y_right_coordinates = ['0.25', '0.45', '0.50', '0.52', '0.54', '0.60', '0.65', '0.75', '1.00']; //'0.00',
-
+            const y_com_coordinates = ['0.0', '0.2', '0.4', '0.6', '0.8', '1.0'];
             const parseDate = d3.timeParse("%m-%Y");
+
             // Add X axis 1 --> it is a month format
             const x1 = d3.scaleTime()
                 .domain(d3.extent(mydata, function (d) { return parseDate(d.category); }))
@@ -174,7 +175,35 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 .attr("opacity", "1")
                 .attr("transform", `translate(${width + 19},0)`) //+20
                 .call(yAxis_right)
-                .selectAll("text")
+                // .selectAll("text")
+                .selectAll('.tick text') // select all the y tick texts
+                .call(function (t) {
+                    t.each(function (d) { // for each one
+                        var self = d3.select(this);
+                        if (self.text().indexOf(' ') >= 0) {
+                            var s = self.text().split(' ');  // get the text and split it
+                            self.text(''); // clear it out
+                            self.append("tspan") // insert two tspans
+                                .attr("fill", "currentColor")
+                                .attr("x", 15)
+                                .attr("y", function (d, i) {
+                                    if (s[1] == "Contraction") return 40;
+                                    else return 5;
+                                })
+                                .attr("dy", "1em")
+                                .text(s[0]);
+                            self.append("tspan")
+                                .attr("fill", "currentColor")
+                                .attr("x", 15)
+                                .attr("y", function (d, i) {
+                                    if (s[1] == "Contraction") return 55;
+                                    else return 20;
+                                })
+                                .attr("dy", "1em")
+                                .text(s[1]);
+                        }
+                    })
+                })
                 .style("cursor", "pointer")
                 .attr("x", function (d, i) {
                     return formatYaxisForXvalue(d, i);
@@ -299,7 +328,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("width", 25)
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
-                    // .style("font-size", "16px")
+                    .style("font-size", "14px")
                     .style("fill", "grey")
                     // .text("Covid 19 Lockdown")
                     ;
@@ -332,7 +361,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("width", 25)
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
-                    // .style("font-size", "16px")
+                    .style("font-size", "14px")
                     .style("fill", "grey")
                     // .text("Covid 19 Recovery")
                     ;
@@ -586,7 +615,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     //.attr('x', event.x-80)
                     .attr('x', tooltip_pointer.x)
                     .attr('y', 0)
-                    .attr('width', 18)
+                    .attr('width', 19)
                     .attr('height', 340)
                     .attr("id", "rect_xaxis")
                     .attr('stroke', 'black')
@@ -601,7 +630,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 const indexOfObj = mydata.findIndex(x => x.category == dataValue.category);
                 d3.select(`.x_month_name_${indexOfObj}`).classed("active", true); // xaxis selection
                 d3.selectAll(".y-axis-titles").classed("active", false);
+                // d3.selectAll("#commentary_graph").remove();
                 checkSpecificPointOnYaxis(indexOfObj);
+                addCommentary(dataValue);
             }
 
             function highlightXaxis(dataValue, d) {
@@ -610,7 +641,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     //.attr('x', event.x-80)
                     .attr('x', tooltip_pointer.x)
                     .attr('y', 0)
-                    .attr('width', 18)
+                    .attr('width', 19)
                     .attr('height', 340)
                     .attr("id", "rect_xaxis")
                     .attr('stroke', 'grey')
@@ -775,7 +806,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         svg.append('rect')
                             .attr('x', width)
                             .attr('y', 0)
-                            .attr('width', 18)
+                            .attr('width', 19)
                             .attr('height', 340)
                             .attr("id", "rect_xaxis")
                             .attr('stroke', 'black')
@@ -794,6 +825,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         // highlight yaxis text
                         d3.selectAll(".y-axis-titles").classed("active", false);
                         checkSpecificPointOnYaxis(i);
+                        addCommentary(mydata[i]);
                     }
                     d3.select(d_child)
                         .on("click", function (event, d) {
@@ -807,35 +839,190 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
             }
             clickXaxis();
 
-            function addCommentary(formattedDate, dataValue) {
+            function createGraphForCommentary(graphData) {
+                // d3.select(".mc_graph")
+                //     .html(`mc_graph`)
+                //     ;
+                // set the dimensions and margins of the graph
+                const margin = { top: 20, right: 10, bottom: 20, left: 40 },
+                    width = 250 - margin.left - margin.right,
+                    height = 200 - margin.top - margin.bottom;
+
+                // Add X axis --> it is a date format
+                const x1 = d3.scaleTime()
+                    .domain(d3.extent(graphData, function (d) { return parseDate(d.category); }))
+                    .range([0, width]);
+
+                // Add Y axis - left side
+                const y1 = d3.scaleLinear()
+                    .domain([0, 1.0])
+                    .nice()
+                    .range([height, 0]);
+
+                // Add Y axis - right side
+                const y2 = d3.scaleLinear()
+                    // .domain([0, d3.max(mydata, function (d) { return +d.value; })])
+                    .domain([0, 1.0])
+                    .range([height, 0]);
+
+                const xa = d3.axisBottom(x1)
+                    .tickSize(-height)
+                    // .ticks(width/12)
+                    .tickFormat(d3.timeFormat('%b'));
+
+                const ya = d3.axisLeft(y1)
+                    .tickSize([-width])
+                    .tickValues(y_com_coordinates)
+                    ;
+
+                const ya_right = d3.axisRight(y2)
+                    .tickSize([-width - 20])
+                    .tickValues(y_right_coordinates)
+                    ;
+
+                // append the svg object to the body of the page
+                const svg = d3.select("#commentary_graph")
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+                svg.append("g")
+                    .attr("transform", `translate(0, ${height})`)
+                    // .attr("stroke", "grey")
+                    .attr("stroke-dasharray", "1")
+                    .attr("stroke-width", "0.5")
+                    .attr("opacity", ".6")
+                    .attr("class", "x_month_value")
+                    .call(xa)
+                    .append("text")      // text label for the x axis
+                    .attr("x", 100)
+                    .attr("y", 100)
+                    .style("text-anchor", "middle")
+                    .text("Date")
+                    // .text(x1(parseDate(d.category)))
+                    ;
+                svg.append("g")
+                    .attr("stroke", "grey")
+                    .attr("stroke-width", "0")
+                    .attr("opacity", ".6")
+                    .attr("class", "y_month_value")
+                    .call(ya)
+                    .append("text")
+                    .attr("class", "axis-title")
+                    .attr("x", "-6em")
+                    .attr("y", "-3.5em")
+                    .style("text-anchor", "end")
+                    .attr("fill", "#2FB36B")
+                    .attr("transform", "rotate(-90)")
+                    .style("font-size", "8px")
+                    .text("Jocata Sumpoorn")
+                    ;
+                const yaright_text = svg.append("g")
+                    .attr("stroke", "grey")
+                    .attr("stroke-width", "0.1")
+                    .attr("opacity", "1")
+                    .attr("transform", `translate(${width + 20},0)`) //+20
+                    .call(ya_right)
+                    ;
+                yaright_text.selectAll(".tick")._groups[0].forEach(function (d_child, i) {
+                    let handyValues = gethAndYValuesCommentary(d_child.__data__);
+                    svg.append('rect')
+                        .attr('x', 0)
+                        .attr('y', handyValues.y) //225, 165, 150, 120, 105, 75, 0
+                        .attr('width', width + 18)
+                        .attr('height', handyValues.h) //75, 60, 15, 19, 15, 30, 75
+                        .attr("id", "rect_def_yaxis")
+                        .attr('stroke', 'grey')
+                        // .style("stroke-dasharray", ("3, 1"))
+                        .style("opacity", "0.1")
+                        .transition()
+                        .duration(1000)
+                        //.ease(d3.easeCubicOut)
+                        .attr('cy', function (d) {
+                            return d;
+                        });
+                });
+                // Add the line
+                svg.append("path")
+                    .datum(graphData)
+                    .attr("fill", "none")
+                    .attr("stroke", "#69b3a2")
+                    .attr("stroke-width", 1)
+                    .attr("d", d3.line()
+                        .x(d => x1(parseDate(d.category)))
+                        .y(d => y1(d.value))
+                    )
+                // Add the points
+                svg.append("g")
+                    .selectAll("dot")
+                    .data(graphData)
+                    .join("circle")
+                    .attr("cx", d => x1(parseDate(d.category)))
+                    .attr("cy", d => y1(d.value))
+                    .attr("r", 2)
+                    .attr("fill", "#69b3a2")
+                    ;
+            }
+
+            function gethAndYValuesCommentary(d) {
+                // console.log('gethAndYValuesCommentary ', d);
+                let hAndyValues = { y: 0, h: 0 };
+                if (d == 0.45) {
+                    hAndyValues.y = 89;
+                    hAndyValues.h = 31;
+                } else if (d == 0.52) {
+                    hAndyValues.y = 78;
+                    hAndyValues.h = 2;
+                } else if (d == 0.60) {
+                    hAndyValues.y = 65;
+                    hAndyValues.h = 9;
+                } else if (d == 0.75) {
+                    hAndyValues.y = 41;
+                    hAndyValues.h = 15;
+                }
+                return hAndyValues;
+            }
+
+            function addCommentary(dataValue) {
+                let indexValue = dataValue.value;
                 let expertData = (indexData.ExpertCommentary).filter((e) => {
-                    return (e.Month == formattedDate);
+                    return (e.Month == dataValue.category); // '06-2023'
                 });
                 let monthlyData = (indexData.MonthlyCommentary).filter((m) => {
-                    return (m.Month == formattedDate);
+                    return (m.Month == dataValue.category); // '06-2023'
                 });
-                if ((expertData.length > 0) && (monthlyData.length > 0)) {
+                let graphData = (indexData.MonthlyCommentaryGraph).filter((m) => {
+                    return (m.Month == dataValue.category); // '06-2023'
+                });
+
+                if ((expertData.length > 0) && (monthlyData.length > 0) && (graphData.length > 0)) {
                     let monthlyC = monthlyData[0];
-                    let expertC = expertData[0].ExpertCommentaryDetails[0];
-                    let current_month = d3.timeFormat('%b')(parseDate(dataValue.category));
-                    let current_year = d3.timeFormat('%Y')(parseDate(dataValue.category));
+                    let expertC = expertData[0];
+                    let graphC = graphData[0].monthList;
+                    let current_month = d3.timeFormat('%b')(parseDate(expertC.Month));
+                    let current_year = d3.timeFormat('%Y')(parseDate(expertC.Month));
+                    // setPrevAndNextMonthsSlider(expertC.previousMonth, expertC.nextMonth);
                     // Left data
                     d3.select(".mc_title")
-                        .html(`Jocata Sumpoorn ${dataValue.value}`)
+                        .html(`Jocata Sumpoorn`)
+                        ;
+                    d3.select(".mc_rating")
+                        .html(`${indexValue}`)
                         ;
                     d3.select(".mc_body")
                         .html(`${monthlyC.comment}`)
-                        ;
-                    d3.select(".mc_graph")
-                        .html(`mc_graph`)
                         ;
                     // Right data
                     d3.select('.prev_month')
                         .html(`May 2023`)
                         ;
-                    d3.select(".commentary_title")
-                        .html(`${current_month} ${current_year} ${expertC.Title}`)
+                    d3.select(".ec_month_title") //.ec_month
+                        .html(`${current_month} ${current_year}`)
                         ;
+                    // d3.select(".ec_month_title")
+                    //     .html(`${expertC.Title}`)
+                    //     ;
                     d3.select('.next_month')
                         .html(`Jul 2023`)
                         ;
@@ -843,13 +1030,26 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         .html(`Expert Commentary`)
                         ;
                     d3.select(".ec_author")
-                        .html(`${expertC.Author} - ${expertC.Designation}`)
+                        .html(`${expertC.ExpertName}`)
+                        ;
+                    d3.select(".ec_author_designation")
+                        .html(`${expertC.ExpertDetails}`)
                         ;
                     d3.select(".ec_message")
-                        .html(`${expertC.Comment}`)
+                        .html(`${expertC.ExpertCommentary}`)
                         ;
                     // Add graph here - MonthlyCommentaryGraph
+                    createGraphForCommentary(graphC);
                 }
+            }
+
+            function setPrevAndNextMonthsSlider(prev_month_ec, next_month_ec) {
+                console.log('setPrevAndNextMonthsSlider ', prev_month_ec, next_month_ec);
+                let prev_month = d3.timeFormat('%b')(parseDate(prev_month_ec));
+                let next_month = d3.timeFormat('%b')(parseDate(next_month_ec));
+                document.getElementById("prev_month").innerHTML = prev_month;
+                document.getElementById("next_month").innerHTML = next_month;
+                addSliderData(prev_month_ec, next_month_ec);
             }
 
             const clickPoint = (event, d) => {
@@ -862,7 +1062,6 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 d3.selectAll(".x_month_name").classed("select_g", false);
                 d3.selectAll(".x_month_name").classed("select_r", false);
                 renderPointerOnLine(event, x_orig);
-                // addCommentary(formattedDate, dataValue);
             };
 
             function addInfoIcon() {
@@ -1000,8 +1199,70 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .style("opacity", 0.5)
                     .style("stroke", "black")
                     .attr("stroke-width", 2)
+                    ;
+
+                svg.append("svg:defs")
+                    .append("svg:marker")
+                    .attr("id", "yaxisNamesArrow")
+                    .attr("viewBox", "0 0 10 10")
+                    .attr("refX", 2)
+                    .attr("refY", 5)
+                    .attr("markerUnits", "strokeWidth")
+                    .attr("markerWidth", 4)
+                    .attr("markerHeight", 5)
+                    .attr("orient", "auto")
+                    .append("svg:path")
+                    .attr("d", "M 0 0 L 10 5 L 0 10 z");
+
+                svg.append("line")
+                    .attr("x1", width + 90)
+                    .attr("x2", width + 70)
+                    .attr("y1", 130)
+                    .attr("y2", 141)
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .attr("stroke-width", 1)
+
+                svg.append("line")
+                    .attr("x1", width + 70)
+                    .attr("x2", width + 25)
+                    .attr("y1", 141)
+                    .attr("y2", 141)
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .attr("stroke-width", 1)
+                    .attr("marker-end", "url(#yaxisNamesArrow)")
+
+                svg.append("line")
+                    .attr("x1", width + 85)
+                    .attr("x2", width + 25)
+                    .attr("y1", 147.5)
+                    .attr("y2", 147.5)
+                    .style("opacity", 0.5)
+                    .style("stroke", "black")
+                    .attr("stroke-width", 1)
+                    .attr("marker-end", "url(#yaxisNamesArrow)")
             }
             addTextAfterYaxis();
+
+            function addSliderData(prev_month_ec, next_month_ec) {
+                document.getElementById('#slide_prev').addEventListener('click', function() {
+                    console.log('on click prev slider', prev_month_ec);
+                    // now do something
+                    const prevCommentaryData = mydata.filter((x) => x.category == prev_month_ec)[0];
+                    if(prevCommentaryData) {
+                        addCommentary(prevCommentaryData);
+                    }
+                });
+                document.getElementById('#slide_next').addEventListener('click', function() {
+                    console.log('on click next slider', next_month_ec);
+                    // now do something
+                    const nextCommentaryData = mydata.filter((x) => x.category == next_month_ec)[0];
+                    if(nextCommentaryData) {
+                        addCommentary(nextCommentaryData);
+                    }
+                });
+            }
 
             // Add the line
             const path = svg.append("path")
