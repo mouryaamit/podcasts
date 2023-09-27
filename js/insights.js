@@ -578,7 +578,42 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 return '';
             }
 
-            function formatHandYvaluesYaxis(d, isMouseover) {
+            function getYaxisValuesForLines(d) {
+                let hAndyValues = { y1: 0, x2: width+170 };
+                    if (d == 0.00) {
+                        hAndyValues.y1 = height;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 0.25) {
+                        hAndyValues.y1 = 225;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 0.45) {
+                        hAndyValues.y1 = 165;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 0.50) {
+                        hAndyValues.y1 = 150;
+                        hAndyValues.x2 = width+60;
+                    } else if (d == 0.52) {
+                        hAndyValues.y1 = 144.7;
+                        hAndyValues.x2 = width+60;
+                    } else if (d == 0.54) {
+                        hAndyValues.y1 = 138.7;
+                        hAndyValues.x2 = width+60;
+                    } else if (d == 0.60) {
+                        hAndyValues.y1 = 120;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 0.65) {
+                        hAndyValues.y1 = 105;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 0.75) {
+                        hAndyValues.y1 = 75;
+                        hAndyValues.x2 = width+110;
+                    } else if (d == 1.00) {
+                        hAndyValues.y1 = 0;
+                        hAndyValues.x2 = width+170;
+                    }
+                    return hAndyValues;
+            }
+            function formatHandYvaluesYaxis(d, isMouseover) { 
                 if (isMouseover) {
                     let hAndyValues = { y: 0, h: 0 };
                     if (d == 0.25) {
@@ -716,7 +751,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 svg.append('rect')
                     .attr('x', 0)
                     .attr('y', handyValues.y) //225, 165, 150, 120, 105, 75, 0
-                    .attr('width', width + 170)
+                    .attr('width', width + 110)
                     .attr('height', handyValues.h) //75, 60, 15, 19, 15, 30, 75
                     .attr("id", "rect_yaxis")
                     .attr("class", function () { // color change for different indices
@@ -756,6 +791,19 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('cy', function (d) {
                         return d;
                     });
+
+                let handyValues1 = getYaxisValuesForLines(d);
+                svg.append("line")
+                    .attr("x1", width+22)
+                    .attr("x2", handyValues1.x2)
+                    //.attr("y1", height+0.5)
+                    //.attr("y2", height+0.5)
+                    .attr("y1", handyValues1.y1)
+                    .attr("y2", handyValues1.y1)
+                    .style("opacity", 0.6)
+                    .style("stroke", "grey")
+                    .attr("stroke-width", 0.5)
+                    ;
             }
 
             function addSelectionYaxis() {
@@ -1177,7 +1225,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .style("width", 10 + "px")
                     .style("height", 100)
                     .style("left", (width + 360) + "px")
-                    .style("top", -(height + 110) + "px")
+                    .style("top", -(height + 120) + "px")
                     .attr("class", "yAxisExpansionColor")
                     .text("Expansion")
                     .style("transform", "rotate(-90deg)")
@@ -1189,7 +1237,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .style("width", 10 + "px")
                     .style("height", 80)
                     .style("left", (width + 360) + "px")
-                    .style("top", -(height - 80) + "px")
+                    .style("top", -(height - 90) + "px")
                     .attr("class", "yAxisContractorColor")
                     .text("Contraction")
                     .style("transform", "rotate(-90deg)")
@@ -1227,8 +1275,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 svg.append("line")
                     .attr("x1", width + 190)
                     .attr("x2", width + 190)
-                    .attr("y1", 120)
-                    .attr("y2", 95)
+                    .attr("y1", 105)
+                    .attr("y2", 80)
                     .style("opacity", 0.5)
                     .style("stroke", "green")
                     .attr("stroke-width", 2)
@@ -1237,26 +1285,16 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 svg.append("line")
                     .attr("x1", width + 190)
                     .attr("x2", width + 190)
-                    .attr("y1", 165)
-                    .attr("y2", 195)
+                    .attr("y1", 185)
+                    .attr("y2", 210)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#contractorArrow)");
 
-                svg.append("line")
-                    .attr("x1", width + 195)
-                    .attr("x2", width + 185)
-                    .attr("y1", 140)
-                    .attr("y2", 140)
-                    .style("opacity", 0.5)
-                    .style("stroke", "black")
-                    .attr("stroke-width", 2)
-                    ;
-
                 svg.append("svg:defs")
                     .append("svg:marker")
-                    .attr("id", "yaxisNamesArrow")
+                    .attr("id", "yaxisMarginalArrow")
                     .attr("viewBox", "0 0 10 10")
                     .attr("refX", 2)
                     .attr("refY", 5)
@@ -1264,37 +1302,75 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("markerWidth", 4)
                     .attr("markerHeight", 5)
                     .attr("orient", "auto")
+                    .attr("fill","green")
                     .append("svg:path")
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
                     .attr("x1", width + 90)
-                    .attr("x2", width + 70)
-                    .attr("y1", 130)
+                    .attr("x2", width + 75)
+                    .attr("y1", 132)
                     .attr("y2", 141)
                     .style("opacity", 0.5)
-                    .style("stroke", "black")
+                    .style("stroke", "green")
                     .attr("stroke-width", 1)
 
                 svg.append("line")
-                    .attr("x1", width + 70)
-                    .attr("x2", width + 25)
+                    .attr("x1", width + 75)
+                    .attr("x2", width + 60)
                     .attr("y1", 141)
                     .attr("y2", 141)
                     .style("opacity", 0.5)
-                    .style("stroke", "black")
+                    .style("stroke", "green")
                     .attr("stroke-width", 1)
-                    .attr("marker-end", "url(#yaxisNamesArrow)")
+                    .attr("marker-end", "url(#yaxisMarginalArrow)")
+
+                svg.append("svg:defs")
+                    .append("svg:marker")
+                    .attr("id", "yaxisMildArrow")
+                    .attr("viewBox", "0 0 10 10")
+                    .attr("refX", 2)
+                    .attr("refY", 5)
+                    .attr("markerUnits", "strokeWidth")
+                    .attr("markerWidth", 4)
+                    .attr("markerHeight", 5)
+                    .attr("orient", "auto")
+                    .attr("fill","#960000")
+                    .append("svg:path")
+                    .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 85)
-                    .attr("x2", width + 25)
+                    .attr("x1", width + 90)
+                    .attr("x2", width + 60)
                     .attr("y1", 147.5)
                     .attr("y2", 147.5)
                     .style("opacity", 0.5)
-                    .style("stroke", "black")
+                    .style("stroke", "#960000")
                     .attr("stroke-width", 1)
-                    .attr("marker-end", "url(#yaxisNamesArrow)")
+                    .attr("marker-end", "url(#yaxisMildArrow)")
+
+                //top line of graph
+                svg.append("line")
+                    .attr("x1", width+20)
+                    .attr("x2", 0)
+                    .attr("y1", 0)
+                    .attr("y2", 0)
+                    .style("opacity", 0.6)
+                    .style("stroke", "grey")
+                    .attr("stroke-width", 0.5)
+                    ;                        
+                //bottom line of graph
+                svg.append("line")
+                    .attr("x1", width+170)
+                    .attr("x2", 0)
+                    .attr("y1", height+60)
+                    .attr("y2", height+60)
+                    .style("opacity", 0.6)
+                    .style("stroke", "grey")
+                    .attr("stroke-width", 0.5)
+                    ;
+
+                
             }
             addTextAfterYaxis();
 

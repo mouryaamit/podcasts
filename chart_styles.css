@@ -1,4 +1,9 @@
 /* Start of graph css */
+
+.insights_graph{
+    height: 470px;
+}
+
 .x.axis line,
 .y.axis line {
     stroke: grey !important;
