@@ -2,11 +2,12 @@
 
 .insights_graph{
     height: 470px;
+    font-family: 'Inter';
 }
 
 .x.axis line,
 .y.axis line {
-    stroke: grey !important;
+    stroke: grey;
     stroke-width: 0;
 }
 
@@ -28,8 +29,10 @@ div.tooltip-area {
 }
 
 .tick text {
-    font-size: 12px;
-    color: darkgray;
+    font-size: 13px;
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 119.2%;
 }
 
 .x_month .tick line {
@@ -60,14 +63,16 @@ div.tooltip-area {
     font-size: 1rem;
 } */
 
-.y-axis-titles {
-    overflow-wrap: break-word;
-    font-size: 12px;
-    width: 20px !important;
+.axis-title {
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 500;
+    /* color: #2FB36B; */
 }
 
-.axis-title {
-    font-size: 12px;
+.x_month_num .tick text, .x_month_name .tick text, 
+.x_month_year .tick text, .y_left_points .tick text{
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .y-axis-title_9,
@@ -75,7 +80,7 @@ div.tooltip-area {
 .y-axis-title_7,
 .y-axis-title_6,
 .y-axis-title_5 {
-    color: green !important;
+    color: #759B67;
 }
 
 .y-axis-title_4,
@@ -83,41 +88,48 @@ div.tooltip-area {
 .y-axis-title_2,
 .y-axis-title_1,
 .y-axis-title_0 {
-    color: darkred !important;
+    color: #AC5D5D;
 }
 
-.y-axis-titles.active {
-    font-weight: bold;
+.y-axis-titles {
+    font-size: 15px !important;
 }
+
+/* .y-axis-titles.active {
+    font-weight: 600;
+    color: #1E7400 !important;
+} */ 
+/* have to apply for green and red */
 
 .x_month_name.active,
 .x_month_name_context.active {
-    font-weight: bold;
-    /* should remove color for x-axis selection */
-    color: black;
+    font-weight: 600;
+    color: black !important;
 }
 
 .x_month_name.select_g {
-    font-weight: bold;
-    color: green;
+    font-weight: 600;
+    color: #1E7400 !important;
 }
 
 .x_month_name.select_r {
-    font-weight: bold;
-    color: darkred;
+    font-weight: 600;
+    color: #830A0A !important;
 }
 
 #rect_xaxis,
 #rect_def_yaxis {
-    fill: #C8C8C8;
+    fill: rgba(226, 226, 226, 0.5);
 }
 
 .rect_yaxis_1 {
-    fill: green;
+    fill: #759B67;
+    opacity: 0.1;
 }
 
 .rect_yaxis_2 {
-    fill: darkred;
+    fill: #AE7676;
+    opacity: 0.1;
 }
 
 .animating_circle {
@@ -202,11 +214,11 @@ div.tooltip-area {
 }
 
 .yAxisExpansionColor {
-    color: green;
+    color: #759B67;
 }
 
 .yAxisContractorColor {
-    color: #960000;
+    color: #AC5D5D;
 }
 
 .infoIcon {

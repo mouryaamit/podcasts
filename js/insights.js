@@ -103,30 +103,25 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 .attr("width", width + margin.left + margin.right + 200) //set width
                 .attr("height", height + margin.top + margin.bottom + 100) //set height
                 .append("g")
-                // .attr("stroke", "grey")
-                // .attr("stroke-width", "0.1")
                 .attr("transform", `translate(${margin.left},${margin.top})`);
 
             const month_number = svg.append("g")
                 .attr("transform", `translate(0, ${height})`)
-                .attr("stroke", "grey")
+                // .attr("stroke", "grey")
                 .attr("stroke-width", "0")
-                // .attr("stroke-dasharray","1")
-                .attr("opacity", ".6")
                 .attr("class", "x_month_num")
                 .call(xAxis_month_number)
                 .selectAll(".tick text")
-                // .attr("x", "0.8em")
                 .attr("x", "0em")
                 .attr("y", "-1.3em")
                 ;
 
             const month_name = svg.append("g")
                 .attr("transform", `translate(0, ${height})`)
-                .attr("stroke", "grey")
+                // .attr("stroke", "grey")
                 .attr("stroke-width", "0.1")
                 // .attr("stroke-dasharray","1")
-                .attr("opacity", ".6")
+                // .attr("opacity", ".6")
                 .attr("class", "x_month_name")
                 .call(xAxis_month_name)
                 // .selectAll("text")
@@ -171,23 +166,26 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
 
             const month_year = svg.append("g")
                 .attr("transform", `translate(0, ${height})`)
-                .attr("stroke", "grey")
+                // .attr("stroke", "grey")
                 .attr("stroke-width", "0.1")
                 // .attr("stroke-dasharray","1")
-                .attr("opacity", ".6")
+                // .attr("opacity", ".6")
                 .attr("class", "x_month_year")
                 .call(xAxis_year)
                 .selectAll(".tick text")
                 .attr("x", "1.5em")
                 .attr("y", "4em")
-                .style("font-weight", "bold")
-                .style("fill", "black")
+                .style("font-weight", "600")
+                .style("fill", "#A3A3A3")
+                .style("font-family", "Inter")
+                .style("font-size", "16px")
                 ;
 
             const y_points = svg.append("g")
-                .attr("stroke", "grey")
+                // .attr("stroke", "grey")
                 .attr("stroke-width", "0.1")
-                .attr("opacity", ".6")
+                // .attr("opacity", ".6")
+                .attr("class", "y_left_points")
                 .call(yAxis_left)
                 .append("text")
                 .attr("class", "axis-title")
@@ -200,9 +198,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                 ;
 
             const y_text = svg.append("g")
-                .attr("stroke", "grey")
+                // .attr("stroke", "grey")
                 .attr("stroke-width", "0.1")
-                .attr("opacity", "1")
+                // .attr("opacity", "1")
                 .attr("transform", `translate(${width + 19},0)`) //+20
                 .call(yAxis_right)
                 // .selectAll("text")
@@ -251,8 +249,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', 0)
                     .attr('x2', 0)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.5")
+                    .attr('stroke', '#E1E1E1')
+                    .attr("stroke-width", "1")
                     // .attr("stroke-dasharray", "2")
                     ;
                 const year_2 = svg.append("g"); //2020
@@ -261,8 +259,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', 0)
                     .attr('x2', 61.5)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.7")
+                    .attr('stroke', '#959595')
+                    .attr("stroke-width", "1")
                     .attr("stroke-dasharray", "2")
                     ;
                 const year_3 = svg.append("g"); //2021
@@ -271,8 +269,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', 0)
                     .attr('x2', 301.5)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.7")
+                    .attr('stroke', '#959595')
+                    .attr("stroke-width", "1")
                     .attr("stroke-dasharray", "2")
                     ;
                 const year_4 = svg.append("g"); //2022
@@ -281,8 +279,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', 0)
                     .attr('x2', 541.5)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.7")
+                    .attr('stroke', '#959595')
+                    .attr("stroke-width", "1")
                     .attr("stroke-dasharray", "2")
                     ;
                 const year_5 = svg.append("g"); //2023
@@ -291,18 +289,18 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', 0)
                     .attr('x2', 781.5)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.7")
+                    .attr('stroke', '#959595')
+                    .attr("stroke-width", "1")
                     .attr("stroke-dasharray", "2")
                     ;
-                const year_6 = svg.append("g"); //2019
-                year_1.append('line')
+                const year_6 = svg.append("g");
+                year_6.append('line')
                     .attr('x1', width + 19)
                     .attr('y1', 0)
                     .attr('x2', width + 19)
                     .attr('y2', height + 58)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.5")
+                    .attr('stroke', '#959595')
+                    .attr("stroke-width", "1")
                     // .attr("stroke-dasharray", "2")
                     ;
             }
@@ -346,9 +344,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('height', 50)
                     // .attr("id","rect_flag1")
                     .attr("fill", "white")
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.3")
-                    .style("opacity", 1)
+                    .attr('stroke', '#A0A0A0')
+                    .attr("stroke-width", "1")
+                    // .style("opacity", 1)
                     ;
                 covid_2020.append("text")
                     .html("Covid-19 Lockdown")
@@ -359,7 +357,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
                     .style("font-size", "14px")
-                    .style("fill", "grey")
+                    .style("fill", "#767676")
+                    .style("font-weight", 500)
                     // .text("Covid 19 Lockdown")
                     ;
                 covid_2020.append('line')
@@ -367,8 +366,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', y_1 - 10)
                     .attr('x2', x_1 + 9)
                     .attr('y2', y_1 + 35)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.3")
+                    .attr('stroke', '#A0A0A0')
+                    .attr("stroke-width", "1")
                     ;
                 const covid_2021 = svg.append('g')
                     // .attr("class", "flag2_text")
@@ -379,9 +378,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('height', 50)
                     // .attr("id","rect_flag2")
                     .attr("fill", "white")
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.3")
-                    .style("opacity", 1)
+                    .attr('stroke', '#A0A0A0')
+                    .attr("stroke-width", "1")
+                    // .style("opacity", 1)
                     ;
                 covid_2021.append("text")
                     .html("Covid-19 Recovery")
@@ -392,7 +391,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
                     .style("font-size", "14px")
-                    .style("fill", "grey")
+                    .style("fill", "#767676")
+                    .style("font-weight", 500)
                     // .text("Covid 19 Recovery")
                     ;
                 covid_2021.append('line')
@@ -400,8 +400,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('y1', y_2)
                     .attr('x2', x_2 + 10)
                     .attr('y2', y_2 - 50)
-                    .attr('stroke', 'grey')
-                    .attr("stroke-width", "0.3")
+                    .attr('stroke', '#A0A0A0')
+                    .attr("stroke-width", "1")
                     ;
             };
 
@@ -682,6 +682,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('width', 19)
                     .attr('height', 340)
                     .attr("id", "rect_xaxis")
+                    // .attr('stroke', '#E2E2E280')
+                    // .style("stroke-dasharray", ("3, 1"))
+                    // .style("opacity", 0.5)
                     .attr('stroke', 'black')
                     .style("stroke-dasharray", ("3, 1"))
                     .style("opacity", 0.3)
@@ -709,9 +712,12 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('width', 19)
                     .attr('height', 340)
                     .attr("id", "rect_xaxis")
-                    .attr('stroke', 'grey')
+                    // .attr('stroke', '#E2E2E280')
                     // .style("stroke-dasharray", ("3, 1"))
-                    .style("opacity", 0.2)
+                    // .style("opacity", 0.5)
+                    .attr('stroke', 'black')
+                    .style("stroke-dasharray", ("3, 1"))
+                    .style("opacity", 0.3)
                     .transition()
                     .duration(1000)
                     //.ease(d3.easeCubicOut)
@@ -761,9 +767,12 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                             return "rect_yaxis_2";
                         }
                     })
+                    // .attr('stroke', '#E2E2E280')
+                    // .style("stroke-dasharray", 1)
+                    // .style("opacity", "0.1")
                     .attr('stroke', 'black')
                     .style("stroke-dasharray", ("3, 1"))
-                    .style("opacity", "0.1")
+                    .style("opacity", 0.3)
                     .transition()
                     .duration(1000)
                     //.ease(d3.easeCubicOut)
@@ -781,10 +790,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr('width', width + 19)
                     .attr('height', handyValues.h) //75, 60, 15, 19, 15, 30, 75
                     .attr("id", "rect_def_yaxis")
-                    .attr('stroke', 'black')
-                    .style("stroke-dasharray", ("3, 1"))
-                    .style("opacity", "0.1")
-                    // .style("z-index", "-1")
+                    .attr('stroke', '#E2E2E280')
+                    // .style("stroke-dasharray", ("3, 1"))
+                    // .style("opacity", "0.5")
                     .transition()
                     .duration(1000)
                     //.ease(d3.easeCubicOut)
@@ -973,7 +981,6 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("transform", `translate(${margin.left},${margin.top})`);
                 svg.append("g")
                     .attr("transform", `translate(0, ${height})`)
-                    // .attr("stroke", "grey")
                     .attr("stroke-dasharray", "1")
                     .attr("stroke-width", "0.5")
                     .attr("opacity", ".6")
@@ -1013,13 +1020,13 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     let handyValues = gethAndYValuesCommentary(d_child.__data__);
                     svg.append('rect')
                         .attr('x', 0)
-                        .attr('y', handyValues.y) //225, 165, 150, 120, 105, 75, 0
+                        .attr('y', handyValues.y)
                         .attr('width', width)
-                        .attr('height', handyValues.h) //75, 60, 15, 19, 15, 30, 75
+                        .attr('height', handyValues.h)
                         .attr("id", "rect_def_yaxis")
-                        .attr('stroke', 'grey')
+                        .attr('stroke', '#E2E2E280')
                         // .style("stroke-dasharray", ("3, 1"))
-                        .style("opacity", "0.1")
+                        // .style("opacity", "0.5")
                         .transition()
                         .duration(1000)
                         //.ease(d3.easeCubicOut)
@@ -1099,18 +1106,21 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                         .html(`${monthlyC.comment}`)
                         ;
                     // Right data
-                    d3.select('.prev_month')
-                        .html(`May 2023`)
-                        ;
+                    // d3.select('.prev_month')
+                    //     .html(`May 2023`)
+                    //     ;
                     d3.select(".ec_month_title") //.ec_month
                         .html(`${current_month} ${current_year}`)
                         ;
                     // d3.select(".ec_month_title")
                     //     .html(`${expertC.Title}`)
                     //     ;
-                    d3.select('.next_month')
-                        .html(`Jul 2023`)
-                        ;
+                    // d3.select('.next_month')
+                    //     .html(`Jul 2023`)
+                    //     ;
+                    d3.select('#img_commentary')
+                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
+                    ;
                     d3.select(".ec_title")
                         .html(`Expert Commentary`)
                         ;
@@ -1203,9 +1213,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                     infodata += "<div style=\"padding: 2px;color:#960000\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                             } else {
                                 if (i == indexData.length - 1)
-                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;color:green\"><b>&#8593; Expansion</b></div><div style=\"padding: 2px;color:green\">" + indexData[i].value + " <span style=\"float:right;color:green\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"padding: 2px;color:#1E7400\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                                 else
-                                    infodata += "<div style=\"padding: 2px;color:green\">" + indexData[i].value + " <span style=\"float:right;color:green\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;color:#1E7400\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                             }
                         }
                         document.getElementById("yaxisContentInfo").innerHTML = infodata;
@@ -1252,8 +1262,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("markerWidth", 4)
                     .attr("markerHeight", 5)
                     .attr("orient", "auto")
-                    .style("stroke", "green")
-                    .attr("fill", "green")
+                    .style("stroke", "#1E7400")
+                    .attr("fill", "#1E7400")
                     .append("svg:path")
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
@@ -1278,7 +1288,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("y1", 105)
                     .attr("y2", 80)
                     .style("opacity", 0.5)
-                    .style("stroke", "green")
+                    .style("stroke", "#1E7400")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#expansionArrow)");
 
@@ -1302,7 +1312,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("markerWidth", 4)
                     .attr("markerHeight", 5)
                     .attr("orient", "auto")
-                    .attr("fill","green")
+                    .attr("fill","#1E7400")
                     .append("svg:path")
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
@@ -1312,7 +1322,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("y1", 132)
                     .attr("y2", 141)
                     .style("opacity", 0.5)
-                    .style("stroke", "green")
+                    .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
 
                 svg.append("line")
@@ -1321,7 +1331,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("y1", 141)
                     .attr("y2", 141)
                     .style("opacity", 0.5)
-                    .style("stroke", "green")
+                    .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
                     .attr("marker-end", "url(#yaxisMarginalArrow)")
 
@@ -1355,9 +1365,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("x2", 0)
                     .attr("y1", 0)
                     .attr("y2", 0)
-                    .style("opacity", 0.6)
-                    .style("stroke", "grey")
-                    .attr("stroke-width", 0.5)
+                    // .style("opacity", 0.6)
+                    .style("stroke", "#E1E1E1")
+                    .attr("stroke-width", 1)
                     ;                        
                 //bottom line of graph
                 svg.append("line")
@@ -1365,9 +1375,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     .attr("x2", 0)
                     .attr("y1", height+60)
                     .attr("y2", height+60)
-                    .style("opacity", 0.6)
-                    .style("stroke", "grey")
-                    .attr("stroke-width", 0.5)
+                    // .style("opacity", 0.6)
+                    .style("stroke", "#E1E1E1")
+                    .attr("stroke-width", 1)
                     ;
 
                 
