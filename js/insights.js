@@ -1381,12 +1381,12 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
 
             document.getElementById('#slide_prev').addEventListener('click', function () {
                 // console.log('on click prev slider', prev_month_data);
-                // now do something
                 const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
-                if (prevCommentaryData) {
+                const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
+                if (prevCommentaryData && checkIfMonthlyCommentary) {
                     setPrevAndNextMonthsSlider(prevCommentaryData);
                     addCommentary(prevCommentaryData);
-                    // kavya - need to avoid for month not having commentary data
+                    // need to avoid for month not having commentary data
                     d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
                     d3.selectAll(".x_month_name").classed("select_g", false);
                     d3.selectAll(".x_month_name").classed("select_r", false);
@@ -1395,9 +1395,9 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
             });
             document.getElementById('#slide_next').addEventListener('click', function () {
                 // console.log('on click next slider', next_month_data);
-                // now do something
                 const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-                if (nextCommentaryData) {
+                const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
+                if (nextCommentaryData && checkIfMonthlyCommentary) {
                     setPrevAndNextMonthsSlider(nextCommentaryData);
                     addCommentary(nextCommentaryData);
                     d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
