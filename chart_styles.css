@@ -71,7 +71,8 @@ div.tooltip-area {
 }
 
 .x_month_num .tick text, .x_month_name .tick text, 
-.x_month_year .tick text, .y_left_points .tick text{
+.x_month_year .tick text, .y_left_points .tick text, 
+.x_month_name_context .tick text {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -246,10 +247,10 @@ div.tooltip-area {
 /* start of context graph css */
 
 .float-chart {
-    width: 1100px;
-    float: left;
-    height: auto;
-    padding-left: 115px
+    /* width: 1100px; */
+    /* float: left; */
+    /* height: auto; */
+    /* padding-left: 0px */
 }
 
 .float-checkboxes {
@@ -267,9 +268,9 @@ div.tooltip-area {
 }
 
 .chart_desc {
-    width: 1064px;
+    width: 988px;
     text-align: left;
-    padding-left: 175px;
+    padding-left: 315px;
     height: 145px;
 }
 

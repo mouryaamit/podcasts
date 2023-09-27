@@ -38,13 +38,23 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
 
                                                 // set the dimensions and margins of the graph
                                                 const margin = {
-                                                    top: 50,
-                                                    right: 10,
-                                                    bottom: 50,
-                                                    left: 70
+                                                    top: 10,
+                                                    right: 10, //10,
+                                                    bottom: 60,
+                                                    left: 85 //100
                                                 },
-                                                width = 900 - margin.left - margin.right,
-                                                height = 400 - margin.top - margin.bottom;
+                                                //1366
+                                                width = 1100 - margin.left - margin.right,
+
+                                                // // set the dimensions and margins of the graph
+                                                // const margin = {
+                                                //     top: 50,
+                                                //     right: 10,
+                                                //     bottom: 50,
+                                                //     left: 70
+                                                // },
+                                                // width = 900 - margin.left - margin.right,
+                                                height = 450 - margin.top - margin.bottom;
                                                 const iipColorCode = '#2E8DFF';
                                                 const pmiColorCode = '#E1861B';
                                                 const gvaColorCode = '#5451FF';
@@ -180,33 +190,28 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     ;
                                                 const svg = d3.select("#my_dataviz_context")
                                                     .append("svg") //append svg element inside #chart
-                                                    .attr("width", width + margin.left + margin.right + 120) //set width
+                                                    .attr("width", width + margin.left + margin.right + 110) //set width
                                                     .attr("height", height + margin.top + margin.bottom + 30) //set height
                                                     .append("g")
-                                                    .attr("id", "testg")
                                                     .attr("transform", `translate(${margin.left},${margin.top})`);
 
                                                 svg.append("g")
                                                     .attr("transform", `translate(0, ${height})`)
-                                                    .attr("stroke", "grey")
-                                                    .attr("stroke-width", "0")
-                                                    // .attr("stroke-dasharray","1")
-                                                    .attr("opacity", ".6")
+                                                    //.attr("stroke", "grey")
+                                                    .attr("stroke-width", "0") 
+                                                    .attr("class", "x_month_num")                                                                                                     
                                                     .call(xAxis_month_number)
                                                     .selectAll("text")
-                                                    .attr("x", "0.5em")
+                                                    .attr("x", "0em")
                                                     .attr("y", "-1.3em")
-                                                    //.attr('dy', 8)
-                                                    //.attr('dx', 0)
-                                                    .style('text-anchor', 'end')
+                                                    //.style('text-anchor', 'end')
                                                     ;
 
                                                 const x_axis_months = svg.append("g")
                                                     .attr("transform", `translate(0, ${height})`)
-                                                    .attr("stroke", "grey")
                                                     .attr("stroke-width", "0.1")
                                                     // .attr("stroke-dasharray","1")
-                                                    .attr("opacity", ".6")
+                                                    //.attr("opacity", ".6")
                                                     .attr("class", "x_month_name_context")
                                                     .call(xAxis_month_name)
                                                     //.selectAll("text")
@@ -257,26 +262,30 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     ;
 
                                                 svg.append("g")
-                                                    .attr("transform", `translate(0, ${height})`)
-                                                    .attr("stroke", "grey")
-                                                    .attr("stroke-width", "0.1")
-                                                    // .attr("stroke-dasharray","1")
-                                                    .attr("opacity", ".6")
-                                                    .call(xAxis_year)
-                                                    .selectAll("text")
-                                                    .attr("x", "1.5em")
-                                                    .attr("y", "4em")
-                                                    .style("font-weight", "bold")
-                                                    .style("fill", "black")
-                                                    ;
+	                                                .attr("transform", `translate(0, ${height})`)
+	                                                // .attr("stroke", "grey")
+	                                                .attr("stroke-width", "0.1")
+	                                                // .attr("stroke-dasharray","1")
+	                                                // .attr("opacity", ".6")
+                                                    .attr("class", "x_month_year")
+	                                                .call(xAxis_year)
+	                                                .selectAll(".tick text")
+	                                                .attr("x", "1.5em")
+	                                                .attr("y", "2.7em")
+	                                                .style("font-weight", "600")
+	                                                .style("fill", "#A3A3A3")
+	                                                .style("font-family", "Inter")
+	                                                .style("font-size", "16px")
+	                                                ;
 
                                                 svg.append("g")
-                                                    .attr("stroke", "grey")
+                                                    //.attr("stroke", "grey")
                                                     .attr("stroke-width", "0.1")
-                                                    .attr("opacity", ".6")
-                                                    .call(yAxis_left)
-                                                    .append("text")
-                                                    .attr("class", "axis-title")
+                                                    //.attr("opacity", ".6")
+                                                    .attr("class", "y_left_points")
+									                .call(yAxis_left)
+									                .append("text")
+									                .attr("class", "axis-title")
                                                     .attr("x", "-10em")
                                                     .attr("y", "-2.5em")
                                                     .style("text-anchor", "end")
@@ -328,7 +337,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     .attr("fill", "none")
                                                     .attr("stroke", "#2FB36B")
                                                     //.attr("stroke-width", 1)
-                                                    .style("stroke-width", "2")
+                                                    .style("stroke-width", "3")
                                                     .attr("d", line)
                                                     ;
 
@@ -477,7 +486,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     if(tickName == 'iip'){
                                                         yAxis_right_for_iip_tick = svg.append("g")
                                                             .attr("stroke-width", "0.1")
-                                                            .attr("opacity", "1")
+                                                            //.attr("opacity", "1")
                                                             .attr("transform", `translate(`+tickWidth+`,0)`) //+20
                                                             .call(yAxis_right_for_iip)
                                                             .selectAll("text")
@@ -486,7 +495,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                         
                                                         d3.select("#iipYaxisTxt").remove();
                                                         svg.append("text")
-                                                            .attr("opacity", "1")
+                                                            //.attr("opacity", "1")
                                                             .attr("x", -(height + 10))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "iipYaxisTxt")
@@ -653,8 +662,8 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                             svg.append('rect')
                                                                 .attr('x', width)
                                                                 .attr('y', 0)
-                                                                .attr('width', 18)
-                                                                .attr('height', 340)
+                                                                .attr('width', 19)
+                                                                .attr('height', height+40)
                                                                 .attr("id", "rect_xaxis_context")
                                                                 .attr('stroke', 'black')
                                                                 .style("stroke-dasharray", ("3, 1"))
@@ -667,7 +676,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                                 })
 
                                                             const tooltip_pointer = getPointsOnCurve(mydata[i].category, mydata[i].value);
-                                                            addTooltip(tooltip_pointer, mydata[i], "", false);
+                                                            addTooltip(tooltip_pointer, mydata[i], "");
                                                             d3.select(`.x_month_name_context_${i}`).classed("active", true);
                                                         }
 
@@ -703,7 +712,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                         d = x0 - new Date(Number(d0.category.split("-")[1]), (Number(d0.category.split("-")[0]) - 1)) > new Date(Number(d1.category.split("-")[1]), (Number(d1.category.split("-")[0]) - 1)) - x0 ? d1 : d0;
 
                                                     const tooltip_pointer = getPointsOnCurve(d.category, d.value);
-                                                    addTooltip(tooltip_pointer, d, "", false);
+                                                    addTooltip(tooltip_pointer, d, "");
 
                                                     //updating x value data & re-rendering
                                                     d3.select("#rect_xaxis_context").remove();
@@ -711,9 +720,12 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                         //.attr('x', event.x-80)
                                                         .attr('x', tooltip_pointer.x + 0.8)
                                                         .attr('y', 0)
-                                                        .attr('width', 18)
-                                                        .attr('height', 340)
+                                                        .attr('width', 21)
+                                                        .attr('height', height+40)
                                                         .attr("id", "rect_xaxis_context")
+                                                        // .attr('stroke', '#E2E2E280')
+									                    // .style("stroke-dasharray", ("3, 1"))
+									                    // .style("opacity", 0.5)
                                                         .attr('stroke', 'black')
                                                         .style("stroke-dasharray", ("3, 1"))
                                                         .style("opacity", 0.3)
@@ -737,130 +749,123 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
 
                                                 }
 
-                                                function addTooltip(mousePointer, dataValue, event, flag) {
-                                                    if (flag) {
-                                                        /*focus.style("opacity", 0.9)
-                                                            .attr("transform", "translate(" + mousePointer[0] + "," + mousePointer[1] + ")")
-                                                        ;*/
-                                                        tooltip
-                                                            .transition()
-                                                            .duration(100)
-                                                            .style("opacity", 0.9);
-                                                        tooltip
-                                                            .html(dataValue.value)
-                                                            .style("left", (event.pageX) + "px")
-                                                            .style("top", (event.pageY - 30) + "px");
+                                                function addTooltip(mousePointer, dataValue, event) {
+                                                    tooltip
+                                                        .transition()
+                                                        .duration(100)
+                                                        .style("opacity", 0.9);
+                                                    tooltip
+                                                        .html(dataValue.value)
+                                                        .style("left", (mousePointer.x + width) - 920+ "px") //(event.pageX) +
+                                                        .style("top", (mousePointer.y + height) - 225 + "px"); //(event.pageY - 30) +
 
-                                                        radiation
-                                                            .transition()
-                                                            .duration(100)
-                                                            .attr('cx', function (d) {
-                                                                return d;
-                                                            }).style("opacity", 0.9);
+                                                    radiation
+                                                        .transition()
+                                                        .duration(100)
+                                                        .attr('cx', function (d) {
+                                                            return d;
+                                                        }).style("opacity", 0.9)
 
-                                                        radiation
-                                                            .html("<span id=\"radiation\" class=\"animating_circle\">" +
-                                                                "<span class=\"circle_waves circle_one\"></span> " +
-                                                                "<span class=\"circle_waves circle_two\"></span> " +
-                                                                "<span class=\"circle_waves circle_three\"></span>" +
-                                                                "</span>")
-                                                            .style("left", (mousePointer.x + 84) + "px") //(event.pageX) +
-                                                            .style("top", (mousePointer.y - 392) + "px"); //(event.pageY - 30) +
-                                                    } else {
-                                                        /*focus.style("opacity", 0.9)
-                                                            .attr("transform", "translate(" + (mousePointer.x + 10) + "," + (mousePointer.y) + ")")
-                                                        ;*/
-                                                        tooltip
-                                                            .transition()
-                                                            .duration(100)
-                                                            .style("opacity", 0.9);
-                                                        tooltip
-                                                            .html(dataValue.value)
-                                                            .style("left", (mousePointer.x + width) - 640 + "px") //(event.pageX) +
-                                                            .style("top", (mousePointer.y + height) - 105 + "px"); //(event.pageY - 30) +
-
-                                                        radiation
-                                                            .transition()
-                                                            .duration(100)
-                                                            .attr('cx', function (d) {
-                                                                return d;
-                                                            }).style("opacity", 0.9)
-
-                                                        radiation
-                                                            .html("<span id=\"radiation\" class=\"animating_circle\">" +
-                                                                "<span class=\"circle_waves circle_one\"></span> " +
-                                                                "<span class=\"circle_waves circle_two\"></span> " +
-                                                                "<span class=\"circle_waves circle_three\"></span>" +
-                                                                "</span>")
-                                                            .style("left",(mousePointer.x-410)+"px")
-                                                            .style("top", (mousePointer.y-393) + "px"); //(event.pageY - 30) +
-                                                    }
+                                                    radiation
+                                                        .html("<span id=\"radiation\" class=\"animating_circle\">" +
+                                                            "<span class=\"circle_waves circle_one\"></span> " +
+                                                            "<span class=\"circle_waves circle_two\"></span> " +
+                                                            "<span class=\"circle_waves circle_three\"></span>" +
+                                                            "</span>")
+                                                        .style("left",(mousePointer.x-1111)+"px")
+                                                        .style("top", (mousePointer.y-233) + "px"); //(event.pageY - 30) +
+                                                    
                                                 }
 
 
                                                 function addLinesForYears() {
+                                                    let xValue = 68,diffInTwoLine = 268.5;
                                                     const year_1 = svg.append("g"); //2019
                                                     year_1.append('line')
                                                         .attr('x1', 0)
                                                         .attr('y1', 0)
                                                         .attr('x2', 0)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.5")
+                                                        .attr('stroke', '#E1E1E1')
+                                                        .attr("stroke-width", "1")
                                                         // .attr("stroke-dasharray", "2")
                                                         ;
                                                     const year_2 = svg.append("g"); //2020
                                                     year_2.append('line')
-                                                        .attr('x1', 55.5)
+                                                        .attr('x1', xValue)
                                                         .attr('y1', 0)
-                                                        .attr('x2', 55.5)
+                                                        .attr('x2', xValue)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.7")
-                                                        .attr("stroke-dasharray", "2")
+                                                        .attr('stroke', '#959595')
+									                    .attr("stroke-width", "1")
+									                    .attr("stroke-dasharray", "2")
                                                         ;
+                                                    xValue = xValue + diffInTwoLine;
                                                     const year_3 = svg.append("g"); //2021
                                                     year_3.append('line')
-                                                        .attr('x1', 275)
+                                                        .attr('x1', xValue)
                                                         .attr('y1', 0)
-                                                        .attr('x2', 275)
+                                                        .attr('x2', xValue)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.7")
+                                                        .attr('stroke', '#959595')
+                                                        .attr("stroke-width", "1")
                                                         .attr("stroke-dasharray", "2")
                                                         ;
+                                                    xValue = xValue + diffInTwoLine;
                                                     const year_4 = svg.append("g"); //2022
                                                     year_4.append('line')
-                                                        .attr('x1', 493.5)
+                                                        .attr('x1', xValue)
                                                         .attr('y1', 0)
-                                                        .attr('x2', 493.5)
+                                                        .attr('x2', xValue)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.7")
+                                                        .attr('stroke', '#959595')
+                                                        .attr("stroke-width", "1")
                                                         .attr("stroke-dasharray", "2")
                                                         ;
+                                                    xValue = xValue + diffInTwoLine;
                                                     const year_5 = svg.append("g"); //2023
                                                     year_5.append('line')
-                                                        .attr('x1', 712)
+                                                        .attr('x1', xValue)
                                                         .attr('y1', 0)
-                                                        .attr('x2', 712)
+                                                        .attr('x2', xValue)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.7")
+                                                        .attr('stroke', '#959595')
+                                                        .attr("stroke-width", "1")
                                                         .attr("stroke-dasharray", "2")
                                                         ;
                                                     const year_6 = svg.append("g"); //2019
-                                                    year_1.append('line')
+                                                    year_6.append('line')
                                                         .attr('x1', width + 19)
                                                         .attr('y1', 0)
                                                         .attr('x2', width + 19)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', 'grey')
-                                                        .attr("stroke-width", "0.5")
+                                                        .attr('stroke', '#959595')
+                                                        .attr("stroke-width", "1")
                                                         // .attr("stroke-dasharray", "2")
                                                         ;
                                                 }
                                                 addLinesForYears();
+                                                
+                                              //top line of graph
+                                                svg.append("line")
+                                                    .attr("x1", width+20)
+                                                    .attr("x2", 0)
+                                                    .attr("y1", 0)
+                                                    .attr("y2", 0)
+                                                    // .style("opacity", 0.6)
+                                                    .style("stroke", "#E1E1E1")
+                                                    .attr("stroke-width", 1)
+                                                    ;                        
+                                                //bottom line of graph
+                                                svg.append("line")
+                                                    .attr("x1", width+20)
+                                                    .attr("x2", 0)
+                                                    .attr("y1", height+60)
+                                                    .attr("y2", height+60)
+                                                    // .style("opacity", 0.6)
+                                                    .style("stroke", "#E1E1E1")
+                                                    .attr("stroke-width", 1)
+                                                    ;
                                             });
 
                                 });
