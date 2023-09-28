@@ -1,3 +1,13 @@
+// Add Header Shadow on Scroll
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  if (scroll > 0) {
+    document.querySelector(".app_header").classList.add("app_header_shadow");
+  } else {
+    document.querySelector(".app_header").classList.remove("app_header_shadow");
+  }
+});
+
 // States & UTs
 const stateCityData = {
   "states": [
@@ -147,7 +157,7 @@ const stateCityData = {
 
 function populateStatesAndCities(statesData) {
   const stateList = document.getElementById('stateList');
-  stateList.innerHTML = '';
+  // stateList.innerHTML = '';
 
   statesData.forEach((state) => {
     const stateItem = document.createElement('li');
@@ -158,7 +168,7 @@ function populateStatesAndCities(statesData) {
 
     const chevronIcon = document.createElement('img');
     chevronIcon.classList.add('toggle-icon');
-     // Initial right chevron icon
+    // Initial right chevron icon
     chevronIcon.src = 'assets/icons/expand_more.svg';
     stateName.appendChild(chevronIcon);
 
@@ -199,7 +209,7 @@ initialize();
 const scrollableContent = document.getElementById('scrollableContent');
 const fixedImage = document.getElementById('fixedImage');
 
-scrollableContent.addEventListener('scroll', function(event) {
+scrollableContent.addEventListener('scroll', function (event) {
   if (scrollableContent.scrollHeight - scrollableContent.scrollTop === scrollableContent.clientHeight) {
     // User has scrolled to the bottom of the content
     // Allow the body to scroll
@@ -235,4 +245,3 @@ function resetAllIcons() {
     inactiveIcon.style.display = 'block';
   }
 }
-

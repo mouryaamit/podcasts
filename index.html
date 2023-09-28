@@ -23,7 +23,7 @@
 </head>
 
 <body class="">
-  <header class="container-fluid d-flex justify-content-between align-items-center app_header">
+  <header class="container-fluid d-flex justify-content-between align-items-center app_header" id="appHeader">
     <div class="app_header_left">
       <a href="index.html">
         <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
@@ -55,10 +55,10 @@
   </header>
   <main class="app_home text-center">
     <div class="row gx-0 justify-content-center">
-      <div class="col-md-7 app_home_main_title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+      <div class="col-md-12 app_home_main_title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
         <p>
-          <span class="fw-bold">India’s only economic activity index of</span>
-          <span class="fw-bold">credit seeking MSMEs - <span class="fw-bold">Jocata “Sumpoorn”</span></span>
+          <span class="d-block">India’s only economic activity index of</span>
+          <span class="d-block">credit seeking MSMEs - <span class="fw-bold">Jocata “Sumpoorn”</span></span>
         </p>
       </div>
       <div class="col-md-10 app_home_chart_con" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
@@ -66,7 +66,7 @@
           <img src="assets/images/home-chart.svg" class="img-fluid" />
         </div>
       </div>
-      <div class="col-md-10 app_home_chart_info">
+      <div class="col-md-12 app_home_chart_info">
         <a class="discover_cta my-5" href="index-graph.html" data-aos="fade-up">Explore Index Features</a>
         <p class="pt-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
           <span class="d-block">A unique initiative that leverages India's Digital Public Infrastructure(DPI) by</span>
@@ -84,9 +84,13 @@
         </div>
         <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear">
           <h4 class="app_home_section_title my-5 blue-text">Why Build an MSME Index?</h4>
-          <p class="app_home_section_caption w-75">Available macro indices measure production activity or capture
-            business
-            expectations and sentiment. There is no index that captures the lifeblood of the Indian economy – MSMEs.</p>
+          <p class="app_home_section_caption">
+            <span class="d-block">Available macro indices measure</span>
+            <span class="d-block">production activity or capture business</span>
+            <span class="d-block">expectations and sentiment. There is no</span>
+            <span class="d-block">index that captures the lifeblood of the</span>
+            <span class="d-block">Indian economy – MSMEs.</span>
+          </p>
         </div>
       </div>
     </div>
@@ -99,32 +103,42 @@
           <div class="container">
             <div class="row row-cols-3 gx-5">
               <div class="col">
-                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                   <img src="assets/icons/savings.svg" class="img-fluid" data-aos="fade-up" data-aos-easing="linear"
                     data-aos-delay="500" data-aos-duration="1000">
                   <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                     <h6 class="app_eco_card_title">Lenders</h6>
-                    <p class="app_eco_card_detail">To direct developmental and commercial capital to MSMEs</p>
+                    <p class="app_eco_card_detail">
+                      <span class="d-block">To direct developmental and</span>
+                      <span class="d-block">commercial capital to MSMEs</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                   <img src="assets/icons/account_balance.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="700"
                     data-aos-duration="1000">
                   <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
                     <h6 class="app_eco_card_title">Policy makers</h6>
-                    <p class="app_eco_card_detail">To create tailored policies to propel MSME growth & development</p>
+                    <p class="app_eco_card_detail">
+                      <span class="d-block">To create tailored policies to</span>
+                      <span class="d-block">propel MSME growth &</span>
+                      <span class="d-block">development</span>
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                   <img src="assets/icons/currency_rupee.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="900"
                     data-aos-duration="1000">
                   <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
                     <h6 class="app_eco_card_title">Economists and Researchers</h6>
-                    <p class="app_eco_card_detail">To study policy and credit flow impact on the segment</p>
+                    <p class="app_eco_card_detail">
+                      <span class="d-block">To study policy and credit</span>
+                      <span class="d-block">flow impact on the segment</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -140,7 +154,7 @@
         <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
           data-aos-duration="1000" />
       </div>
-      <div class="col-md-6 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+      <div class="col-md-8 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
         data-aos-delay="500">
         <h4 class="app_home_section_title mb-5">Minds Behind the Index</h4>
         <p class="app_home_section_caption text-black">
@@ -161,8 +175,12 @@
         <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear"
           data-aos-duration="1000">
           <h4 class="app_home_section_title mt-4 mb-5 blue-text">Index Methodology</h4>
-          <p class="app_home_section_caption w-75 mb-0">Jocata Sumpoorn is a 'relative amplitude adjusted diffusion
-            index' generated using monthly GST sales data of credit-seeking MSMEs.</p>
+          <p class="app_home_section_caption w-75 mb-0">
+            <span class="d-block">Jocata Sumpoorn is a 'relative</span>
+            <span class="d-block">amplitude adjusted diffusion index'</span>
+            <span class="d-block">generated using monthly GST sales</span>
+            <span class="d-block">data of credit-seeking MSMEs.</span>
+          </p>
           <a class="app_home_section_caption text-decoration-none" href="methodology.html"><u>Read More</u></a>
         </div>
       </div>
@@ -370,8 +388,12 @@
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
+    // Animation Library Initialization
     AOS.init();
+
+    // Marquee Logic for HomePage
     const root = document.documentElement;
     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
     const marqueeContent = document.querySelector("ul.marquee-content");
@@ -382,6 +404,8 @@
       marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
   </script>
+  <!-- Custom SCripts -->
+  <script src="custom.js"></script>
 </body>
 
 </html>
