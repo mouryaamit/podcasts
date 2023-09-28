@@ -1199,12 +1199,14 @@ d3.json(url,
                     .style("opacity", 0.9);
                 tooltip
                     .html(dataValue.value)
-                    .style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
-                    .style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
+                    //.style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
+                    //.style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
+                    .style("left",(mousePointer.x-width-250)+"px")
+                    .style("top", (mousePointer.y-260) + "px");
                 ;
                 radiation
                     .transition()
-                    .duration(2000)
+                    .duration(100)
                     .attr('cx', function (d) {
                         return d;
                     })
@@ -1215,8 +1217,10 @@ d3.json(url,
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - 1216) + "px")
-                    .style("top", (mousePointer.y - 243) + "px");
+                    //.style("left", (mousePointer.x - 1216) + "px")
+                    //.style("top", (mousePointer.y - 243) + "px");
+                    .style("left",(mousePointer.x-width-256)+"px")
+                    .style("top", (mousePointer.y-243) + "px"); //(event.pageY - 30) +
             }
 
             function addArrowsAfterYaxis() {
