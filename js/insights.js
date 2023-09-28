@@ -315,7 +315,7 @@ d3.json(url,
             }
 
             function addLinesForGraph() {
-                const year_1 = svg.append("g"); //2019
+                const year_1 = svg.append("g"); // first line
                 year_1.append('line')
                     .attr('x1', 0.2)
                     .attr('y1', 0)
@@ -364,13 +364,13 @@ d3.json(url,
                     .attr("stroke-width", "1")
                     .attr("stroke-dasharray", "2")
                     ;
-                const year_6 = svg.append("g");
+                const year_6 = svg.append("g"); // last line
                 year_6.append('line')
                     .attr('x1', width + 20.5)
                     .attr('y1', 0)
                     .attr('x2', width + 20.5)
                     .attr('y2', height + 60)
-                    .attr('stroke', '#959595')
+                    .attr('stroke', '#E1E1E1')
                     .attr("stroke-width", "1")
                     ;
                 //top line of graph
@@ -406,7 +406,7 @@ d3.json(url,
                 const flag1_focus = svg.append("g")
                     .attr("class", "flag1_focus")
                     .attr("transform", "translate(" + (x_1 + 10) + "," + y_1 + ")")
-                    .style("opacity", 0.9)
+                    // .style("opacity", 0.9)
                     ;
 
                 flag1_focus.append("circle")
@@ -415,7 +415,7 @@ d3.json(url,
                 const flag2_focus = svg.append("g")
                     .attr("class", "flag2_focus")
                     .attr("transform", "translate(" + (x_2 + 10) + "," + y_2 + ")")
-                    .style("opacity", 0.9)
+                    // .style("opacity", 0.9)
                     ;
 
                 flag2_focus.append("circle")
@@ -433,7 +433,7 @@ d3.json(url,
                     .attr("stroke-width", "1")
                     ;
                 covid_2020.append("text")
-                    .html("Covid-19 Lockdown")
+                    .html("COVID-19 Lockdown")
                     .attr("x", x_1 - 25)
                     .attr("y", y_1 + 55)
                     .attr("width", 25)
@@ -462,7 +462,7 @@ d3.json(url,
                     .attr("stroke-width", "1")
                     ;
                 covid_2021.append("text")
-                    .html("Covid-19 Recovery")
+                    .html("COVID-19 Recovery")
                     .attr("x", x_2 - 30)
                     .attr("y", y_2 - 105)
                     .attr("width", 25)
@@ -633,7 +633,7 @@ d3.json(url,
                     .attr("y1", handyValues_line.y1)
                     .attr("y2", handyValues_line.y1)
                     .style("opacity", 0.6)
-                    .style("stroke", "grey")
+                    .style("stroke", "#E2E2E280")
                     .attr("stroke-width", 0.5)
                     ;
             }
@@ -950,18 +950,20 @@ d3.json(url,
                     d3.select(".ec_month_title")
                         .html(`${current_month} ${current_year}`)
                         ;
-                    d3.select('#img_commentary')
-                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
-                    ;
                     d3.select(".ec_title")
                         .html(`Expert Commentary`)
                         ;
+                    // member_comm
+                    d3.select('#img_commentary')
+                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
+                    ;
                     d3.select(".ec_author")
                         .html(`${expertC.ExpertName}`)
                         ;
                     d3.select(".ec_author_designation")
                         .html(`${expertC.ExpertDetails}`)
                         ;
+                    // member_comm
                     d3.select(".ec_message")
                         .html(`${expertC.ExpertCommentary}`)
                         ;
@@ -1033,7 +1035,7 @@ d3.json(url,
                     // .text(x1(parseDate(d.category)))
                     ;
                 svg_c.append("g")
-                    .attr("stroke", "grey")
+                    .attr("stroke", "#A3A3A3")
                     .attr("stroke-width", "0")
                     .attr("opacity", ".6")
                     .attr("class", "y_month_value")
@@ -1049,7 +1051,7 @@ d3.json(url,
                     .text("Jocata Sumpoorn")
                     ;
                 const yaright_text = svg_c.append("g")
-                    .attr("stroke", "grey")
+                    .attr("stroke", "#A3A3A3")
                     .attr("stroke-width", "0.1")
                     .attr("opacity", "1")
                     .attr("transform", `translate(${width_c},0)`) //+20
@@ -1281,7 +1283,7 @@ d3.json(url,
                     .attr("y2", 100)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
-                    .attr("stroke-width", 2)
+                    .attr("stroke-width", 1)
                     .attr("marker-end", "url(#expansionArrow)");
 
                 svg.append("line")
@@ -1291,7 +1293,7 @@ d3.json(url,
                     .attr("y2", 260)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
-                    .attr("stroke-width", 2)
+                    .attr("stroke-width", 1)
                     .attr("marker-end", "url(#contractorArrow)");
 
                 svg.append("svg:defs")

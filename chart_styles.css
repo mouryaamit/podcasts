@@ -4,11 +4,11 @@
     font-family: 'Inter';
 }
 
-.x.axis line,
+/* .x.axis line,
 .y.axis line {
     stroke: grey;
     stroke-width: 0;
-}
+} */
 
 .flag1_focus circle,
 .flag2_focus circle {
@@ -22,7 +22,7 @@
     line-height: 119.2%;
 }
 
-.x_month .tick line {
+/* .x_month .tick line {
     stroke-width: 0.1;
     stroke-dasharray: none;
     stroke: slategrey;
@@ -36,7 +36,7 @@
 
 .x_year .tick .no_stroke {
     stroke-width: 0;
-}
+} */
 
 .axis-title {
     font-size: 14px;
@@ -135,7 +135,7 @@ div.tooltip-area {
     border: 1px solid #2FB36B;
     border-radius: 5px;
     pointer-events: none;
-    font-size: 1rem;
+    font-size: 14px;
 }
 .animating_circle {
     display: inline-flex;
@@ -334,5 +334,9 @@ div.context_line_checkboxes .checkbox_label {
 }
 
 .serviceBox:first-child { margin-left: 4% }
+
+path.domain {
+    stroke: #A3A3A3;
+}
 
 /* End of context graph css */
