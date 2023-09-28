@@ -40,16 +40,16 @@ main {
   right: 0;
   left: 0;
   top: 0;
-  height: 113px;
+  /* height: 113px; */
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
   z-index: 999;
 }
 
 .app_header_shadow {
-  -webkit-box-shadow: 0 14px 12px -6px grey;
-  -moz-box-shadow: 0 14px 12px -6px grey;
-  box-shadow: 0 14px 12px -6px grey;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
+    0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+    0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
 }
 
 .app_header .app_header_right .header_links {
@@ -279,7 +279,7 @@ a.app_home_section_caption:hover {
 }
 
 .sidbi_testimonial .testimonial_content_con {
-  padding: 91px 0 91px 253px;
+  padding: 91px 0 75px 183px;
 }
 .sidbi_testimonial {
   background: #c4e2fd;
@@ -323,16 +323,26 @@ a.app_home_section_caption:hover {
   padding: 5rem;
 }
 
+.app_about_gallery .gallery_con .col {
+  margin-bottom: 8rem;
+}
+
 .app_about_gallery .app_about_gallery_title {
   color: #4a4a4a;
   font: 700 var(--font-size-24px) "Poppins", sans-serif;
   line-height: normal;
+  margin-bottom: 0;
 }
 
 .app_about_gallery .app_about_gallery_info {
   color: #4a4a4a;
   font-size: var(--font-size-19px);
   line-height: normal;
+  margin: 8px 0 40px;
+}
+
+.app_about_gallery .figure img {
+  margin-bottom: 1.25rem;
 }
 
 .app_about_gallery .figure .figure-caption p.name,
@@ -348,7 +358,7 @@ a.app_home_section_caption:hover {
   color: #7d7d7d;
   font-size: var(--font-size-16px);
   line-height: normal;
-  width: 85%;
+  width: 90%;
 }
 /* About Styles End Here */
 
@@ -678,9 +688,9 @@ a.app_home_section_caption:hover {
 /* Methodology Styles End Here */
 
 /* Index Styles Start Here */
-.app_index {
+/* .app_index {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
+} */
 
 .app_index_chart_con .nav-pills .nav-link {
   color: #717171;
@@ -1053,7 +1063,7 @@ a.app_home_section_caption:hover {
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
   min-height: 270px;
-  height: 270px;
+  /* height: 270px; */
 }
 
 .app_contact_cards .app_contact_card_box p {
@@ -1133,17 +1143,18 @@ a.app_home_section_caption:hover {
   font: 500 var(--font-size-16px) "Poppins", sans-serif;
 }
 
-.terms-checkbox {
+/* .terms-checkbox {
   position: relative;
   top: 2px;
   margin-right: 5px;
-}
+} */
 
-.custom-link {
+a.custom-link {
   text-decoration: underline;
+  color: #656565;
 }
 
-.custom-link:hover {
+a.custom-link:hover {
   text-decoration: none;
   cursor: pointer;
 }
@@ -1162,4 +1173,9 @@ a.app_home_section_caption:hover {
 
 .modal-body {
   padding: 12px 20px;
+}
+
+.terms-label {
+  color: #656565;
+  /* font-size: var(--font-size-16px); */
 }
