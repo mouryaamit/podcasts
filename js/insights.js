@@ -821,12 +821,12 @@ d3.json(url,
                     .style("opacity", 0.9);
                 tooltip
                     .html(dataValue.value)
-                    .style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
-                    .style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
+                    .style("left", (mousePointer.x + 60)  + "px") //(event.pageX) +
+                    .style("top", (mousePointer.y-35) + "px"); //(event.pageY - 30) +
                 ;
                 radiation
                     .transition()
-                    .duration(2000)
+                    .duration(100)
                     .attr('cx', function (d) {
                         return d;
                     })
@@ -837,7 +837,7 @@ d3.json(url,
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - 1216) + "px")
+                    .style("left", (mousePointer.x - width - 225) + "px")
                     .style("top", (mousePointer.y - 243) + "px");
             }
             
@@ -1177,56 +1177,6 @@ d3.json(url,
             addInfoIcon(default_width - 20, 10, "#my_dataviz_insights", "infoIcon_1", svg);
 
             selectionOfXaxis();
-
-            function addTooltip(mousePointer, dataValue) {
-                // tooltip
-                //     .transition()
-                //     .duration(100)
-                //     .style("opacity", 0.9);
-                // tooltip
-                //     .attr("transform", `translate(${(mousePointer.x)}, ${(mousePointer.y - 25)})`)
-                //     .append('rect')
-                //     .attr("transform", `translate(-10, -10)`)
-                //     .attr("width", 30)
-                //     .attr("height", 20)
-                //     .attr("fill", "#25bb61")
-                //     .append("text")
-                //     .attr("text-anchor", "middle")
-                //     .attr("dx", 0)
-                //     .attr("dy", ".35em")
-                //     .html(dataValue.value)
-                //     .attr("fill", "red")
-                // ;
-
-                tooltip
-                    .transition()
-                    .duration(100)
-                    .style("opacity", 0.9);
-                tooltip
-                    .html(dataValue.value)
-                    //.style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
-                    //.style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
-                    .style("left",(mousePointer.x-width-250)+"px")
-                    .style("top", (mousePointer.y-260) + "px");
-                ;
-                radiation
-                    .transition()
-                    .duration(100)
-                    .attr('cx', function (d) {
-                        return d;
-                    })
-                    .style("opacity", 0.9)
-                radiation
-                    .html("<span id=\"radiation\" class=\"animating_circle\">" +
-                        "<span class=\"circle_waves circle_one\"></span> " +
-                        "<span class=\"circle_waves circle_two\"></span> " +
-                        "<span class=\"circle_waves circle_three\"></span>" +
-                        "</span>")
-                    //.style("left", (mousePointer.x - 1216) + "px")
-                    //.style("top", (mousePointer.y - 243) + "px");
-                    .style("left",(mousePointer.x-width-256)+"px")
-                    .style("top", (mousePointer.y-243) + "px"); //(event.pageY - 30) +
-            }
 
             function addArrowsAfterYaxis() {
                 svg.append("g")

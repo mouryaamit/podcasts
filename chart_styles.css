@@ -2,6 +2,8 @@
 
 .insights_graph{
     font-family: 'Inter';
+    display: flex;
+    justify-content: center;
 }
 
 /* .x.axis line,
@@ -125,18 +127,23 @@
     fill: #AE7676;
     opacity: 0.1;
 }
+#my_dataviz_insights,#my_dataviz_context {
+    position: relative;
+}
+
 div.tooltip-area {
     display: inline-flex;
-    position: relative;
-    text-align: center;
-    padding: .07rem .2rem;
-    background: #2FB36B;
+    padding: 1px 6px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background: #25BB61;
     color: white;
-    border: 1px solid #2FB36B;
-    border-radius: 5px;
-    pointer-events: none;
     font-size: 14px;
 }
+
 .animating_circle {
     display: inline-flex;
     align-items: center;

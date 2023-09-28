@@ -96,7 +96,8 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                 const y2 = d3.scaleLinear()
                                                     .domain(d3.extent(dataForIIP, d => d.value))
                                                     //.domain([0, d3.max(dataForIIP, function(d) { return d.value; })])
-                                                    //.domain([0, 1.0])
+                                                    //for y axis values
+                                                    //.domain([0, 300])
                                                     .nice()
                                                     .range([height, 0]);
 
@@ -104,6 +105,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                     .domain(d3.extent(dataForPMI, d => d.value))
                                                     .nice()
                                                     //.domain([d3.min(dataForPMI, function(d) { return +d.value; }), d3.max(dataForPMI, function(d) { return +d.value; })])
+                                                    //for y axis values
                                                     //.domain([0, 100])
                                                     .range([height, 0]);
 
@@ -162,7 +164,9 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
 
                                                 const yAxis_right_for_iip = d3.axisRight(y2)
                                                     .tickSize(0) // +20
-                                                    //.tickValues(y_right_coordinates_iip)
+                                                    //.ticks(height/25)
+                                                    //for y axis values
+                                                    //.tickValues([0, 30, 60, 90, 120, 150, 180, 210,240,270,300])
                                                     //.tickFormat(
                                                     //function(data, i) {
                                                     //   return formatTextYaxis(data);
@@ -492,6 +496,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             .attr("transform", `translate(`+tickWidth+`,0)`) //+20
                                                             .call(yAxis_right_for_iip)
                                                             .selectAll("text")
+                                                            //.attr("class","fontClass")
                                                             .style("color", iipColorCode)
                                                             ;
                                                         
@@ -763,9 +768,10 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .html(dataValue.value)
                                                         //.style("left", (mousePointer.x + width) - 880 + "px") //(event.pageX) +
                                                         //.style("top", (mousePointer.y + height) - 225 + "px"); //(event.pageY - 30) +
-                                                        .style("left",(mousePointer.x-width-115)+"px")
-                                                        .style("top", (mousePointer.y-250) + "px");
-
+                                                        //.style("left",(mousePointer.x-width-115)+"px")
+                                                        //.style("top", (mousePointer.y-250) + "px");
+                                                        .style("left", (mousePointer.x + 45)  + "px") //(event.pageX) +
+                                                        .style("top", (mousePointer.y-35) + "px"); //(event.pageY - 30) +
                                                     radiation
                                                         .transition()
                                                         .duration(100)
@@ -779,7 +785,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             "<span class=\"circle_waves circle_two\"></span> " +
                                                             "<span class=\"circle_waves circle_three\"></span>" +
                                                             "</span>")
-                                                        .style("left",(mousePointer.x-width-127)+"px")
+                                                        .style("left",(mousePointer.x-width-96)+"px")
                                                         .style("top", (mousePointer.y-233) + "px"); //(event.pageY - 30) +
                                                     
                                                 }
