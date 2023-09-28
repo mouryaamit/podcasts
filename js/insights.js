@@ -952,17 +952,25 @@ d3.json(url,
                     d3.select(".ec_title")
                         .html(`Expert Commentary`)
                         ;
-                    // member_comm
-                    d3.select('#img_commentary')
-                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
-                    ;
-                    d3.select(".ec_author")
-                        .html(`${expertC.ExpertName}`)
+                    if(expertC.ExpertImageDetails && expertC.ExpertDetails) {
+                        // commentary member details
+                        d3.select('#commentary_mem_details')
+                            .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
+                                <div class="member_details">
+                                <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
+                                <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
+                                </div>`)
                         ;
-                    d3.select(".ec_author_designation")
-                        .html(`${expertC.ExpertDetails}`)
-                        ;
-                    // member_comm
+                    }
+                    // d3.select('#img_commentary')
+                    //     .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
+                    // ;
+                    // d3.select(".ec_author")
+                    //     .html(`${expertC.ExpertName}`)
+                    //     ;
+                    // d3.select(".ec_author_designation")
+                    //     .html(`${expertC.ExpertDetails}`)
+                    //     ;
                     d3.select(".ec_message")
                         .html(`${expertC.ExpertCommentary}`)
                         ;
