@@ -24,7 +24,7 @@ d3.json(url,
             const margin = {
                 top: 10,
                 right: 80,
-                bottom: 150,
+                bottom: 115,
                 left: 80,
             },
             default_width = 1150,
@@ -376,7 +376,7 @@ d3.json(url,
                 //top line of graph
                 const top_line = svg.append("g");
                 top_line.append("line")
-                    .attr("x1", width + 180)
+                    .attr("x1", width + 200)
                     .attr("x2", 0)
                     .attr("y1", 0)
                     .attr("y2", 0)
@@ -386,7 +386,7 @@ d3.json(url,
                 //bottom line of graph
                 const bottom_line = svg.append("g");
                 bottom_line.append("line")
-                    .attr("x1", width + 180)
+                    .attr("x1", width + 200)
                     .attr("x2", 0)
                     .attr("y1", height + 62)
                     .attr("y2", height + 62)
@@ -424,7 +424,7 @@ d3.json(url,
 
                 const covid_2020 = svg.append('g');
                 covid_2020.append('rect')
-                    .attr("transform", "translate(" + (x_1 - 65) + "," + (y_1 + 35) + ")")
+                    .attr("transform", "translate(" + (x_1 - 65) + "," + (y_1 + 55) + ")")
                     .attr('width', 80)
                     .attr('height', 50)
                     .attr("fill", "white")
@@ -435,7 +435,7 @@ d3.json(url,
                 covid_2020.append("text")
                     .html("Covid-19 Lockdown")
                     .attr("x", x_1 - 25)
-                    .attr("y", y_1 + 35)
+                    .attr("y", y_1 + 55)
                     .attr("width", 25)
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
@@ -447,13 +447,13 @@ d3.json(url,
                     .attr('x1', x_1 + 9)
                     .attr('y1', y_1 - 10)
                     .attr('x2', x_1 + 9)
-                    .attr('y2', y_1 + 35)
+                    .attr('y2', y_1 + 55)
                     .attr('stroke', '#A0A0A0')
                     .attr("stroke-width", "1")
                     ;
                 const covid_2021 = svg.append('g');
                 covid_2021.append('rect')
-                    .attr("transform", "translate(" + (x_2 - 75) + "," + (y_2 - 100) + ")")
+                    .attr("transform", "translate(" + (x_2 - 75) + "," + (y_2 - 105) + ")")
                     .attr('width', 90)
                     .attr('height', 50)
                     .attr("fill", "white")
@@ -464,7 +464,7 @@ d3.json(url,
                 covid_2021.append("text")
                     .html("Covid-19 Recovery")
                     .attr("x", x_2 - 30)
-                    .attr("y", y_2 - 100)
+                    .attr("y", y_2 - 105)
                     .attr("width", 25)
                     .attr("class", "flags_text")
                     .attr("text-anchor", "middle")
@@ -476,7 +476,7 @@ d3.json(url,
                     .attr('x1', x_2 + 10)
                     .attr('y1', y_2)
                     .attr('x2', x_2 + 10)
-                    .attr('y2', y_2 - 50)
+                    .attr('y2', y_2 - 55)
                     .attr('stroke', '#A0A0A0')
                     .attr("stroke-width", "1")
                     ;
@@ -642,42 +642,42 @@ d3.json(url,
                 if (isMouseover) {
                     let hAndyValues = { y: 0, h: 0 };
                     if (d == 0.25) {
-                        hAndyValues.y = 255;
-                        hAndyValues.h = 85;
+                        hAndyValues.y = 282;
+                        hAndyValues.h = 93;
                     } else if (d == 0.45) {
-                        hAndyValues.y = 188;
-                        hAndyValues.h = 67;
+                        hAndyValues.y = 207;
+                        hAndyValues.h = 75;
                     } else if (d == 0.50) {
-                        hAndyValues.y = 171;
-                        hAndyValues.h = 16;
+                        hAndyValues.y = 187.5;
+                        hAndyValues.h = 19.5;
                     } else if (d == 0.60) {
-                        hAndyValues.y = 136;
-                        hAndyValues.h = 21;
+                        hAndyValues.y = 150.5;
+                        hAndyValues.h = 22.5;
                     } else if (d == 0.65) {
-                        hAndyValues.y = 120;
-                        hAndyValues.h = 16;
+                        hAndyValues.y = 132;
+                        hAndyValues.h = 18;
                     } else if (d == 0.75) {
-                        hAndyValues.y = 86;
-                        hAndyValues.h = 33;
+                        hAndyValues.y = 94;
+                        hAndyValues.h = 37;
                     } else if (d == 1.00) {
                         hAndyValues.y = 0;
-                        hAndyValues.h = 85;
+                        hAndyValues.h = 94;
                     }
                     return hAndyValues;
                 } else {
                     let hAndyValues = { y: 0, h: 0 };
                     if (d == 0.45) {
-                        hAndyValues.y = 188;
-                        hAndyValues.h = 67;
+                        hAndyValues.y = 207;
+                        hAndyValues.h = 75;
                     } else if (d == 0.52) {
-                        hAndyValues.y = 164;
-                        hAndyValues.h = 6;
+                        hAndyValues.y = 180.5;
+                        hAndyValues.h = 7.5;
                     } else if (d == 0.60) {
-                        hAndyValues.y = 136;
-                        hAndyValues.h = 20;
+                        hAndyValues.y = 150.5;
+                        hAndyValues.h = 22.5;
                     } else if (d == 0.75) {
-                        hAndyValues.y = 86;
-                        hAndyValues.h = 33;
+                        hAndyValues.y = 94;
+                        hAndyValues.h = 38;
                     }
                     return hAndyValues;
                 }
@@ -689,28 +689,28 @@ d3.json(url,
                         hAndyValues.y1 = height;
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.25) {
-                        hAndyValues.y1 = 255.5;
+                        hAndyValues.y1 = 282;
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.45) {
-                        hAndyValues.y1 = 187.5;
+                        hAndyValues.y1 = 207;
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.50) {
-                        hAndyValues.y1 = 170.5;
+                        hAndyValues.y1 = 187.5;
                         hAndyValues.x2 = width+62;
                     } else if (d == 0.52) {
-                        hAndyValues.y1 = 164;
+                        hAndyValues.y1 = 180.5;
                         hAndyValues.x2 = width+62;
                     } else if (d == 0.54) {
-                        hAndyValues.y1 = 157;
+                        hAndyValues.y1 = 173;
                         hAndyValues.x2 = width+62;
                     } else if (d == 0.60) {
-                        hAndyValues.y1 = 136;
+                        hAndyValues.y1 = 150.5;
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.65) {
-                        hAndyValues.y1 = 119.5;
+                        hAndyValues.y1 = 131.5;
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.75) {
-                        hAndyValues.y1 = 85.5;
+                        hAndyValues.y1 = 94;
                         hAndyValues.x2 = width+112;
                     } 
                     // else if (d == 1.00) {
@@ -1074,7 +1074,7 @@ d3.json(url,
                         });
                 });
                 d3.selectAll("#infoIcon_2").remove();
-                addInfoIcon(175, 100, "#commentary_graph", "infoIcon_2", svg_c);
+                addInfoIcon(default_width_c - 75, default_height_c - 100, "#commentary_graph", "infoIcon_2", svg_c);
                 // Add the line
                 svg_c.append("path")
                     .datum(graphData)
@@ -1225,7 +1225,7 @@ d3.json(url,
 
             function addArrowsAfterYaxis() {
                 svg.append("g")
-                    .attr("transform", `translate(${width + 193}, ${height-260})`)
+                    .attr("transform", `translate(${width + 193}, ${height-294})`)
                     .append("text")
                     .attr("fill", "#759B67")
                     .attr("font-size", "14px")
@@ -1233,7 +1233,7 @@ d3.json(url,
                     .style("transform", "rotate(-90deg)")
 
                 svg.append("g")
-                    .attr("transform", `translate(${width + 193}, ${height-10})`)
+                    .attr("transform", `translate(${width + 193}, ${height-20})`)
                     .append("text")
                     .attr("fill", "#AC5D5D")
                     .attr("font-size", "14px")
@@ -1273,8 +1273,8 @@ d3.json(url,
                 svg.append("line")
                     .attr("x1", width + 190)
                     .attr("x2", width + 190)
-                    .attr("y1", 125)
-                    .attr("y2", 90)
+                    .attr("y1", 135)
+                    .attr("y2", 100)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
                     .attr("stroke-width", 2)
@@ -1283,8 +1283,8 @@ d3.json(url,
                 svg.append("line")
                     .attr("x1", width + 190)
                     .attr("x2", width + 190)
-                    .attr("y1", 200)
-                    .attr("y2", 240)
+                    .attr("y1", 220)
+                    .attr("y2", 260)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
                     .attr("stroke-width", 2)
@@ -1307,8 +1307,8 @@ d3.json(url,
                 svg.append("line")
                     .attr("x1", width + 100)
                     .attr("x2", width + 90)
-                    .attr("y1", 152)
-                    .attr("y2", 160)
+                    .attr("y1", 167)
+                    .attr("y2", 177)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
@@ -1316,8 +1316,8 @@ d3.json(url,
                 svg.append("line")
                     .attr("x1", width + 90)
                     .attr("x2", width + 65)
-                    .attr("y1", 160)
-                    .attr("y2", 160)
+                    .attr("y1", 177)
+                    .attr("y2", 177)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
@@ -1340,8 +1340,8 @@ d3.json(url,
                 svg.append("line")
                     .attr("x1", width + 100)
                     .attr("x2", width + 70)
-                    .attr("y1", 167.5)
-                    .attr("y2", 167.5)
+                    .attr("y1", 185)
+                    .attr("y2", 185)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
                     .attr("stroke-width", 1)
