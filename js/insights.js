@@ -1141,25 +1141,29 @@ d3.json(url,
                         let indexData = [];
                         let startYaxisPoint = ""
                         y_right_coordinates.forEach(function (index) {
-                            let value = formatYaxisForText(index);
-                            let da = new Object();
-                            da.index = startYaxisPoint + "-" + index;
-                            da.value = value;
-                            indexData.push(da);
-                            startYaxisPoint = index;
+                            if(startYaxisPoint == "" || startYaxisPoint.length == 0){
+                                startYaxisPoint = index;
+                            } else {
+                                let value = formatYaxisForText(index);
+                                let da = new Object();
+                                da.index = startYaxisPoint + "-" + index;
+                                da.value = value;
+                                indexData.push(da);
+                                startYaxisPoint = index;
+                            }
                         });
                         let infodata = ""
                         for (let i = indexData.length - 1; i >= 0; i--) {
                             if (i <= 3) {
                                 if (i == 3)
-                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"padding: 2px;color:#960000\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"> <span style=\"font-size: 10px;\">&#8594;</span> " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"padding: 2px;color:#960000;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"> <span style=\"font-size: 10px;\">&#8594;</span> " + indexData[i].index + "</span></div>";
                                 else
-                                    infodata += "<div style=\"padding: 2px;color:#960000\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;color:#960000;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                             } else {
                                 if (i == indexData.length - 1)
-                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"padding: 2px;color:#1E7400\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"padding: 2px;color:#1E7400;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                                 else
-                                    infodata += "<div style=\"padding: 2px;color:#1E7400\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding: 2px;color:#1E7400;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
                             }
                         }
                         document.getElementById("yaxisContentInfo").innerHTML = infodata;
