@@ -37,11 +37,19 @@ main {
 /* Header Styles Start */
 .app_header {
   position: fixed;
+  right: 0;
+  left: 0;
   top: 0;
   height: 113px;
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
   z-index: 999;
+}
+
+.app_header_shadow {
+  -webkit-box-shadow: 0 14px 12px -6px grey;
+  -moz-box-shadow: 0 14px 12px -6px grey;
+  box-shadow: 0 14px 12px -6px grey;
 }
 
 .app_header .app_header_right .header_links {
@@ -214,9 +222,10 @@ a.app_home_section_caption:hover {
   text-align: start;
   border-radius: 8px;
   background: #fff;
-  min-height: 364px;
+  /* height: 300px;
+  min-height: 300px; */
   padding: 32px;
-  gap: 80px;
+  gap: 40px;
 }
 
 .app_eco_card_box .app_eco_card_content .app_eco_card_title {
@@ -428,11 +437,11 @@ a.app_home_section_caption:hover {
 .app_roadmap_note {
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
-  padding: 2rem 5rem;
+  padding: 2rem 0rem;
 }
 
 .app_roadmap_note p {
-  color: #929292;
+  color: #767676;
   font-size: var(--font-size-14px);
   line-height: 140.523%;
   margin-bottom: 0;
@@ -617,7 +626,7 @@ a.app_home_section_caption:hover {
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
-  min-height: 270px;
+  /* min-height: 270px; */
   padding: 32px 24px;
 }
 
@@ -1044,6 +1053,7 @@ a.app_home_section_caption:hover {
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
   min-height: 270px;
+  height: 270px;
 }
 
 .app_contact_cards .app_contact_card_box p {
