@@ -239,17 +239,20 @@ div.tooltip-area {
     height: 20px;
 }
 
+/* commentary graph css */
 .y_month_value {
     fill: white;
 }
 
 .y_month_value .tick text {
     fill: #2FB36B;
-    font-size: 8px;
+    font-size: 14px;
 }
 
 .x_month_value .tick text {
-    font-size: 8px;
+    font-size: 14px;
+    color: #959595;
+    font-weight: 500;
 }
 
 /* End of graph css */
@@ -342,8 +345,20 @@ div.context_line_checkboxes .checkbox_label {
 
 .serviceBox:first-child { margin-left: 4% }
 
-path.domain {
+#my_dataviz_insights path.domain {
+    /* for insights graph */
     stroke: #A3A3A3;
+}
+
+#monthly_commentary_chart path.domain {
+    /* for commentary graph */
+    stroke: #DFDFDF;
+}
+
+.x_month_value .tick line {
+    stroke-dasharray: 1;
+    stroke: #C9C9C9;
+    /* stroke: #000000; */
 }
 
 /* End of context graph css */

@@ -191,8 +191,8 @@ d3.json(url,
                 .call(yAxis_left)
                 .append("text")
                 .attr("class", "axis-title")
-                .attr("x", "-8em") 
-                .attr("y", "-2em") 
+                .attr("x", "-9.5em") 
+                .attr("y", "-2.3em") 
                 .style("text-anchor", "end")
                 .attr("fill", "#2FB36B")
                 .attr("transform", "rotate(-90)")
@@ -973,9 +973,9 @@ d3.json(url,
 
             function createGraphForCommentary(graphData) {
                 // set the dimensions and margins of the graph
-                const margin_c = { top: 20, right: 10, bottom: 20, left: 40 },
-                    default_width_c = 250;
-                    default_height_c = 200;
+                const margin_c = { top: 20, right: 10, bottom: 25, left: 45 },
+                    default_width_c = 270;
+                    default_height_c = 257;
                     width_c = default_width_c - margin_c.left - margin_c.right,
                     height_c = default_height_c - margin_c.top - margin_c.bottom;
 
@@ -1019,13 +1019,14 @@ d3.json(url,
                     .attr("height", height_c + margin_c.top + margin_c.bottom)
                     .append("g")
                     .attr("transform", `translate(${margin_c.left},${margin_c.top})`);
+                
                 svg_c.append("g")
                     .attr("transform", `translate(0, ${height_c})`)
-                    .attr("stroke-dasharray", "1")
-                    .attr("stroke-width", "0.5")
-                    .attr("opacity", ".6")
+                    .attr("stroke-width", "1")
                     .attr("class", "x_month_value")
                     .call(xa)
+                    .selectAll(".tick text")
+                    .attr("y", "0.7em")
                     // .append("text")      // text label for the x axis
                     // .attr("x", 100)
                     // .attr("y", 100)
@@ -1033,6 +1034,7 @@ d3.json(url,
                     // .text("Date")
                     // .text(x1(parseDate(d.category)))
                     ;
+
                 svg_c.append("g")
                     .attr("stroke", "#A3A3A3")
                     .attr("stroke-width", "0")
@@ -1041,12 +1043,11 @@ d3.json(url,
                     .call(ya)
                     .append("text")
                     .attr("class", "axis-title")
-                    .attr("x", "-6em")
-                    .attr("y", "-3.5em")
+                    .attr("x", "-3.5em")
+                    .attr("y", "-2.5em")
                     .style("text-anchor", "end")
                     .attr("fill", "#2FB36B")
                     .attr("transform", "rotate(-90)")
-                    .style("font-size", "8px")
                     .text("Jocata Sumpoorn")
                     ;
                 const yaright_text = svg_c.append("g")
@@ -1075,7 +1076,7 @@ d3.json(url,
                         });
                 });
                 d3.selectAll("#infoIcon_2").remove();
-                addInfoIcon(default_width_c - 75, default_height_c - 100, "#commentary_graph", "infoIcon_2", svg_c);
+                addInfoIcon(default_width_c - 75, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
                 // Add the line
                 svg_c.append("path")
                     .datum(graphData)
@@ -1101,17 +1102,17 @@ d3.json(url,
             function gethAndYValuesCommentary(d) {
                 let hAndyValues = { y: 0, h: 0 };
                 if (d == 0.45) {
-                    hAndyValues.y = 89;
-                    hAndyValues.h = 31;
+                    hAndyValues.y = 117.5;
+                    hAndyValues.h = 42;
                 } else if (d == 0.52) {
-                    hAndyValues.y = 78;
-                    hAndyValues.h = 2;
+                    hAndyValues.y = 102.5;
+                    hAndyValues.h = 3.5;
                 } else if (d == 0.60) {
-                    hAndyValues.y = 65;
-                    hAndyValues.h = 9;
+                    hAndyValues.y = 85.5;
+                    hAndyValues.h = 11.5;
                 } else if (d == 0.75) {
-                    hAndyValues.y = 41;
-                    hAndyValues.h = 15;
+                    hAndyValues.y = 53.5;
+                    hAndyValues.h = 20.5;
                 }
                 return hAndyValues;
             }
@@ -1130,11 +1131,11 @@ d3.json(url,
                         if (graph_id == "#my_dataviz_insights") {
                             const absX = evt.clientX + window.scrollX;
                             const absY = evt.clientY + window.scrollY;
-                            document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY + 10) + 'px; left:' + (absX - 90) + 'px;');
+                            document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY + 20) + 'px; left:' + (absX - 150) + 'px;');
                             document.getElementById("contextMenu").style.display = 'block'
                         } else {
-                            const absX = evt.clientX + window.scrollX - 100;
-                            const absY = evt.clientY + window.scrollY + 15;
+                            const absX = evt.clientX + window.scrollX + 20;
+                            const absY = evt.clientY + window.scrollY - 35;
                             document.getElementById("contextMenu").setAttribute('style', 'top: ' + (absY) + 'px; left:' + (absX) + 'px;');
                             document.getElementById("contextMenu").style.display = 'block';
                         }
@@ -1333,7 +1334,7 @@ d3.json(url,
                     })
                     .y(function (d) { return y1(d.value) })
                     .y(function (d) { return y2(d.value) })
-                    .curve(d3.curveCatmullRom.alpha(0.9))
+                    .curve(d3.curveCatmullRom.alpha(0))
                 )
                 .style("cursor", "pointer")
                 ;
