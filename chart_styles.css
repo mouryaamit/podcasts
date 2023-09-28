@@ -10,18 +10,6 @@
     stroke-width: 0;
 }
 
-div.tooltip-area {
-    position: absolute;
-    text-align: center;
-    padding: .07rem .2rem;
-    background: #2FB36B;
-    color: white;
-    border: 1px solid #2FB36B;
-    border-radius: 5px;
-    pointer-events: none;
-    font-size: 1rem;
-}
-
 .flag1_focus circle,
 .flag2_focus circle {
     fill: #2FB36B;
@@ -137,7 +125,18 @@ div.tooltip-area {
     fill: #AE7676;
     opacity: 0.1;
 }
-
+div.tooltip-area {
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    padding: .07rem .2rem;
+    background: #2FB36B;
+    color: white;
+    border: 1px solid #2FB36B;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 1rem;
+}
 .animating_circle {
     display: inline-flex;
     align-items: center;
@@ -294,32 +293,38 @@ div.tooltip-area {
 
 
 div.context_chart_container {
+    font-family: "Inter";
     display: flex;
     justify-content: center
 }
 
 
 div.context_line_checkboxes {
-    margin-left: 20px;
-    padding-top: 190px;
-    font: 10px sans-serif;
-    width: 65px;
+    margin-left: 0px;
+    padding-top: 105px;
+    font: 14px "Inter";
+    width: 100px;
     text-align: left;
 }
 
+div.context_line_checkboxes .checkbox_label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
 .chart_desc
 {
 	margin: 0 auto;
 	margin-top:0px;
-    margin-left:110px;
+    margin-left:85px;
 	height:110px;
-    
-    font-size: 13px;
+    font-size: 14px;
+    font-family: "Inter";
+    color: #ababab;
 }
 .chart_desc_content {
-    margin-right:4%;
+    margin-right:3%;
 	float:left;
-	width:22%;
+	width:23%;
 	height: 110px;
 	
 }

@@ -192,7 +192,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                     ;
                                                 const svg = d3.select("#my_dataviz_context")
                                                     .append("svg") //append svg element inside #chart
-                                                    .attr("width", width + margin.left + margin.right + 110) //set width
+                                                    .attr("width", width + margin.left + margin.right + 100) //set width
                                                     .attr("height", height + margin.top + margin.bottom + 30) //set height
                                                     .append("g")
                                                     .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -539,7 +539,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         
                                                         d3.select("#gvaYaxisTxt").remove();
                                                         let gvaText = svg.append("text")
-                                                            .attr("opacity", "1")
+                                                            //.attr("opacity", "1")
                                                             .attr("x", -(height + 10))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "gvaYaxisTxt")
@@ -577,6 +577,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .attr("fill", "none")
                                                         .style("stroke", iipColorCode)
                                                         .style("stroke-width", "1.5")
+                                                        .attr("opacity", "0.6")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
@@ -603,6 +604,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .attr("fill", "none")
                                                         .style("stroke", pmiColorCode)
                                                         .style("stroke-width", "1.5")
+                                                        .attr("opacity", "0.6")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
@@ -631,6 +633,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .attr("fill", "none")
                                                         .style("stroke", gvaColorCode)
                                                         .style("stroke-width", "1.5")
+                                                        .attr("opacity", "0.6")
                                                         .attr("d", d3.line()
                                                             .x(function (d) {
                                                                 return x1(d3.timeParse("%m-%Y")(d.category))
@@ -758,8 +761,10 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .style("opacity", 0.9);
                                                     tooltip
                                                         .html(dataValue.value)
-                                                        .style("left", (mousePointer.x + width) - 880 + "px") //(event.pageX) +
-                                                        .style("top", (mousePointer.y + height) - 225 + "px"); //(event.pageY - 30) +
+                                                        //.style("left", (mousePointer.x + width) - 880 + "px") //(event.pageX) +
+                                                        //.style("top", (mousePointer.y + height) - 225 + "px"); //(event.pageY - 30) +
+                                                        .style("left",(mousePointer.x-width-115)+"px")
+                                                        .style("top", (mousePointer.y-250) + "px");
 
                                                     radiation
                                                         .transition()
@@ -774,7 +779,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             "<span class=\"circle_waves circle_two\"></span> " +
                                                             "<span class=\"circle_waves circle_three\"></span>" +
                                                             "</span>")
-                                                        .style("left",(mousePointer.x-width-105)+"px")
+                                                        .style("left",(mousePointer.x-width-127)+"px")
                                                         .style("top", (mousePointer.y-233) + "px"); //(event.pageY - 30) +
                                                     
                                                 }
