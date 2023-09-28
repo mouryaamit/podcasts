@@ -712,10 +712,11 @@ d3.json(url,
                     } else if (d == 0.75) {
                         hAndyValues.y1 = 85.5;
                         hAndyValues.x2 = width+112;
-                    } else if (d == 1.00) {
-                        // hAndyValues.y1 = 0;
-                        // hAndyValues.x2 = width+170;
-                    }
+                    } 
+                    // else if (d == 1.00) {
+                    //     hAndyValues.y1 = 0;
+                    //     hAndyValues.x2 = width+170;
+                    // }
                     return hAndyValues;
             }
             addSelectionYaxis();
@@ -971,52 +972,54 @@ d3.json(url,
 
             function createGraphForCommentary(graphData) {
                 // set the dimensions and margins of the graph
-                const margin = { top: 20, right: 10, bottom: 20, left: 40 },
-                    width = 250 - margin.left - margin.right,
-                    height = 200 - margin.top - margin.bottom;
+                const margin_c = { top: 20, right: 10, bottom: 20, left: 40 },
+                    default_width_c = 250;
+                    default_height_c = 200;
+                    width_c = default_width_c - margin_c.left - margin_c.right,
+                    height_c = default_height_c - margin_c.top - margin_c.bottom;
 
                 // Add X axis --> it is a date format
                 const x1 = d3.scaleTime()
                     .domain(d3.extent(graphData, function (d) { return parseDate(d.category); }))
-                    .range([0, width]);
+                    .range([0, width_c]);
 
                 // Add Y axis - left side
                 const y1 = d3.scaleLinear()
                     .domain([0, 1.0])
                     .nice()
-                    .range([height, 0]);
+                    .range([height_c, 0]);
 
                 // Add Y axis - right side
                 const y2 = d3.scaleLinear()
                     .domain([0, 1.0])
-                    .range([height, 0]);
+                    .range([height_c, 0]);
 
                 const xa = d3.axisBottom(x1)
-                    .tickSize(-height)
+                    .tickSize(-height_c)
                     .tickFormat(d3.timeFormat('%b'));
 
                 const ya = d3.axisLeft(y1)
-                    .tickSize([-width])
+                    .tickSize([-width_c])
                     .tickValues(y_com_coordinates)
                     ;
 
                 const ya_right = d3.axisRight(y2)
-                    .tickSize([-width])
+                    .tickSize([-width_c])
                     .tickValues(y_right_coordinates)
                     .tickFormat("")
                     ;
 
                 // append the svg object to the body of the page
                 d3.select('#monthly_commentary_chart').remove();
-                const svg = d3.select("#commentary_graph")
+                const svg_c = d3.select("#commentary_graph")
                     .append("svg")
                     .attr('id', 'monthly_commentary_chart')
-                    .attr("width", width + margin.left + margin.right)
-                    .attr("height", height + margin.top + margin.bottom)
+                    .attr("width", width_c + margin_c.left + margin_c.right)
+                    .attr("height", height_c + margin_c.top + margin_c.bottom)
                     .append("g")
-                    .attr("transform", `translate(${margin.left},${margin.top})`);
-                svg.append("g")
-                    .attr("transform", `translate(0, ${height})`)
+                    .attr("transform", `translate(${margin_c.left},${margin_c.top})`);
+                svg_c.append("g")
+                    .attr("transform", `translate(0, ${height_c})`)
                     .attr("stroke-dasharray", "1")
                     .attr("stroke-width", "0.5")
                     .attr("opacity", ".6")
@@ -1029,7 +1032,7 @@ d3.json(url,
                     // .text("Date")
                     // .text(x1(parseDate(d.category)))
                     ;
-                svg.append("g")
+                svg_c.append("g")
                     .attr("stroke", "grey")
                     .attr("stroke-width", "0")
                     .attr("opacity", ".6")
@@ -1045,19 +1048,19 @@ d3.json(url,
                     .style("font-size", "8px")
                     .text("Jocata Sumpoorn")
                     ;
-                const yaright_text = svg.append("g")
+                const yaright_text = svg_c.append("g")
                     .attr("stroke", "grey")
                     .attr("stroke-width", "0.1")
                     .attr("opacity", "1")
-                    .attr("transform", `translate(${width},0)`) //+20
+                    .attr("transform", `translate(${width_c},0)`) //+20
                     .call(ya_right)
                     ;
                 yaright_text.selectAll(".tick")._groups[0].forEach(function (d_child, i) {
                     let handyValues = gethAndYValuesCommentary(d_child.__data__);
-                    svg.append('rect')
+                    svg_c.append('rect')
                         .attr('x', 0)
                         .attr('y', handyValues.y)
-                        .attr('width', width)
+                        .attr('width', width_c)
                         .attr('height', handyValues.h)
                         .attr("id", "rect_def_yaxis")
                         .attr('stroke', '#E2E2E280')
@@ -1071,9 +1074,9 @@ d3.json(url,
                         });
                 });
                 d3.selectAll("#infoIcon_2").remove();
-                addInfoIcon(width + 10, height - 80, "#commentary_graph", "infoIcon_2");
+                addInfoIcon(175, 100, "#commentary_graph", "infoIcon_2", svg_c);
                 // Add the line
-                svg.append("path")
+                svg_c.append("path")
                     .datum(graphData)
                     .attr("fill", "none")
                     .attr("stroke", "#69b3a2")
@@ -1083,7 +1086,7 @@ d3.json(url,
                         .y(d => y1(d.value))
                     )
                 // Add the points
-                svg.append("g")
+                svg_c.append("g")
                     .selectAll("dot")
                     .data(graphData)
                     .join("circle")
@@ -1112,16 +1115,15 @@ d3.json(url,
                 return hAndyValues;
             }
 
-            function addInfoIcon(icon_w, icon_h, graph_id, icon_id) {
-                let icon = d3.select(graph_id)
-                    .append("div")
-                    .attr("class", "infoIcon")
+            function addInfoIcon(icon_w, icon_h, graph_id, icon_id, selectedSvg) {
+                let icon = selectedSvg.append("g")
+                    .attr("transform", `translate(${icon_w},${icon_h})`)
+                    .append("svg:image")
+                    .attr("xlink:href", "assets/icons/info.png")
+                    .attr('width', 20)
+                    .attr('height', 20)
                     .attr("id", icon_id)
-                    .style("position", "relative")
                     .style("cursor", "pointer")
-                    .style("opacity", "0.5")
-                    .style("left", icon_w + "px")
-                    .style("top", -(icon_h) + "px")
                     .on("click", function (evt, d) {
                         // Position:
                         if (graph_id == "#my_dataviz_insights") {
@@ -1167,7 +1169,7 @@ d3.json(url,
                     document.getElementById("contextMenu").style.display = 'none';
                 });
             }
-            addInfoIcon(width + 220, height + 140, "#my_dataviz_insights", "infoIcon_1");
+            addInfoIcon(default_width - 20, 10, "#my_dataviz_insights", "infoIcon_1", svg);
 
             selectionOfXaxis();
 
@@ -1218,21 +1220,17 @@ d3.json(url,
             }
 
             function addArrowsAfterYaxis() {
-                // d3.select("#my_dataviz_insights")
                 svg.append("g")
                     .attr("transform", `translate(${width + 193}, ${height-260})`)
                     .append("text")
-                    // .attr("class", "yAxisExpansionColor")
                     .attr("fill", "#759B67")
                     .attr("font-size", "14px")
                     .html("Expansion")
                     .style("transform", "rotate(-90deg)")
 
-                // d3.select("#my_dataviz_insights")
                 svg.append("g")
                     .attr("transform", `translate(${width + 193}, ${height-10})`)
                     .append("text")
-                    // .attr("class", "yAxisContractorColor")
                     .attr("fill", "#AC5D5D")
                     .attr("font-size", "14px")
                     .text("Contraction")
@@ -1353,7 +1351,6 @@ d3.json(url,
                 const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
                 const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
                 d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on curve selection
-                // d3.selectAll(".x_month_name").classed("select", false);
                 d3.selectAll(".x_month_name").classed("select_g", false);
                 d3.selectAll(".x_month_name").classed("select_r", false);
                 renderPointerOnLine(formattedDate);
