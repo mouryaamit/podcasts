@@ -632,9 +632,8 @@ d3.json(url,
                     .attr("x2", handyValues_line.x2)
                     .attr("y1", handyValues_line.y1)
                     .attr("y2", handyValues_line.y1)
-                    .style("opacity", 0.6)
-                    .style("stroke", "#E2E2E280")
-                    .attr("stroke-width", 0.5)
+                    .style("stroke", "#E2E2E2")
+                    .attr("stroke-width", 1)
                     ;
             }
 
