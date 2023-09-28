@@ -1,6 +1,8 @@
 // https://d3js.org v7.8.5 Copyright 2010-2023 Mike Bostock
 
-d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
+const myJsonUrl="http://192.168.0.104/SumpoornJSON/"
+
+d3.json(myJsonUrl+"sumpoorn_test_json1.json",
     // When reading the csv, I must format variables:
     function (d) {
         console.log(d)
@@ -9,7 +11,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
         // Now I can use this dataset:
         function (data) {
             var mydata = data.IndexGeneration;
-            d3.json("http://192.168.0.104/SumpoornJSON/IIP_json_test.json",
+            d3.json(myJsonUrl+"IIP_json_test.json",
                 // When reading the csv, I must format variables:
                 function (d) {
                     console.log(d)
@@ -18,7 +20,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                     // Now I can use this dataset:
                     function (dataForIIP) {
                         var dataForIIP = dataForIIP.iipValues;
-                        d3.json("http://192.168.0.104/SumpoornJSON/PMI_json_test.json",
+                        d3.json(myJsonUrl+"PMI_json_test.json",
                             // When reading the csv, I must format variables:
                             function (d) {
                                 console.log(d)
@@ -27,7 +29,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                 // Now I can use this dataset:
                                 function (dataForPMI) {
                                     var dataForPMI = dataForPMI.pmiValues;
-                                    d3.json("http://192.168.0.104/SumpoornJSON/GVA_json_test.json",
+                                    d3.json(myJsonUrl+"GVA_json_test.json",
                                         // When reading the csv, I must format variables:
                                         function (d) {
                                             console.log(d)
@@ -41,10 +43,10 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                     top: 10,
                                                     right: 10, //10,
                                                     bottom: 60,
-                                                    left: 85 //100
+                                                    left: 65 //100
                                                 },
                                                 //1366
-                                                width = 1100 - margin.left - margin.right,
+                                                width = 1060 - margin.left - margin.right,
 
                                                 // // set the dimensions and margins of the graph
                                                 // const margin = {
@@ -756,7 +758,7 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                         .style("opacity", 0.9);
                                                     tooltip
                                                         .html(dataValue.value)
-                                                        .style("left", (mousePointer.x + width) - 920+ "px") //(event.pageX) +
+                                                        .style("left", (mousePointer.x + width) - 880 + "px") //(event.pageX) +
                                                         .style("top", (mousePointer.y + height) - 225 + "px"); //(event.pageY - 30) +
 
                                                     radiation
@@ -772,14 +774,14 @@ d3.json("http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json",
                                                             "<span class=\"circle_waves circle_two\"></span> " +
                                                             "<span class=\"circle_waves circle_three\"></span>" +
                                                             "</span>")
-                                                        .style("left",(mousePointer.x-1111)+"px")
+                                                        .style("left",(mousePointer.x-width-105)+"px")
                                                         .style("top", (mousePointer.y-233) + "px"); //(event.pageY - 30) +
                                                     
                                                 }
 
 
                                                 function addLinesForYears() {
-                                                    let xValue = 68,diffInTwoLine = 268.5;
+                                                    let xValue = 66.5,diffInTwoLine = 263;
                                                     const year_1 = svg.append("g"); //2019
                                                     year_1.append('line')
                                                         .attr('x1', 0)
