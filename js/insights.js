@@ -628,7 +628,7 @@ d3.json(url,
 
                 let handyValues_line = getYaxisValuesForLines(d);
                 svg.append("line")
-                    .attr("x1", width+22)
+                    .attr("x1", width+27)
                     .attr("x2", handyValues_line.x2)
                     .attr("y1", handyValues_line.y1)
                     .attr("y2", handyValues_line.y1)
@@ -1304,7 +1304,7 @@ d3.json(url,
 
                 svg.append("line")
                     .attr("x1", width + 100)
-                    .attr("x2", width + 85)
+                    .attr("x2", width + 90)
                     .attr("y1", 152)
                     .attr("y2", 160)
                     .style("opacity", 0.5)
@@ -1312,8 +1312,8 @@ d3.json(url,
                     .attr("stroke-width", 1)
 
                 svg.append("line")
-                    .attr("x1", width + 85)
-                    .attr("x2", width + 70)
+                    .attr("x1", width + 90)
+                    .attr("x2", width + 65)
                     .attr("y1", 160)
                     .attr("y2", 160)
                     .style("opacity", 0.5)

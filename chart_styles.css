@@ -79,6 +79,24 @@ div.tooltip-area {
     color: #AC5D5D;
 }
 
+.y-axis-title_9.active,
+.y-axis-title_8.active,
+.y-axis-title_7.active,
+.y-axis-title_6.active,
+.y-axis-title_5.active {
+    font-weight: 600;
+    color: #1E7400 !important;
+}
+
+.y-axis-title_4.active,
+.y-axis-title_3.active,
+.y-axis-title_2.active,
+.y-axis-title_1.active,
+.y-axis-title_0.active {
+    font-weight: 600;
+    color: #830A0A !important;
+}
+
 .y-axis-titles {
     font-size: 15px !important;
 }
@@ -86,7 +104,7 @@ div.tooltip-area {
 /* .y-axis-titles.active {
     font-weight: 600;
     color: #1E7400 !important;
-} */ 
+}  */
 /* have to apply for green and red */
 
 .x_month_name.active,
