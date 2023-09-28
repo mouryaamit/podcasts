@@ -99,7 +99,7 @@ d3.json(url,
                 ;
 
             const yAxis_right = d3.axisRight(y2)
-                .tickSize([-width - 20]) // sets last xaxis index align
+                .tickSize([-width - 21]) // sets last xaxis index align
                 .tickValues(y_right_coordinates)
                 .tickFormat(
                     function (d) {
@@ -201,7 +201,7 @@ d3.json(url,
 
             const y_text = svg.append("g")
                 .attr("stroke-width", "0.1")
-                .attr("transform", `translate(${width + 20},0)`) // sets last xaxis index align
+                .attr("transform", `translate(${width + 21},0)`) // sets last xaxis index align
                 .call(yAxis_right)
                 .selectAll('.tick text') // select all the y tick texts
                 .call(function (t) {
@@ -366,9 +366,9 @@ d3.json(url,
                     ;
                 const year_6 = svg.append("g");
                 year_6.append('line')
-                    .attr('x1', width + 20)
+                    .attr('x1', width + 20.5)
                     .attr('y1', 0)
-                    .attr('x2', width + 20)
+                    .attr('x2', width + 20.5)
                     .attr('y2', height + 60)
                     .attr('stroke', '#959595')
                     .attr("stroke-width", "1")
@@ -684,37 +684,37 @@ d3.json(url,
             }
 
             function getYaxisValuesForLines(d) {
-                let hAndyValues = { y1: 0, x2: width+170 };
+                let hAndyValues = { y1: 0, x2: 0 };
                     if (d == 0.00) {
                         hAndyValues.y1 = height;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 0.25) {
-                        hAndyValues.y1 = 225;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.y1 = 255.5;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 0.45) {
-                        hAndyValues.y1 = 165;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.y1 = 187.5;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 0.50) {
-                        hAndyValues.y1 = 150;
-                        hAndyValues.x2 = width+60;
+                        hAndyValues.y1 = 170.5;
+                        hAndyValues.x2 = width+62;
                     } else if (d == 0.52) {
-                        hAndyValues.y1 = 144.7;
-                        hAndyValues.x2 = width+60;
+                        hAndyValues.y1 = 164;
+                        hAndyValues.x2 = width+62;
                     } else if (d == 0.54) {
-                        hAndyValues.y1 = 138.7;
-                        hAndyValues.x2 = width+60;
+                        hAndyValues.y1 = 157;
+                        hAndyValues.x2 = width+62;
                     } else if (d == 0.60) {
-                        hAndyValues.y1 = 120;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.y1 = 136;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 0.65) {
-                        hAndyValues.y1 = 105;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.y1 = 119.5;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 0.75) {
-                        hAndyValues.y1 = 75;
-                        hAndyValues.x2 = width+110;
+                        hAndyValues.y1 = 85.5;
+                        hAndyValues.x2 = width+112;
                     } else if (d == 1.00) {
-                        hAndyValues.y1 = 0;
-                        hAndyValues.x2 = width+170;
+                        // hAndyValues.y1 = 0;
+                        // hAndyValues.x2 = width+170;
                     }
                     return hAndyValues;
             }
@@ -744,7 +744,7 @@ d3.json(url,
                             });
 
                         const tooltip_pointer = getPointsOnCurve(mydata[i].category, mydata[i].value);
-                        addTooltip(tooltip_pointer, mydata[i], event, false);
+                        addTooltip(tooltip_pointer, mydata[i]);
                         d3.select(`.x_month_name_${i}`).classed("active", true);
                         // highlight yaxis text
                         d3.selectAll(".y-axis-titles").classed("active", false);
@@ -769,7 +769,7 @@ d3.json(url,
                 
                 const dataValue = mydata.filter((x) => x.category == date)[0];
                 const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
-                addTooltip(tooltip_pointer, dataValue, "", false);
+                addTooltip(tooltip_pointer, dataValue);
 
                 svg.append('rect')
                     .attr('x', tooltip_pointer.x)
@@ -795,6 +795,52 @@ d3.json(url,
                 addCommentary(dataValue);
             }
 
+            function addTooltip(mousePointer, dataValue) {
+                // tooltip
+                //     .transition()
+                //     .duration(100)
+                //     .style("opacity", 0.9);
+                // tooltip
+                //     .attr("transform", `translate(${(mousePointer.x)}, ${(mousePointer.y - 25)})`)
+                //     .append('rect')
+                //     .attr("transform", `translate(-10, -10)`)
+                //     .attr("width", 30)
+                //     .attr("height", 20)
+                //     .attr("fill", "#25bb61")
+                //     .append("text")
+                //     .attr("text-anchor", "middle")
+                //     .attr("dx", 0)
+                //     .attr("dy", ".35em")
+                //     .html(dataValue.value)
+                //     .attr("fill", "red")
+                // ;
+
+                tooltip
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 0.9);
+                tooltip
+                    .html(dataValue.value)
+                    .style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
+                    .style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
+                ;
+                radiation
+                    .transition()
+                    .duration(2000)
+                    .attr('cx', function (d) {
+                        return d;
+                    })
+                    .style("opacity", 0.9)
+                radiation
+                    .html("<span id=\"radiation\" class=\"animating_circle\">" +
+                        "<span class=\"circle_waves circle_one\"></span> " +
+                        "<span class=\"circle_waves circle_two\"></span> " +
+                        "<span class=\"circle_waves circle_three\"></span>" +
+                        "</span>")
+                    .style("left", (mousePointer.x - 1216) + "px")
+                    .style("top", (mousePointer.y - 243) + "px");
+            }
+            
             function checkSpecificPointOnYaxis(i) {
                 const yOfx = mydata[i].value;
                 const closestIndex = findClosestYvalue(yOfx);
@@ -1151,8 +1197,8 @@ d3.json(url,
                     .style("opacity", 0.9);
                 tooltip
                     .html(dataValue.value)
-                    .style("left", (mousePointer.x + width) - 740 + "px") //(event.pageX) +
-                    .style("top", (mousePointer.y + height) - 115 + "px"); //(event.pageY - 30) +
+                    .style("left", (mousePointer.x + width) - 900 + "px") //(event.pageX) +
+                    .style("top", (mousePointer.y + height) - 195 + "px"); //(event.pageY - 30) +
                 ;
                 radiation
                     .transition()
@@ -1167,8 +1213,8 @@ d3.json(url,
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - 1136) + "px")
-                    .style("top", (mousePointer.y - 204) + "px");
+                    .style("left", (mousePointer.x - 1216) + "px")
+                    .style("top", (mousePointer.y - 243) + "px");
             }
 
             function addArrowsAfterYaxis() {
@@ -1257,19 +1303,19 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 90)
-                    .attr("x2", width + 75)
-                    .attr("y1", 132)
-                    .attr("y2", 141)
+                    .attr("x1", width + 100)
+                    .attr("x2", width + 85)
+                    .attr("y1", 152)
+                    .attr("y2", 160)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
 
                 svg.append("line")
-                    .attr("x1", width + 75)
-                    .attr("x2", width + 60)
-                    .attr("y1", 141)
-                    .attr("y2", 141)
+                    .attr("x1", width + 85)
+                    .attr("x2", width + 70)
+                    .attr("y1", 160)
+                    .attr("y2", 160)
                     .style("opacity", 0.5)
                     .style("stroke", "#1E7400")
                     .attr("stroke-width", 1)
@@ -1290,10 +1336,10 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 90)
-                    .attr("x2", width + 60)
-                    .attr("y1", 147.5)
-                    .attr("y2", 147.5)
+                    .attr("x1", width + 100)
+                    .attr("x2", width + 70)
+                    .attr("y1", 167.5)
+                    .attr("y2", 167.5)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
                     .attr("stroke-width", 1)
