@@ -159,7 +159,7 @@ function populateStatesAndCities(statesData) {
     const chevronIcon = document.createElement('img');
     chevronIcon.classList.add('toggle-icon');
      // Initial right chevron icon
-    chevronIcon.src = 'assets/icons/expand_arrow.png';
+    chevronIcon.src = 'assets/icons/expand_more.svg';
     stateName.appendChild(chevronIcon);
 
     stateName.addEventListener('click', () => toggleCities(stateName, chevronIcon));
@@ -184,7 +184,7 @@ function toggleCities(stateElement, chevronIcon) {
   const cityDropdown = stateElement.nextElementSibling;
 
   cityDropdown.style.display = cityDropdown.style.display === 'flex' ? 'none' : 'flex';
-  chevronIcon.src = cityDropdown.style.display === 'flex' ? 'assets/icons/collapse_arrow.png' : 'assets/icons/expand_arrow.png'; // Change the icon based on dropdown display
+  chevronIcon.src = cityDropdown.style.display === 'flex' ? 'assets/icons/collapse_arrow.svg' : 'assets/icons/expand_more.svg'; // Change the icon based on dropdown display
 
   stateElement.classList.toggle('fw-bold');
 }

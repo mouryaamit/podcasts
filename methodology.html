@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Sampoorn</title>
+  <title>Jocata Sumpoorn: Index Building Approach and Methodology Leveraging GST Data</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,8 +23,8 @@
 <body class="">
   <header class="container-fluid d-flex justify-content-between align-items-center app_header">
     <div class="app_header_left">
-      <a href="home.html">
-        <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
+      <a href="index.html">
+        <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
       </a>
     </div>
     <div class="d-flex flex-column align-self-end app_header_right">
@@ -34,10 +34,10 @@
       </div>
       <ul class="nav nav-underline">
         <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Index</a>
+          <a class="nav-link" href="index-graph.html">Index</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="methodology.html">Methodology</a>
@@ -54,9 +54,11 @@
   <main class="app_methodology text-center">
     <div class="app_methodology_title_section">
       <div class="row gx-0">
-        <p class="col-md-6"><span class="fw-bold">Jocata Sumpoorn</span> is constructed using consent-enabled and
-          anonymised GST return data of <span class="fw-600">more than 50,000 MSMEs</span>
-          seeking credit from financial institutions starting <span class="fw-600">from October 2019</span> to date
+        <p class="col-md-6">
+          <span class="d-block"><span class="fw-bold">Jocata Sumpoorn</span> is constructed using</span>
+          <span class="d-block">consent-enabled and anonymised GST return data of</span>
+          <span class="d-block"><span class="fw-600">more than 50,000 MSMEs</span>seeking credit from financial</span>
+          <span class="d-block">institutions starting <span class="fw-600">from October 2019</span> to date</span>
         </p>
       </div>
     </div>
@@ -71,7 +73,7 @@
                 data-bs-target="#pills-geographic" type="button" role="tab" aria-controls="pills-geographic"
                 aria-selected="true" onclick="toggleIcons('geo')">Geographic<br />Distribution</button>
             </li>
-        
+
             <li class="nav-item d-flex" role="presentation" id="turnoverListItem">
               <img src="assets/icons/active-turnover.svg" id="activeTurnoverIcon" style="display: none;" />
               <img src="assets/icons/inactive-turnover.svg" id="inactiveTurnoverIcon" style="display: block;" />
@@ -79,15 +81,15 @@
                 data-bs-target="#pills-turnover" type="button" role="tab" aria-controls="pills-turnover"
                 aria-selected="false" onclick="toggleIcons('turnover')">Turnover<br />Distribution</button>
             </li>
-        
+
             <li class="nav-item d-flex" role="presentation" id="sectorListItem">
               <img src="assets/icons/active-sector.svg" id="activeSectorIcon" style="display: none;" />
               <img src="assets/icons/inactive-sector.svg" id="inactiveSectorIcon" style="display: block;" />
               <button class="nav-link p-0" id="pills-sector-tab" data-bs-toggle="pill" data-bs-target="#pills-sector"
-                type="button" role="tab" aria-controls="pills-sector"
-                aria-selected="false" onclick="toggleIcons('sector')">Sector<br />Distribution</button>
+                type="button" role="tab" aria-controls="pills-sector" aria-selected="false"
+                onclick="toggleIcons('sector')">Sector<br />Distribution</button>
             </li>
-        
+
             <li class="nav-item d-flex" role="presentation" id="activityListItem">
               <img src="assets/icons/active-activity.svg" id="activeActivityIcon" style="display: none;" />
               <img src="assets/icons/inactive-activity.svg" id="inactiveActivityIcon" style="display: block;" />
@@ -95,7 +97,7 @@
                 data-bs-target="#pills-activity" type="button" role="tab" aria-controls="pills-activity"
                 aria-selected="false" onclick="toggleIcons('activity')">Activity<br />Distribution</button>
             </li>
-        
+
           </ul>
           <div class="tab-content p-2" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-geographic" role="tabpanel"
@@ -105,7 +107,7 @@
                 representativeness
                 of the Index.</p>
               <div class="row">
-                <div class="col-md-8"><img src="assets/images/geo-map.png" class="img-fluid mb-4" id="fixedImage" />
+                <div class="col-md-8"><img src="assets/images/geo-map.svg" class="img-fluid mb-4" id="fixedImage" />
                 </div>
                 <div class="col-md-3 app_methodology_state_cities">
                   <h6>States & UTs</h6>
@@ -169,8 +171,8 @@
               <h5 class="section_title col-md-6 mx-auto mb-4">Sector-wise Distribution by Value <br />(Top
                 7 HSNs)</h5>
               <p class="app_methodology_caption col-md-7 mx-auto pb-5">The sample is well-distributed across sectors as
-                reflected by the Top 7
-                HSN mix remaining largely stable over time ensuring representativeness and stability</p>
+                reflected by the Top 7 HSN mix remaining largely stable over time ensuring Index representativeness and
+                stability.</p>
               <img src="assets/images/sector-chart.png" class="img-fluid mb-4" />
               <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p>
               <div class="app_roadmap_note col-md-10 mx-auto mb-5">
@@ -186,7 +188,7 @@
                 and service activities are stable over time.
               </p>
               <img src="assets/images/activity-chart.png" class="img-fluid mb-4" />
-              <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p>
+              <p class="chart_caption pb-4">Fig.- Monthly proportion % of Non-services and Service GSTINs</p>
               <div class="app_roadmap_note col-md-10 mx-auto mb-5">
                 <p>Note: A GSTIN is classified as belonging to an industry, if TTM sales of a particular HSN (2-digit
                   level) in a month is > 50% of sum of TTM sales of all HSNs by that GSTIN for the same month. </p>
@@ -200,44 +202,44 @@
       <div class="row gx-0 justify-content-center">
         <div class="col-md-10 my-5">
           <h5 class="section_title mb-5 blue-text">Methodology</h5>
-          <p class="app_methodology_caption col-md-6 mx-auto pb-5 blue-text">Jocata Sumpoorn is a relative amplitude
-            adjusted
-            composite diffusion index
-            that is developed using actual monthly sales data reflected in official GSTN returns of credit-seeking MSMEs
-            and is not based on survey data. </p>
+          <p class="app_methodology_caption col-md-7 mx-auto pb-5 blue-text">
+            <span class="d-block">Jocata Sumpoorn is a relative amplitude adjusted composite diffusion index</span>
+            <span class="d-block">that is developed using actual monthly sales data reflected in official GSTN</span>
+            <span class="d-block">returns of credit-seeking MSMEs and is not based on survey data. </span>
+          </p>
           <div class="app_methodology_cards my-5">
             <div class="container">
               <div class="row row-cols-5 gx-4">
                 <div class="col">
                   <div class="app_methodology_card_box">
-                    <img src="assets/icons/cart.png" class="img-fluid mb-5">
+                    <img src="assets/icons/cart.svg" class="img-fluid mb-5">
                     <p>Using GST Returns calculate MSME <span class="fw-bold">TTM sales</span> for current and previous
                       month. </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box">
-                    <img src="assets/icons/gap.png" class="img-fluid mb-5">
+                    <img src="assets/icons/gap.svg" class="img-fluid mb-5">
                     <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs and delta of amplitude of
                         sales</span> between them.</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box">
-                    <img src="assets/icons/combine.png" class="img-fluid mb-5">
+                    <img src="assets/icons/combine.svg" class="img-fluid mb-5">
                     <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
                         month</span> TTM sales</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box">
-                    <img src="assets/icons/graph.png" class="img-fluid mb-5">
+                    <img src="assets/icons/graph.svg" class="img-fluid mb-5">
                     <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index</span></p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box">
-                    <img src="assets/icons/resize.png" class="img-fluid mb-5">
+                    <img src="assets/icons/resize.svg" class="img-fluid mb-5">
                     <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1</p>
                   </div>
                 </div>
@@ -303,21 +305,24 @@
         <div class="col-md-12 mt-5">
           <h5 class="section_title mb-5">Index bin ranges<br />
             and their interpretation</h5>
-          <p class="app_methodology_caption col-md-4 mx-auto pb-5">The Index measures MSME sales performance on a scale
-            of 0 to 1, where the bin ranges represent the state of contraction or expansion of economic activity of the
-            sector.</p>
-          <img src="assets/images/meth-range-chart.png" class="img-fluid" />
+          <p class="app_methodology_caption col-md-4 mx-auto pb-5">
+            <span class="d-block">The Index measures MSME sales performance on a scale</span>
+            <span class="d-block">of 0 to 1, where the bin ranges represent the state of</span>
+            <span class="d-block">contraction or expansion of economic activity of the sector.</span>
+          </p>
+          <img src="assets/images/meth-range-chart.svg" class="img-fluid" />
         </div>
       </div>
     </div>
     <div class="app_methodology_index_frequency">
       <div class="row gx-0 justify-content-center">
         <div class="col-md-12">
-          <img src="assets/images/calender.png" class="img-fluid" />
+          <img src="assets/images/calender.svg" class="img-fluid" />
           <h5 class="section_title mb-5 blue-text">Index publishing frequency</h5>
-          <p class="app_methodology_caption col-md-4 mx-auto blue-text">The Index will be released monthly with only a
-            four-week reporting cycle after the reference month ends (The Index for January will be published in the 1st
-            week of March).</p>
+          <p class="app_methodology_caption col-md-5 mx-auto blue-text">
+            <span class="d-block">The Index will be released monthly with only a four-week</span>
+            <span class="d-block">reporting cycle after the reference month ends (The Index for</span>
+            <span class="d-block">January will be published in the 1st week of March).</span></p>
         </div>
       </div>
     </div>

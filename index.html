@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Sampoorn</title>
+  <title>Jocata Sumpoorn: India's First and Only MSME Economic Activity Index</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,21 +25,21 @@
 <body class="">
   <header class="container-fluid d-flex justify-content-between align-items-center app_header">
     <div class="app_header_left">
-      <a href="home.html">
-        <img src="assets/images/logo-main.png" class="img-fluid app_logo" />
+      <a href="index.html">
+        <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
       </a>
     </div>
     <div class="d-flex flex-column align-self-end app_header_right">
       <div class="header_links align-self-end">
         <a class="header_cta">Institution Login</a>
-        <a href="contact.html" class="header_page_link" href="contact.html">Contact</a>
+        <a href="contact.html" class="header_page_link">Contact</a>
       </div>
       <ul class="nav nav-underline">
         <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
+          <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Index</a>
+          <a class="nav-link" href="index-graph.html">Index</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="methodology.html">Methodology</a>
@@ -51,365 +53,198 @@
       </ul>
     </div>
   </header>
-  <main class="app_index text-center">
+  <main class="app_home text-center">
     <div class="row gx-0 justify-content-center">
-      <div class="col-md-12 mt-2">
-        <div class="app_index_chart_con">
-          <ul class="nav nav-pills justify-content-center p-2" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-insights-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-insights" type="button" role="tab" aria-controls="pills-insights"
-                aria-selected="true">Insights</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-context-tab" data-bs-toggle="pill" data-bs-target="#pills-context"
-                type="button" role="tab" aria-controls="pills-context" aria-selected="false">Context</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-insights" role="tabpanel"
-              aria-labelledby="pills-insights-tab">
-              <img src="assets/images/insights-chart.png" class="img-fluid mb-5" />
-              <div class="app_index_commentary_con">
-                <div class="col-md-8 container">
-                  <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
-                    data-bs-wrap="false">
-                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="prev">
-                      <div class="carousel_controls">
-                        <span class="control_name">Prev</span>
-                        <img src="assets/icons/chevron_left.png" class="button_left_arrow"/>
-                      </div>
-                    </a>
-                    <div class="carousel-inner">
-                      <div class="carousel-item bg-body active">
-                        <div class="commentary_header">
-                          <p class="commentary_month mb-0">Apr 2023</p>
-                          <p class="commentary_title mb-0">Indian MSME economy towards a slow recovery </p>
-                        </div>
-                        <div class="commentary_body">
-                          <div class="row">
-                            <div class="col-md-4 commentary_body_left">
-                              <div class="d-inline-flex align-items-center position-relative">
-                                <h6 class="commentary_body_left_title">Jocata Sumpoorn</h6>
-                                <span class="title_rating">0.52</span>
-                                <span class="circle_waves circle_one"></span>
-                                <span class="circle_waves circle_two"></span>
-                                <span class="circle_waves circle_three"></span>
-                              </div>
-
-                              <p class="commentary_body_left_detail">The Jocata Sumpoorn Index dropped to 0.56 in June,
-                                a
-                                slowdown from May’s level of 0.61. The
-                                <span class="fw-bold">sales performance of credit seeking-MSMEs has shown mild expansion
-                                  in
-                                  June</span>, a shift from
-                                moderate expansion in May.
-                              </p>
-                              <img src="assets/images/commentary-side-graph.png" class="img-fluid" />
-                            </div>
-                            <div class="col-md-8 commentary_body_right">
-                              <h6 class="commentary_body_right_title">Expert Commentary</h6>
-                              <div class="member_con">
-                                <img src="assets/images/commentor-sumita.png" class="img-fluid me-3" />
-                                <div class="member_details">
-                                  <p class="member_name mb-0">Dr. Sumita Kale</p>
-                                  <p class="member_title mb-0">CEO and Senior Fellow, Indicus Foundation (Former Chief
-                                    Economist
-                                    –
-                                    Indicus Analytics)</p>
-                                </div>
-                              </div>
-                              <div class="commentary_body_right_detail">
-                                <p>The Jocata-Sumpoorn Index has been in a phase of moderate
-                                  to mild expansion of sales activity since October 2022, with one outlier in March at
-                                  0.71, the
-                                  highest in ten months. The MSME sector has left behind the phase of high growth i.e.
-                                  substantial
-                                  to significant expansion that lasted from March 2021 to June 2022 – and has settled
-                                  into a
-                                  more
-                                  steady pace of expansion.</p>
-                                <p>This is broadly in sync with the trends coming in from the
-                                  Index of Industrial Production (where manufacturing IIP has dipped marginally to 141
-                                  in June
-                                  from 142.4 in May), while the S&P Global India Composite PMI fell to 59.4 in June
-                                  2023, down
-                                  from off the 61.1 levels seen in April and May. In June, the survey of purchasing
-                                  managers of
-                                  large firms reported a slowdown in both factory activity and the service sector. The
-                                  S&P
-                                  Global
-                                  India Manufacturing PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7.
-                                </p>
-                                <p>The MSME sector does face constrained credit conditions as
-                                  the SIDBI-Transunion Pulse report August 2023 has highlighted that over the quarter
-                                  January-March 2023, credit demand grew at 33% while supply grew only by 11% - this
-                                  will
-                                  clearly
-                                  impact the ability of firms to ramp up production and sales performance.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item bg-body">
-                        <div class="commentary_header">
-                          <p class="commentary_month mb-0">May 2023</p>
-                          <p class="commentary_title mb-0">Good News for the MSME Sector</p>
-                        </div>
-                        <div class="commentary_body">
-                          <div class="row">
-                            <div class="col-md-4 commentary_body_left">
-                              <div class="d-inline-flex align-items-center position-relative">
-                                <h6 class="commentary_body_left_title">Jocata Sumpoorn</h6>
-                                <span class="title_rating">0.61</span>
-                                <span class="abc circle_one"></span>
-                                <span class="abc circle_two"></span>
-                                <span class="abc circle_three"></span>
-                              </div>
-                              <p class="commentary_body_left_detail">The <span class="fw-bold">sales performance of
-                                  credit
-                                  seeking-MSMEs has shown
-                                  mild expansion in June</span>, a shift from moderate expansion in May. The Jocata
-                                Sumpoorn
-                                Index
-                                dropped to 0.56 in June, a slowdown from May’s level of 0.61.
-                              </p>
-                              <img src="assets/images/commentary-side-graph.png" class="img-fluid" />
-                            </div>
-                            <div class="col-md-8 commentary_body_right">
-                              <h6 class="commentary_body_right_title">Expert Commentary</h6>
-                              <div class="member_con">
-                                <img src="assets/images/commentor-ajit.png" class="img-fluid me-3" />
-                                <div class="member_details">
-                                  <p class="member_name mb-0">Dr. Ajit Ranade</p>
-                                  <p class="member_title mb-0">Vice Chancellor, Gokhale Institute of Economics &
-                                    Politics, Pune
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="commentary_body_right_detail">
-                                <p>The MSME sector has left behind the phase of high growth i.e. substantial to
-                                  significant
-                                  expansion that lasted from March 2021 to June 2022 – and has settled into a more
-                                  steady pace
-                                  of expansion. The Jocata-Sumpoorn Index has been in a phase of moderate to mild
-                                  expansion of
-                                  sales activity since October 2022, with one outlier in March at 0.71, the highest in
-                                  ten
-                                  months.</p>
-                                <p>The MSME sector does face constrained credit conditions as the SIDBI-Transunion Pulse
-                                  report
-                                  August 2023 has highlighted that over the quarter January-March 2023, credit demand
-                                  grew at
-                                  33% while supply grew only by 11% - this will clearly impact the ability of firms to
-                                  ramp up
-                                  production and sales performance.</p>
-                                <p>This is broadly in sync with the trends coming in from the Index of Industrial
-                                  Production
-                                  (where manufacturing IIP has dipped marginally to 141 in June from 142.4 in May),
-                                  while the
-                                  S&P Global India Composite PMI fell to 59.4 in June 2023, down from off the 61.1
-                                  levels seen
-                                  in April and May. In June, the survey of purchasing managers of large firms reported a
-                                  slowdown in both factory activity and the service sector. The S&P Global India
-                                  Manufacturing
-                                  PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item bg-body">
-                        <div class="commentary_header">
-                          <p class="commentary_month mb-0">Jun 2023</p>
-                          <p class="commentary_title mb-0">Indian MSME economy towards a slow recovery </p>
-                        </div>
-                        <div class="commentary_body">
-                          <div class="row">
-                            <div class="col-md-4 commentary_body_left">
-                              <div class="d-inline-flex align-items-center position-relative">
-                                <h6 class="commentary_body_left_title">Jocata Sumpoorn</h6>
-                                <span class="title_rating">0.52</span>
-                                <span class="abc circle_one"></span>
-                                <span class="abc circle_two"></span>
-                                <span class="abc circle_three"></span>
-                              </div>
-                              <p class="commentary_body_left_detail">The Jocata Sumpoorn Index dropped to 0.56 in June,
-                                a
-                                slowdown from May’s level of 0.61. The
-                                <span class="fw-bold">sales performance of credit seeking-MSMEs has shown mild expansion
-                                  in
-                                  June</span>, a shift from
-                                moderate expansion in May.
-                              </p>
-                              <img src="assets/images/commentary-side-graph.png" class="img-fluid" />
-                            </div>
-                            <div class="col-md-8 commentary_body_right">
-                              <h6 class="commentary_body_right_title">Expert Commentary</h6>
-                              <div class="member_con">
-                                <img src="assets/images/commentor-sumita.png" class="img-fluid me-3" />
-                                <div class="member_details">
-                                  <p class="member_name mb-0">Dr. Sumita Kale</p>
-                                  <p class="member_title mb-0">CEO and Senior Fellow, Indicus Foundation (Former Chief
-                                    Economist
-                                    –
-                                    Indicus Analytics)</p>
-                                </div>
-                              </div>
-                              <div class="commentary_body_right_detail">
-                                <p>The Jocata-Sumpoorn Index has been in a phase of moderate
-                                  to mild expansion of sales activity since October 2022, with one outlier in March at
-                                  0.71, the
-                                  highest in ten months. The MSME sector has left behind the phase of high growth i.e.
-                                  substantial
-                                  to significant expansion that lasted from March 2021 to June 2022 – and has settled
-                                  into a
-                                  more
-                                  steady pace of expansion.</p>
-                                <p>This is broadly in sync with the trends coming in from the
-                                  Index of Industrial Production (where manufacturing IIP has dipped marginally to 141
-                                  in June
-                                  from 142.4 in May), while the S&P Global India Composite PMI fell to 59.4 in June
-                                  2023, down
-                                  from off the 61.1 levels seen in April and May. In June, the survey of purchasing
-                                  managers of
-                                  large firms reported a slowdown in both factory activity and the service sector. The
-                                  S&P
-                                  Global
-                                  India Manufacturing PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7.
-                                </p>
-                                <p>The MSME sector does face constrained credit conditions as
-                                  the SIDBI-Transunion Pulse report August 2023 has highlighted that over the quarter
-                                  January-March 2023, credit demand grew at 33% while supply grew only by 11% - this
-                                  will
-                                  clearly
-                                  impact the ability of firms to ramp up production and sales performance.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="next">
-                      <div class="carousel_controls">
-                        <span class="control_name">Next</span>
-                        <img src="assets/icons/chevron_right.png" class="button_right_arrow"/>
-                      </div>
-                    </a>
+      <div class="col-md-7 app_home_main_title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+        <p>
+          <span class="fw-bold">India’s only economic activity index of</span>
+          <span class="fw-bold">credit seeking MSMEs - <span class="fw-bold">Jocata “Sumpoorn”</span></span>
+        </p>
+      </div>
+      <div class="col-md-10 app_home_chart_con" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+        <div class="app_home_chart p-5">
+          <img src="assets/images/home-chart.svg" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-10 app_home_chart_info">
+        <a class="discover_cta my-5" href="index-graph.html" data-aos="fade-up">Explore Index Features</a>
+        <p class="pt-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+          <span class="d-block">A unique initiative that leverages India's Digital Public Infrastructure(DPI) by</span>
+          <span class="d-block">Jocata - one of India’s most trusted Digital Lending Platform providers, in
+            association</span>
+          <span class="d-block">with SIDBI - the Principal Financial Institution for the growth and development of
+            MSMEs.</span>
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid app_home_msme_section">
+      <div class="row gx-0 text-start">
+        <div class="col-md-6 app_home_msme_chart" data-aos="fade-right" data-aos-easing="linear">
+          <img src="assets/images/home-msme-chart.svg" class="img-fluid" />
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear">
+          <h4 class="app_home_section_title my-5 blue-text">Why Build an MSME Index?</h4>
+          <p class="app_home_section_caption w-75">Available macro indices measure production activity or capture
+            business
+            expectations and sentiment. There is no index that captures the lifeblood of the Indian economy – MSMEs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_eco_section">
+      <div class="col-md-9">
+        <h4 class="app_home_section_title mb-5" style="color: #25505c;" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="500">An MSME economic activity index is vital for
+        </h4>
+        <div class="app_eco_cards py-5">
+          <div class="container">
+            <div class="row row-cols-3 gx-5">
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/savings.svg" class="img-fluid" data-aos="fade-up" data-aos-easing="linear"
+                    data-aos-delay="500" data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Lenders</h6>
+                    <p class="app_eco_card_detail">To direct developmental and commercial capital to MSMEs</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="tab-pane fade" id="pills-context" role="tabpanel" aria-labelledby="pills-context-tab">
-              <img src="assets/images/context-chart.png" class="img-fluid mb-5" />
-              <div class="app_index_context_con py-5">
-                <div class="row gx-0 justify-content-center">
-                  <div class="my-5">
-                    <h6 class="col-md-4 app_index_context_title mx-auto mb-5">How to read Jocata Sumpoorn with other Macro Indices?</h6>
-                    <p class="col-md-6 mx-auto app_index_context_caption">While Jocata Sumpoorn is an MSME specific fact-based Index, readers may want to interpret the
-                      Index movement with other published Indices to unearth different dimensions at play in the Indian
-                      economy. It is important to understand the construct and scope of each Index before reading the
-                      Indices in conjunction.</p>
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/account_balance.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="700"
+                    data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Policy makers</h6>
+                    <p class="app_eco_card_detail">To create tailored policies to propel MSME growth & development</p>
                   </div>
-                  <div class="col-md-9 container mb-5 pb-5">
-                    <table class="table table-responsive app_index_context_table">
-                      <thead>
-                        <tr>
-                          <th>
-                            <span>Attributes /</span>
-                            <span>Indices</span>
-                          </th>
-                          <th>
-                            <span class="table-blue">IIP</span>
-                            <span>Index of Industrial Production</span>
-                          </th>
-                          <th>
-                            <span class="table-orange">PMI™</span>
-                            <span>Purchasing Managers’ Index</span>
-                            <span class="fw-normal">(by S&P Global)</span>
-                          </th>
-                          <th>
-                            <span class="table-green">Jocata Sumpoorn</span>
-                            <span>In Association with SIDBI MSME Economic Activity Index</span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Published By</th>
-                          <td>GOI</td>
-                          <td>S&P Global</td>
-                          <td>Jocata</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Nature of Index</th>
-                          <td>Industrial manufacturing performance</td>
-                          <td>Business optimism</td>
-                          <td>Sales performance</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Type of Data</th>
-                          <td>Actual manufacturing production</td>
-                          <td>Opinion based</td>
-                          <td>Actual MSME monthly sales data reflected from GSTN returns of credit-seeking entities</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sample Size</th>
-                          <td>--</td>
-                          <td>400 companies</td>
-                          <td>1000 MSMEs per month (minimum)
-                            2000 MSMEs per month (desirable)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Factors Involved</th>
-                          <td>productim data based on NIC (National Industrial Classification) codes</td>
-                          <td>Survey based</td>
-                          <td>Fact based - Delta of % of growing & declining GSTlNs combined with amplitude of change in
-                            turnover.</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Generation - Frequency & Date</th>
-                          <td>Monthly 7 weeks later, from the current month</td>
-                          <td>Monthly
-                            1st week of succeeding month</td>
-                          <td>Monthly
-                            4 weeks later, from the current month</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Index Type and Scale</th>
-                          <td>Cumulative index
-                            Base year: 2011-121
-                            Base value: 100</td>
-                          <td>Composite diffusion index
-                            Base year: None
-                            Base value: None
-                            Scale: 0 to 100</td>
-                          <td>Relative amplitude adjusted composite diffusion index
-                            Base year: None
-                            Base value: None
-                            Scale: 0 to 1</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Seasonality Adjusted?</th>
-                          <td>No</td>
-                          <td>Yes</td>
-                          <td>Yes</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Trend Availability</th>
-                          <td>Yes</td>
-                          <td>No</td>
-                          <td>Yes</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_eco_card_box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/currency_rupee.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="900"
+                    data-aos-duration="1000">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Economists and Researchers</h6>
+                    <p class="app_eco_card_detail">To study policy and credit flow impact on the segment</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_minds_section">
+      <div class="col-md-8 d-flex justify-content-around">
+        <img src="assets/images/logo-jocata.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
+          data-aos-duration="1000" />
+        <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
+          data-aos-duration="1000" />
+      </div>
+      <div class="col-md-6 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+        data-aos-delay="500">
+        <h4 class="app_home_section_title mb-5">Minds Behind the Index</h4>
+        <p class="app_home_section_caption text-black">
+          <span class="d-block">A team of credit experts, data scientists and senior economists</span>
+          <span class="d-block">have built and tracked the Index over the past 4 years to</span>
+          <span class="d-block">ensure its ability to represent the MSME economy and capture</span>
+          <span class="d-block">the impact of macroeconomic conditions. <u><a href="about.html" class="text-black">Read
+                More</a></u></span>
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid app_home_msme_section app_home_meth_section">
+      <div class="row gx-0 text-start">
+        <div class="col-md-6">
+          <img src="assets/images/home-meth-cards.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
+            data-aos-duration="1000" />
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <h4 class="app_home_section_title mt-4 mb-5 blue-text">Index Methodology</h4>
+          <p class="app_home_section_caption w-75 mb-0">Jocata Sumpoorn is a 'relative amplitude adjusted diffusion
+            index' generated using monthly GST sales data of credit-seeking MSMEs.</p>
+          <a class="app_home_section_caption text-decoration-none" href="methodology.html"><u>Read More</u></a>
+        </div>
+      </div>
+    </div>
+    <div class="app_home_testimonial bg-white">
+      <div class="row gx-0">
+        <div class="col-md-5 align-self-end text-start">
+          <img src="assets/images/testimonial-jocata.svg" class="img-fluid" data-aos="fade-right"
+            data-aos-easing="linear" data-aos-duration="1000" />
+        </div>
+        <div class="col-md-7 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by
+            public and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of
+            this sector that is fact-based and dynamic has become critical for their sustained growth, especially
+            through formal credit access.</p>
+          <p class="testimonial_content">As a digital transformation partner for marquee lenders in the country, Jocata
+            has been deeply engaged in harnessing Goods and Services Tax (GST) data to provide deep insights on MSME
+            entities and powering near-instant credit decisioning and faster disbursals.</p>
+          <p class="testimonial_content">With the belief that a high-frequency indicator will help address the
+            prevailing MSME knowledge gap, Jocata, in association with SIDBI, presents “Sumpoorn”, India's first and
+            only economic activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe
+            Sumpoorn can effectively, and in a timely manner, aid various stakeholders at financial institutions, policy
+            makers, economists and researchers in strategically directing development and credit efforts to fuel the
+            growth of MSMEs across the country.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Prashant Muddu</p>
+            <p class="testimonial-detail">MD & CEO, Jocata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app_home_testimonial sidbi_testimonial">
+      <div class="row gx-0">
+        <div class="col-md-7 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well
+            acknowledged fact. However, data paucity
+            on the MSME sector often becomes a challenge for industry members and policymakers.</p>
+          <p class="testimonial_content">We at SIDBI have been constantly engaged for the development of the sector and
+            have been partnering with
+            institutions to bridge the information asymmetry to enable informed decision-making by stakeholders. It is
+            in
+            this spirit we have created ‘Sumpoorn’ with Jocata, that carries an index measuring economic activity of the
+            MSMEs leveraging the GST data.</p>
+          <p class="testimonial_content">The underlying authentic data of GST provides credibility to the Index. With
+            time, the same can be expanded
+            to include more dimensions. I hope the publication shall be of value to the readers and provide a rich
+            perspective on the prevalent trends of the MSME sector.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Sh. Sivasubramanian Ramann</p>
+            <p class="testimonial-detail">Chairman & Managing Director, SIDBI</p>
+          </div>
+        </div>
+        <div class="col-md-5 align-self-end text-end overflow-hidden">
+          <img src="assets/images/testimonial-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
+            data-aos-duration="1000" />
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0">
+      <div class="col-md-12 app_home_subscribe">
+        <p>For monthly Index updates</p>
+        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+      </div>
+    </div>
+    <div class="row gx-0 app_home_marquee">
+      <div class="col-md-12">
+        <ul class="marquee-content">
+          <li>
+            <h6 class="marquee-content-title">Knowledge Partner</h6>
+            <img src="assets/images/partner-ceed.svg" class="img-fluid">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Affliliate Partner</h6>
+            <img src="assets/images/partner-game.svg" class="img-fluid">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Exclusive Partner</h6>
+            <img src="assets/images/partner-experian.svg" class="img-fluid">
+          </li>
+        </ul>
       </div>
     </div>
   </main>
@@ -421,6 +256,109 @@
       </ul>
     </div>
   </footer>
+
+
+  <!-- The Modal -->
+  <div class="modal" id="successModal2">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">You've successfully subscribed</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="my-3 text-center">
+            You will receive monthly updates of the Jocata Sampoorn Index.
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Subscribe Modal popup -->
+  <!-- The Modal -->
+  <div class="modal" id="subscribeModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title black-text">Subscribe</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="my-3">Complete the form to subscribe.</div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Business Email *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Job Title *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Company *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Industry">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Contact number">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+              <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal2">Register</button>
+
+              <label class="mt-20">
+                <input type="checkbox" class="terms-checkbox">By submitting this request, I agree with the Jocata's
+                <span class="custom-link" data-bs-toggle="modal" data-bs-target="#subscribeModal">Terms of use.</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -429,6 +367,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+  </script>
 </body>
 
 </html>

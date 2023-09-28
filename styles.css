@@ -44,9 +44,9 @@ main {
   z-index: 999;
 }
 
-/* .app_header .app_header_left .app_logo {
-  width: 135px;
-} */
+.app_header .app_header_right .header_links {
+  margin-bottom: 0.75rem;
+}
 
 .app_header .app_header_right .header_cta {
   display: inline-flex;
@@ -62,8 +62,8 @@ main {
 .app_header .app_header_right .header_page_link {
   color: rgba(0, 0, 0, 0.8);
   font: 600 var(--font-size-16px) "Poppins", sans-serif;
-  margin-left: 3rem;
-  margin-right: 0.75rem;
+  margin-left: 27px;
+  margin-right: 1rem;
 }
 
 /* .app_header .app_header_right .nav {
@@ -77,7 +77,7 @@ main {
 .app_header .app_header_right .nav-link {
   color: var(--app-black);
   font: 500 var(--font-size-19px) "Poppins", sans-serif;
-  --bs-nav-link-padding-x: 1.25rem;
+  --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 1.25rem;
 }
 
@@ -135,7 +135,7 @@ main {
 
 .app_home_chart_info p {
   color: #25505c;
-  font-size: 31px;
+  font-size: var(--font-size-28px);
   line-height: 135%; /* 48.608px */
 }
 
@@ -245,9 +245,9 @@ a.app_home_section_caption:hover {
   padding: 10rem 0 0;
 }
 
-.app_home_testimonial .text-start {
-  /* position: relative; */
-  padding: 91px 0 91px 253px;
+.app_home_testimonial .testimonial_content_con {
+  padding: 63px 253px 45px 0;
+  text-align: start;
 }
 
 .app_home_testimonial .testimonial_content {
@@ -259,12 +259,30 @@ a.app_home_section_caption:hover {
 }
 
 .app_home_testimonial .testimonial_content:first-of-type::before {
-  content: url("assets/icons/ivc-start.png");
+  content: url("assets/icons/ivc-start-gray.svg");
   left: -5rem;
 }
 
 .app_home_testimonial .testimonial_content:last-of-type::after {
-  content: url("assets/icons/ivc-end.png");
+  content: url("assets/icons/ivc-end-gray.svg");
+  bottom: -2rem;
+  margin-left: 1rem;
+}
+
+.sidbi_testimonial .testimonial_content_con {
+  padding: 91px 0 91px 253px;
+}
+.sidbi_testimonial {
+  background: #c4e2fd;
+}
+
+.sidbi_testimonial .testimonial_content:first-of-type::before {
+  content: url("assets/icons/ivc-start-blue.svg");
+  left: -5rem;
+}
+
+.sidbi_testimonial .testimonial_content:last-of-type::after {
+  content: url("assets/icons/ivc-end-blue.svg");
   bottom: -2rem;
   margin-left: 1rem;
 }
@@ -362,6 +380,11 @@ a.app_home_section_caption:hover {
   background: #d1f2e8;
 }
 
+.app_roadmap_banner_section {
+  height: 580px;
+  align-items: center;
+}
+
 .app_roadmap .app_roadmap_title {
   color: #194974;
   font: 700 var(--font-size-28px) "Poppins", sans-serif;
@@ -375,7 +398,7 @@ a.app_home_section_caption:hover {
 }
 
 .arrow_down:hover {
-  transform: translateY(10px);
+  transform: translateY(30px);
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
   -o-transition: transform 500ms;
@@ -944,11 +967,11 @@ a.app_home_section_caption:hover {
 
 .app_footer .list-group-item a {
   color: #5c5c5c;
+  text-decoration: underline;
 }
 
 .app_footer .list-group-item a:hover {
   color: var(--app-black);
-  text-decoration: underline;
 }
 
 .app_footer .list-group-item:not(:last-of-type) {
