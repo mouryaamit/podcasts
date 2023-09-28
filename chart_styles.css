@@ -1,7 +1,6 @@
 /* Start of graph css */
 
 .insights_graph{
-    height: 470px;
     font-family: 'Inter';
 }
 
@@ -50,18 +49,6 @@ div.tooltip-area {
 .x_year .tick .no_stroke {
     stroke-width: 0;
 }
-
-/* .mytext {
-    position: absolute;
-    text-align: center;
-    padding: .07rem .2rem;
-    background: #2FB36B;
-    color: white;
-    border: 1px solid #2FB36B;
-    border-radius: 5px;
-    pointer-events: none;
-    font-size: 1rem;
-} */
 
 .axis-title {
     font-size: 14px;
