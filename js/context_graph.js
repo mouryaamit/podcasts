@@ -94,19 +94,19 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
 
                                                 // Add Y axis - right side
                                                 const y2 = d3.scaleLinear()
-                                                    .domain(d3.extent(dataForIIP, d => d.value))
-                                                    //.domain([0, d3.max(dataForIIP, function(d) { return d.value; })])
+                                                    //.domain(d3.extent(dataForIIP, d => d.value))
+                                                    ////.domain([0, d3.max(dataForIIP, function(d) { return d.value; })])
                                                     //for y axis values
-                                                    //.domain([0, 300])
+                                                    .domain([0, 200])
                                                     .nice()
                                                     .range([height, 0]);
 
                                                 const y3 = d3.scaleLinear()
-                                                    .domain(d3.extent(dataForPMI, d => d.value))
+                                                    //.domain(d3.extent(dataForPMI, d => d.value))
                                                     .nice()
-                                                    //.domain([d3.min(dataForPMI, function(d) { return +d.value; }), d3.max(dataForPMI, function(d) { return +d.value; })])
+                                                    ////.domain([d3.min(dataForPMI, function(d) { return +d.value; }), d3.max(dataForPMI, function(d) { return +d.value; })])
                                                     //for y axis values
-                                                    //.domain([0, 100])
+                                                    .domain([0, 100])
                                                     .range([height, 0]);
 
 
@@ -306,8 +306,8 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                 var yAxis_right_for_pmi_tick;
                                                 var yAxis_right_for_gva_tick;
                                                 refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
-                                                refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])
-                                                refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])
+                                                //refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])
+                                                //refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])
 
                                                 const tooltip = d3.select("#my_dataviz_context") // can be body
                                                     .append("div")
@@ -395,9 +395,11 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                 var GVALine;
                                                 
                                                 addIIPLine(dataForIIP,width + yAxisTickSpace[0])
-                                                addPMILine(dataForPMI,width + yAxisTickSpace[1])
-                                                addGVALine(dataForGVA,width + yAxisTickSpace[2])
-                                                var isIipCheckBoxEnabled = true,isPmiCheckBoxEnabled = true,isGvaCheckBoxEnabled = true;
+                                                //addPMILine(dataForPMI,width + yAxisTickSpace[1])
+                                                //addGVALine(dataForGVA,width + yAxisTickSpace[2])
+                                                var isIipCheckBoxEnabled = document.getElementById("IIPCheckbox").checked,
+                                                isPmiCheckBoxEnabled = document.getElementById("PMICheckbox").checked ,
+                                                isGvaCheckBoxEnabled = document.getElementById("GVACheckbox").checked;
                                                 d3.selectAll(".context_checkboxes").on("change", function () {
                                                     if (this.value == 'IIP' && this.checked) {
                                                         isIipCheckBoxEnabled = true;
@@ -409,13 +411,13 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             yAxis_right_for_gva_tick.remove()
                                                             refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])                                    
                                                         } else if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                                                            yAxis_right_for_gva_tick.remove()
-                                                            refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
+                                                            yAxis_right_for_pmi_tick.remove()
+                                                            refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
                                                         } else if(isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                                                             yAxis_right_for_gva_tick.remove()
                                                             refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                 
                                                         }
-                                                        document.getElementById("iipDescDiv").style.display = "block";
+                                                        //document.getElementById("iipDescDiv").style.display = "block";
                                                     } else if (this.value == 'IIP' && !this.checked) {
                                                         isIipCheckBoxEnabled = false;
                                                         removeIIPLine();
@@ -432,7 +434,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])   
                                                         }
 
-                                                        document.getElementById("iipDescDiv").style.display = "none";
+                                                        //document.getElementById("iipDescDiv").style.display = "none";
                                                         d3.select("#iipYaxisTxt").remove();
                                                     }
                                                     if (this.value == 'PMI' && this.checked) { 
@@ -452,7 +454,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             }
                                                         }
                                                         
-                                                        document.getElementById("pmiDescDiv").style.display = "block";
+                                                        //document.getElementById("pmiDescDiv").style.display = "block";
                                                     } else if (this.value == 'PMI' && !this.checked) {
                                                         isPmiCheckBoxEnabled = false;
                                                         removePMILine();
@@ -463,7 +465,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             yAxis_right_for_gva_tick.remove();
                                                             refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0]);
                                                         }
-                                                        document.getElementById("pmiDescDiv").style.display = "none";
+                                                        //document.getElementById("pmiDescDiv").style.display = "none";
                                                         d3.select("#pmiYaxisTxt").remove();
                                                     }
                                                     if (this.value == 'GVA' && this.checked) {
@@ -478,11 +480,11 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                             refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0])
                                                         }
                                                         addGVALine(dataForGVA,width + yAxisTickSpace[2]);
-                                                        document.getElementById("gvaDescDiv").style.display = "block";
+                                                        //document.getElementById("gvaDescDiv").style.display = "block";
                                                     } else if (this.value == 'GVA' && !this.checked) {
                                                         isGvaCheckBoxEnabled = false;
                                                         removeGVALine();
-                                                        document.getElementById("gvaDescDiv").style.display = "none";
+                                                        //document.getElementById("gvaDescDiv").style.display = "none";
                                                         d3.select("#gvaYaxisTxt").remove();
                                                     }
 
