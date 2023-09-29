@@ -1,6 +1,5 @@
 
 const url = "/SumpoornJSON/sumpoorn_test_json1.json?date="+new Date();
-
 //Read the data
 d3.json(url,
     // When reading the json, I must format variables:
@@ -804,25 +803,6 @@ d3.json(url,
             }
 
             function addTooltip(mousePointer, dataValue) {
-                // tooltip
-                //     .transition()
-                //     .duration(100)
-                //     .style("opacity", 0.9);
-                // tooltip
-                //     .attr("transform", `translate(${(mousePointer.x)}, ${(mousePointer.y - 25)})`)
-                //     .append('rect')
-                //     .attr("transform", `translate(-10, -10)`)
-                //     .attr("width", 30)
-                //     .attr("height", 20)
-                //     .attr("fill", "#25bb61")
-                //     .append("text")
-                //     .attr("text-anchor", "middle")
-                //     .attr("dx", 0)
-                //     .attr("dy", ".35em")
-                //     .html(dataValue.value)
-                //     .attr("fill", "red")
-                // ;
-
                 tooltip
                     .transition()
                     .duration(100)
@@ -1035,23 +1015,26 @@ d3.json(url,
                     .append("svg")
                     .attr('id', 'monthly_commentary_chart')
                     .attr("width", width_c + margin_c.left + margin_c.right)
-                    .attr("height", height_c + margin_c.top + margin_c.bottom)
+                    .attr("height", height_c + margin_c.top + margin_c.bottom + 40)
                     .append("g")
                     .attr("transform", `translate(${margin_c.left},${margin_c.top})`);
                 
-                svg_c.append("g")
+                const x_axis = svg_c.append("g")
                     .attr("transform", `translate(0, ${height_c})`)
                     .attr("stroke-width", "1")
                     .attr("class", "x_month_value")
-                    .call(xa)
-                    .selectAll(".tick text")
+                    .call(xa);
+                
+                x_axis.append("text")      // text label for the x axis
+                    .attr("x", "7em")
+                    .attr("y", "3.5em")
+                    .attr("class", "axis-title")
+                    .style("text-anchor", "middle")
+                    .attr("fill", "#959595")
+                    .text("Trailing 6 months");
+
+                x_axis.selectAll(".tick text")
                     .attr("y", "0.7em")
-                    // .append("text")      // text label for the x axis
-                    // .attr("x", 100)
-                    // .attr("y", 100)
-                    // .style("text-anchor", "middle")
-                    // .text("Date")
-                    // .text(x1(parseDate(d.category)))
                     ;
 
                 svg_c.append("g")
