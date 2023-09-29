@@ -58,13 +58,15 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="app_tou_content">
+                            <br><br><br>
                             <h4 class="app_tou_content_main_title mb-4">Contact</h4>
-                            <h6 class="app_tou_content_sub_title my-5">Jocata</h6>
+                            <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">Jocata</h6>
                             <p>Roxana Fortune Complex, 2nd Floor, Road No. 12, Banjara Hills, Hyderabad,
                                 Telangana - 500034<br /><br />
                                 <a href="https://jocata.com/" target="_blank" class="text-underline-with-cursor">www.jocata.com</a>
                             </p>
-                            <h6 class="app_tou_content_sub_title my-5">SIDBI</h6>
+                            <br><br>
+                            <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">SIDBI</h6>
 
                             <p>Head Office - SIDBI Tower, 15, Ashok Marg, Lucknow, Uttar Pradesh -
                                 226001<br /><br />
@@ -84,20 +86,21 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Job Title *">
+                                            <input type="text" class="form-control" placeholder="Last Name *">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
+                                    
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *">
+                                            <input type="text" class="form-control" placeholder="Company *">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Company *">
+                                            <input type="text" class="form-control" placeholder="Job Title *">
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +113,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Contact Number *">
+                                            <input type="text" class="form-control" placeholder="Contact Number">
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +121,23 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Share your thoughts & feedback</label>
+                                            
+                                            <select class="form-control">
+                                                <option>Message Type*</option>
+                                                <option>Queries</option>
+                                                <option>Feedback on the Index</option>
+                                                <option>Index Commentary for a Particular Month</option>
+                                                <option>Partnership Opportunity</option>
+                                              </select>
+                                              <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust">
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Type your Message*</label>
                                             <textarea class="form-control feedback"></textarea>
                                         </div>
                                     </div>
@@ -128,7 +147,7 @@
                                     <div class="col-md-6">
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="sm-primary-button width-100" data-bs-toggle="modal"
+                                        <button class="sm-primary-button width-100" disabled id="contactSubmitBtn" data-bs-toggle="modal"
                                             data-bs-target="#successModal">Submit</button>
 
                                         <div class="d-flex justify-content-center mt-20">
@@ -197,6 +216,19 @@
         </script>
     <!-- Custom SCripts -->
     <script src="custom.js"></script>
+
+    <script>
+        
+let contactCheckbox = document.getElementById("agreeCheckbox");
+let submitBtn=document.getElementById("contactSubmitBtn");
+contactCheckbox.addEventListener( "change", () => {
+   if ( contactCheckbox.checked ) {
+    submitBtn.disabled=false;
+   } else {
+    submitBtn.disabled=true;
+   }
+});
+    </script>
 </body>
 
 </html>

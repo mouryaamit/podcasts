@@ -1143,6 +1143,11 @@ a.app_home_section_caption:hover {
   font: 500 var(--font-size-16px) "Poppins", sans-serif;
 }
 
+.sm-primary-button[disabled],.sm-primary-button.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 /* .terms-checkbox {
   position: relative;
   top: 2px;
@@ -1164,7 +1169,7 @@ a.custom-link:hover {
 }
 
 .app-contact-block-margin {
-  padding: 10rem 0;
+  padding: 6rem 0;
 }
 
 .black-text {
@@ -1178,4 +1183,27 @@ a.custom-link:hover {
 .terms-label {
   color: #656565;
   /* font-size: var(--font-size-16px); */
+}
+
+.dropwodn-chevron-adjust{
+  float: right;
+    position: relative;
+    top: -15px;
+    width: 12px;
+}
+
+.app_contact_content_sub_title{
+  margin-bottom: 1.8rem !important;
+}
+
+.complete-form-text{
+  color: #000;
+  font-size: var(--font-size-14px);
+}
+
+.required-text{
+  color: #535353;
+  font-size: var(--font-size-12px);
+  display: block;
+  padding-top: 4px;
 }
