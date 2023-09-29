@@ -326,23 +326,6 @@ div.context_line_checkboxes .checkbox_label {
     color: rgba(0, 0, 0, 0.6);
     font-size: 14px;
 }
-.chart_desc
-{
-	margin: 0 auto;
-	margin-top:0px;
-    margin-left:100px;
-	height:110px;
-    font-size: 14px;
-    font-family: "Inter";
-    color: #ababab;
-}
-.chart_desc_content {
-    margin-right:3%;
-	float:left;
-	width:23%;
-	height: 110px;
-	
-}
 
 .fontClass{
     font-family: "Inter";
@@ -367,4 +350,103 @@ div.context_line_checkboxes .checkbox_label {
     /* stroke: #000000; */
 }
 
+.chart_desc{
+    display: inline-flex;
+    width: 1124px;
+    padding: 12px var(--Landing-scroll-count, 0px);
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: var(--Landing-scroll-count, 0px);    
+}
+.iipContent{
+    display: flex;
+    width: 338px;
+    padding: var(--Landing-scroll-count, 0px);
+    align-items: flex-start;
+    gap: var(--Overall-GVA-bar, 4px);
+    flex-shrink: 0;
+    border-radius: var(--Landing-scroll-count, 0px);
+}
+.pmiContent {
+    display: flex;
+    width: 317px;
+    padding: var(--Landing-scroll-count, 0px);
+    align-items: flex-start;
+    gap: var(--Overall-GVA-bar, 4px);
+    flex-shrink: 0;
+    border-radius: var(--Landing-scroll-count, 0px);
+}
+.gvaContent {
+    display: flex;
+    padding: var(--Landing-scroll-count, 0px);
+    align-items: flex-start;
+    gap: var(--Overall-GVA-bar, 4px);
+    flex: 1 0 0;
+    border-radius: var(--Landing-scroll-count, 0px);
+    margin-left: -20px;
+}
+.iipLegendText {
+    color: var(--IIP, #2E8DFF);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119.2%; /* 16.688px */
+}
+.pmiLegendText {
+    color: var(--PMI, #E1861B);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119.2%; /* 16.688px */
+}
+.gvaLegendText {
+    color: var(--GOI, #5451FF);
+    text-align: right;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119.2%; /* 16.688px */
+
+    width: 66px;
+}
+.iipLegendContent{
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #ABABAB;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%; /* 16.688px */
+
+    text-align: left;
+}
+.pmiLegendContent{
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #ABABAB;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%; /* 16.688px */
+
+    text-align: left;
+}
+.gvaLegendContent {
+    /* flex: 1 0 0; */
+    align-self: stretch;
+    color: #ABABAB;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%; /* 16.688px */
+
+    width: 292px;
+    text-align: left;
+}
 /* End of context graph css */

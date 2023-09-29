@@ -854,7 +854,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                                         .attr('y1', 0)
                                                         .attr('x2', width + 19)
                                                         .attr('y2', height + 58)
-                                                        .attr('stroke', '#959595')
+                                                        .attr('stroke', '#E1E1E1')
                                                         .attr("stroke-width", "1")
                                                         // .attr("stroke-dasharray", "2")
                                                         ;
