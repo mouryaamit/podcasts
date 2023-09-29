@@ -3,6 +3,8 @@
 
 <head>
   <title>Jocata Sumpoorn: Index Building Approach and Methodology Leveraging GST Data</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,8 +58,8 @@
       <div class="row gx-0">
         <p class="col-md-12">
           <span class="d-block"><span class="fw-bold">Jocata Sumpoorn</span> is constructed using</span>
-          <span class="d-block">consent-enabled and anonymised GST return data of</span>
-          <span class="d-block"><span class="fw-600">more than 50,000 MSMEs</span> seeking credit from financial</span>
+          <span class="d-block">consent-enabled and anonymised data of <span class="fw-600">more</span></span>
+          <span class="d-block"><span class="fw-600">than 50,000 MSMEs</span> seeking credit from financial</span>
           <span class="d-block">institutions starting <span class="fw-600">from October 2019</span> to date.</span>
         </p>
       </div>
@@ -189,7 +191,7 @@
               <h5 class="section_title mb-4">Activity Distribution (Non-Services and Services)
               </h5>
               <p class="app_methodology_caption pb-5">
-                <span class="d-block">The split of GTSINs engaged in non-service (manufacturing + trading)</span>
+                <span class="d-block">The split of GSTINs engaged in non-service (manufacturing + trading)</span>
                 <span class="d-block">and service activities are stable over time.</span>
               </p>
               <img src="assets/images/activity-chart.png" class="img-fluid mb-4" />
@@ -210,7 +212,7 @@
           <h5 class="section_title mb-5 blue-text">Methodology</h5>
           <p class="app_methodology_caption pb-5 blue-text">
             <span class="d-block">Jocata Sumpoorn is a relative amplitude adjusted composite diffusion index</span>
-            <span class="d-block">that is developed using actual monthly sales data reflected in official GSTN</span>
+            <span class="d-block">that is developed using actual monthly sales data reflected in official GSTIN</span>
             <span class="d-block">returns of credit-seeking MSMEs and is not based on survey data. </span>
           </p>
           <div class="app_methodology_cards my-5">
@@ -234,19 +236,19 @@
                   <div class="app_methodology_card_box h-100">
                     <img src="assets/icons/combine.svg" class="img-fluid mb-5">
                     <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
-                        month</span> TTM sales</p>
+                        month</span> TTM sales.</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
                     <img src="assets/icons/graph.svg" class="img-fluid mb-5">
-                    <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index</span></p>
+                    <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index.</span></p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
                     <img src="assets/icons/resize.svg" class="img-fluid mb-5">
-                    <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1</p>
+                    <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1.</p>
                   </div>
                 </div>
               </div>
@@ -267,15 +269,10 @@
                   <h6 class="mb-4">Data Source</h6>
                   <div class="px-2 py-4 app_consideration_card_box">
                     <ul class="pl-2">
-                      <li>
-                        <span class="d-block">GSTN is an authentic, reliable, and official</span>
-                        <span class="d-block"> source of MSME sales data.</span>
+                      <li>GSTIN is an authentic, reliable, and official source of MSME sales data.
                       </li>
-                      <li>
-                        <span class="d-block">As a GST-ASP (Authorised Service</span>
-                        <span class="d-block">Provider), Jocata fetches data digitally</span>
-                        <span class="d-block">from the GSTN network, further ensuring</span>
-                        <span class="d-block">data authenticity and accuracy.</span>
+                      <li>As a GST-ASP (Authorised Service Provider), Jocata fetches data digitally from the GSTIN
+                        network, further ensuring data authenticity and accuracy.
                       </li>
                     </ul>
                   </div>
@@ -284,23 +281,13 @@
                   <h6 class="mb-4">Approach Rationale</h6>
                   <div class="px-2 py-4 app_consideration_card_box">
                     <ul class="pl-2">
-                      <li>
-                        <span class="d-block">Using count and amplitude overcomes</span>
-                        <span class="d-block">shortcomings of a count-based diffusion</span>
-                        <span class="d-block">approach and effectively captures</span>
-                        <span class="d-block">magnitude of economic activity.</span>
+                      <li>Using count and amplitude overcomes shortcomings of a count-based diffusion approach and
+                        effectively captures magnitude of economic activity.
                       </li>
-                      <li>
-                        <span class="d-block">As ‘sales amplitude’ has been</span>
-                        <span class="d-block">incorporated into the diffusion approach,</span>
-                        <span class="d-block">outliers need to be handled and output</span>
-                        <span class="d-block">scaled using sigmoid function.</span>
-                      </li>
-                      <li>
-                        <span class="d-block">TTM approach ensures business</span>
-                        <span class="d-block">seasonality is captured and idiosyncratic</span>
-                        <span class="d-block">fluctuations smoothened out</span>
-                        <span class="d-block">using a moving average.</span>
+                      <li> As ‘sales amplitude’ has been incorporated into the diffusion approach, outliers need to be
+                        handled and output scaled using sigmoid function. </li>
+                      <li> TTM approach ensures business seasonality is captured and idiosyncratic fluctuations
+                        smoothened out using a moving average.
                       </li>
                     </ul>
                   </div>
@@ -309,17 +296,12 @@
                   <h6 class="mb-4">Data Length & Sample</h6>
                   <div class="px-2 py-4 app_consideration_card_box">
                     <ul class="pl-2">
-                      <li>
-                        <span class="d-block">Minimum 13 months of sales data (GSTR1)</span>
-                        <span class="d-block">is required to calculate the Index for a</span>
-                        <span class="d-block">particular month.</span>
+                      <li>Minimum 13 months of sales data (GSTR1) is required to calculate the Index for a particular
+                        month.
                       </li>
-                      <li><span class="d-block">Minimum 1000 MSMEs are considered to</span> 
-                        <span class="d-block">release the Index for any month.</span>
+                      <li>Minimum 1000 MSMEs are considered to release the Index for any month.
                       </li>
-                      <li>
-                        <span class="d-block">Current monthly count of MSMEs is</span>
-                        <span class="d-block">~2500.</span>  
+                      <li> Current monthly count of MSMEs is ~2500.
                       </li>
                     </ul>
                   </div>
@@ -340,7 +322,9 @@
             <span class="d-block">of 0 to 1, where the bin ranges represent the state of</span>
             <span class="d-block">contraction or expansion of economic activity of the sector.</span>
           </p>
-          <img src="assets/images/meth-range-chart.svg" class="img-fluid" />
+          <div class="meth_index_gif_con col-md-5 mx-auto">
+            <img src="assets/images/meth-range-chart.gif" class="img-fluid" />
+          </div>
         </div>
       </div>
     </div>
@@ -351,7 +335,7 @@
           <h5 class="section_title mb-5 blue-text">Index publishing frequency</h5>
           <p class="app_methodology_caption blue-text">
             <span class="d-block">The Index will be released monthly with only a four-week</span>
-            <span class="d-block">reporting cycle after the reference month ends (The Index for</span>
+            <span class="d-block">reporting cycle after the reference month ends (the Index for</span>
             <span class="d-block">January will be published in the 1st week of March).</span>
           </p>
         </div>
@@ -362,7 +346,7 @@
     <div class="container d-flex justify-content-between align-items-center">
       <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
+        <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
       </ul>
     </div>
   </footer>
