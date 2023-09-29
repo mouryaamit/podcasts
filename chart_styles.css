@@ -142,12 +142,14 @@ div.tooltip-area {
     background: #25BB61;
     color: white;
     font-size: 14px;
+    /* transition: left 0.5s ease 0s,top 0.5s ease 0s */
 }
 
 .animating_circle {
     display: inline-flex;
     align-items: center;
     position: relative;
+    /* transition: left 0.5s ease 0s,top 0.5s ease 0s */
 }
 
 .circle_waves {
@@ -157,6 +159,7 @@ div.tooltip-area {
     border-radius: 50%;
     position: absolute;
     right: 0;
+    
 }
 
 @keyframes circleOne {
