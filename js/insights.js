@@ -952,7 +952,7 @@ d3.json(url,
                     d3.select(".ec_title")
                         .html(`Expert Commentary`)
                         ;
-                    if(expertC.ExpertImageDetails && expertC.ExpertDetails) {
+                    if(expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
                         // commentary member details
                         d3.select('#commentary_mem_details')
                             .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
