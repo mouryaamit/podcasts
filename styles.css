@@ -40,7 +40,7 @@ main {
   right: 0;
   left: 0;
   top: 0;
-  /* height: 113px; */
+  height: 113px;
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
   z-index: 999;
@@ -103,7 +103,7 @@ main {
 
 .app_home_main_title p {
   color: #25505c;
-  font: 600 36px "Poppins", sans-serif;
+  font: 600 var(--font-size-36px) "Poppins", sans-serif;
   margin: 81px 0 54px;
   line-height: 140%;
   overflow-x: hidden;
@@ -127,7 +127,7 @@ main {
 }
 
 .app_home_chart_info {
-  margin: 5rem 0;
+  margin: 76px 0 131px;
 }
 
 .app_home_chart_info .discover_cta {
@@ -139,6 +139,7 @@ main {
   padding: 11px 35px;
   border-radius: 56px;
   font: 500 var(--font-size-20px) "Poppins", sans-serif;
+  margin-bottom: 3rem;
 }
 
 .app_home_chart_info p {
@@ -279,7 +280,7 @@ a.app_home_section_caption:hover {
 }
 
 .sidbi_testimonial .testimonial_content_con {
-  padding: 91px 0 75px 183px;
+  padding: 91px 0 75px 253px;
 }
 .sidbi_testimonial {
   background: #c4e2fd;
@@ -483,6 +484,40 @@ a.app_home_section_caption:hover {
   color: inherit;
   text-decoration: underline;
 }
+
+.roadmap_hsn_modal {
+  max-width: 944px;
+}
+.roadmap_hsn_modal .modal-content {
+  border-radius: 16px;
+  background: var(--app-white);
+}
+
+.roadmap_hsn_modal .modal-content .modal-body {
+  padding: 10px 60px 44px 44px;
+}
+
+.roadmap_hsn_modal .modal-content .modal-body .hsn_modal_title {
+  color: #4a4a4a;
+  font: 600 22px "Poppins";
+  line-height: 120%;
+  margin-bottom: 2rem;
+}
+
+.roadmap_hsn_modal .modal-content .modal-body .hsn_modal_caption {
+  color: rgba(74, 74, 74, 0.92);
+  font-size: var(--font-size-16px);
+  line-height: normal;
+}
+/* 
+.roadmap_hsn_modal .modal-content .modal-body .hsn_modal_caption:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+} */
+
+.roadmap_hsn_modal .modal-content .modal-body .hsn_modal_caption a {
+  color: inherit;
+  text-decoration: underline;
+}
 /* Roadmap Styles End Here */
 
 /* Methodology Styles Start Here */
@@ -675,7 +710,14 @@ a.app_home_section_caption:hover {
 
 .app_methodology_index_bin {
   background: #ececec;
-  padding-top: 4rem;
+  padding: 8rem 0 14rem;
+}
+
+.app_methodology_index_bin .meth_index_gif_con {
+  border-radius: 24px;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
+    0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+    0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
 }
 
 .app_methodology_index_frequency {
@@ -712,6 +754,10 @@ a.app_home_section_caption:hover {
 .app_index .carousel_commentary {
   display: flex;
   gap: 4px;
+}
+
+.app_index .carousel_commentary a {
+  height: max-content;
 }
 
 .app_index .carousel_commentary .carousel_controls {
@@ -902,7 +948,7 @@ a.app_home_section_caption:hover {
 
 .app_index_context_con .app_index_context_title {
   color: #194974;
-  font: 700 28px "Poppins", sans-serif;
+  font: 700 var(--font-size-28px) "Poppins", sans-serif;
   line-height: 120%;
 }
 

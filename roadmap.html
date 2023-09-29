@@ -3,6 +3,8 @@
 
 <head>
   <title>Jocata Sumpoorn: Upcoming Sub-Indices for Granular MSME Analysis</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -58,7 +60,7 @@
         <p class="app_roadmap_caption">
           <span class="d-block">The depth of GST returns data of MSMEs allows</span>
           <span class="d-block"> for the slicing of the Sumpoorn consolidated Index</span>
-            <span class="d-block">to provide more granular insights.</span>
+          <span class="d-block">to provide more granular insights.</span>
         </p>
         <h4 class="app_roadmap_title pt-5 pb-4">Upcoming sub-indices</h4>
         <img src="assets/icons/arrow_forward.svg" class="img-fluid arrow_down" />
@@ -72,18 +74,20 @@
         </div>
         <p class="app_methodology_caption">
           <span class="d-block">The sectoral indices will offer insights into how different sectors, as</span>
-          <span class="d-block">classified under GST by the <u>Harmonized System of Nomenclature (HSN)</u>,</span> 
+          <span class="d-block">classified under GST by the <a data-bs-toggle="modal" data-bs-target="#HSNModal"><u>Harmonized System of Nomenclature (HSN)</u></a>,</span>
           <span class="d-block">are performing as compared to the overall MSME sector.</span>
         </p>
       </div>
       <div class="col-md-9">
+        <!-- <img src="assets/images/roadmap-chart.svg" class="img-fluid pt-3" /> -->
         <div class="app_roadmap_chart_con my-5">
           <img src="assets/images/roadmap-chart.png" class="img-fluid py-3" />
         </div>
         <p class="chart_caption"><span class="fw-600">Fig.-</span> Jocata Sumpoorn – Sectoral Indices</p>
       </div>
       <div class="col-md-9 app_roadmap_note mb-5">
-        <p class="px-5 mx-5"><span class="fw-bold">Note:</span> A GSTIN is classified as belonging to an industry, if the Trailing
+        <p class="px-5 mx-5"><span class="fw-bold">Note:</span> A GSTIN is classified as belonging to an industry, if
+          the Trailing
           Twelve Month (TTM) sales of a
           particular HSN (at a 2 - digit level) in a month is greater than 50% of the sum of TTM sales of all HSNs
           by
@@ -113,7 +117,7 @@
       </div>
       <div class="col-md-12 app_home_subscribe">
         <p>Be the first to know these updates</p>
-        <a class="subscribe_cta">Subscribe</a>
+        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
       </div>
     </div>
   </main>
@@ -121,10 +125,121 @@
     <div class="container d-flex justify-content-between align-items-center">
       <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><a href="tou.html">Terms of Use</a></li>
+        <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
       </ul>
     </div>
   </footer>
+    <!-- Subscribe Modal popup -->
+  <!-- The Modal -->
+  <div class="modal" id="subscribeModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title black-text">Subscribe</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="my-3">Complete the form to subscribe.</div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Business Email *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Job Title *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Company *">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Industry">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Contact number">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+              <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal2">Register</button>
+
+              <div class="d-flex justify-content-center align-items-center mt-20">
+                <input type="checkbox" id="agreeCheckbox">
+                <label for="agreeCheckbox" class="terms-label ps-2">
+                  By submitting this request, I agree with the Jocata's
+                    <a class="custom-link" href="tou.html">Terms of use.</a>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HSN Modal -->
+  <div class="modal fade" id="HSNModal" tabindex="-1" aria-labelledby="HSNModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered roadmap_hsn_modal">
+      <div class="modal-content">
+        <div class="row mt-4 me-4">
+          <a class="col-12" role="button" data-bs-dismiss="modal"><img class="float-end" src="assets/icons/close.svg"/></a>
+        </div>  
+        <div class="modal-body">
+          <div class="row justify-content-start">
+            <div class="col-md-7">
+              <h5 class="hsn_modal_title">What is HSN?</h5>
+              <p class="hsn_modal_caption">
+                <span class="block">Harmonized System of Nomenclature is a universally</span>
+                <span class="d-block">accepted uniform code to classify goods in a systematic</span>
+                <span class="d-block">way developed by World Customs Organization (WCO)</span>
+                <span class="d-block">and adopted in our GST regime.</span>
+              </p>
+              <p class="hsn_modal_caption">
+                <span class="d-block">Under the Indian GST system, there are 21 sections</span>
+                <span class="d-block">comprising 99 chapters divided into 1244 headings and</span>
+                <span class="d-block">5224 sub-headings.</span>
+              </p>
+              <p class="hsn_modal_caption"><a>Here is a detailed list of HSNs</a></p>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/images/figure-hsn.svg" class="float-end img-fluid"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
