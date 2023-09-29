@@ -103,7 +103,7 @@ d3.json(url,
                 .tickValues(y_right_coordinates)
                 .tickFormat(
                     function (d) {
-                        return formatYaxisForText(d);
+                        return formatYaxisForText(d, "axis");
                     }
                 )
                 ;
@@ -257,9 +257,13 @@ d3.json(url,
                 .style("opacity", 0)
                 ;
 
-            function formatYaxisForText(d) {
+            function formatYaxisForText(d, fromWhere) {
                 if (d == 0.25) {
-                    return "Substantial Contraction";
+                    if(fromWhere == "info") {
+                        return "Substantial";
+                    } else {
+                        return "Substantial Contraction";
+                    }
                 } else if (d == 0.45) {
                     return "Significant";
                 } else if (d == 0.50) {
@@ -275,7 +279,11 @@ d3.json(url,
                 } else if (d == 0.75) {
                     return "Significant";
                 } else if (d == 1.00) {
-                    return "Substantial Expansion";
+                    if(fromWhere == "info") {
+                        return "Substantial";
+                    } else {
+                        return "Substantial Expansion";
+                    }
                 }
                 return '';
             }
@@ -981,7 +989,7 @@ d3.json(url,
 
             function createGraphForCommentary(graphData) {
                 // set the dimensions and margins of the graph
-                const margin_c = { top: 20, right: 10, bottom: 25, left: 45 },
+                const margin_c = { top: 20, right: 15, bottom: 25, left: 45 },
                     default_width_c = 270;
                     default_height_c = 257;
                     width_c = default_width_c - margin_c.left - margin_c.right,
@@ -1084,7 +1092,7 @@ d3.json(url,
                         });
                 });
                 d3.selectAll("#infoIcon_2").remove();
-                addInfoIcon(default_width_c - 75, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
+                addInfoIcon(default_width_c - 80, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
                 // Add the line
                 svg_c.append("path")
                     .datum(graphData)
@@ -1125,9 +1133,9 @@ d3.json(url,
                 return hAndyValues;
             }
 
-            function addInfoIcon(icon_w, icon_h, graph_id, icon_id, selectedSvg) {
+            function addInfoIcon(icon_x, icon_y, graph_id, icon_id, selectedSvg) {
                 let icon = selectedSvg.append("g")
-                    .attr("transform", `translate(${icon_w},${icon_h})`)
+                    .attr("transform", `translate(${icon_x},${icon_y})`)
                     .append("svg:image")
                     .attr("xlink:href", "assets/icons/info.png")
                     .attr('width', 20)
@@ -1154,7 +1162,7 @@ d3.json(url,
                             if(startYaxisPoint == "" || startYaxisPoint.length == 0){
                                 startYaxisPoint = index;
                             } else {
-                                let value = formatYaxisForText(index);
+                                let value = formatYaxisForText(index, "info");
                                 let da = new Object();
                                 da.index = startYaxisPoint + "-" + index;
                                 da.value = value;
@@ -1166,14 +1174,14 @@ d3.json(url,
                         for (let i = indexData.length - 1; i >= 0; i--) {
                             if (i <= 3) {
                                 if (i == 3)
-                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"padding: 2px;color:#960000;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"> <span style=\"font-size: 10px;\">&#8594;</span> " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000;\"> <span>&#8594;</span> " + indexData[i].index + "</span></div>";
                                 else
-                                    infodata += "<div style=\"padding: 2px;color:#960000;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                             } else {
                                 if (i == indexData.length - 1)
-                                    infodata += "<div style=\"padding: 2px;padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"padding: 2px;color:#1E7400;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                                 else
-                                    infodata += "<div style=\"padding: 2px;color:#1E7400;padding-left: 13px\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span style=\"font-size: 10px;\">&#8594;</span>  " + indexData[i].index + "</span></div>";
+                                    infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                             }
                         }
                         document.getElementById("yaxisContentInfo").innerHTML = infodata;
@@ -1183,7 +1191,7 @@ d3.json(url,
                     document.getElementById("contextMenu").style.display = 'none';
                 });
             }
-            addInfoIcon(default_width - 20, 10, "#my_dataviz_insights", "infoIcon_1", svg);
+            addInfoIcon(default_width, 9, "#my_dataviz_insights", "infoIcon_1", svg);
 
             selectionOfXaxis();
 
