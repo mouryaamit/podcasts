@@ -1,9 +1,8 @@
-// https://d3js.org v7.8.5 Copyright 2010-2023 Mike Bostock
 
-const myJsonUrl="http://192.168.0.104/SumpoornJSON/"
+const myJsonUrl="/SumpoornJSON/"
 
-d3.json(myJsonUrl+"sumpoorn_test_json1.json",
-    // When reading the csv, I must format variables:
+d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
+    // When reading the json, I must format variables:
     function (d) {
         console.log(d)
         return { category: parseDate(d.category), value: d.value }
@@ -11,7 +10,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
         // Now I can use this dataset:
         function (data) {
             var mydata = data.IndexGeneration;
-            d3.json(myJsonUrl+"IIP_json_test.json",
+            d3.json(myJsonUrl+"IIP_json_test.json?date="+new Date(),
                 // When reading the csv, I must format variables:
                 function (d) {
                     console.log(d)
@@ -20,7 +19,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                     // Now I can use this dataset:
                     function (dataForIIP) {
                         var dataForIIP = dataForIIP.iipValues;
-                        d3.json(myJsonUrl+"PMI_json_test.json",
+                        d3.json(myJsonUrl+"PMI_json_test.json?date="+new Date(),
                             // When reading the csv, I must format variables:
                             function (d) {
                                 console.log(d)
@@ -29,7 +28,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json",
                                 // Now I can use this dataset:
                                 function (dataForPMI) {
                                     var dataForPMI = dataForPMI.pmiValues;
-                                    d3.json(myJsonUrl+"GVA_json_test.json",
+                                    d3.json(myJsonUrl+"GVA_json_test.json?date="+new Date(),
                                         // When reading the csv, I must format variables:
                                         function (d) {
                                             console.log(d)

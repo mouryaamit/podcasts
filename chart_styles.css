@@ -238,13 +238,6 @@ div.tooltip-area {
     color: #AC5D5D;
 }
 
-.infoIcon {
-    background-image: url("assets/icons/info.png");
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-}
-
 /* commentary graph css */
 .y_month_value {
     fill: white;

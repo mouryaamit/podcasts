@@ -888,7 +888,7 @@ a.app_home_section_caption:hover {
 }
 
 .commentary_body_right .commentary_body_right_detail {
-  margin: 15px 5px;
+  margin: 0 5px 15px 5px;
 }
 .commentary_body_right .commentary_body_right_detail p {
   color: #4a4a4a;

@@ -1,5 +1,5 @@
-const url = "http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json";
-// const url = "http://192.168.0.104/SumpoornJSON/sumpoorn_test_json1.json"; // prod url
+
+const url = "/SumpoornJSON/sumpoorn_test_json1.json?date="+new Date();
 
 //Read the data
 d3.json(url,
@@ -968,7 +968,10 @@ d3.json(url,
                                 <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
                                 <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
                                 </div>`)
+                            .style("margin-bottom", "15px")
                         ;
+                    } else {
+                        d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
                     }
                     // d3.select('#img_commentary')
                     //     .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
@@ -1092,7 +1095,7 @@ d3.json(url,
                         });
                 });
                 d3.selectAll("#infoIcon_2").remove();
-                addInfoIcon(default_width_c - 80, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
+                addInfoIcon(default_width_c - 85, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
                 // Add the line
                 svg_c.append("path")
                     .datum(graphData)
@@ -1137,9 +1140,9 @@ d3.json(url,
                 let icon = selectedSvg.append("g")
                     .attr("transform", `translate(${icon_x},${icon_y})`)
                     .append("svg:image")
-                    .attr("xlink:href", "assets/icons/info.png")
-                    .attr('width', 20)
-                    .attr('height', 20)
+                    .attr("xlink:href", "assets/icons/info.svg")
+                    .attr('width', 15)
+                    .attr('height', 15)
                     .attr("id", icon_id)
                     .style("cursor", "pointer")
                     .on("click", function (evt, d) {
@@ -1191,7 +1194,7 @@ d3.json(url,
                     document.getElementById("contextMenu").style.display = 'none';
                 });
             }
-            addInfoIcon(default_width, 9, "#my_dataviz_insights", "infoIcon_1", svg);
+            addInfoIcon(default_width-35, 9, "#my_dataviz_insights", "infoIcon_1", svg);
 
             selectionOfXaxis();
 
