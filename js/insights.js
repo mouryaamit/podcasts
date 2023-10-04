@@ -531,8 +531,8 @@ d3.json(url,
                     d3.select(d_child)
                         .on("mouseover", function (event, d) {
                             if (d != 0.52 && d != 0.54) {
-                                d3.selectAll(".y-axis-titles").classed("active", false);
-                                d3.select(this).classed("active", true); // should then accept fill from CSS
+                                d3.selectAll(".y-axis-titles").classed("select", false);
+                                d3.select(this).classed("select", true);
                                 yAxisMouseOver(event, d);
                             }
                         })
@@ -541,14 +541,13 @@ d3.json(url,
             }
 
             function removeXaxisTitleSelection() {
-                d3.selectAll(".x_month_name").classed("active", false);
                 d3.selectAll(".x_month_name").classed("select_g", false);
                 d3.selectAll(".x_month_name").classed("select_r", false);
             };
             function removeRectsSelection() {
                 d3.selectAll("#rect_yaxis").remove();
-                d3.selectAll("#rect_xaxis").remove();
-                d3.selectAll(".y-axis-titles").classed("active", false);
+                d3.selectAll("#rect_xaxis_sel").remove();
+                d3.selectAll(".y-axis-titles").classed("select", false);
             };
 
             d3.select("#my_dataviz_insights") //.insights_graph, .app_index_chart_con
@@ -591,9 +590,11 @@ d3.json(url,
                 let dataValues = mydata.filter((e) => {
                     return (e.value >= beforeIndexValue && e.value <= d);
                 });
-                d3.selectAll("#rect_xaxis").remove();
+                // d3.selectAll("#rect_xaxis").remove();
+                d3.selectAll("#rect_xaxis_sel").remove();
                 // yaxis selection
                 removeXaxisTitleSelection();
+                // d3.selectAll(".x_month_name").classed("active", false);
                 dataValues.forEach((eachValue) => {
                     highlightXaxis(eachValue, d);
                 })
@@ -606,7 +607,7 @@ d3.json(url,
                     .attr('y', 0)
                     .attr('width', 22)
                     .attr('height', height + 40)
-                    .attr("id", "rect_xaxis")
+                    .attr("id", "rect_xaxis_sel")
                     .attr("opacity", "0.7")
                     .transition()
                     .duration(1000)
@@ -734,6 +735,7 @@ d3.json(url,
                     if (i == totalIndex) {
                         // xaxis selection on load
                         removeXaxisTitleSelection();
+                        d3.selectAll(".x_month_name").classed("active", false);
                         svg.append('rect')
                             .attr('x', width)
                             .attr('y', 0)
@@ -752,8 +754,9 @@ d3.json(url,
                         const tooltip_pointer = getPointsOnCurve(mydata[i].category, mydata[i].value);
                         addTooltip(tooltip_pointer, mydata[i]);
                         d3.select(`.x_month_name_${i}`).classed("active", true);
-                        // highlight yaxis text
+                        // de highlight yaxis text
                         d3.selectAll(".y-axis-titles").classed("active", false);
+                        d3.selectAll(".y-axis-titles").classed("select", false);
                         checkSpecificPointOnYaxis(i);
                         setPrevAndNextMonthsSlider(mydata[i]);
                         addCommentary(mydata[i]);
@@ -762,6 +765,7 @@ d3.json(url,
                         .on("click", function (event, d) {
                             // xaxis selection on click
                            removeXaxisTitleSelection();
+                           d3.selectAll(".x_month_name").classed("active", false);
                             const formattedDate = d3.timeFormat("%m-%Y")(d);
                             renderPointerOnLine(formattedDate);
                         })
@@ -769,9 +773,10 @@ d3.json(url,
             }
 
             function renderPointerOnLine(date) {
-                d3.selectAll("#rect_xaxis").remove(); // to remove highlighting of already selected xaxis data
+                d3.selectAll("#rect_xaxis").remove(); 
                 d3.selectAll("#rect_yaxis").remove(); // to remove highlighting of yaxis data
-                
+                d3.selectAll("#rect_xaxis_sel").remove(); // to remove highlighting of already selected xaxis data
+
                 const dataValue = mydata.filter((x) => x.category == date)[0];
                 const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
                 addTooltip(tooltip_pointer, dataValue);
@@ -792,6 +797,7 @@ d3.json(url,
                     });
                 const indexOfObj = mydata.findIndex(x => x.category == dataValue.category);
                 d3.select(`.x_month_name_${indexOfObj}`).classed("active", true); // xaxis selection
+                d3.selectAll(".y-axis-titles").classed("select", false);
                 d3.selectAll(".y-axis-titles").classed("active", false);
                 checkSpecificPointOnYaxis(indexOfObj);
                 setPrevAndNextMonthsSlider(dataValue);
@@ -873,6 +879,25 @@ d3.json(url,
             function addSliderData(prev_month_ec, next_month_ec) {
                 prev_month_data = prev_month_ec;
                 next_month_data = next_month_ec;
+                checkIfCommentaryDataAvailable(prev_month_data, next_month_data);
+            }
+
+            function checkIfCommentaryDataAvailable(prev_month_data, next_month_data) {
+                const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
+                const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
+                const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
+                const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
+                document.getElementById('#slide_prev').classList.remove("disable_arrows");
+                document.getElementById('#slide_next').classList.remove("disable_arrows");
+                if(!prevCommentaryData || (prevCommentaryData && !checkForPrevCommentary)) {
+                    document.getElementById('#slide_prev').classList.add("disable_arrows");
+                } else if(!nextCommentaryData || (nextCommentaryData && !checkForNextCommentary)) {
+                    document.getElementById('#slide_next').classList.add("disable_arrows");
+                } 
+                // else {
+                //     document.getElementById('#slide_prev').classList.remove("disable_arrows");
+                //     document.getElementById('#slide_next').classList.remove("disable_arrows");
+                // }
             }
 
             document.getElementById('#slide_prev').addEventListener('click', function () {
@@ -884,6 +909,7 @@ d3.json(url,
                     // need to avoid for month not having commentary data
                     // xaxis selection on click
                     removeXaxisTitleSelection();
+                    d3.selectAll(".x_month_name").classed("active", false);
                     renderPointerOnLine(prevCommentaryData.category);
                 }
             });
@@ -895,6 +921,7 @@ d3.json(url,
                     addCommentary(nextCommentaryData);
                     // xaxis selection on click
                     removeXaxisTitleSelection();
+                    d3.selectAll(".x_month_name").classed("active", false);
                     renderPointerOnLine(nextCommentaryData.category);
                 }
             });
@@ -1297,6 +1324,7 @@ d3.json(url,
                 const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
                  // xaxis selection on curve selection
                 removeXaxisTitleSelection();
+                d3.selectAll(".x_month_name").classed("active", false);
                 renderPointerOnLine(formattedDate);
             };
 
