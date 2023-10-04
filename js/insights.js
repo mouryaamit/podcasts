@@ -247,10 +247,6 @@ d3.json(url,
                 .style("opacity", 0)
                 ;
 
-            // const tooltip = svg.append("g")
-            //     .attr("class", "tooltip-area")
-            //     .style("opacity", 0);
-
             const radiation = d3.select("#my_dataviz_insights")
                 .append("div")
                 .attr("class", "animating_circle")
@@ -414,7 +410,6 @@ d3.json(url,
                 const flag1_focus = svg.append("g")
                     .attr("class", "flag1_focus")
                     .attr("transform", "translate(" + (x_1 + 10) + "," + y_1 + ")")
-                    // .style("opacity", 0.9)
                     ;
 
                 flag1_focus.append("circle")
@@ -423,7 +418,6 @@ d3.json(url,
                 const flag2_focus = svg.append("g")
                     .attr("class", "flag2_focus")
                     .attr("transform", "translate(" + (x_2 + 10) + "," + y_2 + ")")
-                    // .style("opacity", 0.9)
                     ;
 
                 flag2_focus.append("circle")
@@ -542,16 +536,30 @@ d3.json(url,
                                 yAxisMouseOver(event, d);
                             }
                         })
-                        .on("mouseout", (event, d) => {
-                            // d3.select("#rect_yaxis").remove();
-                        })
                         ;
                 });
             }
 
+            function removeXaxisTitleSelection() {
+                d3.selectAll(".x_month_name").classed("active", false);
+                d3.selectAll(".x_month_name").classed("select_g", false);
+                d3.selectAll(".x_month_name").classed("select_r", false);
+            };
+            function removeRectsSelection() {
+                d3.selectAll("#rect_yaxis").remove();
+                d3.selectAll("#rect_xaxis").remove();
+                d3.selectAll(".y-axis-titles").classed("active", false);
+            };
+
+            d3.select("#my_dataviz_insights") //.insights_graph, .app_index_chart_con
+                .on("mouseleave", (event) => {
+                    removeRectsSelection();
+                    removeXaxisTitleSelection();
+                });
+
             function yAxisMouseOver(event, d) {
                 let handyValues = formatHandYvaluesYaxis(d, true);
-                d3.select("#rect_yaxis").remove();
+                d3.selectAll("#rect_yaxis").remove();
                 svg.append('rect')
                     .attr('x', 0)
                     .attr('y', handyValues.y)
@@ -565,9 +573,6 @@ d3.json(url,
                             return "rect_yaxis_2";
                         }
                     })
-                    // .attr('stroke', '#E2E2E280')
-                    // .style("stroke-dasharray", 1)
-                    // .style("opacity", "0.1")
                     .attr('stroke', 'black')
                     .style("stroke-dasharray", ("3, 1"))
                     .style("opacity", 0.3)
@@ -587,9 +592,8 @@ d3.json(url,
                     return (e.value >= beforeIndexValue && e.value <= d);
                 });
                 d3.selectAll("#rect_xaxis").remove();
-                d3.selectAll(".x_month_name").classed("active", false); // yaxis selection
-                d3.selectAll(".x_month_name").classed("select_g", false);
-                d3.selectAll(".x_month_name").classed("select_r", false);
+                // yaxis selection
+                removeXaxisTitleSelection();
                 dataValues.forEach((eachValue) => {
                     highlightXaxis(eachValue, d);
                 })
@@ -598,7 +602,6 @@ d3.json(url,
             function highlightXaxis(dataValue, d) {
                 const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
                 svg.append('rect')
-                    //.attr('x', event.x-80)
                     .attr('x', tooltip_pointer.x)
                     .attr('y', 0)
                     .attr('width', 22)
@@ -627,6 +630,7 @@ d3.json(url,
                     .attr('width', width + 19)
                     .attr('height', handyValues.h)
                     .attr("id", "rect_def_yaxis")
+                    .attr("opacity", "0.5")
                     .attr('stroke', '#E2E2E280')
                     .transition()
                     .duration(1000)
@@ -720,10 +724,6 @@ d3.json(url,
                         hAndyValues.y1 = 94;
                         hAndyValues.x2 = width+112;
                     } 
-                    // else if (d == 1.00) {
-                    //     hAndyValues.y1 = 0;
-                    //     hAndyValues.x2 = width+170;
-                    // }
                     return hAndyValues;
             }
             addSelectionYaxis();
@@ -733,9 +733,7 @@ d3.json(url,
                     let totalIndex = month_name.selectAll(".tick")._parents.length - 1;
                     if (i == totalIndex) {
                         // xaxis selection on load
-                        d3.selectAll(".x_month_name").classed("active", false); 
-                        d3.selectAll(".x_month_name").classed("select_g", false);
-                        d3.selectAll(".x_month_name").classed("select_r", false);
+                        removeXaxisTitleSelection();
                         svg.append('rect')
                             .attr('x', width)
                             .attr('y', 0)
@@ -762,9 +760,8 @@ d3.json(url,
                     }
                     d3.select(d_child)
                         .on("click", function (event, d) {
-                            d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
-                            d3.selectAll(".x_month_name").classed("select_g", false);
-                            d3.selectAll(".x_month_name").classed("select_r", false);
+                            // xaxis selection on click
+                           removeXaxisTitleSelection();
                             const formattedDate = d3.timeFormat("%m-%Y")(d);
                             renderPointerOnLine(formattedDate);
                         })
@@ -786,9 +783,7 @@ d3.json(url,
                     .attr('height', height + 40)
                     .attr("id", "rect_xaxis")
                     .attr('stroke', 'black')
-                    // .attr('stroke', '#E2E2E280')
                     .style("stroke-dasharray", ("3, 1"))
-                    // .style("opacity", "0.3")
                     .style("opacity", "0.5")
                     .transition()
                     .duration(1000)
@@ -810,8 +805,8 @@ d3.json(url,
                     .style("opacity", 0.9);
                 tooltip
                     .html(dataValue.value)
-                    .style("left", (mousePointer.x + 60)  + "px") //(event.pageX) +
-                    .style("top", (mousePointer.y-35) + "px"); //(event.pageY - 30) +
+                    .style("left", (mousePointer.x + 60)  + "px")
+                    .style("top", (mousePointer.y-35) + "px");
                 ;
                 radiation
                     .transition()
@@ -887,9 +882,8 @@ d3.json(url,
                     setPrevAndNextMonthsSlider(prevCommentaryData);
                     addCommentary(prevCommentaryData);
                     // need to avoid for month not having commentary data
-                    d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
-                    d3.selectAll(".x_month_name").classed("select_g", false);
-                    d3.selectAll(".x_month_name").classed("select_r", false);
+                    // xaxis selection on click
+                    removeXaxisTitleSelection();
                     renderPointerOnLine(prevCommentaryData.category);
                 }
             });
@@ -899,9 +893,8 @@ d3.json(url,
                 if (nextCommentaryData && checkIfMonthlyCommentary) {
                     setPrevAndNextMonthsSlider(nextCommentaryData);
                     addCommentary(nextCommentaryData);
-                    d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on click
-                    d3.selectAll(".x_month_name").classed("select_g", false);
-                    d3.selectAll(".x_month_name").classed("select_r", false);
+                    // xaxis selection on click
+                    removeXaxisTitleSelection();
                     renderPointerOnLine(nextCommentaryData.category);
                 }
             });
@@ -954,15 +947,6 @@ d3.json(url,
                     } else {
                         d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
                     }
-                    // d3.select('#img_commentary')
-                    //     .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />`)
-                    // ;
-                    // d3.select(".ec_author")
-                    //     .html(`${expertC.ExpertName}`)
-                    //     ;
-                    // d3.select(".ec_author_designation")
-                    //     .html(`${expertC.ExpertDetails}`)
-                    //     ;
                     d3.select(".ec_message")
                         .html(`${expertC.ExpertCommentary}`)
                         ;
@@ -1069,8 +1053,6 @@ d3.json(url,
                         .attr('height', handyValues.h)
                         .attr("id", "rect_def_yaxis")
                         .attr('stroke', '#E2E2E280')
-                        // .style("stroke-dasharray", ("3, 1"))
-                        // .style("opacity", "0.5")
                         .transition()
                         .duration(1000)
                         //.ease(d3.easeCubicOut)
@@ -1313,9 +1295,8 @@ d3.json(url,
                 const x_orig = x1.invert(mousePointer[0]);
                 const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
                 const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
-                d3.selectAll(".x_month_name").classed("active", false); // xaxis selection on curve selection
-                d3.selectAll(".x_month_name").classed("select_g", false);
-                d3.selectAll(".x_month_name").classed("select_r", false);
+                 // xaxis selection on curve selection
+                removeXaxisTitleSelection();
                 renderPointerOnLine(formattedDate);
             };
 

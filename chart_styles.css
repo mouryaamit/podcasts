@@ -113,21 +113,25 @@
     color: #830A0A !important;
 }
 
-#rect_xaxis,
-#rect_def_yaxis {
+#rect_xaxis {
     fill: rgba(226, 226, 226, 0.5);
+    /* fill: #E2E2E2;
+    opacity: 0.5; */
+}
+#rect_def_yaxis {
+    fill: #F9F9F9;
     /* fill: #E2E2E2;
     opacity: 0.5; */
 }
 
 .rect_yaxis_1 {
     fill: #E6FBE9;
-    opacity: 0.1;
+    opacity: 1;
 }
 
 .rect_yaxis_2 {
     fill: #FFDADA;
-    opacity: 0.1;
+    opacity: 1;
 }
 #my_dataviz_insights,#my_dataviz_context {
     position: relative;
