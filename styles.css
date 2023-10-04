@@ -635,6 +635,7 @@ a.app_home_section_caption:hover {
 }
 
 .app_methodology_state_cities ul li span.state-name {
+  display: block;
   color: #000;
   font-size: 14.456px;
 }
