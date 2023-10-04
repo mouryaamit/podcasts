@@ -36,14 +36,9 @@ main {
 
 /* Header Styles Start */
 .app_header {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
   height: 113px;
   background-color: var(--app-white);
   padding: 0 6rem 0 3rem;
-  z-index: 999;
 }
 
 .app_header_shadow {
@@ -256,7 +251,7 @@ a.app_home_section_caption:hover {
 }
 
 .app_home_testimonial .testimonial_content_con {
-  padding: 63px 253px 45px 0;
+  padding: 91px 0 75px 253px;
   text-align: start;
 }
 
@@ -279,19 +274,19 @@ a.app_home_section_caption:hover {
   margin-left: 1rem;
 }
 
-.sidbi_testimonial .testimonial_content_con {
-  padding: 91px 0 75px 253px;
+.jocata_testimonial .testimonial_content_con {
+  padding: 63px 253px 45px 0;
 }
-.sidbi_testimonial {
+.jocata_testimonial {
   background: #c4e2fd;
 }
 
-.sidbi_testimonial .testimonial_content:first-of-type::before {
+.jocata_testimonial .testimonial_content:first-of-type::before {
   content: url("assets/icons/ivc-start-blue.svg");
   left: -5rem;
 }
 
-.sidbi_testimonial .testimonial_content:last-of-type::after {
+.jocata_testimonial .testimonial_content:last-of-type::after {
   content: url("assets/icons/ivc-end-blue.svg");
   bottom: -2rem;
   margin-left: 1rem;
