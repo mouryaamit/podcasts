@@ -116,15 +116,17 @@
 #rect_xaxis,
 #rect_def_yaxis {
     fill: rgba(226, 226, 226, 0.5);
+    /* fill: #E2E2E2;
+    opacity: 0.5; */
 }
 
 .rect_yaxis_1 {
-    fill: #759B67;
+    fill: #E6FBE9;
     opacity: 0.1;
 }
 
 .rect_yaxis_2 {
-    fill: #AE7676;
+    fill: #FFDADA;
     opacity: 0.1;
 }
 #my_dataviz_insights,#my_dataviz_context {

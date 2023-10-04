@@ -1,5 +1,6 @@
 
 const url = "/SumpoornJSON/sumpoorn_test_json1.json?date="+new Date();
+
 //Read the data
 d3.json(url,
     // When reading the json, I must format variables:
@@ -654,11 +655,11 @@ d3.json(url,
                         hAndyValues.y = 207;
                         hAndyValues.h = 75;
                     } else if (d == 0.50) {
-                        hAndyValues.y = 187.5;
-                        hAndyValues.h = 19.5;
+                        hAndyValues.y = 188;
+                        hAndyValues.h = 20;
                     } else if (d == 0.60) {
-                        hAndyValues.y = 150.5;
-                        hAndyValues.h = 22.5;
+                        hAndyValues.y = 151;
+                        hAndyValues.h = 23;
                     } else if (d == 0.65) {
                         hAndyValues.y = 132;
                         hAndyValues.h = 18;
