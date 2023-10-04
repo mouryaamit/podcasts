@@ -29,7 +29,7 @@
 </head>
 
 <body class="">
-  <header class="container-fluid d-flex justify-content-between align-items-center app_header" id="appHeader">
+  <header class="container-fluid d-flex justify-content-between align-items-center fixed-top app_header" id="appHeader">
     <div class="app_header_left">
       <a href="index.html">
         <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
@@ -181,34 +181,6 @@
     </div>
     <div class="app_home_testimonial bg-white">
       <div class="row gx-0">
-        <div class="col-md-4 align-self-end text-start">
-          <img src="assets/images/testimonial-jocata.svg" class="img-fluid" data-aos="fade-right"
-            data-aos-easing="linear" data-aos-duration="1000" />
-        </div>
-        <div class="col-md-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
-          data-aos-duration="1000">
-          <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by
-            public and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of
-            this sector that is fact-based and dynamic has become critical for their sustained growth, especially
-            through formal credit access.</p>
-          <p class="testimonial_content">As a digital transformation partner for marquee lenders in the country, Jocata
-            has been deeply engaged in harnessing Goods and Services Tax (GST) data to provide deep insights on MSME
-            entities and powering near-instant credit decisioning and faster disbursals.</p>
-          <p class="testimonial_content">With the belief that a high-frequency indicator will help address the
-            prevailing MSME knowledge gap, Jocata, in association with SIDBI, presents “Sumpoorn”, India's first and
-            only economic activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe
-            Sumpoorn can effectively, and in a timely manner, aid various stakeholders at financial institutions, policy
-            makers, economists and researchers in strategically directing development and credit efforts to fuel the
-            growth of MSMEs across the country.</p>
-          <div class="mt-5">
-            <p class="testimonial-name mb-2">Prashant Muddu</p>
-            <p class="testimonial-detail">MD & CEO, Jocata</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="app_home_testimonial sidbi_testimonial">
-      <div class="row gx-0">
         <div class="col-md-7 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
           data-aos-duration="1000">
           <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well
@@ -232,6 +204,34 @@
         <div class="col-md-5 align-self-end text-end overflow-hidden">
           <img src="assets/images/testimonial-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
             data-aos-duration="1000" />
+        </div>
+      </div>
+    </div>
+    <div class="app_home_testimonial jocata_testimonial">
+      <div class="row gx-0">
+        <div class="col-md-4 align-self-end text-start">
+          <img src="assets/images/testimonial-jocata.svg" class="img-fluid" data-aos="fade-right"
+            data-aos-easing="linear" data-aos-duration="1000" />
+        </div>
+        <div class="col-md-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by
+            public and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of
+            this sector that is fact-based and dynamic has become critical for their sustained growth, especially
+            through formal credit access.</p>
+          <p class="testimonial_content">As a digital transformation partner for marquee lenders in the country, Jocata
+            has been deeply engaged in harnessing Goods and Services Tax (GST) data to provide deep insights on MSME
+            entities and powering near-instant credit decisioning and faster disbursals.</p>
+          <p class="testimonial_content">With the belief that a high-frequency indicator will help address the
+            prevailing MSME knowledge gap, Jocata, in association with SIDBI, presents “Sumpoorn”, India's first and
+            only economic activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe
+            Sumpoorn can effectively, and in a timely manner, aid various stakeholders at financial institutions, policy
+            makers, economists and researchers in strategically directing development and credit efforts to fuel the
+            growth of MSMEs across the country.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Prashant Muddu</p>
+            <p class="testimonial-detail">MD & CEO, Jocata</p>
+          </div>
         </div>
       </div>
     </div>
@@ -296,7 +296,7 @@
 
   <!-- Subscribe Modal popup -->
   <!-- The Modal -->
-  <div class="modal" id="subscribeModal">
+  <div class="modal fade" id="subscribeModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
