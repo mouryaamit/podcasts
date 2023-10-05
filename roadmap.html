@@ -74,7 +74,8 @@
         </div>
         <p class="app_methodology_caption">
           <span class="d-block">The sectoral indices will offer insights into how different sectors, as</span>
-          <span class="d-block">classified under GST by the <a data-bs-toggle="modal" data-bs-target="#HSNModal"><u>Harmonized System of Nomenclature (HSN)</u></a>,</span>
+          <span class="d-block">classified under GST by the <a data-bs-toggle="modal"
+              data-bs-target="#HSNModal"><u>Harmonized System of Nomenclature (HSN)</u></a>,</span>
           <span class="d-block">are performing as compared to the overall MSME sector.</span>
         </p>
       </div>
@@ -120,15 +121,13 @@
       </div>
     </div>
   </main>
-  <footer class="app_footer">
-    <div class="container d-flex justify-content-between align-items-center">
-      <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
-      <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
-      </ul>
-    </div>
+  <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+    <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
+    </ul>
   </footer>
-    <!-- Subscribe Modal popup -->
+  <!-- Subscribe Modal popup -->
   <!-- The Modal -->
   <div class="modal fade" id="subscribeModal">
     <div class="modal-dialog modal-dialog-centered">
@@ -142,7 +141,9 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-          <div class="my-3">Complete the form to subscribe.</div>
+          <div class="my-3 complete-form-text">Complete the form to subscribe.
+            <span class="required-text">* Required Fields</span>
+          </div>
 
           <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -196,8 +197,8 @@
               <div class="d-flex justify-content-center align-items-center mt-20">
                 <input type="checkbox" id="agreeCheckbox">
                 <label for="agreeCheckbox" class="terms-label ps-2">
-                  By submitting this request, I agree with the Jocata's
-                    <a class="custom-link" href="tou.html">Terms of use.</a>
+                  By submitting this request, I agree with the Sumpoorn
+                  <a class="custom-link" href="tou.html">Terms of use.</a>
                 </label>
               </div>
             </div>
@@ -212,8 +213,9 @@
     <div class="modal-dialog modal-dialog-centered roadmap_hsn_modal">
       <div class="modal-content">
         <div class="row mt-4 me-4">
-          <a class="col-12" role="button" data-bs-dismiss="modal"><img class="float-end" src="assets/icons/close.svg"/></a>
-        </div>  
+          <a class="col-12" role="button" data-bs-dismiss="modal"><img class="float-end"
+              src="assets/icons/close.svg" /></a>
+        </div>
         <div class="modal-body">
           <div class="row justify-content-start">
             <div class="col-md-7">
@@ -229,10 +231,11 @@
                 <span class="d-block">comprising 99 chapters divided into 1244 headings and</span>
                 <span class="d-block">5224 sub-headings.</span>
               </p>
-              <p class="hsn_modal_caption"><a>Here is a detailed list of HSNs</a></p>
+              <p class="hsn_modal_caption"><a href="https://services.gst.gov.in/services/searchhsnsac" target="_blank">Here is a
+                  detailed list of HSNs</a></p>
             </div>
             <div class="col-md-5">
-              <img src="assets/images/figure-hsn.svg" class="float-end img-fluid"/>
+              <img src="assets/images/figure-hsn.svg" class="float-end img-fluid" />
             </div>
           </div>
         </div>

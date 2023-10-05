@@ -161,15 +161,34 @@
       </div>
     </div>
     <div class="container-fluid app_home_msme_section app_home_meth_section">
-      <div class="row gx-0 text-start">
-        <div class="col-md-6">
-          <img src="assets/images/home-meth-cards.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
-            data-aos-duration="1000" />
+      <div class="row gx-0 text-start align-items-center">
+        <div class="col-md-6 app_methodology_cards" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+          <div class="row row-cols-3">
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/combine.svg" class="img-fluid mb-5">
+                <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
+                    month</span> TTM sales.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/graph.svg" class="img-fluid mb-5">
+                <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index.</span></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/resize.svg" class="img-fluid mb-5">
+                <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear"
           data-aos-duration="1000">
-          <h4 class="app_home_section_title mt-4 mb-5 blue-text">Index Methodology</h4>
-          <p class="app_home_section_caption w-75 mb-0">
+          <h4 class="app_home_section_title mb-5 blue-text">Index Methodology</h4>
+          <p class="app_home_section_caption mb-0">
             <span class="d-block">Jocata Sumpoorn is a 'relative</span>
             <span class="d-block">amplitude adjusted diffusion index'</span>
             <span class="d-block">generated using monthly GST sales</span>
@@ -260,13 +279,11 @@
       </div>
     </div>
   </main>
-  <footer class="app_footer">
-    <div class="container d-flex justify-content-between align-items-center">
-      <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
-      <ul class="list-group list-group-horizontal">
+  <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+    <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+    <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
-      </ul>
-    </div>
+    </ul>
   </footer>
 
 
@@ -309,7 +326,7 @@
         <!-- Modal body -->
         <div class="modal-body">
           <div class="my-3 complete-form-text">Complete the form to subscribe.
-            <!-- <span class="required-text">* Required Fields</span> -->
+            <span class="required-text">* Required Fields</span>
           </div>
           <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -363,7 +380,7 @@
               <div class="d-flex justify-content-center align-items-center mt-20">
                 <input type="checkbox" id="agreeCheckbox">
                 <label for="agreeCheckbox" class="terms-label ps-2">
-                  By submitting this request, I agree with the Jocata's
+                  By submitting this request, I agree with the Sumpoorn
                     <a class="custom-link" href="tou.html">Terms of use.</a>
                 </label>
               </div>

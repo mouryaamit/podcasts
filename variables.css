@@ -2,7 +2,8 @@
   /* Color Codes */
   --app-white: #fff;
   --app-black: #000;
-
+  --required-field-color: #932D2D;
+  
   /* Font Sizes */
   --font-size-10px: 0.833rem;
   --font-size-11px: 0.917rem;

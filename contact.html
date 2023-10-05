@@ -57,22 +57,33 @@
     <main class="app-contact">
         <div class="row gx-0 justify-content-center app-contact-block-margin">
             <div class="col-md-8">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5">
                         <div class="app_tou_content">
-                            <br><br><br>
                             <h4 class="app_tou_content_main_title mb-4">Contact</h4>
                             <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">Jocata</h6>
-                            <p>Roxana Fortune Complex, 2nd Floor, Road No. 12, Banjara Hills, Hyderabad,
-                                Telangana - 500034<br /><br />
-                                <a href="https://jocata.com/" target="_blank" class="text-underline-with-cursor">www.jocata.com</a>
+                            <p>
+                                <span class="d-block">Roxana Fortune Complex, 2nd</span>
+                                <span class="d-block">Floor, Road No. 12, Banjara Hills,</span>
+                                <span class="d-block">Hyderabad, Telangana - 500034</span>
                             </p>
-                            <br><br>
+                            <p>
+                                <a href="https://jocata.com/" target="_blank"
+                                    class="d-block mb-2 text-underline-with-cursor">www.jocata.com</a>
+                                <span>Email: </span><a href="mailto:sumpoorn@jocata.com"
+                                    class="text-underline-with-cursor">sumpoorn@jocata.com</a>
+                            </p>
+                            <br>
                             <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">SIDBI</h6>
 
-                            <p>Head Office - SIDBI Tower, 15, Ashok Marg, Lucknow, Uttar Pradesh -
-                                226001<br /><br />
-                                <a href="https://www.sidbi.in/en" target="_blank" class="text-underline-with-cursor">www.sidbi.in</a>
+                            <p>
+                                <span class="d-block">Head Office - SIDBI Tower, 15,</span>
+                                <span class="d-block">Ashok Marg, Lucknow, Uttar</span>
+                                <span class="d-block">Pradesh - 226001</span>
+                            </p>
+                            <p>
+                                <a href="https://www.sidbi.in/en" target="_blank"
+                                    class="text-underline-with-cursor">www.sidbi.in</a>
                             </p>
                         </div>
                     </div>
@@ -94,7 +105,7 @@
                                 </div>
 
                                 <div class="row">
-                                    
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Company *">
@@ -123,23 +134,23 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            
+
                                             <select class="form-control">
                                                 <option>Message Type*</option>
                                                 <option>Queries</option>
                                                 <option>Feedback on the Index</option>
                                                 <option>Index Commentary for a Particular Month</option>
                                                 <option>Partnership Opportunity</option>
-                                              </select>
-                                              <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust">
+                                            </select>
+                                            <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust">
                                         </div>
                                     </div>
-                                    </div>
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Type your Message*</label>
+                                            <label class="mb-2">Type your Message*</label>
                                             <textarea class="form-control feedback"></textarea>
                                         </div>
                                     </div>
@@ -149,13 +160,13 @@
                                     <div class="col-md-6">
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="sm-primary-button width-100" disabled id="contactSubmitBtn" data-bs-toggle="modal"
-                                            data-bs-target="#successModal">Submit</button>
+                                        <button class="sm-primary-button width-100" disabled id="contactSubmitBtn"
+                                            data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
 
                                         <div class="d-flex justify-content-center mt-20">
                                             <input type="checkbox" id="agreeCheckbox">
                                             <label for="agreeCheckbox" class="terms-label ps-2">
-                                                By submitting this request, I agree with the Jocata's
+                                                By submitting this request, I agree with the Sumpoorn
                                                 <a class="custom-link" href="tou.html">Terms of use.</a>
                                             </label>
                                         </div>
@@ -190,23 +201,14 @@
                         Someone from our team will contact you regarding the demo.
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-
-
-
-
-
-    <footer class="app_footer">
-        <div class="container d-flex justify-content-between align-items-center">
-            <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
-            </ul>
-        </div>
+    <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+        <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
+        </ul>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -220,16 +222,16 @@
     <script src="custom.js"></script>
 
     <script>
-        
-let contactCheckbox = document.getElementById("agreeCheckbox");
-let submitBtn=document.getElementById("contactSubmitBtn");
-contactCheckbox.addEventListener( "change", () => {
-   if ( contactCheckbox.checked ) {
-    submitBtn.disabled=false;
-   } else {
-    submitBtn.disabled=true;
-   }
-});
+
+        let contactCheckbox = document.getElementById("agreeCheckbox");
+        let submitBtn = document.getElementById("contactSubmitBtn");
+        contactCheckbox.addEventListener("change", () => {
+            if (contactCheckbox.checked) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        });
     </script>
 </body>
 
