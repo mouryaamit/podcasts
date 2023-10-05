@@ -40,7 +40,7 @@ const stateCityData = {
       "cities": ["Raipur", "Durg", "Rajnandgaon", "Bilaspur", "Janjgir Champa", "Korba", "Raigarh", "Mahasamund", "Dhamtari", "Jashpur", "Balod", "Bemetara", "Kabirdham", "Mungeli", "Baloda Bazar", "Balodabazar Bhatapara", "Bastar", "Kanker", "Kondagaon", "Korea", "Surguja"]
     },
     {
-      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "name": "Dadra and Nagar Haveli<br/>and Daman and Diu",
       "cities": ["Dadra And Nagar Haveli", "Daman", "Dadra & Nagar Haveli"]
     },
     {
@@ -164,7 +164,7 @@ function populateStatesAndCities(statesData) {
 
     const stateName = document.createElement('span');
     stateName.classList.add('state-name');
-    stateName.textContent = state.name;
+    stateName.innerHTML = state.name;
 
     const chevronIcon = document.createElement('img');
     chevronIcon.classList.add('toggle-icon');
@@ -172,7 +172,7 @@ function populateStatesAndCities(statesData) {
     chevronIcon.src = 'assets/icons/expand_more.svg';
     stateName.appendChild(chevronIcon);
 
-    stateName.addEventListener('click', () => toggleCities(stateName, chevronIcon));
+    stateItem.addEventListener('click', () => toggleCities(stateName, chevronIcon));
 
     const cityDropdown = document.createElement('ul');
     cityDropdown.classList.add('city-dropdown');
