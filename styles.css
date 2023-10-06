@@ -422,10 +422,10 @@ a.app_home_section_caption:hover {
 
 .arrow_down:hover {
   transform: translateY(30px);
-  -webkit-transition: transform 500ms;
-  -moz-transition: transform 500ms;
-  -o-transition: transform 500ms;
-  transition: transform 500ms;
+  -webkit-transition: transform linear 1000ms;
+  -moz-transition: transform linear 1000ms;
+  -o-transition: transform linear 1000ms;
+  transition: transform linear 1000ms;
 }
 
 .app_roadmap_chart_con {
@@ -737,10 +737,6 @@ a.app_home_section_caption:hover {
 /* Methodology Styles End Here */
 
 /* Index Styles Start Here */
-/* .app_index {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-} */
-
 .app_index_chart_con .nav-pills .nav-link {
   color: #717171;
   font: 400 var(--font-size-16px) "Poppins", sans-serif;
@@ -1192,6 +1188,10 @@ a.app_home_section_caption:hover {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
+}
+
+.form-group select.form-control option {
+  
 }
 
 .sm-primary-button {
