@@ -290,7 +290,7 @@ d3.json(url,
                 } else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                     return "0.5em";
                 } else if(d == 0.52 || d == 0.54) {
-                    return "5.5em";
+                    return "6.6em";
                 }
                 return '';
             }
@@ -522,8 +522,6 @@ d3.json(url,
                     }
                 });
             }
-            addFlags();
-            d3.selectAll('.flags_text').call(wrap);
 
             function addSelectionYaxis() {
                 y_text.selectAll(".tick")._parents.forEach(function (d_child, i) {
@@ -1093,7 +1091,7 @@ d3.json(url,
                 svg_c.append("path")
                     .datum(graphData)
                     .attr("fill", "none")
-                    .attr("stroke", "#69b3a2")
+                    .attr("stroke", "#2FB36B")
                     .attr("stroke-width", 1)
                     .attr("d", d3.line()
                         .x(d => x1(parseDate(d.category)))
@@ -1107,7 +1105,7 @@ d3.json(url,
                     .attr("cx", d => x1(parseDate(d.category)))
                     .attr("cy", d => y1(d.value))
                     .attr("r", 2)
-                    .attr("fill", "#69b3a2")
+                    .attr("fill", "#2FB36B")
                     ;
             }
 
@@ -1193,7 +1191,7 @@ d3.json(url,
 
             function addArrowsAfterYaxis() {
                 svg.append("g")
-                    .attr("transform", `translate(${width + 193}, ${height-294})`)
+                    .attr("transform", `translate(${width + 195}, ${height-294})`)
                     .append("text")
                     .attr("fill", "#759B67")
                     .attr("font-size", "14px")
@@ -1201,7 +1199,7 @@ d3.json(url,
                     .style("transform", "rotate(-90deg)")
 
                 svg.append("g")
-                    .attr("transform", `translate(${width + 193}, ${height-20})`)
+                    .attr("transform", `translate(${width + 195}, ${height-20})`)
                     .append("text")
                     .attr("fill", "#AC5D5D")
                     .attr("font-size", "14px")
@@ -1239,8 +1237,8 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 190)
-                    .attr("x2", width + 190)
+                    .attr("x1", width + 192)
+                    .attr("x2", width + 192)
                     .attr("y1", 135)
                     .attr("y2", 100)
                     .style("opacity", 0.5)
@@ -1249,8 +1247,8 @@ d3.json(url,
                     .attr("marker-end", "url(#expansionArrow)");
 
                 svg.append("line")
-                    .attr("x1", width + 190)
-                    .attr("x2", width + 190)
+                    .attr("x1", width + 192)
+                    .attr("x2", width + 192)
                     .attr("y1", 220)
                     .attr("y2", 260)
                     .style("opacity", 0.5)
@@ -1273,8 +1271,8 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 100)
-                    .attr("x2", width + 90)
+                    .attr("x1", width + 120)
+                    .attr("x2", width + 110)
                     .attr("y1", 167)
                     .attr("y2", 177)
                     .style("opacity", 0.5)
@@ -1282,8 +1280,8 @@ d3.json(url,
                     .attr("stroke-width", 1)
 
                 svg.append("line")
-                    .attr("x1", width + 90)
-                    .attr("x2", width + 65)
+                    .attr("x1", width + 110)
+                    .attr("x2", width + 60)
                     .attr("y1", 177)
                     .attr("y2", 177)
                     .style("opacity", 0.5)
@@ -1306,8 +1304,8 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 100)
-                    .attr("x2", width + 70)
+                    .attr("x1", width + 110)
+                    .attr("x2", width + 60)
                     .attr("y1", 185)
                     .attr("y2", 185)
                     .style("opacity", 0.5)
@@ -1316,6 +1314,9 @@ d3.json(url,
                     .attr("marker-end", "url(#yaxisMildArrow)")
             }
             addArrowsAfterYaxis();
+
+            addFlags();
+            d3.selectAll('.flags_text').call(wrap);
 
             const clickPoint = (event, d) => {
                 const mousePointer = d3.pointer(event);

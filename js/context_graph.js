@@ -334,7 +334,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                         return y1(d.value)
                                                     })
                                                     //.curve(d3.curveMonotoneY)
-                                                    .curve(d3.curveCatmullRom.alpha(0.9));
+                                                    .curve(d3.curveCatmullRom.alpha(0));
 
                                                 // Add the line 1
                                                 const path = svg.append("path")
@@ -342,7 +342,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     .attr("fill", "none")
                                                     .attr("stroke", "#2FB36B")
                                                     //.attr("stroke-width", 1)
-                                                    .style("stroke-width", "3")
+                                                    .style("stroke-width", "2.5")
                                                     .attr("d", line)
                                                     ;
 
@@ -595,7 +595,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                                 return x3(d3.timeParse("%m-%Y")(d.category))
                                                             })
                                                             .y(function (d) { return y2(d.value) })
-                                                            .curve(d3.curveCatmullRom.alpha(0.9))
+                                                            .curve(d3.curveCatmullRom.alpha(0))
                                                         );
                                                 }
                                                 function removeIIPLine() {
@@ -622,7 +622,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                                 return x3(d3.timeParse("%m-%Y")(d.category))
                                                             })
                                                             .y(function (d) { return y3(d.value) })
-                                                            .curve(d3.curveCatmullRom.alpha(0.9))
+                                                            .curve(d3.curveCatmullRom.alpha(0))
                                                         );
 
                                                 }
@@ -651,7 +651,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                                 return x3(d3.timeParse("%m-%Y")(d.category))
                                                             })
                                                             .y(function (d) { return y4(d.value) })
-                                                            .curve(d3.curveCatmullRom.alpha(0.9))
+                                                            .curve(d3.curveCatmullRom.alpha(0))
                                                         )
                                                         ;
 
