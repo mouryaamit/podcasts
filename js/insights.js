@@ -290,7 +290,7 @@ d3.json(url,
                 } else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                     return "0.5em";
                 } else if(d == 0.52 || d == 0.54) {
-                    return "6.6em";
+                    return "6.69em";
                 }
                 return '';
             }
