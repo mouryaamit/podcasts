@@ -20,6 +20,8 @@ d3.json(url,
             let prev_month_data;
             let next_month_data;
 
+            let tooltip, radiation, selectedPoint;
+
             // set the dimensions and margins of the graph
             const margin = {
                 top: 10,
@@ -241,18 +243,6 @@ d3.json(url,
                 .attr("class", function (d, i) { return `y-axis-titles y-axis-title_${i}`; })
                 ;
 
-            const tooltip = d3.select("#my_dataviz_insights")
-                .append("div")
-                .attr("class", "tooltip-area")
-                .style("opacity", 0)
-                ;
-
-            const radiation = d3.select("#my_dataviz_insights")
-                .append("div")
-                .attr("class", "animating_circle")
-                .style("opacity", 0)
-                ;
-
             function formatYaxisForText(d, fromWhere) {
                 if (d == 0.25) {
                     if(fromWhere == "info") {
@@ -398,7 +388,6 @@ d3.json(url,
                     .attr("stroke-width", "0.7")
                     ;
             }
-            addLinesForGraph();
 
             function addFlags() {
                 let flag1_values = getPointsOnCurve("03-2020", 0.37);
@@ -750,7 +739,8 @@ d3.json(url,
                             });
 
                         const tooltip_pointer = getPointsOnCurve(mydata[i].category, mydata[i].value);
-                        addTooltip(tooltip_pointer, mydata[i]);
+                        // To apply circles animation on last index
+                        addTooltip(tooltip_pointer, mydata[i], true);
                         d3.select(`.x_month_name_${i}`).classed("active", true);
                         // de highlight yaxis text
                         d3.selectAll(".y-axis-titles").classed("active", false);
@@ -777,8 +767,15 @@ d3.json(url,
 
                 const dataValue = mydata.filter((x) => x.category == date)[0];
                 const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
-                addTooltip(tooltip_pointer, dataValue);
-
+                const lastIndex = month_name.selectAll(".tick")._parents.length - 1;
+                const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
+                if(lastIndex == indexOfPoint) {
+                    // To apply circles animation on last index
+                    addTooltip(tooltip_pointer, dataValue, true);
+                } else {
+                    // Not to apply circles animation on other points on curve
+                    addTooltip(tooltip_pointer, dataValue, false);
+                }
                 svg.append('rect')
                     .attr('x', tooltip_pointer.x)
                     .attr('y', 0)
@@ -802,7 +799,29 @@ d3.json(url,
                 addCommentary(dataValue);
             }
 
-            function addTooltip(mousePointer, dataValue) {
+            function initializeTooltip() {
+                tooltip = d3.select("#my_dataviz_insights")
+                .append("div")
+                .attr("class", "tooltip-area")
+                .style("opacity", 0)
+                ;
+
+                selectedPoint = d3.select("#my_dataviz_insights")
+                    .append("div")
+                    .attr("class", "focus_circle")
+                    .style("opacity", 0)
+                    ;    
+
+                radiation = d3.select("#my_dataviz_insights")
+                    .append("div")
+                    .attr("class", "animating_circle")
+                    .style("opacity", 0)
+                    ;
+            }
+
+            initializeTooltip();
+
+            function addTooltip(mousePointer, dataValue, isLatestIdx) {
                 tooltip
                     .transition()
                     .duration(100)
@@ -819,14 +838,24 @@ d3.json(url,
                         return d;
                     })
                     .style("opacity", 0.9)
-                radiation
-                    .html("<span id=\"radiation\" class=\"animating_circle\">" +
-                        "<span class=\"circle_waves circle_one\"></span> " +
-                        "<span class=\"circle_waves circle_two\"></span> " +
-                        "<span class=\"circle_waves circle_three\"></span>" +
-                        "</span>")
-                    .style("left", (mousePointer.x - width - 225) + "px")
-                    .style("top", (mousePointer.y - 243) + "px");
+                ;
+                if(isLatestIdx) {
+                    radiation
+                        .html("<span id=\"radiation\" class=\"animating_circle\">" +
+                            "<span class=\"circle_waves circle_one\"></span> " +
+                            "<span class=\"circle_waves circle_two\"></span> " +
+                            "<span class=\"circle_waves circle_three\"></span>" +
+                            "</span>")
+                        .style("left", (mousePointer.x - width - 225) + "px")
+                        .style("top", (mousePointer.y - 243) + "px");
+                } else {
+                    radiation
+                        .html("<span id=\"radiation\" class=\"animating_circle\">" +
+                            "<span class=\"circle_waves circle_three\"></span>" +
+                            "</span>")
+                        .style("left", (mousePointer.x - width - 225) + "px")
+                        .style("top", (mousePointer.y - 243) + "px");
+                }
             }
             
             function checkSpecificPointOnYaxis(i) {
@@ -1315,6 +1344,8 @@ d3.json(url,
             }
             addArrowsAfterYaxis();
 
+            addLinesForGraph();
+            
             addFlags();
             d3.selectAll('.flags_text').call(wrap);
 
