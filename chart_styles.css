@@ -1,6 +1,6 @@
 /* Start of graph css */
 
-.insights_graph{
+.insights_graph {
     font-family: 'Inter';
     display: flex;
     justify-content: center;
@@ -26,8 +26,10 @@
     /* color: #2FB36B; */
 }
 
-.x_month_num .tick text, .x_month_name .tick text, 
-.x_month_year .tick text, .y_left_points .tick text, 
+.x_month_num .tick text,
+.x_month_name .tick text,
+.x_month_year .tick text,
+.y_left_points .tick text,
 .x_month_name_context .tick text {
     color: rgba(0, 0, 0, 0.3);
 }
@@ -106,11 +108,13 @@
     color: #830A0A !important;
 }
 
-#rect_xaxis, #rect_xaxis_sel {
+#rect_xaxis,
+#rect_xaxis_sel {
     fill: rgba(226, 226, 226, 0.5);
     /* fill: #E2E2E2;
     opacity: 0.5; */
 }
+
 #rect_def_yaxis {
     fill: #F9F9F9;
     /* fill: #E2E2E2;
@@ -126,7 +130,9 @@
     fill: #FFDADA;
     opacity: 1;
 }
-#my_dataviz_insights,#my_dataviz_context {
+
+#my_dataviz_insights,
+#my_dataviz_context {
     position: relative;
 }
 
@@ -144,7 +150,8 @@ div.tooltip-area {
     /* transition: left 0.5s ease 0s,top 0.5s ease 0s */
 }
 
-.animating_circle, .focus_circle {
+.animating_circle,
+.focus_circle {
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -158,7 +165,7 @@ div.tooltip-area {
     border-radius: 50%;
     position: absolute;
     right: 0;
-    
+
 }
 
 @keyframes circleOne {
@@ -220,7 +227,7 @@ div.tooltip-area {
 }
 
 #yaxisContentInfo {
-    font-size:12px;
+    font-size: 12px;
     text-align: left;
     padding: 10px 20px 10px 10px;
 }
@@ -311,12 +318,14 @@ div.context_line_checkboxes .checkbox_label {
     font-size: 14px;
 }
 
-.fontClass{
+.fontClass {
     font-family: "Inter";
     font-size: 16px;
 }
 
-.serviceBox:first-child { margin-left: 4% }
+.serviceBox:first-child {
+    margin-left: 4%
+}
 
 #my_dataviz_insights path.domain {
     /* for insights graph */
@@ -334,32 +343,34 @@ div.context_line_checkboxes .checkbox_label {
     /* stroke: #000000; */
 }
 
-.chart_desc{
-    display: inline-flex;
-    width: 1124px;
+.chart_desc {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1036px;
     padding: 12px var(--Landing-scroll-count, 0px);
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: var(--Landing-scroll-count, 0px);    
+    border-radius: var(--Landing-scroll-count, 0px);
 }
-.iipContent{
+
+.iipContent {
     display: flex;
-    width: 338px;
+    width: 370px;
     padding: var(--Landing-scroll-count, 0px);
-    align-items: flex-start;
     gap: var(--Overall-GVA-bar, 4px);
     flex-shrink: 0;
     border-radius: var(--Landing-scroll-count, 0px);
 }
+
 .pmiContent {
     display: flex;
-    width: 317px;
+    width: 345px;
     padding: var(--Landing-scroll-count, 0px);
     align-items: flex-start;
     gap: var(--Overall-GVA-bar, 4px);
     flex-shrink: 0;
     border-radius: var(--Landing-scroll-count, 0px);
 }
+
 .gvaContent {
     display: flex;
     padding: var(--Landing-scroll-count, 0px);
@@ -369,34 +380,41 @@ div.context_line_checkboxes .checkbox_label {
     border-radius: var(--Landing-scroll-count, 0px);
     margin-left: -20px;
 }
+
 .iipLegendText {
     color: var(--IIP, #2E8DFF);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 119.2%; /* 16.688px */
+    line-height: 119.2%;
+    /* 16.688px */
 }
+
 .pmiLegendText {
     color: var(--PMI, #E1861B);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 119.2%; /* 16.688px */
+    line-height: 119.2%;
+    /* 16.688px */
 }
+
 .gvaLegendText {
     color: var(--GOI, #5451FF);
-    text-align: right;
+    text-align: start;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 119.2%; /* 16.688px */
+    line-height: 119.2%;
+    /* 16.688px */
 
     width: 66px;
 }
-.iipLegendContent{
+
+.iipLegendContent {
     flex: 1 0 0;
     align-self: stretch;
     color: #ABABAB;
@@ -404,11 +422,13 @@ div.context_line_checkboxes .checkbox_label {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 119.2%; /* 16.688px */
+    line-height: 119.2%;
+    /* 16.688px */
 
     text-align: left;
 }
-.pmiLegendContent{
+
+.pmiLegendContent {
     flex: 1 0 0;
     align-self: stretch;
     color: #ABABAB;
@@ -416,25 +436,27 @@ div.context_line_checkboxes .checkbox_label {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 119.2%; /* 16.688px */
+    line-height: 119.2%;
+    /* 16.688px */
 
     text-align: left;
 }
+
 .gvaLegendContent {
-    /* flex: 1 0 0; */
     align-self: stretch;
     color: #ABABAB;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 119.2%; /* 16.688px */
-
-    width: 292px;
+    line-height: 119.2%;
+    width: 259px;
     text-align: left;
 }
+
 .disable_arrows {
     opacity: 0.7;
     pointer-events: none;
 }
+
 /* End of context graph css */

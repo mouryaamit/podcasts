@@ -101,7 +101,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     ;
 
                                                 const xAxis_year = d3.axisBottom(x2)
-                                                    .tickSize([30])
+                                                    .tickSize([35])
                                                     .ticks(width / 12)
                                                     .tickFormat(function (d, i) {
                                                         const monNum_fmt = d3.timeFormat('%m')(d);
@@ -121,7 +121,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     ;
 
                                                 const yAxis_left = d3.axisLeft(y1)
-                                                    .tickSize([-width - 19])
+                                                    .tickSize([-width - 21])
                                                     .tickValues(y_left_coordinates)
                                                     ;
 
@@ -222,8 +222,8 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     .text("Jocata Sumpoorn")
                                                     ;
 
-                                                var yAxisTickSpace = [width+18,width+45,width+70];
-                                                var yAxisTickNameSpace = [width+35,width+62,width+92];
+                                                var yAxisTickSpace = [width+45,width+70,width+100];
+                                                var yAxisTickNameSpace = [width+47,width+77,width+107];
                                                 var yAxis_right_for_iip_tick;
                                                 var yAxis_right_for_pmi_tick;
                                                 var yAxis_right_for_gva_tick;
@@ -370,16 +370,17 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                 function refreshYaxisTicks(tickName,tickWidth,yAxisTickNameSpace){
                                                     if(tickName == 'iip'){
                                                         yAxis_right_for_iip_tick = svg.append("g")
-                                                            .attr("stroke-width", "0.1")
+                                                            .attr("stroke-width", "0")
                                                             .attr("transform", `translate(`+tickWidth+`,0)`) //+20
                                                             .call(yAxis_right_for_iip)
                                                             .selectAll("text")
+                                                            .attr("text-anchor", "end")
                                                             .style("color", iipColorCode)
                                                             ;
                                                         
                                                         d3.select("#iipYaxisTxt").remove();
                                                         svg.append("text")
-                                                            .attr("x", -(height + 10))
+                                                            .attr("x", -(height + 12))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "iipYaxisTxt")
                                                             .style("text-anchor", "end")
@@ -393,12 +394,13 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                             .attr("transform", `translate(`+tickWidth+`,00)`) //+20
                                                             .call(yAxis_right_for_pmi)
                                                             .selectAll("text")
+                                                            .attr("text-anchor", "end")
                                                             .style("fill", pmiColorCode)
                                                             ;
                                                         
                                                         d3.select("#pmiYaxisTxt").remove();
                                                         svg.append("text").attr("opacity", "1")
-                                                            .attr("x", -(height + 10))
+                                                            .attr("x", -(height + 12))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "pmiYaxisTxt")
                                                             .style("text-anchor", "end")
@@ -413,12 +415,13 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                             .attr("transform", `translate(`+tickWidth+`,00)`) //+20
                                                             .call(yAxis_right_for_gva)
                                                             .selectAll("text")
+                                                            .attr("text-anchor", "end")
                                                             .style("fill", gvaColorCode)
                                                             ;
                                                         
                                                         d3.select("#gvaYaxisTxt").remove();
                                                         let gvaText = svg.append("text")
-                                                            .attr("x", -(height + 10))
+                                                            .attr("x", -(height + 12))
                                                             .attr("y", yAxisTickNameSpace)
                                                             .attr("id", "gvaYaxisTxt")
                                                             .style("text-anchor", "end")
@@ -541,7 +544,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                             svg.append('rect')
                                                                 .attr('x', width)
                                                                 .attr('y', 0)
-                                                                .attr('width', 19)
+                                                                .attr('width', 21)
                                                                 .attr('height', height+40)
                                                                 .attr("id", "rect_xaxis_context")
                                                                 .attr('stroke', 'black')
@@ -709,11 +712,11 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                         .attr("stroke-width", "1")
                                                         .attr("stroke-dasharray", "2")
                                                         ;
-                                                    const year_6 = svg.append("g"); //2019
+                                                    const year_6 = svg.append("g"); //2023
                                                     year_6.append('line')
-                                                        .attr('x1', width + 19)
+                                                        .attr('x1', width + 21)
                                                         .attr('y1', 0)
-                                                        .attr('x2', width + 19)
+                                                        .attr('x2', width + 21)
                                                         .attr('y2', height + 58)
                                                         .attr('stroke', '#E1E1E1')
                                                         .attr("stroke-width", "1")

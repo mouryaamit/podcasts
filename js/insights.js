@@ -214,7 +214,7 @@ d3.json(url,
                             self.text(''); // clear it out
                             self.append("tspan") // insert two tspans
                                 .attr("fill", "currentColor")
-                                .attr("x", "0.5em") 
+                                .attr("x", "0.75em") 
                                 .attr("y", function (d, i) {
                                     if (s[1] == "Contraction") return "3em"; 
                                     else return "0.2em"; 
@@ -223,7 +223,7 @@ d3.json(url,
                                 .text(s[0]);
                             self.append("tspan")
                                 .attr("fill", "currentColor")
-                                .attr("x", "0.5em") 
+                                .attr("x", "0.75em") 
                                 .attr("y", function (d, i) {
                                     if (s[1] == "Contraction") return "4em"; 
                                     else return "1.2em"; 
@@ -275,11 +275,13 @@ d3.json(url,
             }
 
             function formatYaxisForXvalue(d, i) {
-                if(d == 0.25 || d == 1.00) {
-                    return "0.5em";
-                } else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
-                    return "0.5em";
-                } else if(d == 0.52 || d == 0.54) {
+                if(d == 0.25 || d == 1.00 || d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
+                    return "1em";
+                } 
+                // else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
+                //     return "0.8em";
+                // } 
+                else if(d == 0.52 || d == 0.54) {
                     return "6.69em";
                 }
                 return '';
@@ -549,7 +551,7 @@ d3.json(url,
                 svg.append('rect')
                     .attr('x', 0)
                     .attr('y', handyValues.y)
-                    .attr('width', width + 115)
+                    .attr('width', width + 119)
                     .attr('height', handyValues.h)
                     .attr("id", "rect_yaxis")
                     .attr("class", function () { // color change for different indices
@@ -628,7 +630,7 @@ d3.json(url,
 
                 let handyValues_line = getYaxisValuesForLines(d);
                 svg.append("line")
-                    .attr("x1", width+27)
+                    .attr("x1", width+35)
                     .attr("x2", handyValues_line.x2)
                     .attr("y1", handyValues_line.y1)
                     .attr("y2", handyValues_line.y1)
@@ -695,13 +697,13 @@ d3.json(url,
                         hAndyValues.x2 = width+112;
                     } else if (d == 0.50) {
                         hAndyValues.y1 = 187.5;
-                        hAndyValues.x2 = width+62;
+                        hAndyValues.x2 = width+70;
                     } else if (d == 0.52) {
                         hAndyValues.y1 = 180.5;
-                        hAndyValues.x2 = width+62;
+                        hAndyValues.x2 = width+70;
                     } else if (d == 0.54) {
                         hAndyValues.y1 = 173;
-                        hAndyValues.x2 = width+62;
+                        hAndyValues.x2 = width+70;
                     } else if (d == 0.60) {
                         hAndyValues.y1 = 150.5;
                         hAndyValues.x2 = width+112;
