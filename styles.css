@@ -544,17 +544,32 @@ a.app_home_section_caption:hover {
   background: var(--app-white);
 }
 
-.app_methodology_tabs .nav-pills .nav-link {
+.app_methodology_tabs .nav-tabs {
+  width: 85%;
+  margin: 1.5rem auto 3rem;
+  border-color: #4a4a4a;
+}
+
+.app_methodology_tabs .nav-tabs .nav-link {
   color: #4a4a4a;
   font: 400 var(--font-size-18px) "Poppins", sans-serif;
   text-align: left;
-  line-height: 120%;
+  /* line-height: 100%; */
+}
+
+.app_methodology_tabs .nav-tabs .nav-link span {
   margin-left: 1rem;
 }
 
-.app_methodology_tabs .nav-pills .nav-link.active {
-  background-color: transparent;
+.app_methodology_tabs .nav-tabs .nav-link.active {
+  border-color: #4a4a4a #4a4a4a #fff;
   font-weight: 700;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.app_methodology_tabs .nav-tabs .nav-link:not(.active) {
+  border-color: transparent;
 }
 
 .app_methodology_tbl_section {

@@ -66,44 +66,52 @@
     </div>
     <div class="app_methodology_tabs">
       <div class="row gx-0 justify-content-center">
-        <div class="col-md-10 mt-3 mb-5">
-          <ul class="nav nav-pills justify-content-evenly p-2 mb-5" id="pills-tab" role="tablist">
-            <li class="nav-item d-flex" role="presentation" id="geoListItem">
-              <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" id="activeGeoIcon" style="display: block;" />
-              <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" id="inactiveGeoIcon" style="display: none;" />
-              <button class="nav-link p-0 active" id="pills-geographic-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-geographic" type="button" role="tab" aria-controls="pills-geographic"
-                aria-selected="true" onclick="toggleIcons('geo')">Geographic<br />Distribution</button>
+        <div class="col-md-10">
+          <ul class="nav nav-tabs justify-content-evenly" id="methodology-tab" role="tablist">
+            <li class="nav-item" role="presentation" id="geoListItem">
+              <button class="nav-link d-flex align-items-center active" id="geographic-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
+                aria-selected="true" onclick="toggleIcons('geo')">
+                <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" id="activeGeoIcon" style="display: block;" />
+                <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" id="inactiveGeoIcon" style="display: none;" />
+                <span>Geographic<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="turnoverListItem">
-              <img src="assets/icons/active-turnover.svg" alt="Active Turnover Icon" id="activeTurnoverIcon" style="display: none;" />
-              <img src="assets/icons/inactive-turnover.svg" alt="Inactive Turnover Icon" id="inactiveTurnoverIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-turnover-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-turnover" type="button" role="tab" aria-controls="pills-turnover"
-                aria-selected="false" onclick="toggleIcons('turnover')">Turnover<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="turnoverListItem">
+              <button class="nav-link d-flex align-items-center" id="turnover-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
+                aria-selected="false" onclick="toggleIcons('turnover')">
+                <img src="assets/icons/active-turnover.svg" alt="Active Turnover Icon" id="activeTurnoverIcon" style="display: none;" />
+                <img src="assets/icons/inactive-turnover.svg" alt="Inactive Turnover Icon" id="inactiveTurnoverIcon" style="display: block;" />
+                <span>Turnover<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="sectorListItem">
-              <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" id="activeSectorIcon" style="display: none;" />
-              <img src="assets/icons/inactive-sector.svg" alt="Inactive Sector Icon" id="inactiveSectorIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-sector-tab" data-bs-toggle="pill" data-bs-target="#pills-sector"
-                type="button" role="tab" aria-controls="pills-sector" aria-selected="false"
-                onclick="toggleIcons('sector')">Sector<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="sectorListItem">
+              <button class="nav-link d-flex align-items-center" id="sector-tab" data-bs-toggle="tab" data-bs-target="#tab-sector"
+                type="button" role="tab" aria-controls="tab-sector" aria-selected="false"
+                onclick="toggleIcons('sector')">
+                <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" id="activeSectorIcon" style="display: none;" />
+                <img src="assets/icons/inactive-sector.svg" alt="Inactive Sector Icon" id="inactiveSectorIcon" style="display: block;" />
+                <span>Sector<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="activityListItem">
-              <img src="assets/icons/active-activity.svg" alt="Active Activity Icon" id="activeActivityIcon" style="display: none;" />
-              <img src="assets/icons/inactive-activity.svg" alt="Inactive Activity Icon" id="inactiveActivityIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-activity-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-activity" type="button" role="tab" aria-controls="pills-activity"
-                aria-selected="false" onclick="toggleIcons('activity')">Activity<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="activityListItem">
+              <button class="nav-link d-flex align-items-center" id="activity-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
+                aria-selected="false" onclick="toggleIcons('activity')">
+                <img src="assets/icons/active-activity.svg" alt="Active Activity Icon" id="activeActivityIcon" style="display: none;" />
+                <img src="assets/icons/inactive-activity.svg" alt="Inactive Activity Icon" id="inactiveActivityIcon" style="display: block;" />  
+                <span>Activity<br />Distribution</span>
+              </button>
             </li>
 
           </ul>
-          <div class="tab-content p-2" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-geographic" role="tabpanel"
-              aria-labelledby="pills-geographic-tab">
+          <div class="tab-content p-2" id="methodology-tabContent">
+            <div class="tab-pane fade show active" id="tab-geographic" role="tabpanel"
+              aria-labelledby="geographic-tab">
               <h5 class="section_title mb-4">Geographic Distribution of Sumpoorn MSMEs</h5>
               <p class="app_methodology_caption pb-5">The sample is well-distributed across India ensuring
                 representativeness
@@ -122,7 +130,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-turnover" role="tabpanel" aria-labelledby="pills-turnover-tab">
+            <div class="tab-pane fade" id="tab-turnover" role="tabpanel" aria-labelledby="turnover-tab">
               <h5 class="section_title mb-4">Turnover Distribution of Sumpoorn MSMEs</h5>
               <p class="app_methodology_caption pb-5">
                 <span class="d-block">The sample is well-distributed as per turnover ensuring</span>
@@ -171,7 +179,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-sector" role="tabpanel" aria-labelledby="pills-sector-tab">
+            <div class="tab-pane fade" id="tab-sector" role="tabpanel" aria-labelledby="sector-tab">
               <h5 class="section_title mb-4">Sector-wise Distribution by Value <br />(Top
                 7 HSNs)</h5>
               <p class="app_methodology_caption pb-5">
@@ -188,7 +196,7 @@
                   level) in a month is > 50% of sum of TTM sales of all HSNs by that GSTIN for the same month. </p>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-activity" role="tabpanel" aria-labelledby="pills-activity-tab">
+            <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
               <h5 class="section_title mb-4">Activity Distribution (Non-Services and Services)
               </h5>
               <p class="app_methodology_caption pb-5">
