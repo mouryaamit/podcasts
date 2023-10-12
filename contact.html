@@ -27,7 +27,7 @@
     <header class="container-fluid d-flex justify-content-between align-items-center fixed-top app_header">
         <div class="app_header_left">
             <a href="index.html">
-                <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
+                <img src="assets/images/logo-main.svg" class="img-fluid app_logo" alt="Jocata Sumpoorn Logo" />
             </a>
         </div>
         <div class="d-flex flex-column align-self-end app_header_right">
@@ -57,22 +57,33 @@
     <main class="app-contact">
         <div class="row gx-0 justify-content-center app-contact-block-margin">
             <div class="col-md-8">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-5">
                         <div class="app_tou_content">
-                            <br><br><br>
                             <h4 class="app_tou_content_main_title mb-4">Contact</h4>
                             <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">Jocata</h6>
-                            <p>Roxana Fortune Complex, 2nd Floor, Road No. 12, Banjara Hills, Hyderabad,
-                                Telangana - 500034<br /><br />
-                                <a href="https://jocata.com/" target="_blank" class="text-underline-with-cursor">www.jocata.com</a>
+                            <p>
+                                <span class="d-block">Roxana Fortune Complex, 2nd</span>
+                                <span class="d-block">Floor, Road No. 12, Banjara Hills,</span>
+                                <span class="d-block">Hyderabad, Telangana - 500034</span>
                             </p>
-                            <br><br>
+                            <p>
+                                <a href="mailto:sumpoorn@jocata.com"
+                                    class="d-block mb-2 text-underline-with-cursor">sumpoorn@jocata.com</a>
+                                <a href="https://jocata.com" target="_blank"
+                                    class="text-underline-with-cursor">www.jocata.com</a>
+                            </p>
+                            <br>
                             <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">SIDBI</h6>
 
-                            <p>Head Office - SIDBI Tower, 15, Ashok Marg, Lucknow, Uttar Pradesh -
-                                226001<br /><br />
-                                <a href="https://www.sidbi.in/en" target="_blank" class="text-underline-with-cursor">www.sidbi.in</a>
+                            <p>
+                                <span class="d-block">Head Office - SIDBI Tower, 15,</span>
+                                <span class="d-block">Ashok Marg, Lucknow, Uttar</span>
+                                <span class="d-block">Pradesh - 226001</span>
+                            </p>
+                            <p>
+                                <a href="https://www.sidbi.in" target="_blank"
+                                    class="text-underline-with-cursor">www.sidbi.in</a>
                             </p>
                         </div>
                     </div>
@@ -83,64 +94,75 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *">
+                                            <input type="text" class="form-control" id="fistName" name="First Name" placeholder="First Name *" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Company *">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Job Title *">
+                                            <input type="text" class="form-control" id="lastName" name="Last Name" placeholder="Last Name *" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Business Email *">
+                                            <input type="text" class="form-control" id="companyName" name="Company" placeholder="Company *" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Contact Number">
+                                            <input type="text" class="form-control" id="jobTitle" name="Job Title" placeholder="Job Title *" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="email" name="Email" placeholder="Business Email *" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="contactNumber" name="Contact Number" placeholder="Contact Number">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            
-                                            <select class="form-control">
-                                                <option>Message Type*</option>
+                                        <div class="form-group w-100">
+                                            <select class="form-control" id="messageType" name="Message Type">
+                                                <option hidden>Message Type*</option>
                                                 <option>Queries</option>
                                                 <option>Feedback on the Index</option>
                                                 <option>Index Commentary for a Particular Month</option>
                                                 <option>Partnership Opportunity</option>
-                                              </select>
-                                              <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust">
+                                            </select>
+                                            <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust" alt="Chevron Down">
                                         </div>
                                     </div>
-                                    </div>
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Type your Message*</label>
-                                            <textarea class="form-control feedback"></textarea>
+                                            <label class="mb-2" for="messageArea">Type your Message*</label>
+                                            <textarea class="form-control feedback" id="messageArea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex mb-3">
+                                            <input type="checkbox" id="agreeCheckbox">
+                                            <label for="agreeCheckbox" class="terms-label ps-2">
+                                                By submitting this request, I agree with the Jocata
+                                                <a class="custom-link" href="tou.html">Terms of Use.</a>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -149,16 +171,8 @@
                                     <div class="col-md-6">
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="sm-primary-button width-100" disabled id="contactSubmitBtn" data-bs-toggle="modal"
-                                            data-bs-target="#successModal">Submit</button>
-
-                                        <div class="d-flex justify-content-center mt-20">
-                                            <input type="checkbox" id="agreeCheckbox">
-                                            <label for="agreeCheckbox" class="terms-label ps-2">
-                                                By submitting this request, I agree with the Jocata's
-                                                <a class="custom-link" href="tou.html">Terms of use.</a>
-                                            </label>
-                                        </div>
+                                        <button class="sm-primary-button width-100" disabled id="contactSubmitBtn"
+                                            data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -190,23 +204,14 @@
                         Someone from our team will contact you regarding the demo.
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-
-
-
-
-
-    <footer class="app_footer">
-        <div class="container d-flex justify-content-between align-items-center">
-            <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
-            </ul>
-        </div>
+    <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+        <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
+        </ul>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -220,16 +225,16 @@
     <script src="custom.js"></script>
 
     <script>
-        
-let contactCheckbox = document.getElementById("agreeCheckbox");
-let submitBtn=document.getElementById("contactSubmitBtn");
-contactCheckbox.addEventListener( "change", () => {
-   if ( contactCheckbox.checked ) {
-    submitBtn.disabled=false;
-   } else {
-    submitBtn.disabled=true;
-   }
-});
+
+        let contactCheckbox = document.getElementById("agreeCheckbox");
+        let submitBtn = document.getElementById("contactSubmitBtn");
+        contactCheckbox.addEventListener("change", () => {
+            if (contactCheckbox.checked) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        });
     </script>
 </body>
 

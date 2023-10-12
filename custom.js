@@ -40,7 +40,7 @@ const stateCityData = {
       "cities": ["Raipur", "Durg", "Rajnandgaon", "Bilaspur", "Janjgir Champa", "Korba", "Raigarh", "Mahasamund", "Dhamtari", "Jashpur", "Balod", "Bemetara", "Kabirdham", "Mungeli", "Baloda Bazar", "Balodabazar Bhatapara", "Bastar", "Kanker", "Kondagaon", "Korea", "Surguja"]
     },
     {
-      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "name": "Dadra and Nagar Haveli<br/>and Daman and Diu",
       "cities": ["Dadra And Nagar Haveli", "Daman", "Dadra & Nagar Haveli"]
     },
     {
@@ -159,12 +159,17 @@ function populateStatesAndCities(statesData) {
   const stateList = document.getElementById('stateList');
   // stateList.innerHTML = '';
 
+  if (!stateList) {
+    // console.log('stateList element not found. Aborting population.');
+    return;
+  }
+
   statesData.forEach((state) => {
     const stateItem = document.createElement('li');
 
     const stateName = document.createElement('span');
     stateName.classList.add('state-name');
-    stateName.textContent = state.name;
+    stateName.innerHTML = state.name;
 
     const chevronIcon = document.createElement('img');
     chevronIcon.classList.add('toggle-icon');
@@ -172,7 +177,7 @@ function populateStatesAndCities(statesData) {
     chevronIcon.src = 'assets/icons/expand_more.svg';
     stateName.appendChild(chevronIcon);
 
-    stateName.addEventListener('click', () => toggleCities(stateName, chevronIcon));
+    stateItem.addEventListener('click', () => toggleCities(stateName, chevronIcon));
 
     const cityDropdown = document.createElement('ul');
     cityDropdown.classList.add('city-dropdown');
@@ -209,18 +214,17 @@ initialize();
 const scrollableContent = document.getElementById('scrollableContent');
 const fixedImage = document.getElementById('fixedImage');
 
-scrollableContent.addEventListener('scroll', function (event) {
-  if (scrollableContent.scrollHeight - scrollableContent.scrollTop === scrollableContent.clientHeight) {
-    // User has scrolled to the bottom of the content
-    // Allow the body to scroll
-    document.body.style.overflow = 'auto';
-  } else {
-    // User is scrolling within the content
-    // Hide the body scroll
-    document.body.style.overflow = 'hidden';
-  }
-});
-
+if (scrollableContent && fixedImage) {
+  scrollableContent.addEventListener('scroll', function (event) {
+    if (scrollableContent.scrollHeight - scrollableContent.scrollTop === scrollableContent.clientHeight) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  });
+} else {
+  // console.log('One or both of the elements with the specified IDs were not found.');
+}
 
 function toggleIcons(type) {
   // Reset all icons to inactive

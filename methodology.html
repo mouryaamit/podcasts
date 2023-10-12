@@ -26,7 +26,7 @@
   <header class="container-fluid d-flex justify-content-between align-items-center fixed-top app_header">
     <div class="app_header_left">
       <a href="index.html">
-        <img src="assets/images/logo-main.svg" class="img-fluid app_logo" />
+        <img src="assets/images/logo-main.svg" class="img-fluid app_logo" alt="Jocata Sumpoorn Logo" />
       </a>
     </div>
     <div class="d-flex flex-column align-self-end app_header_right">
@@ -66,50 +66,59 @@
     </div>
     <div class="app_methodology_tabs">
       <div class="row gx-0 justify-content-center">
-        <div class="col-md-10 mt-3 mb-5">
-          <ul class="nav nav-pills justify-content-evenly p-2 mb-5" id="pills-tab" role="tablist">
-            <li class="nav-item d-flex" role="presentation" id="geoListItem">
-              <img src="assets/icons/active-geo.svg" id="activeGeoIcon" style="display: block;" />
-              <img src="assets/icons/inactive-geo.svg" id="inactiveGeoIcon" style="display: none;" />
-              <button class="nav-link p-0 active" id="pills-geographic-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-geographic" type="button" role="tab" aria-controls="pills-geographic"
-                aria-selected="true" onclick="toggleIcons('geo')">Geographic<br />Distribution</button>
+        <div class="col-md-10">
+          <ul class="nav nav-tabs justify-content-evenly" id="methodology-tab" role="tablist">
+            <li class="nav-item" role="presentation" id="geoListItem">
+              <button class="nav-link d-flex align-items-center active" id="geographic-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
+                aria-selected="true" onclick="toggleIcons('geo')">
+                <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" id="activeGeoIcon" style="display: block;" />
+                <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" id="inactiveGeoIcon" style="display: none;" />
+                <span>Geographic<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="turnoverListItem">
-              <img src="assets/icons/active-turnover.svg" id="activeTurnoverIcon" style="display: none;" />
-              <img src="assets/icons/inactive-turnover.svg" id="inactiveTurnoverIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-turnover-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-turnover" type="button" role="tab" aria-controls="pills-turnover"
-                aria-selected="false" onclick="toggleIcons('turnover')">Turnover<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="turnoverListItem">
+              <button class="nav-link d-flex align-items-center" id="turnover-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
+                aria-selected="false" onclick="toggleIcons('turnover')">
+                <img src="assets/icons/active-turnover.svg" alt="Active Turnover Icon" id="activeTurnoverIcon" style="display: none;" />
+                <img src="assets/icons/inactive-turnover.svg" alt="Inactive Turnover Icon" id="inactiveTurnoverIcon" style="display: block;" />
+                <span>Turnover<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="sectorListItem">
-              <img src="assets/icons/active-sector.svg" id="activeSectorIcon" style="display: none;" />
-              <img src="assets/icons/inactive-sector.svg" id="inactiveSectorIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-sector-tab" data-bs-toggle="pill" data-bs-target="#pills-sector"
-                type="button" role="tab" aria-controls="pills-sector" aria-selected="false"
-                onclick="toggleIcons('sector')">Sector<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="sectorListItem">
+              <button class="nav-link d-flex align-items-center" id="sector-tab" data-bs-toggle="tab" data-bs-target="#tab-sector"
+                type="button" role="tab" aria-controls="tab-sector" aria-selected="false"
+                onclick="toggleIcons('sector')">
+                <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" id="activeSectorIcon" style="display: none;" />
+                <img src="assets/icons/inactive-sector.svg" alt="Inactive Sector Icon" id="inactiveSectorIcon" style="display: block;" />
+                <span>Sector<br />Distribution</span>
+              </button>
             </li>
 
-            <li class="nav-item d-flex" role="presentation" id="activityListItem">
-              <img src="assets/icons/active-activity.svg" id="activeActivityIcon" style="display: none;" />
-              <img src="assets/icons/inactive-activity.svg" id="inactiveActivityIcon" style="display: block;" />
-              <button class="nav-link p-0" id="pills-activity-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-activity" type="button" role="tab" aria-controls="pills-activity"
-                aria-selected="false" onclick="toggleIcons('activity')">Activity<br />Distribution</button>
+            <li class="nav-item" role="presentation" id="activityListItem">
+              <button class="nav-link d-flex align-items-center" id="activity-tab" data-bs-toggle="tab"
+                data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
+                aria-selected="false" onclick="toggleIcons('activity')">
+                <img src="assets/icons/active-activity.svg" alt="Active Activity Icon" id="activeActivityIcon" style="display: none;" />
+                <img src="assets/icons/inactive-activity.svg" alt="Inactive Activity Icon" id="inactiveActivityIcon" style="display: block;" />  
+                <span>Activity<br />Distribution</span>
+              </button>
             </li>
 
           </ul>
-          <div class="tab-content p-2" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-geographic" role="tabpanel"
-              aria-labelledby="pills-geographic-tab">
+          <div class="tab-content p-2" id="methodology-tabContent">
+            <div class="tab-pane fade show active" id="tab-geographic" role="tabpanel"
+              aria-labelledby="geographic-tab">
               <h5 class="section_title mb-4">Geographic Distribution of Sumpoorn MSMEs</h5>
               <p class="app_methodology_caption pb-5">The sample is well-distributed across India ensuring
                 representativeness
                 of the Index.</p>
               <div class="row">
-                <div class="col-md-8"><img src="assets/images/geo-map.svg" class="img-fluid mb-4" id="fixedImage" />
+                <div class="col-md-8">
+                  <img src="assets/images/geo-map.svg" class="img-fluid mb-4" id="fixedImage" alt="Geographic Distribution Map" />
                 </div>
                 <div class="col-md-3 app_methodology_state_cities">
                   <h6>States & UTs</h6>
@@ -121,13 +130,13 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-turnover" role="tabpanel" aria-labelledby="pills-turnover-tab">
+            <div class="tab-pane fade" id="tab-turnover" role="tabpanel" aria-labelledby="turnover-tab">
               <h5 class="section_title mb-4">Turnover Distribution of Sumpoorn MSMEs</h5>
               <p class="app_methodology_caption pb-5">
                 <span class="d-block">The sample is well-distributed as per turnover ensuring</span>
                 <span class="d-block">representativeness and stability of the Index.</span>
               </p>
-              <img src="assets/images/turnover-graph.svg" class="img-fluid mb-4" />
+              <img src="assets/images/turnover-graph.svg" class="img-fluid mb-4" alt="Distribution by turnover size within MSME sample"/>
               <!-- <p class="chart_caption pb-4">Fig.- % Distribution by turnover size within MSME sample</p> -->
               <div class="app_roadmap_note col-md-10 mx-auto mb-5 px-0 py-3">
                 <div class="row gx-0 justify-content-between align-items-center">
@@ -170,7 +179,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-sector" role="tabpanel" aria-labelledby="pills-sector-tab">
+            <div class="tab-pane fade" id="tab-sector" role="tabpanel" aria-labelledby="sector-tab">
               <h5 class="section_title mb-4">Sector-wise Distribution by Value <br />(Top
                 7 HSNs)</h5>
               <p class="app_methodology_caption pb-5">
@@ -179,7 +188,7 @@
                 <span class="d-block">remaining largely stable over time ensuring Index representativeness and
                   stability.</span>
               </p>
-              <img src="assets/images/sector-graph.svg" class="img-fluid mb-4" />
+              <img src="assets/images/sector-graph.svg" class="img-fluid mb-4" alt="Distribution by value of top 7 HSNs within MSME sample" />
               <!-- <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p> -->
               <div class="app_roadmap_note col-md-10 mx-auto mb-5">
                 <p><span class="fw-600">Note: </span>A GSTIN is classified as belonging to an industry, if TTM sales of
@@ -187,14 +196,14 @@
                   level) in a month is > 50% of sum of TTM sales of all HSNs by that GSTIN for the same month. </p>
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-activity" role="tabpanel" aria-labelledby="pills-activity-tab">
+            <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
               <h5 class="section_title mb-4">Activity Distribution (Non-Services and Services)
               </h5>
               <p class="app_methodology_caption pb-5">
                 <span class="d-block">The split of GSTINs engaged in non-service (manufacturing + trading)</span>
                 <span class="d-block">and service activities are stable over time.</span>
               </p>
-              <img src="assets/images/activity-graph.svg" class="img-fluid mb-4" />
+              <img src="assets/images/activity-graph.svg" class="img-fluid mb-4" alt="Monthly proportion % of Non-services and Service GSTINs" />
               <!-- <p class="chart_caption pb-4">Fig.- Monthly proportion % of Non-services and Service GSTINs</p> -->
               <div class="app_roadmap_note col-md-10 mx-auto mb-5">
                 <p><span class="fw-600">Note: </span>Source data limitations (within consent-led GST returns data)
@@ -220,34 +229,34 @@
               <div class="row row-cols-5 gx-4">
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
-                    <img src="assets/icons/cart.svg" class="img-fluid mb-5">
+                    <img src="assets/icons/cart.svg" class="img-fluid mb-5" alt="Cart Icon">
                     <p>Using GST Returns calculate MSME <span class="fw-bold">TTM sales</span> for current and previous
                       month. </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
-                    <img src="assets/icons/gap.svg" class="img-fluid mb-5">
+                    <img src="assets/icons/gap.svg" class="img-fluid mb-5" alt="Gap Icon">
                     <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs and delta of amplitude of
                         sales</span> between them.</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
-                    <img src="assets/icons/combine.svg" class="img-fluid mb-5">
+                    <img src="assets/icons/combine.svg" class="img-fluid mb-5" alt="Combine Icon">
                     <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
                         month</span> TTM sales.</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
-                    <img src="assets/icons/graph.svg" class="img-fluid mb-5">
+                    <img src="assets/icons/graph.svg" class="img-fluid mb-5" alt="Graph Icon">
                     <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index.</span></p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="app_methodology_card_box h-100">
-                    <img src="assets/icons/resize.svg" class="img-fluid mb-5">
+                    <img src="assets/icons/resize.svg" class="img-fluid mb-5" alt="Resize Icon">
                     <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1.</p>
                   </div>
                 </div>
@@ -255,7 +264,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4 app_methodology_section_border"></div> -->
       </div>
     </div>
     <div class="app_consideration_section pt-5">
@@ -323,7 +331,7 @@
             <span class="d-block">contraction or expansion of economic activity of the sector.</span>
           </p>
           <div class="meth_index_gif_con col-md-5 mx-auto">
-            <img src="assets/images/meth-range-chart.gif" class="img-fluid" />
+            <img src="assets/images/meth-range-chart.gif" class="img-fluid" alt="Index Bin Ranges" />
           </div>
         </div>
       </div>
@@ -331,8 +339,8 @@
     <div class="app_methodology_index_frequency">
       <div class="row gx-0 justify-content-center">
         <div class="col-md-12">
-          <img src="assets/images/calender.svg" class="img-fluid" />
-          <h5 class="section_title mb-5 blue-text">Index publishing frequency</h5>
+          <img src="assets/images/calender.svg" class="img-fluid" alt="Index Publishing Frequency" />
+          <h5 class="section_title mb-5 blue-text">Index Publishing Frequency</h5>
           <p class="app_methodology_caption blue-text">
             <span class="d-block">The Index will be released monthly with only a four-week</span>
             <span class="d-block">reporting cycle after the reference month ends (the Index for</span>
@@ -342,13 +350,11 @@
       </div>
     </div>
   </main>
-  <footer class="app_footer">
-    <div class="container d-flex justify-content-between align-items-center">
-      <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
-      <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
-      </ul>
-    </div>
+  <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+    <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
+    </ul>
   </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
@@ -360,7 +366,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
   <!-- Custom SCripts -->
-  <script src="custom.js"></script>
+  <script src="custom.js" defer></script>
 </body>
 
 </html>
