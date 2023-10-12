@@ -980,6 +980,14 @@ d3.json(url,
                     d3.select(".mc_rating")
                         .html(`${indexValue}`)
                         ;
+
+                    const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
+                    if((mydata.length - 1) == indexOfPoint) {
+                        d3.select(".isLatestIdx").style("display", "inherit");
+                    } else {
+                        d3.select(".isLatestIdx").style("display", "none");
+                    }
+
                     d3.select(".mc_body")
                         .html(`${monthlyC.comment}`)
                         ;
