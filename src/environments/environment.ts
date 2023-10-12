@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  hodt: "http://192.168.0.104"
+  host: "/assets/json/"
 };
 
 /*
