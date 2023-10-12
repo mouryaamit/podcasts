@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { MethodologyComponent } from './methodology/methodology.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
+import { TouComponent } from './tou/tou.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },/*DO NOT chnage default root */
@@ -11,6 +14,9 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent},
   { path: 'methodology', component: MethodologyComponent},
   { path: 'roadmap', component: RoadmapComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'tou', component: TouComponent},
   { path: '**', redirectTo: 'home' }
 ];
 

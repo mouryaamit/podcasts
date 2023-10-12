@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { MethodologyComponent } from './methodology/methodology.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { TouComponent } from './tou/tou.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
     HomeComponent,
     IndexComponent,
     MethodologyComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    AboutComponent,
+    ContactComponent,
+    TouComponent
   ],
   imports: [
     BrowserModule,
