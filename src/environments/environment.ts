@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  graphUrl: "http://192.168.0.104/SumpoornJSON/"
+  hodt: "http://192.168.0.104"
 };
 
 /*

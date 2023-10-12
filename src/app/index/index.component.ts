@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import { environment } from 'src/environments/environment';
+import { GraphApiService } from '../services/graph-api.service';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -8,10 +9,15 @@ import { environment } from 'src/environments/environment';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private graphApiService: GraphApiService) { }
 
   ngOnInit(): void {
-    const url = environment.graphUrl+"sumpoorn_test_json1.json?date="+new Date();
+this.graphApiService.getSumpoornGraph().then((data)=>{
+  console.log("data",data);
+}, (error)=>{
+  console.log("error",error);
+  
+})
   }
 
 }

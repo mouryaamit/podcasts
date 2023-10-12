@@ -12,6 +12,7 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { TouComponent } from './tou/tou.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TouComponent } from './tou/tou.component';
     TouComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
