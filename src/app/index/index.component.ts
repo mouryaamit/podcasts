@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation, Inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { GraphApiService } from '../services/graph-api.service';
 import * as d3 from 'd3';
 import * as $ from 'jquery';
+// declare var $: any;
 
 @Component({
     selector: 'app-index',
     templateUrl: './index.component.html',
-    styleUrls: ['./index.component.scss']
+    styleUrls: ['./index.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class IndexComponent implements OnInit {
     sumpoornGraphData: any;
+    // @ViewChild('slide_prev') slide_prev: ElementRef;
+    // @ViewChild('slide_next') slide_next: ElementRef;
+    
     constructor(private graphApiService: GraphApiService) { }
 
     ngOnInit(): void {
@@ -105,7 +110,7 @@ export class IndexComponent implements OnInit {
                 const year_fmt = d3.timeFormat('%Y')(d);
                 if (monNum_fmt == '01') {
                     return year_fmt;
-                } else if (monNum_fmt == '10' && year_fmt == '2019') {
+                } else if (monNum_fmt == '10' && year_fmt == '2019') { // need to change into dynamic
                     return year_fmt;
                 }
             });
@@ -930,20 +935,16 @@ export class IndexComponent implements OnInit {
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
             const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
             const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
-            $('#slide_prev').removeClass("disable_arrows");
-            $('#slide_next').removeClass("disable_arrows");
+            (<HTMLElement>document.getElementById('#slide_prev')).classList.remove("disable_arrows");
+            (<HTMLElement>document.getElementById('#slide_next')).classList.remove("disable_arrows");
             if (!prevCommentaryData || (prevCommentaryData && !checkForPrevCommentary)) {
-                $('#slide_prev').addClass("disable_arrows");
+                (<HTMLElement>document.getElementById('#slide_prev')).classList.add("disable_arrows");
             } else if (!nextCommentaryData || (nextCommentaryData && !checkForNextCommentary)) {
-                $('#slide_next').addClass("disable_arrows");
+                (<HTMLElement>document.getElementById('#slide_next')).classList.add("disable_arrows");
             }
-            // else {
-            //     $('#slide_prev').classList.remove("disable_arrows");
-            //     $('#slide_next').classList.remove("disable_arrows");
-            // }
         }
 
-        $('#slide_prev').on('click', function () {
+        (<HTMLElement>document.getElementById('#slide_prev')).addEventListener('click', function () {
             const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
             const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
             if (prevCommentaryData && checkIfMonthlyCommentary) {
@@ -956,7 +957,7 @@ export class IndexComponent implements OnInit {
                 renderPointerOnLine(prevCommentaryData.category);
             }
         });
-        $('#slide_next').on('click', function () {
+        (<HTMLElement>document.getElementById('#slide_next')).addEventListener('click', function () {
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
             const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
             if (nextCommentaryData && checkIfMonthlyCommentary) {
