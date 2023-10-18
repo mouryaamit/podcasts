@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit() {
-    AOS.init();
+    AOS.init({
+      // disable: window.innerWidth < 768
+    });
   }
 }

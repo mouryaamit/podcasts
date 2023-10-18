@@ -626,6 +626,7 @@ a.app_home_section_caption:hover {
   height: 100vh;
   overflow-y: auto;
   position: relative;
+  margin-bottom: 5rem;
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: transparent transparent; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */

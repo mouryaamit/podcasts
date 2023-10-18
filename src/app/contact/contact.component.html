@@ -1,1 +1,136 @@
-<p>contact works!</p>
+<main class="app-contact">
+    <div class="row gx-0 justify-content-center app-contact-block-margin">
+        <div class="col-md-8">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="app_tou_content">
+                        <h4 class="app_tou_content_main_title mb-4">Contact</h4>
+                        <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">Jocata</h6>
+                        <p>
+                            <span class="d-block">Roxana Fortune Complex, 2nd</span>
+                            <span class="d-block">Floor, Road No. 12, Banjara Hills,</span>
+                            <span class="d-block">Hyderabad, Telangana - 500034</span>
+                        </p>
+                        <p>
+                            <a href="mailto:sumpoorn@jocata.com"
+                                class="d-block mb-2 text-underline-with-cursor">sumpoorn@jocata.com</a>
+                            <a href="https://jocata.com" target="_blank"
+                                class="text-underline-with-cursor">www.jocata.com</a>
+                        </p>
+                        <br>
+                        <h6 class="app_tou_content_sub_title my-5 app_contact_content_sub_title">SIDBI</h6>
+
+                        <p>
+                            <span class="d-block">Head Office - SIDBI Tower, 15,</span>
+                            <span class="d-block">Ashok Marg, Lucknow, Uttar</span>
+                            <span class="d-block">Pradesh - 226001</span>
+                        </p>
+                        <p>
+                            <a href="https://www.sidbi.in" target="_blank"
+                                class="text-underline-with-cursor">www.sidbi.in</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="app_contact_cards">
+                        <div class="app_contact_card_box">
+                            <h4 class="app_contact_card_box_title mb-4">We'd love to hear from you</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="fistName" name="First Name"
+                                            placeholder="First Name *" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="lastName" name="Last Name"
+                                            placeholder="Last Name *" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="companyName" name="Company"
+                                            placeholder="Company *" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="jobTitle" name="Job Title"
+                                            placeholder="Job Title *" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email" name="Email"
+                                            placeholder="Business Email *" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contactNumber" name="Contact Number"
+                                            placeholder="Contact Number">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group w-100">
+                                        <select class="form-control" id="messageType" name="Message Type">
+                                            <option hidden>Message Type*</option>
+                                            <option>Queries</option>
+                                            <option>Feedback on the Index</option>
+                                            <option>Index Commentary for a Particular Month</option>
+                                            <option>Partnership Opportunity</option>
+                                        </select>
+                                        <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust"
+                                            alt="Chevron Down">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="mb-2" for="messageArea">Type your Message*</label>
+                                        <textarea class="form-control feedback" id="messageArea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-flex mb-3">
+                                        <input type="checkbox" id="agreeCheckbox">
+                                        <label for="agreeCheckbox" class="terms-label ps-2">
+                                            By submitting this request, I agree with the Jocata
+                                            <a class="custom-link" href="tou.html">Terms of Use.</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="sm-primary-button width-100" disabled id="contactSubmitBtn"
+                                        data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
