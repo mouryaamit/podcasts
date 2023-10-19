@@ -13,20 +13,24 @@ import * as $ from 'jquery';
 })
 export class IndexComponent implements OnInit {
     sumpoornGraphData: any;
+    iipGraphData: any;
+    pmiGraphData: any;
+    gvaGraphData: any;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
     
     constructor(private graphApiService: GraphApiService) { }
 
     ngOnInit(): void {
-        this.graphApiService.getSumpoornGraph().then((data) => {
+        this.graphApiService.getSumpoornGraphData().then((data) => {
             console.log("data", data);
             if(data) {
                 this.sumpoornGraphData = data;
                 this.generateInsightsGraph();
+                this.getContextGraphData();
             }
         }, (error) => {
-            console.log("error", error);
+            console.log("getSumpoornGraphData Error", error);
         })
     }
 
@@ -1404,5 +1408,39 @@ export class IndexComponent implements OnInit {
         path.on("click", clickPoint);
     }
 
+    getContextGraphData(){
+        this.graphApiService.getIipGraphData().then((IIPGraphData) => {
+            this.iipGraphData = IIPGraphData;
+            getPmiGraphData();
+        }, (error) => {
+            getPmiGraphData();
+            console.log("getSumpoornGraphData Error", error);
+        });
+        let getPmiGraphData = () => {
+            this.graphApiService.getPmiGraphData().then((PmiGraphData) => {
+                this.pmiGraphData = PmiGraphData;
+                getGvaGraphData();   
+            }, (error) => {
+                getGvaGraphData();
+                console.log("getSumpoornGraphData Error", error);
+            });  
+        }
+        let getGvaGraphData = () => {
+            this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
+                this.gvaGraphData = GvaGraphData;
+                this.generateContextGraph();
+            }, (error) => {
+                console.log("getSumpoornGraphData Error", error);
+            });  
+        }
+    }
+    generateContextGraph() {
+        var mydata = this.sumpoornGraphData.IndexGeneration;
+        var dataForIIP = this.iipGraphData.iipValues;
+        var dataForPMI = this.pmiGraphData.pmiValues;
+        var dataForGVA = this.gvaGraphData.gvaValues;
+
+
+    }
 }
 
