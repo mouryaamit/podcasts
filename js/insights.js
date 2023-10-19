@@ -362,9 +362,9 @@ d3.json(url,
                     ;
                 const year_6 = svg.append("g"); // last line
                 year_6.append('line')
-                    .attr('x1', width + 20.5)
+                    .attr('x1', width + 21)
                     .attr('y1', 0)
-                    .attr('x2', width + 20.5)
+                    .attr('x2', width + 21)
                     .attr('y2', height + 60)
                     .attr('stroke', '#E1E1E1')
                     .attr("stroke-width", "1")
@@ -995,9 +995,7 @@ d3.json(url,
                     d3.select(".ec_month_title")
                         .html(`${current_month} ${current_year}`)
                         ;
-                    d3.select(".ec_title")
-                        .html(`Expert Commentary`)
-                        ;
+                    
                     if(expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
                         // commentary member details
                         d3.select('#commentary_mem_details')
@@ -1008,8 +1006,14 @@ d3.json(url,
                                 </div>`)
                             .style("margin-bottom", "15px")
                         ;
+                        d3.select(".ec_title")
+                            .html(`Expert Commentary`)
+                        ;
                     } else {
                         d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
+                        d3.select(".ec_title")
+                            .html(`Macro Commentary`)
+                        ;
                     }
                     d3.select(".ec_message")
                         .html(`${expertC.ExpertCommentary}`)
@@ -1343,10 +1347,10 @@ d3.json(url,
                     .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
                 svg.append("line")
-                    .attr("x1", width + 110)
+                    .attr("x1", width + 120)
                     .attr("x2", width + 60)
-                    .attr("y1", 185)
-                    .attr("y2", 185)
+                    .attr("y1", 184)
+                    .attr("y2", 184)
                     .style("opacity", 0.5)
                     .style("stroke", "#960000")
                     .attr("stroke-width", 1)
