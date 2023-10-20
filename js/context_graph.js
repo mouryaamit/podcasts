@@ -104,12 +104,13 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     .tickSize([35])
                                                     .ticks(width / 12)
                                                     .tickFormat(function (d, i) {
-                                                        const monNum_fmt = d3.timeFormat('%m')(d);
-                                                        const year_fmt = d3.timeFormat('%Y')(d);
-                                                        if (monNum_fmt == '01') {
+                                                        if(i == 0) {
+                                                            const year_fmt = d3.timeFormat('%Y')(d);
                                                             return year_fmt;
-                                                        } else if (monNum_fmt == '10' && year_fmt == '2019') {
-                                                            return year_fmt;
+                                                        } else {
+                                                            const monNum_fmt = d3.timeFormat('%m')(d);
+                                                            const year_fmt = d3.timeFormat('%Y')(d);
+                                                            return (monNum_fmt == '01') ? year_fmt : '';
                                                         }
                                                     })
                                                     ;

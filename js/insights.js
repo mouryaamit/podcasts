@@ -85,12 +85,13 @@ d3.json(url,
                 .tickSize([35]) // sets line for month
                 .ticks(width / 12)
                 .tickFormat(function (d, i) {
-                    const monNum_fmt = d3.timeFormat('%m')(d);
-                    const year_fmt = d3.timeFormat('%Y')(d);
-                    if (monNum_fmt == '01') {
+                    if(i == 0) {
+                        const year_fmt = d3.timeFormat('%Y')(d);
                         return year_fmt;
-                    } else if (monNum_fmt == '10' && year_fmt == '2019') {
-                        return year_fmt;
+                    } else {
+                        const monNum_fmt = d3.timeFormat('%m')(d);
+                        const year_fmt = d3.timeFormat('%Y')(d);
+                        return (monNum_fmt == '01') ? year_fmt : '';
                     }
                 })
                 ;
@@ -245,11 +246,12 @@ d3.json(url,
 
             function formatYaxisForText(d, fromWhere) {
                 if (d == 0.25) {
-                    if(fromWhere == "info") {
-                        return "Substantial";
-                    } else {
-                        return "Substantial Contraction";
-                    }
+                    return "Substantial";
+                    // if(fromWhere == "info") {
+                    //     return "Substantial";
+                    // } else {
+                    //     return "Substantial Contraction";
+                    // }
                 } else if (d == 0.45) {
                     return "Significant";
                 } else if (d == 0.50) {
@@ -265,11 +267,12 @@ d3.json(url,
                 } else if (d == 0.75) {
                     return "Significant";
                 } else if (d == 1.00) {
-                    if(fromWhere == "info") {
-                        return "Substantial";
-                    } else {
-                        return "Substantial Expansion";
-                    }
+                    return "Substantial";
+                    // if(fromWhere == "info") {
+                    //     return "Substantial";
+                    // } else {
+                    //     return "Substantial Expansion";
+                    // }
                 }
                 return '';
             }
@@ -1228,7 +1231,7 @@ d3.json(url,
                     document.getElementById("contextMenu").style.display = 'none';
                 });
             }
-            addInfoIcon(default_width-35, 9, "#my_dataviz_insights", "infoIcon_1", svg);
+            addInfoIcon(default_width-35, 5, "#my_dataviz_insights", "infoIcon_1", svg);
 
             selectionOfXaxis();
 
