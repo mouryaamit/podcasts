@@ -1564,8 +1564,8 @@ export class IndexComponent implements OnInit {
             .call(xAxis_month_name)
             .selectAll(".tick text") // select all the y tick texts
             .call(function(t){     
-                t._groups.forEach(function(d){ // for each one
-                var self = d3.select($(d));
+                t._groups[0].forEach(function(d){ // for each one
+                var self = $(d);
                 if(self.text() == 'May'){
                     var s = self.text()
                     self.text(''); 
@@ -1677,7 +1677,7 @@ export class IndexComponent implements OnInit {
             const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
             const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
             d3.selectAll(".x_month_name_context").classed("active", false); // xaxis selection on curve selection
-            renderPointerOnLine(event, x_orig);
+            renderPointerOnLine(formattedDate);
         };
 
         path.on("click", clickPoint);
@@ -1687,7 +1687,7 @@ export class IndexComponent implements OnInit {
         var GVALine;
         
         // addIIPLine(dataForIIP);
-        
+
         var isIipCheckBoxEnabled:boolean = $("#IIPCheckbox") ? $("#IIPCheckbox").attr("checked") == 'true' ? true : false : false,
         isPmiCheckBoxEnabled:boolean = $("#PMICheckbox")?$("#PMICheckbox").attr("checked") ? true : false : false,
         isGvaCheckBoxEnabled:boolean = $("#GVACheckbox")?$("#GVACheckbox").attr("checked") ? true : false : false
@@ -1837,7 +1837,7 @@ export class IndexComponent implements OnInit {
                     .attr("transform", "rotate(-90)")
                     .text("GVA Growth %")
                     .call(function(t){     
-                        var self = d3.select("#gvaYaxisTxt");
+                    //     var self = d3.select(this);
                         var s = t.text().split(' ');
                         t.text(''); 
                         t.append("tspan") 
@@ -1970,38 +1970,26 @@ export class IndexComponent implements OnInit {
 
                 d3.select(d1).on("click", function (event, d) {
                     d3.selectAll(".x_month_name_context").classed("active", false); // xaxis selection on load
-                    renderPointerOnLine(event, d)
+                    const formattedDate = d3.timeFormat("%m-%Y")(d);
+                    renderPointerOnLine(formattedDate)
                 })
                 ;
             });
         }
         monthNameClickEvent();
 
-        let bisectDate = d3.bisector(function (d) {
-            return new Date(Number(d.category.split("-")[1]), (Number(d.category.split("-")[0]) - 1));
-        }).left
-
-        function renderPointerOnLine(event, d) {
-            const mousePointer = d3.pointer(event);
-            const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
-            const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
-            var x0 = d,
-                i = bisectDate(mydata, x0, 1),
-                d0 = mydata[i - 1],
-                d1 = mydata[i]
-                // d = x0 - new Date(Number(d0.category.split("-")[1]), (Number(d0.category.split("-")[0]) - 1)) > new Date(Number(d1.category.split("-")[1]), (Number(d1.category.split("-")[0]) - 1)) - x0 ? d1 : d0;
-
-            const tooltip_pointer = getPointsOnCurve(d.category, d.value);
-            console.log("tooltip_pointer",)
-            // addTooltip(tooltip_pointer, d, "");
+        function renderPointerOnLine(date) {     
+            const dataValue = mydata.filter((x) => x.category == date)[0];
+            const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
             const lastIndex = x_axis_months.selectAll(".tick")._parents.length - 1;
-            const indexOfPoint = mydata.findIndex(x => x.category == d.category);
+            const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
+
             if(lastIndex == indexOfPoint) {
                 // To apply circles animation on last index
-                addTooltip(tooltip_pointer, d, true);
+                addTooltip(tooltip_pointer, dataValue, true);
             } else {
                 // Not to apply circles animation on other points on curve
-                addTooltip(tooltip_pointer, d, false);
+                addTooltip(tooltip_pointer, dataValue, false);
             }
             //updating x value data & re-rendering
             d3.select("#rect_xaxis_context").remove();
@@ -2020,7 +2008,7 @@ export class IndexComponent implements OnInit {
                     return d;
                 })
 
-            const indexOfObj = mydata.findIndex(x => x.category == d.category);
+            const indexOfObj = mydata.findIndex(x => x.category == date);
             d3.select(`.x_month_name_context_${indexOfObj}`).classed("active", true);
         }
         function getPointsOnCurve(category, value) {
@@ -2151,8 +2139,8 @@ export class IndexComponent implements OnInit {
         }
         addLinesForYears();
         $("#IIPCheckbox").attr("checked","true");
-        iipCheckBoxEnabled();                               
-                
+        iipCheckBoxEnabled();                                       
+      
     }
 }
 
