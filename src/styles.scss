@@ -48,6 +48,8 @@ main {
   //   padding-top: 10rem !important;
   // }
 }
+
+// Header Styles Start
 .app_header {
   display: flex;
   justify-content: space-between;
@@ -234,6 +236,9 @@ main {
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
 }
+// Header Styles End
+
+// Home Page Styles Start
 .app_home {
   background-color: #d1f2e8;
   padding-top: 3rem;
@@ -250,7 +255,7 @@ main {
     p {
       color: #25505c;
       font: 700 $font-size-28px "Poppins", sans-serif;
-      margin: 5.25rem 0 3rem;
+      margin: 5.25rem 1.5rem 3rem;
       line-height: 140%;
       overflow-x: hidden;
 
@@ -668,8 +673,9 @@ main {
     }
   }
 }
+// Home Page Styles Start
 
-// Generic Styles
+// Generic Styles Start
 .app_home_subscribe {
   background: #f0f0f0;
   display: flex;
@@ -705,7 +711,7 @@ main {
   }
 }
 .section_title {
-  color: #4a4a4a;
+  color: $app-black;
   font: 700 $font-size-28px "Poppins", sans-serif;
   line-height: 120%;
   margin-bottom: 2.5rem;
@@ -748,7 +754,7 @@ main {
   color: #194974 !important;
 }
 .app_methodology_caption {
-  color: #4a4a4a;
+  color: $app-black;
   font-size: $font-size-18px;
   line-height: normal;
   margin-bottom: 0;
@@ -807,134 +813,6 @@ main {
     }
   }
 }
-// Generic Styles End
-.app_about_info_con {
-  background: #f8f8f8;
-  padding: 5rem 0 10rem;
-}
-.app_about_info {
-  p {
-    color: #4a4a4a;
-    font-size: $font-size-18px;
-    line-height: 157.523%;
-    a {
-      color: inherit;
-    }
-  }
-}
-.app_about_gallery {
-  background: $app-white;
-  padding: 5rem;
-  .gallery_con {
-    .col {
-      margin-bottom: 8rem;
-    }
-  }
-  .app_about_gallery_title {
-    color: #4a4a4a;
-    font: 700 $font-size-24px "Poppins", sans-serif;
-    line-height: normal;
-    margin-bottom: 0;
-  }
-  .app_about_gallery_info {
-    color: #4a4a4a;
-    font-size: $font-size-19px;
-    line-height: normal;
-    margin: 8px 0 40px;
-  }
-  .figure {
-    img {
-      margin-bottom: 1.25rem;
-    }
-  }
-}
-.app_about_gallery .figure .figure-caption p.name {
-  color: #000;
-  font-size: $font-size-18px;
-  font-weight: 600;
-  line-height: normal;
-}
-.app_about_gallery .figure .figure-caption p.designation {
-  color: #7d7d7d;
-  font-size: $font-size-16px;
-  line-height: normal;
-  width: 90%;
-}
-.app_tou {
-  background: #f2f2f2;
-}
-.app_tou_content {
-  .app_tou_content_main_title {
-    color: #000;
-    font-size: $font-size-20px;
-    font-weight: 700;
-    line-height: 119.2%;
-  }
-  p {
-    color: #6f6f6f;
-    font-size: $font-size-16px;
-    line-height: 119.2%;
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  }
-}
-.app_tou_content_sub_title {
-  color: #000;
-  font-size: $font-size-16px;
-  font-weight: 600;
-  line-height: 119.2%;
-}
-.app_roadmap {
-  background: #d1f2e8;
-  .app_roadmap_title {
-    color: #194974;
-    font: 700 $font-size-28px "Poppins", sans-serif;
-    line-height: 137.523%;
-  }
-  .app_roadmap_caption {
-    color: #194974;
-    font: 400 $font-size-28px "Inter", sans-serif;
-    line-height: 137.523%;
-  }
-  .app_roadmap_grey_section {
-    background: #f8f8f8;
-    padding-top: 4rem;
-  }
-  .app_roadmap_hsn {
-    .app_roadmap_hsn_info {
-      color: #000;
-      font-size: $font-size-18px;
-    }
-  }
-}
-.app_roadmap_banner_section {
-  height: 580px;
-  align-items: center;
-}
-.arrow_down {
-  &:hover {
-    transform: translateY(30px);
-    -webkit-transition: transform linear 1000ms;
-    -moz-transition: transform linear 1000ms;
-    -o-transition: transform linear 1000ms;
-    transition: transform linear 1000ms;
-  }
-}
-.app_roadmap_chart_con {
-  border-radius: 16px;
-  background: $app-white;
-  box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.1),
-    0px 34px 34px 0px rgba(0, 0, 0, 0.09), 0px 76px 46px 0px rgba(0, 0, 0, 0.05),
-    0px 136px 54px 0px rgba(0, 0, 0, 0.01), 0px 212px 59px 0px rgba(0, 0, 0, 0);
-}
-.chart_caption {
-  color: #4a4a4a;
-  font-size: $font-size-16px;
-  font-weight: 700;
-  line-height: 140.523%;
-}
 .app_roadmap_note {
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
@@ -947,27 +825,316 @@ main {
     text-align: start;
   }
 }
-.app_roadmap_grey_text {
-  color: #a6a6a6;
-}
-.app_roadmap_hsn_link {
-  p {
-    color: #707070;
-    font-size: $font-size-16px;
-    margin-bottom: 0;
-    a {
-      color: inherit;
-      text-decoration: underline;
+// Generic Styles End
+
+// About Page Styles Start
+.app_about {
+  padding-top: 6rem;
+  .app_about_gallery {
+    background: $app-white;
+    padding: 2rem;
+    @media only screen and (min-width: 768px) {
+      padding: 5rem;
+    }
+    .app_about_gallery_title {
+      color: #4a4a4a;
+      font: 700 $font-size-24px "Poppins", sans-serif;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    .app_about_gallery_info {
+      color: #4a4a4a;
+      font-size: $font-size-18px;
+      line-height: normal;
+      margin: 8px 0 40px;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-19px;
+      }
+    }
+    .gallery_con {
+      @media only screen and (max-width: 767px) {
+        text-align: center;
+      }
+      .col {
+        margin-bottom: 2.5rem;
+        @media only screen and (min-width: 768px) {
+          margin-bottom: 8rem;
+        }
+        .figure {
+          img {
+            margin-bottom: 1.25rem;
+          }
+          .figure-caption {
+            @media only screen and (max-width: 767px) {
+              text-align: start;
+            }
+            .name {
+              color: #000;
+              font-size: $font-size-18px;
+              font-weight: 600;
+              line-height: normal;
+            }
+
+            .designation {
+              color: #7d7d7d;
+              font-size: $font-size-16px;
+              line-height: normal;
+              @media only screen and (min-width: 768px) {
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .app_about_info_con {
+    background: #f8f8f8;
+    padding: 2rem;
+    @media only screen and (min-width: 768px) {
+      padding: 5rem 0 10rem;
+    }
+
+    .app_about_info {
+      p {
+        color: #194974;
+        font-size: $font-size-16px;
+        line-height: 157.523%;
+        @media only screen and (min-width: 768px) {
+          color: #4a4a4a;
+          font-size: $font-size-18px;
+        }
+        a {
+          color: inherit;
+        }
+      }
     }
   }
 }
+// About Page Styles End
+
+// Terms of Use Styles Start
+.app_tou {
+  background: #f8f8f8;
+  @media only screen and (min-width: 768px) {
+    background: #f2f2f2;
+  }
+  padding-top: 6rem;
+  @media only screen and (min-width: 768px) {
+    padding-top: 9.5rem;
+  }
+
+  .app_tou_content {
+    margin: 2rem;
+    @media only screen and (min-width: 768px) {
+      margin: 9.5rem 0;
+    }
+    .app_tou_content_main_title {
+      color: #000;
+      font-size: $font-size-18px;
+      font-weight: 700;
+      line-height: 119.2%;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-20px;
+      }
+    }
+    .app_tou_content_sub_title {
+      color: #000;
+      font-size: $font-size-14px;
+      font-weight: 600;
+      line-height: 119.2%;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-16px;
+      }
+    }
+    p {
+      color: #6f6f6f;
+      font-size: $font-size-14px;
+      line-height: 119.2%;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-16px;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Roadmap Page Styles Start
+.app_roadmap {
+  background: #d1f2e8;
+  padding-top: 7.5rem;
+  // @media only screen and (min-width: 768px) {
+  //   padding-top: 7.5rem;
+  // }
+  .app_roadmap_banner_section {
+    // height: 580px;
+    padding: 2.75rem 2rem;
+    align-items: center;
+    @media only screen and (min-width: 768px) {
+      padding: 7.5rem 0 4.75rem;
+    }
+    .app_roadmap_title {
+      color: #194974;
+      font: 700 $font-size-28px "Poppins", sans-serif;
+      line-height: 137.523%;
+    }
+    .app_roadmap_caption {
+      color: #194974;
+      font-size: $font-size-20px;
+      line-height: 137.523%;
+      margin: 2rem auto;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-28px;
+        margin: 5.75rem auto 7.75rem;
+
+        span {
+          display: block;
+        }
+      }
+    }
+    .app_roadmap_subtitle {
+      @extend .app_roadmap_title;
+      @media only screen and (max-width: 768px) {
+        font-size: $font-size-18px;
+      }
+    }
+    .arrow_down {
+      &:hover {
+        transform: translateY(30px);
+        -webkit-transition: transform linear 1000ms;
+        -moz-transition: transform linear 1000ms;
+        -o-transition: transform linear 1000ms;
+        transition: transform linear 1000ms;
+      }
+    }
+  }
+  .app_roadmap_grey_section {
+    background: #f8f8f8;
+    padding-top: 4rem;
+    .app_methodology_caption {
+      padding-top: 2rem;
+    }
+    .section_title,
+    .app_methodology_caption {
+      @media only screen and (max-width: 767px) {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+      }
+    }
+    // .app_methodology_caption {
+    //   span {
+    //     @media only screen and (min-width: 768px) {
+    //       display: block;
+    //     }
+    //   }
+    // }
+    .app_roadmap_chart_con {
+      margin: 4.5rem auto 3.5rem;
+      background: $app-white;
+      box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.1),
+        0px 34px 34px 0px rgba(0, 0, 0, 0.09),
+        0px 76px 46px 0px rgba(0, 0, 0, 0.05),
+        0px 136px 54px 0px rgba(0, 0, 0, 0.01),
+        0px 212px 59px 0px rgba(0, 0, 0, 0);
+      @media only screen and (min-width: 768px) {
+        margin: 7.5rem auto 6rem;
+        border-radius: 16px;
+      }
+    }
+
+    .chart_caption {
+      color: #4a4a4a;
+      font-size: $font-size-16px;
+      font-weight: 700;
+      line-height: 140.523%;
+      margin-bottom: 2.5rem;
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 1.75rem;
+      }
+    }
+
+    .app_roadmap_note {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      @media only screen and (min-width: 992px) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+    }
+    .app_roadmap_grey_text {
+      color: #a6a6a6;
+    }
+
+    .app_roadmap_indices {
+      text-align: center;
+      padding: 7rem 3rem;
+      @media only screen and (min-width: 992px) {
+        text-align: start;
+        padding: 10.5rem 3rem 12.5rem;
+      }
+
+      .row {
+        .col {
+          // padding: 0;
+
+          &:first-child {
+            @media only screen and (max-width: 992px) {
+              margin-bottom: 6rem;
+            }
+          }
+          .section_title {
+            margin: 1.25rem auto;
+            padding: 0;
+          }
+          .app_methodology_caption {
+            padding: 0;
+            color: #4a4a4a;
+
+            span {
+              @media only screen and (min-width: 768px) and (max-width: 992px) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // .app_roadmap_hsn {
+  //   .app_roadmap_hsn_info {
+  //     color: #000;
+  //     font-size: $font-size-18px;
+  //   }
+  // }
+}
+// .app_roadmap_hsn_link {
+//   p {
+//     color: #707070;
+//     font-size: $font-size-16px;
+//     margin-bottom: 0;
+//     a {
+//       color: inherit;
+//       text-decoration: underline;
+//     }
+//   }
+// }
 .roadmap_hsn_modal {
   max-width: 944px;
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
   .modal-content {
     border-radius: 16px;
     background: $app-white;
     .modal-body {
-      padding: 10px 60px 44px 44px;
+      padding: 10px 20px 44px;
+      @media only screen and (min-width: 768px) {
+        padding: 10px 60px 44px 44px;
+      }
       .hsn_modal_title {
         color: #4a4a4a;
         font: 600 22px "Poppins";
@@ -978,6 +1145,11 @@ main {
         color: rgba(74, 74, 74, 0.92);
         font-size: $font-size-16px;
         line-height: normal;
+        span {
+          @media only screen and (min-width: 992px) {
+            display: block;
+          }
+        }
         a {
           color: inherit;
           text-decoration: underline;
@@ -986,12 +1158,14 @@ main {
     }
   }
 }
+// Roadmap Page Styles End
 
+// Methodology Page Styles Start
 .app_methodology {
   background: #c4e2fd;
   padding-top: 6rem;
 
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 768px) {
     padding-top: 9.5rem;
   }
 
@@ -1054,132 +1228,231 @@ main {
       }
     }
 
-    .app_methodology_tbl_section {
-      text-align: start;
-      font-size: $font-size-14px;
-      h6 {
-        color: #000;
-        margin-bottom: 0.25rem;
-        font-weight: 500;
-        line-height: 120%;
-      }
-      table {
-        margin-bottom: 0.25rem;
-        td,
-        th {
-          padding: 0;
-          color: #626262;
-        }
-        th {
-          font-weight: 400;
-          border-top: 1px solid #dadada;
-          border-bottom: 1px solid #dadada;
-        }
-        tbody {
-          tr {
-            &:last-of-type {
-              border-bottom: 1px solid #dadada;
-            }
-            &:nth-child(1) {
-              td {
-                &:first-child {
-                  color: #25aa4a;
-                }
-              }
-            }
-            &:nth-child(2) {
-              td {
-                &:first-child {
-                  color: #2a8ac0;
-                }
-              }
-            }
-            &:nth-child(3) {
-              td {
-                &:first-child {
-                  color: #6d47ff;
-                }
-              }
-            }
-          }
-        }
-      }
-      .tbl_caption {
-        color: #8c8c8c;
-        line-height: 124.023%;
+    .section_title {
+      margin-bottom: 1.25rem;
+      @media only screen and (max-width: 767px) {
+        font-size: $font-size-24px;
       }
     }
 
-    .app_methodology_state_cities {
-      text-align: left;
-      height: 100vh;
-      overflow-y: auto;
-      position: relative;
-      scrollbar-width: thin;
-      scrollbar-color: transparent transparent;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar {
-        width: 0;
-        width: 5px;
-        background-color: #f6f6f6;
+    .app_methodology_caption {
+      padding-bottom: 3.25rem;
+      @media only screen and (max-width: 767px) {
+        font-size: $font-size-16px;
+        padding-right: 2.25rem;
+        padding-left: 2.25rem;
       }
-      ul {
-        &.state-list {
-          max-height: 100%;
+    }
+
+    #tab-geographic {
+      .app_methodology_state_cities {
+        text-align: left;
+        height: 100vh;
+        overflow-y: auto;
+        position: relative;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          width: 0;
+          width: 5px;
+          background-color: #f6f6f6;
         }
-        li {
-          border-bottom: 0.903px solid #dbdbdb;
-          padding: 7.2px;
-          cursor: pointer;
-          span {
-            &.state-name {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              color: #000;
-              font-size: 14.456px;
-              .toggle-icon {
-                float: right;
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 5px;
+          background-color: transparent;
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: #e3e3e3;
+        }
+        ul {
+          &.state-list {
+            max-height: 100%;
+          }
+          li {
+            border-bottom: 0.903px solid #dbdbdb;
+            padding: 7.2px;
+            cursor: pointer;
+            span {
+              &.state-name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #000;
+                font-size: 14.456px;
+                .toggle-icon {
+                  float: right;
+                }
+              }
+            }
+            ul {
+              &.city-dropdown {
+                list-style-type: none;
+                padding-left: 0;
+                flex-wrap: wrap;
+                li {
+                  border-bottom: none;
+                  flex: 50%;
+                  color: rgba(0, 0, 0, 0.6);
+                  font-size: $font-size-14px;
+                  line-height: 132.023%;
+                }
               }
             }
           }
-          ul {
-            &.city-dropdown {
-              list-style-type: none;
-              padding-left: 0;
-              flex-wrap: wrap;
-              li {
-                border-bottom: none;
-                flex: 50%;
-                color: rgba(0, 0, 0, 0.6);
-                font-size: $font-size-14px;
-                line-height: 132.023%;
+        }
+        h6 {
+          position: sticky;
+          top: 0;
+          background: $app-white;
+          z-index: 1;
+          color: #000;
+          font-size: 16.263px;
+          font-weight: 700;
+          line-height: 120%;
+          padding-left: 7.2px;
+        }
+        .accordion {
+          --bs-accordion-border-color: transparent;
+          --bs-accordion-btn-padding-x: 0.6rem;
+          --bs-accordion-btn-padding-y: 0.6rem;
+          --bs-accordion-btn-focus-border-color: none;
+          --bs-accordion-btn-focus-box-shadow: none;
+          --bs-accordion-btn-icon: url("assets/icons/chevron_right.svg");
+          --bs-accordion-btn-active-icon: url("assets/icons/collapse_arrow.svg");
+          --bs-accordion-btn-icon-width: 1.75rem;
+          --bs-accordion-btn-icon-transform: rotate(0deg);
+          --bs-accordion-body-padding-x: 0.6rem;
+          --bs-accordion-body-padding-y: 0.6rem;
+          --bs-accordion-active-color: $app-black;
+          --bs-accordion-active-bg: transparent;
+          .accordion-item {
+            .accordion-header {
+              border-bottom: 0.903px solid #dbdbdb;
+              .accordion-button {
+                font-size: 14.456px;
+              }
+            }
+            .accordion-body {
+              .city_dropdown {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding-left: 0;
+                margin-bottom: 0;
+                li {
+                  border-bottom: none;
+                  flex: 50%;
+                  color: rgba(0, 0, 0, 0.6);
+                  font-size: $font-size-14px;
+                  line-height: 132.023%;
+                }
               }
             }
           }
         }
       }
-      h6 {
-        position: sticky;
-        top: 0;
-        background: $app-white;
-        z-index: 1;
-        color: #000;
-        font-size: 16.263px;
-        font-weight: 700;
-        line-height: 120%;
-        padding-left: 7.2px;
+    }
+
+    #tab-turnover {
+      // @media only screen and (min-width: 768px) and (max-width: 991px) {
+      //   padding-left: 3rem;
+      //   padding-right: 3rem;
+      // }
+
+      .app_roadmap_note {
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: 767px) {
+          border: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+          padding: 1rem 0rem;
+        }
+
+        p {
+          @media only screen and (max-width: 767px) {
+            border-top: 1px solid #dfdfdf;
+            border-bottom: 1px solid #dfdfdf;
+            margin: 0 2rem;
+            padding: $font-size-14px 0;
+          }
+
+          @media only screen and (max-width: 1280px) {
+            font-size: $font-size-12px;
+          }
+        }
       }
-      &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        background-color: transparent;
-        display: none;
-      }
-      &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        background-color: #e3e3e3;
+      .app_methodology_tbl_section {
+        font-size: $font-size-11px;
+        text-align: start;
+
+        @media only screen and (max-width: 767px) {
+          max-width: 75vw;
+          margin: 0 auto 2.25rem;
+        }
+        @media only screen and (min-width: 1280px) {
+          font-size: $font-size-14px;
+        }
+
+        h6 {
+          color: #000;
+          margin-bottom: 0.25rem;
+          font-weight: 500;
+          line-height: 120%;
+        }
+
+        table {
+          margin-bottom: 0.25rem;
+          td,
+          th {
+            padding: 0;
+            color: #626262;
+          }
+          th {
+            font-weight: 400;
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+          }
+          tbody {
+            tr {
+              &:last-of-type {
+                border-bottom: 1px solid #dadada;
+              }
+              &:nth-child(1) {
+                td {
+                  &:first-child {
+                    color: #25aa4a;
+                  }
+                }
+              }
+              &:nth-child(2) {
+                td {
+                  &:first-child {
+                    color: #2a8ac0;
+                  }
+                }
+              }
+              &:nth-child(3) {
+                td {
+                  &:first-child {
+                    color: #6d47ff;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .tbl_caption {
+          color: #8c8c8c;
+          line-height: 124.023%;
+          font-size: inherit;
+        }
       }
     }
   }
@@ -1240,9 +1513,15 @@ main {
   .app_methodology_index_bin {
     background: #ececec;
     padding: 4.5rem 0 7.25rem;
+
+    .app_methodology_caption {
+      color: #4a4a4a;
+    }
+
     @media screen and (min-width: 768px) {
       padding: 7.75rem 0 14rem;
     }
+
     @media screen and (max-width: 767px) {
       .section_title {
         color: #25505c;
@@ -1252,7 +1531,7 @@ main {
       }
     }
     .meth_index_gif_con {
-      background: $app-white;
+      background: #fdfbfd;
       box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
         0px 22px 22px 0px rgba(0, 0, 0, 0.05),
         0px 50px 30px 0px rgba(0, 0, 0, 0.03),
@@ -1280,6 +1559,7 @@ main {
   }
 }
 
+// Index Page Styles Start Here
 .app_index_chart_con {
   .nav-pills {
     .nav-link {
