@@ -12,16 +12,14 @@
     </div>
     <div class="app_methodology_tabs">
         <div class="row gx-0 justify-content-center">
-            <div class="col-12 col-lg-10">
+            <div class="col-sm-12 col-md-10">
                 <ul class="nav nav-tabs" id="methodology-tab" role="tablist">
                     <li class="nav-item" role="presentation" id="geoListItem">
-                        <button class="nav-link d-flex align-items-center active" id="geographic-tab"
-                            data-bs-toggle="tab" data-bs-target="#tab-geographic" type="button" role="tab"
-                            aria-controls="tab-geographic" aria-selected="true" onclick="toggleIcons('geo')">
-                            <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" id="activeGeoIcon"
-                                style="display: block;" />
-                            <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" id="inactiveGeoIcon"
-                                style="display: none;" />
+                        <button class="nav-link d-flex align-items-center" id="geographic-tab" data-bs-toggle="tab"
+                            data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
+                            aria-selected="true" [ngClass]="{ 'active': isGeoActive }" (click)="toggleIcons('geo')">
+                            <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" *ngIf="isGeoActive" />
+                            <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" *ngIf="!isGeoActive" />
                             <span>Geographic<br />Distribution</span>
                         </button>
                     </li>
@@ -29,11 +27,12 @@
                     <li class="nav-item" role="presentation" id="turnoverListItem">
                         <button class="nav-link d-flex align-items-center" id="turnover-tab" data-bs-toggle="tab"
                             data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
-                            aria-selected="false" onclick="toggleIcons('turnover')">
+                            aria-selected="false" [ngClass]="{ 'active': isTurnoverActive }"
+                            (click)="toggleIcons('turnover')">
                             <img src="assets/icons/active-turnover.svg" alt="Active Turnover Icon"
-                                id="activeTurnoverIcon" style="display: none;" />
+                                *ngIf="isTurnoverActive" />
                             <img src="assets/icons/inactive-turnover.svg" alt="Inactive Turnover Icon"
-                                id="inactiveTurnoverIcon" style="display: block;" />
+                                *ngIf="!isTurnoverActive" />
                             <span>Turnover<br />Distribution</span>
                         </button>
                     </li>
@@ -41,11 +40,11 @@
                     <li class="nav-item" role="presentation" id="sectorListItem">
                         <button class="nav-link d-flex align-items-center" id="sector-tab" data-bs-toggle="tab"
                             data-bs-target="#tab-sector" type="button" role="tab" aria-controls="tab-sector"
-                            aria-selected="false" onclick="toggleIcons('sector')">
-                            <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" id="activeSectorIcon"
-                                style="display: none;" />
+                            aria-selected="false" [ngClass]="{ 'active': isSectorActive }"
+                            (click)="toggleIcons('sector')">
+                            <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" *ngIf="isSectorActive" />
                             <img src="assets/icons/inactive-sector.svg" alt="Inactive Sector Icon"
-                                id="inactiveSectorIcon" style="display: block;" />
+                                *ngIf="!isSectorActive" />
                             <span>Sector<br />Distribution</span>
                         </button>
                     </li>
@@ -53,50 +52,105 @@
                     <li class="nav-item" role="presentation" id="activityListItem">
                         <button class="nav-link d-flex align-items-center" id="activity-tab" data-bs-toggle="tab"
                             data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
-                            aria-selected="false" onclick="toggleIcons('activity')">
+                            aria-selected="false" [ngClass]="{ 'active': isActivityActive }"
+                            (click)="toggleIcons('activity')">
                             <img src="assets/icons/active-activity.svg" alt="Active Activity Icon"
-                                id="activeActivityIcon" style="display: none;" />
+                                *ngIf="isActivityActive" />
                             <img src="assets/icons/inactive-activity.svg" alt="Inactive Activity Icon"
-                                id="inactiveActivityIcon" style="display: block;" />
+                                *ngIf="!isActivityActive" />
                             <span>Activity<br />Distribution</span>
                         </button>
                     </li>
 
                 </ul>
-                <div class="tab-content p-2" id="methodology-tabContent">
+                <div class="tab-content p-2 overflow-hidden" id="methodology-tabContent">
                     <div class="tab-pane fade show active" id="tab-geographic" role="tabpanel"
                         aria-labelledby="geographic-tab">
-                        <h5 class="section_title mb-4">Geographic Distribution of Sumpoorn MSMEs</h5>
-                        <p class="app_methodology_caption pb-5">The sample is well-distributed across India ensuring
+                        <h5 class="section_title">Geographic Distribution of Sumpoorn MSMEs</h5>
+                        <p class="app_methodology_caption">The sample is well-distributed across India ensuring
                             representativeness
                             of the Index.</p>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <img src="assets/images/geo-map.svg" class="img-fluid mb-4" id="fixedImage"
-                                    alt="Geographic Distribution Map" />
+                        <div class="row justify-content-center">
+                            <div class="col-10 col-md-8">
+                                <img src="assets/images/geo-map-2x.png" width="597" class="img-fluid mb-5"
+                                    id="fixedImage" alt="Geographic Distribution Map" />
                             </div>
-                            <div class="col-md-3 app_methodology_state_cities">
+                            <div class="col-10 col-md-3 app_methodology_state_cities">
                                 <h6>States & UTs</h6>
-                                <div class="scrollable-content" id="scrollableContent">
-                                    <ul class="state-list ps-0 list-unstyled" id="stateList">
-                                        <!-- State and city data will be populated here -->
-                                    </ul>
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-collapseOne">
+                                                Accordion Item #1
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <ul class="city_dropdown">
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                Accordion Item #2
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <ul class="city_dropdown">
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                Accordion Item #3
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <ul class="city_dropdown">
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-turnover" role="tabpanel" aria-labelledby="turnover-tab">
-                        <h5 class="section_title mb-4">Turnover Distribution of Sumpoorn MSMEs</h5>
-                        <p class="app_methodology_caption pb-5">
-                            <span class="d-block">The sample is well-distributed as per turnover ensuring</span>
-                            <span class="d-block">representativeness and stability of the Index.</span>
+                        <h5 class="section_title">Turnover Distribution of Sumpoorn MSMEs</h5>
+                        <p class="app_methodology_caption">
+                            <span>The sample is well-distributed as per turnover ensuring </span>
+                            <span>representativeness and stability of the Index. </span>
                         </p>
                         <img src="assets/images/turnover-graph.svg" class="img-fluid mb-4"
                             alt="Distribution by turnover size within MSME sample" />
                         <!-- <p class="chart_caption pb-4">Fig.- % Distribution by turnover size within MSME sample</p> -->
-                        <div class="app_roadmap_note col-md-10 mx-auto mb-5 px-0 py-3">
+                        <div class="app_roadmap_note col-md-10 mx-auto">
                             <div class="row gx-0 justify-content-between align-items-center">
-                                <div class="col-md-8 pe-2">
+                                <div class="col-md-8 d-flex order-1 order-md-0 pe-0 pe-md-4 pe-lg-3">
                                     <p><span class="fw-600">Note:</span> Above classification is based on the revised
                                         GoI definition of
                                         MSMEs (w.e.f 1st July 2020).
@@ -105,7 +159,7 @@
                                         is limited to TTM turnover and may not accurately represent the MSME status in
                                         some cases. </p>
                                 </div>
-                                <div class="col-md-4 app_methodology_tbl_section">
+                                <div class="col-sm-12 col-md-4 app_methodology_tbl_section">
                                     <h6>GOI Definition of MSME</h6>
                                     <table class="table table-borderless table-responsive">
                                         <thead>
@@ -133,19 +187,19 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <p class="tbl_caption">*Investment in Plant and Machinery or Equipment</p>
+                                    <div class="tbl_caption">*Investment in Plant and Machinery or Equipment</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-sector" role="tabpanel" aria-labelledby="sector-tab">
-                        <h5 class="section_title mb-4">Sector-wise Distribution by Value <br />(Top
+                        <h5 class="section_title">Sector-wise Distribution by Value <br />(Top
                             7 HSNs)</h5>
-                        <p class="app_methodology_caption pb-5">
-                            <span class="d-block">The sample is well-distributed across sectors as reflected by the Top
+                        <p class="app_methodology_caption">
+                            <span>The sample is well-distributed across sectors as reflected by the Top
                                 7 HSN
-                                mix</span>
-                            <span class="d-block">remaining largely stable over time ensuring Index representativeness
+                                mix </span>
+                            <span>remaining largely stable over time ensuring Index representativeness
                                 and
                                 stability.</span>
                         </p>
@@ -161,12 +215,12 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
-                        <h5 class="section_title mb-4">Activity Distribution (Non-Services and Services)
+                        <h5 class="section_title">Activity Distribution (Non-Services and Services)
                         </h5>
-                        <p class="app_methodology_caption pb-5">
-                            <span class="d-block">The split of GSTINs engaged in non-service (manufacturing +
-                                trading)</span>
-                            <span class="d-block">and service activities are stable over time.</span>
+                        <p class="app_methodology_caption">
+                            <span>The split of GSTINs engaged in non-service (manufacturing +
+                                trading) </span>
+                            <span>and service activities are stable over time.</span>
                         </p>
                         <img src="assets/images/activity-graph.svg" class="img-fluid mb-4"
                             alt="Monthly proportion % of Non-services and Service GSTINs" />
@@ -313,7 +367,7 @@
                     <span>contraction or expansion of economic activity of the sector.</span>
                 </p>
                 <div class="meth_index_gif_con col-sm-12 col-md-8 col-lg-5 mx-auto">
-                    <img src="assets/images/meth-range-chart.gif" class="img-fluid" alt="Index Bin Ranges" />
+                    <img src="assets/images/meth-range-chart.gif" class="img-fluid rounded-2" alt="Index Bin Ranges" />
                 </div>
             </div>
         </div>

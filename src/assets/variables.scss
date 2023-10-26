@@ -1,7 +1,7 @@
 // /* Color Codes */
 $app-white: #fff;
 $app-black: #000;
-$required-field-color: #932D2D;
+$required-field-color: #932d2d;
 
 // /* Font Sizes */
 $font-size-10px: 0.833rem;
@@ -28,7 +28,7 @@ $font-size-30px: 2.5rem;
 $font-size-36px: 3rem;
 // /* Marquee Variables on Homepage */
 $marquee-width: 100%;
-$marquee-height: 60vh; 
+$marquee-height: 60vh;
 $marquee-elements: 3; /* defined with JavaScript */
 $marquee-elements-displayed: 1;
 $marquee-element-width: calc($marquee-width / $marquee-elements-displayed);
