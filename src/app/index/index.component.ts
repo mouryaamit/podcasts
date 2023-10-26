@@ -106,32 +106,34 @@ export class IndexComponent implements OnInit {
             ;
 
         const xAxis_year = d3.axisBottom(x2)
-            .tickSize(35) // sets line for month
-            .ticks(width / 12)
-            .tickFormat((d) => {
-                const monNum_fmt = d3.timeFormat('%m')(d);
-                const year_fmt = d3.timeFormat('%Y')(d);
-                if (monNum_fmt == '01') {
+        .tickSize(35) // sets line for month
+        .ticks(width / 12)
+            .tickFormat(function (d, i) {
+                if(i == 0) {
+                    const year_fmt = d3.timeFormat('%Y')(d);
                     return year_fmt;
-                } else if (monNum_fmt == '10' && year_fmt == '2019') { // need to change into dynamic
-                    return year_fmt;
+                } else {
+                    const monNum_fmt = d3.timeFormat('%m')(d);
+                    const year_fmt = d3.timeFormat('%Y')(d);
+                    return (monNum_fmt == '01') ? year_fmt : '';
                 }
-            });
+            })
+            ;
 
         const yAxis_left = d3.axisLeft(y1)
-        .tickSize(0)
-        .tickValues(y_left_coordinates)
-        ;
+            .tickSize(0)
+            .tickValues(y_left_coordinates)
+            ;
 
         const yAxis_right = d3.axisRight(y2)
-        .tickSize([-width - 21]) // sets last xaxis index align
-        .tickValues(y_right_coordinates)
-        .tickFormat(
-            function (d) {
-                return formatYaxisForText(d, "axis");
-            }
-        )
-        ;
+            .tickSize([-width - 21]) // sets last xaxis index align
+            .tickValues(y_right_coordinates)
+            .tickFormat(
+                function (d) {
+                    return formatYaxisForText(d, "axis");
+                }
+            )
+            ;
 
         // Creating svg with dimensions to chart
         const svg = d3.select("#my_dataviz_insights")
@@ -149,8 +151,8 @@ export class IndexComponent implements OnInit {
             .attr("class", "x_month_num")
             .call(xAxis_month_number)
             .selectAll(".tick text")
-            .attr("x", "0em")
-            .attr("y", "-1.3em")
+            .attr("x", "0em") 
+            .attr("y", "-1.3em") 
             ;
 
         const month_name = svg.append("g")
@@ -167,27 +169,27 @@ export class IndexComponent implements OnInit {
             //             self.text('');
             //             self.append("tspan")
             //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-1.7em')
+            //                 .attr("x", '-1.7em') 
             //                 .text(s);
             //         } else if (self.text() == 'Oct') {
             //             var s = self.text()
             //             self.text('');
             //             self.append("tspan")
             //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-1.9em')
+            //                 .attr("x", '-1.9em') 
             //                 .text(s);
             //         } else if (self.text() == 'Jul') {
             //             var s = self.text()
             //             self.text('');
             //             self.append("tspan")
             //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-2em')
+            //                 .attr("x", '-2em') 
             //                 .text(s);
             //         }
             //     })
             // })
-            .attr("x", "-1.8em")
-            .attr("y", "0.5em")
+            .attr("x", "-1.8em") 
+            .attr("y", "0.5em") 
             .attr("transform", function (d) {
                 return "rotate(-90)"
             })
@@ -266,13 +268,14 @@ export class IndexComponent implements OnInit {
             .attr("class", function (d, i) { return `y-axis-titles y-axis-title_${i}`; })
             ;
 
-        function formatYaxisForText(d: any, fromWhere: any) {
+            function formatYaxisForText(d: any, fromWhere: any) {
             if (d == 0.25) {
-                if (fromWhere == "info") {
-                    return "Substantial";
-                } else {
-                    return "Substantial Contraction";
-                }
+                return "Substantial";
+                // if(fromWhere == "info") {
+                //     return "Substantial";
+                // } else {
+                //     return "Substantial Contraction";
+                // }
             } else if (d == 0.45) {
                 return "Significant";
             } else if (d == 0.50) {
@@ -288,11 +291,12 @@ export class IndexComponent implements OnInit {
             } else if (d == 0.75) {
                 return "Significant";
             } else if (d == 1.00) {
-                if (fromWhere == "info") {
-                    return "Substantial";
-                } else {
-                    return "Substantial Expansion";
-                }
+                return "Substantial";
+                // if(fromWhere == "info") {
+                //     return "Substantial";
+                // } else {
+                //     return "Substantial Expansion";
+                // }
             }
             return '';
         }
@@ -300,7 +304,7 @@ export class IndexComponent implements OnInit {
         function formatYaxisForXvalue(d: any, i: any) {
             if (d == 0.25 || d == 1.00 || d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                 return "1em";
-            }
+            } 
             // else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
             //     return "0.8em";
             // } 
@@ -385,9 +389,9 @@ export class IndexComponent implements OnInit {
                 ;
             const year_6 = svg.append("g"); // last line
             year_6.append('line')
-                .attr('x1', width + 20.5)
+                .attr('x1', width + 21)
                 .attr('y1', 0)
-                .attr('x2', width + 20.5)
+                .attr('x2', width + 21)
                 .attr('y2', height + 60)
                 .attr('stroke', '#E1E1E1')
                 .attr("stroke-width", "1")
@@ -401,7 +405,7 @@ export class IndexComponent implements OnInit {
                 .attr("y2", 0)
                 .style("stroke", "#E1E1E1")
                 .attr("stroke-width", "0.7")
-                ;
+                ;                        
             //bottom line of graph
             const bottom_line = svg.append("g");
             bottom_line.append("line")
@@ -537,7 +541,7 @@ export class IndexComponent implements OnInit {
         //     });
         // }
 
-          const addSelectionYaxis = () => {
+        const addSelectionYaxis = () => {
             y_text.selectAll(".tick")._parents.forEach( (d_child, i) => {
                 addDefaultSelYaxis(d_child.__data__);
                 d3.select(d_child)
@@ -661,7 +665,7 @@ export class IndexComponent implements OnInit {
                 .attr("stroke-width", 1)
                 ;
         }
-        function formatHandYvaluesYaxis(d, isMouseover) {
+        function formatHandYvaluesYaxis(d, isMouseover) { 
             if (isMouseover) {
                 let hAndyValues = { y: 0, h: 0 };
                 if (d == 0.25) {
@@ -708,35 +712,35 @@ export class IndexComponent implements OnInit {
 
         function getYaxisValuesForLines(d) {
             let hAndyValues = { y1: 0, x2: 0 };
-            if (d == 0.00) {
-                hAndyValues.y1 = height;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.25) {
-                hAndyValues.y1 = 282;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.45) {
-                hAndyValues.y1 = 207;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.50) {
-                hAndyValues.y1 = 187.5;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.52) {
-                hAndyValues.y1 = 180.5;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.54) {
-                hAndyValues.y1 = 173;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.60) {
-                hAndyValues.y1 = 150.5;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.65) {
-                hAndyValues.y1 = 131.5;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.75) {
-                hAndyValues.y1 = 94;
-                hAndyValues.x2 = width + 112;
-            }
-            return hAndyValues;
+                if (d == 0.00) {
+                    hAndyValues.y1 = height;
+                    hAndyValues.x2 = width + 112;
+                } else if (d == 0.25) {
+                    hAndyValues.y1 = 282;
+                    hAndyValues.x2 = width + 112;
+                } else if (d == 0.45) {
+                    hAndyValues.y1 = 207;
+                    hAndyValues.x2 = width + 112;
+                } else if (d == 0.50) {
+                    hAndyValues.y1 = 187.5;
+                    hAndyValues.x2 = width + 70;
+                } else if (d == 0.52) {
+                    hAndyValues.y1 = 180.5;
+                    hAndyValues.x2 = width + 70;
+                } else if (d == 0.54) {
+                    hAndyValues.y1 = 173;
+                    hAndyValues.x2 = width + 70;
+                } else if (d == 0.60) {
+                    hAndyValues.y1 = 150.5;
+                    hAndyValues.x2 = width + 112;
+                } else if (d == 0.65) {
+                    hAndyValues.y1 = 131.5;
+                    hAndyValues.x2 = width + 112;
+                } else if (d == 0.75) {
+                    hAndyValues.y1 = 94;
+                    hAndyValues.x2 = width + 112;
+                } 
+                return hAndyValues;
         }
         addSelectionYaxis();
 
@@ -776,8 +780,8 @@ export class IndexComponent implements OnInit {
                 d3.select(d_child)
                     .on("click", function (event, d) {
                         // xaxis selection on click
-                        removeXaxisTitleSelection();
-                        d3.selectAll(".x_month_name").classed("active", false);
+                       removeXaxisTitleSelection();
+                       d3.selectAll(".x_month_name").classed("active", false);
                         const formattedDate = d3.timeFormat("%m-%Y")(d);
                         renderPointerOnLine(formattedDate);
                     })
@@ -785,7 +789,7 @@ export class IndexComponent implements OnInit {
         }
 
         function renderPointerOnLine(date) {
-            d3.selectAll("#rect_xaxis").remove();
+            d3.selectAll("#rect_xaxis").remove(); 
             d3.selectAll("#rect_yaxis").remove(); // to remove highlighting of yaxis data
             d3.selectAll("#rect_xaxis_sel").remove(); // to remove highlighting of already selected xaxis data
 
@@ -825,16 +829,16 @@ export class IndexComponent implements OnInit {
 
         function initializeTooltip() {
             tooltip = d3.select("#my_dataviz_insights")
-                .append("div")
-                .attr("class", "tooltip-area")
-                .style("opacity", 0)
-                ;
+            .append("div")
+            .attr("class", "tooltip-area")
+            .style("opacity", 0)
+            ;
 
             selectedPoint = d3.select("#my_dataviz_insights")
                 .append("div")
                 .attr("class", "focus_circle")
                 .style("opacity", 0)
-                ;
+                ;    
 
             radiation = d3.select("#my_dataviz_insights")
                 .append("div")
@@ -862,7 +866,7 @@ export class IndexComponent implements OnInit {
                     return d;
                 })
                 .style("opacity", 0.9)
-                ;
+            ;
             if (isLatestIdx) {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
@@ -881,7 +885,7 @@ export class IndexComponent implements OnInit {
                     .style("top", (mousePointer.y - 243) + "px");
             }
         }
-
+        
         function checkSpecificPointOnYaxis(i) {
             const yOfx = mydata[i].value;
             const closestIndex = findClosestYvalue(yOfx);
@@ -936,20 +940,20 @@ export class IndexComponent implements OnInit {
         function checkIfCommentaryDataAvailable(prev_month_data, next_month_data) {
             const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
-            const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
+            const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
+            const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
             (<HTMLElement>document.getElementById('#slide_prev')).classList.remove("disable_arrows");
             (<HTMLElement>document.getElementById('#slide_next')).classList.remove("disable_arrows");
             if (!prevCommentaryData || (prevCommentaryData && !checkForPrevCommentary)) {
                 (<HTMLElement>document.getElementById('#slide_prev')).classList.add("disable_arrows");
             } else if (!nextCommentaryData || (nextCommentaryData && !checkForNextCommentary)) {
                 (<HTMLElement>document.getElementById('#slide_next')).classList.add("disable_arrows");
-            }
+            } 
         }
 
         (<HTMLElement>document.getElementById('#slide_prev')).addEventListener('click', function () {
             const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
+            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
             if (prevCommentaryData && checkIfMonthlyCommentary) {
                 setPrevAndNextMonthsSlider(prevCommentaryData);
                 addCommentary(prevCommentaryData);
@@ -962,7 +966,7 @@ export class IndexComponent implements OnInit {
         });
         (<HTMLElement>document.getElementById('#slide_next')).addEventListener('click', function () {
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
+            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
             if (nextCommentaryData && checkIfMonthlyCommentary) {
                 setPrevAndNextMonthsSlider(nextCommentaryData);
                 addCommentary(nextCommentaryData);
@@ -998,6 +1002,14 @@ export class IndexComponent implements OnInit {
                 d3.select(".mc_rating")
                     .html(`${indexValue}`)
                     ;
+
+                const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
+                if((mydata.length - 1) == indexOfPoint) {
+                    d3.select(".isLatestIdx").style("display", "inherit");
+                } else {
+                    d3.select(".isLatestIdx").style("display", "none");
+                }
+
                 d3.select(".mc_body")
                     .html(`${monthlyC.comment}`)
                     ;
@@ -1005,21 +1017,24 @@ export class IndexComponent implements OnInit {
                 d3.select(".ec_month_title")
                     .html(`${current_month} ${current_year}`)
                     ;
-                d3.select(".ec_title")
-                    .html(`Expert Commentary`)
-                    ;
                 if (expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
                     // commentary member details
                     d3.select('#commentary_mem_details')
                         .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
-                          <div class="member_details">
-                          <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
-                          <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
-                          </div>`)
+                            <div class="member_details">
+                            <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
+                            <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
+                            </div>`)
                         .style("margin-bottom", "15px")
-                        ;
+                    ;
+                    d3.select(".ec_title")
+                        .html(`Expert Commentary`)
+                    ;
                 } else {
                     d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
+                    d3.select(".ec_title")
+                        .html(`Macro Commentary`)
+                    ;
                 }
                 d3.select(".ec_message")
                     .html(`${expertC.ExpertCommentary}`)
@@ -1077,13 +1092,13 @@ export class IndexComponent implements OnInit {
                 .attr("height", height_c + margin_c.top + margin_c.bottom + 40)
                 .append("g")
                 .attr("transform", `translate(${margin_c.left},${margin_c.top})`);
-
+            
             const x_axis = svg_c.append("g")
                 .attr("transform", `translate(0, ${height_c})`)
                 .attr("stroke-width", "1")
                 .attr("class", "x_month_value")
                 .call(xa);
-
+            
             x_axis.append("text")      // text label for the x axis
                 .attr("x", "7em")
                 .attr("y", "3.5em")
@@ -1232,11 +1247,11 @@ export class IndexComponent implements OnInit {
                     $("#yaxisContentInfo").html(infodata);
                 });
 
-            $("#closeInfo").on("click", function (e) {
-                $("#contextMenu").css("display", 'none');
+                $("#closeInfo").on("click", function (e) {
+                    $("#contextMenu").css("display", 'none');
             });
         }
-        addInfoIcon(default_width - 35, 9, "#my_dataviz_insights", "infoIcon_1", svg);
+        addInfoIcon(default_width - 35, 5, "#my_dataviz_insights", "infoIcon_1", svg);
 
         selectionOfXaxis();
 
@@ -1355,10 +1370,10 @@ export class IndexComponent implements OnInit {
                 .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
             svg.append("line")
-                .attr("x1", width + 110)
+                .attr("x1", width + 120)
                 .attr("x2", width + 60)
-                .attr("y1", 185)
-                .attr("y2", 185)
+                .attr("y1", 184)
+                .attr("y2", 184)
                 .style("opacity", 0.5)
                 .style("stroke", "#960000")
                 .attr("stroke-width", 1)
@@ -1367,7 +1382,7 @@ export class IndexComponent implements OnInit {
         addArrowsAfterYaxis();
 
         addLinesForGraph();
-
+        
         addFlags();
         // d3.selectAll('.flags_text').call(wrap);
 
@@ -1376,7 +1391,7 @@ export class IndexComponent implements OnInit {
             const x_orig = x1.invert(mousePointer[0]);
             const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
             const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
-            // xaxis selection on curve selection
+             // xaxis selection on curve selection
             removeXaxisTitleSelection();
             d3.selectAll(".x_month_name").classed("active", false);
             renderPointerOnLine(formattedDate);
@@ -1389,17 +1404,17 @@ export class IndexComponent implements OnInit {
             .attr("stroke", "#2FB36B")
             .attr("stroke-width", "2.5")
             .attr("d", d3.line()
-                .x(function (d: any) {
-                    return x1(<Date>parseDate(d.category))
-                })
-                .x(function (d: any) {
-                    return x2(<Date>parseDate(d.category))
-                })
-                .x(function (d: any) {
-                    return x3(<Date>parseDate(d.category))
-                })
-                .y(function (d: any) { return y1(d.value) })
-                .y(function (d: any) { return y2(d.value) })
+            .x(function (d: any) {
+                return x1(<Date>parseDate(d.category))
+            })
+            .x(function (d: any) {
+                return x2(<Date>parseDate(d.category))
+            })
+            .x(function (d: any) {
+                return x3(<Date>parseDate(d.category))
+            })
+            .y(function (d: any) { return y1(d.value) })
+            .y(function (d: any) { return y2(d.value) })
                 .curve(d3.curveCatmullRom.alpha(0))
             )
             .style("cursor", "pointer")
