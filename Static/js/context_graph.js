@@ -1,5 +1,5 @@
 
-const myJsonUrl="/SumpoornJSON/"
+const myJsonUrl="/SumpoornJSON/";
 
 d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
     // When reading the json, I must format variables:
@@ -104,12 +104,13 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                     .tickSize([35])
                                                     .ticks(width / 12)
                                                     .tickFormat(function (d, i) {
-                                                        const monNum_fmt = d3.timeFormat('%m')(d);
-                                                        const year_fmt = d3.timeFormat('%Y')(d);
-                                                        if (monNum_fmt == '01') {
+                                                        if(i == 0) {
+                                                            const year_fmt = d3.timeFormat('%Y')(d);
                                                             return year_fmt;
-                                                        } else if (monNum_fmt == '10' && year_fmt == '2019') {
-                                                            return year_fmt;
+                                                        } else {
+                                                            const monNum_fmt = d3.timeFormat('%m')(d);
+                                                            const year_fmt = d3.timeFormat('%Y')(d);
+                                                            return (monNum_fmt == '01') ? year_fmt : '';
                                                         }
                                                     })
                                                     ;
@@ -406,7 +407,7 @@ d3.json(myJsonUrl+"sumpoorn_test_json1.json?date="+new Date(),
                                                             .style("text-anchor", "end")
                                                             .style('fill', pmiColorCode)
                                                             .attr("transform", "rotate(-90)")
-                                                            .text("PMI");
+                                                            .html("PMI&#8482;");
 
                                                
                                                     } else if(tickName == 'gva') {
