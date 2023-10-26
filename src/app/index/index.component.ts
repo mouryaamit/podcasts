@@ -1814,7 +1814,7 @@ export class IndexComponent implements OnInit {
                     .style("text-anchor", "end")
                     .style('fill', pmiColorCode)
                     .attr("transform", "rotate(-90)")
-                    .text("PMI");
+                    .html("PMI&#8482;");
 
        
             } else if(tickName == 'gva') {
