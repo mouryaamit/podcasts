@@ -25,11 +25,12 @@ $font-size-27px: 2.25rem;
 $font-size-28px: 2.333rem;
 $font-size-29px: 2.417rem;
 $font-size-30px: 2.5rem;
+$font-size-32px: 2.666rem;
 $font-size-36px: 3rem;
 // /* Marquee Variables on Homepage */
 $marquee-width: 100%;
 $marquee-height: 60vh;
 $marquee-elements: 3; /* defined with JavaScript */
-$marquee-elements-displayed: 1;
+$marquee-elements-displayed: 2.25;
 $marquee-element-width: calc($marquee-width / $marquee-elements-displayed);
 $marquee-animation-duration: calc($marquee-elements * 5s);

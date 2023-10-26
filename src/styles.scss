@@ -7,36 +7,45 @@
   box-sizing: border-box;
   // border: 1px solid red;
 }
+
 html {
   font-size: 12px;
 }
+
 body {
   font-family: "Inter";
   font-weight: 400;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
+
   &.app_home_section_caption {
     &:hover {
       color: #194974;
     }
   }
+
   &.custom-link {
     text-decoration: underline;
     color: #656565;
+
     &:hover {
       text-decoration: none;
       cursor: pointer;
     }
   }
 }
+
 .fw-500 {
   font-weight: 500 !important;
 }
+
 .fw-600 {
   font-weight: 600 !important;
 }
+
 main {
   // padding-top: 3rem !important;
 
@@ -57,15 +66,18 @@ main {
   background-color: $app-white;
   height: 74px;
   padding: 0 2rem;
+
   @media only screen and (min-width: 768px) {
     height: 113px;
     padding: 0 7rem 0 3rem;
   }
+
   .app_hamburger_icon {
     @media only screen and (min-width: 1281px) {
       display: none;
     }
   }
+
   .app_header_hamburger {
     width: 45px;
     height: 45px;
@@ -79,6 +91,7 @@ main {
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     cursor: pointer;
+
     span {
       display: block;
       position: absolute;
@@ -94,17 +107,21 @@ main {
       -moz-transition: 0.25s ease-in-out;
       -o-transition: 0.25s ease-in-out;
       transition: 0.25s ease-in-out;
+
       &:nth-child(1) {
         top: 0px;
       }
+
       &:nth-child(2),
       &:nth-child(3) {
         top: 18px;
       }
+
       &:nth-child(4) {
         top: 36px;
       }
     }
+
     &.open {
       span {
         &:nth-child(1) {
@@ -112,18 +129,21 @@ main {
           width: 0%;
           left: 50%;
         }
+
         &:nth-child(2) {
           -webkit-transform: rotate(45deg);
           -moz-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg);
         }
+
         &:nth-child(3) {
           -webkit-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
         }
+
         &:nth-child(4) {
           top: 18px;
           width: 0%;
@@ -136,11 +156,13 @@ main {
       display: none;
     }
   }
+
   .app_header_left {
     @media only screen and (max-width: 480px) {
       max-width: 60vw;
     }
   }
+
   .app_header_right {
     display: flex;
     flex-direction: column;
@@ -161,6 +183,7 @@ main {
         display: none;
       }
     }
+
     .header_cta {
       display: inline-flex;
       justify-content: center;
@@ -170,10 +193,17 @@ main {
       border-radius: 32px;
       padding: 3px 15px;
       font: 400 $font-size-16px "Poppins", sans-serif;
+
       @media only screen and (max-width: 1281px) {
         margin: 1rem;
       }
+
+      &.active {
+        background: $app-black;
+        color: $app-white;
+      }
     }
+
     .nav-underline {
       .nav-item {
         .nav-link {
@@ -231,11 +261,13 @@ main {
     }
   }
 }
+
 .app_header_shadow {
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
 }
+
 // Header Styles End
 
 // Home Page Styles Start
@@ -266,6 +298,7 @@ main {
       }
     }
   }
+
   .app_home_chart_con {
     // border-radius: 20px;
     background: #6ca88f;
@@ -275,16 +308,19 @@ main {
       0px 189px 76px 0px rgba(21, 138, 102, 0.03),
       0px 295px 83px 0px rgba(21, 138, 102, 0);
     padding: 0.25rem 0;
+
     @media only screen and (min-width: 768px) {
       border-radius: 20px;
       padding: 0.5rem;
     }
+
     .app_home_chart {
       // border-radius: 14px;
       border-top: 1.419px solid #000;
       border-bottom: 1.419px solid #000;
       background: #fff;
       padding: 1.5rem 0.5rem;
+
       @media only screen and (min-width: 768px) {
         border: 1.419px solid #000;
         border-radius: 14px;
@@ -292,24 +328,16 @@ main {
       }
     }
   }
+
   .app_home_chart_info {
     margin: 4.5rem 0 4.75rem;
     padding: 0 2rem;
+
     @media only screen and (min-width: 768px) {
       margin: 6.25rem 0 11rem;
       padding: unset;
     }
-    .discover_cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background: #25bb61;
-      color: $app-white;
-      padding: 11px 35px;
-      border-radius: 56px;
-      font: 500 $font-size-20px "Poppins", sans-serif;
-      margin-bottom: 3rem;
-    }
+
     p {
       color: #25505c;
       font-size: $font-size-18px;
@@ -326,12 +354,15 @@ main {
       }
     }
   }
+
   .app_home_msme_section {
     background: #c4e2fd;
     padding: 4.5rem 0 5.25rem;
+
     @media only screen and (min-width: 768px) {
       padding: 7rem 0;
     }
+
     .app_home_msme_chart {
       background: #fff;
       box-shadow: 0px 8px 18px 0px rgba(3, 61, 114, 0.1),
@@ -340,6 +371,7 @@ main {
         0px 133px 53px 0px rgba(3, 61, 114, 0.01),
         0px 208px 58px 0px rgba(3, 61, 114, 0);
       margin: 0.5rem 0 6.5rem;
+
       @media only screen and (min-width: 768px) {
         border-top-right-radius: 1.25rem;
         border-bottom-right-radius: 1.25rem;
@@ -347,21 +379,28 @@ main {
       }
     }
   }
+
   .app_home_eco_section {
-    padding: 4rem 0 7.75rem 2.5rem;
+    padding: 4rem 0 7.75rem;
     overflow-x: hidden;
+
     @media only screen and (min-width: 768px) {
       padding: 6rem 0 14rem;
     }
+
     .app_home_section_title {
       color: #25505c;
+
       @media only screen and (max-width: 767px) {
+        padding-left: 2.5rem;
         padding-right: 2.5rem;
         font-size: $font-size-18px;
       }
     }
+
     .app_eco_cards {
       padding-top: 3rem;
+
       .row {
         @media only screen and (max-width: 767px) {
           flex-wrap: nowrap;
@@ -371,12 +410,18 @@ main {
             display: none;
           }
         }
+
         .col {
           @media only screen and (max-width: 767px) {
+            &:first-of-type {
+              margin-left: 2.5rem;
+            }
+
             &:last-of-type {
               margin-right: 2.5rem;
             }
           }
+
           .app_eco_card_box {
             display: flex;
             flex-direction: column;
@@ -386,10 +431,12 @@ main {
             background: #fff;
             padding: 32px;
             gap: 40px;
+
             @media only screen and (max-width: 767px) {
               max-width: 264px;
               padding: 23px;
             }
+
             .app_eco_card_content {
               .app_eco_card_title {
                 color: #25505c;
@@ -400,6 +447,7 @@ main {
                   font-size: $font-size-24px;
                 }
               }
+
               .app_eco_card_detail {
                 color: #25505c;
                 font-size: $font-size-15px;
@@ -416,6 +464,7 @@ main {
       }
     }
   }
+
   .app_home_minds_section {
     background: $app-white;
     padding: 6rem 0 7rem;
@@ -435,27 +484,37 @@ main {
       }
     }
   }
+
   .app_home_meth_section {
     padding: 8rem 0 7rem;
     overflow-x: hidden;
+
     @media only screen and (min-width: 768px) {
       padding: 15rem 0;
     }
+
     .app_methodology_cards {
       @media only screen and (max-width: 767px) {
         padding-bottom: 4.25rem;
       }
+
       @media only screen and (min-width: 768px) {
         margin-left: -5rem;
         padding-top: 0;
       }
+
       .row {
         .col {
+          @media only screen and (max-width: 767px) {
+            margin-left: unset;
+          }
+
           &:nth-child(-n + 2) {
             @media only screen and (min-width: 768px) {
               display: none;
             }
           }
+
           .app_methodology_card_box {
             @media only screen and (max-width: 767px) {
               padding: 18px 14px;
@@ -473,10 +532,15 @@ main {
       }
     }
   }
+
   .app_home_testimonial {
     .testimonial_content_con {
       padding: 6rem 2rem 4rem 3.5rem;
       text-align: start;
+
+      @media only screen and (min-width: 390px) and (max-width: 394px) {
+        padding-right: 2.5rem;
+      }
 
       @media only screen and (min-width: 768px) {
         padding: 8rem 2rem 4rem 8rem;
@@ -501,6 +565,7 @@ main {
           @media only screen and (max-width: 767px) {
             padding-top: 2rem;
           }
+
           &::before {
             position: absolute;
             content: url("assets/icons/ivc-start-gray.svg");
@@ -512,6 +577,7 @@ main {
             }
           }
         }
+
         &:last-of-type {
           &::after {
             position: absolute;
@@ -525,10 +591,12 @@ main {
 
     .testimonial_img_con {
       overflow: hidden;
+
       @media only screen and (max-width: 767px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         img {
           width: 182px;
           height: 182px;
@@ -568,6 +636,7 @@ main {
             // left: -5rem;
           }
         }
+
         &:last-of-type {
           &::after {
             // position: absolute;
@@ -577,6 +646,7 @@ main {
           }
         }
       }
+
       .testimonial_img_con {
         @media only screen and (max-width: 767px) {
           order: 2;
@@ -615,6 +685,7 @@ main {
       font-size: $font-size-16px;
       line-height: normal;
       width: 90%;
+
       span {
         @media only screen and (max-width: 767px) {
           display: block;
@@ -628,6 +699,7 @@ main {
       }
     }
   }
+
   .app_home_marquee {
     background: $app-white;
     width: $marquee-width;
@@ -643,10 +715,9 @@ main {
       0% {
         transform: translateX(0);
       }
+
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width * $marquee-elements));
       }
     }
 
@@ -656,6 +727,7 @@ main {
       display: flex;
       padding: 0;
       animation: scrolling $marquee-animation-duration linear infinite;
+
       li {
         display: flex;
         flex-direction: column;
@@ -664,6 +736,7 @@ main {
         flex-shrink: 0;
         width: $marquee-element-width;
         max-height: 100%;
+
         .marquee-content-title {
           color: #000;
           font-size: 24px;
@@ -673,6 +746,7 @@ main {
     }
   }
 }
+
 // Home Page Styles Start
 
 // Generic Styles Start
@@ -690,26 +764,58 @@ main {
     justify-content: center;
     height: 83px;
   }
+
   p {
     color: #4a4a4a;
     font: 600 $font-size-24px "Poppins", sans-serif;
     line-height: 120%;
     margin-bottom: 0;
+
     @media only screen and (min-width: 768px) {
       margin-right: 2rem;
     }
   }
-  .subscribe_cta {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background: #25bb61;
+}
+
+.app_primary_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #25bb61;
+  color: $app-white;
+  padding: 11px 35px;
+  border-radius: 56px;
+  font: 500 $font-size-16px "Poppins", sans-serif;
+  margin-bottom: 3rem;
+
+  &:hover {
     color: $app-white;
-    padding: 12px 24px;
-    border-radius: 60px;
-    font: 500 $font-size-20px "Poppins", sans-serif;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: $font-size-20px;
   }
 }
+
+.app_secondary_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #25bb61;
+  color: $app-white;
+  padding: 12px 24px;
+  border-radius: 60px;
+  font: 500 $font-size-16px "Poppins", sans-serif;
+
+  &:hover {
+    color: $app-white;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: $font-size-20px;
+  }
+}
+
 .section_title {
   color: $app-black;
   font: 700 $font-size-28px "Poppins", sans-serif;
@@ -720,16 +826,19 @@ main {
     margin-bottom: 4rem;
   }
 }
+
 .app_home_section_title {
   color: #000;
   font: 700 $font-size-20px "Poppins", sans-serif;
   line-height: 120%;
   margin-bottom: 2rem;
+
   @media only screen and (min-width: 768px) {
-    font-size: 32px;
+    font-size: $font-size-32px;
     margin-bottom: 4rem;
   }
 }
+
 .app_home_section_caption {
   color: #194974;
   font-size: $font-size-18px;
@@ -750,42 +859,55 @@ main {
     }
   }
 }
+
 .blue-text {
   color: #194974 !important;
 }
+
 .app_methodology_caption {
   color: $app-black;
   font-size: $font-size-18px;
   line-height: normal;
   margin-bottom: 0;
+
   span {
     @media only screen and (min-width: 1281px) {
       display: block;
     }
   }
 }
+
 .app_methodology_cards {
   @media screen and (max-width: 767px) {
     padding-bottom: 7.5rem;
   }
+
   @media screen and (min-width: 768px) {
     padding-top: 7.5rem;
   }
+
   .row {
     @media only screen and (max-width: 767px) {
       flex-wrap: nowrap;
       overflow-x: scroll;
       padding-left: 2rem;
+
       &::-webkit-scrollbar {
         display: none;
       }
     }
+
     .col {
-      &:last-of-type {
-        @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 767px) {
+        &:first-of-type {
+          margin-left: 2rem;
+        }
+
+        &:last-of-type {
           margin-right: 2rem;
         }
       }
+
       .app_methodology_card_box {
         display: flex;
         flex-direction: column;
@@ -799,10 +921,13 @@ main {
           0px 139px 39px 0px rgba(0, 0, 0, 0);
         min-height: 270px;
         padding: 32px 24px;
+
         @media only screen and (max-width: 767px) {
+          box-shadow: none;
           max-width: 210px;
           min-height: 270px;
         }
+
         p {
           color: #494949;
           font-family: "Alegreya Sans";
@@ -813,10 +938,12 @@ main {
     }
   }
 }
+
 .app_roadmap_note {
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
   padding: 2rem 0rem;
+
   p {
     color: #767676;
     font-size: $font-size-14px;
@@ -825,49 +952,61 @@ main {
     text-align: start;
   }
 }
+
 // Generic Styles End
 
 // About Page Styles Start
 .app_about {
   padding-top: 6rem;
+
   .app_about_gallery {
     background: $app-white;
     padding: 2rem;
+
     @media only screen and (min-width: 768px) {
       padding: 5rem;
     }
+
     .app_about_gallery_title {
       color: #4a4a4a;
       font: 700 $font-size-24px "Poppins", sans-serif;
       line-height: normal;
       margin-bottom: 0;
     }
+
     .app_about_gallery_info {
       color: #4a4a4a;
       font-size: $font-size-18px;
       line-height: normal;
       margin: 8px 0 40px;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-19px;
       }
     }
+
     .gallery_con {
       @media only screen and (max-width: 767px) {
         text-align: center;
       }
+
       .col {
         margin-bottom: 2.5rem;
+
         @media only screen and (min-width: 768px) {
           margin-bottom: 8rem;
         }
+
         .figure {
           img {
             margin-bottom: 1.25rem;
           }
+
           .figure-caption {
             @media only screen and (max-width: 767px) {
               text-align: start;
             }
+
             .name {
               color: #000;
               font-size: $font-size-18px;
@@ -879,6 +1018,7 @@ main {
               color: #7d7d7d;
               font-size: $font-size-16px;
               line-height: normal;
+
               @media only screen and (min-width: 768px) {
                 width: 90%;
               }
@@ -888,9 +1028,11 @@ main {
       }
     }
   }
+
   .app_about_info_con {
     background: #f8f8f8;
     padding: 2rem;
+
     @media only screen and (min-width: 768px) {
       padding: 5rem 0 10rem;
     }
@@ -900,10 +1042,12 @@ main {
         color: #194974;
         font-size: $font-size-16px;
         line-height: 157.523%;
+
         @media only screen and (min-width: 768px) {
           color: #4a4a4a;
           font-size: $font-size-18px;
         }
+
         a {
           color: inherit;
         }
@@ -911,49 +1055,61 @@ main {
     }
   }
 }
+
 // About Page Styles End
 
 // Terms of Use Styles Start
 .app_tou {
   background: #f8f8f8;
+
   @media only screen and (min-width: 768px) {
     background: #f2f2f2;
   }
+
   padding-top: 6rem;
+
   @media only screen and (min-width: 768px) {
     padding-top: 9.5rem;
   }
 
   .app_tou_content {
     margin: 2rem;
+
     @media only screen and (min-width: 768px) {
       margin: 9.5rem 0;
     }
+
     .app_tou_content_main_title {
       color: #000;
       font-size: $font-size-18px;
       font-weight: 700;
       line-height: 119.2%;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-20px;
       }
     }
+
     .app_tou_content_sub_title {
       color: #000;
       font-size: $font-size-14px;
       font-weight: 600;
       line-height: 119.2%;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-16px;
       }
     }
+
     p {
       color: #6f6f6f;
       font-size: $font-size-14px;
       line-height: 119.2%;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-16px;
       }
+
       a {
         color: inherit;
         text-decoration: underline;
@@ -966,6 +1122,7 @@ main {
 .app_roadmap {
   background: #d1f2e8;
   padding-top: 7.5rem;
+
   // @media only screen and (min-width: 768px) {
   //   padding-top: 7.5rem;
   // }
@@ -973,19 +1130,23 @@ main {
     // height: 580px;
     padding: 2.75rem 2rem;
     align-items: center;
+
     @media only screen and (min-width: 768px) {
       padding: 7.5rem 0 4.75rem;
     }
+
     .app_roadmap_title {
       color: #194974;
       font: 700 $font-size-28px "Poppins", sans-serif;
       line-height: 137.523%;
     }
+
     .app_roadmap_caption {
       color: #194974;
       font-size: $font-size-20px;
       line-height: 137.523%;
       margin: 2rem auto;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-28px;
         margin: 5.75rem auto 7.75rem;
@@ -995,12 +1156,15 @@ main {
         }
       }
     }
+
     .app_roadmap_subtitle {
       @extend .app_roadmap_title;
+
       @media only screen and (max-width: 768px) {
         font-size: $font-size-18px;
       }
     }
+
     .arrow_down {
       &:hover {
         transform: translateY(30px);
@@ -1011,12 +1175,15 @@ main {
       }
     }
   }
+
   .app_roadmap_grey_section {
     background: #f8f8f8;
     padding-top: 4rem;
+
     .app_methodology_caption {
       padding-top: 2rem;
     }
+
     .section_title,
     .app_methodology_caption {
       @media only screen and (max-width: 767px) {
@@ -1024,6 +1191,7 @@ main {
         padding-right: 2.25rem;
       }
     }
+
     // .app_methodology_caption {
     //   span {
     //     @media only screen and (min-width: 768px) {
@@ -1039,6 +1207,7 @@ main {
         0px 76px 46px 0px rgba(0, 0, 0, 0.05),
         0px 136px 54px 0px rgba(0, 0, 0, 0.01),
         0px 212px 59px 0px rgba(0, 0, 0, 0);
+
       @media only screen and (min-width: 768px) {
         margin: 7.5rem auto 6rem;
         border-radius: 16px;
@@ -1051,6 +1220,7 @@ main {
       font-weight: 700;
       line-height: 140.523%;
       margin-bottom: 2.5rem;
+
       @media only screen and (min-width: 768px) {
         margin-bottom: 1.75rem;
       }
@@ -1059,11 +1229,13 @@ main {
     .app_roadmap_note {
       padding-left: 2rem;
       padding-right: 2rem;
+
       @media only screen and (min-width: 992px) {
         padding-left: 6rem;
         padding-right: 6rem;
       }
     }
+
     .app_roadmap_grey_text {
       color: #a6a6a6;
     }
@@ -1071,6 +1243,7 @@ main {
     .app_roadmap_indices {
       text-align: center;
       padding: 7rem 3rem;
+
       @media only screen and (min-width: 992px) {
         text-align: start;
         padding: 10.5rem 3rem 12.5rem;
@@ -1085,10 +1258,12 @@ main {
               margin-bottom: 6rem;
             }
           }
+
           .section_title {
             margin: 1.25rem auto;
             padding: 0;
           }
+
           .app_methodology_caption {
             padding: 0;
             color: #4a4a4a;
@@ -1103,61 +1278,8 @@ main {
       }
     }
   }
-  // .app_roadmap_hsn {
-  //   .app_roadmap_hsn_info {
-  //     color: #000;
-  //     font-size: $font-size-18px;
-  //   }
-  // }
 }
-// .app_roadmap_hsn_link {
-//   p {
-//     color: #707070;
-//     font-size: $font-size-16px;
-//     margin-bottom: 0;
-//     a {
-//       color: inherit;
-//       text-decoration: underline;
-//     }
-//   }
-// }
-.roadmap_hsn_modal {
-  max-width: 944px;
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-  .modal-content {
-    border-radius: 16px;
-    background: $app-white;
-    .modal-body {
-      padding: 10px 20px 44px;
-      @media only screen and (min-width: 768px) {
-        padding: 10px 60px 44px 44px;
-      }
-      .hsn_modal_title {
-        color: #4a4a4a;
-        font: 600 22px "Poppins";
-        line-height: 120%;
-        margin-bottom: 2rem;
-      }
-      .hsn_modal_caption {
-        color: rgba(74, 74, 74, 0.92);
-        font-size: $font-size-16px;
-        line-height: normal;
-        span {
-          @media only screen and (min-width: 992px) {
-            display: block;
-          }
-        }
-        a {
-          color: inherit;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
+
 // Roadmap Page Styles End
 
 // Methodology Page Styles Start
@@ -1177,7 +1299,7 @@ main {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      > span:not(span span) {
+      >span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -1193,9 +1315,11 @@ main {
 
   .app_methodology_tabs {
     background: $app-white;
+
     .nav-tabs {
       margin: 1.5rem auto 3rem;
       border-color: #4a4a4a;
+
       @media only screen and (max-width: 991px) {
         flex-wrap: nowrap;
         overflow-x: scroll;
@@ -1205,6 +1329,7 @@ main {
           display: none;
         }
       }
+
       @media only screen and (min-width: 992px) {
         justify-content: space-evenly;
       }
@@ -1213,15 +1338,18 @@ main {
         color: #4a4a4a;
         font: 400 $font-size-18px "Poppins", sans-serif;
         text-align: left;
+
         span {
           margin-left: 1rem;
         }
+
         &.active {
           border-color: #4a4a4a #4a4a4a #fff;
           font-weight: 700;
           padding-right: 1.5rem;
           padding-left: 1.5rem;
         }
+
         &:not(.active) {
           border-color: transparent;
         }
@@ -1230,6 +1358,7 @@ main {
 
     .section_title {
       margin-bottom: 1.25rem;
+
       @media only screen and (max-width: 767px) {
         font-size: $font-size-24px;
       }
@@ -1237,10 +1366,32 @@ main {
 
     .app_methodology_caption {
       padding-bottom: 3.25rem;
+
       @media only screen and (max-width: 767px) {
         font-size: $font-size-16px;
         padding-right: 2.25rem;
         padding-left: 2.25rem;
+      }
+    }
+
+    .app_roadmap_note {
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: 767px) {
+        border: 0;
+      }
+
+      p {
+        @media only screen and (max-width: 767px) {
+          border-top: 1px solid #dfdfdf;
+          border-bottom: 1px solid #dfdfdf;
+          margin: 0 2rem;
+          padding: $font-size-14px 0;
+        }
+
+        @media only screen and (max-width: 1280px) {
+          font-size: $font-size-12px;
+        }
       }
     }
 
@@ -1253,30 +1404,36 @@ main {
         scrollbar-width: thin;
         scrollbar-color: transparent transparent;
         -ms-overflow-style: none;
+
         &::-webkit-scrollbar {
           width: 0;
           width: 5px;
           background-color: #f6f6f6;
         }
+
         &::-webkit-scrollbar-track {
           -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           border-radius: 5px;
           background-color: transparent;
           display: none;
         }
+
         &::-webkit-scrollbar-thumb {
           border-radius: 10px;
           -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           background-color: #e3e3e3;
         }
+
         ul {
           &.state-list {
             max-height: 100%;
           }
+
           li {
             border-bottom: 0.903px solid #dbdbdb;
             padding: 7.2px;
             cursor: pointer;
+
             span {
               &.state-name {
                 display: flex;
@@ -1284,16 +1441,19 @@ main {
                 align-items: center;
                 color: #000;
                 font-size: 14.456px;
+
                 .toggle-icon {
                   float: right;
                 }
               }
             }
+
             ul {
               &.city-dropdown {
                 list-style-type: none;
                 padding-left: 0;
                 flex-wrap: wrap;
+
                 li {
                   border-bottom: none;
                   flex: 50%;
@@ -1305,6 +1465,7 @@ main {
             }
           }
         }
+
         h6 {
           position: sticky;
           top: 0;
@@ -1316,6 +1477,7 @@ main {
           line-height: 120%;
           padding-left: 7.2px;
         }
+
         .accordion {
           --bs-accordion-border-color: transparent;
           --bs-accordion-btn-padding-x: 0.6rem;
@@ -1330,13 +1492,20 @@ main {
           --bs-accordion-body-padding-y: 0.6rem;
           --bs-accordion-active-color: $app-black;
           --bs-accordion-active-bg: transparent;
+
           .accordion-item {
             .accordion-header {
               border-bottom: 0.903px solid #dbdbdb;
+
               .accordion-button {
                 font-size: 14.456px;
+
+                &:not(.collapsed) {
+                  font-weight: 600;
+                }
               }
             }
+
             .accordion-body {
               .city_dropdown {
                 display: flex;
@@ -1344,6 +1513,7 @@ main {
                 list-style-type: none;
                 padding-left: 0;
                 margin-bottom: 0;
+
                 li {
                   border-bottom: none;
                   flex: 50%;
@@ -1365,29 +1535,11 @@ main {
       // }
 
       .app_roadmap_note {
-        margin-bottom: 3rem;
-
-        @media only screen and (max-width: 767px) {
-          border: 0;
-        }
-
         @media only screen and (min-width: 768px) {
           padding: 1rem 0rem;
         }
-
-        p {
-          @media only screen and (max-width: 767px) {
-            border-top: 1px solid #dfdfdf;
-            border-bottom: 1px solid #dfdfdf;
-            margin: 0 2rem;
-            padding: $font-size-14px 0;
-          }
-
-          @media only screen and (max-width: 1280px) {
-            font-size: $font-size-12px;
-          }
-        }
       }
+
       .app_methodology_tbl_section {
         font-size: $font-size-11px;
         text-align: start;
@@ -1396,6 +1548,7 @@ main {
           max-width: 75vw;
           margin: 0 auto 2.25rem;
         }
+
         @media only screen and (min-width: 1280px) {
           font-size: $font-size-14px;
         }
@@ -1409,21 +1562,25 @@ main {
 
         table {
           margin-bottom: 0.25rem;
+
           td,
           th {
             padding: 0;
             color: #626262;
           }
+
           th {
             font-weight: 400;
             border-top: 1px solid #dadada;
             border-bottom: 1px solid #dadada;
           }
+
           tbody {
             tr {
               &:last-of-type {
                 border-bottom: 1px solid #dadada;
               }
+
               &:nth-child(1) {
                 td {
                   &:first-child {
@@ -1431,6 +1588,7 @@ main {
                   }
                 }
               }
+
               &:nth-child(2) {
                 td {
                   &:first-child {
@@ -1438,6 +1596,7 @@ main {
                   }
                 }
               }
+
               &:nth-child(3) {
                 td {
                   &:first-child {
@@ -1448,6 +1607,7 @@ main {
             }
           }
         }
+
         .tbl_caption {
           color: #8c8c8c;
           line-height: 124.023%;
@@ -1458,13 +1618,15 @@ main {
   }
 
   .app_methodology_section {
-    padding: 3.5rem 0 6.25rem 2.5rem;
+    padding: 3.5rem 0 6.25rem;
 
     @media only screen and (min-width: 768px) {
       padding: 8.5rem 0 12rem;
     }
+
     .order-1.order-md-0 {
       @media only screen and (max-width: 767px) {
+        padding-left: 2.5rem;
         padding-right: 2.5rem;
       }
     }
@@ -1472,6 +1634,7 @@ main {
 
   .app_consideration_section {
     padding-bottom: 7.5rem;
+
     .app_consideration_cards {
       .col {
         &:not(:last-child) {
@@ -1479,6 +1642,7 @@ main {
             margin-bottom: 4.25rem;
           }
         }
+
         h6 {
           color: #194974;
           font: 600 $font-size-18px "Poppins", sans-serif;
@@ -1489,13 +1653,16 @@ main {
             font-size: $font-size-21px;
           }
         }
+
         .app_consideration_card_box {
           padding-right: 1rem;
           padding-left: 1rem;
+
           @media screen and (min-width: 768px) {
             border-top: 1px solid #9cbdda;
             padding: 0.5rem 1.5rem;
           }
+
           ul {
             li {
               color: #194974;
@@ -1526,10 +1693,12 @@ main {
       .section_title {
         color: #25505c;
       }
+
       .app_methodology_caption {
         padding: 0 1.5rem;
       }
     }
+
     .meth_index_gif_con {
       background: #fdfbfd;
       box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
@@ -1538,6 +1707,7 @@ main {
         0px 89px 36px 0px rgba(0, 0, 0, 0.01),
         0px 139px 39px 0px rgba(0, 0, 0, 0);
       margin-top: 4.25rem;
+
       @media screen and (min-width: 768px) {
         border-radius: 24px;
         margin-top: 5rem;
@@ -1547,11 +1717,14 @@ main {
 
   .app_methodology_index_frequency {
     padding: 3.5rem 1.5rem 8rem;
+
     @media only screen and (min-width: 768px) {
       padding: 5.75rem 0 11rem;
     }
+
     img {
       margin-bottom: 7.5rem;
+
       @media only screen and (min-width: 768px) {
         margin-bottom: 12.25rem;
       }
@@ -1565,6 +1738,7 @@ main {
     .nav-link {
       color: #717171;
       font: 400 $font-size-16px "Poppins", sans-serif;
+
       &.active {
         background-color: #e1e1e1;
         color: $app-black;
@@ -1574,17 +1748,21 @@ main {
     }
   }
 }
+
 .app_index_commentary_con {
   background: #fafafa;
   padding-bottom: 10rem;
 }
+
 .app_index {
   .carousel_commentary {
     display: flex;
     gap: 4px;
+
     a {
       height: max-content;
     }
+
     .carousel_controls {
       display: flex;
       flex-direction: column;
@@ -1595,8 +1773,10 @@ main {
       padding: 0 12px;
       width: 50px;
       height: 72px;
+
       &:hover {
         background-color: #e6e6e6;
+
         .button_left_arrow {
           transform: translateX(-5px);
           -webkit-transition: transform 500ms;
@@ -1604,6 +1784,7 @@ main {
           -o-transition: transform 500ms;
           transition: transform 500ms;
         }
+
         .button_right_arrow {
           transform: translateX(5px);
           -webkit-transition: transform 500ms;
@@ -1615,6 +1796,7 @@ main {
     }
   }
 }
+
 .carousel_commentary {
   .carousel_controls {
     span {
@@ -1625,11 +1807,13 @@ main {
       }
     }
   }
+
   .carousel-item {
     &.bg-body {
       background-color: #fafafa !important;
     }
   }
+
   .commentary_header {
     display: flex;
     flex-direction: column;
@@ -1638,6 +1822,7 @@ main {
     height: 72px;
     background: #e6e6e6;
     padding: 10px 20px;
+
     p {
       &.commentary_month {
         color: #4a4a4a;
@@ -1645,6 +1830,7 @@ main {
         font-size: $font-size-16px;
         line-height: normal;
       }
+
       &.commentary_title {
         color: #2e2e2e;
         font: 700 $font-size-20px "Poppins", sans-serif;
@@ -1652,11 +1838,13 @@ main {
       }
     }
   }
+
   .commentary_body {
     text-align: left;
     padding: 20px 5px;
   }
 }
+
 .commentary_body {
   .commentary_body_left_title {
     color: #119345;
@@ -1665,6 +1853,7 @@ main {
     line-height: normal;
     margin-bottom: 0;
   }
+
   .commentary_body_left {
     .title_rating {
       border-radius: 6px;
@@ -1674,6 +1863,7 @@ main {
       font: 600 $font-size-16px "Inter", sans-serif;
       margin: 5px 15px 5px 5px;
     }
+
     .circle_waves {
       margin: 0 auto;
       width: 8px;
@@ -1683,11 +1873,13 @@ main {
       right: 0;
     }
   }
+
   .commentary_body_left_detail {
     color: #505050;
     font-size: 17px;
     line-height: 130%;
   }
+
   .commentary_body_right {
     .commentary_body_right_title {
       color: #2e2e2e;
@@ -1703,10 +1895,12 @@ main {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(2);
     opacity: 0.75;
   }
+
   100% {
     transform: scale(3);
     opacity: 0;
@@ -1717,10 +1911,12 @@ main {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1.25);
     opacity: 0.75;
   }
+
   100% {
     transform: scale(2);
     opacity: 0;
@@ -1731,9 +1927,11 @@ main {
   background: #fff;
   animation: circleTwo 1.5s infinite ease-out;
 }
+
 .circle_three {
   background-color: #25bb61;
 }
+
 .commentary_body_right {
   .member_con {
     background: #d2f3e1;
@@ -1743,8 +1941,10 @@ main {
     align-items: center;
     overflow: hidden;
   }
+
   .commentary_body_right_detail {
     margin: 0 5px 15px 5px;
+
     p {
       color: #4a4a4a;
       font-size: 17px;
@@ -1752,6 +1952,7 @@ main {
     }
   }
 }
+
 .member_con {
   .member_details {
     .member_name {
@@ -1759,6 +1960,7 @@ main {
       font: 600 $font-size-18px "Work Sans";
       line-height: 120%;
     }
+
     .member_title {
       color: #4a4a4a;
       font: 400 $font-size-14px "Work Sans";
@@ -1766,19 +1968,23 @@ main {
     }
   }
 }
+
 .app_index_context_con {
   background: #deefff;
+
   .app_index_context_title {
     color: #194974;
     font: 700 $font-size-28px "Poppins", sans-serif;
     line-height: 120%;
   }
+
   .app_index_context_caption {
     color: #194974;
     font-size: $font-size-18px;
     line-height: 130%;
   }
 }
+
 .app_index_context_table {
   text-align: left;
   background: $app-white;
@@ -1788,42 +1994,53 @@ main {
     0px 64px 26px 0px rgba(26, 73, 115, 0.01),
     0px 100px 28px 0px rgba(26, 73, 115, 0),
     0px -3px 23px 0px rgba(25, 73, 116, 0.09);
+
   th,
   td {
     padding: 16px !important;
   }
+
   thead {
     background: #edf5fd;
+
     th {
       vertical-align: baseline;
       color: #194974;
       font-size: $font-size-18px;
       font-weight: 700;
       line-height: 120%;
+
       span {
         display: block;
       }
     }
   }
+
   tbody {
     color: #000;
     font-size: $font-size-15px;
     font-weight: 400;
     line-height: 120%;
+
     th {
       font-weight: 600;
     }
   }
 }
+
 .table-blue {
   color: #2e8dff;
 }
+
 .table-orange {
   color: #e1861b;
 }
+
 .table-green {
   color: #2fb36b;
 }
+
+// Footer Styles Start
 .app_footer {
   display: flex;
   flex-direction: column;
@@ -1845,18 +2062,24 @@ main {
   .list-group-item {
     background: unset;
     border: none;
+
     a {
       color: #5c5c5c;
       text-decoration: underline;
+
       &:hover {
         color: $app-black;
       }
     }
+
     &:not(:last-of-type) {
       border-right: 1px solid #d0d0d0;
     }
   }
 }
+
+// Footer Styles End
+
 .app_contact_cards {
   .app_contact_card_box {
     display: flex;
@@ -1869,12 +2092,14 @@ main {
       0px 50px 30px 0px rgba(0, 0, 0, 0.03),
       0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
     min-height: 270px;
+
     p {
       color: #494949;
       font-family: "Alegreya Sans";
       font-size: $font-size-16px;
       line-height: 140.523%;
     }
+
     .app_contact_card_box_title {
       color: #000;
       font-size: $font-size-20px;
@@ -1883,14 +2108,14 @@ main {
     }
   }
 }
-.width-100 {
-  width: 100%;
-}
+
 .mt-20 {
   margin-top: 20px;
 }
+
 .form-group {
   margin-bottom: 25px;
+
   .form-control {
     border-radius: 0;
     border: none;
@@ -1898,20 +2123,23 @@ main {
     border-bottom: 1px solid #cccccc;
     height: 30px;
     line-height: 30px;
+
     &:focus {
       box-shadow: none;
       border-color: #000;
     }
-    &:active {
-    }
-    &:hover {
-    }
+
+    &:active {}
+
+    &:hover {}
   }
-  .custom-label {
-  }
+
+  .custom-label {}
+
   textarea {
     &.form-control {
       resize: none;
+
       &.feedback {
         height: 60px;
         background-color: #f9f9f9;
@@ -1920,29 +2148,33 @@ main {
       }
     }
   }
+
   select {
     &.form-control {
-      option {
-      }
+      option {}
     }
   }
 }
+
 .form-control {
   &::placeholder {
     color: $app-black;
     opacity: 1;
   }
+
   &:-ms-input-placeholder {
     color: $app-black;
   }
+
   &::-ms-input-placeholder {
     color: $app-black;
   }
 }
+
 .form-group .form-control:disabled,
 .form-group .form-control[disabled],
-.form-group .form-control.disabled {
-}
+.form-group .form-control.disabled {}
+
 .sm-primary-button {
   border: none;
   justify-content: center;
@@ -1953,44 +2185,37 @@ main {
   border-radius: 8px;
   font: 500 $font-size-16px "Poppins", sans-serif;
 }
+
 .sm-primary-button[disabled],
 .sm-primary-button.disabled {
   opacity: 0.7;
   pointer-events: none;
 }
+
 .app-contact {
   background-color: #f2f2f2;
 }
+
 .app-contact-block-margin {
   padding: 6rem 0;
 }
+
 .black-text {
   color: #000000;
-}
-.modal-body {
-  padding: 12px 20px;
 }
 .terms-label {
   color: #656565;
 }
+
 .dropwodn-chevron-adjust {
   float: right;
   position: relative;
   top: -15px;
   width: 12px;
 }
+
 .app_contact_content_sub_title {
   margin-bottom: 1.8rem !important;
-}
-.complete-form-text {
-  color: #000;
-  font-size: $font-size-14px;
-}
-.required-text {
-  color: #535353;
-  font-size: $font-size-12px;
-  display: block;
-  padding-top: 4px;
 }
 
 @media screen and (max-width: 767px) {
@@ -2000,3 +2225,219 @@ main {
     transform: none !important;
   }
 }
+
+// Institution Login Page Styles Start
+.app_institution {
+  @media only screen and (min-width: 768px) {
+    padding-top: 9.5rem;
+  }
+
+  .app_institution_cards_section {
+    background: #c4e2fd;
+    padding: 8.5rem 0 9.25rem 0;
+    overflow-x: hidden;
+
+    .app_institution_main_title {
+      color: #25505c;
+      font: 700 $font-size-32px "Poppins", sans-serif;
+      line-height: 150%;
+      /* 48px */
+      margin-bottom: 4rem;
+
+      @media only screen and (max-width: 767px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: $font-size-18px;
+      }
+    }
+
+    .app_institution_cards {
+      .row {
+        @media only screen and (max-width: 767px) {
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .col {
+          @media only screen and (max-width: 767px) {
+            &:first-of-type {
+              margin-left: 2.5rem;
+            }
+
+            &:last-of-type {
+              margin-right: 2.5rem;
+            }
+          }
+
+          .app_institution_card_box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: start;
+            border-radius: 8px;
+            background: #fff;
+            padding: 32px;
+            gap: 40px;
+
+            @media only screen and (max-width: 767px) {
+              max-width: 264px;
+              padding: 23px;
+            }
+
+            .app_institution_card_content {
+              .app_institution_card_title {
+                color: #25505c;
+                font: 700 $font-size-18px "Poppins", sans-serif;
+                line-height: 138.023%;
+
+                @media only screen and (min-width: 768px) {
+                  font-size: $font-size-24px;
+                }
+              }
+
+              .app_institution_card_detail {
+                color: #25505c;
+                font-size: $font-size-15px;
+                margin-bottom: 0;
+                line-height: 138.023%;
+
+                @media only screen and (min-width: 768px) {
+                  font-size: $font-size-20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .app_institution_login_section {
+    background: #d1f2e8;
+    padding: 6.75rem 2rem;
+
+    @media only screen and (min-width: 768px) {
+      padding-left: unset;
+      padding-right: unset;
+    }
+
+    .app_login_details {
+      .app_home_section_title {
+        color: #25505c;
+        margin-bottom: 2.75rem;
+      }
+
+      .app_primary_btn {
+        @media only screen and (min-width: 768px) {
+          margin-bottom: 0;
+          margin-right: 2.5rem;
+        }
+      }
+
+      .app_secondary_btn {
+        background: #949494;
+      }
+    }
+  }
+}
+
+// Institution Login Page Styles End
+
+
+// Modal Styles Start
+.modal {
+  .modal-content {
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.10), 0px 86px 86px 0px rgba(0, 0, 0, 0.09), 0px 194px 116px 0px rgba(0, 0, 0, 0.05), 0px 345px 138px 0px rgba(0, 0, 0, 0.01), 0px 539px 151px 0px rgba(0, 0, 0, 0.00);
+    padding: 2rem;
+    .modal-header {
+      padding: unset;
+      border-bottom: none;
+      // padding: 3rem 1.25rem 1.25rem 3rem;
+      .modal-title {
+        color: $app-black;
+        font: 700 $font-size-20px "Poppins", sans-serif;
+        line-height: normal;
+      }
+      .btn-close {
+        color: $app-black;
+      }
+    }
+    .modal-body {
+      padding: unset;
+      .complete_form_text {
+        color: $app-black;
+        font-weight: 500;
+        font-size: $font-size-18px;
+        line-height: normal;
+        margin-top: 2.25rem;
+      }
+      .required_text {
+        color: #535353;
+        font-size: $font-size-15px;
+        line-height: normal;
+        margin: 0.5rem 0 2.5rem;
+        span {
+          color: #932d2d;
+        }
+      }
+      .success_text {
+        color: #696969;
+        font-size: $font-size-18px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .roadmap_hsn_modal {
+    max-width: 944px;
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+
+    .modal-content {
+      box-shadow: none;
+
+      .modal-body {
+        padding: 10px 20px 44px;
+
+        @media only screen and (min-width: 768px) {
+          padding: 10px 60px 44px 44px;
+        }
+
+        .hsn_modal_title {
+          color: #4a4a4a;
+          font: 600 22px "Poppins";
+          line-height: 120%;
+          margin-bottom: 2rem;
+        }
+
+        .hsn_modal_caption {
+          color: rgba(74, 74, 74, 0.92);
+          font-size: $font-size-16px;
+          line-height: normal;
+
+          span {
+            @media only screen and (min-width: 992px) {
+              display: block;
+            }
+          }
+
+          a {
+            color: inherit;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modal Styles End

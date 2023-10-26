@@ -1,0 +1,200 @@
+<main class="app_institution">
+    <div class="row gx-0 justify-content-center app_institution_cards_section">
+        <div class="col-12 col-md-9">
+            <p class="app_institution_main_title text-center">Unlock the Power of Comprehensive Portfolio Analytics</p>
+            <div class="app_institution_cards">
+                <div class="container gx-0">
+                    <div class="row row-cols-auto row-cols-md-3 gx-5">
+                        <div class="col">
+                            <div class="app_institution_card_box h-100">
+                                <img src="assets/icons/industry.svg" class="img-fluid" alt="Industry Icon">
+                                <div class="app_institution_card_content">
+                                    <h6 class="app_institution_card_title">Macro & Industry Insights for Strategic
+                                        Decisioning</h6>
+                                    <p class="app_institution_card_detail">Understand the performance of your MSME pool
+                                        vis-à-vis the combined multi-lender pool. Get industry and cluster level trends
+                                        to direct your institution’s MSME credit flow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="app_institution_card_box h-100">
+                                <img src="assets/icons/decisioning.svg" alt="Decision Icon">
+                                <div class="app_institution_card_content">
+                                    <h6 class="app_institution_card_title">Optimised credit decision-making</h6>
+                                    <p class="app_institution_card_detail">Simplify and streamline your credit
+                                        assessment process with our comprehensive GST based scores and reports. Identify
+                                        creditworthy MSMEs and manage risk effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="app_institution_card_box h-100">
+                                <img src="assets/icons/portfolio.svg" alt="Portfolio Icon">
+                                <div class="app_institution_card_content">
+                                    <h6 class="app_institution_card_title">Enhanced portfolio management</h6>
+                                    <p class="app_institution_card_detail">Stay ahead in MSME loan book management by
+                                        monitoring your portfolio mix as well as borrower performance and risk by
+                                        various parameters.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row gx-0 text-start justify-content-center app_institution_login_section">
+        <div class="col-12 col-md-10 d-flex flex-column flex-md-row align-items-center">
+            <img src="assets/images/index-insights.png" class="img-fluid me-0 mb-5 mb-md-0 me-md-5" />
+            <div class="app_login_details text-center text-md-start">
+                <p class="app_home_section_title">Index + Insights for your Bank</p>
+                <a class="app_primary_btn" data-bs-toggle="modal" data-bs-target="#scheduleDemo">Schedule a Demo</a>
+                <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login to SWARA</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Schedule Demo Popup -->
+<div class="modal fade modal_with_shadow" id="scheduleDemo">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule a Demo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="complete_form_text">Complete the form to schedule a demo.</div>
+                <div class="required_text"><span>*</span> Required Fields</div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fistName" name="First Name"
+                                placeholder="First Name *" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastName" name="Last Name"
+                                placeholder="Last Name *" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="Email"
+                                placeholder="Business Email *" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="jobTitle" name="Job Title"
+                                placeholder="Job Title *" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="companyName" name="Company"
+                                placeholder="Company *" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="contactNumber" name="Contact Number"
+                                placeholder="Contact Number">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" id="agreeCheckbox">
+                            <label for="agreeCheckbox" class="terms-label ps-2">
+                                By submitting this request, I agree with the Jocata
+                                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                            </label>
+                        </div>
+
+                        <button class="sm-primary-button" data-bs-toggle="modal"
+                            data-bs-target="#successModal" disabled>Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal modal_with_shadow" id="successModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Thanks!</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="success_text my-3">
+                    Someone from our team will contact you shortly regarding the demo.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Popup -->
+<div class="modal fade modal_with_shadow" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="complete_form_text">Enter your Institution ID to proceed login.</div>
+                <div class="required_text"><span>*</span> Required Fields</div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fistName" name="Institution ID"
+                                placeholder="Institution ID *" autocomplete="off">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="d-flex align-items-center mb-3">
+                            <input type="checkbox" id="agreeCheckbox">
+                            <label for="agreeCheckbox" class="terms-label ps-2">
+                                By submitting this request, I agree with the Jocata
+                                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                            </label>
+                        </div>
+
+                        <button class="sm-primary-button" data-bs-toggle="modal" disabled>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

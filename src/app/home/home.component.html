@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-10 app_home_chart_info">
-      <a class="discover_cta" href="/index" data-aos="fade-up">Explore Index Features</a>
+      <a class="app_primary_btn" href="/index" data-aos="fade-up">Explore Index Features</a>
       <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
         <span>A unique initiative by Jocata – one of India’s most trusted Digital Lending </span>
         <span>Platform providers, in association with SIDBI – the Principal Financial Institution </span>
@@ -234,7 +234,7 @@
   <div class="row gx-0">
     <div class="col-md-12 app_home_subscribe">
       <p>For monthly Index updates</p>
-      <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+      <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
     </div>
   </div>
   <div class="row gx-0 app_home_marquee">
@@ -259,47 +259,21 @@
   </div>
 </main>
 
-<!-- The Modal -->
-<div class="modal" id="successModal2">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">You've successfully subscribed</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <div class="my-3 text-center">
-          You will receive monthly updates of the Jocata Sampoorn Index.
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</div>
-
-
 <!-- Subscribe Modal popup -->
-<!-- The Modal -->
-<div class="modal fade" id="subscribeModal">
+<div class="modal fade modal_with_shadow" id="subscribeModal">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title black-text">Subscribe</h4>
+        <h4 class="modal-title">Subscribe</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        <div class="my-3 complete-form-text">Complete the form to subscribe.
-          <span class="required-text">* Required Fields</span>
-        </div>
+        <div class="complete_form_text">Complete the form to subscribe.</div>
+        <div class="required_text"><span>*</span> Required Fields</div>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
@@ -357,13 +331,34 @@
               <input type="checkbox" id="agreeCheckbox">
               <label for="agreeCheckbox" class="terms-label ps-2">
                 By submitting this request, I agree with the Jocata
-                <a class="custom-link" href="tou.html">Terms of Use.</a>
+                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
               </label>
             </div>
 
-            <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal2"
+            <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
               disabled>Register</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal modal_with_shadow" id="successModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">You've successfully subscribed</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="my-3 success_text">
+          You will receive monthly updates of the Jocata Sumpoorn Index.
         </div>
       </div>
     </div>

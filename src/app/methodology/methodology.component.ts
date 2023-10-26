@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Renderer2, AfterViewInit, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-methodology',
@@ -11,7 +11,7 @@ export class MethodologyComponent implements OnInit {
   isSectorActive = false;
   isActivityActive = false;
   
-  constructor() { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
   }
@@ -180,4 +180,21 @@ export class MethodologyComponent implements OnInit {
       }
     ]
   };
+
+  ngAfterViewInit() {
+    const scrollableContent = this.el.nativeElement.querySelector('#scrollableContent');
+    const fixedImage = this.el.nativeElement.querySelector('#fixedImage');
+
+    if (scrollableContent && fixedImage) {
+      this.renderer.listen(scrollableContent, 'scroll', (event) => {
+        if (scrollableContent.scrollHeight - scrollableContent.scrollTop === scrollableContent.clientHeight) {
+          this.renderer.setStyle(document.body, 'overflow', 'auto');
+        } else {
+          this.renderer.setStyle(document.body, 'overflow', 'hidden');
+        }
+      });
+    } else {
+      console.log('One or both of the elements with the specified IDs were not found.');
+    }
+  }
 }

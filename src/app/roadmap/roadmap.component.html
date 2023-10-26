@@ -67,27 +67,26 @@
         </div>
         <div class="col-md-12 app_home_subscribe">
             <p>Be the first to know these updates</p>
-            <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+            <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
         </div>
     </div>
 </main>
 
 <!-- Subscribe Modal popup -->
-<div class="modal fade" id="subscribeModal">
+<div class="modal fade modal_with_shadow" id="subscribeModal">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title black-text">Subscribe</h4>
+                <h4 class="modal-title">Subscribe</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                <div class="my-3 complete-form-text">Complete the form to subscribe.
-                    <span class="required-text">* Required Fields</span>
-                </div>
+                <div class="complete_form_text">Complete the form to subscribe  .</div>
+                <div class="required_text"><span>*</span> Required Fields</div>
 
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
@@ -147,16 +146,37 @@
                             <input type="checkbox" id="agreeCheckbox">
                             <label for="agreeCheckbox" class="terms-label ps-2">
                                 By submitting this request, I agree with the Jocata
-                                <a class="custom-link" href="tou.html">Terms of Use.</a>
+                                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                             </label>
                         </div>
 
-                        <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal2"
+                        <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
                             disabled>Register</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal modal_with_shadow" id="successModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">You've successfully subscribed</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="success_text my-3">
+            You will receive monthly updates of the Jocata Sumpoorn Index.
+          </div>
+        </div>
+      </div>
     </div>
 </div>
 

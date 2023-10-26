@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { TouComponent } from './tou/tou.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InstitutionLoginComponent } from './institution-login/institution-login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     RoadmapComponent,
     AboutComponent,
     ContactComponent,
-    TouComponent
+    TouComponent,
+    InstitutionLoginComponent
   ],
   imports: [
     HttpClientModule,
