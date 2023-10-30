@@ -10,12 +10,14 @@ export class MethodologyComponent implements OnInit {
   isTurnoverActive = false;
   isSectorActive = false;
   isActivityActive = false;
-  
+  sectionStates: boolean[] = [];
+
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
   }
   
+  // Active & Inactive Icons for Tabs
   toggleIcons(type: string) {
     this.resetAllIcons();
     if (type === 'geo') {
@@ -36,6 +38,7 @@ export class MethodologyComponent implements OnInit {
     this.isActivityActive = false;
   }
   
+  // States, UTs, Cities JSON
   stateCityData = {
     "states": [
       {
@@ -181,7 +184,12 @@ export class MethodologyComponent implements OnInit {
     ]
   };
 
+  toggleAccordion(index: number) {
+    this.sectionStates[index] = !this.sectionStates[index]; // Toggle the state
+  }
+
   ngAfterViewInit() {
+    // Scrolling Nature of States & UTs wrt Geo Map
     const scrollableContent = this.el.nativeElement.querySelector('#scrollableContent');
     const fixedImage = this.el.nativeElement.querySelector('#fixedImage');
 
@@ -194,7 +202,7 @@ export class MethodologyComponent implements OnInit {
         }
       });
     } else {
-      console.log('One or both of the elements with the specified IDs were not found.');
+      // console.log('One or both of the elements with the specified IDs were not found.');
     }
   }
 }
