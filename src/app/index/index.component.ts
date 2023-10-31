@@ -1206,7 +1206,7 @@ export class IndexComponent implements OnInit {
                         const absX = evt.clientX + window.scrollX;
                         const absY = evt.clientY + window.scrollY;
                         $("#contextMenu").css('top', (absY + 20) + 'px');
-                        $("#contextMenu").css('left', (absX - 150) + 'px;');
+                        $("#contextMenu").css('left', (absX - 150) + 'px');
                         $("#contextMenu").css("display", 'block');
                     } else {
                         const absX = evt.clientX + window.scrollX + 20;
