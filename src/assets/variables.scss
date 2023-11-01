@@ -1,9 +1,9 @@
-// /* Color Codes */
+// Color Codes
 $app-white: #fff;
 $app-black: #000;
 $required-field-color: #932d2d;
 
-// /* Font Sizes */
+// Font Sizes
 $font-size-10px: 0.833rem;
 $font-size-11px: 0.917rem;
 $font-size-12px: 1rem;
@@ -27,10 +27,13 @@ $font-size-29px: 2.417rem;
 $font-size-30px: 2.5rem;
 $font-size-32px: 2.666rem;
 $font-size-36px: 3rem;
-// /* Marquee Variables on Homepage */
+
+// Marquee Variables on Homepage
 $marquee-width: 100%;
 $marquee-height: 60vh;
-$marquee-elements: 3; /* defined with JavaScript */
-$marquee-elements-displayed: 2.25;
-$marquee-element-width: calc($marquee-width / $marquee-elements-displayed);
-$marquee-animation-duration: calc($marquee-elements * 5s);
+$marquee-elements: 3;
+$marquee-elements-displayed-sm: 1;
+$marquee-elements-displayed-md: 2.25;
+$marquee-element-width-sm: calc($marquee-width / $marquee-elements-displayed-sm);
+$marquee-element-width-md: calc($marquee-width / $marquee-elements-displayed-md);
+// $marquee-animation-duration: calc($marquee-elements-displayed * 15s);

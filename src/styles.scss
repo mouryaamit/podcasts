@@ -989,18 +989,30 @@ main {
     position: relative;
     padding: 7rem 0;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1281px) {
       height: $marquee-height;
     }
 
-    @keyframes scrolling {
+    @keyframes marqueeMobile {
       0% {
         transform: translateX(0);
       }
 
       100% {
         transform: translateX(
-          calc(-1 * $marquee-element-width * $marquee-elements)
+          calc(-1 * $marquee-element-width-sm * $marquee-elements)
+        );
+      }
+    }
+
+    @keyframes marqueeWeb {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(
+          calc(-1 * $marquee-element-width-md * $marquee-elements)
         );
       }
     }
@@ -1010,7 +1022,11 @@ main {
       height: 100%;
       display: flex;
       padding: 0;
-      animation: scrolling $marquee-animation-duration linear infinite;
+      animation: marqueeMobile 15s linear infinite;
+
+      @media only screen and (min-width: 768px) {
+        animation: marqueeWeb 15s linear infinite;
+      }
 
       li {
         display: flex;
@@ -1018,9 +1034,11 @@ main {
         justify-content: space-between;
         align-items: center;
         flex-shrink: 0;
-        width: $marquee-element-width;
+        width: $marquee-element-width-sm;
         max-height: 100%;
-
+        @media only screen and (min-width: 768px) {
+          width: $marquee-element-width-md;
+        }
         .marquee-content-title {
           color: #000;
           font-size: 24px;
@@ -2065,6 +2083,7 @@ main {
       }
 
       .app_index_context_table {
+        width: 100%;
         text-align: left;
         background: $app-white;
         box-shadow: 0px 4px 9px 0px rgba(26, 73, 115, 0.1),
@@ -2073,13 +2092,16 @@ main {
           0px 64px 26px 0px rgba(26, 73, 115, 0.01),
           0px 100px 28px 0px rgba(26, 73, 115, 0),
           0px -3px 23px 0px rgba(25, 73, 116, 0.09);
-
+        @media only screen and (min-width: 768px) and (max-width: 1280px) {
+          table-layout: fixed;
+        }
         th,
         td {
           padding: 16px !important;
         }
 
         thead {
+          white-space: nowrap;
           background: #edf5fd;
 
           th {

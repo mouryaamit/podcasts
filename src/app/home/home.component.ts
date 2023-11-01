@@ -6,21 +6,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  marqueeElementsDisplayed:any;
-  marqueeContent: any;
+  partners: Array<any> = [
+    {
+      title: 'Knowledge Partner',
+      imageSrc: 'assets/images/partner-ceed.svg',
+      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
+    },
+    {
+      title: 'Affiliate Partner',
+      imageSrc: 'assets/images/partner-game.svg',
+      imageAlt: 'Global Alliance for Mass Entrepreneurship Logo'
+    },
+    {
+      title: 'Exclusive Bureau Partner',
+      imageSrc: 'assets/images/partner-experian.svg',
+      imageAlt: 'Experian Logo'
+    },
+    {
+      title: 'Knowledge Partner',
+      imageSrc: 'assets/images/partner-ceed.svg',
+      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
+    },
+    {
+      title: 'Affiliate Partner',
+      imageSrc: 'assets/images/partner-game.svg',
+      imageAlt: 'Global Alliance for Mass Entrepreneurship Logo'
+    },
+    {
+      title: 'Exclusive Bureau Partner',
+      imageSrc: 'assets/images/partner-experian.svg',
+      imageAlt: 'Experian Logo'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
-    // Marquee Logic for HomePage
-    const root = document.documentElement;
-    this.marqueeElementsDisplayed  = Number(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
-    this.marqueeContent = document.querySelector("ul.marquee-content");
-
-    root.style.setProperty("--marquee-elements", this.marqueeContent.children.length);
-
-    for (let i = 0; i < this.marqueeElementsDisplayed; i++) {
-      this.marqueeContent.appendChild(this.marqueeContent.children[i].cloneNode(true));
-    }
   }
 
 }

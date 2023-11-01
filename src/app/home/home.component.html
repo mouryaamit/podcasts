@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-10 app_home_chart_info">
-      <a class="app_primary_btn" href="/index" data-aos="fade-up">Explore Index Features</a>
+      <a class="app_primary_btn" href="index" data-aos="fade-up">Explore Index Features</a>
       <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
         <span>A first-of-its-kind Index from Jocata – one of India’s most trusted Digital Lending </span>
         <span>Platform providers, in association with SIDBI – the Principal Financial Institution for </span>
@@ -247,19 +247,9 @@
   <div class="row gx-0 app_home_marquee">
     <div class="col-md-12">
       <ul class="marquee-content">
-        <li>
-          <h6 class="marquee-content-title">Knowledge Partner</h6>
-          <img src="assets/images/partner-ceed.svg" class="img-fluid"
-            alt="Centre for Excellence in Entrepreneurship and Development Logo">
-        </li>
-        <li>
-          <h6 class="marquee-content-title">Affiliate Partner</h6>
-          <img src="assets/images/partner-game.svg" class="img-fluid"
-            alt="Global Alliance for Mass Entrepreneurship Logo">
-        </li>
-        <li>
-          <h6 class="marquee-content-title">Exclusive Bureau Partner</h6>
-          <img src="assets/images/partner-experian.svg" class="img-fluid" alt="Experian Logo">
+        <li *ngFor="let partner of partners">
+          <h6 class="marquee-content-title">{{ partner.title }}</h6>
+          <img [src]="partner.imageSrc" class="img-fluid" [alt]="partner.imageAlt">
         </li>
       </ul>
     </div>
@@ -338,7 +328,7 @@
               <input type="checkbox" id="agreeCheckbox">
               <label for="agreeCheckbox" class="terms-label ps-2">
                 By submitting this request, I agree with the Jocata
-                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                <a class="custom-link" routerLink="tou" data-bs-dismiss="modal">Terms of Use.</a>
               </label>
             </div>
 
