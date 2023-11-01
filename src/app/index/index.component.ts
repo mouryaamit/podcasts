@@ -27,12 +27,15 @@ export class IndexComponent implements OnInit {
                 this.sumpoornGraphData = data;
                 this.generateInsightsGraph();
                 this.getContextGraphData();
+                this.generateMobileInsightsGraph();
             }
         }, (error) => {
             console.error("getSumpoornGraphData Error", error);
         })
     }
-
+    generateMobileInsightsGraph() {
+        // throw new Error('Method not implemented.');
+    }
     generateInsightsGraph() {
         const mydata = this.sumpoornGraphData.IndexGeneration;
         const indexData = this.sumpoornGraphData.Commentary;
@@ -138,8 +141,9 @@ export class IndexComponent implements OnInit {
         // Creating svg with dimensions to chart
         const svg = d3.select("#my_dataviz_insights")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width + (margin.left + margin.right)) //set width
-            .attr("height", default_height) //set height
+            // .attr("width", default_width + (margin.left + margin.right)) //set width
+            // .attr("height", default_height) //set height
+            .attr("viewBox", `0 0 ${default_width + (margin.left + margin.right)} ${default_height}`)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`)
             ;
@@ -1444,10 +1448,14 @@ export class IndexComponent implements OnInit {
             this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
                 this.gvaGraphData = GvaGraphData;
                 this.generateContextGraph();
+                this.generateMobileContextGraph();
             }, (error) => {
                 console.error("getSumpoornGraphData Error", error);
             });  
         }
+    }
+    generateMobileContextGraph() {
+        // throw new Error('Method not implemented.');
     }
     generateContextGraph() {
         var mydata = this.sumpoornGraphData.IndexGeneration;
@@ -1558,8 +1566,9 @@ export class IndexComponent implements OnInit {
 
         const svg = d3.select("#my_dataviz_context")
             .append("svg") //append svg element inside #chart
-            .attr("width", width + margin.left + margin.right + 100) //set width
-            .attr("height", height + margin.top + margin.bottom + 30) //set height
+            // .attr("width", width + margin.left + margin.right + 100) //set width
+            // .attr("height", height + margin.top + margin.bottom + 30) //set height
+            .attr("viewBox", `0 0 ${width + margin.left + margin.right + 100} ${height + margin.top + margin.bottom + 30}`)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
