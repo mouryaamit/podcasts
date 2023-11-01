@@ -500,6 +500,9 @@ export class IndexComponent implements OnInit {
                 .attr('stroke', '#A0A0A0')
                 .attr("stroke-width", "1")
                 ;
+
+        d3.selectAll('.flags_text').call(wrap);
+
         }
 
         function getPointsOnCurve(category: any, value: any) {
@@ -511,35 +514,34 @@ export class IndexComponent implements OnInit {
             return co_ord;
         }
 
-        // const wrap = (text) => {
-        //     text.each( () => {
-        //         var text = d3.select(this);
-        //         var words = text.text().split(/\s+/).reverse();
-        //         var lineHeight = 20;
-        //         var width = parseFloat(text.attr('width'));
-        //         var y = parseFloat(text.attr('y'));
-        //         var x = text.attr('x');
-        //         var anchor = text.attr('text-anchor');
+        const wrap = (textData) => {
+            const wrapTexts = textData._groups[0];
+            wrapTexts.forEach( (ele) => {
+                var selectedEle = d3.select(ele);
+                var words = selectedEle.text().split(/\s+/).reverse();
+                var lineHeight = 20;
+                // var width = parseFloat(text.attr('width'));
+                var y = parseFloat(selectedEle.attr('y'));
+                var x = selectedEle.attr('x');
+                var anchor = selectedEle.attr('text-anchor');
+                var tspanTag = '<tspan></tspan>'
 
-        //         var tspan = text.text(null).append('tspan').attr('x', x).attr('y', y).attr('text-anchor', anchor);
-        //         var lineNumber = 0;
-        //         var line:any = [];
-        //         var word = words.pop();
+                var tspan = selectedEle.text(null).append('tspan').attr('x', x).attr('y', y).attr('text-anchor', anchor);
+                // var tspan = d3.create('tspan').attr('x', x).attr('y', y).attr('text-anchor', anchor);
+                // selectedEle.text(null).append(tspan)
+                var lineNumber = 0;
+                var line:any = [];
+                var word = words.pop();
 
-        //         while (word) {
-        //             line.push(word);
-        //             tspan.text(line.join(' '));
-        //             if (tspan.node().getComputedTextLength() > width) {
-        //                 lineNumber += 1;
-        //                 line.pop();
-        //                 tspan.text(line.join(' '));
-        //                 line = [word];
-        //                 tspan = text.append('tspan').attr('x', x).attr('y', y + lineNumber * lineHeight).attr('anchor', anchor).text(word);
-        //             }
-        //             word = words.pop();
-        //         }
-        //     });
-        // }
+                while (word) {
+                    line.push(word);
+                    lineNumber += 1;
+                    tspan = selectedEle.append('tspan').attr('x', x).attr('y', y + lineNumber * lineHeight).attr('anchor', anchor).text(word);
+                    word = words.pop();
+                }
+            });
+        }
+
 
         const addSelectionYaxis = () => {
             y_text.selectAll(".tick")._parents.forEach( (d_child, i) => {
@@ -1384,7 +1386,6 @@ export class IndexComponent implements OnInit {
         addLinesForGraph();
         
         addFlags();
-        // d3.selectAll('.flags_text').call(wrap);
 
         const clickPoint = (event, d) => {
             const mousePointer = d3.pointer(event);
