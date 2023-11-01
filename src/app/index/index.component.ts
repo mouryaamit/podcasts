@@ -18,12 +18,52 @@ export class IndexComponent implements OnInit {
     gvaGraphData: any;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
-    
+
     constructor(private graphApiService: GraphApiService) { }
+
+    // Data for Context Table Mobile
+    contextTableData = [
+        {
+            title: 'Published By',
+            items: ['GOI', 'S&P Global', 'Jocata']
+        },
+        {
+            title: 'Nature of Index',
+            items: ['Industrial manufacturing performance', 'Business optimism', 'Sales performance']
+        },
+        {
+            "title": "Type of Data",
+            "items": ["Actual manufacturing production", "Opinion based", "Actual MSME monthly sales data reflected from GSTIN returns of credit-seeking entities"]
+          },
+          {
+            "title": "Sample Size",
+            "items": ["--", "400 companies", "1000 MSMEs per month (minimum) <br/> 2000 MSMEs per month (desirable)"]
+          },
+          {
+            "title": "Factors Involved",
+            "items": ["Production data based on NIC (National Industrial Classification) codes", "Survey based", "Fact based - Delta of % of growing & declining GSTINs combined with amplitude of change in turnover."]
+          },
+          {
+            "title": "Generation - Frequency & Date",
+            "items": ["Monthly <br/> 7 weeks later, from the current month", "Monthly <br/> 1st week of succeeding month", "Monthly <br/> 4 weeks later, from the current month"]
+          },
+          {
+            "title": "Index Type and Scale",
+            "items": [
+              "Cumulative index <br/> Base year: 2011-12 <br/> Base value: 100",
+              "Composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 100",
+              "Relative amplitude adjusted composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 1"
+            ]
+          },
+          {
+            "title": "Seasonality Adjusted?",
+            "items": ["No", "Yes", "Yes"]
+          }
+    ]
 
     ngOnInit(): void {
         this.graphApiService.getSumpoornGraphData().then((data) => {
-            if(data) {
+            if (data) {
                 this.sumpoornGraphData = data;
                 this.generateInsightsGraph();
                 this.getContextGraphData();
@@ -56,10 +96,10 @@ export class IndexComponent implements OnInit {
             bottom: 115,
             left: 80,
         },
-        default_width = 1150,
-        default_height = 500,
-        width = default_width - margin.left - margin.right,
-        height = default_height - margin.top - margin.bottom;
+            default_width = 1150,
+            default_height = 500,
+            width = default_width - margin.left - margin.right,
+            height = default_height - margin.top - margin.bottom;
 
         const parseDate = d3.timeParse("%m-%Y");
 
@@ -109,10 +149,10 @@ export class IndexComponent implements OnInit {
             ;
 
         const xAxis_year = d3.axisBottom(x2)
-        .tickSize(35) // sets line for month
-        .ticks(width / 12)
+            .tickSize(35) // sets line for month
+            .ticks(width / 12)
             .tickFormat(function (d, i) {
-                if(i == 0) {
+                if (i == 0) {
                     const year_fmt = d3.timeFormat('%Y')(d);
                     return year_fmt;
                 } else {
@@ -155,8 +195,8 @@ export class IndexComponent implements OnInit {
             .attr("class", "x_month_num")
             .call(xAxis_month_number)
             .selectAll(".tick text")
-            .attr("x", "0em") 
-            .attr("y", "-1.3em") 
+            .attr("x", "0em")
+            .attr("y", "-1.3em")
             ;
 
         const month_name = svg.append("g")
@@ -192,8 +232,8 @@ export class IndexComponent implements OnInit {
             //         }
             //     })
             // })
-            .attr("x", "-1.8em") 
-            .attr("y", "0.5em") 
+            .attr("x", "-1.8em")
+            .attr("y", "0.5em")
             .attr("transform", function (d) {
                 return "rotate(-90)"
             })
@@ -208,8 +248,8 @@ export class IndexComponent implements OnInit {
             .attr("class", "x_month_year")
             .call(xAxis_year)
             .selectAll(".tick text")
-            .attr("x", "1.5em") 
-            .attr("y", "2.7em") 
+            .attr("x", "1.5em")
+            .attr("y", "2.7em")
             .style("font-weight", "600")
             .style("fill", "#A3A3A3")
             .style("font-family", "Inter")
@@ -222,8 +262,8 @@ export class IndexComponent implements OnInit {
             .call(yAxis_left)
             .append("text")
             .attr("class", "axis-title")
-            .attr("x", "-9.5em") 
-            .attr("y", "-2.3em") 
+            .attr("x", "-9.5em")
+            .attr("y", "-2.3em")
             .style("text-anchor", "end")
             .attr("fill", "#2FB36B")
             .attr("transform", "rotate(-90)")
@@ -272,7 +312,7 @@ export class IndexComponent implements OnInit {
             .attr("class", function (d, i) { return `y-axis-titles y-axis-title_${i}`; })
             ;
 
-            function formatYaxisForText(d: any, fromWhere: any) {
+        function formatYaxisForText(d: any, fromWhere: any) {
             if (d == 0.25) {
                 return "Substantial";
                 // if(fromWhere == "info") {
@@ -308,7 +348,7 @@ export class IndexComponent implements OnInit {
         function formatYaxisForXvalue(d: any, i: any) {
             if (d == 0.25 || d == 1.00 || d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                 return "1em";
-            } 
+            }
             // else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
             //     return "0.8em";
             // } 
@@ -409,7 +449,7 @@ export class IndexComponent implements OnInit {
                 .attr("y2", 0)
                 .style("stroke", "#E1E1E1")
                 .attr("stroke-width", "0.7")
-                ;                        
+                ;
             //bottom line of graph
             const bottom_line = svg.append("g");
             bottom_line.append("line")
@@ -548,10 +588,10 @@ export class IndexComponent implements OnInit {
 
 
         const addSelectionYaxis = () => {
-            y_text.selectAll(".tick")._parents.forEach( (d_child, i) => {
+            y_text.selectAll(".tick")._parents.forEach((d_child, i) => {
                 addDefaultSelYaxis(d_child.__data__);
                 d3.select(d_child)
-                    .on("mouseover",  (event, d) => {
+                    .on("mouseover", (event, d) => {
                         if (d != 0.52 && d != 0.54) {
                             d3.selectAll(".y-axis-titles").classed("select", false);
                             // d3.select(this).classed("select", true);
@@ -671,7 +711,7 @@ export class IndexComponent implements OnInit {
                 .attr("stroke-width", 1)
                 ;
         }
-        function formatHandYvaluesYaxis(d, isMouseover) { 
+        function formatHandYvaluesYaxis(d, isMouseover) {
             if (isMouseover) {
                 let hAndyValues = { y: 0, h: 0 };
                 if (d == 0.25) {
@@ -718,35 +758,35 @@ export class IndexComponent implements OnInit {
 
         function getYaxisValuesForLines(d) {
             let hAndyValues = { y1: 0, x2: 0 };
-                if (d == 0.00) {
-                    hAndyValues.y1 = height;
-                    hAndyValues.x2 = width + 112;
-                } else if (d == 0.25) {
-                    hAndyValues.y1 = 282;
-                    hAndyValues.x2 = width + 112;
-                } else if (d == 0.45) {
-                    hAndyValues.y1 = 207;
-                    hAndyValues.x2 = width + 112;
-                } else if (d == 0.50) {
-                    hAndyValues.y1 = 187.5;
-                    hAndyValues.x2 = width + 70;
-                } else if (d == 0.52) {
-                    hAndyValues.y1 = 180.5;
-                    hAndyValues.x2 = width + 70;
-                } else if (d == 0.54) {
-                    hAndyValues.y1 = 173;
-                    hAndyValues.x2 = width + 70;
-                } else if (d == 0.60) {
-                    hAndyValues.y1 = 150.5;
-                    hAndyValues.x2 = width + 112;
-                } else if (d == 0.65) {
-                    hAndyValues.y1 = 131.5;
-                    hAndyValues.x2 = width + 112;
-                } else if (d == 0.75) {
-                    hAndyValues.y1 = 94;
-                    hAndyValues.x2 = width + 112;
-                } 
-                return hAndyValues;
+            if (d == 0.00) {
+                hAndyValues.y1 = height;
+                hAndyValues.x2 = width + 112;
+            } else if (d == 0.25) {
+                hAndyValues.y1 = 282;
+                hAndyValues.x2 = width + 112;
+            } else if (d == 0.45) {
+                hAndyValues.y1 = 207;
+                hAndyValues.x2 = width + 112;
+            } else if (d == 0.50) {
+                hAndyValues.y1 = 187.5;
+                hAndyValues.x2 = width + 70;
+            } else if (d == 0.52) {
+                hAndyValues.y1 = 180.5;
+                hAndyValues.x2 = width + 70;
+            } else if (d == 0.54) {
+                hAndyValues.y1 = 173;
+                hAndyValues.x2 = width + 70;
+            } else if (d == 0.60) {
+                hAndyValues.y1 = 150.5;
+                hAndyValues.x2 = width + 112;
+            } else if (d == 0.65) {
+                hAndyValues.y1 = 131.5;
+                hAndyValues.x2 = width + 112;
+            } else if (d == 0.75) {
+                hAndyValues.y1 = 94;
+                hAndyValues.x2 = width + 112;
+            }
+            return hAndyValues;
         }
         addSelectionYaxis();
 
@@ -786,8 +826,8 @@ export class IndexComponent implements OnInit {
                 d3.select(d_child)
                     .on("click", function (event, d) {
                         // xaxis selection on click
-                       removeXaxisTitleSelection();
-                       d3.selectAll(".x_month_name").classed("active", false);
+                        removeXaxisTitleSelection();
+                        d3.selectAll(".x_month_name").classed("active", false);
                         const formattedDate = d3.timeFormat("%m-%Y")(d);
                         renderPointerOnLine(formattedDate);
                     })
@@ -795,7 +835,7 @@ export class IndexComponent implements OnInit {
         }
 
         function renderPointerOnLine(date) {
-            d3.selectAll("#rect_xaxis").remove(); 
+            d3.selectAll("#rect_xaxis").remove();
             d3.selectAll("#rect_yaxis").remove(); // to remove highlighting of yaxis data
             d3.selectAll("#rect_xaxis_sel").remove(); // to remove highlighting of already selected xaxis data
 
@@ -835,16 +875,16 @@ export class IndexComponent implements OnInit {
 
         function initializeTooltip() {
             tooltip = d3.select("#my_dataviz_insights")
-            .append("div")
-            .attr("class", "tooltip-area")
-            .style("opacity", 0)
-            ;
+                .append("div")
+                .attr("class", "tooltip-area")
+                .style("opacity", 0)
+                ;
 
             selectedPoint = d3.select("#my_dataviz_insights")
                 .append("div")
                 .attr("class", "focus_circle")
                 .style("opacity", 0)
-                ;    
+                ;
 
             radiation = d3.select("#my_dataviz_insights")
                 .append("div")
@@ -872,7 +912,7 @@ export class IndexComponent implements OnInit {
                     return d;
                 })
                 .style("opacity", 0.9)
-            ;
+                ;
             if (isLatestIdx) {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
@@ -891,7 +931,7 @@ export class IndexComponent implements OnInit {
                     .style("top", (mousePointer.y - 243) + "px");
             }
         }
-        
+
         function checkSpecificPointOnYaxis(i) {
             const yOfx = mydata[i].value;
             const closestIndex = findClosestYvalue(yOfx);
@@ -946,20 +986,20 @@ export class IndexComponent implements OnInit {
         function checkIfCommentaryDataAvailable(prev_month_data, next_month_data) {
             const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
-            const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
+            const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
+            const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
             (<HTMLElement>document.getElementById('#slide_prev')).classList.remove("disable_arrows");
             (<HTMLElement>document.getElementById('#slide_next')).classList.remove("disable_arrows");
             if (!prevCommentaryData || (prevCommentaryData && !checkForPrevCommentary)) {
                 (<HTMLElement>document.getElementById('#slide_prev')).classList.add("disable_arrows");
             } else if (!nextCommentaryData || (nextCommentaryData && !checkForNextCommentary)) {
                 (<HTMLElement>document.getElementById('#slide_next')).classList.add("disable_arrows");
-            } 
+            }
         }
 
         (<HTMLElement>document.getElementById('#slide_prev')).addEventListener('click', function () {
             const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0]; 
+            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
             if (prevCommentaryData && checkIfMonthlyCommentary) {
                 setPrevAndNextMonthsSlider(prevCommentaryData);
                 addCommentary(prevCommentaryData);
@@ -972,7 +1012,7 @@ export class IndexComponent implements OnInit {
         });
         (<HTMLElement>document.getElementById('#slide_next')).addEventListener('click', function () {
             const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0]; 
+            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
             if (nextCommentaryData && checkIfMonthlyCommentary) {
                 setPrevAndNextMonthsSlider(nextCommentaryData);
                 addCommentary(nextCommentaryData);
@@ -1010,7 +1050,7 @@ export class IndexComponent implements OnInit {
                     ;
 
                 const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
-                if((mydata.length - 1) == indexOfPoint) {
+                if ((mydata.length - 1) == indexOfPoint) {
                     d3.select(".isLatestIdx").style("display", "inherit");
                 } else {
                     d3.select(".isLatestIdx").style("display", "none");
@@ -1032,15 +1072,15 @@ export class IndexComponent implements OnInit {
                             <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
                             </div>`)
                         .style("margin-bottom", "15px")
-                    ;
+                        ;
                     d3.select(".ec_title")
                         .html(`Expert Commentary`)
-                    ;
+                        ;
                 } else {
                     d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
                     d3.select(".ec_title")
                         .html(`Macro Commentary`)
-                    ;
+                        ;
                 }
                 d3.select(".ec_message")
                     .html(`${expertC.ExpertCommentary}`)
@@ -1098,13 +1138,13 @@ export class IndexComponent implements OnInit {
                 .attr("height", height_c + margin_c.top + margin_c.bottom + 40)
                 .append("g")
                 .attr("transform", `translate(${margin_c.left},${margin_c.top})`);
-            
+
             const x_axis = svg_c.append("g")
                 .attr("transform", `translate(0, ${height_c})`)
                 .attr("stroke-width", "1")
                 .attr("class", "x_month_value")
                 .call(xa);
-            
+
             x_axis.append("text")      // text label for the x axis
                 .attr("x", "7em")
                 .attr("y", "3.5em")
@@ -1253,8 +1293,8 @@ export class IndexComponent implements OnInit {
                     $("#yaxisContentInfo").html(infodata);
                 });
 
-                $("#closeInfo").on("click", function (e) {
-                    $("#contextMenu").css("display", 'none');
+            $("#closeInfo").on("click", function (e) {
+                $("#contextMenu").css("display", 'none');
             });
         }
         addInfoIcon(default_width - 35, 5, "#my_dataviz_insights", "infoIcon_1", svg);
@@ -1388,7 +1428,7 @@ export class IndexComponent implements OnInit {
         addArrowsAfterYaxis();
 
         addLinesForGraph();
-        
+
         addFlags();
 
         const clickPoint = (event, d) => {
@@ -1396,7 +1436,7 @@ export class IndexComponent implements OnInit {
             const x_orig = x1.invert(mousePointer[0]);
             const formattedDate = d3.timeFormat("%m-%Y")(x1.invert(mousePointer[0]));
             const dataValue = mydata.filter((x) => x.category == formattedDate)[0];
-             // xaxis selection on curve selection
+            // xaxis selection on curve selection
             removeXaxisTitleSelection();
             d3.selectAll(".x_month_name").classed("active", false);
             renderPointerOnLine(formattedDate);
@@ -1409,17 +1449,17 @@ export class IndexComponent implements OnInit {
             .attr("stroke", "#2FB36B")
             .attr("stroke-width", "2.5")
             .attr("d", d3.line()
-            .x(function (d: any) {
-                return x1(<Date>parseDate(d.category))
-            })
-            .x(function (d: any) {
-                return x2(<Date>parseDate(d.category))
-            })
-            .x(function (d: any) {
-                return x3(<Date>parseDate(d.category))
-            })
-            .y(function (d: any) { return y1(d.value) })
-            .y(function (d: any) { return y2(d.value) })
+                .x(function (d: any) {
+                    return x1(<Date>parseDate(d.category))
+                })
+                .x(function (d: any) {
+                    return x2(<Date>parseDate(d.category))
+                })
+                .x(function (d: any) {
+                    return x3(<Date>parseDate(d.category))
+                })
+                .y(function (d: any) { return y1(d.value) })
+                .y(function (d: any) { return y2(d.value) })
                 .curve(d3.curveCatmullRom.alpha(0))
             )
             .style("cursor", "pointer")
@@ -1427,7 +1467,7 @@ export class IndexComponent implements OnInit {
         path.on("click", clickPoint);
     }
 
-    getContextGraphData(){
+    getContextGraphData() {
         this.graphApiService.getIipGraphData().then((IIPGraphData) => {
             this.iipGraphData = IIPGraphData;
             getPmiGraphData();
@@ -1438,11 +1478,11 @@ export class IndexComponent implements OnInit {
         let getPmiGraphData = () => {
             this.graphApiService.getPmiGraphData().then((PmiGraphData) => {
                 this.pmiGraphData = PmiGraphData;
-                getGvaGraphData();   
+                getGvaGraphData();
             }, (error) => {
                 getGvaGraphData();
                 console.error("getSumpoornGraphData Error", error);
-            });  
+            });
         }
         let getGvaGraphData = () => {
             this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
@@ -1451,7 +1491,7 @@ export class IndexComponent implements OnInit {
                 this.generateMobileContextGraph();
             }, (error) => {
                 console.error("getSumpoornGraphData Error", error);
-            });  
+            });
         }
     }
     generateMobileContextGraph() {
@@ -1470,16 +1510,16 @@ export class IndexComponent implements OnInit {
             bottom: 60,
             left: 65
         },
-        //1366
-        width = 1060 - margin.left - margin.right,
-        height = 450 - margin.top - margin.bottom;
+            //1366
+            width = 1060 - margin.left - margin.right,
+            height = 450 - margin.top - margin.bottom;
         const iipColorCode = '#2E8DFF';
         const pmiColorCode = '#E1861B';
         const gvaColorCode = '#5451FF';
 
         const parseDate = d3.timeParse("%m-%Y");
         const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
-        
+
         // Scales
         // Add X axis 1 --> it is a month format
         const x1 = d3.scaleTime()
@@ -1519,7 +1559,7 @@ export class IndexComponent implements OnInit {
             .domain([d3.min(dataForGVA, function (d) { return d.value - 10; }), d3.max(dataForGVA, function (d) { return d.value + 10; })])
             .nice()
             .range([height, 0])
-        ;
+            ;
 
         //Axes
         const xAxis_month_name = d3.axisBottom(x1)
@@ -1574,8 +1614,8 @@ export class IndexComponent implements OnInit {
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
-            .attr("stroke-width", "0") 
-            .attr("class", "x_month_num")                                                                                                     
+            .attr("stroke-width", "0")
+            .attr("class", "x_month_num")
             .call(xAxis_month_number)
             .selectAll("text")
             .attr("x", "0em")
@@ -1588,31 +1628,31 @@ export class IndexComponent implements OnInit {
             .attr("class", "x_month_name_context")
             .call(xAxis_month_name)
             .selectAll(".tick text") // select all the y tick texts
-            .call(function(t){     
-                t._groups[0].forEach(function(d){ // for each one
-                var self = $(d);
-                if(self.text() == 'May'){
-                    var s = self.text()
-                    self.text(''); 
-                    self.append("tspan")
-                        .attr("fill","currentColor")
-                        .attr("x", '-1.7em')
-                        .text(s);
-                } else if(self.text() == 'Oct'){
-                    var s = self.text()
-                    self.text(''); 
-                    self.append("tspan")
-                        .attr("fill","currentColor")
-                        .attr("x", '-1.9em')
-                        .text(s);
-                } else if(self.text() == 'Jul'){
-                    var s = self.text()
-                    self.text(''); 
-                    self.append("tspan")
-                        .attr("fill","currentColor")
-                        .attr("x", '-2em')
-                        .text(s);
-                }
+            .call(function (t) {
+                t._groups[0].forEach(function (d) { // for each one
+                    var self = $(d);
+                    if (self.text() == 'May') {
+                        var s = self.text()
+                        self.text('');
+                        self.append("tspan")
+                            .attr("fill", "currentColor")
+                            .attr("x", '-1.7em')
+                            .text(s);
+                    } else if (self.text() == 'Oct') {
+                        var s = self.text()
+                        self.text('');
+                        self.append("tspan")
+                            .attr("fill", "currentColor")
+                            .attr("x", '-1.9em')
+                            .text(s);
+                    } else if (self.text() == 'Jul') {
+                        var s = self.text()
+                        self.text('');
+                        self.append("tspan")
+                            .attr("fill", "currentColor")
+                            .attr("x", '-2em')
+                            .text(s);
+                    }
                 })
             })
             .attr("id", "xaxisMonths")
@@ -1653,8 +1693,8 @@ export class IndexComponent implements OnInit {
             .text("Jocata Sumpoorn")
             ;
 
-        var yAxisTickSpace = [width+45,width+70,width+100];
-        var yAxisTickNameSpace = [width+47,width+77,width+107];
+        var yAxisTickSpace = [width + 45, width + 70, width + 100];
+        var yAxisTickNameSpace = [width + 47, width + 77, width + 107];
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
         var yAxis_right_for_gva_tick;
@@ -1710,70 +1750,70 @@ export class IndexComponent implements OnInit {
         var IIPLine;
         var PMILine;
         var GVALine;
-        
+
         // addIIPLine(dataForIIP);
 
-        var isIipCheckBoxEnabled:boolean = $("#IIPCheckbox") ? $("#IIPCheckbox").attr("checked") == 'true' ? true : false : false,
-        isPmiCheckBoxEnabled:boolean = $("#PMICheckbox")?$("#PMICheckbox").attr("checked") ? true : false : false,
-        isGvaCheckBoxEnabled:boolean = $("#GVACheckbox")?$("#GVACheckbox").attr("checked") ? true : false : false
+        var isIipCheckBoxEnabled: boolean = $("#IIPCheckbox") ? $("#IIPCheckbox").attr("checked") == 'true' ? true : false : false,
+            isPmiCheckBoxEnabled: boolean = $("#PMICheckbox") ? $("#PMICheckbox").attr("checked") ? true : false : false,
+            isGvaCheckBoxEnabled: boolean = $("#GVACheckbox") ? $("#GVACheckbox").attr("checked") ? true : false : false
         d3.selectAll(".context_checkboxes").on("change", function (event) {
             if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
                 iipCheckBoxEnabled();
             } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = false;
                 removeIIPLine();
-                if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+                if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
                     yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])                                                         
+                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
                     yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
-                } else if(isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
+                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0])                                    
-                } else if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0])
+                } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                     yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])   
+                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
                 }
                 d3.select("#iipYaxisTxt").remove();
             }
-            if (event.target.value == 'PMI' && $(event.target).prop("checked")) { 
+            if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = true;
                 addPMILine(dataForPMI);
-                if(isIipCheckBoxEnabled == true){
-                    refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])
-                    if(isGvaCheckBoxEnabled == true) {
+                if (isIipCheckBoxEnabled == true) {
+                    refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
+                    if (isGvaCheckBoxEnabled == true) {
                         yAxis_right_for_gva_tick.remove()
-                        refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])                                    
+                        refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2])
                     }
                 } else {
-                    refreshYaxisTicks('pmi',yAxisTickSpace[0],yAxisTickNameSpace[0])
-                    if(isGvaCheckBoxEnabled == true) {
+                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
+                    if (isGvaCheckBoxEnabled == true) {
                         yAxis_right_for_gva_tick.remove()
-                        refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
+                        refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
                     }
                 }
             } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = false;
                 removePMILine();
-                if(isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+                if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
                     yAxis_right_for_gva_tick.remove();
-                    refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);
-                } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
+                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     yAxis_right_for_gva_tick.remove();
-                    refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0]);
+                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0]);
                 }
                 d3.select("#pmiYaxisTxt").remove();
             }
             if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = true;
-                if(isIipCheckBoxEnabled ==true && isPmiCheckBoxEnabled == true){                                                             
-                    refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2]);                                                        
-                } else if (isIipCheckBoxEnabled ==true && isPmiCheckBoxEnabled == false){
-                    refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);                                                        
-                } else if(isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true){
-                    refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1]);                                                        
-                } else if(isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == false)  {
-                    refreshYaxisTicks('gva',yAxisTickSpace[0],yAxisTickNameSpace[0])
+                if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2]);
+                } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
+                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
+                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == false) {
+                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0])
                 }
                 addGVALine(dataForGVA);
             } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
@@ -1783,34 +1823,34 @@ export class IndexComponent implements OnInit {
             }
 
         });
-        function iipCheckBoxEnabled(){
+        function iipCheckBoxEnabled() {
             isIipCheckBoxEnabled = true;
-            refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
-            addIIPLine(dataForIIP);                                
-            if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true){
+            refreshYaxisTicks('iip', yAxisTickSpace[0], yAxisTickNameSpace[0])
+            addIIPLine(dataForIIP);
+            if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
                 yAxis_right_for_pmi_tick.remove()
-                refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])   
+                refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
                 yAxis_right_for_gva_tick.remove()
-                refreshYaxisTicks('gva',yAxisTickSpace[2],yAxisTickNameSpace[2])                                    
-            } else if(isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2])
+            } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                 yAxis_right_for_pmi_tick.remove()
-                refreshYaxisTicks('pmi',yAxisTickSpace[1],yAxisTickNameSpace[1])                                    
-            } else if(isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
+            } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                 yAxis_right_for_gva_tick.remove()
-                refreshYaxisTicks('gva',yAxisTickSpace[1],yAxisTickNameSpace[1])                 
+                refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
             }
         }
-        function refreshYaxisTicks(tickName,tickWidth,yAxisTickNameSpace){
-            if(tickName == 'iip'){
+        function refreshYaxisTicks(tickName, tickWidth, yAxisTickNameSpace) {
+            if (tickName == 'iip') {
                 yAxis_right_for_iip_tick = svg.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(`+tickWidth+`,0)`) //+20
+                    .attr("transform", `translate(` + tickWidth + `,0)`) //+20
                     .call(yAxis_right_for_iip)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("color", iipColorCode)
                     ;
-                
+
                 d3.select("#iipYaxisTxt").remove();
                 svg.append("text")
                     .attr("x", -(height + 12))
@@ -1821,16 +1861,16 @@ export class IndexComponent implements OnInit {
                     .attr("transform", "rotate(-90)")
                     .text("IIP")
                     ;
-            } else if(tickName == 'pmi'){
+            } else if (tickName == 'pmi') {
                 yAxis_right_for_pmi_tick = svg.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(`+tickWidth+`,00)`) //+20
+                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .call(yAxis_right_for_pmi)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("fill", pmiColorCode)
                     ;
-                
+
                 d3.select("#pmiYaxisTxt").remove();
                 svg.append("text").attr("opacity", "1")
                     .attr("x", -(height + 12))
@@ -1841,17 +1881,17 @@ export class IndexComponent implements OnInit {
                     .attr("transform", "rotate(-90)")
                     .html("PMI&#8482;");
 
-       
-            } else if(tickName == 'gva') {
+
+            } else if (tickName == 'gva') {
                 yAxis_right_for_gva_tick = svg.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(`+tickWidth+`,00)`) //+20
+                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .call(yAxis_right_for_gva)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("fill", gvaColorCode)
                     ;
-                
+
                 d3.select("#gvaYaxisTxt").remove();
                 let gvaText = svg.append("text")
                     .attr("x", -(height + 12))
@@ -1861,24 +1901,24 @@ export class IndexComponent implements OnInit {
                     .style('fill', gvaColorCode)
                     .attr("transform", "rotate(-90)")
                     .text("GVA Growth %")
-                    .call(function(t){     
-                    //     var self = d3.select(this);
+                    .call(function (t) {
+                        //     var self = d3.select(this);
                         var s = t.text().split(' ');
-                        t.text(''); 
-                        t.append("tspan") 
-                            .attr("fill","currentColor")
+                        t.text('');
+                        t.append("tspan")
+                            .attr("fill", "currentColor")
                             .attr("x", t._groups[0][0].x['animVal'][0]['value'])
-                            .attr("y", t._groups[0][0].y['animVal'][0]['value']-12)
-                            .attr("dy","1em")
+                            .attr("y", t._groups[0][0].y['animVal'][0]['value'] - 12)
+                            .attr("dy", "1em")
                             .style('fill', gvaColorCode)
                             .text(s[0]);
                         t.append("tspan")
-                            .attr("fill","currentColor")
+                            .attr("fill", "currentColor")
                             .attr("x", t._groups[0][0].x['animVal'][0]['value'])
                             .attr("y", t._groups[0][0].y['animVal'][0]['value'])
-                            .attr("dy","1em")
+                            .attr("dy", "1em")
                             .style('fill', gvaColorCode)
-                            .text(s[1]+' '+s[2]);
+                            .text(s[1] + ' ' + s[2]);
                     });
             }
         }
@@ -1978,7 +2018,7 @@ export class IndexComponent implements OnInit {
                         .attr('x', width)
                         .attr('y', 0)
                         .attr('width', 21)
-                        .attr('height', height+40)
+                        .attr('height', height + 40)
                         .attr("id", "rect_xaxis_context")
                         .attr('stroke', 'black')
                         .style("stroke-dasharray", ("3, 1"))
@@ -1998,18 +2038,18 @@ export class IndexComponent implements OnInit {
                     const formattedDate = d3.timeFormat("%m-%Y")(d);
                     renderPointerOnLine(formattedDate)
                 })
-                ;
+                    ;
             });
         }
         monthNameClickEvent();
 
-        function renderPointerOnLine(date) {     
+        function renderPointerOnLine(date) {
             const dataValue = mydata.filter((x) => x.category == date)[0];
             const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
             const lastIndex = x_axis_months.selectAll(".tick")._parents.length - 1;
             const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
 
-            if(lastIndex == indexOfPoint) {
+            if (lastIndex == indexOfPoint) {
                 // To apply circles animation on last index
                 addTooltip(tooltip_pointer, dataValue, true);
             } else {
@@ -2022,7 +2062,7 @@ export class IndexComponent implements OnInit {
                 .attr('x', tooltip_pointer.x + 0.8)
                 .attr('y', 0)
                 .attr('width', 21)
-                .attr('height', height+40)
+                .attr('height', height + 40)
                 .attr("id", "rect_xaxis_context")
                 .attr('stroke', 'black')
                 .style("stroke-dasharray", ("3, 1"))
@@ -2052,8 +2092,8 @@ export class IndexComponent implements OnInit {
                 .style("opacity", 0.9);
             tooltip
                 .html(dataValue.value)
-                .style("left", (mousePointer.x + 45)  + "px")
-                .style("top", (mousePointer.y-35) + "px");
+                .style("left", (mousePointer.x + 45) + "px")
+                .style("top", (mousePointer.y - 35) + "px");
             radiation
                 .transition()
                 .duration(100)
@@ -2061,27 +2101,27 @@ export class IndexComponent implements OnInit {
                     return d;
                 })
                 .style("opacity", 0.9);
-            if(isLatestIdx) {
+            if (isLatestIdx) {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_one\"></span> " +
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left",(mousePointer.x-width-96)+"px")
-                    .style("top", (mousePointer.y-233) + "px");
+                    .style("left", (mousePointer.x - width - 96) + "px")
+                    .style("top", (mousePointer.y - 233) + "px");
             } else {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left",(mousePointer.x-width-96)+"px")
-                    .style("top", (mousePointer.y-233) + "px");
+                    .style("left", (mousePointer.x - width - 96) + "px")
+                    .style("top", (mousePointer.y - 233) + "px");
             }
         }
 
         function addLinesForYears() {
-            let xValue = 66.5,diffInTwoLine = 263;
+            let xValue = 66.5, diffInTwoLine = 263;
             const year_1 = svg.append("g"); //2019
             year_1.append('line')
                 .attr('x1', 0)
@@ -2145,27 +2185,27 @@ export class IndexComponent implements OnInit {
                 ;
             //top line of graph
             svg.append("line")
-                .attr("x1", width+20)
+                .attr("x1", width + 20)
                 .attr("x2", 0)
                 .attr("y1", 0)
                 .attr("y2", 0)
                 .style("stroke", "#E1E1E1")
                 .attr("stroke-width", 1)
-                ;                        
+                ;
             //bottom line of graph
             svg.append("line")
-                .attr("x1", width+20)
+                .attr("x1", width + 20)
                 .attr("x2", 0)
-                .attr("y1", height+60)
-                .attr("y2", height+60)
+                .attr("y1", height + 60)
+                .attr("y2", height + 60)
                 .style("stroke", "#E1E1E1")
                 .attr("stroke-width", 1)
                 ;
         }
         addLinesForYears();
-        $("#IIPCheckbox").attr("checked","true");
-        iipCheckBoxEnabled();                                       
-      
+        $("#IIPCheckbox").attr("checked", "true");
+        iipCheckBoxEnabled();
+
     }
 }
 

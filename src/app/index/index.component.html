@@ -1,20 +1,20 @@
 <main class="app_index text-center">
-    <div class="row gx-0 justify-content-center">
-      <div class="col-md-12 mt-2">
-        <div class="app_index_chart_con">
-          <ul class="nav nav-pills justify-content-center p-2" id="graph-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
-                data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
-                aria-selected="true">Insights</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
-                type="button" role="tab" aria-controls="graph-context" aria-selected="false">Context</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="graph-tabContent">
-            <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
+  <div class="row gx-0 justify-content-center">
+    <div class="col-md-12 mt-2">
+      <div class="app_index_chart_con">
+        <ul class="nav nav-pills justify-content-center p-2" id="graph-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
+              data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
+              aria-selected="true">Insights</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
+              type="button" role="tab" aria-controls="graph-context" aria-selected="false">Context</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="graph-tabContent">
+          <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
               aria-labelledby="graph-insights-tab">
               <div class="index_graphs">
                 <div class="insights_graph d-lg-block d-md-block d-none">
@@ -32,7 +32,7 @@
                     <div id="mobile_yaxisContentInfo"></div>
                   </div> -->
                 </div>
-
+ 
                 <div class="app_index_commentary_con">
                   <div class="col-md-9 container">
                     <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
@@ -107,7 +107,7 @@
                   mobile_my_dataviz_context
                   <!-- <div id="mobile_my_dataviz_context" class="float-chart"> </div>                 -->
                 </div>
-                <div class="chart_desc">
+                <div class="chart_desc d-none d-md-flex">
                   <div id="iipDescDiv" class="iipContent">
                     <div class="iipLegendText"><input type="checkbox"
                       id="IIPCheckbox" class="context_checkboxes" value="IIP"/> &nbsp;*IIP</div>
@@ -133,129 +133,182 @@
                     </div>
                   </div>
                 </div>
-                <div class="app_index_context_con py-5">
-                  <div class="row gx-0 justify-content-center">
-                    <div class="my-5">
-                      <h6 class="app_index_context_title mb-5">How to read Jocata Sumpoorn with<br />other Macro Indices?
-                      </h6>
-                      <p class="app_index_context_caption">
-                        <span class="d-block">While Jocata Sumpoorn is an MSME specific fact-based Index, readers may
-                          want</span>
-                        <span class="d-block">to interpret the Index movement with other published Indices to unearth
-                          different</span>
-                        <span class="d-block">dimensions at play in the Indian economy. It is important to understand
-                          the</span>
-                        <span class="d-block">construct and scope of each Index before reading the Indices in
-                          conjunction.</span>
-                      </p>
-                    </div>
-                    <div class="col-md-10 container mb-5 pb-5">
-                      <table class="table table-responsive app_index_context_table">
-                        <thead>
-                          <tr>
-                            <th>
-                              <span>Attributes /</span>
-                              <span>Indices</span>
-                            </th>
-                            <th>
-                              <span class="table-blue">IIP</span>
-                              <span style="white-space: nowrap;">Index of Industrial Production</span>
-                            </th>
-                            <th>
-                              <span class="table-orange">PMI™</span>
-                              <span style="white-space: nowrap;">Purchasing Managers’ Index</span>
-                              <span class="fw-normal">(by S&P Global)</span>
-                            </th>
-                            <th>
-                              <span class="table-green">Jocata Sumpoorn</span>
-                              <span>In Association with SIDBI<br />MSME Economic Activity Index</span>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Published By</th>
-                            <td>GOI</td>
-                            <td>S&P Global</td>
-                            <td>Jocata</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Nature of Index</th>
-                            <td>Industrial manufacturing performance</td>
-                            <td>Business optimism</td>
-                            <td>Sales performance</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Type of Data</th>
-                            <td>Actual manufacturing production</td>
-                            <td>Opinion based</td>
-                            <td>
-                              Actual MSME monthly sales data<br />
-                              reflected from GSTIN returns of credit- seeking entities
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Sample Size</th>
-                            <td>--</td>
-                            <td>400 companies</td>
-                            <td>
-                              1000 MSMEs per month (minimum)<br />
-                              2000 MSMEs per month (desirable)
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Factors Involved</th>
-                            <td>Production data based on NIC (National Industrial Classification) codes
-                            </td>
-                            <td>Survey based</td>
-                            <td>
-                              Fact based - Delta of % of growing & declining GSTlNs combined with amplitude of change in
-                              turnover.
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Generation - Frequency & Date</th>
-                            <td>Monthly<br />7 weeks later, from the current month</td>
-                            <td>Monthly<br />
-                              1st week of succeeding month</td>
-                            <td>Monthly<br />
-                              4 weeks later, from the current month</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Index Type and Scale</th>
-                            <td>
-                              Cumulative index<br />
-                              Base year: 2011-12<br />
-                              Base value: 100
-                            </td>
-                            <td>
-                              Composite diffusion index<br />
-                              Base year: None<br />
-                              Base value: None<br />
-                              Scale: 0 to 100
-                            </td>
-                            <td>
-                              Relative amplitude adjusted composite diffusion index<br />
-                              Base year: None<br />
-                              Base value: None<br />
-                              Scale: 0 to 1
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Seasonality Adjusted?</th>
-                            <td>No</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                
+              </div>
+              <div class="app_index_context_con">
+                <div class="row gx-0 justify-content-center">
+                  <div class="col-12">
+                    <h6 class="app_index_context_title">
+                      <span>How to read Jocata Sumpoorn with </span>
+                      <span>other Macro Indices?</span>
+                    </h6>
+                    <p class="app_index_context_caption">
+                      <span>While Jocata Sumpoorn is an MSME specific fact-based Index, readers may
+                        want </span>
+                      <span>to interpret the Index movement with other published Indices to unearth
+                        different </span>
+                      <span>dimensions at play in the Indian economy. It is important to understand
+                        the </span>
+                      <span>construct and scope of each Index before reading the Indices in
+                        conjunction.</span>
+                    </p>
+                  </div>
+                  <div class="col-sm-12 col-md-11 col-lg-10">
+                    <table class="table table-responsive app_index_table_web d-none d-md-block mb-0">
+                      <thead>
+                        <tr>
+                          <th>
+                            <span>Attributes /</span>
+                            <span>Indices</span>
+                          </th>
+                          <th>
+                            <span class="table-blue">IIP</span>
+                            <span>Index of Industrial Production</span>
+                          </th>
+                          <th>
+                            <span class="table-orange">PMI™</span>
+                            <span>Purchasing Managers’ Index</span>
+                            <span class="fw-normal">(by S&P Global)</span>
+                          </th>
+                          <th>
+                            <span class="table-green">Jocata Sumpoorn</span>
+                            <span class="d-inline d-xl-block">In Association with SIDBI </span>
+                            <span class="d-inline d-xl-block">MSME Economic Activity Index</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Published By</th>
+                          <td>GOI</td>
+                          <td>S&P Global</td>
+                          <td>Jocata</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Nature of Index</th>
+                          <td>Industrial manufacturing performance</td>
+                          <td>Business optimism</td>
+                          <td>Sales performance</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Type of Data</th>
+                          <td>Actual manufacturing production</td>
+                          <td>Opinion based</td>
+                          <td>
+                            Actual MSME monthly sales data
+                            reflected from GSTIN returns of credit- seeking entities
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Sample Size</th>
+                          <td>--</td>
+                          <td>400 companies</td>
+                          <td>
+                            1000 MSMEs per month (minimum)<br />
+                            2000 MSMEs per month (desirable)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Factors Involved</th>
+                          <td>Production data based on NIC (National Industrial Classification) codes
+                          </td>
+                          <td>Survey based</td>
+                          <td>
+                            Fact based - Delta of % of growing & declining GSTlNs combined with amplitude of change in
+                            turnover.
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Generation - Frequency & Date</th>
+                          <td>Monthly<br />7 weeks later, from the current month</td>
+                          <td>Monthly<br />
+                            1st week of succeeding month</td>
+                          <td>Monthly<br />
+                            4 weeks later, from the current month</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Index Type and Scale</th>
+                          <td>
+                            Cumulative index<br />
+                            Base year: 2011-12<br />
+                            Base value: 100
+                          </td>
+                          <td>
+                            Composite diffusion index<br />
+                            Base year: None<br />
+                            Base value: None<br />
+                            Scale: 0 to 100
+                          </td>
+                          <td>
+                            Relative amplitude adjusted composite diffusion index<br />
+                            Base year: None<br />
+                            Base value: None<br />
+                            Scale: 0 to 1
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Seasonality Adjusted?</th>
+                          <td>No</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="app_index_table_mob d-block d-md-none">
+                      <div class="app_index_table_mob_header">
+                        <ul class="d-flex list-unstyled mb-0">
+                          <li>
+                            <img src="assets/icons/circle-blue.svg" />
+                            <span class="table-blue">IIP</span>
+                          </li>
+                          <li>
+                            <img src="assets/icons/circle-orange.svg" />
+                            <span class="table-orange">PMI</span>
+                          </li>
+                          <li>
+                            <img src="assets/icons/circle-green.svg" />
+                            <span class="table-green">Jocata Sumpoorn</span>
+                          </li>
+                        </ul>
+                        <a ><img src="assets/icons/info.svg" class="img-fluid" /></a>
+                      </div>
+                      <div class="app_index_table_mob_body">
+                        <div class="app_index_table_mob_body_item" *ngFor="let item of contextTableData">
+                          <h6>{{ item.title }}</h6>
+                          <div class="d-flex align-items-start" *ngFor="let item of item.items; let i = index">
+                            <img [src]="'assets/icons/circle-' + (i === 0 ? 'blue' : i === 1 ? 'orange' : 'green') + '.svg'" />
+                            <p [innerHTML]="item"></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
+
+<!-- Info Modal -->
+<div class="modal modal_with_shadow" id="successModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">You've successfully subscribed</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="success_text my-3">
+          You will receive monthly updates of the Jocata Sumpoorn Index.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
