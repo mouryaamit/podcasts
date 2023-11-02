@@ -74,7 +74,7 @@ export class IndexComponent implements OnInit {
         })
     }
     generateMobileInsightsGraph() {
-        // throw new Error('Method not implemented.');
+        // TODO
     }
     generateInsightsGraph() {
         const mydata = this.sumpoornGraphData.IndexGeneration;
@@ -183,6 +183,8 @@ export class IndexComponent implements OnInit {
             .append("svg") //append svg element inside #chart
             // .attr("width", default_width + (margin.left + margin.right)) //set width
             // .attr("height", default_height) //set height
+            .style("max-width", default_width + (margin.left + margin.right)) //set width
+            .style("max-height", default_height) //set height
             .attr("viewBox", `0 0 ${default_width + (margin.left + margin.right)} ${default_height}`)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`)
@@ -1495,7 +1497,7 @@ export class IndexComponent implements OnInit {
         }
     }
     generateMobileContextGraph() {
-        // throw new Error('Method not implemented.');
+        // TODO
     }
     generateContextGraph() {
         var mydata = this.sumpoornGraphData.IndexGeneration;
@@ -1608,6 +1610,8 @@ export class IndexComponent implements OnInit {
             .append("svg") //append svg element inside #chart
             // .attr("width", width + margin.left + margin.right + 100) //set width
             // .attr("height", height + margin.top + margin.bottom + 30) //set height
+            .style("max-width", width + margin.left + margin.right + 100) //set width
+            .style("max-height", height + margin.top + margin.bottom + 30) //set height
             .attr("viewBox", `0 0 ${width + margin.left + margin.right + 100} ${height + margin.top + margin.bottom + 30}`)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
