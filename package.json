@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build",
     "buildProd": "ng build --configuration production",
-    "buildDev": "ng build --configuration dev --base-href /sumpoorn/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
