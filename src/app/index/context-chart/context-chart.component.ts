@@ -39,9 +39,9 @@ generateContextGraph() {
         //1366
         width = 1060 - margin.left - margin.right,
         height = 450 - margin.top - margin.bottom;
-    const iipColorCode = '#2E8DFF';
+    const iipColorCode = '#24C0E2'; //2E8DFF
     const pmiColorCode = '#E1861B';
-    const gvaColorCode = '#5451FF';
+    const gvaColorCode = '#3E3EC8'; //5451FF
 
     const parseDate = d3.timeParse("%m-%Y");
     const y_left_coordinates = ['0.00', '0.10', '0.20', '0.30', '0.40', '0.50', '0.60', '0.70', '0.80', '0.90', '1.00'];
