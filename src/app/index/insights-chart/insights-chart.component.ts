@@ -39,7 +39,7 @@ export class InsightsChartComponent implements OnInit {
         bottom: 115,
         left: 0,
     },
-        default_width = 1150,
+        default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
         default_height = 500,
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
@@ -112,7 +112,7 @@ export class InsightsChartComponent implements OnInit {
         ;
 
     const yAxis_right = d3.axisRight(y2)
-        .tickSize([-width - 21]) // sets last xaxis index align
+        .tickSize([-width - 25]) // sets last xaxis index align
         .tickValues(y_right_coordinates)
         .tickFormat(
             function (d) {
@@ -124,8 +124,8 @@ export class InsightsChartComponent implements OnInit {
     const svgY = d3.select('#verticalSVG')
         .append('svg')
         .attr('height', 500)
-        .attr("width", 25);
-
+        .attr("width", 25)
+        .attr('transform', "translate(10, -15)");
     svgY.append('g')
         .attr('class', 'y axis')
         .call(yAxis_left)
@@ -137,7 +137,7 @@ export class InsightsChartComponent implements OnInit {
     // Creating svg with dimensions to chart
     const svg = d3.select("#mobile_my_dataviz_insights")
         .append("svg") //append svg element inside #chart
-        .attr("width", default_width + (margin.left + margin.right)) //set width
+        .attr("width", default_width + (margin.left)) //set width
         .attr("height", default_height) //set height
         // .attr("viewBox", `0 0 ${default_width + (margin.left + margin.right)} ${default_height}`)
         .append("g")
@@ -228,7 +228,7 @@ export class InsightsChartComponent implements OnInit {
 
     const y_text = svg.append("g")
         .attr("stroke-width", "0.1")
-        .attr("transform", `translate(${width + 21},0)`) // sets last xaxis index align
+        .attr("transform", `translate(${width + 25},0)`) // sets last xaxis index align
         .call(yAxis_right)
         .selectAll('.tick text') // select all the y tick texts
         // .call( (t) => {
@@ -389,9 +389,9 @@ export class InsightsChartComponent implements OnInit {
             ;
         const year_6 = svg.append("g"); // last line
         year_6.append('line')
-            .attr('x1', width + 21)
+            .attr('x1', width + 25)
             .attr('y1', 0)
-            .attr('x2', width + 21)
+            .attr('x2', width + 25)
             .attr('y2', height + 60)
             .attr('stroke', '#E1E1E1')
             .attr("stroke-width", "1")
@@ -457,7 +457,7 @@ export class InsightsChartComponent implements OnInit {
             .attr("x", x_1 - 25)
             .attr("y", y_1 + 55)
             .attr("width", 25)
-            .attr("class", "flags_text")
+            .attr("class", "flags_text_mobile")
             .attr("text-anchor", "middle")
             .style("font-size", "14px")
             .style("fill", "#767676")
@@ -486,7 +486,7 @@ export class InsightsChartComponent implements OnInit {
             .attr("x", x_2 - 30)
             .attr("y", y_2 - 105)
             .attr("width", 25)
-            .attr("class", "flags_text")
+            .attr("class", "flags_text_mobile")
             .attr("text-anchor", "middle")
             .style("font-size", "14px")
             .style("fill", "#767676")
@@ -501,7 +501,7 @@ export class InsightsChartComponent implements OnInit {
             .attr("stroke-width", "1")
             ;
 
-        d3.selectAll('.flags_text').call(wrap);
+        d3.selectAll('.flags_text_mobile').call(wrap);
 
     }
 
@@ -756,7 +756,7 @@ export class InsightsChartComponent implements OnInit {
                 svg.append('rect')
                     .attr('x', width)
                     .attr('y', 0)
-                    .attr('width', 22)
+                    .attr('width', 24)
                     .attr('height', height + 40)
                     .attr("id", "rect_xaxis")
                     .attr('stroke', 'black')
@@ -809,7 +809,7 @@ export class InsightsChartComponent implements OnInit {
         svg.append('rect')
             .attr('x', tooltip_pointer.x)
             .attr('y', 0)
-            .attr('width', 22)
+            .attr('width', 25)
             .attr('height', height + 40)
             .attr("id", "rect_xaxis")
             .attr('stroke', 'black')
@@ -857,8 +857,8 @@ export class InsightsChartComponent implements OnInit {
             .duration(100)
             .style("opacity", 0.9);
         tooltip
-            .html(dataValue.value)
-            .style("left", (mousePointer.x + 60) + "px")
+            .html(Number(dataValue.value).toFixed(2))
+            .style("left", (mousePointer.x - 10) + "px")
             .style("top", (mousePointer.y - 35) + "px");
         ;
         radiation
@@ -876,15 +876,15 @@ export class InsightsChartComponent implements OnInit {
                     "<span class=\"circle_waves circle_two\"></span> " +
                     "<span class=\"circle_waves circle_three\"></span>" +
                     "</span>")
-                .style("left", (mousePointer.x - width - 225) + "px")
-                .style("top", (mousePointer.y - 243) + "px");
+                .style("left", (mousePointer.x + 12.5) + "px")
+                .style("top", (mousePointer.y + 20) + "px");
         } else {
             radiation
                 .html("<span id=\"radiation\" class=\"animating_circle\">" +
                     "<span class=\"circle_waves circle_three\"></span>" +
                     "</span>")
-                .style("left", (mousePointer.x - width - 225) + "px")
-                .style("top", (mousePointer.y - 243) + "px");
+                    .style("left", (mousePointer.x + 12.5) + "px")
+                    .style("top", (mousePointer.y + 20) + "px");
         }
     }
 
@@ -1423,7 +1423,7 @@ export class InsightsChartComponent implements OnInit {
     path.on("click", clickPoint);
 }
   
-  generateInsightsGraph() {
+generateInsightsGraph() {
     const mydata = this.sumpoornGraphData.IndexGeneration;
     const indexData = this.sumpoornGraphData.Commentary;
 
