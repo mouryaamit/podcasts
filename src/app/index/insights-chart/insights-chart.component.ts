@@ -125,7 +125,7 @@ export class InsightsChartComponent implements OnInit {
         .append('svg')
         .attr('height', 500)
         .attr("width", 25)
-        .attr('transform', "translate(4, -5.5)");
+        .attr('transform', "translate(4, 13)");
     svgY.append('g')
         .attr('class', 'y axis')
         .call(yAxis_left)
