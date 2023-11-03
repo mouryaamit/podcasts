@@ -286,7 +286,8 @@
     }
 
     .iipColorClass {
-        color: #2E8DFF;
+        // color: #2E8DFF;
+        color: #24C0E2;
     }
 
     .pmiColorClass {
@@ -294,7 +295,8 @@
     }
 
     .gvaColorClass {
-        color: #5451FF;
+        // color: #5451FF;
+        color: #3E3EC8;
     }
 
     #rect_xaxis_context {
@@ -386,7 +388,8 @@
     }
 
     .iipLegendText {
-        color: var(--IIP, #2E8DFF);
+        // color: var(--IIP, #2E8DFF);
+        color: var(--IIP, #24C0E2);
         font-family: Inter;
         font-size: 14px;
         font-style: normal;
@@ -406,7 +409,8 @@
     }
 
     .gvaLegendText {
-        color: var(--GOI, #5451FF);
+        // color: var(--GOI, #5451FF);
+        color: var(--GOI, #3E3EC8);
         text-align: start;
         font-family: Inter;
         font-size: 14px;
