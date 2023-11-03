@@ -1,270 +1,333 @@
 <main class="app_index text-center">
   <div class="row gx-0 justify-content-center">
-    <div class="col-md-12 mt-2">
+    <div class="col-12">
       <div class="app_index_chart_con">
-        <ul class="nav nav-pills justify-content-center p-2" id="graph-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
-              data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
-              aria-selected="true">Insights</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
-              type="button" role="tab" aria-controls="graph-context" aria-selected="false">Context</button>
-          </li>
-        </ul>
+        <div class="d-flex justify-content-around align-items-center">
+          <p class="nav-pills-static-text d-flex d-md-none">Index</p>
+          <ul class="nav nav-pills justify-content-center p-2" id="graph-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
+                data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
+                aria-selected="true">Insights</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
+                type="button" role="tab" aria-controls="graph-context" aria-selected="false">Context</button>
+            </li>
+          </ul>
+          <a class="d-flex d-md-none" data-bs-toggle="modal" data-bs-target="#infoModal"
+            (click)="showInfo('contextChartInfo')">
+            <img src="assets/icons/info.svg" class="img-fluid" />
+          </a>
+        </div>
         <div class="tab-content" id="graph-tabContent">
           <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
-              aria-labelledby="graph-insights-tab">
-              <div class="index_graphs">
-                <app-insights-chart [sumpoornGraphData]="sumpoornGraphData" *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
-                <div class="app_index_commentary_con">
-                  <div class="col-md-9 container">
-                    <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
-                      data-bs-wrap="false">
-                      <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="prev" id="#slide_prev" #slide_prev>
-                        <div class="carousel_controls">
-                          <span class="control_name" id="prev_month">Prev</span>
-                          <img src="assets/icons/chevron_left.svg" class="button_left_arrow" alt="Chevron Left" />
-                        </div>
-                      </a>
-                      <div class="carousel-inner">
-                        <div class="carousel-item bg-body active">
-                          <div class="commentary_header">
-                            <!-- <p class="commentary_month mb-0 ec_month"></p> -->
-                            <p class="commentary_title mb-0 ec_month_title"></p>
-                            <div class="commentary_download">
-                              <span>Download PDF</span>
-                              <img src="assets/icons/download-icon.svg" class="img-fluid"/>
-                            </div>
+            aria-labelledby="graph-insights-tab">
+            <div class="index_graphs">
+              <app-insights-chart [sumpoornGraphData]="sumpoornGraphData"
+                *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
+            </div>
+            <div class="app_index_commentary_con">
+              <div class="row gx-0">
+                <!-- Web Commentary -->
+                <div class="col-lg-11 col-xl-9 container d-none d-lg-block">
+                  <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
+                    data-bs-wrap="false">
+                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="prev" id="#slide_prev"
+                      #slide_prev>
+                      <div class="carousel_controls">
+                        <span class="control_name" id="prev_month">Prev</span>
+                        <img src="assets/icons/chevron_left.svg" class="button_left_arrow" alt="Chevron Left" />
+                      </div>
+                    </a>
+                    <div class="carousel-inner">
+                      <div class="carousel-item bg-body active">
+                        <div class="commentary_header">
+                          <!-- <p class="commentary_month mb-0 ec_month"></p> -->
+                          <p class="commentary_title mb-0 ec_month_title"></p>
+                          <div class="commentary_download">
+                            <span>Download PDF</span>
+                            <img src="assets/icons/download-icon.svg" class="img-fluid" />
                           </div>
-                          <div class="commentary_body">
-                            <div class="row">
-                              <div class="col-md-4 commentary_body_left">
-                                <div class="d-inline-flex align-items-center position-relative">
-                                  <h6 class="commentary_body_left_title mc_title"></h6>
-                                  <span class="title_rating mc_rating"></span>
-                                  <span class="circle_waves circle_one isLatestIdx"></span>
-                                  <span class="circle_waves circle_two isLatestIdx"></span>
-                                  <span class="circle_waves circle_three"></span>
-                                </div>
-                                <p class="commentary_body_left_detail mc_body">
-                                </p>
-                                <div class="mc_graph img-fluid">
-                                  <div id="commentary_graph"></div>
-                                </div>
+                        </div>
+                        <div class="commentary_body">
+                          <div class="row">
+                            <div class="col-md-4 commentary_body_left">
+                              <div class="d-inline-flex align-items-center position-relative">
+                                <h6 class="commentary_body_left_title mc_title"></h6>
+                                <span class="title_rating mc_rating"></span>
+                                <span class="circle_waves circle_one isLatestIdx"></span>
+                                <span class="circle_waves circle_two isLatestIdx"></span>
+                                <span class="circle_waves circle_three"></span>
                               </div>
-                              <div class="col-md-8 commentary_body_right">
-                                <h6 class="commentary_body_right_title ec_title"></h6>
-                                <div class="member_con" id="commentary_mem_details">
-                                  <!-- <div id="img_commentary">
+                              <p class="commentary_body_left_detail mc_body">
+                              </p>
+                              <div class="mc_graph img-fluid">
+                                <div id="commentary_graph"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-8 commentary_body_right">
+                              <h6 class="commentary_body_right_title ec_title"></h6>
+                              <div class="member_con" id="commentary_mem_details">
+                                <!-- <div id="img_commentary">
                                   </div>
                                   <div class="member_details">
                                     <p class="member_name mb-0 ec_author"></p>
                                     <p class="member_title mb-0 ec_author_designation"></p>
                                   </div> -->
-                                </div>
-                                <div class="commentary_body_right_detail">
-                                  <p class="ec_message"></p>
-                                </div>
+                              </div>
+                              <div class="commentary_body_right_detail">
+                                <p class="ec_message"></p>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="next" id="#slide_next" #slide_next>
-                        <div class="carousel_controls">
-                          <span class="control_name" id="next_month">Next</span>
-                          <img src="assets/icons/chevron_right.svg" class="button_right_arrow" alt="Chevron Right" />
-                        </div>
-                      </a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="graph-context" role="tabpanel" aria-labelledby="graph-context-tab">
-              <div class="index_graphs">
-                <app-context-chart [sumpoornGraphData]="sumpoornGraphData" [iipGraphData]="iipGraphData" [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData" *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0 && iipGraphData?.iipValues &&pmiGraphData?.pmiValues && gvaGraphData?.gvaValues"></app-context-chart>
-                <div class="chart_desc d-none d-md-flex">
-                  <div id="iipDescDiv" class="iipContent">
-                    <div class="iipLegendText"><input type="checkbox"
-                      id="IIPCheckbox" class="context_checkboxes" value="IIP"/> &nbsp;*IIP</div>
-                    <div class="iipLegendContent">
-                      General Index of Industrial Production. IIP data compiled and published by the Ministry of
-                      Statistics and Programme Implementation (MoSPI), GOI is updated to the latest release. </div>
-                  </div>
-                  <div id="pmiDescDiv" class="pmiContent">
-                    <div class="pmiLegendText"><input type="checkbox" id="PMICheckbox"
-                      class="context_checkboxes" value="PMI" /> &nbsp;*PMI&#8482;</div>
-                    <div class="pmiLegendContent">
-                      S&P Global Composite Purchasing Managers' Index. All trademarks are property of their respective
-                      owners.
-                    </div>
-                  </div>
-                  <div id="gvaDescDiv" class="gvaContent">
-                    <div class="gvaLegendText"><input
-                      type="checkbox" id="GVACheckbox" class="context_checkboxes" value="GVA" />
-                    &nbsp;*GVA Growth %</div>
-                    <div class="gvaLegendContent">
-                      Growth in Gross Value Added at current prices. GVA is a primary measure in national income
-                      statistics, defined as the value of output less the value of intermediate consumption.
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="app_index_context_con">
-                <div class="row gx-0 justify-content-center">
-                  <div class="col-12">
-                    <h6 class="app_index_context_title">
-                      <span>How to read Jocata Sumpoorn with </span>
-                      <span>other Macro Indices?</span>
-                    </h6>
-                    <p class="app_index_context_caption">
-                      <span>While Jocata Sumpoorn is an MSME specific fact-based Index, readers may
-                        want </span>
-                      <span>to interpret the Index movement with other published Indices to unearth
-                        different </span>
-                      <span>dimensions at play in the Indian economy. It is important to understand
-                        the </span>
-                      <span>construct and scope of each Index before reading the Indices in
-                        conjunction.</span>
-                    </p>
-                  </div>
-                  <div class="col-sm-12 col-md-11 col-lg-10">
-                    <table class="table table-responsive app_index_table_web d-none d-md-block mb-0">
-                      <thead>
-                        <tr>
-                          <th>
-                            <span>Attributes /</span>
-                            <span>Indices</span>
-                          </th>
-                          <th>
-                            <span class="table-blue">IIP</span>
-                            <span>Index of Industrial Production</span>
-                          </th>
-                          <th>
-                            <span class="table-orange">PMI™</span>
-                            <span>Purchasing Managers’ Index</span>
-                            <span class="fw-normal">(by S&P Global)</span>
-                          </th>
-                          <th>
-                            <span class="table-green">Jocata Sumpoorn</span>
-                            <span class="d-inline d-xl-block">In Association with SIDBI </span>
-                            <span class="d-inline d-xl-block">MSME Economic Activity Index</span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Published By</th>
-                          <td>GOI</td>
-                          <td>S&P Global</td>
-                          <td>Jocata</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Nature of Index</th>
-                          <td>Industrial manufacturing performance</td>
-                          <td>Business optimism</td>
-                          <td>Sales performance</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Type of Data</th>
-                          <td>Actual manufacturing production</td>
-                          <td>Opinion based</td>
-                          <td>
-                            Actual MSME monthly sales data
-                            reflected from GSTIN returns of credit- seeking entities
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sample Size</th>
-                          <td>--</td>
-                          <td>400 companies</td>
-                          <td>
-                            1000 MSMEs per month (minimum)<br />
-                            2000 MSMEs per month (desirable)
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Factors Involved</th>
-                          <td>Production data based on NIC (National Industrial Classification) codes
-                          </td>
-                          <td>Survey based</td>
-                          <td>
-                            Fact based - Delta of % of growing & declining GSTlNs combined with amplitude of change in
-                            turnover.
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Generation - Frequency & Date</th>
-                          <td>Monthly<br />7 weeks later, from the current month</td>
-                          <td>Monthly<br />
-                            1st week of succeeding month</td>
-                          <td>Monthly<br />
-                            4 weeks later, from the current month</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Index Type and Scale</th>
-                          <td>
-                            Cumulative index<br />
-                            Base year: 2011-12<br />
-                            Base value: 100
-                          </td>
-                          <td>
-                            Composite diffusion index<br />
-                            Base year: None<br />
-                            Base value: None<br />
-                            Scale: 0 to 100
-                          </td>
-                          <td>
-                            Relative amplitude adjusted composite diffusion index<br />
-                            Base year: None<br />
-                            Base value: None<br />
-                            Scale: 0 to 1
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Seasonality Adjusted?</th>
-                          <td>No</td>
-                          <td>Yes</td>
-                          <td>Yes</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="app_index_table_mob d-block d-md-none">
-                      <div class="app_index_table_mob_header">
-                        <ul class="d-flex list-unstyled mb-0">
-                          <li>
-                            <img src="assets/icons/circle-blue.svg" />
-                            <span class="table-blue">IIP</span>
-                          </li>
-                          <li>
-                            <img src="assets/icons/circle-orange.svg" />
-                            <span class="table-orange">PMI</span>
-                          </li>
-                          <li>
-                            <img src="assets/icons/circle-green.svg" />
-                            <span class="table-green">Jocata Sumpoorn</span>
-                          </li>
-                        </ul>
-                        <a ><img src="assets/icons/info.svg" class="img-fluid" /></a>
+                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="next" id="#slide_next"
+                      #slide_next>
+                      <div class="carousel_controls">
+                        <span class="control_name" id="next_month">Next</span>
+                        <img src="assets/icons/chevron_right.svg" class="button_right_arrow" alt="Chevron Right" />
                       </div>
-                      <div class="app_index_table_mob_body">
-                        <div class="app_index_table_mob_body_item" *ngFor="let item of contextTableData">
-                          <h6>{{ item.title }}</h6>
-                          <div class="d-flex align-items-start" *ngFor="let item of item.items; let i = index">
-                            <img [src]="'assets/icons/circle-' + (i === 0 ? 'blue' : i === 1 ? 'orange' : 'green') + '.svg'" />
-                            <p [innerHTML]="item"></p>
+                    </a>
+                  </div>
+                </div> 
+                <!-- Mobile Commentary -->
+                <div class="col-12 d-block d-lg-none">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="indexDetails-tab" data-bs-toggle="tab" data-bs-target="#indexDetails"
+                        type="button" role="tab" aria-controls="indexDetails" aria-selected="true">Index Details</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="expertCommentary-tab" data-bs-toggle="tab" data-bs-target="#expertCommentary"
+                        type="button" role="tab" aria-controls="expertCommentary" aria-selected="false">Expert Commentary</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content commentary_body">
+                    <div class="tab-pane fade active" id="indexDetails" role="tabpanel" aria-labelledby="indexDetails-tab">
+                      <div class="row gx-0">
+                        <div class="col-12 commentary_body_left">
+                          <div class="d-inline-flex align-items-center position-relative">
+                            <h6 class="commentary_body_left_title mc_title"></h6>
+                            <span class="title_rating mc_rating"></span>
+                            <span class="circle_waves circle_one isLatestIdx"></span>
+                            <span class="circle_waves circle_two isLatestIdx"></span>
+                            <span class="circle_waves circle_three"></span>
+                          </div>
+                          <p class="commentary_body_left_detail mc_body mb-5"></p>
+                          <div class="mc_graph text-center">
+                            <div id="commentary_graph"></div>
                           </div>
                         </div>
                       </div>
                     </div>
+  
+                    <div class="tab-pane fade" id="expertCommentary" role="tabpanel" aria-labelledby="expertCommentary-tab">
+                      <div class="row gx-0">
+                        <div class="col-12 commentary_body_right">
+                          <h6 class="commentary_body_right_title ec_title"></h6>
+                          <div class="member_con" id="commentary_mem_details">
+                          </div>
+                          <div class="commentary_body_right_detail">
+                            <p class="ec_message"></p>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  </div>
+                </div>     
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="graph-context" role="tabpanel" aria-labelledby="graph-context-tab">
+            <div class="index_graphs">
+              <app-context-chart [sumpoornGraphData]="sumpoornGraphData" [iipGraphData]="iipGraphData"
+                [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData"
+                *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0 && iipGraphData?.iipValues &&pmiGraphData?.pmiValues && gvaGraphData?.gvaValues"></app-context-chart>
+              <div class="chart_desc d-none d-md-flex">
+                <div id="iipDescDiv" class="iipContent">
+                  <div class="iipLegendText"><input type="checkbox" id="IIPCheckbox" class="context_checkboxes"
+                      value="IIP" /> &nbsp;*IIP</div>
+                  <div class="iipLegendContent">
+                    General Index of Industrial Production. IIP data compiled and published by the Ministry of
+                    Statistics and Programme Implementation (MoSPI), GOI is updated to the latest release. </div>
+                </div>
+                <div id="pmiDescDiv" class="pmiContent">
+                  <div class="pmiLegendText"><input type="checkbox" id="PMICheckbox" class="context_checkboxes"
+                      value="PMI" /> &nbsp;*PMI&#8482;</div>
+                  <div class="pmiLegendContent">
+                    S&P Global Composite Purchasing Managers' Index. All trademarks are property of their respective
+                    owners.
+                  </div>
+                </div>
+                <div id="gvaDescDiv" class="gvaContent">
+                  <div class="gvaLegendText"><input type="checkbox" id="GVACheckbox" class="context_checkboxes"
+                      value="GVA" />
+                    &nbsp;*GVA Growth %</div>
+                  <div class="gvaLegendContent">
+                    Growth in Gross Value Added at current prices. GVA is a primary measure in national income
+                    statistics, defined as the value of output less the value of intermediate consumption.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="app_index_context_con">
+              <div class="row gx-0 justify-content-center">
+                <div class="col-12">
+                  <h6 class="app_index_context_title">
+                    <span>How to read Jocata Sumpoorn with </span>
+                    <span>other Macro Indices?</span>
+                  </h6>
+                  <p class="app_index_context_caption">
+                    <span>While Jocata Sumpoorn is an MSME specific fact-based Index, readers may
+                      want </span>
+                    <span>to interpret the Index movement with other published Indices to unearth
+                      different </span>
+                    <span>dimensions at play in the Indian economy. It is important to understand
+                      the </span>
+                    <span>construct and scope of each Index before reading the Indices in
+                      conjunction.</span>
+                  </p>
+                </div>
+                <div class="col-sm-12 col-md-11 col-lg-10">
+                  <table class="table table-responsive app_index_table_web d-none d-md-block mb-0">
+                    <thead>
+                      <tr>
+                        <th>
+                          <span>Attributes /</span>
+                          <span>Indices</span>
+                        </th>
+                        <th>
+                          <span class="table-blue">IIP</span>
+                          <span>Index of Industrial Production</span>
+                        </th>
+                        <th>
+                          <span class="table-orange">PMI™</span>
+                          <span>Purchasing Managers’ Index</span>
+                          <span class="fw-normal">(by S&P Global)</span>
+                        </th>
+                        <th>
+                          <span class="table-green">Jocata Sumpoorn</span>
+                          <span class="d-inline d-xl-block">In Association with SIDBI </span>
+                          <span class="d-inline d-xl-block">MSME Economic Activity Index</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Published By</th>
+                        <td>GOI</td>
+                        <td>S&P Global</td>
+                        <td>Jocata</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Nature of Index</th>
+                        <td>Industrial manufacturing performance</td>
+                        <td>Business optimism</td>
+                        <td>Sales performance</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Type of Data</th>
+                        <td>Actual manufacturing production</td>
+                        <td>Opinion based</td>
+                        <td>
+                          Actual MSME monthly sales data
+                          reflected from GSTIN returns of credit- seeking entities
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Sample Size</th>
+                        <td>--</td>
+                        <td>400 companies</td>
+                        <td>
+                          1000 MSMEs per month (minimum)<br />
+                          2000 MSMEs per month (desirable)
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Factors Involved</th>
+                        <td>Production data based on NIC (National Industrial Classification) codes
+                        </td>
+                        <td>Survey based</td>
+                        <td>
+                          Fact based - Delta of % of growing & declining GSTlNs combined with amplitude of change in
+                          turnover.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Generation - Frequency & Date</th>
+                        <td>Monthly<br />7 weeks later, from the current month</td>
+                        <td>Monthly<br />
+                          1st week of succeeding month</td>
+                        <td>Monthly<br />
+                          4 weeks later, from the current month</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Index Type and Scale</th>
+                        <td>
+                          Cumulative index<br />
+                          Base year: 2011-12<br />
+                          Base value: 100
+                        </td>
+                        <td>
+                          Composite diffusion index<br />
+                          Base year: None<br />
+                          Base value: None<br />
+                          Scale: 0 to 100
+                        </td>
+                        <td>
+                          Relative amplitude adjusted composite diffusion index<br />
+                          Base year: None<br />
+                          Base value: None<br />
+                          Scale: 0 to 1
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Seasonality Adjusted?</th>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="app_index_table_mob d-block d-md-none">
+                    <div class="app_index_table_mob_header">
+                      <ul class="d-flex list-unstyled mb-0">
+                        <li>
+                          <img src="assets/icons/circle-blue.svg" />
+                          <span class="table-blue">IIP</span>
+                        </li>
+                        <li>
+                          <img src="assets/icons/circle-orange.svg" />
+                          <span class="table-orange">PMI</span>
+                        </li>
+                        <li>
+                          <img src="assets/icons/circle-green.svg" />
+                          <span class="table-green">Jocata Sumpoorn</span>
+                        </li>
+                      </ul>
+                      <a data-bs-toggle="modal" data-bs-target="#infoModal" (click)="showInfo('contextTableInfo')">
+                        <img src="assets/icons/info.svg" class="img-fluid" />
+                      </a>
+                    </div>
+                    <div class="app_index_table_mob_body">
+                      <div class="app_index_table_mob_body_item" *ngFor="let item of contextTableData">
+                        <h6>{{ item.title }}</h6>
+                        <div class="d-flex align-items-start" *ngFor="let item of item.items; let i = index">
+                          <img
+                            [src]="'assets/icons/circle-' + (i === 0 ? 'blue' : i === 1 ? 'orange' : 'green') + '.svg'" />
+                          <p [innerHTML]="item"></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -272,20 +335,36 @@
 </main>
 
 <!-- Info Modal -->
-<div class="modal modal_with_shadow" id="successModal">
+<div class="modal fade" id="infoModal">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">You've successfully subscribed</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-
       <!-- Modal body -->
       <div class="modal-body">
-        <div class="success_text my-3">
-          You will receive monthly updates of the Jocata Sumpoorn Index.
+        <div class="info_modal_item">
+          <h6 class="table-blue">IIP</h6>
+          <p>General Index of Industrial Production. IIP data compiled and published by the Ministry of
+            Statistics and Programme Implementation (MoSPI), GOI is updated to the latest release.</p>
+        </div>
+
+        <div class="info_modal_item">
+          <h6 class="table-orange">PMI™</h6>
+          <p>S&P Global Composite Purchasing Managers' Index. All trademarks are property of their respective
+            owners.</p>
+        </div>
+
+        <div class="info_modal_item" *ngIf="infoItemToShow == 'contextChartInfo'">
+          <h6 class="table-darkblue">GVA Growth %</h6>
+          <p>Growth in Gross Value Added at current prices. GVA is a primary measure in national income
+            statistics, defined as the value of output less the value of intermediate consumption.</p>
+        </div>
+
+        <div class="info_modal_item" *ngIf="infoItemToShow == 'contextTableInfo'">
+          <h6 class="table-green">Jocata Sumpoorn</h6>
+          <p>Association with SIDBI, MSME Economic Activity Index</p>
         </div>
       </div>
     </div>
