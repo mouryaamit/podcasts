@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { TouComponent } from './tou/tou.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
+import { InsightsChartComponent } from './index/insights-chart/insights-chart.component';
+import { ContextChartComponent } from './index/context-chart/context-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { InstitutionLoginComponent } from './institution-login/institution-login
     AboutComponent,
     ContactComponent,
     TouComponent,
-    InstitutionLoginComponent
+    InstitutionLoginComponent,
+    InsightsChartComponent,
+    ContextChartComponent
   ],
   imports: [
     HttpClientModule,

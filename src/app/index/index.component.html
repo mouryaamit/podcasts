@@ -17,22 +17,7 @@
           <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
               aria-labelledby="graph-insights-tab">
               <div class="index_graphs">
-                <div class="insights_graph d-lg-block d-md-block d-none container">
-                  <div id="my_dataviz_insights"></div>
-                  <div id="contextMenu" style="display: none" class="contextMenu">
-                    <div id="closeInfo" class="close" style="cursor: pointer;">&times;</div>
-                    <div id="yaxisContentInfo"></div>
-                  </div>
-                </div>
-                <div class="mobile_insights_graph d-md-none container">
-                  mobile_insights_graph
-                  <!-- <div id="mobile_my_dataviz_insights"></div>
-                  <div id="mobile_contextMenu" style="display: none" class="contextMenu">
-                    <div id="mobile_closeInfo" class="close" style="cursor: pointer;">&times;</div>
-                    <div id="mobile_yaxisContentInfo"></div>
-                  </div> -->
-                </div>
- 
+                <app-insights-chart [sumpoornGraphData]="sumpoornGraphData" *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
                 <div class="app_index_commentary_con">
                   <div class="col-md-9 container">
                     <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
@@ -100,13 +85,7 @@
             </div>
             <div class="tab-pane fade" id="graph-context" role="tabpanel" aria-labelledby="graph-context-tab">
               <div class="index_graphs">
-                <div class="context_chart_container d-lg-block d-md-block d-none container">
-                  <div id="my_dataviz_context" class="float-chart"> </div>                
-                </div>
-                <div class="mobile_context_chart_container d-md-none container">
-                  mobile_my_dataviz_context
-                  <!-- <div id="mobile_my_dataviz_context" class="float-chart"> </div>                 -->
-                </div>
+                <app-context-chart [sumpoornGraphData]="sumpoornGraphData" [iipGraphData]="iipGraphData" [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData" *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0 && iipGraphData?.iipValues &&pmiGraphData?.pmiValues && gvaGraphData?.gvaValues"></app-context-chart>
                 <div class="chart_desc d-none d-md-flex">
                   <div id="iipDescDiv" class="iipContent">
                     <div class="iipLegendText"><input type="checkbox"
