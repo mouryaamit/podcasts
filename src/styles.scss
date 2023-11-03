@@ -1947,10 +1947,13 @@ main {
         }
       }
     }
-
+    @media only screen and (min-width: 768px){
+      .app_index_commentary_con {
+        padding-bottom: 10rem;
+      }
+    }
     .app_index_commentary_con {
       background: #fafafa;
-      padding-bottom: 10rem;
 
       .carousel_commentary {
         display: flex;

@@ -27,9 +27,6 @@ export class InsightsChartComponent implements OnInit {
         const y_right_coordinates = ['0.00', '0.25', '0.45', '0.50', '0.52', '0.54', '0.60', '0.65', '0.75', '1.00']; //'0.00',
         const y_com_coordinates = ['0.0', '0.2', '0.4', '0.6', '0.8', '1.0'];
 
-        let prev_month_data;
-        let next_month_data;
-
         let tooltip, radiation, selectedPoint;
 
         // set the dimensions and margins of the graph
@@ -446,7 +443,6 @@ export class InsightsChartComponent implements OnInit {
             else
                 years[i]["count"]++;
         });
-        console.log(years)
         function addLinesForGraph() {
             const firstLine = svg.append("g"); // first line
             firstLine.append('line')
@@ -747,18 +743,7 @@ export class InsightsChartComponent implements OnInit {
                 .attr('cy', function (d: any) {
                     return d;
                 });
-                console.log("value of d = ", d);
-                console.log("value of height = ", handyValues.h);
 
-            //     let handyValues_line = getYaxisValuesForLines(d);
-            //     svg.append("line")
-            //         .attr("x1", width + 35)
-            //         .attr("x2", handyValues_line.x2)
-            //         .attr("y1", handyValues_line.y1)
-            //         .attr("y2", handyValues_line.y1)
-            //         .style("stroke", "#E2E2E2")
-            //         .attr("stroke-width", 1)
-            //         ;
         }
         function formatHandYvaluesYaxis(d, isMouseover) {
             if (isMouseover) {
@@ -805,38 +790,6 @@ export class InsightsChartComponent implements OnInit {
             }
         }
 
-        function getYaxisValuesForLines(d) {
-            let hAndyValues = { y1: 0, x2: 0 };
-            if (d == 0.00) {
-                hAndyValues.y1 = height;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.25) {
-                hAndyValues.y1 = 282;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.45) {
-                hAndyValues.y1 = 207;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.50) {
-                hAndyValues.y1 = 187.5;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.52) {
-                hAndyValues.y1 = 180.5;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.54) {
-                hAndyValues.y1 = 173;
-                hAndyValues.x2 = width + 70;
-            } else if (d == 0.60) {
-                hAndyValues.y1 = 150.5;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.65) {
-                hAndyValues.y1 = 131.5;
-                hAndyValues.x2 = width + 112;
-            } else if (d == 0.75) {
-                hAndyValues.y1 = 94;
-                hAndyValues.x2 = width + 112;
-            }
-            return hAndyValues;
-        }
         addSelectionYaxis();
 
         function selectionOfXaxis() {
@@ -869,7 +822,6 @@ export class InsightsChartComponent implements OnInit {
                     d3.selectAll(".y-axis-titles").classed("active", false);
                     d3.selectAll(".y-axis-titles").classed("select", false);
                     checkSpecificPointOnYaxis(i);
-                    setPrevAndNextMonthsSlider(mydata[i]);
                     addCommentary(mydata[i]);
                 }
                 d3.select(d_child)
@@ -918,7 +870,6 @@ export class InsightsChartComponent implements OnInit {
             d3.selectAll(".y-axis-titles").classed("select", false);
             d3.selectAll(".y-axis-titles").classed("active", false);
             checkSpecificPointOnYaxis(indexOfObj);
-            setPrevAndNextMonthsSlider(dataValue);
             addCommentary(dataValue);
         }
 
@@ -1012,67 +963,9 @@ export class InsightsChartComponent implements OnInit {
             return -1;
         }
 
-        function setPrevAndNextMonthsSlider(dataValue) {
-            let expertData = (indexData.ExpertCommentary).filter((e) => {
-                return (e.Month == dataValue.category);
-            });
-            if (expertData.length > 0) {
-                let expertC = expertData[0];
-                let prev_month = d3.timeFormat('%b')(<Date>parseDate(expertC.previousMonth));
-                let next_month = d3.timeFormat('%b')(<Date>parseDate(expertC.nextMonth));
-                $("#prev_month").html(prev_month);
-                $("#next_month").html(next_month);
-                addSliderData(expertC.previousMonth, expertC.nextMonth);
-            }
-        }
-
-        function addSliderData(prev_month_ec, next_month_ec) {
-            prev_month_data = prev_month_ec;
-            next_month_data = next_month_ec;
-            checkIfCommentaryDataAvailable(prev_month_data, next_month_data);
-        }
-
-        function checkIfCommentaryDataAvailable(prev_month_data, next_month_data) {
-            const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
-            const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkForPrevCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
-            const checkForNextCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
-            (<HTMLElement>document.getElementById('#slide_prev')).classList.remove("disable_arrows");
-            (<HTMLElement>document.getElementById('#slide_next')).classList.remove("disable_arrows");
-            if (!prevCommentaryData || (prevCommentaryData && !checkForPrevCommentary)) {
-                (<HTMLElement>document.getElementById('#slide_prev')).classList.add("disable_arrows");
-            } else if (!nextCommentaryData || (nextCommentaryData && !checkForNextCommentary)) {
-                (<HTMLElement>document.getElementById('#slide_next')).classList.add("disable_arrows");
-            }
-        }
-
-        (<HTMLElement>document.getElementById('#slide_prev')).addEventListener('click', function () {
-            const prevCommentaryData = mydata.filter((x) => x.category == prev_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == prev_month_data)[0];
-            if (prevCommentaryData && checkIfMonthlyCommentary) {
-                setPrevAndNextMonthsSlider(prevCommentaryData);
-                addCommentary(prevCommentaryData);
-                // need to avoid for month not having commentary data
-                // xaxis selection on click
-                removeXaxisTitleSelection();
-                d3.selectAll(".x_month_name").classed("active", false);
-                renderPointerOnLine(prevCommentaryData.category);
-            }
-        });
-        (<HTMLElement>document.getElementById('#slide_next')).addEventListener('click', function () {
-            const nextCommentaryData = mydata.filter((x) => x.category == next_month_data)[0];
-            const checkIfMonthlyCommentary = (indexData.ExpertCommentary).filter((x) => x.Month == next_month_data)[0];
-            if (nextCommentaryData && checkIfMonthlyCommentary) {
-                setPrevAndNextMonthsSlider(nextCommentaryData);
-                addCommentary(nextCommentaryData);
-                // xaxis selection on click
-                removeXaxisTitleSelection();
-                d3.selectAll(".x_month_name").classed("active", false);
-                renderPointerOnLine(nextCommentaryData.category);
-            }
-        });
-
+        
         function addCommentary(dataValue) {
+            console.log("addCommentary",dataValue)
             let indexValue = dataValue.value;
             let expertData = (indexData.ExpertCommentary).filter((e) => {
                 return (e.Month == dataValue.category);
@@ -1085,36 +978,33 @@ export class InsightsChartComponent implements OnInit {
             });
 
             if ((expertData.length > 0) && (monthlyData.length > 0) && (graphData.length > 0)) {
+                console.log(2)
                 let monthlyC = monthlyData[0];
                 let expertC = expertData[0];
                 let graphC = graphData[0].monthList;
                 let current_month = d3.timeFormat('%b')(<Date>parseDate(expertC.Month));
                 let current_year = d3.timeFormat('%Y')(<Date>parseDate(expertC.Month));
                 // Left data
-                d3.select(".mc_title")
+                d3.select("#mc_title_mobile")
                     .html(`Jocata Sumpoorn`)
                     ;
-                d3.select(".mc_rating")
+                d3.select("#mc_rating_mobile")
                     .html(`${indexValue}`)
                     ;
 
                 const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
                 if ((mydata.length - 1) == indexOfPoint) {
-                    d3.select(".isLatestIdx").style("display", "inherit");
+                    $(".isLatestIdx").css("display", "inherit");
                 } else {
-                    d3.select(".isLatestIdx").style("display", "none");
+                    $(".isLatestIdx").css("display", "none");
                 }
 
-                d3.select(".mc_body")
+                d3.select("#mc_body_mobile")
                     .html(`${monthlyC.comment}`)
-                    ;
-                // Right data
-                d3.select(".ec_month_title")
-                    .html(`${current_month} ${current_year}`)
                     ;
                 if (expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
                     // commentary member details
-                    d3.select('#commentary_mem_details')
+                    d3.select('#commentary_mem_details_mobile')
                         .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
                         <div class="member_details">
                         <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
@@ -1122,16 +1012,16 @@ export class InsightsChartComponent implements OnInit {
                         </div>`)
                         .style("margin-bottom", "15px")
                         ;
-                    d3.select(".ec_title")
+                    d3.select("#ec_title_mobile")
                         .html(`Expert Commentary`)
                         ;
                 } else {
-                    d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
-                    d3.select(".ec_title")
+                    d3.select('#commentary_mem_details_mobile').html("").style("margin-bottom", "0px");
+                    d3.select("#ec_title_mobile")
                         .html(`Macro Commentary`)
                         ;
                 }
-                d3.select(".ec_message")
+                d3.select("#ec_message_mobile")
                     .html(`${expertC.ExpertCommentary}`)
                     ;
                 // Add graph here - MonthlyCommentaryGraph
@@ -1179,10 +1069,10 @@ export class InsightsChartComponent implements OnInit {
                 ;
 
             // append the svg object to the body of the page
-            d3.select('#monthly_commentary_chart').remove();
-            const svg_c = d3.select("#commentary_graph")
+            d3.select('#monthly_commentary_chart_mobile').remove();
+            const svg_c = d3.select("#commentary_graph_mobile")
                 .append("svg")
-                .attr('id', 'monthly_commentary_chart')
+                .attr('id', 'monthly_commentary_chart_mobile')
                 .attr("width", width_c + margin_c.left + margin_c.right)
                 .attr("height", height_c + margin_c.top + margin_c.bottom + 40)
                 .append("g")
@@ -1244,8 +1134,10 @@ export class InsightsChartComponent implements OnInit {
                         return d;
                     });
             });
-            d3.selectAll("#infoIcon_2").remove();
-            addInfoIcon(default_width_c - 85, default_height_c - 120, "#commentary_graph", "infoIcon_2", svg_c);
+            d3.selectAll("#infoIcon_2_mobile").remove();
+            addInfoIcon(default_width_c - 85, default_height_c - 120, "#commentary_graph_mobile", "infoIcon_2_mobile", svg_c);
+            $("#infoIcon_2_mobile").attr("data-bs-toggle","modal");
+            $("#infoIcon_2_mobile").attr("data-bs-target","#infoModal");
             // Add the line
             svg_c.append("path")
                 .datum(graphData)
@@ -1346,135 +1238,8 @@ export class InsightsChartComponent implements OnInit {
                 $("#contextMenu").css("display", 'none');
             });
         }
-        // addInfoIcon(default_width - 35, 5, "#mobile_my_dataviz_insights", "infoIcon_1", svg);
 
         selectionOfXaxis();
-
-        // function addArrowsAfterYaxis() {
-        // svg.append("g")
-        //     .attr("transform", `translate(${width + 195}, ${height - 294})`)
-        //     .append("text")
-        //     .attr("fill", "#759B67")
-        //     .attr("font-size", "14px")
-        //     .html("Expansion")
-        //     .style("transform", "rotate(-90deg)")
-
-        // svg.append("g")
-        //     .attr("transform", `translate(${width + 195}, ${height - 20})`)
-        //     .append("text")
-        //     .attr("fill", "#AC5D5D")
-        //     .attr("font-size", "14px")
-        //     .text("Contraction")
-        //     .style("transform", "rotate(-90deg)")
-
-        // svg.append("svg:defs")
-        //     .append("svg:marker")
-        //     .attr("id", "expansionArrow")
-        //     .attr("viewBox", "0 0 10 10")
-        //     .attr("refX", 2)
-        //     .attr("refY", 5)
-        //     .attr("markerUnits", "strokeWidth")
-        //     .attr("markerWidth", 4)
-        //     .attr("markerHeight", 5)
-        //     .attr("orient", "auto")
-        //     .style("stroke", "#1E7400")
-        //     .attr("fill", "#1E7400")
-        //     .append("svg:path")
-        //     .attr("d", "M 0 0 L 10 5 L 0 10 z");
-
-        // svg.append("svg:defs")
-        //     .append("svg:marker")
-        //     .attr("id", "contractorArrow")
-        //     .attr("viewBox", "0 0 10 10")
-        //     .attr("refX", 2)
-        //     .attr("refY", 5)
-        //     .attr("markerUnits", "strokeWidth")
-        //     .attr("markerWidth", 4)
-        //     .attr("markerHeight", 5)
-        //     .attr("orient", "auto")
-        //     .style("stroke", "#960000")
-        //     .attr("fill", "#960000")
-        //     .append("svg:path")
-        //     .attr("d", "M 0 0 L 10 5 L 0 10 z");
-
-        // svg.append("line")
-        //     .attr("x1", width + 192)
-        //     .attr("x2", width + 192)
-        //     .attr("y1", 135)
-        //     .attr("y2", 100)
-        //     .style("opacity", 0.5)
-        //     .style("stroke", "#1E7400")
-        //     .attr("stroke-width", 1)
-        //     .attr("marker-end", "url(#expansionArrow)");
-
-        // svg.append("line")
-        //     .attr("x1", width + 192)
-        //     .attr("x2", width + 192)
-        //     .attr("y1", 220)
-        //     .attr("y2", 260)
-        //     .style("opacity", 0.5)
-        //     .style("stroke", "#960000")
-        //     .attr("stroke-width", 1)
-        //     .attr("marker-end", "url(#contractorArrow)");
-
-        // svg.append("svg:defs")
-        //     .append("svg:marker")
-        //     .attr("id", "yaxisMarginalArrow")
-        //     .attr("viewBox", "0 0 10 10")
-        //     .attr("refX", 2)
-        //     .attr("refY", 5)
-        //     .attr("markerUnits", "strokeWidth")
-        //     .attr("markerWidth", 4)
-        //     .attr("markerHeight", 5)
-        //     .attr("orient", "auto")
-        //     .attr("fill", "#1E7400")
-        //     .append("svg:path")
-        //     .attr("d", "M 0 0 L 10 5 L 0 10 z");
-
-        //     svg.append("line")
-        //         .attr("x1", width + 120)
-        //         .attr("x2", width + 110)
-        //         .attr("y1", 167)
-        //         .attr("y2", 177)
-        //         .style("opacity", 0.5)
-        //         .style("stroke", "#1E7400")
-        //         .attr("stroke-width", 1)
-
-        //     svg.append("line")
-        //         .attr("x1", width + 110)
-        //         .attr("x2", width + 60)
-        //         .attr("y1", 177)
-        //         .attr("y2", 177)
-        //         .style("opacity", 0.5)
-        //         .style("stroke", "#1E7400")
-        //         .attr("stroke-width", 1)
-        //         .attr("marker-end", "url(#yaxisMarginalArrow)")
-
-        //     svg.append("svg:defs")
-        //         .append("svg:marker")
-        //         .attr("id", "yaxisMildArrow")
-        //         .attr("viewBox", "0 0 10 10")
-        //         .attr("refX", 2)
-        //         .attr("refY", 5)
-        //         .attr("markerUnits", "strokeWidth")
-        //         .attr("markerWidth", 4)
-        //         .attr("markerHeight", 5)
-        //         .attr("orient", "auto")
-        //         .attr("fill", "#960000")
-        //         .append("svg:path")
-        //         .attr("d", "M 0 0 L 10 5 L 0 10 z");
-
-        //     svg.append("line")
-        //         .attr("x1", width + 120)
-        //         .attr("x2", width + 60)
-        //         .attr("y1", 184)
-        //         .attr("y2", 184)
-        //         .style("opacity", 0.5)
-        //         .style("stroke", "#960000")
-        //         .attr("stroke-width", 1)
-        //         .attr("marker-end", "url(#yaxisMildArrow)")
-        // }
-        // addArrowsAfterYaxis();
 
         addLinesForGraph();
 
