@@ -123,14 +123,16 @@ export class InsightsChartComponent implements OnInit {
     
     const svgY = d3.select('#verticalSVG')
         .append('svg')
-        .attr('height', 300)
-        .attr("width", 50);
+        .attr('height', 500)
+        .attr("width", 25);
 
     svgY.append('g')
         .attr('class', 'y axis')
         .call(yAxis_left)
         .attr('dx', '-0.3em')
-        .attr('transform', "translate(50, 0)");
+        .attr('transform', "translate(25, 6)");
+    
+    svgY.select(".domain").attr("stroke", "none");
 
     // Creating svg with dimensions to chart
     const svg = d3.select("#mobile_my_dataviz_insights")
