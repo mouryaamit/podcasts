@@ -121,23 +121,25 @@ export class InsightsChartComponent implements OnInit {
         const svgY = d3.select('#verticalSVG')
             .append('svg')
             .attr('height', 500)
-            .attr("width", 32)
+            .attr("width", 30)
             // .attr('transform', "translate(4, 13)");
-            .attr('transform', "translate(-6, 13)");
+            .attr('transform', "translate(0, 13)");
+
         svgY.append('g')
             .attr('class', 'y axis')
             .call(yAxis_left)
-            .attr('dx', '-0.3em')
-            .attr('transform', "translate(30, 6)")
-            .style("color", "#B2B2B2");
+            // .attr('dx', '-0.3em')
+            .attr('transform', "translate(24, 6)")
+            .style("color", "#B2B2B2")
+            .style("text-anchor", "middle");
 
         svgY.select(".domain").attr("stroke", "none");
 
         const y_axis_rect_9 = svgY.append('g');
         y_axis_rect_9.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (6) + ")")
-            .attr('width', 6)
-            .attr('height', 90)
+            .attr("transform", "translate(" + (0) + "," + (7) + ")")
+            .attr('width', 5)
+            .attr('height', 89.5)
             .attr("fill", "#C3E8D2")
             .attr("opacity", "1")
             .attr('stroke', '#C3E8D2')
@@ -146,8 +148,8 @@ export class InsightsChartComponent implements OnInit {
 
         const y_axis_rect_8 = svgY.append('g');
         y_axis_rect_8.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (100) + ")")
-            .attr('width', 6)
+            .attr("transform", "translate(" + (0) + "," + (99) + ")")
+            .attr('width', 5)
             .attr('height', 34)
             .attr("fill", "#C3E8D2")
             .attr("opacity", "1")
@@ -157,9 +159,9 @@ export class InsightsChartComponent implements OnInit {
 
         const y_axis_rect_7 = svgY.append('g');
         y_axis_rect_7.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (132) + ")")
-            .attr('width', 6)
-            .attr('height', 15)
+            .attr("transform", "translate(" + (0) + "," + (135.5) + ")")
+            .attr('width', 5)
+            .attr('height', 16)
             .attr("fill", "#C3E8D2")
             .attr("opacity", "1")
             .attr('stroke', '#C3E8D2')
@@ -168,9 +170,9 @@ export class InsightsChartComponent implements OnInit {
 
         const y_axis_rect_6 = svgY.append('g');
         y_axis_rect_6.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (151) + ")")
-            .attr('width', 6)
-            .attr('height', 18)
+            .attr("transform", "translate(" + (0) + "," + (154) + ")")
+            .attr('width', 5)
+            .attr('height', 19)
             .attr("fill", "#C3E8D2")
             .attr("opacity", "1")
             .attr('stroke', '#C3E8D2')
@@ -179,8 +181,8 @@ export class InsightsChartComponent implements OnInit {
 
         const y_axis_rect_5 = svgY.append('g');
         y_axis_rect_5.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (173) + ")")
-            .attr('width', 6)
+            .attr("transform", "translate(" + (0) + "," + (175) + ")")
+            .attr('width', 5)
             .attr('height', 6)
             .attr("fill", "#C3E8D2")
             .attr("opacity", "1")
@@ -190,9 +192,9 @@ export class InsightsChartComponent implements OnInit {
 
         const y_axis_rect_4 = svgY.append('g');
         y_axis_rect_4.append('rect')
-            .attr("transform", "translate(" + (0) + "," + (182) + ")")
-            .attr('width', 6)
-            .attr('height', 4)
+            .attr("transform", "translate(" + (0) + "," + (183) + ")")
+            .attr('width', 5)
+            .attr('height', 5)
             .attr("fill", "#FFC7C7")
             .attr("opacity", "1")
             .attr('stroke', '#FFC7C7')
@@ -202,8 +204,8 @@ export class InsightsChartComponent implements OnInit {
         const y_axis_rect_3 = svgY.append('g');
         y_axis_rect_3.append('rect')
             .attr("transform", "translate(" + (0) + "," + (190) + ")")
-            .attr('width', 6)
-            .attr('height', 14)
+            .attr('width', 5)
+            .attr('height', 15)
             .attr("fill", "#FFC7C7")
             .attr("opacity", "1")
             .attr('stroke', '#FFC7C7')
@@ -213,8 +215,8 @@ export class InsightsChartComponent implements OnInit {
         const y_axis_rect_2 = svgY.append('g');
         y_axis_rect_2.append('rect')
             .attr("transform", "translate(" + (0) + "," + (208) + ")")
-            .attr('width', 6)
-            .attr('height', 70)
+            .attr('width', 5)
+            .attr('height', 71.5)
             .attr("fill", "#FFC7C7")
             .attr("opacity", "1")
             .attr('stroke', '#FFC7C7')
@@ -224,8 +226,8 @@ export class InsightsChartComponent implements OnInit {
         const y_axis_rect_1 = svgY.append('g');
         y_axis_rect_1.append('rect')
             .attr("transform", "translate(" + (0) + "," + (282) + ")")
-            .attr('width', 6)
-            .attr('height', 80)
+            .attr('width', 5)
+            .attr('height', 90)
             .attr("fill", "#FFC7C7")
             .attr("opacity", "1")
             .attr('stroke', '#FFC7C7')
@@ -774,17 +776,17 @@ export class InsightsChartComponent implements OnInit {
             } else {
                 let hAndyValues = { y: 0, h: 0 };
                 if (d == 0.45) {
-                    hAndyValues.y = 207;
-                    hAndyValues.h = 75;
+                    hAndyValues.y = 201;
+                    hAndyValues.h = 73;
                 } else if (d == 0.52) {
-                    hAndyValues.y = 180.5;
-                    hAndyValues.h = 7.5;
+                    hAndyValues.y = 175.5;
+                    hAndyValues.h = 7;
                 } else if (d == 0.60) {
-                    hAndyValues.y = 150.5;
-                    hAndyValues.h = 22.5;
+                    hAndyValues.y = 146.5;
+                    hAndyValues.h = 21.5;
                 } else if (d == 0.75) {
-                    hAndyValues.y = 94;
-                    hAndyValues.h = 37;
+                    hAndyValues.y = 91.5;
+                    hAndyValues.h = 36;
                 }
                 return hAndyValues;
             }
