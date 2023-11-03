@@ -336,10 +336,19 @@ export class InsightsChartComponent implements OnInit {
         }
         return '';
     }
-
+    let years:any = [];
+    this.sumpoornGraphData.IndexGeneration.forEach(element => {
+        let year = element.category.split('-')[1];
+        const i = years.findIndex(e => e['year'] === year);
+        if(i == -1)
+            years.push({"year":year,"count":1})
+        else 
+            years[i]["count"]++;
+    });
+    console.log(years)
     function addLinesForGraph() {
-        const year_1 = svg.append("g"); // first line
-        year_1.append('line')
+        const firstLine = svg.append("g"); // first line
+        firstLine.append('line')
             .attr('x1', 0.2)
             .attr('y1', 0)
             .attr('x2', 0.2)
@@ -347,55 +356,36 @@ export class InsightsChartComponent implements OnInit {
             .attr('stroke', '#E1E1E1')
             .attr("stroke-width", "1")
             ;
-        const year_2 = svg.append("g"); //2020
-        year_2.append('line')
-            .attr('x1', 75.6)
-            .attr('y1', 0)
-            .attr('x2', 75.6)
-            .attr('y2', height + 60)
-            .attr('stroke', '#959595')
-            .attr("stroke-width", "1")
-            .attr("stroke-dasharray", "2")
-            ;
-        const year_3 = svg.append("g"); //2021
-        year_3.append('line')
-            .attr('x1', 375.5)
-            .attr('y1', 0)
-            .attr('x2', 375.5)
-            .attr('y2', height + 60)
-            .attr('stroke', '#959595')
-            .attr("stroke-width", "1")
-            .attr("stroke-dasharray", "2")
-            ;
-        const year_4 = svg.append("g"); //2022
-        year_4.append('line')
-            .attr('x1', 673.6)
-            .attr('y1', 0)
-            .attr('x2', 673.6)
-            .attr('y2', height + 60)
-            .attr('stroke', '#959595')
-            .attr("stroke-width", "1")
-            .attr("stroke-dasharray", "2")
-            ;
-        const year_5 = svg.append("g"); //2023
-        year_5.append('line')
-            .attr('x1', 972.7)
-            .attr('y1', 0)
-            .attr('x2', 972.7)
-            .attr('y2', height + 60)
-            .attr('stroke', '#959595')
-            .attr("stroke-width", "1")
-            .attr("stroke-dasharray", "2")
-            ;
-        const year_6 = svg.append("g"); // last line
-        year_6.append('line')
-            .attr('x1', width + 25)
-            .attr('y1', 0)
-            .attr('x2', width + 25)
-            .attr('y2', height + 60)
-            .attr('stroke', '#E1E1E1')
-            .attr("stroke-width", "1")
-            ;
+        years.forEach(year => {
+            let yearSvg = svg.append("g");
+            if(years.indexOf(year) == 0){
+            yearSvg.append('line')
+                .attr('x1', 25*year.count)
+                .attr('y1', 0)
+                .attr('x2', 25*year.count)
+                .attr('y2', height + 60)
+                .attr('stroke', '#959595')
+                .attr("stroke-width", "1")
+                .attr("stroke-dasharray", "2");
+            } else if(years.indexOf(year) == years.length-1){
+                yearSvg.append('line')
+                .attr('x1', (25*year.count)+(300*years.indexOf(year)-(25*(12-years[0].count))-(years.indexOf(year))))
+                .attr('y1', 0)
+                .attr('x2', (25*year.count)+(300*years.indexOf(year)-(25*(12-years[0].count))-(years.indexOf(year))))
+                .attr('y2', height + 60)
+                .attr('stroke', '#E1E1E1')
+                .attr("stroke-width", "1")
+            } else {
+                yearSvg.append('line')
+                .attr('x1', (25*year.count)+(300*years.indexOf(year)-(25*(12-years[0].count))-(years.indexOf(year))))
+                .attr('y1', 0)
+                .attr('x2', (25*year.count)+(300*years.indexOf(year)-(25*(12-years[0].count))-(years.indexOf(year))))
+                .attr('y2', height + 60)
+                .attr('stroke', '#959595')
+                .attr("stroke-width", "1")
+                .attr("stroke-dasharray", "2");
+            } 
+        });
         //top line of graph
         const top_line = svg.append("g");
         top_line.append("line")
