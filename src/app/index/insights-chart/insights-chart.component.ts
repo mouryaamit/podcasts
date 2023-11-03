@@ -32,7 +32,7 @@ export class InsightsChartComponent implements OnInit {
         // set the dimensions and margins of the graph
         const margin = {
             top: 20,
-            right: 30,
+            right: 25,
             bottom: 115,
             left: 0,
         },
@@ -121,7 +121,7 @@ export class InsightsChartComponent implements OnInit {
         const svgY = d3.select('#verticalSVG')
             .append('svg')
             .attr('height', 500)
-            .attr("width", 30)
+            .attr("width", 40)
             // .attr('transform', "translate(4, 13)");
             .attr('transform', "translate(0, 13)");
 
