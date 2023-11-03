@@ -1,7 +1,63 @@
-<div class="context_chart_container d-lg-block d-md-block d-none container">
-    <div id="my_dataviz_context" class="float-chart"> </div>                
+<div class="main_context_chart_container">
+  <div class="context_chart_container d-lg-block d-md-block d-none container">
+    <div id="my_dataviz_context" class="float-chart"> </div>
+    <div class="chart_desc d-md-flex">
+      <div id="iipDescDiv" class="iipContent">
+        <div class="iipLegendText"><input type="checkbox" id="IIPCheckbox" class="context_checkboxes"
+            value="IIP" /> &nbsp;*IIP</div>
+        <div class="iipLegendContent">
+          General Index of Industrial Production. IIP data compiled and published by the Ministry of
+          Statistics and Programme Implementation (MoSPI), GOI is updated to the latest release. </div>
+      </div>
+      <div id="pmiDescDiv" class="pmiContent">
+        <div class="pmiLegendText"><input type="checkbox" id="PMICheckbox" class="context_checkboxes"
+            value="PMI" /> &nbsp;*PMI&#8482;</div>
+        <div class="pmiLegendContent">
+          S&P Global Composite Purchasing Managers' Index. All trademarks are property of their respective
+          owners.
+        </div>
+      </div>
+      <div id="gvaDescDiv" class="gvaContent">
+        <div class="gvaLegendText"><input type="checkbox" id="GVACheckbox" class="context_checkboxes"
+            value="GVA" />
+          &nbsp;*GVA Growth %</div>
+        <div class="gvaLegendContent">
+          Growth in Gross Value Added at current prices. GVA is a primary measure in national income
+          statistics, defined as the value of output less the value of intermediate consumption.
+        </div>
+      </div>
+    </div>
   </div>
   <div class="mobile_context_chart_container d-md-none container">
-    mobile_my_dataviz_context
-    <!-- <div id="mobile_my_dataviz_context" class="float-chart"> </div>                 -->
+    <!-- mobile_my_dataviz_context -->
+    <div class="context_mobchart_container">
+      <div id="verticalSVG_context" style="float:left;width: 7%;position: relative;">
+      </div>
+      <div id="verticalSVG_context_gva" style="float:right;width: 7%;position: relative;">
+      </div>
+      <div id="verticalSVG_context_pmi" style="float:right;width: 7%;position: relative;">
+      </div>
+      <div id="verticalSVG_context_iip" style="float:right;width: 7%;position: relative;">
+      </div>
+      <div id="mobile_my_dataviz_context" style="overflow-x:scroll; width: 72%;position: relative;">
+      </div>
+    </div>
+    <!-- <div id="mobile_my_dataviz_context" class="float-chart"> </div> -->
+    <!-- d-none  -->
+    <div class="chart_desc d-md-flex">
+      <div id="iipDescDiv" class="iipContent">
+        <div class="iipLegendText"><input type="checkbox" id="IIPCheckbox" class="context_checkboxes"
+            value="IIP" /> &nbsp;*IIP</div>
+      </div>
+      <div id="pmiDescDiv" class="pmiContent">
+        <div class="pmiLegendText"><input type="checkbox" id="PMICheckbox" class="context_checkboxes"
+            value="PMI" /> &nbsp;*PMI&#8482;</div>
+      </div>
+      <div id="gvaDescDiv" class="gvaContent">
+        <div class="gvaLegendText"><input type="checkbox" id="GVACheckbox" class="context_checkboxes"
+            value="GVA" />
+          &nbsp;*GVA Growth %</div>
+      </div>
+    </div>
   </div>
+</div>
