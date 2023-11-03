@@ -268,6 +268,7 @@ main {
 
 .form-group {
   margin-bottom: 20px;
+
   .form-control {
     border-radius: 0;
     border: none;
@@ -322,6 +323,7 @@ main {
   display: flex;
   margin-bottom: 2rem;
 }
+
 .sm-primary-button {
   border: none;
   justify-content: center;
@@ -338,6 +340,23 @@ main {
   opacity: 0.7;
   pointer-events: none;
 }
+
+.table-blue {
+  color: #2e8dff;
+}
+
+.table-orange {
+  color: #e1861b;
+}
+
+.table-green {
+  color: #2fb36b;
+}
+
+.table-darkblue {
+  color: #5451ff;
+}
+
 // Generic Styles End
 
 // Header Styles Start
@@ -549,6 +568,7 @@ main {
     0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
     0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
 }
+
 // Header Styles End
 
 // Home Page Styles Start
@@ -630,7 +650,7 @@ main {
       }
 
       span {
-        @media only screen and (min-width: 1280px) {
+        @media only screen and (min-width: 1400px) {
           display: block;
         }
       }
@@ -665,9 +685,11 @@ main {
       @media only screen and (min-width: 768px) {
         margin-left: 3rem;
       }
+
       .app_home_section_caption {
         span {
           display: inline;
+
           @media only screen and (min-width: 1200px) {
             display: block;
           }
@@ -782,6 +804,7 @@ main {
       .app_home_section_caption {
         span {
           display: inline;
+
           @media only screen and (min-width: 992px) {
             display: block;
           }
@@ -1022,9 +1045,7 @@ main {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-sm * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
       }
     }
 
@@ -1034,9 +1055,7 @@ main {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-md * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
       }
     }
 
@@ -1059,9 +1078,11 @@ main {
         flex-shrink: 0;
         width: $marquee-element-width-sm;
         max-height: 100%;
+
         @media only screen and (min-width: 768px) {
           width: $marquee-element-width-md;
         }
+
         .marquee-content-title {
           color: #000;
           font-size: 24px;
@@ -1071,6 +1092,7 @@ main {
     }
   }
 }
+
 // Home Page Styles End
 
 // About Page Styles Start
@@ -1173,6 +1195,7 @@ main {
     }
   }
 }
+
 // About Page Styles End
 
 // Terms of Use Styles Start
@@ -1234,6 +1257,7 @@ main {
     }
   }
 }
+
 // Terms of Use Styles End
 
 // Roadmap Page Styles Start
@@ -1397,6 +1421,7 @@ main {
     }
   }
 }
+
 // Roadmap Page Styles End
 
 // Methodology Page Styles Start
@@ -1416,7 +1441,7 @@ main {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      > span:not(span span) {
+      >span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -1525,6 +1550,7 @@ main {
         @media only screen and (min-width: 1280px) {
           height: 100vh;
         }
+
         &::-webkit-scrollbar {
           width: 0;
           width: 5px;
@@ -1851,6 +1877,7 @@ main {
     }
   }
 }
+
 // Methodology Page Styles End
 
 // Index Page Styles Start Here
@@ -1885,12 +1912,32 @@ main {
     opacity: 0;
   }
 }
+
 .app_index {
+  padding-top: 6rem;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 10rem;
+  }
+
   .app_index_chart_con {
+    .nav-pills-static-text {
+      color: #717171;
+      font: 500 $font-size-14px "Poppins", sans-serif;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+
     .nav-pills {
       .nav-link {
         color: #717171;
-        font: 400 $font-size-16px "Poppins", sans-serif;
+        font: 400 $font-size-15px "Poppins", sans-serif;
+        padding: 2px 8px;
+
+        @media only screen and (min-width: 768px) {
+          font-size: $font-size-16px;
+          padding: 8px 16px;
+        }
 
         &.active {
           background-color: #e1e1e1;
@@ -1904,6 +1951,7 @@ main {
     .app_index_commentary_con {
       background: #fafafa;
       padding-bottom: 10rem;
+
       .carousel_commentary {
         display: flex;
         gap: 4px;
@@ -1942,6 +1990,7 @@ main {
               transition: transform 500ms;
             }
           }
+
           span {
             &.control_name {
               color: #4a4a4a;
@@ -1982,6 +2031,7 @@ main {
 
               .commentary_download {
                 cursor: pointer;
+
                 span {
                   color: #6f6f6f;
                   font-size: $font-size-14px;
@@ -1989,101 +2039,154 @@ main {
                   text-decoration-line: underline;
                   vertical-align: middle;
                   margin-right: 0.5rem;
+
                   &:hover {
                     text-decoration-line: none;
                   }
                 }
               }
             }
+          }
+        }
+      }
 
-            .commentary_body {
-              text-align: left;
-              padding: 20px 5px;
+      .commentary_body {
+        text-align: left;
+        padding: 2rem;
 
-              .commentary_body_left {
-                .commentary_body_left_title {
-                  color: #119345;
-                  font-weight: 700;
-                  font-size: $font-size-18px;
-                  line-height: normal;
-                  margin-bottom: 0;
-                }
+        @media only screen and (min-width:992px) {
+          padding: 20px 5px;
+        }
 
-                .title_rating {
-                  border-radius: 6px;
-                  background: #25bb61;
-                  color: $app-white;
-                  padding: 1px 6px;
-                  font: 600 $font-size-16px "Inter", sans-serif;
-                  margin: 5px 15px 5px 5px;
-                }
+        .commentary_body_left {
+          .commentary_body_left_title {
+            color: #119345;
+            font: 700 $font-size-20px "Alegreya Sans", sans-serif;
+            line-height: normal;
+            margin-bottom: 0;
+            @media only screen and (min-width: 992px) {
+              font-style: $font-size-18px;
+              font-family: "Inter", sans-serif;
+            }
+          }
 
-                .circle_waves {
-                  margin: 0 auto;
-                  width: 8px;
-                  height: 8px;
-                  border-radius: 50%;
-                  position: absolute;
-                  right: 0;
+          .title_rating {
+            border-radius: 6px;
+            background: #25bb61;
+            color: $app-white;
+            padding: 1px 6px;
+            font: 600 $font-size-16px "Inter", sans-serif;
+            margin: 5px 15px 5px 5px;
+          }
 
-                  &.circle_two {
-                    background: #fff;
-                    animation: circleTwo 1.5s infinite ease-out;
-                  }
+          .circle_waves {
+            margin: 0 auto;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
 
-                  &.circle_three {
-                    background-color: #25bb61;
-                  }
-                }
+            &.circle_one {
+              background: #ff5c00;
+              animation: circleOne 1.5s infinite ease-out;
+            }
+            &.circle_two {
+              background: #fff;
+              animation: circleTwo 1.5s infinite ease-out;
+            }
 
-                .commentary_body_left_detail {
-                  color: #505050;
-                  font-size: 17px;
-                  line-height: 130%;
-                }
+            &.circle_three {
+              background-color: #25bb61;
+            }
+          }
+
+          .commentary_body_left_detail {
+            color: #505050;
+            font-size: $font-size-20px;
+            font-family: "Alegreya Sans";
+            line-height: 130%;
+            @media only screen and (min-width: 992px) {
+              font-size: 17px;
+              font-family: "Inter", sans-serif;
+            }
+          }
+        }
+
+        .commentary_body_right {
+          .commentary_body_right_title {
+            color: #2e2e2e;
+            font: 700 $font-size-20px "Alegreya Sans", sans-serif;
+            line-height: 120%;
+            margin-left: 5px;
+            @media only screen and (min-width: 992px) {
+              font-size: 17px;
+              font-family: "Inter", sans-serif;
+            }
+          }
+
+          .member_con {
+            background: #d2f3e1;
+            border-radius: 8px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow: hidden;
+
+            .member_details {
+              color: $app-black;
+              @media only screen and (min-width: 992px) {
+                color: #4a4a4a;
               }
-              .commentary_body_right {
-                .commentary_body_right_title {
-                  color: #2e2e2e;
-                  font-weight: 700;
-                  font-size: $font-size-18px;
-                  line-height: 120%;
-                  margin-left: 5px;
-                }
-
-                .member_con {
-                  background: #d2f3e1;
-                  border-radius: 8px;
-                  display: flex;
-                  justify-content: start;
-                  align-items: center;
-                  overflow: hidden;
-
-                  .member_details {
-                    .member_name {
-                      color: #4a4a4a;
-                      font: 600 $font-size-18px "Work Sans";
-                      line-height: 120%;
-                    }
-
-                    .member_title {
-                      color: #4a4a4a;
-                      font: 400 $font-size-14px "Work Sans";
-                      line-height: 120%;
-                    }
-                  }
-                }
-
-                .commentary_body_right_detail {
-                  margin: 0 5px 15px 5px;
-
-                  p {
-                    color: #4a4a4a;
-                    font-size: 17px;
-                    line-height: 130%;
-                  }
-                }
+              .member_name {
+                font: 600 $font-size-18px "Work Sans";
+                line-height: 120%;
               }
+
+              .member_title {
+                font: 400 $font-size-14px "Work Sans";
+                line-height: 120%;
+              }
+            }
+          }
+
+          .commentary_body_right_detail {
+            margin: 0 5px 15px 5px;
+
+            p {
+              color: $app-black;
+              font-size: $font-size-20px;
+              font-family: "Alegreya Sans";
+              line-height: 130%;
+              @media only screen and (min-width: 992px) {
+                color: #4a4a4a;
+                font-size: 17px;
+                font-family: "Inter", sans-serif;
+              }
+            }
+          }
+        }
+      }
+
+      .nav-tabs {
+        border: none;
+
+        .nav-item {
+          display: flex;
+          justify-content: center;
+          flex: auto;
+
+          .nav-link {
+            border: none;
+            background: transparent;
+            color: #757575;
+            font-size: $font-size-18px;
+            line-height: normal;
+
+            &.active {
+              color: $app-black;
+              font-weight: 600;
+              border-bottom: 2px solid $app-black;
             }
           }
         }
@@ -2093,20 +2196,25 @@ main {
     .app_index_context_con {
       background: #deefff;
       padding: 4rem 0 3rem;
+
       @media only screen and (min-width: 768px) {
         padding: 6rem 0 5.5rem;
       }
+
       .app_index_context_title {
         color: #194974;
         font: 700 $font-size-24px "Poppins", sans-serif;
         line-height: 120%;
         margin: 0 3rem 3.25rem;
+
         span {
           display: inline;
+
           @media only screen and (min-width: 768px) {
             display: block;
           }
         }
+
         @media only screen and (min-width: 768px) {
           font-size: $font-size-28px;
           margin: 0 0 5rem;
@@ -2118,6 +2226,7 @@ main {
         font-size: $font-size-18px;
         line-height: 130%;
         margin-bottom: 5.5rem;
+
         @media only screen and (max-width: 767px) {
           padding: 0 2rem;
         }
@@ -2140,9 +2249,11 @@ main {
           0px 64px 26px 0px rgba(26, 73, 115, 0.01),
           0px 100px 28px 0px rgba(26, 73, 115, 0),
           0px -3px 23px 0px rgba(25, 73, 116, 0.09);
+
         @media only screen and (min-width: 768px) and (max-width: 1199px) {
           table-layout: fixed;
         }
+
         th,
         td {
           padding: 16px !important;
@@ -2150,9 +2261,11 @@ main {
 
         thead {
           background: #edf5fd;
+
           @media only screen and (min-width: 1200px) {
             white-space: nowrap;
           }
+
           th {
             vertical-align: baseline;
             color: #194974;
@@ -2183,6 +2296,7 @@ main {
         height: 70vh;
         overflow-y: auto;
         position: relative;
+
         .app_index_table_mob_header {
           position: sticky;
           top: -2px;
@@ -2190,8 +2304,10 @@ main {
           z-index: 99;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.19);
           padding: 1rem 2rem;
+
           ul {
             li {
               span {
@@ -2201,6 +2317,7 @@ main {
                 vertical-align: middle;
                 margin-left: 0.75rem;
               }
+
               &:nth-child(2) {
                 margin: 0 2rem;
               }
@@ -2211,10 +2328,12 @@ main {
         .app_index_table_mob_body {
           padding: 1rem 2rem;
           text-align: start;
+
           .app_index_table_mob_body_item {
             border-bottom: 1px solid #a9ccec;
             padding-top: 1rem;
             padding-bottom: 1rem;
+
             h6 {
               color: #4a4a4a;
               font-size: $font-size-15px;
@@ -2222,12 +2341,12 @@ main {
               line-height: 120%;
               margin-bottom: 0.75rem;
             }
+
             p {
               color: #4a4a4a;
               font-size: $font-size-15px;
               line-height: 120%;
-              margin: .3rem .75rem;
-
+              margin: 0.3rem 0.75rem;
             }
           }
         }
@@ -2251,45 +2370,41 @@ main {
           background-color: #e3e3e3;
         }
       }
-
-      .table-blue {
-        color: #2e8dff;
-      }
-
-      .table-orange {
-        color: #e1861b;
-      }
-
-      .table-green {
-        color: #2fb36b;
-      }
     }
   }
 }
+
 // Index Page Styles End
 
 // Contact Page Styles Start
 .app_contact {
   background-color: #f2f2f2;
   padding: 9rem 0 0;
+
   @media only screen and (min-width: 768px) {
     padding: 17rem 0 10.75rem;
   }
+
   .app_contact_left_content {
     @media only screen and (max-width: 767px) {
       padding: 0 2rem 4.5rem;
     }
+
     .app_contact_main_title {
       color: $app-black;
       font: 700 $font-size-24px "Poppins", sans-serif;
-      line-height: 119.2%; /* 28.608px */
+      line-height: 119.2%;
+      /* 28.608px */
     }
+
     .app_contact_sub_title {
       color: $app-black;
       font-size: $font-size-16px;
       font-weight: 600;
-      line-height: 119.2%; /* 19.072px */
+      line-height: 119.2%;
+      /* 19.072px */
     }
+
     p {
       color: #6f6f6f;
       font-size: $font-size-16px;
@@ -2301,12 +2416,14 @@ main {
       }
     }
   }
+
   .app_contact_cards {
     .app_contact_card_box {
       display: flex;
       flex-direction: column;
       padding: 3rem 2rem 4rem;
       background: $app-white;
+
       @media only screen and (min-width: 768px) {
         padding: 3rem;
         border-radius: 16px;
@@ -2332,6 +2449,7 @@ main {
     }
   }
 }
+
 // Contact Page Styles End
 
 // Institution Login Page Styles Start
@@ -2452,6 +2570,7 @@ main {
     }
   }
 }
+
 // Institution Login Page Styles End
 
 // Modal Styles Start
@@ -2465,21 +2584,26 @@ main {
       0px 345px 138px 0px rgba(0, 0, 0, 0.01),
       0px 539px 151px 0px rgba(0, 0, 0, 0);
     padding: 2rem;
+
     .modal-header {
       padding: unset;
       border-bottom: none;
+
       // padding: 3rem 1.25rem 1.25rem 3rem;
       .modal-title {
         color: $app-black;
         font: 700 $font-size-20px "Poppins", sans-serif;
         line-height: normal;
       }
+
       .btn-close {
-        color: $app-black;
+        opacity: 1;
       }
     }
+
     .modal-body {
       padding: unset;
+
       .complete_form_text {
         color: $app-black;
         font-weight: 500;
@@ -2487,19 +2611,36 @@ main {
         line-height: normal;
         margin-top: 2.25rem;
       }
+
       .required_text {
         color: #535353;
         font-size: $font-size-15px;
         line-height: normal;
         margin: 0.5rem 0 2.5rem;
+
         span {
           color: #932d2d;
         }
       }
+
       .success_text {
         color: #696969;
         font-size: $font-size-18px;
         line-height: normal;
+      }
+
+      .info_modal_item {
+        h6 {
+          font-size: $font-size-14px;
+          font-weight: 600;
+          line-height: 119.2%;
+        }
+
+        p {
+          color: #818181;
+          font-size: $font-size-14px;
+          line-height: 119.2%;
+        }
       }
     }
   }
@@ -2549,6 +2690,7 @@ main {
     }
   }
 }
+
 // Modal Styles End
 
 // Footer Styles Start
@@ -2573,6 +2715,7 @@ main {
   .list-group-item {
     background: unset;
     border: none;
+    padding: unset;
 
     a {
       color: #5c5c5c;
@@ -2588,6 +2731,7 @@ main {
     }
   }
 }
+
 // Footer Styles End
 
 // Animation disable on mobile

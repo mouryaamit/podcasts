@@ -14,6 +14,7 @@ export class IndexComponent implements OnInit {
     iipGraphData: any;
     pmiGraphData: any;
     gvaGraphData: any;
+    infoItemToShow: string | undefined;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
 
@@ -59,6 +60,10 @@ export class IndexComponent implements OnInit {
           }
     ]
 
+    // Chart & Table Info Icon Click
+    showInfo(item: string) {
+        this.infoItemToShow = item;
+    }
     ngOnInit(): void {
         this.graphApiService.getSumpoornGraphData().then((data) => {
             if (data) {
