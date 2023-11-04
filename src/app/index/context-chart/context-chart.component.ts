@@ -17,7 +17,7 @@ export class ContextChartComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        this.generateContextGraph();
+        // this.generateContextGraph();
         this.generateMobileContextGraph();
     }
 
@@ -154,12 +154,12 @@ export class ContextChartComponent implements OnInit {
             .attr('dx', '-0.3em')
             .attr('transform', "translate(24, 6)")
             .style("color", "#2FB36B")
-            .style("text-anchor", "end")
-            .append("text")
-            // .attr("class", "axis-title")
-            .attr("x", 0)
-            .attr("y", 500)
-            // .style("text-anchor", "end")
+            .style("text-anchor", "end");
+            
+        svgY.append("text")
+            .attr("x", "-460")
+            .attr("y", "15")
+            .style("text-anchor", "start")
             .attr("fill", "#2FB36B")
             .attr("transform", "rotate(-90)")
             .text("Sumpoorn");
