@@ -36,10 +36,11 @@ export class InsightsChartComponent implements OnInit {
             bottom: 115,
             left: 0,
         },
-            default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
-            default_height = 500,
-            width = default_width - margin.left - margin.right,
-            height = default_height - margin.top - margin.bottom;
+
+        default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
+        default_height = 500,
+        width = default_width - margin.left - margin.right,
+        height = default_height - margin.top - margin.bottom;
 
         const parseDate = d3.timeParse("%m-%Y");
 
@@ -128,7 +129,7 @@ export class InsightsChartComponent implements OnInit {
         svgY.append('g')
             .attr('class', 'y axis')
             .call(yAxis_left)
-            // .attr('dx', '-0.3em')
+            .attr('dx', '-0.3em')
             .attr('transform', "translate(24, 6)")
             .style("color", "#B2B2B2")
             .style("text-anchor", "middle");
@@ -436,16 +437,17 @@ export class InsightsChartComponent implements OnInit {
             }
             return '';
         }
-        let years: any = [];
-        this.sumpoornGraphData.IndexGeneration.forEach(element => {
-            let year = element.category.split('-')[1];
-            const i = years.findIndex(e => e['year'] === year);
-            if (i == -1)
-                years.push({ "year": year, "count": 1 })
-            else
-                years[i]["count"]++;
-        });
+        
         function addLinesForGraph() {
+            let years: any = [];
+            mydata.forEach(element => {
+                let year = element.category.split('-')[1];
+                const i = years.findIndex(e => e['year'] === year);
+                if (i == -1)
+                    years.push({ "year": year, "count": 1 })
+                else
+                    years[i]["count"]++;
+            });
             const firstLine = svg.append("g"); // first line
             firstLine.append('line')
                 .attr('x1', 0.2)
