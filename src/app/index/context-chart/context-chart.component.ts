@@ -322,6 +322,7 @@ export class ContextChartComponent implements OnInit {
         monthNameClickEvent();
 
         function renderPointerOnLine(date) {
+            d3.selectAll("#rect_xaxis_context").remove();
             const dataValue = mydata.filter((x) => x.category == date)[0];
             const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
             const lastIndex = x_axis_months.selectAll(".tick")._parents.length - 1;
@@ -1440,6 +1441,7 @@ export class ContextChartComponent implements OnInit {
         monthNameClickEvent();
 
         function renderPointerOnLine(date) {
+            d3.selectAll("#rect_xaxis_context").remove();
             const dataValue = mydata.filter((x) => x.category == date)[0];
             const tooltip_pointer = getPointsOnCurve(dataValue.category, dataValue.value);
             const lastIndex = x_axis_months.selectAll(".tick")._parents.length - 1;
