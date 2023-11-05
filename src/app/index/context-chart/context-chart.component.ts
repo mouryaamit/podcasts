@@ -17,7 +17,7 @@ export class ContextChartComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        // this.generateContextGraph();
+        this.generateContextGraph();
         this.generateMobileContextGraph();
     }
 
