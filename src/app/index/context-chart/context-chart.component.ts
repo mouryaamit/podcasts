@@ -75,25 +75,25 @@ export class ContextChartComponent implements OnInit {
         // Add Y axis - left side
         const y1 = d3.scaleLinear()
             .domain([0, 1.0])
-            // .nice()
+            .nice()
             .range([height, 0]);
 
         // Add Y axis - right side
         const y2 = d3.scaleLinear()
             //for y axis values
             .domain([0, 200])
-            // .nice()
+            .nice()
             .range([height, 0]);
 
         const y3 = d3.scaleLinear()
             //for y axis values
             .domain([0, 100])
-            // .nice()
+            .nice()
             .range([height, 0]);
 
         const y4 = d3.scaleLinear()
             .domain([d3.min(dataForGVA, function (d) { return d.value - 10; }), d3.max(dataForGVA, function (d) { return d.value + 10; })])
-            // .nice()
+            .nice()
             .range([height, 0])
             ;
         
@@ -254,8 +254,8 @@ export class ContextChartComponent implements OnInit {
         //     .text("Jocata Sumpoorn")
         //     ;
 
-        var yAxisTickSpace = [width + 45, width + 70, width + 100];
-        var yAxisTickNameSpace = [width + 47, width + 77, width + 107];
+        // var yAxisTickSpace = [width + 45, width + 70, width + 100];
+        // var yAxisTickNameSpace = [width + 47, width + 77, width + 107];
 
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
@@ -537,8 +537,8 @@ export class ContextChartComponent implements OnInit {
                 svgY_iip.append("text")
                     // .attr("x", -(height + 12))
                     // .attr("y", yAxisTickNameSpace)
-                    .attr("x", 0)
-                    .attr("y", 0)
+                    .attr("x", "-400")
+                    .attr("y", "30")
                     .attr("id", "iipYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', iipColorCode)
@@ -568,8 +568,8 @@ export class ContextChartComponent implements OnInit {
                 svgY_pmi.append("text").attr("opacity", "1")
                     // .attr("x", -(height + 12))
                     // .attr("y", yAxisTickNameSpace)
-                    .attr("x", 0)
-                    .attr("y", 0)
+                    .attr("x", "-400")
+                    .attr("y", "30")
                     .attr("id", "pmiYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', pmiColorCode)
@@ -597,35 +597,35 @@ export class ContextChartComponent implements OnInit {
 
                 d3.select("#gvaYaxisTxt").remove();
 
-                let gvaText = svgY_gva.append("text")
+                svgY_gva.append("text")
                     // .attr("x", -(height + 12))
                     // .attr("y", yAxisTickNameSpace)
-                    .attr("x", 0)
-                    .attr("y", 0)
+                    .attr("x", "-400")
+                    .attr("y", "30")
                     .attr("id", "gvaYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', gvaColorCode)
                     .attr("transform", "rotate(-90)")
-                    .text("GVA Growth %")
-                    .call(function (t) {
-                        // var self = d3.select(this);
-                        var s = t.text().split(' ');
-                        t.text('');
-                        t.append("tspan")
-                            .attr("fill", "currentColor")
-                            .attr("x", t._groups[0][0].x['animVal'][0]['value'])
-                            .attr("y", t._groups[0][0].y['animVal'][0]['value'] - 12)
-                            .attr("dy", "1em")
-                            .style('fill', gvaColorCode)
-                            .text(s[0]);
-                        t.append("tspan")
-                            .attr("fill", "currentColor")
-                            .attr("x", t._groups[0][0].x['animVal'][0]['value'])
-                            .attr("y", t._groups[0][0].y['animVal'][0]['value'])
-                            .attr("dy", "1em")
-                            .style('fill', gvaColorCode)
-                            .text(s[1] + ' ' + s[2]);
-                    });
+                    .html("GVA%&#9651;");
+                    // .call(function (t) {
+                    //     // var self = d3.select(this);
+                    //     var s = t.text().split(' ');
+                    //     t.text('');
+                    //     t.append("tspan")
+                    //         .attr("fill", "currentColor")
+                    //         .attr("x", t._groups[0][0].x['animVal'][0]['value'])
+                    //         .attr("y", t._groups[0][0].y['animVal'][0]['value'] - 12)
+                    //         .attr("dy", "1em")
+                    //         .style('fill', gvaColorCode)
+                    //         .text(s[0]);
+                    //     t.append("tspan")
+                    //         .attr("fill", "currentColor")
+                    //         .attr("x", t._groups[0][0].x['animVal'][0]['value'])
+                    //         .attr("y", t._groups[0][0].y['animVal'][0]['value'])
+                    //         .attr("dy", "1em")
+                    //         .style('fill', gvaColorCode)
+                    //         .text(s[1] + ' ' + s[2]);
+                    // });
             }
         }
 
@@ -763,14 +763,14 @@ export class ContextChartComponent implements OnInit {
                     yAxis_right_for_gva_tick.remove();
                     svgY_gva.remove();
                     refreshYaxisTicks('gva')
-                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
                 } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                     yAxis_right_for_pmi_tick.remove();
                     svgY_gva.remove();
                     refreshYaxisTicks('pmi')
+                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
                 }
             } else if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = true;
@@ -787,14 +787,14 @@ export class ContextChartComponent implements OnInit {
                     yAxis_right_for_gva_tick.remove();
                     svgY_gva.remove();
                     refreshYaxisTicks('gva');
-                } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
                 } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                     yAxis_right_for_iip_tick.remove();
                     svgY_iip.remove();
                     refreshYaxisTicks('iip')
+                } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
                 }
             } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = false;
@@ -810,14 +810,14 @@ export class ContextChartComponent implements OnInit {
                     yAxis_right_for_gva_tick.remove();
                     svgY_gva.remove();
                     refreshYaxisTicks('gva');
-                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
                 } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                     yAxis_right_for_iip_tick.remove();
                     svgY_iip.remove();
                     refreshYaxisTicks('iip')
+                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
                 }
             } else if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = true;
@@ -855,16 +855,16 @@ export class ContextChartComponent implements OnInit {
                     refreshYaxisTicks('iip');
 
                     yAxis_right_for_pmi_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    svgY_pmi.remove();
+                    refreshYaxisTicks('pmi');
                 } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
                     yAxis_right_for_iip_tick.remove();
                     svgY_iip.remove();
                     refreshYaxisTicks('iip');
                 } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
                     yAxis_right_for_pmi_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    svgY_pmi.remove();
+                    refreshYaxisTicks('pmi');
                 }
             }
         });

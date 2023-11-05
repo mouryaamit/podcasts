@@ -73,6 +73,7 @@ export class InsightsChartComponent implements OnInit {
         // Add Y axis - right side
         const y2 = d3.scaleLinear()
             .domain([0, 1.0])
+            .nice()
             .range([height, 0])
             ;
 
