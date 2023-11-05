@@ -472,91 +472,6 @@ export class ContextChartComponent implements OnInit {
         }
         addLinesForGraph();
 
-
-        // function addLinesForYears() {
-        //     let xValue = 66.5, diffInTwoLine = 263;
-        //     const year_1 = svg.append("g"); //2019
-        //     year_1.append('line')
-        //         .attr('x1', 0)
-        //         .attr('y1', 0)
-        //         .attr('x2', 0)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#E1E1E1')
-        //         .attr("stroke-width", "1")
-        //         ;
-        //     const year_2 = svg.append("g"); //2020
-        //     year_2.append('line')
-        //         .attr('x1', xValue)
-        //         .attr('y1', 0)
-        //         .attr('x2', xValue)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     xValue = xValue + diffInTwoLine;
-        //     const year_3 = svg.append("g"); //2021
-        //     year_3.append('line')
-        //         .attr('x1', xValue)
-        //         .attr('y1', 0)
-        //         .attr('x2', xValue)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     xValue = xValue + diffInTwoLine;
-        //     const year_4 = svg.append("g"); //2022
-        //     year_4.append('line')
-        //         .attr('x1', xValue)
-        //         .attr('y1', 0)
-        //         .attr('x2', xValue)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     xValue = xValue + diffInTwoLine;
-        //     const year_5 = svg.append("g"); //2023
-        //     year_5.append('line')
-        //         .attr('x1', xValue)
-        //         .attr('y1', 0)
-        //         .attr('x2', xValue)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     const year_6 = svg.append("g"); //2023
-        //     year_6.append('line')
-        //         .attr('x1', width + 21)
-        //         .attr('y1', 0)
-        //         .attr('x2', width + 21)
-        //         .attr('y2', height + 58)
-        //         .attr('stroke', '#E1E1E1')
-        //         .attr("stroke-width", "1")
-        //         ;
-        //     //top line of graph
-        //     svg.append("line")
-        //         .attr("x1", width + 20)
-        //         .attr("x2", 0)
-        //         .attr("y1", 0)
-        //         .attr("y2", 0)
-        //         .style("stroke", "#E1E1E1")
-        //         .attr("stroke-width", 1)
-        //         ;
-        //     //bottom line of graph
-        //     svg.append("line")
-        //         .attr("x1", width + 20)
-        //         .attr("x2", 0)
-        //         .attr("y1", height + 60)
-        //         .attr("y2", height + 60)
-        //         .style("stroke", "#E1E1E1")
-        //         .attr("stroke-width", 1)
-        //         ;
-        // }
-        // addLinesForYears();
-
         let line = d3.line()
             .defined(function (d) { return d; })
             .x(function (d) {
@@ -594,100 +509,10 @@ export class ContextChartComponent implements OnInit {
 
         path.on("click", clickPoint);
 
-        // var isIipCheckBoxEnabled: boolean = $("#IIPCheckboxMob") ? $("#IIPCheckboxMob").attr("checked") == 'true' ? true : false : false,
-        //     isPmiCheckBoxEnabled: boolean = $("#PMICheckboxMob") ? $("#PMICheckboxMob").attr("checked") ? true : false : false,
-        //     isGvaCheckBoxEnabled: boolean = $("#GVACheckboxMob") ? $("#GVACheckboxMob").attr("checked") ? true : false : false
-        
-        var isIipCheckBoxEnabled = $("#IIPCheckboxMob") ? $("#IIPCheckboxMob").attr("checked") == 'true' ? true : false : false,
-            isPmiCheckBoxEnabled = $("#PMICheckboxMob") ? $("#PMICheckboxMob").attr("checked") == 'true' ? true : false : false,
-            isGvaCheckBoxEnabled = $("#GVACheckboxMob") ? $("#GVACheckboxMob").attr("checked") == 'true' ? true : false : false;
+        // Sumpoorn graph changes end 
 
-        d3.selectAll(".context_checkboxes_mob").on("change", function (event) {
-            // console.log('event ', event.target.value, $(event.target).prop("checked"))
-            // console.log("isIipCheckBoxEnabled ", isIipCheckBoxEnabled)
-            // console.log("isPmiCheckBoxEnabled ", isPmiCheckBoxEnabled)
-            // console.log("isGvaCheckBoxEnabled ", isGvaCheckBoxEnabled)
-            if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
-                isIipCheckBoxEnabled = true;
-                refreshYaxisTicks('iip', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                addIIPLine(dataForIIP);
-                if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                    yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2])
-                } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                }
-            } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
-                isIipCheckBoxEnabled = false;
-                removeIIPLine();
-                if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                    yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove()
-                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_pmi_tick.remove()
-                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                }
-                d3.select("#iipYaxisTxt").remove();
-            }
-            if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
-                isPmiCheckBoxEnabled = true;
-                addPMILine(dataForPMI);
-                if (isIipCheckBoxEnabled == true) {
-                    refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                    if (isGvaCheckBoxEnabled == true) {
-                        yAxis_right_for_gva_tick.remove()
-                        refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2])
-                    }
-                } else {
-                    refreshYaxisTicks('pmi', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                    if (isGvaCheckBoxEnabled == true) {
-                        yAxis_right_for_gva_tick.remove()
-                        refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
-                    }
-                }
-            } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
-                isPmiCheckBoxEnabled = false;
-                removePMILine();
-                if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
-                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0]);
-                }
-                d3.select("#pmiYaxisTxt").remove();
-            }
-            if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
-                isGvaCheckBoxEnabled = true;
-                if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
-                    refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2]);
-                } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
-                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
-                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
-                    refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1]);
-                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == false) {
-                    refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0])
-                }
-                addGVALine(dataForGVA);
-            } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
-                isGvaCheckBoxEnabled = false;
-                removeGVALine();
-                d3.select("#gvaYaxisTxt").remove();
-            }
-        });
-
-        function refreshYaxisTicks(tickName, tickWidth, yAxisTickNameSpace) {
+        // IIP, PMI, GVA Graph changes start
+        function refreshYaxisTicks(tickName) {
             if (tickName == 'iip') {
                 svgY_iip = d3.select('#verticalSVG_context_iip')
                     .append('svg')
@@ -697,7 +522,7 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_iip_tick = svgY_iip.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,0)`) //+20
+                    // .attr("transform", `translate(` + tickWidth + `,0)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_iip)
                     .selectAll("text")
@@ -709,8 +534,8 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#iipYaxisTxt").remove();
 
                 svgY_iip.append("text")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    // .attr("x", -(height + 12))
+                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", 0)
                     .attr("y", 0)
                     .attr("id", "iipYaxisTxt")
@@ -728,7 +553,7 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_pmi_tick = svgY_pmi.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
+                    // .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_pmi)
                     .selectAll("text")
@@ -740,8 +565,8 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#pmiYaxisTxt").remove();
 
                 svgY_pmi.append("text").attr("opacity", "1")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    // .attr("x", -(height + 12))
+                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", 0)
                     .attr("y", 0)
                     .attr("id", "pmiYaxisTxt")
@@ -760,7 +585,7 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_gva_tick = svgY_gva.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
+                    // .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_gva)
                     .selectAll("text")
@@ -772,8 +597,8 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#gvaYaxisTxt").remove();
 
                 let gvaText = svgY_gva.append("text")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    // .attr("x", -(height + 12))
+                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", 0)
                     .attr("y", 0)
                     .attr("id", "gvaYaxisTxt")
@@ -889,8 +714,159 @@ export class ContextChartComponent implements OnInit {
             yAxis_right_for_gva_tick.remove();
         }
 
-        refreshYaxisTicks('iip', yAxisTickSpace[0], yAxisTickNameSpace[0]);
+        $("#IIPCheckboxMob").attr("checked", true);
+        refreshYaxisTicks('iip');
         addIIPLine(dataForIIP);
+        
+
+        var isIipCheckBoxEnabled = $("#IIPCheckboxMob") ? $("#IIPCheckboxMob").attr("checked") == 'true' ? true : false : false,
+            isPmiCheckBoxEnabled = $("#PMICheckboxMob") ? $("#PMICheckboxMob").attr("checked") == 'true' ? true : false : false,
+            isGvaCheckBoxEnabled = $("#GVACheckboxMob") ? $("#GVACheckboxMob").attr("checked") == 'true' ? true : false : false;
+        
+        $(".context_checkboxes_mob").on("change", function (event) {
+            if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
+                isIipCheckBoxEnabled = true;
+
+                // svgY_iip.remove();
+                refreshYaxisTicks('iip')
+                addIIPLine(dataForIIP);
+
+                if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_pmi.remove();
+                    refreshYaxisTicks('pmi');
+
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
+                } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_pmi.remove();
+                    refreshYaxisTicks('pmi')
+                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
+                }
+            } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
+                isIipCheckBoxEnabled = false;
+
+                removeIIPLine();
+                d3.select("#iipYaxisTxt").remove();
+
+                if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_pmi.remove();
+                    refreshYaxisTicks('pmi')
+
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
+                } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
+                } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('pmi')
+                }
+            } else if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
+                isPmiCheckBoxEnabled = true;
+
+                // svgY_pmi.remove();
+                refreshYaxisTicks('pmi');
+                addPMILine(dataForPMI);
+
+                if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva')
+                } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip')
+                }
+            } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
+                isPmiCheckBoxEnabled = false;
+
+                removePMILine();
+                d3.select("#pmiYaxisTxt").remove();
+
+                if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                    yAxis_right_for_gva_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip')
+                }
+            } else if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
+                isGvaCheckBoxEnabled = true;
+
+                // svgY_gva.remove();
+                refreshYaxisTicks('gva');
+                addGVALine(dataForGVA);
+
+                if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                }
+            } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
+                isGvaCheckBoxEnabled = false;
+
+                removeGVALine();
+                d3.select("#gvaYaxisTxt").remove();
+
+                if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
+                    yAxis_right_for_iip_tick.remove();
+                    svgY_iip.remove();
+                    refreshYaxisTicks('iip');
+                } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
+                    yAxis_right_for_pmi_tick.remove();
+                    svgY_gva.remove();
+                    refreshYaxisTicks('gva');
+                }
+            }
+        });
 
         // function iipCheckBoxEnabled() {
         //     isIipCheckBoxEnabled = true;
