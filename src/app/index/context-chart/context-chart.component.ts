@@ -607,25 +607,6 @@ export class ContextChartComponent implements OnInit {
                     .style('fill', gvaColorCode)
                     .attr("transform", "rotate(-90)")
                     .html("GVA%&#9651;");
-                    // .call(function (t) {
-                    //     // var self = d3.select(this);
-                    //     var s = t.text().split(' ');
-                    //     t.text('');
-                    //     t.append("tspan")
-                    //         .attr("fill", "currentColor")
-                    //         .attr("x", t._groups[0][0].x['animVal'][0]['value'])
-                    //         .attr("y", t._groups[0][0].y['animVal'][0]['value'] - 12)
-                    //         .attr("dy", "1em")
-                    //         .style('fill', gvaColorCode)
-                    //         .text(s[0]);
-                    //     t.append("tspan")
-                    //         .attr("fill", "currentColor")
-                    //         .attr("x", t._groups[0][0].x['animVal'][0]['value'])
-                    //         .attr("y", t._groups[0][0].y['animVal'][0]['value'])
-                    //         .attr("dy", "1em")
-                    //         .style('fill', gvaColorCode)
-                    //         .text(s[1] + ' ' + s[2]);
-                    // });
             }
         }
 
@@ -651,12 +632,7 @@ export class ContextChartComponent implements OnInit {
                     .curve(d3.curveCatmullRom.alpha(0))
                 );
         }
-        function removeIIPLine() {
-            IIPLine.remove();
-            svgY_iip.remove();
-            yAxis_right_for_iip_tick.remove();
-        }
-
+        
         function addPMILine(data) {
             // Add PMI line
             PMILine = svg.append("path")
@@ -679,11 +655,6 @@ export class ContextChartComponent implements OnInit {
                     .curve(d3.curveCatmullRom.alpha(0))
                 );
 
-        }
-        function removePMILine() {
-            PMILine.remove();
-            svgY_pmi.remove();
-            yAxis_right_for_pmi_tick.remove();
         }
 
         function addGVALine(data) {
@@ -708,11 +679,43 @@ export class ContextChartComponent implements OnInit {
                     .curve(d3.curveCatmullRom.alpha(0))
                 )
                 ;
-        }  
+        }
+
+        function removeIIPLine() {
+            IIPLine.remove();
+            svgY_iip.remove();
+            yAxis_right_for_iip_tick.remove();
+        }
+
+        function removePMILine() {
+            PMILine.remove();
+            svgY_pmi.remove();
+            yAxis_right_for_pmi_tick.remove();
+        }
+
         function removeGVALine() {
             GVALine.remove();
             svgY_gva.remove();
             yAxis_right_for_gva_tick.remove();
+        }
+
+        function showIIP() {
+            yAxis_right_for_iip_tick.remove();
+            svgY_iip.remove();
+            refreshYaxisTicks('iip');
+            d3.select('.legend').style('width', '100px');
+        }
+
+        function showPMI() {
+            yAxis_right_for_pmi_tick.remove();
+            svgY_pmi.remove();
+            refreshYaxisTicks('pmi');
+        }
+
+        function showGVA() {
+            yAxis_right_for_gva_tick.remove();
+            svgY_gva.remove();
+            refreshYaxisTicks('gva');
         }
 
         $("#IIPCheckboxMob").attr("checked", true);
@@ -728,26 +731,16 @@ export class ContextChartComponent implements OnInit {
             if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = true;
 
-                // svgY_iip.remove();
                 refreshYaxisTicks('iip')
                 addIIPLine(dataForIIP);
 
                 if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_pmi.remove();
-                    refreshYaxisTicks('pmi');
-
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
+                    showPMI();
+                    showGVA();
                 } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_pmi.remove();
-                    refreshYaxisTicks('pmi')
+                    showPMI();
                 } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
+                    showGVA();
                 }
             } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = false;
@@ -756,45 +749,26 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#iipYaxisTxt").remove();
 
                 if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_pmi.remove();
-                    refreshYaxisTicks('pmi')
-
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
+                    showPMI();
+                    showGVA();
                 } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('pmi')
+                    showPMI();
                 } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
+                    showGVA();
                 }
             } else if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = true;
 
-                // svgY_pmi.remove();
                 refreshYaxisTicks('pmi');
                 addPMILine(dataForPMI);
 
                 if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
-
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    showIIP();
+                    showGVA();
                 } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip')
+                    showIIP();
                 } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva')
+                    showGVA();
                 }
             } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = false;
@@ -803,45 +777,26 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#pmiYaxisTxt").remove();
 
                 if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
-
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    showIIP();
+                    showGVA();
                 } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip')
+                    showIIP();
                 } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-                    yAxis_right_for_gva_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    showGVA();
                 }
             } else if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = true;
 
-                // svgY_gva.remove();
                 refreshYaxisTicks('gva');
                 addGVALine(dataForGVA);
 
                 if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
-
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    showIIP();
+                    showPMI();
                 } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
+                    showIIP();
                 } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_gva.remove();
-                    refreshYaxisTicks('gva');
+                    showPMI();
                 }
             } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = false;
@@ -850,45 +805,16 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#gvaYaxisTxt").remove();
 
                 if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
-
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_pmi.remove();
-                    refreshYaxisTicks('pmi');
+                    showIIP();
+                    showPMI();
                 } else if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == false) {
-                    yAxis_right_for_iip_tick.remove();
-                    svgY_iip.remove();
-                    refreshYaxisTicks('iip');
+                    showIIP();
                 } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
-                    yAxis_right_for_pmi_tick.remove();
-                    svgY_pmi.remove();
-                    refreshYaxisTicks('pmi');
+                    showPMI();
                 }
             }
         });
 
-        // function iipCheckBoxEnabled() {
-        //     isIipCheckBoxEnabled = true;
-        //     refreshYaxisTicks('iip', yAxisTickSpace[0], yAxisTickNameSpace[0])
-        //     addIIPLine(dataForIIP);
-        //     if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
-        //         yAxis_right_for_pmi_tick.remove()
-        //         refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
-        //         yAxis_right_for_gva_tick.remove()
-        //         refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2])
-        //     } else if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
-        //         yAxis_right_for_pmi_tick.remove()
-        //         refreshYaxisTicks('pmi', yAxisTickSpace[1], yAxisTickNameSpace[1])
-        //     } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
-        //         yAxis_right_for_gva_tick.remove()
-        //         refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
-        //     }
-        // }
-
-        // $("#IIPCheckboxMob").attr("checked", "true");
-        // iipCheckBoxEnabled();
     }
 
     generateContextGraph() {
