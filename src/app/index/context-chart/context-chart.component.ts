@@ -35,11 +35,8 @@ export class ContextChartComponent implements OnInit {
             bottom: 100,
             left: 0
         },
-        
-        //1366
         default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
         default_height = 500,
-
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
 
@@ -94,21 +91,18 @@ export class ContextChartComponent implements OnInit {
         const y4 = d3.scaleLinear()
             .domain([d3.min(dataForGVA, function (d) { return d.value - 10; }), d3.max(dataForGVA, function (d) { return d.value + 10; })])
             .nice()
-            .range([height, 0])
-            ;
+            .range([height, 0]);
         
         //Axes
         const xAxis_month_number = d3.axisBottom(x3)
             .tickFormat(d3.timeFormat('%m'))
             .tickSize((height))
-            .ticks(width / 12)
-            ;
+            .ticks(width / 12);
         
         const xAxis_month_name = d3.axisBottom(x1)
             .tickSize([-(height)])
             .ticks(width / 12)
-            .tickFormat(d3.timeFormat('%b'))
-            ;
+            .tickFormat(d3.timeFormat('%b'));
 
         const xAxis_year = d3.axisBottom(x2)
             .tickSize(35)
@@ -122,25 +116,18 @@ export class ContextChartComponent implements OnInit {
                     const year_fmt = d3.timeFormat('%Y')(d);
                     return (monNum_fmt == '01') ? year_fmt : '';
                 }
-            })
-            ;
+            });
 
         const yAxis_left = d3.axisLeft(y1)
-            // .tickSize([-width - 25])
             .tickSize(0)
-            .tickValues(y_left_coordinates)
-            ;
+            .tickValues(y_left_coordinates);
 
         // Has to write one more axes for lines on graph or append lines for left yaxis
-
         const yAxis_right_for_iip = d3.axisRight(y2)
-            // .tickSize(0)
-            ;
-        const yAxis_right_for_pmi = d3.axisRight(y3)
-            ;
+            // .tickSize(0);
+        const yAxis_right_for_pmi = d3.axisRight(y3);
 
-        const yAxis_right_for_gva = d3.axisRight(y4)
-            ;
+        const yAxis_right_for_gva = d3.axisRight(y4);
 
         const svgY = d3.select('#mobile_context_graph_y_axis_svg')
             .append('svg')
@@ -180,51 +167,21 @@ export class ContextChartComponent implements OnInit {
             .call(xAxis_month_number)
             .selectAll("text")
             .attr("x", "0em")
-            .attr("y", "-1.3em")
-            ;
+            .attr("y", "-1.3em");
 
         const x_axis_months = svg.append("g")
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")
             .attr("class", "x_month_name_context")
             .call(xAxis_month_name)
-            .selectAll(".tick text") // select all the y tick texts
-            // .call(function (t) {
-            //     t._groups[0].forEach(function (d) { // for each one
-            //         var self = $(d);
-            //         if (self.text() == 'May') {
-            //             var s = self.text()
-            //             self.text('');
-            //             self.append("tspan")
-            //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-1.7em')
-            //                 .text(s);
-            //         } else if (self.text() == 'Oct') {
-            //             var s = self.text()
-            //             self.text('');
-            //             self.append("tspan")
-            //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-1.9em')
-            //                 .text(s);
-            //         } else if (self.text() == 'Jul') {
-            //             var s = self.text()
-            //             self.text('');
-            //             self.append("tspan")
-            //                 .attr("fill", "currentColor")
-            //                 .attr("x", '-2em')
-            //                 .text(s);
-            //         }
-            //     })
-            // })
-            // .attr("id", "xaxisMonths")
+            .selectAll(".tick text") 
             .attr("x", "-1.8em")
             .attr("y", "0.5em")
             .attr("transform", function (d) {
                 return "rotate(-90)"
             })
             .attr("class", function (d, i) { return `x_month_name_context x_month_name_context_${i}`; })
-            .style("cursor", "pointer")
-            ;
+            .style("cursor", "pointer");
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
@@ -237,25 +194,7 @@ export class ContextChartComponent implements OnInit {
             .style("font-weight", "600")
             .style("fill", "#A3A3A3")
             .style("font-family", "Inter")
-            .style("font-size", "16px")
-            ;
-
-        // svg.append("g")
-        //     .attr("stroke-width", "0.1")
-        //     .attr("class", "y_left_points")
-        //     .call(yAxis_left)
-        //     .append("text")
-        //     .attr("class", "axis-title")
-        //     .attr("x", "-10em")
-        //     .attr("y", "-2.5em")
-        //     .style("text-anchor", "end")
-        //     .attr("fill", "#2FB36B")
-        //     .attr("transform", "rotate(-90)")
-        //     .text("Jocata Sumpoorn")
-        //     ;
-
-        // var yAxisTickSpace = [width + 45, width + 70, width + 100];
-        // var yAxisTickNameSpace = [width + 47, width + 77, width + 107];
+            .style("font-size", "16px");
 
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
@@ -269,19 +208,11 @@ export class ContextChartComponent implements OnInit {
             tooltip = d3.select("#mobile_context_graph_svg") // can be body
                 .append("div")
                 .attr("class", "tooltip-area")
-                .style("opacity", 0)
-            ;
+                .style("opacity", 0);
             radiation = d3.select("#mobile_context_graph_svg") // can be body
                 .append("div")
                 .attr("class", "animating_circle")
-                .style("opacity", 0)
-            ;
-
-            // selectedPoint = d3.select("#mobile_my_dataviz_insights")
-            //     .append("div")
-            //     .attr("class", "focus_circle")
-            //     .style("opacity", 0)
-            //     ;
+                .style("opacity", 0);
         }
         initializeTooltip();
 
@@ -315,8 +246,7 @@ export class ContextChartComponent implements OnInit {
                     d3.selectAll(".x_month_name_context").classed("active", false); // xaxis selection on load
                     const formattedDate = d3.timeFormat("%m-%Y")(d);
                     renderPointerOnLine(formattedDate)
-                })
-                    ;
+                });
             });
         }
         monthNameClickEvent();
@@ -418,8 +348,7 @@ export class ContextChartComponent implements OnInit {
                 .attr('x2', 0.2)
                 .attr('y2', height + 60)
                 .attr('stroke', '#E1E1E1')
-                .attr("stroke-width", "1")
-                ;
+                .attr("stroke-width", "1");
             years.forEach(year => {
                 let yearSvg = svg.append("g");
                 if (years.indexOf(year) == 0) {
@@ -458,18 +387,8 @@ export class ContextChartComponent implements OnInit {
                 .attr("y1", 0)
                 .attr("y2", 0)
                 .style("stroke", "#E1E1E1")
-                .attr("stroke-width", "0.7")
-                ;
-            //bottom line of graph
-            // const bottom_line = svg.append("g");
-            // bottom_line.append("line")
-            //     .attr("x1", width + 200)
-            //     .attr("x2", 0)
-            //     .attr("y1", height + 62)
-            //     .attr("y2", height + 62)
-            //     .style("stroke", "#E1E1E1")
-            //     .attr("stroke-width", "0.7")
-            //     ;
+                .attr("stroke-width", "0.7");
+
         }
         addLinesForGraph();
 
@@ -496,8 +415,7 @@ export class ContextChartComponent implements OnInit {
             .attr("stroke", "#2FB36B")
             .style("stroke-width", "2.5")
             .attr("d", line)
-            .style("cursor", "pointer")
-            ;
+            .style("cursor", "pointer");
 
         const clickPoint = (event, d) => {
             const mousePointer = d3.pointer(event);
@@ -511,7 +429,6 @@ export class ContextChartComponent implements OnInit {
         path.on("click", clickPoint);
 
         // Sumpoorn graph changes end 
-
         // IIP, PMI, GVA Graph changes start
         function refreshYaxisTicks(tickName) {
             if (tickName == 'iip') {
@@ -523,28 +440,23 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_iip_tick = svgY_iip.append("g")
                     .attr("stroke-width", "0")
-                    // .attr("transform", `translate(` + tickWidth + `,0)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_iip)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("color", iipColorCode)
-                    .select(".domain").attr("stroke", "none")
-                    ;
+                    .select(".domain").attr("stroke", "none");
 
                 d3.select("#iipYaxisTxt").remove();
 
                 svgY_iip.append("text")
-                    // .attr("x", -(height + 12))
-                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", "-400")
                     .attr("y", "30")
                     .attr("id", "iipYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', iipColorCode)
                     .attr("transform", "rotate(-90)")
-                    .text("IIP")
-                    ;
+                    .text("IIP");
             } else if (tickName == 'pmi') {
                 svgY_pmi = d3.select('#mobile_context_graph_y_axis_pmi_svg')
                     .append('svg')
@@ -554,20 +466,16 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_pmi_tick = svgY_pmi.append("g")
                     .attr("stroke-width", "0")
-                    // .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_pmi)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("fill", pmiColorCode)
-                    .select(".domain").attr("stroke", "none")
-                    ;
+                    .select(".domain").attr("stroke", "none");
 
                 d3.select("#pmiYaxisTxt").remove();
 
                 svgY_pmi.append("text").attr("opacity", "1")
-                    // .attr("x", -(height + 12))
-                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", "-400")
                     .attr("y", "30")
                     .attr("id", "pmiYaxisTxt")
@@ -586,20 +494,16 @@ export class ContextChartComponent implements OnInit {
 
                 yAxis_right_for_gva_tick = svgY_gva.append("g")
                     .attr("stroke-width", "0")
-                    // .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_gva)
                     .selectAll("text")
                     .attr("text-anchor", "end")
                     .style("fill", gvaColorCode)
-                    .select(".domain").attr("stroke", "none")
-                    ;
+                    .select(".domain").attr("stroke", "none");
 
                 d3.select("#gvaYaxisTxt").remove();
 
                 svgY_gva.append("text")
-                    // .attr("x", -(height + 12))
-                    // .attr("y", yAxisTickNameSpace)
                     .attr("x", "-400")
                     .attr("y", "30")
                     .attr("id", "gvaYaxisTxt")
@@ -677,8 +581,7 @@ export class ContextChartComponent implements OnInit {
                     })
                     .y(function (d) { return y4(d.value) })
                     .curve(d3.curveCatmullRom.alpha(0))
-                )
-                ;
+                );
         }
 
         function removeIIPLine() {
