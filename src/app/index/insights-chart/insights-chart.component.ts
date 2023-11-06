@@ -732,15 +732,15 @@ export class InsightsChartComponent implements OnInit {
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x + 12.5) + "px")
-                    .style("top", (mousePointer.y + 20) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 20) + "px");
             } else {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x + 12.5) + "px")
-                    .style("top", (mousePointer.y + 20) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 20) + "px");
             }
         }
 
