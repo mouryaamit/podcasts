@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import * as d3 from 'd3';
 import * as $ from 'jquery';
 @Component({
@@ -9,6 +9,7 @@ import * as $ from 'jquery';
 export class InsightsChartComponent implements OnInit {
 
     @Input() sumpoornGraphData;
+    @Output() graphWidth = new EventEmitter<number>();
 
     constructor() { }
 
@@ -40,6 +41,7 @@ export class InsightsChartComponent implements OnInit {
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom,
         parseDate = d3.timeParse("%m-%Y");
+        this.graphWidth.emit(width);
 
         // Coordinates on axes
         // Add X axis 1 --> it is a month format
@@ -1077,6 +1079,8 @@ export class InsightsChartComponent implements OnInit {
             )
             .style("cursor", "pointer");
         path.on("click", clickPoint);
+
+        $("#mobile_insights_graph_svg").scrollLeft(width)
     }
     
     generateInsightsGraph() {

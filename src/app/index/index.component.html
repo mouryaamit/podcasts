@@ -8,11 +8,11 @@
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
                 data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
-                aria-selected="true">Insights</button>
+                aria-selected="true" (click)="scrollToRight('Insights')">Insights</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
-                type="button" role="tab" aria-controls="graph-context" aria-selected="false">Context</button>
+                type="button" role="tab" aria-controls="graph-context" aria-selected="false" (click)="scrollToRight('Context')">Context</button>
             </li>
           </ul>
           <a class="d-flex d-md-none" data-bs-toggle="modal" data-bs-target="#infoModal"
@@ -24,7 +24,7 @@
           <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
             aria-labelledby="graph-insights-tab">
             <div class="index_graphs">
-              <app-insights-chart [sumpoornGraphData]="sumpoornGraphData"
+              <app-insights-chart [sumpoornGraphData]="sumpoornGraphData" (graphWidth)="checkInsightsGraphWidth($event)"
                 *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
             </div>
             <div class="app_index_commentary_con">
@@ -144,7 +144,7 @@
           <div class="tab-pane fade" id="graph-context" role="tabpanel" aria-labelledby="graph-context-tab">
             <div class="index_graphs">
               <app-context-chart [sumpoornGraphData]="sumpoornGraphData" [iipGraphData]="iipGraphData"
-                [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData"
+                [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData" (graphWidth)="checkContextGraphWidth($event)"
                 *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0 && iipGraphData?.iipValues &&pmiGraphData?.pmiValues && gvaGraphData?.gvaValues"></app-context-chart>
             </div>
             <div class="app_index_context_con">

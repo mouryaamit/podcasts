@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import * as d3 from 'd3';
 import * as $ from 'jquery';
 @Component({
@@ -13,6 +13,7 @@ export class ContextChartComponent implements OnInit {
     @Input() iipGraphData;
     @Input() pmiGraphData;
     @Input() gvaGraphData;
+    @Output() graphWidth = new EventEmitter<number>();
 
     constructor() { }
 
@@ -39,7 +40,7 @@ export class ContextChartComponent implements OnInit {
         default_height = 500,
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
-
+        this.graphWidth.emit(width);
         const iipColorCode = '#24C0E2'; //2E8DFF
         const pmiColorCode = '#E1861B';
         const gvaColorCode = '#3E3EC8'; //5451FF
@@ -726,7 +727,7 @@ export class ContextChartComponent implements OnInit {
                 }
             }
         });
-
+        $("#mobile_context_graph_svg").scrollLeft(width)
     }
 
     generateContextGraph() {

@@ -15,6 +15,8 @@ export class IndexComponent implements OnInit {
     pmiGraphData: any;
     gvaGraphData: any;
     infoItemToShow: string | undefined;
+    insightsGraphWidth: any;
+    contextGraphWidth: any;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
 
@@ -101,6 +103,20 @@ export class IndexComponent implements OnInit {
             });
         }
     }
+    scrollToRight(tab){
+        if(tab === 'Insights'){
+            $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth)
+        } else {
+            $("#mobile_context_graph_svg").scrollLeft(this.contextGraphWidth)
+        }
+    }
 
+    checkInsightsGraphWidth(event){
+        this.insightsGraphWidth = event;
+    }
+
+    checkContextGraphWidth(event){
+        this.contextGraphWidth = event;
+    }
 }
 
