@@ -1,1 +1,234 @@
-{"pmiValues": [{"category": "10-2019", "value": 49.6, "sortOrder": 1}, {"category": "11-2019", "value": 52.7, "sortOrder": 2}, {"category": "12-2019", "value": 53.7, "sortOrder": 3}, {"category": "01-2020", "value": 56.3, "sortOrder": 4}, {"category": "02-2020", "value": 57.6, "sortOrder": 5}, {"category": "03-2020", "value": 50.6, "sortOrder": 6}, {"category": "04-2020", "value": 7.2, "sortOrder": 7}, {"category": "05-2020", "value": 14.8, "sortOrder": 8}, {"category": "06-2020", "value": 37.8, "sortOrder": 9}, {"category": "07-2020", "value": 37.2, "sortOrder": 10}, {"category": "08-2020", "value": 46.0, "sortOrder": 11}, {"category": "09-2020", "value": 54.6, "sortOrder": 12}, {"category": "10-2020", "value": 58.0, "sortOrder": 13}, {"category": "11-2020", "value": 56.3, "sortOrder": 14}, {"category": "12-2020", "value": 54.9, "sortOrder": 15}, {"category": "01-2021", "value": 55.8, "sortOrder": 16}, {"category": "02-2021", "value": 57.3, "sortOrder": 17}, {"category": "03-2021", "value": 56.0, "sortOrder": 18}, {"category": "04-2021", "value": 55.4, "sortOrder": 19}, {"category": "05-2021", "value": 48.1, "sortOrder": 20}, {"category": "06-2021", "value": 43.1, "sortOrder": 21}, {"category": "07-2021", "value": 49.2, "sortOrder": 22}, {"category": "08-2021", "value": 55.4, "sortOrder": 23}, {"category": "09-2021", "value": 55.3, "sortOrder": 24}, {"category": "10-2021", "value": 58.7, "sortOrder": 25}, {"category": "11-2021", "value": 59.2, "sortOrder": 26}, {"category": "12-2021", "value": 56.4, "sortOrder": 27}, {"category": "01-2022", "value": 53.0, "sortOrder": 28}, {"category": "02-2022", "value": 53.5, "sortOrder": 29}, {"category": "03-2022", "value": 54.3, "sortOrder": 30}, {"category": "04-2022", "value": 57.6, "sortOrder": 31}, {"category": "05-2022", "value": 58.3, "sortOrder": 32}, {"category": "06-2022", "value": 58.2, "sortOrder": 33}, {"category": "07-2022", "value": 56.6, "sortOrder": 34}, {"category": "08-2022", "value": 58.2, "sortOrder": 35}, {"category": "09-2022", "value": 55.1, "sortOrder": 36}, {"category": "10-2022", "value": 55.5, "sortOrder": 37}, {"category": "11-2022", "value": 56.7, "sortOrder": 38}, {"category": "12-2022", "value": 59.4, "sortOrder": 39}, {"category": "01-2023", "value": 57.5, "sortOrder": 40}, {"category": "02-2023", "value": 59.0, "sortOrder": 41}, {"category": "03-2023", "value": 58.4, "sortOrder": 42}, {"category": "04-2023", "value": 61.6, "sortOrder": 43}, {"category": "05-2023", "value": 61.6, "sortOrder": 44}, {"category": "06-2023", "value": 59.4, "sortOrder": 45}, {"category": "07-2023", "value": 61.9, "sortOrder": 46}]}
+{
+    "pmiValues": [
+      {
+        "category": "10-2019",
+        "value": 49.6,
+        "sortOrder": 1
+      },
+      {
+        "category": "11-2019",
+        "value": 52.7,
+        "sortOrder": 2
+      },
+      {
+        "category": "12-2019",
+        "value": 53.7,
+        "sortOrder": 3
+      },
+      {
+        "category": "01-2020",
+        "value": 56.3,
+        "sortOrder": 4
+      },
+      {
+        "category": "02-2020",
+        "value": 57.6,
+        "sortOrder": 5
+      },
+      {
+        "category": "03-2020",
+        "value": 50.6,
+        "sortOrder": 6
+      },
+      {
+        "category": "04-2020",
+        "value": 7.2,
+        "sortOrder": 7
+      },
+      {
+        "category": "05-2020",
+        "value": 14.8,
+        "sortOrder": 8
+      },
+      {
+        "category": "06-2020",
+        "value": 37.8,
+        "sortOrder": 9
+      },
+      {
+        "category": "07-2020",
+        "value": 37.2,
+        "sortOrder": 10
+      },
+      {
+        "category": "08-2020",
+        "value": 46.0,
+        "sortOrder": 11
+      },
+      {
+        "category": "09-2020",
+        "value": 54.6,
+        "sortOrder": 12
+      },
+      {
+        "category": "10-2020",
+        "value": 58.0,
+        "sortOrder": 13
+      },
+      {
+        "category": "11-2020",
+        "value": 56.3,
+        "sortOrder": 14
+      },
+      {
+        "category": "12-2020",
+        "value": 54.9,
+        "sortOrder": 15
+      },
+      {
+        "category": "01-2021",
+        "value": 55.8,
+        "sortOrder": 16
+      },
+      {
+        "category": "02-2021",
+        "value": 57.3,
+        "sortOrder": 17
+      },
+      {
+        "category": "03-2021",
+        "value": 56.0,
+        "sortOrder": 18
+      },
+      {
+        "category": "04-2021",
+        "value": 55.4,
+        "sortOrder": 19
+      },
+      {
+        "category": "05-2021",
+        "value": 48.1,
+        "sortOrder": 20
+      },
+      {
+        "category": "06-2021",
+        "value": 43.1,
+        "sortOrder": 21
+      },
+      {
+        "category": "07-2021",
+        "value": 49.2,
+        "sortOrder": 22
+      },
+      {
+        "category": "08-2021",
+        "value": 55.4,
+        "sortOrder": 23
+      },
+      {
+        "category": "09-2021",
+        "value": 55.3,
+        "sortOrder": 24
+      },
+      {
+        "category": "10-2021",
+        "value": 58.7,
+        "sortOrder": 25
+      },
+      {
+        "category": "11-2021",
+        "value": 59.2,
+        "sortOrder": 26
+      },
+      {
+        "category": "12-2021",
+        "value": 56.4,
+        "sortOrder": 27
+      },
+      {
+        "category": "01-2022",
+        "value": 53.0,
+        "sortOrder": 28
+      },
+      {
+        "category": "02-2022",
+        "value": 53.5,
+        "sortOrder": 29
+      },
+      {
+        "category": "03-2022",
+        "value": 54.3,
+        "sortOrder": 30
+      },
+      {
+        "category": "04-2022",
+        "value": 57.6,
+        "sortOrder": 31
+      },
+      {
+        "category": "05-2022",
+        "value": 58.3,
+        "sortOrder": 32
+      },
+      {
+        "category": "06-2022",
+        "value": 58.2,
+        "sortOrder": 33
+      },
+      {
+        "category": "07-2022",
+        "value": 56.6,
+        "sortOrder": 34
+      },
+      {
+        "category": "08-2022",
+        "value": 58.2,
+        "sortOrder": 35
+      },
+      {
+        "category": "09-2022",
+        "value": 55.1,
+        "sortOrder": 36
+      },
+      {
+        "category": "10-2022",
+        "value": 55.5,
+        "sortOrder": 37
+      },
+      {
+        "category": "11-2022",
+        "value": 56.7,
+        "sortOrder": 38
+      },
+      {
+        "category": "12-2022",
+        "value": 59.4,
+        "sortOrder": 39
+      },
+      {
+        "category": "01-2023",
+        "value": 57.5,
+        "sortOrder": 40
+      },
+      {
+        "category": "02-2023",
+        "value": 59.0,
+        "sortOrder": 41
+      },
+      {
+        "category": "03-2023",
+        "value": 58.4,
+        "sortOrder": 42
+      },
+      {
+        "category": "04-2023",
+        "value": 61.6,
+        "sortOrder": 43
+      },
+      {
+        "category": "05-2023",
+        "value": 61.6,
+        "sortOrder": 44
+      },
+      {
+        "category": "06-2023",
+        "value": 59.4,
+        "sortOrder": 45
+      },
+      {
+        "category": "07-2023",
+        "value": 61.9,
+        "sortOrder": 46
+      }
+    ]
+  }

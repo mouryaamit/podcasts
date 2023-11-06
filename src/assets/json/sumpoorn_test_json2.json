@@ -1,1 +1,3524 @@
-{"IndexGeneration":[{"category":"10-2019","value":0.45,"SortOrder":1},{"category":"11-2019","value":0.57,"SortOrder":2},{"category":"12-2019","value":0.52,"SortOrder":3},{"category":"01-2020","value":0.54,"SortOrder":4},{"category":"02-2020","value":0.59,"SortOrder":5},{"category":"03-2020","value":0.37,"SortOrder":6},{"category":"04-2020","value":0.21,"SortOrder":7},{"category":"05-2020","value":0.29,"SortOrder":8},{"category":"06-2020","value":0.49,"SortOrder":9},{"category":"07-2020","value":0.49,"SortOrder":10},{"category":"08-2020","value":0.56,"SortOrder":11},{"category":"09-2020","value":0.61,"SortOrder":12},{"category":"10-2020","value":0.69,"SortOrder":13},{"category":"11-2020","value":0.57,"SortOrder":14},{"category":"12-2020","value":0.66,"SortOrder":15},{"category":"01-2021","value":0.61,"SortOrder":16},{"category":"02-2021","value":0.63,"SortOrder":17},{"category":"03-2021","value":0.82,"SortOrder":18},{"category":"04-2021","value":0.85,"SortOrder":19},{"category":"05-2021","value":0.69,"SortOrder":20},{"category":"06-2021","value":0.69,"SortOrder":21},{"category":"07-2021","value":0.69,"SortOrder":22},{"category":"08-2021","value":0.69,"SortOrder":23},{"category":"09-2021","value":0.67,"SortOrder":24},{"category":"10-2021","value":0.66,"SortOrder":25},{"category":"11-2021","value":0.62,"SortOrder":26},{"category":"12-2021","value":0.63,"SortOrder":27},{"category":"01-2022","value":0.66,"SortOrder":28},{"category":"02-2022","value":0.66,"SortOrder":29},{"category":"03-2022","value":0.67,"SortOrder":30},{"category":"04-2022","value":0.71,"SortOrder":31},{"category":"05-2022","value":0.74,"SortOrder":32},{"category":"06-2022","value":0.69,"SortOrder":33},{"category":"07-2022","value":0.62,"SortOrder":34},{"category":"08-2022","value":0.62,"SortOrder":35},{"category":"09-2022","value":0.63,"SortOrder":36},{"category":"10-2022","value":0.56,"SortOrder":37},{"category":"11-2022","value":0.64,"SortOrder":38},{"category":"12-2022","value":0.6,"SortOrder":39},{"category":"01-2023","value":0.63,"SortOrder":40},{"category":"02-2023","value":0.6,"SortOrder":41},{"category":"03-2023","value":0.7,"SortOrder":42},{"category":"04-2023","value":0.53,"SortOrder":43},{"category":"05-2023","value":0.61,"SortOrder":44},{"category":"06-2023","value":0.56,"SortOrder":45},{"category":"07-2023","value":0.55,"SortOrder":46},{"category":"08-2023","value":0.62,"SortOrder":35},{"category":"09-2023","value":0.63,"SortOrder":36},{"category":"10-2023","value":0.56,"SortOrder":37},{"category":"11-2023","value":0.64,"SortOrder":38},{"category":"12-2023","value":0.6,"SortOrder":39},{"category":"01-2024","value":0.66,"SortOrder":28},{"category":"02-2024","value":0.66,"SortOrder":29},{"category":"03-2024","value":0.67,"SortOrder":30},{"category":"04-2024","value":0.71,"SortOrder":31},{"category":"05-2024","value":0.74,"SortOrder":32},{"category":"06-2024","value":0.69,"SortOrder":33},{"category":"07-2024","value":0.62,"SortOrder":34},{"category":"08-2024","value":0.62,"SortOrder":35},{"category":"09-2024","value":0.63,"SortOrder":36},{"category":"10-2024","value":0.56,"SortOrder":37},{"category":"11-2024","value":0.64,"SortOrder":38},{"category":"12-2024","value":0.6,"SortOrder":39}],"IndexGstinCount":[{"category":"10-2019","value":487,"SortOrder":1},{"category":"11-2019","value":646,"SortOrder":2},{"category":"12-2019","value":852,"SortOrder":3},{"category":"01-2020","value":1159,"SortOrder":4},{"category":"02-2020","value":1531,"SortOrder":5},{"category":"03-2020","value":2021,"SortOrder":6},{"category":"04-2020","value":1869,"SortOrder":7},{"category":"05-2020","value":2262,"SortOrder":8},{"category":"06-2020","value":2731,"SortOrder":9},{"category":"07-2020","value":3252,"SortOrder":10},{"category":"08-2020","value":3824,"SortOrder":11},{"category":"09-2020","value":4438,"SortOrder":12},{"category":"10-2020","value":4992,"SortOrder":13},{"category":"11-2020","value":5765,"SortOrder":14},{"category":"12-2020","value":6659,"SortOrder":15},{"category":"01-2021","value":6975,"SortOrder":16},{"category":"02-2021","value":7723,"SortOrder":17},{"category":"03-2021","value":9320,"SortOrder":18},{"category":"04-2021","value":9941,"SortOrder":19},{"category":"05-2021","value":11351,"SortOrder":20},{"category":"06-2021","value":12557,"SortOrder":21},{"category":"07-2021","value":12670,"SortOrder":22},{"category":"08-2021","value":12799,"SortOrder":23},{"category":"09-2021","value":12841,"SortOrder":24},{"category":"10-2021","value":12806,"SortOrder":25},{"category":"11-2021","value":12747,"SortOrder":26},{"category":"12-2021","value":14513,"SortOrder":27},{"category":"01-2022","value":14169,"SortOrder":28},{"category":"02-2022","value":14991,"SortOrder":29},{"category":"03-2022","value":17110,"SortOrder":30},{"category":"04-2022","value":18459,"SortOrder":31},{"category":"05-2022","value":19950,"SortOrder":32},{"category":"06-2022","value":21579,"SortOrder":33},{"category":"07-2022","value":20645,"SortOrder":34},{"category":"08-2022","value":20033,"SortOrder":35},{"category":"09-2022","value":19477,"SortOrder":36},{"category":"10-2022","value":18621,"SortOrder":37},{"category":"11-2022","value":17762,"SortOrder":38},{"category":"12-2022","value":16792,"SortOrder":39},{"category":"01-2023","value":15223,"SortOrder":40},{"category":"02-2023","value":12515,"SortOrder":41},{"category":"03-2023","value":9895,"SortOrder":42},{"category":"04-2023","value":6256,"SortOrder":43},{"category":"05-2023","value":2392,"SortOrder":44},{"category":"06-2023","value":2068,"SortOrder":45},{"category":"07-2023","value":2157,"SortOrder":46},{"category":"08-2023","value":20033,"SortOrder":35},{"category":"09-2023","value":19477,"SortOrder":36},{"category":"10-2023","value":18621,"SortOrder":37},{"category":"11-2023","value":17762,"SortOrder":38},{"category":"12-2023","value":16792,"SortOrder":39},{"category":"01-2024","value":14169,"SortOrder":28},{"category":"02-2024","value":14991,"SortOrder":29},{"category":"03-2024","value":17110,"SortOrder":30},{"category":"04-2024","value":18459,"SortOrder":31},{"category":"05-2024","value":19950,"SortOrder":32},{"category":"06-2024","value":21579,"SortOrder":33},{"category":"07-2024","value":20645,"SortOrder":34},{"category":"08-2024","value":20033,"SortOrder":35},{"category":"09-2024","value":19477,"SortOrder":36},{"category":"10-2024","value":18621,"SortOrder":37},{"category":"11-2024","value":17762,"SortOrder":38},{"category":"12-2024","value":16792,"SortOrder":39}],"Commentary":{"ExpertCommentary":[{"previousMonth":"02-2020","Month":"03-2020","nextMonth":"10-2020","ExpertName":"","ExpertDetails":"","ExpertCommentary":"At 0.37 in March 2020, Jocata-Sumpoorn reflected significant contraction in the sales activity of MSMEs, a result of economic activity shutting down- the national lockdown necessitated in response to the Covid19 pandemic. The contraction was seen across the board in the IIP, with the overall index slumping by 18.7% over the previous year. The IHS Markit Composite PMI fell to 50.6 in March from 57.6 in February, making the lowest reading in five months; while the manufacturing index dropped to 51.8 from 54.5, the services sector reported a stronger drop to 49.3 in March from 57.5 in February. New orders were shaken by the fastest drop in fresh exports contracts since September 2013 . <br><br>With the global economy in a turmoil as transport and trade restrictions came into place to safeguard countries from the spread of the pandemic, India’s exports fell by 34.6% in March while imports fell by 28.7%. <br><br>The unprecedented nature of the crisis and uncertainty led to strident demands for government support to small businesses, in particular. ","ExpertImageDetails":""},{"previousMonth":"03-2020","Month":"10-2020","nextMonth":"03-2021","ExpertName":"","ExpertDetails":"","ExpertCommentary":"After dipping to the low of 0.21 in April due to the severe restrictions of the national lockdown, Jocata-Sumpoorn had moved up into a phase of mild expansion at 0. 56 in August and moderate expansion at 0. 61 in September. Sales performance of credit-seeking MSMEs showed their fastest expansion in a year with the Jocata-Sumpoorn at 0.69 in October. The General IIP stood at 129.6, its highest level since the lockdown restrictions were put in place in April. As the IIP had gone through a phase of contraction for three months of August – October 2019, the overall growth of 4.5% in October was still muted and indicative of continuing stress in the mining and manufacturing sectors.<br><br>The responses through the survey based IHS Markit PMI showed significant strength , with the Composite PMI rising to 58.0 in October from 54.6 in September, making this the strongest increase in around nine years. The Manufacturing PMI rose to 58.9 in October from 56.8 in September, as purchasing managers reported the strongest pace of expansion in output in roughly 13 years. From its September level of 49.8 in September, the Services PMI crossed into the expansionary zone for the first time since March and stood at 54.1 in October.","ExpertImageDetails":""},{"previousMonth":"10-2020","Month":"03-2021","nextMonth":"10-2021","ExpertName":"","ExpertDetails":"","ExpertCommentary":"Even as the second wave of Covid19 gripped the country and localized restrictions were in place, the government support measures for MSMEs, and the absence of severe national lockdown have enabled growth in sales activity for the sector. Jocata-Sumpoorn stood at its highest level of 0.82 in March moving into the zone of substantial expansion in sales activity for credit-seeking MSMEs.<br><br>The General IIP Index also moved to a record high level of 145.6 in March, up from the 129.9 index of February. While the significantly high growth in IIP of 24.2% can partly be attributed to the low base effect from the previous year’s lockdown in March, all segments of the IIP recorded an increase over February, reflecting recovery in the economy. <br><br>On the other hand, the responses through the survey based IHS Markit PMI showed a slight drop in March from the previous month – the Composite PMI stood at 56.0 in March, as against 57.3 in February, the Services PMI inched down to 54.6 in March from 55.3 in February while the Manufacturing PMI moved from 57.5 in February to 55.4 in March. Despite the fall, the PMI stayed well above the threshold level of 50, reflecting an increase in business activity from the previous month. ","ExpertImageDetails":""},{"previousMonth":"03-2021","Month":"10-2021","nextMonth":"05-2022","ExpertName":"","ExpertDetails":"","ExpertCommentary":"The strong support given by the government as relief to MSMEs post-Covid continues to bolster the sector. Despite the drop in the index after April, when Jocata-Sumpoorn hit a record high of 0.85, the sales activity continues in the phase of significant expansion.  Since September, the IIP has been settling with the overall index coming off the high double-digit growth rates of the period March-August as the previous year’s base effect runs out. Though growth in manufacturing IIP stood at 4.3% for September and 3.3% for October, there are fluctuations across sectors that reveal differential impact of the pandemic and the base effect – 13 out of 23 sectors reported growth in October e.g, textile manufacture posted 30%+ growth in September and October, while leather products showed continued stress with negative growth in both months. <br><br>The IHS Markit Purchasing Managers’ Index (PMI) survey reflected the revival in the economic activity as the Services PMI went up to 58.4 in October, its highest level in ten and a half years and Manufacturing PMI reported an eight-month high at 55.9; the Composite PMI consequently stood at 58.7, up from 55.3 in September, which was the strongest monthly expansion reported by the purchasing managers since January 2012. Overall, therefore the sentiment has been very positive for economic activity. ","ExpertImageDetails":""},{"previousMonth":"10-2021","Month":"05-2022","nextMonth":"10-2022","ExpertName":"","ExpertDetails":"","ExpertCommentary":"After the contraction seen during the restrictive phase of Covid-19 lockdowns over the period March-July 2020, Jocata-Sumpoorn has been showing varied rates of expansion. The sales activity of credit-seeking MSMEs has been in a phase of significant expansion since May 2021, barring two months of moderate expansion in November and December 2021, and Jocata-Sumpoorn hit a thirteen-month high of 0.74 in May 2022. This trend has been broadly in sync with the IIP, which also showed low rates of 1% growth in November and December 2021; the General IIP Index moved up from 134.5 in April to 137.8 in May showing a 19.7 percent growth over the previous year, despite the high base in May 2021. The Manufacturing IIP moved up to 134.6 in May from 131.6 in April, recording a 20.7% growth over the previous year. Except for the manufacture of pharmaceuticals, all other 22 sectors showed growth in May. <br><br>The S&P Global Composite PMI also moved up to 58.3 in May from 57.6 in April. The recovery was mainly in the services sector where respondents reported the strongest rise in activity in 11 years- the index jumped to 58.9 in May from 57.9 in April with further relaxations in the Covid19 restrictions. The Manufacturing PMI stayed stable across the months, with a minor drop from 54.7 in April to 54.6 in May.","ExpertImageDetails":""},{"previousMonth":"05-2022","Month":"10-2022","nextMonth":"01-2023","ExpertName":"","ExpertDetails":"","ExpertCommentary":"The sales performance of credit-seeking MSMEs showed a slower rate of expansion in October, with the Jocata-Sumpoorn continuing its decline since the peak of 0.74 in May 2022. The General IIP index has been showing some stress over the past four months, moving from 134.4 in July to a six-month low of 131.5 in August, a slight rise to 133.8 in September and drop again to129.5 in October. General IIP contracted by 4.1% in October over the previous year, with manufacturing IIP contracting by 5.8%. After expanding for nineteen months, merchandise exports contracted by 12.1% in October over the previous year, while merchandise imports expanded by 10.0%.<br><br>There was a contrasting picture coming in from the S&P Global PMI whose Composite Index reported at 55.5 in October, marginally higher than 55.1 in the previous month. However, the survey of purchasing managers of large firms showed that manufacturing production and new orders expanded at their slowest rate since June 2022. ","ExpertImageDetails":""},{"previousMonth":"10-2022","Month":"01-2023","nextMonth":"02-2023","ExpertName":"","ExpertDetails":"","ExpertCommentary":"Since July 2022, the Jocata-Sumpoorn levels have shown that growth in the sales of credit-seeking MSMEs has settled in the zone of mild to moderate expansion. The index level moved up to 0.63 in January from the 0.60 level in December 2022. This is in line with the indications from the IIP – where the General IIP rose in January to 147.4, the third consecutive month of increase in production since the drop to 129.5 in October 2022. Growth in the General IIP stood at 5.8% over the previous year.  Manufacturing IIP moved up to 145.5 in January from 144.9 in December, recording year-on-year growth at 4.5%. Analysis of the 23 sectors that make up the IIP showed that 13 sectors recorded growth over the previous year, while 10 sectors contracted.<br><br>In slight contrast, the responses from the survey-based S&P Global PMI showed lower expansion than December levels - the Composite PMI came in at 57.5 in January, down from December’s near 11-year high of 59.4. The Manufacturing PMI came in at 55.4 in January, down from December’s 57.8. Meanwhile, the Services PMI decreased to 57.2 in January (December: 58.5). In both sectors, output and new orders rose at softer rates than the previous month.","ExpertImageDetails":""},{"previousMonth":"01-2023","Month":"02-2023","nextMonth":"03-2023","ExpertName":"","ExpertDetails":"","ExpertCommentary":"The sales activity of the credit-seeking MSMEs has been exhibiting mild to moderate expansion since July 2022. Jocata-Sumpoorn for February stands at the same level of 0.60 as December 2022, indicating steady albeit mild growth. On the IIP front, the General IIP dropped to 139.3 in February from 147.4 in January, growing at the rate of 6.0% over the previous year. The Manufacturing IIP fell from 145.5 in January to 137.6 in February, now almost at the same level as November 2022, and recording a growth of 5.9% over the previous year. 11 of the 23 sectors in the IIP contracted in February, while 12 recorded growth over the previous year. <br><br>The S&P Global Composite PMI came in at 59.0 in February, up from January’s 57.5, but this was essentially on the back of a strong services sector. Based on the responses of purchasing managers surveyed in the services sector, output and new orders grew at the fastest rate in 12 years and the Services PMI rose to 59.4 in February from the previous month’s index of 57.2. On the other hand, the Manufacturing PMI softened marginally to 55.3 in February, slightly below January’s level of 55.4.","ExpertImageDetails":""},{"previousMonth":"02-2023","Month":"03-2023","nextMonth":"04-2023","ExpertName":"","ExpertDetails":"","ExpertCommentary":"The current rise in the sales performance of MSMEs breaks the trend of mild to moderate expansion seen since July 2022, and it remains to be seen whether this will be sustained going forward. However, the Emergency Credit Line Guarantee Scheme (ECLGS) closed this month – the scheme that had started in May 2020 had given critical relief to the MSME sector to face the pandemic. The sector will have to go ahead without this support of timely access to credit. The General IIP moved up to 151.7 in March, reversing the drop seen in February to 139.3 from January’s level of 147.4, but growth in the General IIP over the previous year was a muted 1.9%. The Manufacturing IIP grew at 1.5%, while electricity output contracted in March. 13 of the 23 sectors that make up the IIP showed contraction over the previous year. Further, India’s exports surged to an eight-month high of USD 66.14 billion in March, but even at this value, exports of goods and services registered a decline by 7.53% over the previous year. <br><br>The picture from the PMI data also gave mixed signals - the S&P Global PMI Composite Index dropped marginally to 58.4 in March from 59 in February; the Services PMI fell from 59.4 in February to 57.8 in March while Manufacturing PMI moved to a three-month high from 55.3 in February to 56.4 in March. Purchasing managers of large firms in manufacturing reported the strongest growth in factory orders and production in three months. Meanwhile, after expanding at the fastest pace in 12 years in February, the firms surveyed in the service sector reported output and new orders growing at slightly weaker rates in March. ","ExpertImageDetails":""},{"previousMonth":"03-2023","Month":"04-2023","nextMonth":"05-2023","ExpertName":"","ExpertDetails":"","ExpertCommentary":"There are mixed signals coming in from the macro-economic data for April. Jocata-Sumpoorn has been in a phase of moderate to mild expansion since July 2022 as the economy has thrown off the impact of the pandemic, but the sharp dip in the index in April, following the high in March indicates the MSME sector is still to recover fully. The closure of the Emergency Credit Line Guarantee Scheme will have its impact on the sector that is credit-starved in the best of times. <br><br>The General IIP Index came in at 140.7, down from the 151.7 index value in March 2023, with growth at 4.6% over the previous year. The IIP Manufacturing index also dipped in April to 138.8, down from the high on 147.5 in March 2023, reporting growth of 5.5% over the previous year. Note that 12 out of 23 sectors contracted in April, when compared to the previous year. <br><br>In contrast, the S&P Global Composite PMI Index rose significantly to 61.6 in April from 58.4 in March, now at the highest level since July 2010. Manufacturing PMI stood at a four month high in April at 57.2. The optimism was only tempered by price pressures as input costs rising at the fastest pace in three months. ","ExpertImageDetails":""},{"previousMonth":"04-2023","Month":"05-2023","nextMonth":"06-2023","ExpertName":"Dr. Sumita Kale","ExpertDetails":"CEO and Senior Fellow, Indicus Foundation (Former Chief Economist - Indicus Analytics)","ExpertCommentary":"Over the last three months, even as the Jocata-Sumpoorn showed expansion in sales performance of credit-seeking MSMEs, the index has been slightly choppy – hitting a high of 0.7 in March, falling to 0.53 in April and recovering to 0.61 in May. Similar trends are seen in the IIP - the General IIP which hit a high of 151.7 in March, dipped to 140.7 in April, and recovered in May to 145.1. The Manufacturing IIP hit its high on 147.5 in March, dipped in April to 138.8. and recovered in May to 142.4. The growth rates in May have been steady – with the General IIP growing at 5.3% and Manufacturing IIP up by 5.8% over the previous year. 10 out of the 23 sectors that make up the IIP contracted in May over the previous year’s levels. The exports of goods and services from India have been muted this year, with April-May registering lower than the previous year – this will clearly reflect in the performance of the MSMEs which contribute more than 40% of India’s exports. <br><br>On the other hand, the responses from the S&P Global PMI showed bright optimism for India - Composite PMI stayed at the 61.6 high in May while the Manufacturing Index moved up from 57.2 in April to 58.7 in May, the strongest improvement since October 2020. The results from the survey of purchasing managers of large firms should reflect in improved strength for the MSME sector down the value chain if demand persists. ","ExpertImageDetails":"commentor-sumita.png"},{"previousMonth":"05-2023","Month":"06-2023","nextMonth":"07-2023","ExpertName":"Mr. Narasimhan V","ExpertDetails":"Principal Advisor, Jocata","ExpertCommentary":"Jocata-Sumpoorn has been in a phase of moderate to mild expansion of sales activity since October 2022, with one outlier in March at 0.71, the highest in ten months. The MSME sector has left behind the phase of high growth that is of substantial to significant expansion that lasted from March 2021 to June 2022 – and has settled into a steadier pace of expansion. <br><br>This is broadly in sync with the trends coming in from the Index of Industrial Production, where the General IIP moved down to 143.5 in June from its level of 145.1 in May. Manufacturing IIP has also moved down to 141.1 in June from 142.4 in May, recording year-on-year growth at 3.1% compared to 5.8% the previous month. 13 of the 23 sectors that make up the IIP contracted in June, over their index the previous year. The S&P Global India Composite PMI fell to 59.4 in June 2023, down from the high 61.1 levels seen in April and May. In June, the survey of purchasing managers of large firms reported a slowdown in both factory activity and the service sector. The S&P Global India Manufacturing PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7. <br><br>The MSME sector does face constrained credit conditions as the SIDBI-Transunion Pulse report August 2023 has highlighted that over the quarter January-March 2023, credit demand grew at 33% while supply grew only by 11% - this will clearly impact the ability of firms to ramp up production and sales performance. ","ExpertImageDetails":"commentator-narasima.png"},{"previousMonth":"06-2023","Month":"07-2023","nextMonth":"08-2023","ExpertName":"Sh. S.N. Singh","ExpertDetails":"CGM, SIDBI","ExpertCommentary":"Latest official data releases show that growth estimates for the first quarter of 2023-24 is marginally below expectations – in real terms GDP grew at 7.8% as against the RBI expectation of 8.0%. The main stress has come in from the manufacturing sector, which grew at 4.7%. This appears to be in line with the indication coming in from Jocata-Sumpoorn which has been in a phase of marginal to mild expansion since April 2023. The non-oil non-gold exports of merchandise also reflect a slowdown in activity as their value has dropped from USD 110.72 over the period April-July 2022 to USD 102.71 in the period April-July 2023. <br><br>The General IIP for July stands at 142, lower than the May index of 143.5, while growth over the previous year is at 5.7%. 9 sectors of the 23 that make up the IIP recorded contraction over the previous year. Four sectors recorded a double-digit drop- manufacture of apparel, furniture, wood and its products, computer, electronics, and optical products. The Manufacturing IIP is stable at 141.2 in July, compared to 141.1 in May, with growth at 4.6% over the previous year.<br><br>Meanwhile the S&P Global Composite Purchasing Managers Index for India hit a high of 61.9 in July; this surge had more to do with the Services PMI rising to a 13 year high, the Manufacturing PMI had fallen to 57.7 in July from 57.8 in June, and 58.7 in May.<br><br>Interestingly, though growth in outstanding non-food bank credit has increased in July to 19.8% year-on-year from 15.1% in July 2022, credit outstanding to MSMEs has expanded at a slower pace – 15.7% year-on-year compared to 21.5% in the previous year. At a sectoral level, year-on-year growth was the lowest for industry (5.8%), compared to all other sectors – agriculture (16.8%), services (23.1%) and personal loans (31.7%). ","ExpertImageDetails":"commentator-singh.png"}],"MonthlyCommentary":[{"previousMonth":"02-2020","Month":"03-2020","nextMonth":"10-2020","comment":"Jocata-Sumpoorn moved down to 0.37 in March from 0.59 in February, a sharp drop after two consecutive months of mild expansion in the sales performance of credit-seeking MSMEs. "},{"previousMonth":"03-2020","Month":"10-2020","nextMonth":"03-2021","comment":"Jocata-Sumpoorn moved up to 0.69 in October 2020; this is the first significant expansion seen in the sales performance of credit-seeking MSMEs as Covid19 showed signs of subsidence in India. "},{"previousMonth":"10-2020","Month":"03-2021","nextMonth":"10-2021","comment":"Jocata-Sumpoorn came in at a high of 0.82 in March 2021, the first substantial expansion in sales performance of credit-seeking MSMEs in more than a year."},{"previousMonth":"03-2021","Month":"10-2021","nextMonth":"05-2022","comment":"Jocata-Sumpoorn moved down marginally to 0.66 in October from 0.67 in the previous month. The sales performance of credit-seeking MSMEs has been in the zone of significant expansion for the sixth consecutive month. "},{"previousMonth":"10-2021","Month":"05-2022","nextMonth":"10-2022","comment":"Jocata-Sumpoorn moved to a high of 0.74 in May 2022. The sales performance of credit-seeking MSMEs has been in the phase of significant expansion for five consecutive months. "},{"previousMonth":"05-2022","Month":"10-2022","nextMonth":"01-2023","comment":"Jocata-Sumpoorn moved down to to 0.56 in October, indicating mild expansion in the sales activity of credit-seeking MSMEs, this rate of expansion was last seen two years ago in November 2020."},{"previousMonth":"10-2022","Month":"01-2023","nextMonth":"02-2023","comment":"Jocata-Sumpoorn stood at 0.63 in January 2023, indicating moderate expansion in the sales performance of credit-seeking MSMEs. "},{"previousMonth":"01-2023","Month":"02-2023","nextMonth":"03-2023","comment":"Jocata-Sumpoorn moved into the zone of mild expansion in February 2023, standing at 0.60, which is lower than the 0.63 seen in January. "},{"previousMonth":"02-2023","Month":"03-2023","nextMonth":"04-2023","comment":"Jocata-Sumpoorn moved up to 0.7 in March, a significant expansion in sales activity of credit-seeking MSMEs, breaking the streak of mild or moderate expansion since July 2022. "},{"previousMonth":"03-2023","Month":"04-2023","nextMonth":"05-2023","comment":"Jocata-Sumpoorn moved down to 0.53 in April 2023, a sharp decline from the high of 0.7 seen in March. Though the sales performance stays in the expansion zone, the growth is marginal this month. "},{"previousMonth":"04-2023","Month":"05-2023","nextMonth":"06-2023","comment":"Jocata-Sumpoorn came in at 0.61 for the month of May, signaling moderate expansion in the sales invoices for credit seeking MSMEs in India. "},{"previousMonth":"05-2023","Month":"06-2023","nextMonth":"07-2023","comment":"Jocata-Sumpoorn moved down to 0.56 in June from May’s level of 0.61. The sales performance of credit seeking-MSMEs has shown mild expansion in June, a shift from moderate expansion in May.  "},{"previousMonth":"06-2023","Month":"07-2023","nextMonth":"08-2023","comment":"Jocata-Sumpoorn moved down marginally to 0.55 in July from its 0.56 level in June. The level of the index is still above the low of 0.53 hit in April and indicates that the MSME sales activity has continued in the phase of mild expansion."}],"MonthlyCommentaryGraph":[{"Month":"03-2020","monthList":[{"category":"10-2019","value":0.45,"SortOrder":1},{"category":"11-2019","value":0.57,"SortOrder":2},{"category":"12-2019","value":0.52,"SortOrder":3},{"category":"01-2020","value":0.54,"SortOrder":4},{"category":"02-2020","value":0.59,"SortOrder":5},{"category":"03-2020","value":0.37,"SortOrder":6}]},{"Month":"10-2020","monthList":[{"category":"05-2020","value":0.29,"SortOrder":1},{"category":"06-2020","value":0.49,"SortOrder":2},{"category":"07-2020","value":0.49,"SortOrder":3},{"category":"08-2020","value":0.56,"SortOrder":4},{"category":"09-2020","value":0.61,"SortOrder":5},{"category":"10-2020","value":0.69,"SortOrder":6}]},{"Month":"03-2021","monthList":[{"category":"10-2020","value":0.69,"SortOrder":1},{"category":"11-2020","value":0.57,"SortOrder":2},{"category":"12-2020","value":0.66,"SortOrder":3},{"category":"01-2021","value":0.61,"SortOrder":4},{"category":"02-2021","value":0.63,"SortOrder":5},{"category":"03-2021","value":0.82,"SortOrder":6}]},{"Month":"10-2021","monthList":[{"category":"05-2021","value":0.69,"SortOrder":1},{"category":"06-2021","value":0.69,"SortOrder":2},{"category":"07-2021","value":0.69,"SortOrder":3},{"category":"08-2021","value":0.69,"SortOrder":4},{"category":"09-2021","value":0.67,"SortOrder":5},{"category":"10-2021","value":0.66,"SortOrder":6}]},{"Month":"05-2022","monthList":[{"category":"12-2021","value":0.63,"SortOrder":1},{"category":"01-2022","value":0.66,"SortOrder":2},{"category":"02-2022","value":0.66,"SortOrder":3},{"category":"03-2022","value":0.67,"SortOrder":4},{"category":"04-2022","value":0.71,"SortOrder":5},{"category":"05-2022","value":0.74,"SortOrder":6}]},{"Month":"10-2022","monthList":[{"category":"05-2022","value":0.74,"SortOrder":1},{"category":"06-2022","value":0.69,"SortOrder":2},{"category":"07-2022","value":0.62,"SortOrder":3},{"category":"08-2022","value":0.62,"SortOrder":4},{"category":"09-2022","value":0.63,"SortOrder":5},{"category":"10-2022","value":0.56,"SortOrder":6}]},{"Month":"01-2023","monthList":[{"category":"08-2022","value":0.62,"SortOrder":1},{"category":"09-2022","value":0.63,"SortOrder":2},{"category":"10-2022","value":0.56,"SortOrder":3},{"category":"11-2022","value":0.64,"SortOrder":4},{"category":"12-2022","value":0.6,"SortOrder":5},{"category":"01-2023","value":0.63,"SortOrder":6}]},{"Month":"02-2023","monthList":[{"category":"09-2022","value":0.63,"SortOrder":1},{"category":"10-2022","value":0.56,"SortOrder":2},{"category":"11-2022","value":0.64,"SortOrder":3},{"category":"12-2022","value":0.6,"SortOrder":4},{"category":"01-2023","value":0.63,"SortOrder":5},{"category":"02-2023","value":0.6,"SortOrder":6}]},{"Month":"03-2023","monthList":[{"category":"10-2022","value":0.56,"SortOrder":1},{"category":"11-2022","value":0.64,"SortOrder":2},{"category":"12-2022","value":0.6,"SortOrder":3},{"category":"01-2023","value":0.63,"SortOrder":4},{"category":"02-2023","value":0.6,"SortOrder":5},{"category":"03-2023","value":0.7,"SortOrder":6}]},{"Month":"04-2023","monthList":[{"category":"11-2022","value":0.64,"SortOrder":1},{"category":"12-2022","value":0.6,"SortOrder":2},{"category":"01-2023","value":0.63,"SortOrder":3},{"category":"02-2023","value":0.6,"SortOrder":4},{"category":"03-2023","value":0.7,"SortOrder":5},{"category":"04-2023","value":0.53,"SortOrder":6}]},{"Month":"05-2023","monthList":[{"category":"12-2022","value":0.6,"SortOrder":1},{"category":"01-2023","value":0.63,"SortOrder":2},{"category":"02-2023","value":0.6,"SortOrder":3},{"category":"03-2023","value":0.7,"SortOrder":4},{"category":"04-2023","value":0.53,"SortOrder":5},{"category":"05-2023","value":0.61,"SortOrder":6}]},{"Month":"06-2023","monthList":[{"category":"01-2023","value":0.63,"SortOrder":1},{"category":"02-2023","value":0.6,"SortOrder":2},{"category":"03-2023","value":0.7,"SortOrder":3},{"category":"04-2023","value":0.53,"SortOrder":4},{"category":"05-2023","value":0.61,"SortOrder":5},{"category":"06-2023","value":0.56,"SortOrder":6}]},{"Month":"07-2023","monthList":[{"category":"02-2023","value":0.6,"SortOrder":1},{"category":"03-2023","value":0.7,"SortOrder":2},{"category":"04-2023","value":0.53,"SortOrder":3},{"category":"05-2023","value":0.61,"SortOrder":4},{"category":"06-2023","value":0.56,"SortOrder":5},{"category":"07-2023","value":0.55,"SortOrder":6}]}]},"Distributions":{"HsnDistributionByValue":[{"HsnName":"84","Details":[{"category":"01-2021","value":10.31,"SortOrder":1},{"category":"02-2021","value":10.32,"SortOrder":2},{"category":"03-2021","value":10.5,"SortOrder":3},{"category":"04-2021","value":10.53,"SortOrder":4},{"category":"05-2021","value":10.62,"SortOrder":5},{"category":"06-2021","value":10.22,"SortOrder":6},{"category":"07-2021","value":10.09,"SortOrder":7},{"category":"08-2021","value":9.88,"SortOrder":8},{"category":"09-2021","value":9.67,"SortOrder":9},{"category":"10-2021","value":9.55,"SortOrder":10},{"category":"11-2021","value":9.63,"SortOrder":11},{"category":"12-2021","value":9.64,"SortOrder":12},{"category":"01-2022","value":9.62,"SortOrder":13},{"category":"02-2022","value":9.56,"SortOrder":14},{"category":"03-2022","value":9.09,"SortOrder":15},{"category":"04-2022","value":8.71,"SortOrder":16},{"category":"05-2022","value":8.33,"SortOrder":17},{"category":"06-2022","value":8.13,"SortOrder":18},{"category":"07-2022","value":8.14,"SortOrder":19},{"category":"08-2022","value":8.02,"SortOrder":20},{"category":"09-2022","value":8.02,"SortOrder":21},{"category":"10-2022","value":8.04,"SortOrder":22},{"category":"11-2022","value":8.03,"SortOrder":23},{"category":"12-2022","value":7.98,"SortOrder":24},{"category":"01-2023","value":7.82,"SortOrder":25},{"category":"02-2023","value":7.34,"SortOrder":26},{"category":"03-2023","value":7.26,"SortOrder":27},{"category":"04-2023","value":7.13,"SortOrder":28},{"category":"05-2023","value":6.85,"SortOrder":29},{"category":"06-2023","value":8.58,"SortOrder":30}]},{"HsnName":"72","Details":[{"category":"01-2021","value":9.84,"SortOrder":1},{"category":"02-2021","value":9.92,"SortOrder":2},{"category":"03-2021","value":9.65,"SortOrder":3},{"category":"04-2021","value":9.63,"SortOrder":4},{"category":"05-2021","value":9.54,"SortOrder":5},{"category":"06-2021","value":9.56,"SortOrder":6},{"category":"07-2021","value":9.55,"SortOrder":7},{"category":"08-2021","value":9.63,"SortOrder":8},{"category":"09-2021","value":9.65,"SortOrder":9},{"category":"10-2021","value":9.75,"SortOrder":10},{"category":"11-2021","value":9.76,"SortOrder":11},{"category":"12-2021","value":9.62,"SortOrder":12},{"category":"01-2022","value":9.66,"SortOrder":13},{"category":"02-2022","value":9.78,"SortOrder":14},{"category":"03-2022","value":9.52,"SortOrder":15},{"category":"04-2022","value":9.85,"SortOrder":16},{"category":"05-2022","value":9.58,"SortOrder":17},{"category":"06-2022","value":9.33,"SortOrder":18},{"category":"07-2022","value":9.15,"SortOrder":19},{"category":"08-2022","value":9.17,"SortOrder":20},{"category":"09-2022","value":9.09,"SortOrder":21},{"category":"10-2022","value":9.01,"SortOrder":22},{"category":"11-2022","value":8.95,"SortOrder":23},{"category":"12-2022","value":9.02,"SortOrder":24},{"category":"01-2023","value":8.67,"SortOrder":25},{"category":"02-2023","value":8.02,"SortOrder":26},{"category":"03-2023","value":7.44,"SortOrder":27},{"category":"04-2023","value":7.57,"SortOrder":28},{"category":"05-2023","value":7.89,"SortOrder":29},{"category":"06-2023","value":10.16,"SortOrder":30},{"category":"07-2023","value":9.24,"SortOrder":31}]},{"HsnName":"39","Details":[{"category":"01-2021","value":9.43,"SortOrder":1},{"category":"02-2021","value":9.58,"SortOrder":2},{"category":"03-2021","value":9.27,"SortOrder":3},{"category":"04-2021","value":9.12,"SortOrder":4},{"category":"05-2021","value":8.75,"SortOrder":5},{"category":"06-2021","value":8.5,"SortOrder":6},{"category":"07-2021","value":8.56,"SortOrder":7},{"category":"08-2021","value":8.72,"SortOrder":8},{"category":"09-2021","value":8.68,"SortOrder":9},{"category":"10-2021","value":8.75,"SortOrder":10},{"category":"11-2021","value":8.76,"SortOrder":11},{"category":"12-2021","value":8.71,"SortOrder":12},{"category":"01-2022","value":8.75,"SortOrder":13},{"category":"02-2022","value":8.54,"SortOrder":14},{"category":"03-2022","value":8.16,"SortOrder":15},{"category":"04-2022","value":7.88,"SortOrder":16},{"category":"05-2022","value":7.56,"SortOrder":17},{"category":"06-2022","value":7.23,"SortOrder":18},{"category":"07-2022","value":7.04,"SortOrder":19},{"category":"08-2022","value":7.06,"SortOrder":20},{"category":"09-2022","value":7.1,"SortOrder":21},{"category":"10-2022","value":7.04,"SortOrder":22},{"category":"11-2022","value":6.84,"SortOrder":23},{"category":"12-2022","value":6.53,"SortOrder":24},{"category":"01-2023","value":6.07,"SortOrder":25},{"category":"02-2023","value":5.65,"SortOrder":26},{"category":"03-2023","value":5.91,"SortOrder":27},{"category":"04-2023","value":6.61,"SortOrder":28},{"category":"05-2023","value":6.46,"SortOrder":29},{"category":"06-2023","value":8.39,"SortOrder":30},{"category":"07-2023","value":7.97,"SortOrder":31}]},{"HsnName":"87","Details":[{"category":"01-2021","value":7.95,"SortOrder":1},{"category":"02-2021","value":7.9,"SortOrder":2},{"category":"03-2021","value":7.76,"SortOrder":3},{"category":"04-2021","value":7.68,"SortOrder":4},{"category":"05-2021","value":7.47,"SortOrder":5},{"category":"06-2021","value":7.24,"SortOrder":6},{"category":"07-2021","value":7.25,"SortOrder":7},{"category":"08-2021","value":7,"SortOrder":8},{"category":"09-2021","value":6.96,"SortOrder":9},{"category":"10-2021","value":6.92,"SortOrder":10},{"category":"11-2021","value":6.93,"SortOrder":11},{"category":"12-2021","value":6.84,"SortOrder":12},{"category":"01-2022","value":6.93,"SortOrder":13},{"category":"02-2022","value":6.81,"SortOrder":14},{"category":"03-2022","value":6.46,"SortOrder":15},{"category":"04-2022","value":6.01,"SortOrder":16},{"category":"05-2022","value":6.17,"SortOrder":17},{"category":"06-2022","value":6.32,"SortOrder":18},{"category":"07-2022","value":6.42,"SortOrder":19},{"category":"08-2022","value":6.47,"SortOrder":20},{"category":"09-2022","value":6.37,"SortOrder":21},{"category":"10-2022","value":6.45,"SortOrder":22},{"category":"11-2022","value":6.42,"SortOrder":23},{"category":"12-2022","value":6.42,"SortOrder":24},{"category":"01-2023","value":6.3,"SortOrder":25},{"category":"02-2023","value":6.08,"SortOrder":26},{"category":"03-2023","value":5.86,"SortOrder":27},{"category":"04-2023","value":6.88,"SortOrder":28},{"category":"05-2023","value":8.38,"SortOrder":29},{"category":"06-2023","value":7.52,"SortOrder":30},{"category":"07-2023","value":5.13,"SortOrder":31}]},{"HsnName":"73","Details":[{"category":"01-2021","value":6.39,"SortOrder":1},{"category":"02-2021","value":6.39,"SortOrder":2},{"category":"03-2021","value":6.38,"SortOrder":3},{"category":"04-2021","value":6.28,"SortOrder":4},{"category":"05-2021","value":6.29,"SortOrder":5},{"category":"06-2021","value":6.15,"SortOrder":6},{"category":"07-2021","value":6.19,"SortOrder":7},{"category":"08-2021","value":6.22,"SortOrder":8},{"category":"09-2021","value":6.21,"SortOrder":9},{"category":"10-2021","value":6.18,"SortOrder":10},{"category":"11-2021","value":6.22,"SortOrder":11},{"category":"12-2021","value":6.25,"SortOrder":12},{"category":"01-2022","value":6.15,"SortOrder":13},{"category":"02-2022","value":5.87,"SortOrder":14},{"category":"03-2022","value":5.52,"SortOrder":15},{"category":"04-2022","value":5.25,"SortOrder":16},{"category":"05-2022","value":4.93,"SortOrder":17},{"category":"06-2022","value":4.93,"SortOrder":18},{"category":"07-2022","value":4.99,"SortOrder":19},{"category":"08-2022","value":5.06,"SortOrder":20},{"category":"09-2022","value":5.01,"SortOrder":21},{"category":"10-2022","value":4.97,"SortOrder":22},{"category":"11-2022","value":4.89,"SortOrder":23},{"category":"12-2022","value":4.76,"SortOrder":24},{"category":"01-2023","value":4.54,"SortOrder":25},{"category":"02-2023","value":4.44,"SortOrder":26},{"category":"03-2023","value":4.39,"SortOrder":27},{"category":"04-2023","value":5.16,"SortOrder":28},{"category":"05-2023","value":5.54,"SortOrder":29},{"category":"06-2023","value":5.96,"SortOrder":30},{"category":"07-2023","value":0,"SortOrder":31}]},{"HsnName":"85","Details":[{"category":"01-2021","value":5.79,"SortOrder":1},{"category":"02-2021","value":5.85,"SortOrder":2},{"category":"03-2021","value":6.16,"SortOrder":3},{"category":"04-2021","value":6.2,"SortOrder":4},{"category":"05-2021","value":6.3,"SortOrder":5},{"category":"06-2021","value":6.29,"SortOrder":6},{"category":"07-2021","value":6.36,"SortOrder":7},{"category":"08-2021","value":6.37,"SortOrder":8},{"category":"09-2021","value":6.36,"SortOrder":9},{"category":"10-2021","value":6.28,"SortOrder":10},{"category":"11-2021","value":6.31,"SortOrder":11},{"category":"12-2021","value":6.29,"SortOrder":12},{"category":"01-2022","value":6.4,"SortOrder":13},{"category":"02-2022","value":6.25,"SortOrder":14},{"category":"03-2022","value":6.15,"SortOrder":15},{"category":"04-2022","value":6.15,"SortOrder":16},{"category":"05-2022","value":6.15,"SortOrder":17},{"category":"06-2022","value":6.17,"SortOrder":18},{"category":"07-2022","value":6.21,"SortOrder":19},{"category":"08-2022","value":6.15,"SortOrder":20},{"category":"09-2022","value":6.03,"SortOrder":21},{"category":"10-2022","value":6.19,"SortOrder":22},{"category":"11-2022","value":6.24,"SortOrder":23},{"category":"12-2022","value":6.43,"SortOrder":24},{"category":"01-2023","value":6.26,"SortOrder":25},{"category":"02-2023","value":6.09,"SortOrder":26},{"category":"03-2023","value":5.89,"SortOrder":27},{"category":"04-2023","value":6.01,"SortOrder":28},{"category":"05-2023","value":5.59,"SortOrder":29},{"category":"06-2023","value":6.09,"SortOrder":30},{"category":"07-2023","value":6.46,"SortOrder":31}]},{"HsnName":"99","Details":[{"category":"01-2021","value":4.54,"SortOrder":1},{"category":"02-2021","value":4.57,"SortOrder":2},{"category":"03-2021","value":4.81,"SortOrder":3},{"category":"04-2021","value":4.66,"SortOrder":4},{"category":"05-2021","value":4.72,"SortOrder":5},{"category":"06-2021","value":4.93,"SortOrder":6},{"category":"07-2021","value":4.97,"SortOrder":7},{"category":"08-2021","value":5.08,"SortOrder":8},{"category":"09-2021","value":5.26,"SortOrder":9},{"category":"10-2021","value":5.29,"SortOrder":10},{"category":"11-2021","value":5.42,"SortOrder":11},{"category":"12-2021","value":5.54,"SortOrder":12},{"category":"01-2022","value":5.58,"SortOrder":13},{"category":"02-2022","value":5.95,"SortOrder":14},{"category":"03-2022","value":6.22,"SortOrder":15},{"category":"04-2022","value":6.85,"SortOrder":16},{"category":"05-2022","value":7.49,"SortOrder":17},{"category":"06-2022","value":7.76,"SortOrder":18},{"category":"07-2022","value":7.9,"SortOrder":19},{"category":"08-2022","value":7.97,"SortOrder":20},{"category":"09-2022","value":8.14,"SortOrder":21},{"category":"10-2022","value":8.24,"SortOrder":22},{"category":"11-2022","value":8.3,"SortOrder":23},{"category":"12-2022","value":8.58,"SortOrder":24},{"category":"01-2023","value":8.98,"SortOrder":25},{"category":"02-2023","value":9.46,"SortOrder":26},{"category":"03-2023","value":11.15,"SortOrder":27},{"category":"04-2023","value":7.54,"SortOrder":28},{"category":"05-2023","value":7.19,"SortOrder":29},{"category":"06-2023","value":5.84,"SortOrder":30},{"category":"07-2023","value":7.83,"SortOrder":31}]},{"HsnName":"52","Details":[{"category":"01-2021","value":0,"SortOrder":1},{"category":"02-2021","value":0,"SortOrder":2},{"category":"03-2021","value":0,"SortOrder":3},{"category":"04-2021","value":0,"SortOrder":4},{"category":"05-2021","value":0,"SortOrder":5},{"category":"06-2021","value":0,"SortOrder":6},{"category":"07-2021","value":0,"SortOrder":7},{"category":"08-2021","value":0,"SortOrder":8},{"category":"09-2021","value":0,"SortOrder":9},{"category":"10-2021","value":0,"SortOrder":10},{"category":"11-2021","value":0,"SortOrder":11},{"category":"12-2021","value":0,"SortOrder":12},{"category":"01-2022","value":0,"SortOrder":13},{"category":"02-2022","value":0,"SortOrder":14},{"category":"03-2022","value":0,"SortOrder":15},{"category":"04-2022","value":0,"SortOrder":16},{"category":"05-2022","value":0,"SortOrder":17},{"category":"06-2022","value":0,"SortOrder":18},{"category":"07-2022","value":0,"SortOrder":19},{"category":"08-2022","value":0,"SortOrder":20},{"category":"09-2022","value":0,"SortOrder":21},{"category":"10-2022","value":0,"SortOrder":22},{"category":"11-2022","value":0,"SortOrder":23},{"category":"12-2022","value":0,"SortOrder":24},{"category":"01-2023","value":0,"SortOrder":25},{"category":"02-2023","value":0,"SortOrder":26},{"category":"03-2023","value":0,"SortOrder":27},{"category":"04-2023","value":0,"SortOrder":28},{"category":"05-2023","value":0,"SortOrder":29},{"category":"06-2023","value":0,"SortOrder":30},{"category":"07-2023","value":5.37,"SortOrder":31}]}],"MsmDistribution":[{"SegmentName":"Micro(0-5 Cr]","Details":[{"category":"10-2019","value":35.74,"SortOrder":1},{"category":"11-2019","value":35.36,"SortOrder":2},{"category":"12-2019","value":37.74,"SortOrder":3},{"category":"01-2020","value":35.15,"SortOrder":4},{"category":"02-2020","value":34.69,"SortOrder":5},{"category":"03-2020","value":38.51,"SortOrder":6},{"category":"04-2020","value":39.35,"SortOrder":7},{"category":"05-2020","value":42.21,"SortOrder":8},{"category":"06-2020","value":43.22,"SortOrder":9},{"category":"07-2020","value":43.97,"SortOrder":10},{"category":"08-2020","value":44.63,"SortOrder":11},{"category":"09-2020","value":44.15,"SortOrder":12},{"category":"10-2020","value":43.78,"SortOrder":13},{"category":"11-2020","value":43.26,"SortOrder":14},{"category":"12-2020","value":42.6,"SortOrder":15},{"category":"01-2021","value":39.96,"SortOrder":16},{"category":"02-2021","value":39.81,"SortOrder":17},{"category":"03-2021","value":42.13,"SortOrder":18},{"category":"04-2021","value":39.63,"SortOrder":19},{"category":"05-2021","value":39.23,"SortOrder":20},{"category":"06-2021","value":40.42,"SortOrder":21},{"category":"07-2021","value":39.86,"SortOrder":22},{"category":"08-2021","value":39.49,"SortOrder":23},{"category":"09-2021","value":39.35,"SortOrder":24},{"category":"10-2021","value":38.95,"SortOrder":25},{"category":"11-2021","value":38.92,"SortOrder":26},{"category":"12-2021","value":44.47,"SortOrder":27},{"category":"01-2022","value":44.23,"SortOrder":28},{"category":"02-2022","value":44.59,"SortOrder":29},{"category":"03-2022","value":45.59,"SortOrder":30},{"category":"04-2022","value":44.9,"SortOrder":31},{"category":"05-2022","value":43.49,"SortOrder":32},{"category":"06-2022","value":43.4,"SortOrder":33},{"category":"07-2022","value":42.49,"SortOrder":34},{"category":"08-2022","value":42.19,"SortOrder":35},{"category":"09-2022","value":42.14,"SortOrder":36},{"category":"10-2022","value":41.62,"SortOrder":37},{"category":"11-2022","value":41.54,"SortOrder":38},{"category":"12-2022","value":41.46,"SortOrder":39},{"category":"01-2023","value":41.21,"SortOrder":40},{"category":"02-2023","value":41.52,"SortOrder":41},{"category":"03-2023","value":41.53,"SortOrder":42},{"category":"04-2023","value":40.55,"SortOrder":43},{"category":"05-2023","value":39.71,"SortOrder":44},{"category":"06-2023","value":37.59,"SortOrder":45},{"category":"07-2023","value":34.48,"SortOrder":46}]},{"SegmentName":"Small(5- 50Cr]","Details":[{"category":"10-2019","value":53.31,"SortOrder":1},{"category":"11-2019","value":51.25,"SortOrder":2},{"category":"12-2019","value":50.12,"SortOrder":3},{"category":"01-2020","value":52.47,"SortOrder":4},{"category":"02-2020","value":53.08,"SortOrder":5},{"category":"03-2020","value":49.88,"SortOrder":6},{"category":"04-2020","value":49.73,"SortOrder":7},{"category":"05-2020","value":48.55,"SortOrder":8},{"category":"06-2020","value":47.58,"SortOrder":9},{"category":"07-2020","value":47.19,"SortOrder":10},{"category":"08-2020","value":47.13,"SortOrder":11},{"category":"09-2020","value":47.4,"SortOrder":12},{"category":"10-2020","value":47.56,"SortOrder":13},{"category":"11-2020","value":48.26,"SortOrder":14},{"category":"12-2020","value":48.93,"SortOrder":15},{"category":"01-2021","value":51.05,"SortOrder":16},{"category":"02-2021","value":51.05,"SortOrder":17},{"category":"03-2021","value":49.04,"SortOrder":18},{"category":"04-2021","value":50.65,"SortOrder":19},{"category":"05-2021","value":51.02,"SortOrder":20},{"category":"06-2021","value":50.13,"SortOrder":21},{"category":"07-2021","value":50.43,"SortOrder":22},{"category":"08-2021","value":50.67,"SortOrder":23},{"category":"09-2021","value":50.82,"SortOrder":24},{"category":"10-2021","value":51.02,"SortOrder":25},{"category":"11-2021","value":50.99,"SortOrder":26},{"category":"12-2021","value":46.6,"SortOrder":27},{"category":"01-2022","value":46.7,"SortOrder":28},{"category":"02-2022","value":46.88,"SortOrder":29},{"category":"03-2022","value":46.71,"SortOrder":30},{"category":"04-2022","value":47.45,"SortOrder":31},{"category":"05-2022","value":49.08,"SortOrder":32},{"category":"06-2022","value":49.43,"SortOrder":33},{"category":"07-2022","value":50.18,"SortOrder":34},{"category":"08-2022","value":50.38,"SortOrder":35},{"category":"09-2022","value":50.39,"SortOrder":36},{"category":"10-2022","value":50.91,"SortOrder":37},{"category":"11-2022","value":50.97,"SortOrder":38},{"category":"12-2022","value":51.22,"SortOrder":39},{"category":"01-2023","value":51.75,"SortOrder":40},{"category":"02-2023","value":51.48,"SortOrder":41},{"category":"03-2023","value":51.3,"SortOrder":42},{"category":"04-2023","value":51.83,"SortOrder":43},{"category":"05-2023","value":52.5,"SortOrder":44},{"category":"06-2023","value":53.6,"SortOrder":45},{"category":"07-2023","value":55.53,"SortOrder":46}]},{"SegmentName":"Medium(50-250 Cr]","Details":[{"category":"10-2019","value":10.95,"SortOrder":1},{"category":"11-2019","value":13.4,"SortOrder":2},{"category":"12-2019","value":12.03,"SortOrder":3},{"category":"01-2020","value":12.03,"SortOrder":4},{"category":"02-2020","value":11.91,"SortOrder":5},{"category":"03-2020","value":11.12,"SortOrder":6},{"category":"04-2020","value":10.6,"SortOrder":7},{"category":"05-2020","value":9.01,"SortOrder":8},{"category":"06-2020","value":8.87,"SortOrder":9},{"category":"07-2020","value":8.59,"SortOrder":10},{"category":"08-2020","value":8.03,"SortOrder":11},{"category":"09-2020","value":8.25,"SortOrder":12},{"category":"10-2020","value":8.45,"SortOrder":13},{"category":"11-2020","value":8.18,"SortOrder":14},{"category":"12-2020","value":8.17,"SortOrder":15},{"category":"01-2021","value":8.69,"SortOrder":16},{"category":"02-2021","value":8.83,"SortOrder":17},{"category":"03-2021","value":8.49,"SortOrder":18},{"category":"04-2021","value":9.29,"SortOrder":19},{"category":"05-2021","value":9.35,"SortOrder":20},{"category":"06-2021","value":9.04,"SortOrder":21},{"category":"07-2021","value":9.26,"SortOrder":22},{"category":"08-2021","value":9.36,"SortOrder":23},{"category":"09-2021","value":9.32,"SortOrder":24},{"category":"10-2021","value":9.49,"SortOrder":25},{"category":"11-2021","value":9.52,"SortOrder":26},{"category":"12-2021","value":8.39,"SortOrder":27},{"category":"01-2022","value":8.53,"SortOrder":28},{"category":"02-2022","value":8.04,"SortOrder":29},{"category":"03-2022","value":7.24,"SortOrder":30},{"category":"04-2022","value":7.14,"SortOrder":31},{"category":"05-2022","value":6.9,"SortOrder":32},{"category":"06-2022","value":6.66,"SortOrder":33},{"category":"07-2022","value":6.76,"SortOrder":34},{"category":"08-2022","value":6.86,"SortOrder":35},{"category":"09-2022","value":6.88,"SortOrder":36},{"category":"10-2022","value":6.9,"SortOrder":37},{"category":"11-2022","value":6.89,"SortOrder":38},{"category":"12-2022","value":6.77,"SortOrder":39},{"category":"01-2023","value":6.49,"SortOrder":40},{"category":"02-2023","value":6.45,"SortOrder":41},{"category":"03-2023","value":6.62,"SortOrder":42},{"category":"04-2023","value":7.05,"SortOrder":43},{"category":"05-2023","value":7.24,"SortOrder":44},{"category":"06-2023","value":8.51,"SortOrder":45},{"category":"07-2023","value":9.43,"SortOrder":46}]},{"SegmentName":"Large(250 Cr and above]","Details":[{"category":"10-2019","value":0,"SortOrder":1},{"category":"11-2019","value":0,"SortOrder":2},{"category":"12-2019","value":0.12,"SortOrder":3},{"category":"01-2020","value":0.35,"SortOrder":4},{"category":"02-2020","value":0.33,"SortOrder":5},{"category":"03-2020","value":0.5,"SortOrder":6},{"category":"04-2020","value":0.33,"SortOrder":7},{"category":"05-2020","value":0.22,"SortOrder":8},{"category":"06-2020","value":0.33,"SortOrder":9},{"category":"07-2020","value":0.25,"SortOrder":10},{"category":"08-2020","value":0.21,"SortOrder":11},{"category":"09-2020","value":0.2,"SortOrder":12},{"category":"10-2020","value":0.2,"SortOrder":13},{"category":"11-2020","value":0.3,"SortOrder":14},{"category":"12-2020","value":0.3,"SortOrder":15},{"category":"01-2021","value":0.3,"SortOrder":16},{"category":"02-2021","value":0.3,"SortOrder":17},{"category":"03-2021","value":0.33,"SortOrder":18},{"category":"04-2021","value":0.42,"SortOrder":19},{"category":"05-2021","value":0.4,"SortOrder":20},{"category":"06-2021","value":0.41,"SortOrder":21},{"category":"07-2021","value":0.45,"SortOrder":22},{"category":"08-2021","value":0.47,"SortOrder":23},{"category":"09-2021","value":0.5,"SortOrder":24},{"category":"10-2021","value":0.54,"SortOrder":25},{"category":"11-2021","value":0.57,"SortOrder":26},{"category":"12-2021","value":0.54,"SortOrder":27},{"category":"01-2022","value":0.54,"SortOrder":28},{"category":"02-2022","value":0.5,"SortOrder":29},{"category":"03-2022","value":0.46,"SortOrder":30},{"category":"04-2022","value":0.51,"SortOrder":31},{"category":"05-2022","value":0.52,"SortOrder":32},{"category":"06-2022","value":0.51,"SortOrder":33},{"category":"07-2022","value":0.57,"SortOrder":34},{"category":"08-2022","value":0.58,"SortOrder":35},{"category":"09-2022","value":0.58,"SortOrder":36},{"category":"10-2022","value":0.57,"SortOrder":37},{"category":"11-2022","value":0.6,"SortOrder":38},{"category":"12-2022","value":0.55,"SortOrder":39},{"category":"01-2023","value":0.54,"SortOrder":40},{"category":"02-2023","value":0.55,"SortOrder":41},{"category":"03-2023","value":0.55,"SortOrder":42},{"category":"04-2023","value":0.57,"SortOrder":43},{"category":"05-2023","value":0.55,"SortOrder":44},{"category":"06-2023","value":0.29,"SortOrder":45},{"category":"07-2023","value":0.56,"SortOrder":46}]}]},"indexGenType":{"genType":"New/Recalculated","recalMonth":"Aug'23"},"statusCode":200,"statusMsg":"Success","indexPublishedDay":"21-09-2023","totalExecutionTime":"00:01:03","uniqueRequestId":"20230921120909"}
+{
+    "IndexGeneration": [
+      {
+        "category": "10-2019",
+        "value": 0.45,
+        "SortOrder": 1
+      },
+      {
+        "category": "11-2019",
+        "value": 0.57,
+        "SortOrder": 2
+      },
+      {
+        "category": "12-2019",
+        "value": 0.52,
+        "SortOrder": 3
+      },
+      {
+        "category": "01-2020",
+        "value": 0.54,
+        "SortOrder": 4
+      },
+      {
+        "category": "02-2020",
+        "value": 0.59,
+        "SortOrder": 5
+      },
+      {
+        "category": "03-2020",
+        "value": 0.37,
+        "SortOrder": 6
+      },
+      {
+        "category": "04-2020",
+        "value": 0.21,
+        "SortOrder": 7
+      },
+      {
+        "category": "05-2020",
+        "value": 0.29,
+        "SortOrder": 8
+      },
+      {
+        "category": "06-2020",
+        "value": 0.49,
+        "SortOrder": 9
+      },
+      {
+        "category": "07-2020",
+        "value": 0.49,
+        "SortOrder": 10
+      },
+      {
+        "category": "08-2020",
+        "value": 0.56,
+        "SortOrder": 11
+      },
+      {
+        "category": "09-2020",
+        "value": 0.61,
+        "SortOrder": 12
+      },
+      {
+        "category": "10-2020",
+        "value": 0.69,
+        "SortOrder": 13
+      },
+      {
+        "category": "11-2020",
+        "value": 0.57,
+        "SortOrder": 14
+      },
+      {
+        "category": "12-2020",
+        "value": 0.66,
+        "SortOrder": 15
+      },
+      {
+        "category": "01-2021",
+        "value": 0.61,
+        "SortOrder": 16
+      },
+      {
+        "category": "02-2021",
+        "value": 0.63,
+        "SortOrder": 17
+      },
+      {
+        "category": "03-2021",
+        "value": 0.82,
+        "SortOrder": 18
+      },
+      {
+        "category": "04-2021",
+        "value": 0.85,
+        "SortOrder": 19
+      },
+      {
+        "category": "05-2021",
+        "value": 0.69,
+        "SortOrder": 20
+      },
+      {
+        "category": "06-2021",
+        "value": 0.69,
+        "SortOrder": 21
+      },
+      {
+        "category": "07-2021",
+        "value": 0.69,
+        "SortOrder": 22
+      },
+      {
+        "category": "08-2021",
+        "value": 0.69,
+        "SortOrder": 23
+      },
+      {
+        "category": "09-2021",
+        "value": 0.67,
+        "SortOrder": 24
+      },
+      {
+        "category": "10-2021",
+        "value": 0.66,
+        "SortOrder": 25
+      },
+      {
+        "category": "11-2021",
+        "value": 0.62,
+        "SortOrder": 26
+      },
+      {
+        "category": "12-2021",
+        "value": 0.63,
+        "SortOrder": 27
+      },
+      {
+        "category": "01-2022",
+        "value": 0.66,
+        "SortOrder": 28
+      },
+      {
+        "category": "02-2022",
+        "value": 0.66,
+        "SortOrder": 29
+      },
+      {
+        "category": "03-2022",
+        "value": 0.67,
+        "SortOrder": 30
+      },
+      {
+        "category": "04-2022",
+        "value": 0.71,
+        "SortOrder": 31
+      },
+      {
+        "category": "05-2022",
+        "value": 0.74,
+        "SortOrder": 32
+      },
+      {
+        "category": "06-2022",
+        "value": 0.69,
+        "SortOrder": 33
+      },
+      {
+        "category": "07-2022",
+        "value": 0.62,
+        "SortOrder": 34
+      },
+      {
+        "category": "08-2022",
+        "value": 0.62,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2022",
+        "value": 0.63,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2022",
+        "value": 0.56,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2022",
+        "value": 0.64,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2022",
+        "value": 0.6,
+        "SortOrder": 39
+      },
+      {
+        "category": "01-2023",
+        "value": 0.63,
+        "SortOrder": 40
+      },
+      {
+        "category": "02-2023",
+        "value": 0.6,
+        "SortOrder": 41
+      },
+      {
+        "category": "03-2023",
+        "value": 0.7,
+        "SortOrder": 42
+      },
+      {
+        "category": "04-2023",
+        "value": 0.53,
+        "SortOrder": 43
+      },
+      {
+        "category": "05-2023",
+        "value": 0.61,
+        "SortOrder": 44
+      },
+      {
+        "category": "06-2023",
+        "value": 0.56,
+        "SortOrder": 45
+      },
+      {
+        "category": "07-2023",
+        "value": 0.55,
+        "SortOrder": 46
+      },
+      {
+        "category": "08-2023",
+        "value": 0.62,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2023",
+        "value": 0.63,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2023",
+        "value": 0.56,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2023",
+        "value": 0.64,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2023",
+        "value": 0.6,
+        "SortOrder": 39
+      },
+      {
+        "category": "01-2024",
+        "value": 0.66,
+        "SortOrder": 28
+      },
+      {
+        "category": "02-2024",
+        "value": 0.66,
+        "SortOrder": 29
+      },
+      {
+        "category": "03-2024",
+        "value": 0.67,
+        "SortOrder": 30
+      },
+      {
+        "category": "04-2024",
+        "value": 0.71,
+        "SortOrder": 31
+      },
+      {
+        "category": "05-2024",
+        "value": 0.74,
+        "SortOrder": 32
+      },
+      {
+        "category": "06-2024",
+        "value": 0.69,
+        "SortOrder": 33
+      },
+      {
+        "category": "07-2024",
+        "value": 0.62,
+        "SortOrder": 34
+      },
+      {
+        "category": "08-2024",
+        "value": 0.62,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2024",
+        "value": 0.63,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2024",
+        "value": 0.56,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2024",
+        "value": 0.64,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2024",
+        "value": 0.6,
+        "SortOrder": 39
+      }
+    ],
+    "IndexGstinCount": [
+      {
+        "category": "10-2019",
+        "value": 487,
+        "SortOrder": 1
+      },
+      {
+        "category": "11-2019",
+        "value": 646,
+        "SortOrder": 2
+      },
+      {
+        "category": "12-2019",
+        "value": 852,
+        "SortOrder": 3
+      },
+      {
+        "category": "01-2020",
+        "value": 1159,
+        "SortOrder": 4
+      },
+      {
+        "category": "02-2020",
+        "value": 1531,
+        "SortOrder": 5
+      },
+      {
+        "category": "03-2020",
+        "value": 2021,
+        "SortOrder": 6
+      },
+      {
+        "category": "04-2020",
+        "value": 1869,
+        "SortOrder": 7
+      },
+      {
+        "category": "05-2020",
+        "value": 2262,
+        "SortOrder": 8
+      },
+      {
+        "category": "06-2020",
+        "value": 2731,
+        "SortOrder": 9
+      },
+      {
+        "category": "07-2020",
+        "value": 3252,
+        "SortOrder": 10
+      },
+      {
+        "category": "08-2020",
+        "value": 3824,
+        "SortOrder": 11
+      },
+      {
+        "category": "09-2020",
+        "value": 4438,
+        "SortOrder": 12
+      },
+      {
+        "category": "10-2020",
+        "value": 4992,
+        "SortOrder": 13
+      },
+      {
+        "category": "11-2020",
+        "value": 5765,
+        "SortOrder": 14
+      },
+      {
+        "category": "12-2020",
+        "value": 6659,
+        "SortOrder": 15
+      },
+      {
+        "category": "01-2021",
+        "value": 6975,
+        "SortOrder": 16
+      },
+      {
+        "category": "02-2021",
+        "value": 7723,
+        "SortOrder": 17
+      },
+      {
+        "category": "03-2021",
+        "value": 9320,
+        "SortOrder": 18
+      },
+      {
+        "category": "04-2021",
+        "value": 9941,
+        "SortOrder": 19
+      },
+      {
+        "category": "05-2021",
+        "value": 11351,
+        "SortOrder": 20
+      },
+      {
+        "category": "06-2021",
+        "value": 12557,
+        "SortOrder": 21
+      },
+      {
+        "category": "07-2021",
+        "value": 12670,
+        "SortOrder": 22
+      },
+      {
+        "category": "08-2021",
+        "value": 12799,
+        "SortOrder": 23
+      },
+      {
+        "category": "09-2021",
+        "value": 12841,
+        "SortOrder": 24
+      },
+      {
+        "category": "10-2021",
+        "value": 12806,
+        "SortOrder": 25
+      },
+      {
+        "category": "11-2021",
+        "value": 12747,
+        "SortOrder": 26
+      },
+      {
+        "category": "12-2021",
+        "value": 14513,
+        "SortOrder": 27
+      },
+      {
+        "category": "01-2022",
+        "value": 14169,
+        "SortOrder": 28
+      },
+      {
+        "category": "02-2022",
+        "value": 14991,
+        "SortOrder": 29
+      },
+      {
+        "category": "03-2022",
+        "value": 17110,
+        "SortOrder": 30
+      },
+      {
+        "category": "04-2022",
+        "value": 18459,
+        "SortOrder": 31
+      },
+      {
+        "category": "05-2022",
+        "value": 19950,
+        "SortOrder": 32
+      },
+      {
+        "category": "06-2022",
+        "value": 21579,
+        "SortOrder": 33
+      },
+      {
+        "category": "07-2022",
+        "value": 20645,
+        "SortOrder": 34
+      },
+      {
+        "category": "08-2022",
+        "value": 20033,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2022",
+        "value": 19477,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2022",
+        "value": 18621,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2022",
+        "value": 17762,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2022",
+        "value": 16792,
+        "SortOrder": 39
+      },
+      {
+        "category": "01-2023",
+        "value": 15223,
+        "SortOrder": 40
+      },
+      {
+        "category": "02-2023",
+        "value": 12515,
+        "SortOrder": 41
+      },
+      {
+        "category": "03-2023",
+        "value": 9895,
+        "SortOrder": 42
+      },
+      {
+        "category": "04-2023",
+        "value": 6256,
+        "SortOrder": 43
+      },
+      {
+        "category": "05-2023",
+        "value": 2392,
+        "SortOrder": 44
+      },
+      {
+        "category": "06-2023",
+        "value": 2068,
+        "SortOrder": 45
+      },
+      {
+        "category": "07-2023",
+        "value": 2157,
+        "SortOrder": 46
+      },
+      {
+        "category": "08-2023",
+        "value": 20033,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2023",
+        "value": 19477,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2023",
+        "value": 18621,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2023",
+        "value": 17762,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2023",
+        "value": 16792,
+        "SortOrder": 39
+      },
+      {
+        "category": "01-2024",
+        "value": 14169,
+        "SortOrder": 28
+      },
+      {
+        "category": "02-2024",
+        "value": 14991,
+        "SortOrder": 29
+      },
+      {
+        "category": "03-2024",
+        "value": 17110,
+        "SortOrder": 30
+      },
+      {
+        "category": "04-2024",
+        "value": 18459,
+        "SortOrder": 31
+      },
+      {
+        "category": "05-2024",
+        "value": 19950,
+        "SortOrder": 32
+      },
+      {
+        "category": "06-2024",
+        "value": 21579,
+        "SortOrder": 33
+      },
+      {
+        "category": "07-2024",
+        "value": 20645,
+        "SortOrder": 34
+      },
+      {
+        "category": "08-2024",
+        "value": 20033,
+        "SortOrder": 35
+      },
+      {
+        "category": "09-2024",
+        "value": 19477,
+        "SortOrder": 36
+      },
+      {
+        "category": "10-2024",
+        "value": 18621,
+        "SortOrder": 37
+      },
+      {
+        "category": "11-2024",
+        "value": 17762,
+        "SortOrder": 38
+      },
+      {
+        "category": "12-2024",
+        "value": 16792,
+        "SortOrder": 39
+      }
+    ],
+    "Commentary": {
+      "ExpertCommentary": [
+        {
+          "previousMonth": "02-2020",
+          "Month": "03-2020",
+          "nextMonth": "10-2020",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "At 0.37 in March 2020, Jocata-Sumpoorn reflected significant contraction in the sales activity of MSMEs, a result of economic activity shutting down- the national lockdown necessitated in response to the Covid19 pandemic. The contraction was seen across the board in the IIP, with the overall index slumping by 18.7% over the previous year. The IHS Markit Composite PMI fell to 50.6 in March from 57.6 in February, making the lowest reading in five months; while the manufacturing index dropped to 51.8 from 54.5, the services sector reported a stronger drop to 49.3 in March from 57.5 in February. New orders were shaken by the fastest drop in fresh exports contracts since September 2013 . <br><br>With the global economy in a turmoil as transport and trade restrictions came into place to safeguard countries from the spread of the pandemic, India’s exports fell by 34.6% in March while imports fell by 28.7%. <br><br>The unprecedented nature of the crisis and uncertainty led to strident demands for government support to small businesses, in particular. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "03-2020",
+          "Month": "10-2020",
+          "nextMonth": "03-2021",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "After dipping to the low of 0.21 in April due to the severe restrictions of the national lockdown, Jocata-Sumpoorn had moved up into a phase of mild expansion at 0. 56 in August and moderate expansion at 0. 61 in September. Sales performance of credit-seeking MSMEs showed their fastest expansion in a year with the Jocata-Sumpoorn at 0.69 in October. The General IIP stood at 129.6, its highest level since the lockdown restrictions were put in place in April. As the IIP had gone through a phase of contraction for three months of August – October 2019, the overall growth of 4.5% in October was still muted and indicative of continuing stress in the mining and manufacturing sectors.<br><br>The responses through the survey based IHS Markit PMI showed significant strength , with the Composite PMI rising to 58.0 in October from 54.6 in September, making this the strongest increase in around nine years. The Manufacturing PMI rose to 58.9 in October from 56.8 in September, as purchasing managers reported the strongest pace of expansion in output in roughly 13 years. From its September level of 49.8 in September, the Services PMI crossed into the expansionary zone for the first time since March and stood at 54.1 in October.",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "10-2020",
+          "Month": "03-2021",
+          "nextMonth": "10-2021",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "Even as the second wave of Covid19 gripped the country and localized restrictions were in place, the government support measures for MSMEs, and the absence of severe national lockdown have enabled growth in sales activity for the sector. Jocata-Sumpoorn stood at its highest level of 0.82 in March moving into the zone of substantial expansion in sales activity for credit-seeking MSMEs.<br><br>The General IIP Index also moved to a record high level of 145.6 in March, up from the 129.9 index of February. While the significantly high growth in IIP of 24.2% can partly be attributed to the low base effect from the previous year’s lockdown in March, all segments of the IIP recorded an increase over February, reflecting recovery in the economy. <br><br>On the other hand, the responses through the survey based IHS Markit PMI showed a slight drop in March from the previous month – the Composite PMI stood at 56.0 in March, as against 57.3 in February, the Services PMI inched down to 54.6 in March from 55.3 in February while the Manufacturing PMI moved from 57.5 in February to 55.4 in March. Despite the fall, the PMI stayed well above the threshold level of 50, reflecting an increase in business activity from the previous month. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "03-2021",
+          "Month": "10-2021",
+          "nextMonth": "05-2022",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "The strong support given by the government as relief to MSMEs post-Covid continues to bolster the sector. Despite the drop in the index after April, when Jocata-Sumpoorn hit a record high of 0.85, the sales activity continues in the phase of significant expansion.  Since September, the IIP has been settling with the overall index coming off the high double-digit growth rates of the period March-August as the previous year’s base effect runs out. Though growth in manufacturing IIP stood at 4.3% for September and 3.3% for October, there are fluctuations across sectors that reveal differential impact of the pandemic and the base effect – 13 out of 23 sectors reported growth in October e.g, textile manufacture posted 30%+ growth in September and October, while leather products showed continued stress with negative growth in both months. <br><br>The IHS Markit Purchasing Managers’ Index (PMI) survey reflected the revival in the economic activity as the Services PMI went up to 58.4 in October, its highest level in ten and a half years and Manufacturing PMI reported an eight-month high at 55.9; the Composite PMI consequently stood at 58.7, up from 55.3 in September, which was the strongest monthly expansion reported by the purchasing managers since January 2012. Overall, therefore the sentiment has been very positive for economic activity. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "10-2021",
+          "Month": "05-2022",
+          "nextMonth": "10-2022",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "After the contraction seen during the restrictive phase of Covid-19 lockdowns over the period March-July 2020, Jocata-Sumpoorn has been showing varied rates of expansion. The sales activity of credit-seeking MSMEs has been in a phase of significant expansion since May 2021, barring two months of moderate expansion in November and December 2021, and Jocata-Sumpoorn hit a thirteen-month high of 0.74 in May 2022. This trend has been broadly in sync with the IIP, which also showed low rates of 1% growth in November and December 2021; the General IIP Index moved up from 134.5 in April to 137.8 in May showing a 19.7 percent growth over the previous year, despite the high base in May 2021. The Manufacturing IIP moved up to 134.6 in May from 131.6 in April, recording a 20.7% growth over the previous year. Except for the manufacture of pharmaceuticals, all other 22 sectors showed growth in May. <br><br>The S&P Global Composite PMI also moved up to 58.3 in May from 57.6 in April. The recovery was mainly in the services sector where respondents reported the strongest rise in activity in 11 years- the index jumped to 58.9 in May from 57.9 in April with further relaxations in the Covid19 restrictions. The Manufacturing PMI stayed stable across the months, with a minor drop from 54.7 in April to 54.6 in May.",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "05-2022",
+          "Month": "10-2022",
+          "nextMonth": "01-2023",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "The sales performance of credit-seeking MSMEs showed a slower rate of expansion in October, with the Jocata-Sumpoorn continuing its decline since the peak of 0.74 in May 2022. The General IIP index has been showing some stress over the past four months, moving from 134.4 in July to a six-month low of 131.5 in August, a slight rise to 133.8 in September and drop again to129.5 in October. General IIP contracted by 4.1% in October over the previous year, with manufacturing IIP contracting by 5.8%. After expanding for nineteen months, merchandise exports contracted by 12.1% in October over the previous year, while merchandise imports expanded by 10.0%.<br><br>There was a contrasting picture coming in from the S&P Global PMI whose Composite Index reported at 55.5 in October, marginally higher than 55.1 in the previous month. However, the survey of purchasing managers of large firms showed that manufacturing production and new orders expanded at their slowest rate since June 2022. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "10-2022",
+          "Month": "01-2023",
+          "nextMonth": "02-2023",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "Since July 2022, the Jocata-Sumpoorn levels have shown that growth in the sales of credit-seeking MSMEs has settled in the zone of mild to moderate expansion. The index level moved up to 0.63 in January from the 0.60 level in December 2022. This is in line with the indications from the IIP – where the General IIP rose in January to 147.4, the third consecutive month of increase in production since the drop to 129.5 in October 2022. Growth in the General IIP stood at 5.8% over the previous year.  Manufacturing IIP moved up to 145.5 in January from 144.9 in December, recording year-on-year growth at 4.5%. Analysis of the 23 sectors that make up the IIP showed that 13 sectors recorded growth over the previous year, while 10 sectors contracted.<br><br>In slight contrast, the responses from the survey-based S&P Global PMI showed lower expansion than December levels - the Composite PMI came in at 57.5 in January, down from December’s near 11-year high of 59.4. The Manufacturing PMI came in at 55.4 in January, down from December’s 57.8. Meanwhile, the Services PMI decreased to 57.2 in January (December: 58.5). In both sectors, output and new orders rose at softer rates than the previous month.",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "01-2023",
+          "Month": "02-2023",
+          "nextMonth": "03-2023",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "The sales activity of the credit-seeking MSMEs has been exhibiting mild to moderate expansion since July 2022. Jocata-Sumpoorn for February stands at the same level of 0.60 as December 2022, indicating steady albeit mild growth. On the IIP front, the General IIP dropped to 139.3 in February from 147.4 in January, growing at the rate of 6.0% over the previous year. The Manufacturing IIP fell from 145.5 in January to 137.6 in February, now almost at the same level as November 2022, and recording a growth of 5.9% over the previous year. 11 of the 23 sectors in the IIP contracted in February, while 12 recorded growth over the previous year. <br><br>The S&P Global Composite PMI came in at 59.0 in February, up from January’s 57.5, but this was essentially on the back of a strong services sector. Based on the responses of purchasing managers surveyed in the services sector, output and new orders grew at the fastest rate in 12 years and the Services PMI rose to 59.4 in February from the previous month’s index of 57.2. On the other hand, the Manufacturing PMI softened marginally to 55.3 in February, slightly below January’s level of 55.4.",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "02-2023",
+          "Month": "03-2023",
+          "nextMonth": "04-2023",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "The current rise in the sales performance of MSMEs breaks the trend of mild to moderate expansion seen since July 2022, and it remains to be seen whether this will be sustained going forward. However, the Emergency Credit Line Guarantee Scheme (ECLGS) closed this month – the scheme that had started in May 2020 had given critical relief to the MSME sector to face the pandemic. The sector will have to go ahead without this support of timely access to credit. The General IIP moved up to 151.7 in March, reversing the drop seen in February to 139.3 from January’s level of 147.4, but growth in the General IIP over the previous year was a muted 1.9%. The Manufacturing IIP grew at 1.5%, while electricity output contracted in March. 13 of the 23 sectors that make up the IIP showed contraction over the previous year. Further, India’s exports surged to an eight-month high of USD 66.14 billion in March, but even at this value, exports of goods and services registered a decline by 7.53% over the previous year. <br><br>The picture from the PMI data also gave mixed signals - the S&P Global PMI Composite Index dropped marginally to 58.4 in March from 59 in February; the Services PMI fell from 59.4 in February to 57.8 in March while Manufacturing PMI moved to a three-month high from 55.3 in February to 56.4 in March. Purchasing managers of large firms in manufacturing reported the strongest growth in factory orders and production in three months. Meanwhile, after expanding at the fastest pace in 12 years in February, the firms surveyed in the service sector reported output and new orders growing at slightly weaker rates in March. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "03-2023",
+          "Month": "04-2023",
+          "nextMonth": "05-2023",
+          "ExpertName": "",
+          "ExpertDetails": "",
+          "ExpertCommentary": "There are mixed signals coming in from the macro-economic data for April. Jocata-Sumpoorn has been in a phase of moderate to mild expansion since July 2022 as the economy has thrown off the impact of the pandemic, but the sharp dip in the index in April, following the high in March indicates the MSME sector is still to recover fully. The closure of the Emergency Credit Line Guarantee Scheme will have its impact on the sector that is credit-starved in the best of times. <br><br>The General IIP Index came in at 140.7, down from the 151.7 index value in March 2023, with growth at 4.6% over the previous year. The IIP Manufacturing index also dipped in April to 138.8, down from the high on 147.5 in March 2023, reporting growth of 5.5% over the previous year. Note that 12 out of 23 sectors contracted in April, when compared to the previous year. <br><br>In contrast, the S&P Global Composite PMI Index rose significantly to 61.6 in April from 58.4 in March, now at the highest level since July 2010. Manufacturing PMI stood at a four month high in April at 57.2. The optimism was only tempered by price pressures as input costs rising at the fastest pace in three months. ",
+          "ExpertImageDetails": ""
+        },
+        {
+          "previousMonth": "04-2023",
+          "Month": "05-2023",
+          "nextMonth": "06-2023",
+          "ExpertName": "Dr. Sumita Kale",
+          "ExpertDetails": "CEO and Senior Fellow, Indicus Foundation (Former Chief Economist - Indicus Analytics)",
+          "ExpertCommentary": "Over the last three months, even as the Jocata-Sumpoorn showed expansion in sales performance of credit-seeking MSMEs, the index has been slightly choppy – hitting a high of 0.7 in March, falling to 0.53 in April and recovering to 0.61 in May. Similar trends are seen in the IIP - the General IIP which hit a high of 151.7 in March, dipped to 140.7 in April, and recovered in May to 145.1. The Manufacturing IIP hit its high on 147.5 in March, dipped in April to 138.8. and recovered in May to 142.4. The growth rates in May have been steady – with the General IIP growing at 5.3% and Manufacturing IIP up by 5.8% over the previous year. 10 out of the 23 sectors that make up the IIP contracted in May over the previous year’s levels. The exports of goods and services from India have been muted this year, with April-May registering lower than the previous year – this will clearly reflect in the performance of the MSMEs which contribute more than 40% of India’s exports. <br><br>On the other hand, the responses from the S&P Global PMI showed bright optimism for India - Composite PMI stayed at the 61.6 high in May while the Manufacturing Index moved up from 57.2 in April to 58.7 in May, the strongest improvement since October 2020. The results from the survey of purchasing managers of large firms should reflect in improved strength for the MSME sector down the value chain if demand persists. ",
+          "ExpertImageDetails": "commentor-sumita.png"
+        },
+        {
+          "previousMonth": "05-2023",
+          "Month": "06-2023",
+          "nextMonth": "07-2023",
+          "ExpertName": "Mr. Narasimhan V",
+          "ExpertDetails": "Principal Advisor, Jocata",
+          "ExpertCommentary": "Jocata-Sumpoorn has been in a phase of moderate to mild expansion of sales activity since October 2022, with one outlier in March at 0.71, the highest in ten months. The MSME sector has left behind the phase of high growth that is of substantial to significant expansion that lasted from March 2021 to June 2022 – and has settled into a steadier pace of expansion. <br><br>This is broadly in sync with the trends coming in from the Index of Industrial Production, where the General IIP moved down to 143.5 in June from its level of 145.1 in May. Manufacturing IIP has also moved down to 141.1 in June from 142.4 in May, recording year-on-year growth at 3.1% compared to 5.8% the previous month. 13 of the 23 sectors that make up the IIP contracted in June, over their index the previous year. The S&P Global India Composite PMI fell to 59.4 in June 2023, down from the high 61.1 levels seen in April and May. In June, the survey of purchasing managers of large firms reported a slowdown in both factory activity and the service sector. The S&P Global India Manufacturing PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7. <br><br>The MSME sector does face constrained credit conditions as the SIDBI-Transunion Pulse report August 2023 has highlighted that over the quarter January-March 2023, credit demand grew at 33% while supply grew only by 11% - this will clearly impact the ability of firms to ramp up production and sales performance. ",
+          "ExpertImageDetails": "commentator-narasima.png"
+        },
+        {
+          "previousMonth": "06-2023",
+          "Month": "07-2023",
+          "nextMonth": "08-2023",
+          "ExpertName": "Sh. S.N. Singh",
+          "ExpertDetails": "CGM, SIDBI",
+          "ExpertCommentary": "Latest official data releases show that growth estimates for the first quarter of 2023-24 is marginally below expectations – in real terms GDP grew at 7.8% as against the RBI expectation of 8.0%. The main stress has come in from the manufacturing sector, which grew at 4.7%. This appears to be in line with the indication coming in from Jocata-Sumpoorn which has been in a phase of marginal to mild expansion since April 2023. The non-oil non-gold exports of merchandise also reflect a slowdown in activity as their value has dropped from USD 110.72 over the period April-July 2022 to USD 102.71 in the period April-July 2023. <br><br>The General IIP for July stands at 142, lower than the May index of 143.5, while growth over the previous year is at 5.7%. 9 sectors of the 23 that make up the IIP recorded contraction over the previous year. Four sectors recorded a double-digit drop- manufacture of apparel, furniture, wood and its products, computer, electronics, and optical products. The Manufacturing IIP is stable at 141.2 in July, compared to 141.1 in May, with growth at 4.6% over the previous year.<br><br>Meanwhile the S&P Global Composite Purchasing Managers Index for India hit a high of 61.9 in July; this surge had more to do with the Services PMI rising to a 13 year high, the Manufacturing PMI had fallen to 57.7 in July from 57.8 in June, and 58.7 in May.<br><br>Interestingly, though growth in outstanding non-food bank credit has increased in July to 19.8% year-on-year from 15.1% in July 2022, credit outstanding to MSMEs has expanded at a slower pace – 15.7% year-on-year compared to 21.5% in the previous year. At a sectoral level, year-on-year growth was the lowest for industry (5.8%), compared to all other sectors – agriculture (16.8%), services (23.1%) and personal loans (31.7%). ",
+          "ExpertImageDetails": "commentator-singh.png"
+        }
+      ],
+      "MonthlyCommentary": [
+        {
+          "previousMonth": "02-2020",
+          "Month": "03-2020",
+          "nextMonth": "10-2020",
+          "comment": "Jocata-Sumpoorn moved down to 0.37 in March from 0.59 in February, a sharp drop after two consecutive months of mild expansion in the sales performance of credit-seeking MSMEs. "
+        },
+        {
+          "previousMonth": "03-2020",
+          "Month": "10-2020",
+          "nextMonth": "03-2021",
+          "comment": "Jocata-Sumpoorn moved up to 0.69 in October 2020; this is the first significant expansion seen in the sales performance of credit-seeking MSMEs as Covid19 showed signs of subsidence in India. "
+        },
+        {
+          "previousMonth": "10-2020",
+          "Month": "03-2021",
+          "nextMonth": "10-2021",
+          "comment": "Jocata-Sumpoorn came in at a high of 0.82 in March 2021, the first substantial expansion in sales performance of credit-seeking MSMEs in more than a year."
+        },
+        {
+          "previousMonth": "03-2021",
+          "Month": "10-2021",
+          "nextMonth": "05-2022",
+          "comment": "Jocata-Sumpoorn moved down marginally to 0.66 in October from 0.67 in the previous month. The sales performance of credit-seeking MSMEs has been in the zone of significant expansion for the sixth consecutive month. "
+        },
+        {
+          "previousMonth": "10-2021",
+          "Month": "05-2022",
+          "nextMonth": "10-2022",
+          "comment": "Jocata-Sumpoorn moved to a high of 0.74 in May 2022. The sales performance of credit-seeking MSMEs has been in the phase of significant expansion for five consecutive months. "
+        },
+        {
+          "previousMonth": "05-2022",
+          "Month": "10-2022",
+          "nextMonth": "01-2023",
+          "comment": "Jocata-Sumpoorn moved down to to 0.56 in October, indicating mild expansion in the sales activity of credit-seeking MSMEs, this rate of expansion was last seen two years ago in November 2020."
+        },
+        {
+          "previousMonth": "10-2022",
+          "Month": "01-2023",
+          "nextMonth": "02-2023",
+          "comment": "Jocata-Sumpoorn stood at 0.63 in January 2023, indicating moderate expansion in the sales performance of credit-seeking MSMEs. "
+        },
+        {
+          "previousMonth": "01-2023",
+          "Month": "02-2023",
+          "nextMonth": "03-2023",
+          "comment": "Jocata-Sumpoorn moved into the zone of mild expansion in February 2023, standing at 0.60, which is lower than the 0.63 seen in January. "
+        },
+        {
+          "previousMonth": "02-2023",
+          "Month": "03-2023",
+          "nextMonth": "04-2023",
+          "comment": "Jocata-Sumpoorn moved up to 0.7 in March, a significant expansion in sales activity of credit-seeking MSMEs, breaking the streak of mild or moderate expansion since July 2022. "
+        },
+        {
+          "previousMonth": "03-2023",
+          "Month": "04-2023",
+          "nextMonth": "05-2023",
+          "comment": "Jocata-Sumpoorn moved down to 0.53 in April 2023, a sharp decline from the high of 0.7 seen in March. Though the sales performance stays in the expansion zone, the growth is marginal this month. "
+        },
+        {
+          "previousMonth": "04-2023",
+          "Month": "05-2023",
+          "nextMonth": "06-2023",
+          "comment": "Jocata-Sumpoorn came in at 0.61 for the month of May, signaling moderate expansion in the sales invoices for credit seeking MSMEs in India. "
+        },
+        {
+          "previousMonth": "05-2023",
+          "Month": "06-2023",
+          "nextMonth": "07-2023",
+          "comment": "Jocata-Sumpoorn moved down to 0.56 in June from May’s level of 0.61. The sales performance of credit seeking-MSMEs has shown mild expansion in June, a shift from moderate expansion in May.  "
+        },
+        {
+          "previousMonth": "06-2023",
+          "Month": "07-2023",
+          "nextMonth": "08-2023",
+          "comment": "Jocata-Sumpoorn moved down marginally to 0.55 in July from its 0.56 level in June. The level of the index is still above the low of 0.53 hit in April and indicates that the MSME sales activity has continued in the phase of mild expansion."
+        }
+      ],
+      "MonthlyCommentaryGraph": [
+        {
+          "Month": "03-2020",
+          "monthList": [
+            {
+              "category": "10-2019",
+              "value": 0.45,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2019",
+              "value": 0.57,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2019",
+              "value": 0.52,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2020",
+              "value": 0.54,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2020",
+              "value": 0.59,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2020",
+              "value": 0.37,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "10-2020",
+          "monthList": [
+            {
+              "category": "05-2020",
+              "value": 0.29,
+              "SortOrder": 1
+            },
+            {
+              "category": "06-2020",
+              "value": 0.49,
+              "SortOrder": 2
+            },
+            {
+              "category": "07-2020",
+              "value": 0.49,
+              "SortOrder": 3
+            },
+            {
+              "category": "08-2020",
+              "value": 0.56,
+              "SortOrder": 4
+            },
+            {
+              "category": "09-2020",
+              "value": 0.61,
+              "SortOrder": 5
+            },
+            {
+              "category": "10-2020",
+              "value": 0.69,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "03-2021",
+          "monthList": [
+            {
+              "category": "10-2020",
+              "value": 0.69,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2020",
+              "value": 0.57,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2020",
+              "value": 0.66,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2021",
+              "value": 0.61,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2021",
+              "value": 0.63,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2021",
+              "value": 0.82,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "10-2021",
+          "monthList": [
+            {
+              "category": "05-2021",
+              "value": 0.69,
+              "SortOrder": 1
+            },
+            {
+              "category": "06-2021",
+              "value": 0.69,
+              "SortOrder": 2
+            },
+            {
+              "category": "07-2021",
+              "value": 0.69,
+              "SortOrder": 3
+            },
+            {
+              "category": "08-2021",
+              "value": 0.69,
+              "SortOrder": 4
+            },
+            {
+              "category": "09-2021",
+              "value": 0.67,
+              "SortOrder": 5
+            },
+            {
+              "category": "10-2021",
+              "value": 0.66,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "05-2022",
+          "monthList": [
+            {
+              "category": "12-2021",
+              "value": 0.63,
+              "SortOrder": 1
+            },
+            {
+              "category": "01-2022",
+              "value": 0.66,
+              "SortOrder": 2
+            },
+            {
+              "category": "02-2022",
+              "value": 0.66,
+              "SortOrder": 3
+            },
+            {
+              "category": "03-2022",
+              "value": 0.67,
+              "SortOrder": 4
+            },
+            {
+              "category": "04-2022",
+              "value": 0.71,
+              "SortOrder": 5
+            },
+            {
+              "category": "05-2022",
+              "value": 0.74,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "10-2022",
+          "monthList": [
+            {
+              "category": "05-2022",
+              "value": 0.74,
+              "SortOrder": 1
+            },
+            {
+              "category": "06-2022",
+              "value": 0.69,
+              "SortOrder": 2
+            },
+            {
+              "category": "07-2022",
+              "value": 0.62,
+              "SortOrder": 3
+            },
+            {
+              "category": "08-2022",
+              "value": 0.62,
+              "SortOrder": 4
+            },
+            {
+              "category": "09-2022",
+              "value": 0.63,
+              "SortOrder": 5
+            },
+            {
+              "category": "10-2022",
+              "value": 0.56,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "01-2023",
+          "monthList": [
+            {
+              "category": "08-2022",
+              "value": 0.62,
+              "SortOrder": 1
+            },
+            {
+              "category": "09-2022",
+              "value": 0.63,
+              "SortOrder": 2
+            },
+            {
+              "category": "10-2022",
+              "value": 0.56,
+              "SortOrder": 3
+            },
+            {
+              "category": "11-2022",
+              "value": 0.64,
+              "SortOrder": 4
+            },
+            {
+              "category": "12-2022",
+              "value": 0.6,
+              "SortOrder": 5
+            },
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "02-2023",
+          "monthList": [
+            {
+              "category": "09-2022",
+              "value": 0.63,
+              "SortOrder": 1
+            },
+            {
+              "category": "10-2022",
+              "value": 0.56,
+              "SortOrder": 2
+            },
+            {
+              "category": "11-2022",
+              "value": 0.64,
+              "SortOrder": 3
+            },
+            {
+              "category": "12-2022",
+              "value": 0.6,
+              "SortOrder": 4
+            },
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 5
+            },
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "03-2023",
+          "monthList": [
+            {
+              "category": "10-2022",
+              "value": 0.56,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2022",
+              "value": 0.64,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2022",
+              "value": 0.6,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2023",
+              "value": 0.7,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "04-2023",
+          "monthList": [
+            {
+              "category": "11-2022",
+              "value": 0.64,
+              "SortOrder": 1
+            },
+            {
+              "category": "12-2022",
+              "value": 0.6,
+              "SortOrder": 2
+            },
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 3
+            },
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 4
+            },
+            {
+              "category": "03-2023",
+              "value": 0.7,
+              "SortOrder": 5
+            },
+            {
+              "category": "04-2023",
+              "value": 0.53,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "05-2023",
+          "monthList": [
+            {
+              "category": "12-2022",
+              "value": 0.6,
+              "SortOrder": 1
+            },
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 2
+            },
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 3
+            },
+            {
+              "category": "03-2023",
+              "value": 0.7,
+              "SortOrder": 4
+            },
+            {
+              "category": "04-2023",
+              "value": 0.53,
+              "SortOrder": 5
+            },
+            {
+              "category": "05-2023",
+              "value": 0.61,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "06-2023",
+          "monthList": [
+            {
+              "category": "01-2023",
+              "value": 0.63,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2023",
+              "value": 0.7,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2023",
+              "value": 0.53,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2023",
+              "value": 0.61,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2023",
+              "value": 0.56,
+              "SortOrder": 6
+            }
+          ]
+        },
+        {
+          "Month": "07-2023",
+          "monthList": [
+            {
+              "category": "02-2023",
+              "value": 0.6,
+              "SortOrder": 1
+            },
+            {
+              "category": "03-2023",
+              "value": 0.7,
+              "SortOrder": 2
+            },
+            {
+              "category": "04-2023",
+              "value": 0.53,
+              "SortOrder": 3
+            },
+            {
+              "category": "05-2023",
+              "value": 0.61,
+              "SortOrder": 4
+            },
+            {
+              "category": "06-2023",
+              "value": 0.56,
+              "SortOrder": 5
+            },
+            {
+              "category": "07-2023",
+              "value": 0.55,
+              "SortOrder": 6
+            }
+          ]
+        }
+      ]
+    },
+    "Distributions": {
+      "HsnDistributionByValue": [
+        {
+          "HsnName": "84",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 10.31,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 10.32,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 10.5,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 10.53,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 10.62,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 10.22,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 10.09,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 9.88,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 9.67,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 9.55,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 9.63,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 9.64,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 9.62,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 9.56,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 9.09,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 8.71,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 8.33,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 8.13,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 8.14,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 8.02,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 8.02,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 8.04,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 8.03,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 7.98,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 7.82,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 7.34,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 7.26,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 7.13,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 6.85,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 8.58,
+              "SortOrder": 30
+            }
+          ]
+        },
+        {
+          "HsnName": "72",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 9.84,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 9.92,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 9.65,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 9.63,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 9.54,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 9.56,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 9.55,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 9.63,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 9.65,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 9.75,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 9.76,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 9.62,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 9.66,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 9.78,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 9.52,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 9.85,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 9.58,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 9.33,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 9.15,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 9.17,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 9.09,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 9.01,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 8.95,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 9.02,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 8.67,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 8.02,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 7.44,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 7.57,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 7.89,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 10.16,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 9.24,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "39",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 9.43,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 9.58,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 9.27,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 9.12,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 8.75,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 8.5,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 8.56,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 8.72,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 8.68,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 8.75,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 8.76,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 8.71,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 8.75,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 8.54,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 8.16,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 7.88,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 7.56,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 7.23,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 7.04,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 7.06,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 7.1,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 7.04,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 6.84,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 6.53,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 6.07,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 5.65,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 5.91,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 6.61,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 6.46,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 8.39,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 7.97,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "87",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 7.95,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 7.9,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 7.76,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 7.68,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 7.47,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 7.24,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 7.25,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 7,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 6.96,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 6.92,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 6.93,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 6.84,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 6.93,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 6.81,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 6.46,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 6.01,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 6.17,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 6.32,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 6.42,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 6.47,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 6.37,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 6.45,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 6.42,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 6.42,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 6.3,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 6.08,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 5.86,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 6.88,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 8.38,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 7.52,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 5.13,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "73",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 6.39,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 6.39,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 6.38,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 6.28,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 6.29,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 6.15,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 6.19,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 6.22,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 6.21,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 6.18,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 6.22,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 6.25,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 6.15,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 5.87,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 5.52,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 5.25,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 4.93,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 4.93,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 4.99,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 5.06,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 5.01,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 4.97,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 4.89,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 4.76,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 4.54,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 4.44,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 4.39,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 5.16,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 5.54,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 5.96,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 0,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "85",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 5.79,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 5.85,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 6.16,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 6.2,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 6.3,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 6.29,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 6.36,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 6.37,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 6.36,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 6.28,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 6.31,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 6.29,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 6.4,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 6.25,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 6.15,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 6.15,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 6.15,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 6.17,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 6.21,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 6.15,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 6.03,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 6.19,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 6.24,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 6.43,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 6.26,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 6.09,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 5.89,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 6.01,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 5.59,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 6.09,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 6.46,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "99",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 4.54,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 4.57,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 4.81,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 4.66,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 4.72,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 4.93,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 4.97,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 5.08,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 5.26,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 5.29,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 5.42,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 5.54,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 5.58,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 5.95,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 6.22,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 6.85,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 7.49,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 7.76,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 7.9,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 7.97,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 8.14,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 8.24,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 8.3,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 8.58,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 8.98,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 9.46,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 11.15,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 7.54,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 7.19,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 5.84,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 7.83,
+              "SortOrder": 31
+            }
+          ]
+        },
+        {
+          "HsnName": "52",
+          "Details": [
+            {
+              "category": "01-2021",
+              "value": 0,
+              "SortOrder": 1
+            },
+            {
+              "category": "02-2021",
+              "value": 0,
+              "SortOrder": 2
+            },
+            {
+              "category": "03-2021",
+              "value": 0,
+              "SortOrder": 3
+            },
+            {
+              "category": "04-2021",
+              "value": 0,
+              "SortOrder": 4
+            },
+            {
+              "category": "05-2021",
+              "value": 0,
+              "SortOrder": 5
+            },
+            {
+              "category": "06-2021",
+              "value": 0,
+              "SortOrder": 6
+            },
+            {
+              "category": "07-2021",
+              "value": 0,
+              "SortOrder": 7
+            },
+            {
+              "category": "08-2021",
+              "value": 0,
+              "SortOrder": 8
+            },
+            {
+              "category": "09-2021",
+              "value": 0,
+              "SortOrder": 9
+            },
+            {
+              "category": "10-2021",
+              "value": 0,
+              "SortOrder": 10
+            },
+            {
+              "category": "11-2021",
+              "value": 0,
+              "SortOrder": 11
+            },
+            {
+              "category": "12-2021",
+              "value": 0,
+              "SortOrder": 12
+            },
+            {
+              "category": "01-2022",
+              "value": 0,
+              "SortOrder": 13
+            },
+            {
+              "category": "02-2022",
+              "value": 0,
+              "SortOrder": 14
+            },
+            {
+              "category": "03-2022",
+              "value": 0,
+              "SortOrder": 15
+            },
+            {
+              "category": "04-2022",
+              "value": 0,
+              "SortOrder": 16
+            },
+            {
+              "category": "05-2022",
+              "value": 0,
+              "SortOrder": 17
+            },
+            {
+              "category": "06-2022",
+              "value": 0,
+              "SortOrder": 18
+            },
+            {
+              "category": "07-2022",
+              "value": 0,
+              "SortOrder": 19
+            },
+            {
+              "category": "08-2022",
+              "value": 0,
+              "SortOrder": 20
+            },
+            {
+              "category": "09-2022",
+              "value": 0,
+              "SortOrder": 21
+            },
+            {
+              "category": "10-2022",
+              "value": 0,
+              "SortOrder": 22
+            },
+            {
+              "category": "11-2022",
+              "value": 0,
+              "SortOrder": 23
+            },
+            {
+              "category": "12-2022",
+              "value": 0,
+              "SortOrder": 24
+            },
+            {
+              "category": "01-2023",
+              "value": 0,
+              "SortOrder": 25
+            },
+            {
+              "category": "02-2023",
+              "value": 0,
+              "SortOrder": 26
+            },
+            {
+              "category": "03-2023",
+              "value": 0,
+              "SortOrder": 27
+            },
+            {
+              "category": "04-2023",
+              "value": 0,
+              "SortOrder": 28
+            },
+            {
+              "category": "05-2023",
+              "value": 0,
+              "SortOrder": 29
+            },
+            {
+              "category": "06-2023",
+              "value": 0,
+              "SortOrder": 30
+            },
+            {
+              "category": "07-2023",
+              "value": 5.37,
+              "SortOrder": 31
+            }
+          ]
+        }
+      ],
+      "MsmDistribution": [
+        {
+          "SegmentName": "Micro(0-5 Cr]",
+          "Details": [
+            {
+              "category": "10-2019",
+              "value": 35.74,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2019",
+              "value": 35.36,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2019",
+              "value": 37.74,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2020",
+              "value": 35.15,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2020",
+              "value": 34.69,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2020",
+              "value": 38.51,
+              "SortOrder": 6
+            },
+            {
+              "category": "04-2020",
+              "value": 39.35,
+              "SortOrder": 7
+            },
+            {
+              "category": "05-2020",
+              "value": 42.21,
+              "SortOrder": 8
+            },
+            {
+              "category": "06-2020",
+              "value": 43.22,
+              "SortOrder": 9
+            },
+            {
+              "category": "07-2020",
+              "value": 43.97,
+              "SortOrder": 10
+            },
+            {
+              "category": "08-2020",
+              "value": 44.63,
+              "SortOrder": 11
+            },
+            {
+              "category": "09-2020",
+              "value": 44.15,
+              "SortOrder": 12
+            },
+            {
+              "category": "10-2020",
+              "value": 43.78,
+              "SortOrder": 13
+            },
+            {
+              "category": "11-2020",
+              "value": 43.26,
+              "SortOrder": 14
+            },
+            {
+              "category": "12-2020",
+              "value": 42.6,
+              "SortOrder": 15
+            },
+            {
+              "category": "01-2021",
+              "value": 39.96,
+              "SortOrder": 16
+            },
+            {
+              "category": "02-2021",
+              "value": 39.81,
+              "SortOrder": 17
+            },
+            {
+              "category": "03-2021",
+              "value": 42.13,
+              "SortOrder": 18
+            },
+            {
+              "category": "04-2021",
+              "value": 39.63,
+              "SortOrder": 19
+            },
+            {
+              "category": "05-2021",
+              "value": 39.23,
+              "SortOrder": 20
+            },
+            {
+              "category": "06-2021",
+              "value": 40.42,
+              "SortOrder": 21
+            },
+            {
+              "category": "07-2021",
+              "value": 39.86,
+              "SortOrder": 22
+            },
+            {
+              "category": "08-2021",
+              "value": 39.49,
+              "SortOrder": 23
+            },
+            {
+              "category": "09-2021",
+              "value": 39.35,
+              "SortOrder": 24
+            },
+            {
+              "category": "10-2021",
+              "value": 38.95,
+              "SortOrder": 25
+            },
+            {
+              "category": "11-2021",
+              "value": 38.92,
+              "SortOrder": 26
+            },
+            {
+              "category": "12-2021",
+              "value": 44.47,
+              "SortOrder": 27
+            },
+            {
+              "category": "01-2022",
+              "value": 44.23,
+              "SortOrder": 28
+            },
+            {
+              "category": "02-2022",
+              "value": 44.59,
+              "SortOrder": 29
+            },
+            {
+              "category": "03-2022",
+              "value": 45.59,
+              "SortOrder": 30
+            },
+            {
+              "category": "04-2022",
+              "value": 44.9,
+              "SortOrder": 31
+            },
+            {
+              "category": "05-2022",
+              "value": 43.49,
+              "SortOrder": 32
+            },
+            {
+              "category": "06-2022",
+              "value": 43.4,
+              "SortOrder": 33
+            },
+            {
+              "category": "07-2022",
+              "value": 42.49,
+              "SortOrder": 34
+            },
+            {
+              "category": "08-2022",
+              "value": 42.19,
+              "SortOrder": 35
+            },
+            {
+              "category": "09-2022",
+              "value": 42.14,
+              "SortOrder": 36
+            },
+            {
+              "category": "10-2022",
+              "value": 41.62,
+              "SortOrder": 37
+            },
+            {
+              "category": "11-2022",
+              "value": 41.54,
+              "SortOrder": 38
+            },
+            {
+              "category": "12-2022",
+              "value": 41.46,
+              "SortOrder": 39
+            },
+            {
+              "category": "01-2023",
+              "value": 41.21,
+              "SortOrder": 40
+            },
+            {
+              "category": "02-2023",
+              "value": 41.52,
+              "SortOrder": 41
+            },
+            {
+              "category": "03-2023",
+              "value": 41.53,
+              "SortOrder": 42
+            },
+            {
+              "category": "04-2023",
+              "value": 40.55,
+              "SortOrder": 43
+            },
+            {
+              "category": "05-2023",
+              "value": 39.71,
+              "SortOrder": 44
+            },
+            {
+              "category": "06-2023",
+              "value": 37.59,
+              "SortOrder": 45
+            },
+            {
+              "category": "07-2023",
+              "value": 34.48,
+              "SortOrder": 46
+            }
+          ]
+        },
+        {
+          "SegmentName": "Small(5- 50Cr]",
+          "Details": [
+            {
+              "category": "10-2019",
+              "value": 53.31,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2019",
+              "value": 51.25,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2019",
+              "value": 50.12,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2020",
+              "value": 52.47,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2020",
+              "value": 53.08,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2020",
+              "value": 49.88,
+              "SortOrder": 6
+            },
+            {
+              "category": "04-2020",
+              "value": 49.73,
+              "SortOrder": 7
+            },
+            {
+              "category": "05-2020",
+              "value": 48.55,
+              "SortOrder": 8
+            },
+            {
+              "category": "06-2020",
+              "value": 47.58,
+              "SortOrder": 9
+            },
+            {
+              "category": "07-2020",
+              "value": 47.19,
+              "SortOrder": 10
+            },
+            {
+              "category": "08-2020",
+              "value": 47.13,
+              "SortOrder": 11
+            },
+            {
+              "category": "09-2020",
+              "value": 47.4,
+              "SortOrder": 12
+            },
+            {
+              "category": "10-2020",
+              "value": 47.56,
+              "SortOrder": 13
+            },
+            {
+              "category": "11-2020",
+              "value": 48.26,
+              "SortOrder": 14
+            },
+            {
+              "category": "12-2020",
+              "value": 48.93,
+              "SortOrder": 15
+            },
+            {
+              "category": "01-2021",
+              "value": 51.05,
+              "SortOrder": 16
+            },
+            {
+              "category": "02-2021",
+              "value": 51.05,
+              "SortOrder": 17
+            },
+            {
+              "category": "03-2021",
+              "value": 49.04,
+              "SortOrder": 18
+            },
+            {
+              "category": "04-2021",
+              "value": 50.65,
+              "SortOrder": 19
+            },
+            {
+              "category": "05-2021",
+              "value": 51.02,
+              "SortOrder": 20
+            },
+            {
+              "category": "06-2021",
+              "value": 50.13,
+              "SortOrder": 21
+            },
+            {
+              "category": "07-2021",
+              "value": 50.43,
+              "SortOrder": 22
+            },
+            {
+              "category": "08-2021",
+              "value": 50.67,
+              "SortOrder": 23
+            },
+            {
+              "category": "09-2021",
+              "value": 50.82,
+              "SortOrder": 24
+            },
+            {
+              "category": "10-2021",
+              "value": 51.02,
+              "SortOrder": 25
+            },
+            {
+              "category": "11-2021",
+              "value": 50.99,
+              "SortOrder": 26
+            },
+            {
+              "category": "12-2021",
+              "value": 46.6,
+              "SortOrder": 27
+            },
+            {
+              "category": "01-2022",
+              "value": 46.7,
+              "SortOrder": 28
+            },
+            {
+              "category": "02-2022",
+              "value": 46.88,
+              "SortOrder": 29
+            },
+            {
+              "category": "03-2022",
+              "value": 46.71,
+              "SortOrder": 30
+            },
+            {
+              "category": "04-2022",
+              "value": 47.45,
+              "SortOrder": 31
+            },
+            {
+              "category": "05-2022",
+              "value": 49.08,
+              "SortOrder": 32
+            },
+            {
+              "category": "06-2022",
+              "value": 49.43,
+              "SortOrder": 33
+            },
+            {
+              "category": "07-2022",
+              "value": 50.18,
+              "SortOrder": 34
+            },
+            {
+              "category": "08-2022",
+              "value": 50.38,
+              "SortOrder": 35
+            },
+            {
+              "category": "09-2022",
+              "value": 50.39,
+              "SortOrder": 36
+            },
+            {
+              "category": "10-2022",
+              "value": 50.91,
+              "SortOrder": 37
+            },
+            {
+              "category": "11-2022",
+              "value": 50.97,
+              "SortOrder": 38
+            },
+            {
+              "category": "12-2022",
+              "value": 51.22,
+              "SortOrder": 39
+            },
+            {
+              "category": "01-2023",
+              "value": 51.75,
+              "SortOrder": 40
+            },
+            {
+              "category": "02-2023",
+              "value": 51.48,
+              "SortOrder": 41
+            },
+            {
+              "category": "03-2023",
+              "value": 51.3,
+              "SortOrder": 42
+            },
+            {
+              "category": "04-2023",
+              "value": 51.83,
+              "SortOrder": 43
+            },
+            {
+              "category": "05-2023",
+              "value": 52.5,
+              "SortOrder": 44
+            },
+            {
+              "category": "06-2023",
+              "value": 53.6,
+              "SortOrder": 45
+            },
+            {
+              "category": "07-2023",
+              "value": 55.53,
+              "SortOrder": 46
+            }
+          ]
+        },
+        {
+          "SegmentName": "Medium(50-250 Cr]",
+          "Details": [
+            {
+              "category": "10-2019",
+              "value": 10.95,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2019",
+              "value": 13.4,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2019",
+              "value": 12.03,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2020",
+              "value": 12.03,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2020",
+              "value": 11.91,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2020",
+              "value": 11.12,
+              "SortOrder": 6
+            },
+            {
+              "category": "04-2020",
+              "value": 10.6,
+              "SortOrder": 7
+            },
+            {
+              "category": "05-2020",
+              "value": 9.01,
+              "SortOrder": 8
+            },
+            {
+              "category": "06-2020",
+              "value": 8.87,
+              "SortOrder": 9
+            },
+            {
+              "category": "07-2020",
+              "value": 8.59,
+              "SortOrder": 10
+            },
+            {
+              "category": "08-2020",
+              "value": 8.03,
+              "SortOrder": 11
+            },
+            {
+              "category": "09-2020",
+              "value": 8.25,
+              "SortOrder": 12
+            },
+            {
+              "category": "10-2020",
+              "value": 8.45,
+              "SortOrder": 13
+            },
+            {
+              "category": "11-2020",
+              "value": 8.18,
+              "SortOrder": 14
+            },
+            {
+              "category": "12-2020",
+              "value": 8.17,
+              "SortOrder": 15
+            },
+            {
+              "category": "01-2021",
+              "value": 8.69,
+              "SortOrder": 16
+            },
+            {
+              "category": "02-2021",
+              "value": 8.83,
+              "SortOrder": 17
+            },
+            {
+              "category": "03-2021",
+              "value": 8.49,
+              "SortOrder": 18
+            },
+            {
+              "category": "04-2021",
+              "value": 9.29,
+              "SortOrder": 19
+            },
+            {
+              "category": "05-2021",
+              "value": 9.35,
+              "SortOrder": 20
+            },
+            {
+              "category": "06-2021",
+              "value": 9.04,
+              "SortOrder": 21
+            },
+            {
+              "category": "07-2021",
+              "value": 9.26,
+              "SortOrder": 22
+            },
+            {
+              "category": "08-2021",
+              "value": 9.36,
+              "SortOrder": 23
+            },
+            {
+              "category": "09-2021",
+              "value": 9.32,
+              "SortOrder": 24
+            },
+            {
+              "category": "10-2021",
+              "value": 9.49,
+              "SortOrder": 25
+            },
+            {
+              "category": "11-2021",
+              "value": 9.52,
+              "SortOrder": 26
+            },
+            {
+              "category": "12-2021",
+              "value": 8.39,
+              "SortOrder": 27
+            },
+            {
+              "category": "01-2022",
+              "value": 8.53,
+              "SortOrder": 28
+            },
+            {
+              "category": "02-2022",
+              "value": 8.04,
+              "SortOrder": 29
+            },
+            {
+              "category": "03-2022",
+              "value": 7.24,
+              "SortOrder": 30
+            },
+            {
+              "category": "04-2022",
+              "value": 7.14,
+              "SortOrder": 31
+            },
+            {
+              "category": "05-2022",
+              "value": 6.9,
+              "SortOrder": 32
+            },
+            {
+              "category": "06-2022",
+              "value": 6.66,
+              "SortOrder": 33
+            },
+            {
+              "category": "07-2022",
+              "value": 6.76,
+              "SortOrder": 34
+            },
+            {
+              "category": "08-2022",
+              "value": 6.86,
+              "SortOrder": 35
+            },
+            {
+              "category": "09-2022",
+              "value": 6.88,
+              "SortOrder": 36
+            },
+            {
+              "category": "10-2022",
+              "value": 6.9,
+              "SortOrder": 37
+            },
+            {
+              "category": "11-2022",
+              "value": 6.89,
+              "SortOrder": 38
+            },
+            {
+              "category": "12-2022",
+              "value": 6.77,
+              "SortOrder": 39
+            },
+            {
+              "category": "01-2023",
+              "value": 6.49,
+              "SortOrder": 40
+            },
+            {
+              "category": "02-2023",
+              "value": 6.45,
+              "SortOrder": 41
+            },
+            {
+              "category": "03-2023",
+              "value": 6.62,
+              "SortOrder": 42
+            },
+            {
+              "category": "04-2023",
+              "value": 7.05,
+              "SortOrder": 43
+            },
+            {
+              "category": "05-2023",
+              "value": 7.24,
+              "SortOrder": 44
+            },
+            {
+              "category": "06-2023",
+              "value": 8.51,
+              "SortOrder": 45
+            },
+            {
+              "category": "07-2023",
+              "value": 9.43,
+              "SortOrder": 46
+            }
+          ]
+        },
+        {
+          "SegmentName": "Large(250 Cr and above]",
+          "Details": [
+            {
+              "category": "10-2019",
+              "value": 0,
+              "SortOrder": 1
+            },
+            {
+              "category": "11-2019",
+              "value": 0,
+              "SortOrder": 2
+            },
+            {
+              "category": "12-2019",
+              "value": 0.12,
+              "SortOrder": 3
+            },
+            {
+              "category": "01-2020",
+              "value": 0.35,
+              "SortOrder": 4
+            },
+            {
+              "category": "02-2020",
+              "value": 0.33,
+              "SortOrder": 5
+            },
+            {
+              "category": "03-2020",
+              "value": 0.5,
+              "SortOrder": 6
+            },
+            {
+              "category": "04-2020",
+              "value": 0.33,
+              "SortOrder": 7
+            },
+            {
+              "category": "05-2020",
+              "value": 0.22,
+              "SortOrder": 8
+            },
+            {
+              "category": "06-2020",
+              "value": 0.33,
+              "SortOrder": 9
+            },
+            {
+              "category": "07-2020",
+              "value": 0.25,
+              "SortOrder": 10
+            },
+            {
+              "category": "08-2020",
+              "value": 0.21,
+              "SortOrder": 11
+            },
+            {
+              "category": "09-2020",
+              "value": 0.2,
+              "SortOrder": 12
+            },
+            {
+              "category": "10-2020",
+              "value": 0.2,
+              "SortOrder": 13
+            },
+            {
+              "category": "11-2020",
+              "value": 0.3,
+              "SortOrder": 14
+            },
+            {
+              "category": "12-2020",
+              "value": 0.3,
+              "SortOrder": 15
+            },
+            {
+              "category": "01-2021",
+              "value": 0.3,
+              "SortOrder": 16
+            },
+            {
+              "category": "02-2021",
+              "value": 0.3,
+              "SortOrder": 17
+            },
+            {
+              "category": "03-2021",
+              "value": 0.33,
+              "SortOrder": 18
+            },
+            {
+              "category": "04-2021",
+              "value": 0.42,
+              "SortOrder": 19
+            },
+            {
+              "category": "05-2021",
+              "value": 0.4,
+              "SortOrder": 20
+            },
+            {
+              "category": "06-2021",
+              "value": 0.41,
+              "SortOrder": 21
+            },
+            {
+              "category": "07-2021",
+              "value": 0.45,
+              "SortOrder": 22
+            },
+            {
+              "category": "08-2021",
+              "value": 0.47,
+              "SortOrder": 23
+            },
+            {
+              "category": "09-2021",
+              "value": 0.5,
+              "SortOrder": 24
+            },
+            {
+              "category": "10-2021",
+              "value": 0.54,
+              "SortOrder": 25
+            },
+            {
+              "category": "11-2021",
+              "value": 0.57,
+              "SortOrder": 26
+            },
+            {
+              "category": "12-2021",
+              "value": 0.54,
+              "SortOrder": 27
+            },
+            {
+              "category": "01-2022",
+              "value": 0.54,
+              "SortOrder": 28
+            },
+            {
+              "category": "02-2022",
+              "value": 0.5,
+              "SortOrder": 29
+            },
+            {
+              "category": "03-2022",
+              "value": 0.46,
+              "SortOrder": 30
+            },
+            {
+              "category": "04-2022",
+              "value": 0.51,
+              "SortOrder": 31
+            },
+            {
+              "category": "05-2022",
+              "value": 0.52,
+              "SortOrder": 32
+            },
+            {
+              "category": "06-2022",
+              "value": 0.51,
+              "SortOrder": 33
+            },
+            {
+              "category": "07-2022",
+              "value": 0.57,
+              "SortOrder": 34
+            },
+            {
+              "category": "08-2022",
+              "value": 0.58,
+              "SortOrder": 35
+            },
+            {
+              "category": "09-2022",
+              "value": 0.58,
+              "SortOrder": 36
+            },
+            {
+              "category": "10-2022",
+              "value": 0.57,
+              "SortOrder": 37
+            },
+            {
+              "category": "11-2022",
+              "value": 0.6,
+              "SortOrder": 38
+            },
+            {
+              "category": "12-2022",
+              "value": 0.55,
+              "SortOrder": 39
+            },
+            {
+              "category": "01-2023",
+              "value": 0.54,
+              "SortOrder": 40
+            },
+            {
+              "category": "02-2023",
+              "value": 0.55,
+              "SortOrder": 41
+            },
+            {
+              "category": "03-2023",
+              "value": 0.55,
+              "SortOrder": 42
+            },
+            {
+              "category": "04-2023",
+              "value": 0.57,
+              "SortOrder": 43
+            },
+            {
+              "category": "05-2023",
+              "value": 0.55,
+              "SortOrder": 44
+            },
+            {
+              "category": "06-2023",
+              "value": 0.29,
+              "SortOrder": 45
+            },
+            {
+              "category": "07-2023",
+              "value": 0.56,
+              "SortOrder": 46
+            }
+          ]
+        }
+      ]
+    },
+    "indexGenType": {
+      "genType": "New/Recalculated",
+      "recalMonth": "Aug'23"
+    },
+    "statusCode": 200,
+    "statusMsg": "Success",
+    "indexPublishedDay": "21-09-2023",
+    "totalExecutionTime": "00:01:03",
+    "uniqueRequestId": "20230921120909"
+  }
