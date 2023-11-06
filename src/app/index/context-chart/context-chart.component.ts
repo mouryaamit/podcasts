@@ -122,6 +122,10 @@ export class ContextChartComponent implements OnInit {
             .tickSize(0)
             .tickValues(y_left_coordinates);
 
+        const yAxis_graphLines = d3.axisLeft(y1)
+            .tickSize([-width - 25])
+            .tickValues(y_left_coordinates);
+
         // Has to write one more axes for lines on graph or append lines for left yaxis
         const yAxis_right_for_iip = d3.axisRight(y2)
             // .tickSize(0);
@@ -169,6 +173,11 @@ export class ContextChartComponent implements OnInit {
             .attr("x", "0em")
             .attr("y", "-1.3em");
 
+        svg.append("g")
+            .attr("stroke-width", "0.1")
+            .attr("class", "y_left_points")
+            .call(yAxis_graphLines);
+        
         const x_axis_months = svg.append("g")
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")
