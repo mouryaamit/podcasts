@@ -1220,26 +1220,34 @@ export class InsightsChartComponent implements OnInit {
             .append('svg')
             .attr('height', 500)
             .attr("width", 40)
-            .attr('transform', "translate(0, 0)");
+            .attr('transform', "translate(0, 5)");
 
         svgY_left.append('g')
-            .attr('class', 'y_axis_left')
+            .attr('class', 'y_left_points')
             .call(yAxis_left)
             .attr('dx', '-0.3em')
-            .attr('transform', "translate(24, 0)")
+            .attr('transform', "translate(20, 5)")
             .style("color", "#B2B2B2")
-            .style("text-anchor", "middle");
+            .style("text-anchor", "start");
+
+        svgY_left.append("text")
+            .attr("x", "-250")
+            .attr("y", "10")
+            .style("text-anchor", "start")
+            .attr("fill", "#2FB36B")
+            .attr("transform", "rotate(-90)")
+            .text("Jocata Sumpoorn");
 
         svgY_left.select(".domain").attr("stroke", "none");
 
         // Creating svg with dimensions to chart
         const svg = d3.select("#insights_graph_svg")
             .append("svg") //append svg element inside #chart
-            // .attr("width", default_width + (margin.left + margin.right)) //set width
-            // .attr("height", default_height) //set height
-            .style("max-width", default_width + (margin.left + margin.right)) //set width
-            .style("max-height", default_height) //set height
-            .attr("viewBox", `0 0 ${default_width + (margin.left + margin.right)} ${default_height}`)
+            .attr("width", default_width + (margin.left + margin.right)) //set width
+            .attr("height", default_height) //set height
+            // .style("max-width", default_width + (margin.left + margin.right)) //set width
+            // .style("max-height", default_height) //set height
+            // .attr("viewBox", `0 0 ${default_width + (margin.left + margin.right)} ${default_height}`)
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`)
             ;
@@ -1248,16 +1256,30 @@ export class InsightsChartComponent implements OnInit {
             .append('svg')
             .attr('height', 500)
             .attr("width", 150)
-            .attr('transform', "translate(0, 13)");
+            .attr('transform', "translate(0, 10)");
 
-        svgY_right.append('g')
-            .attr('class', 'y_axis_right')
+        // svgY_right.append('g')
+        //     .attr('class', 'y_axis_right')
+        //     .call(yAxis_right)
+        //     .attr('dx', '-0.3em')
+        //     .attr('transform', "translate(24, 6)")
+        //     .style("color", "#B2B2B2")
+        //     .style("text-anchor", "middle");
+
+        const y_text = svgY_right.append("g")
+            .attr("stroke-width", "0.1")
+            .attr("transform", `translate(0,0)`) // sets last xaxis index align
             .call(yAxis_right)
-            .attr('dx', '-0.3em')
-            .attr('transform', "translate(24, 6)")
-            .style("color", "#B2B2B2")
-            .style("text-anchor", "middle");
-
+            .selectAll('.tick text') // select all the y tick texts
+            .style("cursor", "pointer")
+            .attr("x", function (d, i) {
+                return formatYaxisForXvalue(d, i);
+            })
+            .attr("y", function (d, i) {
+                return formatYaxisForYvalue(d, i);
+            })
+            .attr("class", function (d, i) { return `y-axis-titles y-axis-title_${i}`; })
+            ;
         svgY_right.select(".domain").attr("stroke", "none");
 
         // Adding axes to svg
@@ -1301,34 +1323,19 @@ export class InsightsChartComponent implements OnInit {
             .style("font-size", "16px")
             ;
 
-        const y_points = svgY_left.append("g")
-            .attr("stroke-width", "0")
-            .attr("class", "y_left_points")
-            .call(yAxis_left)
-            .append("text")
-            .attr("class", "axis-title")
-            .attr("x", "-9.5em")
-            .attr("y", "-2.3em")
-            .style("text-anchor", "end")
-            .attr("fill", "#2FB36B")
-            .attr("transform", "rotate(-90)")
-            .text("Jocata Sumpoorn")
-            ;
-
-        const y_text = svgY_right.append("g")
-            .attr("stroke-width", "0.1")
-            .attr("transform", `translate(${width + 21},0)`) // sets last xaxis index align
-            .call(yAxis_right)
-            .selectAll('.tick text') // select all the y tick texts
-            .style("cursor", "pointer")
-            .attr("x", function (d, i) {
-                return formatYaxisForXvalue(d, i);
-            })
-            .attr("y", function (d, i) {
-                return formatYaxisForYvalue(d, i);
-            })
-            .attr("class", function (d, i) { return `y-axis-titles y-axis-title_${i}`; })
-            ;
+        // const y_points = svgY_left.append("g")
+        //     .attr("stroke-width", "0")
+        //     .attr("class", "y_left_points")
+        //     .call(yAxis_left)
+        //     .append("text")
+        //     .attr("class", "axis-title")
+        //     .attr("x", "-9.5em")
+        //     .attr("y", "-2.3em")
+        //     .style("text-anchor", "end")
+        //     .attr("fill", "#2FB36B")
+        //     .attr("transform", "rotate(-90)")
+        //     .text("Jocata Sumpoorn")
+        //     ;
 
         function formatYaxisForText(d: any) {
             if (d == 0.25) {
@@ -1698,6 +1705,28 @@ export class InsightsChartComponent implements OnInit {
             let handyValues = formatHandYvaluesYaxis(d, true);
             d3.selectAll("#rect_yaxis").remove();
             svg.append('rect')
+                .attr('x', 0)
+                .attr('y', handyValues.y)
+                .attr('width', width + 119)
+                .attr('height', handyValues.h)
+                .attr("id", "rect_yaxis")
+                .attr("class", function () { // color change for different indices
+                    if (d == 1.00 || d == 0.75 || d == 0.65 || d == 0.6) {
+                        return "rect_yaxis_1";
+                    } else {
+                        return "rect_yaxis_2";
+                    }
+                })
+                .attr('stroke', 'black')
+                .style("stroke-dasharray", ("3, 1"))
+                .style("opacity", 0.3)
+                .transition()
+                .duration(1000)
+                //.ease(d3.easeCubicOut)
+                .attr('cy', function (d: any) {
+                    return d;
+                });
+            svgY_right.append('rect')
                 .attr('x', 0)
                 .attr('y', handyValues.y)
                 .attr('width', width + 119)

@@ -33,6 +33,7 @@
 #insights_graph_svg {
     float:left;
     overflow-x:scroll; 
+    overflow-y: hidden;
     /* Firefox */
     width: -moz-calc(100% - 200px);
     /* WebKit */
