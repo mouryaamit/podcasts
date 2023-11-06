@@ -79,6 +79,26 @@ export class ApiService {
         });
 
     }
+
+    /*Common function to POST form data */
+    saveFormFields(url, data) {
+        return new Promise((resolve, reject) => {
+            this.postApi(url, data, null).then(
+                (resp: any) => {
+                    if (resp && resp.errorCode == 200) {
+                        resolve(resp);
+                    } else if (resp && resp.errorMap) {
+                        reject(resp.errorMap);
+                    } else {
+                        reject(this.commonStrings.http_error);
+                    }
+                },
+                (error) => {
+                    reject(this.commonStrings.http_error);
+                }
+            );
+        });
+    }
     
     private handleError<T> (result?: T) {
         return (error: any): Observable<T> => {

@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
 import { InsightsChartComponent } from './index/insights-chart/insights-chart.component';
 import { ContextChartComponent } from './index/context-chart/context-chart.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ContextChartComponent } from './index/context-chart/context-chart.compo
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

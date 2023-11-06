@@ -296,6 +296,13 @@ main {
     }
   }
 
+  .form-control-feedback {
+    p.validation-msg {
+      color: #d9534f; 
+      font-size: $font-size-12px;
+    }
+  }
+
   textarea {
     &.form-control {
       resize: none;
@@ -2437,12 +2444,12 @@ main {
           0px 539px 151px 0px rgba(0, 0, 0, 0);
       }
 
-      p {
-        color: #494949;
-        font-family: "Alegreya Sans";
-        font-size: $font-size-16px;
-        line-height: 140.523%;
-      }
+      // p {
+      //   color: #494949;
+      //   font-family: "Alegreya Sans";
+      //   font-size: $font-size-16px;
+      //   line-height: 140.523%;
+      // }
 
       .app_contact_card_box_title {
         color: #000;
