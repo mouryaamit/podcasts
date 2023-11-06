@@ -15,7 +15,7 @@
                 type="button" role="tab" aria-controls="graph-context" aria-selected="false" (click)="scrollToRight('Context')">Context</button>
             </li>
           </ul>
-          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon">
+          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon" id="insightsInfoIcon">
             <img src="assets/icons/info.svg" class="img-fluid" />
           </a>
           <a class="d-flex d-md-none" *ngIf="contextInfoIcon" data-bs-toggle="modal" data-bs-target="#infoModal"
@@ -29,6 +29,10 @@
             <div class="index_graphs">
               <app-insights-chart [sumpoornGraphData]="sumpoornGraphData" (graphWidth)="checkInsightsGraphWidth($event)"
                 *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
+                <div id="contextMenuMobile" style="display: none" class="contextMenu">
+                  <div id="closeInfoMobile" class="close" style="cursor: pointer;">&times;</div>
+                  <div id="mobile_insights_graph_y_axis_content_info"></div>
+                </div>  
             </div>
             <div class="app_index_commentary_con">
               <div class="row gx-0">

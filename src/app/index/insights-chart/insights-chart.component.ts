@@ -777,7 +777,6 @@ export class InsightsChartComponent implements OnInit {
 
         
         function addCommentary(dataValue) {
-            console.log("addCommentary",dataValue)
             let indexValue = dataValue.value;
             let expertData = (indexData.ExpertCommentary).filter((e) => {
                 return (e.Month == dataValue.category);
@@ -790,7 +789,6 @@ export class InsightsChartComponent implements OnInit {
             });
 
             if ((expertData.length > 0) && (monthlyData.length > 0) && (graphData.length > 0)) {
-                console.log(2)
                 let monthlyC = monthlyData[0];
                 let expertC = expertData[0];
                 let graphC = graphData[0].monthList;
@@ -940,8 +938,6 @@ export class InsightsChartComponent implements OnInit {
             });
             d3.selectAll("#infoIcon_2_mobile").remove();
             addInfoIcon(default_width_c - 85, default_height_c - 120, "#commentary_graph_mobile", "infoIcon_2_mobile", svg_c);
-            $("#infoIcon_2_mobile").attr("data-bs-toggle","modal");
-            $("#infoIcon_2_mobile").attr("data-bs-target","#infoModal");
             // Add the line
             svg_c.append("path")
                 .datum(graphData)
@@ -980,30 +976,61 @@ export class InsightsChartComponent implements OnInit {
             }
             return hAndyValues;
         }
-
+        function formatYaxisForText(d: any, fromWhere: any) {
+            if (d == 0.25) {
+                return "Substantial";
+                // if(fromWhere == "info") {
+                //     return "Substantial";
+                // } else {
+                //     return "Substantial Contraction";
+                // }
+            } else if (d == 0.45) {
+                return "Significant";
+            } else if (d == 0.50) {
+                return "Moderate";
+            } else if (d == 0.52) {
+                return "Mild";
+            } else if (d == 0.54) {
+                return "Marginal";
+            } else if (d == 0.60) {
+                return "Mild";
+            } else if (d == 0.65) {
+                return "Moderate";
+            } else if (d == 0.75) {
+                return "Significant";
+            } else if (d == 1.00) {
+                return "Substantial";
+            }
+            return '';
+        }
         function addInfoIcon(icon_x, icon_y, graph_id, icon_id, selectedSvg) {
-            let icon = selectedSvg.append("g")
-                .attr("transform", `translate(${icon_x},${icon_y})`)
-                .append("svg:image")
-                .attr("xlink:href", "assets/icons/info.svg")
-                .attr('width', 15)
-                .attr('height', 15)
-                .attr("id", icon_id)
-                .style("cursor", "pointer")
-                .on("click", function (evt, d) {
+            let icon;
+            if (graph_id == "#mobile_insights_graph_svg") {
+                icon = d3.select(icon_id);
+            } else {
+                icon = selectedSvg.append("g")
+                    .attr("transform", `translate(${icon_x},${icon_y})`)
+                    .append("svg:image")
+                    .attr("xlink:href", "assets/icons/info.svg")
+                    .attr('width', 15)
+                    .attr('height', 15)
+                    .attr("id", icon_id)
+                    .style("cursor", "pointer");
+            }
+            icon.on("click", function (evt, d) {
                     // Position:
                     if (graph_id == "#mobile_insights_graph_svg") {
-                        const absX = evt.clientX + window.scrollX;
-                        const absY = evt.clientY + window.scrollY;
-                        $("#contextMenu").css('top', (absY + 20) + 'px');
-                        $("#contextMenu").css('left', (absX - 150) + 'px');
-                        $("#contextMenu").css("display", 'block');
+                        const absX = evt.clientX + window.scrollX - 190;
+                        const absY = evt.clientY + window.scrollY + 20;
+                        $("#contextMenuMobile").css('top', absY + 'px');
+                        $("#contextMenuMobile").css('left', absX + 'px');
+                        $("#contextMenuMobile").css("display", 'block');
                     } else {
-                        const absX = evt.clientX + window.scrollX + 20;
-                        const absY = evt.clientY + window.scrollY - 35;
-                        $("#contextMenu").css('top', absY + 'px');
-                        $("#contextMenu").css('left', absX + 'px');
-                        $("#contextMenu").css("display", 'block');
+                        const absX = evt.clientX + window.scrollX - 180;
+                        const absY = evt.clientY + window.scrollY - 180;
+                        $("#contextMenuMobile").css('top', absY + 'px');
+                        $("#contextMenuMobile").css('left', absX + 'px');
+                        $("#contextMenuMobile").css("display", 'block');
                     }
 
                     let indexData: any[] = [];
@@ -1012,8 +1039,10 @@ export class InsightsChartComponent implements OnInit {
                         if (startYaxisPoint == "" || startYaxisPoint.length == 0) {
                             startYaxisPoint = index;
                         } else {
+                            let value = formatYaxisForText(index, "info");
                             let da: any = new Object();
                             da.index = startYaxisPoint + "-" + index;
+                            da.value = value;
                             indexData.push(da);
                             startYaxisPoint = index;
                         }
@@ -1032,13 +1061,15 @@ export class InsightsChartComponent implements OnInit {
                                 infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                         }
                     }
-                    $("#insights_graph_y_axis_content_info").html(infodata);
+                    $("#mobile_insights_graph_y_axis_content_info").html(infodata);
                 });
 
-            $("#closeInfo").on("click", function (e) {
-                $("#contextMenu").css("display", 'none');
+            $("#closeInfoMobile").on("click", function (e) {
+                $("#contextMenuMobile").css("display", 'none');
             });
         }
+
+        addInfoIcon(0, 0, "#mobile_insights_graph_svg", "#insightsInfoIcon", null);
 
         selectionOfXaxis();
 
@@ -1082,7 +1113,7 @@ export class InsightsChartComponent implements OnInit {
 
         $("#mobile_insights_graph_svg").scrollLeft(width)
     }
-    
+
     generateInsightsGraph() {
         const mydata = this.sumpoornGraphData.IndexGeneration;
         const indexData = this.sumpoornGraphData.Commentary;
@@ -2475,4 +2506,5 @@ export class InsightsChartComponent implements OnInit {
             ;
         path.on("click", clickPoint);
     }
+
 }
