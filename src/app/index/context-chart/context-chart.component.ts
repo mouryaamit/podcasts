@@ -532,7 +532,7 @@ export class ContextChartComponent implements OnInit {
                     .style("text-anchor", "end")
                     .style('fill', gvaColorCode)
                     .attr("transform", "rotate(-90)")
-                    .html("GVA%&#9651;");
+                    .html("GVA%");
             }
         }
 
