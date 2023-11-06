@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { ApiService } from '../services/api.service'
 
 @Injectable({
@@ -12,7 +13,7 @@ export class SumpoornApiService {
 
   saveContactDetails(data) {
     return new Promise((resolve, reject) => {
-      this.apiService.saveFormFields("https://swara-staging.jocatagrid.in/swara-sumpoorn/services/contact/v1/save-contact-details", data).then(
+      this.apiService.saveFormFields(environment.swaraHost+"swara-sumpoorn/services/contact/v1/save-contact-details", data).then(
         (resp: any) => {
           resolve(resp);
         },
@@ -25,7 +26,7 @@ export class SumpoornApiService {
 
   saveSubscriptionDetails(data) {
     return new Promise((resolve, reject) => {
-      this.apiService.saveFormFields("https://swara-staging.jocatagrid.in/swara-sumpoorn/services/subscription/v1/save-subscription-details", data).then(
+      this.apiService.saveFormFields(environment.swaraHost+"swara-sumpoorn/services/subscription/v1/save-subscription-details", data).then(
         (resp: any) => {
           resolve(resp);
         },
@@ -38,7 +39,7 @@ export class SumpoornApiService {
 
   saveScheduleDemoFormDetails(data) {
     return new Promise((resolve, reject) => {
-      this.apiService.saveFormFields("https://swara-staging.jocatagrid.in/swara-sumpoorn/services/schedule/v1/save-schedule-demo-details", data).then(
+      this.apiService.saveFormFields(environment.swaraHost+"swara-sumpoorn/services/schedule/v1/save-schedule-demo-details", data).then(
         (resp: any) => {
           resolve(resp);
         },
