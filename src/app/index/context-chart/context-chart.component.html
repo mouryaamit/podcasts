@@ -45,21 +45,27 @@
       <div id="mobile_context_graph_svg" style="overflow-x:scroll;position: relative;">
       </div>
     </div>
-    <!-- <div id="mobile_context_graph_svg" class="float-chart"> </div> -->
-    <!-- d-none  -->
-    <div class="chart_desc d-md-flex">
-      <div id="iipDescDiv" class="iipContent">
-        <div class="iipLegendText"><input type="checkbox" id="IIPCheckboxMob" class="context_checkboxes_mob"
-            value="IIP"/> &nbsp;*IIP</div>
+    <div class="d-flex justify-content-around my-5">
+      <div class="checkboxes__item" [ngClass]="{'active': isIIPChecked}">
+        <label class="checkbox__label">
+          <input type="checkbox" (change)="onCheckboxChange('IIP')" checked/>
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__content table-blue">*IIP</div>
+        </label>
       </div>
-      <div id="pmiDescDiv" class="pmiContent">
-        <div class="pmiLegendText"><input type="checkbox" id="PMICheckboxMob" class="context_checkboxes_mob"
-            value="PMI" /> &nbsp;*PMI&#8482;</div>
+      <div class="checkboxes__item" [ngClass]="{'active': isPMIChecked}">
+        <label class="checkbox__label">
+          <input type="checkbox" (change)="onCheckboxChange('PMI')"/>
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__content table-orange">*PMI™</div>
+        </label>
       </div>
-      <div id="gvaDescDiv" class="gvaContent">
-        <div class="gvaLegendText"><input type="checkbox" id="GVACheckboxMob" class="context_checkboxes_mob"
-            value="GVA" />
-          &nbsp;*GVA Growth %</div>
+      <div class="checkboxes__item" [ngClass]="{'active': isGVAChecked}">
+        <label class="checkbox__label">
+          <input type="checkbox" (change)="onCheckboxChange('GVA')" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__content table-darkblue">*GVA</div>
+        </label>
       </div>
     </div>
   </div>

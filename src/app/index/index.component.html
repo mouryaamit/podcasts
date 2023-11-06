@@ -15,7 +15,10 @@
                 type="button" role="tab" aria-controls="graph-context" aria-selected="false" (click)="scrollToRight('Context')">Context</button>
             </li>
           </ul>
-          <a class="d-flex d-md-none" data-bs-toggle="modal" data-bs-target="#infoModal"
+          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon">
+            <img src="assets/icons/info.svg" class="img-fluid" />
+          </a>
+          <a class="d-flex d-md-none" *ngIf="contextInfoIcon" data-bs-toggle="modal" data-bs-target="#infoModal"
             (click)="showInfo('contextChartInfo')">
             <img src="assets/icons/info.svg" class="img-fluid" />
           </a>
@@ -95,6 +98,10 @@
                 </div> 
                 <!-- Mobile Commentary -->
                 <div class="col-12 d-block d-lg-none">
+                  <div class="commentary_download my-3">
+                    <span>Download PDF</span>
+                    <img src="assets/icons/download-icon.svg" class="img-fluid" />
+                  </div>
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link active" id="indexDetails-tab" data-bs-toggle="tab" data-bs-target="#indexDetails"

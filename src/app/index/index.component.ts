@@ -17,6 +17,8 @@ export class IndexComponent implements OnInit {
     infoItemToShow: string | undefined;
     insightsGraphWidth: any;
     contextGraphWidth: any;
+    insightsInfoIcon = true;
+    contextInfoIcon = false;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
 
@@ -35,37 +37,38 @@ export class IndexComponent implements OnInit {
         {
             "title": "Type of Data",
             "items": ["Actual manufacturing production", "Opinion based", "Actual MSME monthly sales data reflected from GSTIN returns of credit-seeking entities"]
-          },
-          {
+        },
+        {
             "title": "Sample Size",
             "items": ["--", "400 companies", "1000 MSMEs per month (minimum) <br/> 2000 MSMEs per month (desirable)"]
-          },
-          {
+        },
+        {
             "title": "Factors Involved",
             "items": ["Production data based on NIC (National Industrial Classification) codes", "Survey based", "Fact based - Delta of % of growing & declining GSTINs combined with amplitude of change in turnover."]
-          },
-          {
+        },
+        {
             "title": "Generation - Frequency & Date",
             "items": ["Monthly <br/> 7 weeks later, from the current month", "Monthly <br/> 1st week of succeeding month", "Monthly <br/> 4 weeks later, from the current month"]
-          },
-          {
+        },
+        {
             "title": "Index Type and Scale",
             "items": [
-              "Cumulative index <br/> Base year: 2011-12 <br/> Base value: 100",
-              "Composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 100",
-              "Relative amplitude adjusted composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 1"
+                "Cumulative index <br/> Base year: 2011-12 <br/> Base value: 100",
+                "Composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 100",
+                "Relative amplitude adjusted composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 1"
             ]
-          },
-          {
+        },
+        {
             "title": "Seasonality Adjusted?",
             "items": ["No", "Yes", "Yes"]
-          }
+        }
     ]
 
     // Chart & Table Info Icon Click
     showInfo(item: string) {
         this.infoItemToShow = item;
     }
+
     ngOnInit(): void {
         this.graphApiService.getSumpoornGraphData().then((data) => {
             if (data) {
@@ -75,7 +78,7 @@ export class IndexComponent implements OnInit {
         }, (error) => {
             console.error("getSumpoornGraphData Error", error);
         })
-    }    
+    }
 
     getContextGraphData() {
         this.graphApiService.getIipGraphData().then((IIPGraphData) => {
@@ -97,25 +100,28 @@ export class IndexComponent implements OnInit {
         let getGvaGraphData = () => {
             this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
                 this.gvaGraphData = GvaGraphData;
-                
+
             }, (error) => {
                 console.error("getSumpoornGraphData Error", error);
             });
         }
     }
-    scrollToRight(tab){
-        if(tab === 'Insights'){
+    scrollToRight(tab) {
+        this.insightsInfoIcon = tab === 'Insights';
+        this.contextInfoIcon = tab === 'Context';
+        
+        if (tab === 'Insights') {
             $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth)
         } else {
             $("#mobile_context_graph_svg").scrollLeft(this.contextGraphWidth)
         }
     }
 
-    checkInsightsGraphWidth(event){
+    checkInsightsGraphWidth(event) {
         this.insightsGraphWidth = event;
     }
 
-    checkContextGraphWidth(event){
+    checkContextGraphWidth(event) {
         this.contextGraphWidth = event;
     }
 }

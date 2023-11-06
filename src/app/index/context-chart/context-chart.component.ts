@@ -7,8 +7,9 @@ import * as $ from 'jquery';
     styleUrls: ['./context-chart.component.scss']
 })
 export class ContextChartComponent implements OnInit {
-
-
+    isIIPChecked = true;
+    isPMIChecked = false;
+    isGVAChecked = false;
     @Input() sumpoornGraphData;
     @Input() iipGraphData;
     @Input() pmiGraphData;
@@ -16,6 +17,17 @@ export class ContextChartComponent implements OnInit {
     @Output() graphWidth = new EventEmitter<number>();
 
     constructor() { }
+    
+    // Change Background Logic for Checkbox checked
+    onCheckboxChange(checkboxName: string) {
+        if (checkboxName === 'IIP') {
+            this.isIIPChecked = !this.isIIPChecked;
+        } else if (checkboxName === 'PMI') {
+            this.isPMIChecked = !this.isPMIChecked;
+        } else if (checkboxName === 'GVA') {
+            this.isGVAChecked = !this.isGVAChecked;
+        }
+    }
 
     ngOnInit(): void {
         this.generateContextGraph();
@@ -36,10 +48,10 @@ export class ContextChartComponent implements OnInit {
             bottom: 100,
             left: 0
         },
-        default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
-        default_height = 500,
-        width = default_width - margin.left - margin.right,
-        height = default_height - margin.top - margin.bottom;
+            default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
+            default_height = 500,
+            width = default_width - margin.left - margin.right,
+            height = default_height - margin.top - margin.bottom;
         this.graphWidth.emit(width);
         const iipColorCode = '#24C0E2'; //2E8DFF
         const pmiColorCode = '#E1861B';
@@ -57,17 +69,17 @@ export class ContextChartComponent implements OnInit {
         // Scales
         // Add X axis 1 --> it is a month format
         const x1 = d3.scaleTime()
-            .domain(d3.extent(mydata, function (d:any) { return parseDate(d.category); }))
+            .domain(d3.extent(mydata, function (d: any) { return parseDate(d.category); }))
             .range([0, width]);
 
         // Add X axis 2 --> it is a year format
         const x2 = d3.scaleTime()
-            .domain(d3.extent(mydata, function (d:any) { return parseDate(d.category); }))
+            .domain(d3.extent(mydata, function (d: any) { return parseDate(d.category); }))
             .range([0, width]);
 
         // Add X axis 3 --> it is a month number format
         const x3 = d3.scaleTime()
-            .domain(d3.extent(mydata, function (d:any) { return parseDate(d.category); }))
+            .domain(d3.extent(mydata, function (d: any) { return parseDate(d.category); }))
             .range([10, width + 10]);
 
         // Add Y axis - left side
@@ -93,13 +105,13 @@ export class ContextChartComponent implements OnInit {
             .domain([d3.min(dataForGVA, function (d) { return d.value - 10; }), d3.max(dataForGVA, function (d) { return d.value + 10; })])
             .nice()
             .range([height, 0]);
-        
+
         //Axes
         const xAxis_month_number = d3.axisBottom(x3)
             .tickFormat(d3.timeFormat('%m'))
             .tickSize((height))
             .ticks(width / 12);
-        
+
         const xAxis_month_name = d3.axisBottom(x1)
             .tickSize([-(height)])
             .ticks(width / 12)
@@ -129,7 +141,7 @@ export class ContextChartComponent implements OnInit {
 
         // Has to write one more axes for lines on graph or append lines for left yaxis
         const yAxis_right_for_iip = d3.axisRight(y2)
-            // .tickSize(0);
+        // .tickSize(0);
         const yAxis_right_for_pmi = d3.axisRight(y3);
 
         const yAxis_right_for_gva = d3.axisRight(y4);
@@ -147,7 +159,7 @@ export class ContextChartComponent implements OnInit {
             .attr('transform', "translate(24, 6)")
             .style("color", "#2FB36B")
             .style("text-anchor", "end");
-            
+
         svgY.append("text")
             .attr("x", "-460")
             .attr("y", "15")
@@ -156,7 +168,7 @@ export class ContextChartComponent implements OnInit {
             .attr("transform", "rotate(-90)")
             .text("Sumpoorn");
 
-        svgY.select(".domain").attr("stroke", "none");        
+        svgY.select(".domain").attr("stroke", "none");
 
         const svg = d3.select("#mobile_context_graph_svg")
             .append("svg") //append svg element inside #chart
@@ -178,13 +190,13 @@ export class ContextChartComponent implements OnInit {
             .attr("stroke-width", "0.1")
             .attr("class", "y_left_points")
             .call(yAxis_graphLines);
-        
+
         const x_axis_months = svg.append("g")
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")
             .attr("class", "x_month_name_context")
             .call(xAxis_month_name)
-            .selectAll(".tick text") 
+            .selectAll(".tick text")
             .attr("x", "-1.8em")
             .attr("y", "0.5em")
             .attr("transform", function (d) {
@@ -295,7 +307,7 @@ export class ContextChartComponent implements OnInit {
             const indexOfObj = mydata.findIndex(x => x.category == date);
             d3.select(`.x_month_name_context_${indexOfObj}`).classed("active", true);
         }
-        
+
         function getPointsOnCurve(category, value) {
             let co_ord = { x: 0, y: 0 };
             let x_value = x1(parseDate(category));
@@ -328,19 +340,19 @@ export class ContextChartComponent implements OnInit {
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                        .style("left", Math.ceil(mousePointer.x + 15) + "px")
-                        .style("top", Math.ceil(mousePointer.y + 20) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 20) + "px");
             } else {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                        .style("left", Math.ceil(mousePointer.x + 15) + "px")
-                        .style("top", Math.ceil(mousePointer.y + 20) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 20) + "px");
             }
         }
 
-        
+
         function addLinesForGraph() {
             let years: any = [];
             mydata.forEach(element => {
@@ -546,7 +558,7 @@ export class ContextChartComponent implements OnInit {
                     .curve(d3.curveCatmullRom.alpha(0))
                 );
         }
-        
+
         function addPMILine(data) {
             // Add PMI line
             PMILine = svg.append("path")
@@ -634,12 +646,12 @@ export class ContextChartComponent implements OnInit {
         $("#IIPCheckboxMob").attr("checked", "true");
         refreshYaxisTicks('iip');
         addIIPLine(dataForIIP);
-        
+
 
         var isIipCheckBoxEnabled = $("#IIPCheckboxMob") ? $("#IIPCheckboxMob").attr("checked") == 'true' ? true : false : false,
             isPmiCheckBoxEnabled = $("#PMICheckboxMob") ? $("#PMICheckboxMob").attr("checked") == 'true' ? true : false : false,
             isGvaCheckBoxEnabled = $("#GVACheckboxMob") ? $("#GVACheckboxMob").attr("checked") == 'true' ? true : false : false;
-        
+
         $(".context_checkboxes_mob").on("change", function (event) {
             if (event.target["value"] == 'IIP' && $(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = true;
@@ -680,7 +692,7 @@ export class ContextChartComponent implements OnInit {
                     showGVA();
                 } else if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == false) {
                     showIIP();
-                } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
+                } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     showGVA();
                 }
             } else if (event.target["value"] == 'PMI' && !$(event.target).prop("checked")) {
@@ -743,9 +755,9 @@ export class ContextChartComponent implements OnInit {
             bottom: 60,
             left: 65
         },
-        //1366
-        width = 1060 - margin.left - margin.right,
-        height = 450 - margin.top - margin.bottom;
+            //1366
+            width = 1060 - margin.left - margin.right,
+            height = 450 - margin.top - margin.bottom;
         const iipColorCode = '#24C0E2'; //2E8DFF
         const pmiColorCode = '#E1861B';
         const gvaColorCode = '#3E3EC8'; //5451FF
