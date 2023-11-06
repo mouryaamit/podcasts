@@ -1,3 +1,22 @@
-#verticalSVG svg {
+
+#mobile_insights_graph_svg {
+    overflow-x:scroll; 
+    /* Firefox */
+    width: -moz-calc(100% - 40px);
+    /* WebKit */
+    width: -webkit-calc(100% - 40px);
+    /* Opera */
+    width: -o-calc(100% - 40px);
+    /* Standard */
+    width: calc(100% - 40px);
     position: relative;
+}
+
+#mobile_insights_graph_right_vertical_svg {
+    float:right;
+    width: 40px;
+    position: relative;
+    svg {
+        position: relative;
+    }
 }

@@ -142,7 +142,7 @@ export class ContextChartComponent implements OnInit {
         const yAxis_right_for_gva = d3.axisRight(y4)
             ;
 
-        const svgY = d3.select('#verticalSVG_context')
+        const svgY = d3.select('#mobile_context_graph_y_axis_svg')
             .append('svg')
             .attr('height', 500)
             .attr("width", 30)
@@ -166,7 +166,7 @@ export class ContextChartComponent implements OnInit {
 
         svgY.select(".domain").attr("stroke", "none");        
 
-        const svg = d3.select("#mobile_my_dataviz_context")
+        const svg = d3.select("#mobile_context_graph_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", default_width + (margin.left)) //set width
             .attr("height", default_height) //set height
@@ -266,12 +266,12 @@ export class ContextChartComponent implements OnInit {
         var svgY_gva;
 
         function initializeTooltip() {
-            tooltip = d3.select("#mobile_my_dataviz_context") // can be body
+            tooltip = d3.select("#mobile_context_graph_svg") // can be body
                 .append("div")
                 .attr("class", "tooltip-area")
                 .style("opacity", 0)
             ;
-            radiation = d3.select("#mobile_my_dataviz_context") // can be body
+            radiation = d3.select("#mobile_context_graph_svg") // can be body
                 .append("div")
                 .attr("class", "animating_circle")
                 .style("opacity", 0)
@@ -515,7 +515,7 @@ export class ContextChartComponent implements OnInit {
         // IIP, PMI, GVA Graph changes start
         function refreshYaxisTicks(tickName) {
             if (tickName == 'iip') {
-                svgY_iip = d3.select('#verticalSVG_context_iip')
+                svgY_iip = d3.select('#mobile_context_graph_y_axis_iip_svg')
                     .append('svg')
                     .attr('height', 500)
                     .attr("width", 35)
@@ -546,7 +546,7 @@ export class ContextChartComponent implements OnInit {
                     .text("IIP")
                     ;
             } else if (tickName == 'pmi') {
-                svgY_pmi = d3.select('#verticalSVG_context_pmi')
+                svgY_pmi = d3.select('#mobile_context_graph_y_axis_pmi_svg')
                     .append('svg')
                     .attr('height', 500)
                     .attr("width", 35)
@@ -578,7 +578,7 @@ export class ContextChartComponent implements OnInit {
 
 
             } else if (tickName == 'gva') {
-                svgY_gva = d3.select('#verticalSVG_context_gva')
+                svgY_gva = d3.select('#mobile_context_graph_y_axis_gva_svg')
                     .append('svg')
                     .attr('height', 500)
                     .attr("width", 35)
@@ -718,7 +718,7 @@ export class ContextChartComponent implements OnInit {
             refreshYaxisTicks('gva');
         }
 
-        $("#IIPCheckboxMob").attr("checked", true);
+        $("#IIPCheckboxMob").attr("checked", "true");
         refreshYaxisTicks('iip');
         addIIPLine(dataForIIP);
         
@@ -728,7 +728,7 @@ export class ContextChartComponent implements OnInit {
             isGvaCheckBoxEnabled = $("#GVACheckboxMob") ? $("#GVACheckboxMob").attr("checked") == 'true' ? true : false : false;
         
         $(".context_checkboxes_mob").on("change", function (event) {
-            if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
+            if (event.target["value"] == 'IIP' && $(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = true;
 
                 refreshYaxisTicks('iip')
@@ -742,7 +742,7 @@ export class ContextChartComponent implements OnInit {
                 } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     showGVA();
                 }
-            } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'IIP' && !$(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = false;
 
                 removeIIPLine();
@@ -756,7 +756,7 @@ export class ContextChartComponent implements OnInit {
                 } else if (isPmiCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     showGVA();
                 }
-            } else if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'PMI' && $(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = true;
 
                 refreshYaxisTicks('pmi');
@@ -770,7 +770,7 @@ export class ContextChartComponent implements OnInit {
                 } else if(isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     showGVA();
                 }
-            } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'PMI' && !$(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = false;
 
                 removePMILine();
@@ -784,7 +784,7 @@ export class ContextChartComponent implements OnInit {
                 } else if (isIipCheckBoxEnabled == false && isGvaCheckBoxEnabled == true) {
                     showGVA();
                 }
-            } else if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'GVA' && $(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = true;
 
                 refreshYaxisTicks('gva');
@@ -798,7 +798,7 @@ export class ContextChartComponent implements OnInit {
                 } else if (isIipCheckBoxEnabled == false && isPmiCheckBoxEnabled == true) {
                     showPMI();
                 }
-            } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'GVA' && !$(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = false;
 
                 removeGVALine();
@@ -924,7 +924,7 @@ export class ContextChartComponent implements OnInit {
         const yAxis_right_for_gva = d3.axisRight(y4)
             ;
 
-        const svg = d3.select("#my_dataviz_context")
+        const svg = d3.select("#context_graph_svg")
             .append("svg") //append svg element inside #chart
             // .attr("width", width + margin.left + margin.right + 100) //set width
             // .attr("height", height + margin.top + margin.bottom + 30) //set height
@@ -1023,12 +1023,12 @@ export class ContextChartComponent implements OnInit {
         var yAxis_right_for_gva_tick;
         // refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
 
-        const tooltip = d3.select("#my_dataviz_context") // can be body
+        const tooltip = d3.select("#context_graph_svg") // can be body
             .append("div")
             .attr("class", "tooltip-area")
             .style("opacity", 0)
             ;
-        const radiation = d3.select("#my_dataviz_context") // can be body
+        const radiation = d3.select("#context_graph_svg") // can be body
             .append("div")
             .attr("class", "animating_circle")
             .style("opacity", 0)
@@ -1080,9 +1080,9 @@ export class ContextChartComponent implements OnInit {
             isPmiCheckBoxEnabled: boolean = $("#PMICheckbox") ? $("#PMICheckbox").attr("checked") ? true : false : false,
             isGvaCheckBoxEnabled: boolean = $("#GVACheckbox") ? $("#GVACheckbox").attr("checked") ? true : false : false
         d3.selectAll(".context_checkboxes").on("change", function (event) {
-            if (event.target.value == 'IIP' && $(event.target).prop("checked")) {
+            if (event.target["value"] == 'IIP' && $(event.target).prop("checked")) {
                 iipCheckBoxEnabled();
-            } else if (event.target.value == 'IIP' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'IIP' && !$(event.target).prop("checked")) {
                 isIipCheckBoxEnabled = false;
                 removeIIPLine();
                 if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
@@ -1099,7 +1099,7 @@ export class ContextChartComponent implements OnInit {
                 }
                 d3.select("#iipYaxisTxt").remove();
             }
-            if (event.target.value == 'PMI' && $(event.target).prop("checked")) {
+            if (event.target["value"] == 'PMI' && $(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = true;
                 addPMILine(dataForPMI);
                 if (isIipCheckBoxEnabled == true) {
@@ -1115,7 +1115,7 @@ export class ContextChartComponent implements OnInit {
                         refreshYaxisTicks('gva', yAxisTickSpace[1], yAxisTickNameSpace[1])
                     }
                 }
-            } else if (event.target.value == 'PMI' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'PMI' && !$(event.target).prop("checked")) {
                 isPmiCheckBoxEnabled = false;
                 removePMILine();
                 if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
@@ -1127,7 +1127,7 @@ export class ContextChartComponent implements OnInit {
                 }
                 d3.select("#pmiYaxisTxt").remove();
             }
-            if (event.target.value == 'GVA' && $(event.target).prop("checked")) {
+            if (event.target["value"] == 'GVA' && $(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = true;
                 if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
                     refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2]);
@@ -1139,7 +1139,7 @@ export class ContextChartComponent implements OnInit {
                     refreshYaxisTicks('gva', yAxisTickSpace[0], yAxisTickNameSpace[0])
                 }
                 addGVALine(dataForGVA);
-            } else if (event.target.value == 'GVA' && !$(event.target).prop("checked")) {
+            } else if (event.target["value"] == 'GVA' && !$(event.target).prop("checked")) {
                 isGvaCheckBoxEnabled = false;
                 removeGVALine();
                 d3.select("#gvaYaxisTxt").remove();

@@ -120,7 +120,7 @@ export class InsightsChartComponent implements OnInit {
             )
             ;
 
-        const svgY = d3.select('#verticalSVG')
+        const svgY = d3.select('#mobile_insights_graph_right_vertical_svg')
             .append('svg')
             .attr('height', 500)
             .attr("width", 40)
@@ -237,7 +237,7 @@ export class InsightsChartComponent implements OnInit {
             ;
 
         // Creating svg with dimensions to chart
-        const svg = d3.select("#mobile_my_dataviz_insights")
+        const svg = d3.select("#mobile_insights_graph_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", default_width + (margin.left)) //set width
             .attr("height", default_height) //set height
@@ -660,7 +660,7 @@ export class InsightsChartComponent implements OnInit {
             d3.selectAll(".y-axis-titles").classed("select", false);
         };
 
-        d3.select("#mobile_my_dataviz_insights") //.insights_graph, .app_index_chart_con
+        d3.select("#mobile_insights_graph_svg") //.insights_graph, .app_index_chart_con
             .on("mouseleave", (event) => {
                 removeRectsSelection();
                 removeXaxisTitleSelection();
@@ -879,19 +879,19 @@ export class InsightsChartComponent implements OnInit {
         }
 
         function initializeTooltip() {
-            tooltip = d3.select("#mobile_my_dataviz_insights")
+            tooltip = d3.select("#mobile_insights_graph_svg")
                 .append("div")
                 .attr("class", "tooltip-area")
                 .style("opacity", 0)
                 ;
 
-            selectedPoint = d3.select("#mobile_my_dataviz_insights")
+            selectedPoint = d3.select("#mobile_insights_graph_svg")
                 .append("div")
                 .attr("class", "focus_circle")
                 .style("opacity", 0)
                 ;
 
-            radiation = d3.select("#mobile_my_dataviz_insights")
+            radiation = d3.select("#mobile_insights_graph_svg")
                 .append("div")
                 .attr("class", "animating_circle")
                 .style("opacity", 0)
@@ -1194,7 +1194,7 @@ export class InsightsChartComponent implements OnInit {
                 .style("cursor", "pointer")
                 .on("click", function (evt, d) {
                     // Position:
-                    if (graph_id == "#mobile_my_dataviz_insights") {
+                    if (graph_id == "#mobile_insights_graph_svg") {
                         const absX = evt.clientX + window.scrollX;
                         const absY = evt.clientY + window.scrollY;
                         $("#contextMenu").css('top', (absY + 20) + 'px');
@@ -1236,7 +1236,7 @@ export class InsightsChartComponent implements OnInit {
                                 infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                         }
                     }
-                    $("#yaxisContentInfo").html(infodata);
+                    $("#insights_graph_y_axis_content_info").html(infodata);
                 });
 
             $("#closeInfo").on("click", function (e) {
@@ -1389,7 +1389,7 @@ export class InsightsChartComponent implements OnInit {
             ;
 
         // Creating svg with dimensions to chart
-        const svg = d3.select("#my_dataviz_insights")
+        const svg = d3.select("#insights_graph_svg")
             .append("svg") //append svg element inside #chart
             // .attr("width", default_width + (margin.left + margin.right)) //set width
             // .attr("height", default_height) //set height
@@ -1824,7 +1824,7 @@ export class InsightsChartComponent implements OnInit {
             d3.selectAll(".y-axis-titles").classed("select", false);
         };
 
-        d3.select("#my_dataviz_insights") //.insights_graph, .app_index_chart_con
+        d3.select("#insights_graph_svg") //.insights_graph, .app_index_chart_con
             .on("mouseleave", (event) => {
                 removeRectsSelection();
                 removeXaxisTitleSelection();
@@ -2086,19 +2086,19 @@ export class InsightsChartComponent implements OnInit {
         }
 
         function initializeTooltip() {
-            tooltip = d3.select("#my_dataviz_insights")
+            tooltip = d3.select("#insights_graph_svg")
                 .append("div")
                 .attr("class", "tooltip-area")
                 .style("opacity", 0)
                 ;
 
-            selectedPoint = d3.select("#my_dataviz_insights")
+            selectedPoint = d3.select("#insights_graph_svg")
                 .append("div")
                 .attr("class", "focus_circle")
                 .style("opacity", 0)
                 ;
 
-            radiation = d3.select("#my_dataviz_insights")
+            radiation = d3.select("#insights_graph_svg")
                 .append("div")
                 .attr("class", "animating_circle")
                 .style("opacity", 0)
@@ -2460,7 +2460,7 @@ export class InsightsChartComponent implements OnInit {
                 .style("cursor", "pointer")
                 .on("click", function (evt, d) {
                     // Position:
-                    if (graph_id == "#my_dataviz_insights") {
+                    if (graph_id == "#insights_graph_svg") {
                         const absX = evt.clientX + window.scrollX;
                         const absY = evt.clientY + window.scrollY;
                         $("#contextMenu").css('top', (absY + 20) + 'px');
@@ -2502,14 +2502,14 @@ export class InsightsChartComponent implements OnInit {
                                 infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
                         }
                     }
-                    $("#yaxisContentInfo").html(infodata);
+                    $("#insights_graph_y_axis_content_info").html(infodata);
                 });
 
             $("#closeInfo").on("click", function (e) {
                 $("#contextMenu").css("display", 'none');
             });
         }
-        addInfoIcon(default_width - 35, 5, "#my_dataviz_insights", "infoIcon_1", svg);
+        addInfoIcon(default_width - 35, 5, "#insights_graph_svg", "infoIcon_1", svg);
 
         selectionOfXaxis();
 
