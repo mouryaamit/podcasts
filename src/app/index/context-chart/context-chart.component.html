@@ -48,21 +48,24 @@
     <div class="d-flex justify-content-around my-5">
       <div class="checkboxes__item" [ngClass]="{'active': isIIPChecked}">
         <label class="checkbox__label">
-          <input type="checkbox" (change)="onCheckboxChange('IIP')" checked/>
+          <input type="checkbox" (change)="onCheckboxChange('IIP')"  id="IIPCheckboxMob" class="context_checkboxes_mob"
+          value="IIP"/>
           <div class="checkbox__checkmark"></div>
           <div class="checkbox__content table-blue">*IIP</div>
         </label>
       </div>
       <div class="checkboxes__item" [ngClass]="{'active': isPMIChecked}">
         <label class="checkbox__label">
-          <input type="checkbox" (change)="onCheckboxChange('PMI')"/>
+          <input type="checkbox" (change)="onCheckboxChange('PMI')" id="PMICheckboxMob" class="context_checkboxes_mob"
+          value="PMI"/>
           <div class="checkbox__checkmark"></div>
           <div class="checkbox__content table-orange">*PMI™</div>
         </label>
       </div>
       <div class="checkboxes__item" [ngClass]="{'active': isGVAChecked}">
         <label class="checkbox__label">
-          <input type="checkbox" (change)="onCheckboxChange('GVA')" />
+          <input type="checkbox" (change)="onCheckboxChange('GVA')" id="GVACheckboxMob" class="context_checkboxes_mob"
+          value="GVA"/>
           <div class="checkbox__checkmark"></div>
           <div class="checkbox__content table-darkblue">*GVA</div>
         </label>
