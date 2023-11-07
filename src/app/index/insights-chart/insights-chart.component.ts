@@ -225,7 +225,7 @@ export class InsightsChartComponent implements OnInit {
             .attr("class", "x_month_num")
             .call(xAxis_month_number)
             .selectAll(".tick text")
-            .attr("x", "0em")
+            .attr("x", "0.1em")
             .attr("y", "-1.3em");
 
         const month_name = svg.append("g")
