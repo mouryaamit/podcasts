@@ -14,4 +14,8 @@ export class AppComponent implements OnInit {
       // disable: window.innerWidth < 768
     });
   }
+
+  hideErrorModal(){
+    $("#errorsModal").hide();
+  }
 }

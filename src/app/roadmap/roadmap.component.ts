@@ -65,4 +65,8 @@ export class RoadmapComponent implements OnInit {
     
   }
 
+  hideSuccessModal(){
+    $("#successModal").hide();
+  }
+
 }

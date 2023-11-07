@@ -67,4 +67,8 @@ export class ContactComponent implements OnInit {
     
   }
 
+  hideSuccessModal(){
+    $("#successModal").hide();
+  }
+
 }

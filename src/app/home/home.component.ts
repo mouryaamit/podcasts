@@ -98,4 +98,8 @@ export class HomeComponent implements OnInit {
     
   }
 
+  hideSuccessModal(){
+    $("#successModal").hide();
+  }
+
 }
