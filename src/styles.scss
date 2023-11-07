@@ -2029,7 +2029,54 @@ main {
         }
       }
     }
-    
+
+    .insights_chart_info_container {
+      width: max-content;
+      position: absolute;
+      top: 4rem;
+      right: 1rem;
+      background: $app-white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 2px 4px 0px rgba(0, 0, 0, 0.1), -1px 7px 7px 0px rgba(0, 0, 0, 0.09),
+        -1px 16px 9px 0px rgba(0, 0, 0, 0.05),
+        -2px 28px 11px 0px rgba(0, 0, 0, 0.01),
+        -3px 43px 12px 0px rgba(0, 0, 0, 0);
+      padding: 1rem;
+      z-index: 99;
+      .chart_info_content {
+        .chart_info_title {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 119.2%; /* 15.496px */
+          margin-bottom: 1rem;
+          .btn-close {
+            opacity: 1;
+            margin-left: auto;
+          }
+        }
+
+        .chart_info_row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: start;
+          margin-bottom: 0.5rem;
+          margin-left: 1.25rem;
+          font-size: 13px;
+        }
+
+        &.content-green {
+          color: #228000;
+        }
+
+        &.content-red {
+          color: #830A0A;
+        }
+      }
+    }
     @media only screen and (min-width: 768px) {
       .app_index_commentary_con {
         padding-bottom: 10rem;

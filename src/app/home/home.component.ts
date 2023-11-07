@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Exclusive Bureau Partner',
-      imageSrc: 'assets/images/partner-experian.svg',
+      imageSrc: 'assets/images/partner-lead.png',
       imageAlt: 'Experian Logo'
     },
     {
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Exclusive Bureau Partner',
-      imageSrc: 'assets/images/partner-experian.svg',
+      imageSrc: 'assets/images/partner-lead.png',
       imageAlt: 'Experian Logo'
     }
   ];
