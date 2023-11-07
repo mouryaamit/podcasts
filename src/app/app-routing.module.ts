@@ -14,47 +14,47 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-    title: `Jocata Sumpoorn: India's First and Only MSME Economic Activity Index`,
+    title: `Jocata Sumpoorn: India's First and Only MSME Economic Activity Index`
   }, /*DO NOT change default root */
   {
     path: 'home',
     component: HomeComponent,
-    title: `Jocata Sumpoorn: India's First and Only MSME Economic Activity Index`,
+    title: `Jocata Sumpoorn: India's First and Only MSME Economic Activity Index`
   },
   {
     path: 'index',
     component: IndexComponent,
-    title: `Jocata Sumpoorn: Monthly Index and Other Macro Indicators for MSME Insights`,
+    title: `Jocata Sumpoorn: Monthly Index and Other Macro Indicators for MSME Insights`
   },
   {
     path: 'methodology',
     component: MethodologyComponent,
-    title: `Jocata Sumpoorn: Index Building Approach and Methodology Leveraging GST Data`,
+    title: `Jocata Sumpoorn: Index Building Approach and Methodology Leveraging GST Data`
   },
   {
     path: 'roadmap',
     component: RoadmapComponent,
-    title: `Jocata Sumpoorn: Upcoming Sub-Indices for Granular MSME Analysis`,
+    title: `Jocata Sumpoorn: Upcoming Sub-Indices for Granular MSME Analysis`
   },
   {
     path: 'about',
     component: AboutComponent,
-    title: `Jocata Sumpoorn: Teams behind the Index`,
+    title: `Jocata Sumpoorn: Teams behind the Index`
   },
   {
     path: 'contact',
     component: ContactComponent,
-    title: `Contact Us - Reach Out to Jocata and SIDBI`,
+    title: `Contact Us - Reach Out to Jocata and SIDBI`
   },
   {
     path: 'tou',
     component: TouComponent,
-    title: `Jocata Sumpoorn: Terms of Use, Disclaimer, Privacy Policy, and Intellectual Property Rights`,
+    title: `Jocata Sumpoorn: Terms of Use, Disclaimer, Privacy Policy, and Intellectual Property Rights`
   },
   {
     path: 'institution',
     component: InstitutionLoginComponent,
-    title: 'IL'
+    title: `Comprehensive Portfolio Analytics for Informed Decision-Making`
   },
   { path: '**', 
     redirectTo: 'home' 
