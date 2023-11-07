@@ -17,7 +17,7 @@ export class ContextChartComponent implements OnInit {
     @Output() graphWidth = new EventEmitter<number>();
 
     constructor() { }
-    
+
     // Change Background Logic for Checkbox checked
     onCheckboxChange(checkboxName: string) {
         if (checkboxName === 'IIP') {
@@ -450,7 +450,7 @@ export class ContextChartComponent implements OnInit {
 
         path.on("click", clickPoint);
 
-        // Sumpoorn graph changes end 
+        // Sumpoorn graph changes end
         // IIP, PMI, GVA Graph changes start
         function refreshYaxisTicks(tickName) {
             if (tickName == 'iip') {
@@ -469,12 +469,12 @@ export class ContextChartComponent implements OnInit {
                     .style("color", iipColorCode)
                     .select(".domain").attr("stroke", "none");
 
-                d3.select("#iipYaxisTxt").remove();
+                d3.select("#iipYaxisTxt_mobile").remove();
 
                 svgY_iip.append("text")
                     .attr("x", "-400")
                     .attr("y", "30")
-                    .attr("id", "iipYaxisTxt")
+                    .attr("id", "iipYaxisTxt_mobile")
                     .style("text-anchor", "end")
                     .style('fill', iipColorCode)
                     .attr("transform", "rotate(-90)")
@@ -495,12 +495,12 @@ export class ContextChartComponent implements OnInit {
                     .style("fill", pmiColorCode)
                     .select(".domain").attr("stroke", "none");
 
-                d3.select("#pmiYaxisTxt").remove();
+                d3.select("#pmiYaxisTxt_mobile").remove();
 
                 svgY_pmi.append("text").attr("opacity", "1")
                     .attr("x", "-400")
                     .attr("y", "30")
-                    .attr("id", "pmiYaxisTxt")
+                    .attr("id", "pmiYaxisTxt_mobile")
                     .style("text-anchor", "end")
                     .style('fill', pmiColorCode)
                     .attr("transform", "rotate(-90)")
@@ -523,12 +523,12 @@ export class ContextChartComponent implements OnInit {
                     .style("fill", gvaColorCode)
                     .select(".domain").attr("stroke", "none");
 
-                d3.select("#gvaYaxisTxt").remove();
+                d3.select("#gvaYaxisTxt_mobile").remove();
 
                 svgY_gva.append("text")
                     .attr("x", "-400")
                     .attr("y", "30")
-                    .attr("id", "gvaYaxisTxt")
+                    .attr("id", "gvaYaxisTxt_mobile")
                     .style("text-anchor", "end")
                     .style('fill', gvaColorCode)
                     .attr("transform", "rotate(-90)")
@@ -671,7 +671,7 @@ export class ContextChartComponent implements OnInit {
                 isIipCheckBoxEnabled = false;
 
                 removeIIPLine();
-                d3.select("#iipYaxisTxt").remove();
+                d3.select("#iipYaxisTxt_mobile").remove();
 
                 if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
                     showPMI();
@@ -699,7 +699,7 @@ export class ContextChartComponent implements OnInit {
                 isPmiCheckBoxEnabled = false;
 
                 removePMILine();
-                d3.select("#pmiYaxisTxt").remove();
+                d3.select("#pmiYaxisTxt_mobile").remove();
 
                 if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
                     showIIP();
@@ -727,7 +727,7 @@ export class ContextChartComponent implements OnInit {
                 isGvaCheckBoxEnabled = false;
 
                 removeGVALine();
-                d3.select("#gvaYaxisTxt").remove();
+                d3.select("#gvaYaxisTxt_mobile").remove();
 
                 if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
                     showIIP();
@@ -839,40 +839,44 @@ export class ContextChartComponent implements OnInit {
             .tickSize([-width - 21])
             .tickValues(y_left_coordinates);
 
+        const yAxis_graphLines = d3.axisLeft(y1)
+            .tickSize([-default_width - 25])
+            .tickValues(y_left_coordinates);
+
         const yAxis_right_for_iip = d3.axisRight(y2)
             .tickSize(0);
         const yAxis_right_for_pmi = d3.axisRight(y3);
 
         const yAxis_right_for_gva = d3.axisRight(y4);
 
-        const svgY = d3.select("#context_graph_y_axis_svg") 
+        const svgY = d3.select("#context_graph_y_axis_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", 65) //set width
             .attr("height", default_height+30) //set height
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
-        
-        const svgY_gva = d3.select("#context_graph_y_axis_gva_svg") 
+
+            const svgY_gva = d3.select("#context_graph_y_axis_gva_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", 45) //set width
             .attr("height", default_height+30) //set height
             .append("g")
             .attr("transform", `translate(0,${margin.top})`);
-        
-        const svgY_pmi = d3.select("#context_graph_y_axis_pmi_svg") 
+
+        const svgY_pmi = d3.select("#context_graph_y_axis_pmi_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", 40) //set width
+            .attr("width", 35) //set width
             .attr("height", default_height+30) //set height
             .append("g")
             .attr("transform", `translate(0,${margin.top})`);
-        
-        const svgY_iip = d3.select("#context_graph_y_axis_iip_svg") 
+
+        const svgY_iip = d3.select("#context_graph_y_axis_iip_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", 45) //set width
+            .attr("width", 35) //set width
             .attr("height", default_height+30) //set height
             .append("g")
             .attr("transform", `translate(0,${margin.top})`);
-        
+
         const svg = d3.select("#context_graph_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", default_width+30) //set width
@@ -889,6 +893,10 @@ export class ContextChartComponent implements OnInit {
             .attr("x", "0.2em")
             .attr("y", "-1.3em");
 
+        svg.append("g")
+            .attr("stroke-width", "0.1")
+            .attr("class", "y_left_points")
+            .call(yAxis_graphLines);
         const x_axis_months = svg.append("g") // TODO Check here
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")
@@ -929,11 +937,11 @@ export class ContextChartComponent implements OnInit {
             .attr("fill", "#2FB36B")
             .attr("transform", "rotate(-90)")
             .text("Jocata Sumpoorn");
-        
+
         svgY.select(".domain").attr("stroke", "none");
 
-        var yAxisTickSpace = [30, 15, 15];
-        var yAxisTickNameSpace = [32, 22, 12];
+        var yAxisTickSpace = [15, 15, 15];
+        var yAxisTickNameSpace = [22, 22, 22];
 
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
@@ -994,8 +1002,10 @@ export class ContextChartComponent implements OnInit {
             isGvaCheckBoxEnabled: boolean = $("#GVACheckbox") ? $("#GVACheckbox").attr("checked") ? true : false : false
         d3.selectAll(".context_checkboxes").on("change", function (event) {
             if (event.target["value"] == 'IIP' && $(event.target).prop("checked")) {
+                $("#context_graph_y_axis_iip_svg").css("display","block");
                 iipCheckBoxEnabled();
             } else if (event.target["value"] == 'IIP' && !$(event.target).prop("checked")) {
+                $("#context_graph_y_axis_iip_svg").css("display","none");
                 isIipCheckBoxEnabled = false;
                 removeIIPLine();
                 if (isPmiCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
@@ -1013,6 +1023,7 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#iipYaxisTxt").remove();
             }
             if (event.target["value"] == 'PMI' && $(event.target).prop("checked")) {
+                $("#context_graph_y_axis_pmi_svg").css("display","block");
                 isPmiCheckBoxEnabled = true;
                 addPMILine(dataForPMI);
                 if (isIipCheckBoxEnabled == true) {
@@ -1029,6 +1040,7 @@ export class ContextChartComponent implements OnInit {
                     }
                 }
             } else if (event.target["value"] == 'PMI' && !$(event.target).prop("checked")) {
+                $("#context_graph_y_axis_pmi_svg").css("display","none");
                 isPmiCheckBoxEnabled = false;
                 removePMILine();
                 if (isIipCheckBoxEnabled == true && isGvaCheckBoxEnabled == true) {
@@ -1041,6 +1053,7 @@ export class ContextChartComponent implements OnInit {
                 d3.select("#pmiYaxisTxt").remove();
             }
             if (event.target["value"] == 'GVA' && $(event.target).prop("checked")) {
+                $("#context_graph_y_axis_gva_svg").css("display","block");
                 isGvaCheckBoxEnabled = true;
                 if (isIipCheckBoxEnabled == true && isPmiCheckBoxEnabled == true) {
                     refreshYaxisTicks('gva', yAxisTickSpace[2], yAxisTickNameSpace[2]);
@@ -1053,6 +1066,7 @@ export class ContextChartComponent implements OnInit {
                 }
                 addGVALine(dataForGVA);
             } else if (event.target["value"] == 'GVA' && !$(event.target).prop("checked")) {
+                $("#context_graph_y_axis_gva_svg").css("display","none");
                 isGvaCheckBoxEnabled = false;
                 removeGVALine();
                 d3.select("#gvaYaxisTxt").remove();
@@ -1080,7 +1094,7 @@ export class ContextChartComponent implements OnInit {
             if (tickName == 'iip') {
                 yAxis_right_for_iip_tick = svgY_iip.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,0)`) //+20
+                    .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_iip)
                     .selectAll("text")
                     .attr("text-anchor", "end")
@@ -1088,8 +1102,8 @@ export class ContextChartComponent implements OnInit {
 
                 d3.select("#iipYaxisTxt").remove();
                 svgY_iip.append("text")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    .attr("x", "-400")
+                    .attr("y", "30")
                     .attr("id", "iipYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', iipColorCode)
@@ -1098,7 +1112,7 @@ export class ContextChartComponent implements OnInit {
             } else if (tickName == 'pmi') {
                 yAxis_right_for_pmi_tick = svgY_pmi.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
+                    .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_pmi)
                     .selectAll("text")
                     .attr("text-anchor", "end")
@@ -1106,8 +1120,8 @@ export class ContextChartComponent implements OnInit {
 
                 d3.select("#pmiYaxisTxt").remove();
                 svgY_pmi.append("text").attr("opacity", "1")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    .attr("x", "-400")
+                    .attr("y", "30")
                     .attr("id", "pmiYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', pmiColorCode)
@@ -1118,7 +1132,7 @@ export class ContextChartComponent implements OnInit {
             } else if (tickName == 'gva') {
                 yAxis_right_for_gva_tick = svgY_gva.append("g")
                     .attr("stroke-width", "0")
-                    .attr("transform", `translate(` + tickWidth + `,00)`) //+20
+                    .attr('transform', "translate(24, 6)")
                     .call(yAxis_right_for_gva)
                     .selectAll("text")
                     .attr("text-anchor", "end")
@@ -1126,8 +1140,8 @@ export class ContextChartComponent implements OnInit {
 
                 d3.select("#gvaYaxisTxt").remove();
                 svgY_gva.append("text")
-                    .attr("x", -(height + 12))
-                    .attr("y", yAxisTickNameSpace)
+                    .attr("x", "-400")
+                    .attr("y", "20")
                     .attr("id", "gvaYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', gvaColorCode)
