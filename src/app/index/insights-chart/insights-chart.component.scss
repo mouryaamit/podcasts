@@ -14,7 +14,40 @@
 
 #mobile_insights_graph_right_vertical_svg {
     float:right;
+    width: 40px; 
+    position: relative;
+    svg {
+        position: relative;
+    }
+}
+
+#insights_graph_left_vertical_svg {
+    float:left;
     width: 40px;
+    position: relative;
+    svg {
+        position: relative;
+    }
+}
+
+#insights_graph_svg {
+    float:left;
+    overflow-x:scroll; 
+    overflow-y: hidden;
+    /* Firefox */
+    width: -moz-calc(100% - 200px);
+    /* WebKit */
+    width: -webkit-calc(100% - 200px);
+    /* Opera */
+    width: -o-calc(100% - 200px);
+    /* Standard */
+    width: calc(100% - 200px);
+    position: relative;
+}
+
+#insights_graph_right_vertical_svg {
+    float:right;
+    width: 140px;
     position: relative;
     svg {
         position: relative;
