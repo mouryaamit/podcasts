@@ -897,6 +897,7 @@ export class ContextChartComponent implements OnInit {
             .attr("stroke-width", "0.1")
             .attr("class", "y_left_points")
             .call(yAxis_graphLines);
+            
         const x_axis_months = svg.append("g") // TODO Check here
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")

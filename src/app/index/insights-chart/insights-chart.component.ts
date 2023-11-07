@@ -1222,6 +1222,10 @@ export class InsightsChartComponent implements OnInit {
             )
             ;
         
+        const yAxis_graphLines = d3.axisLeft(y2)
+            .tickSize([-width - 25])
+            .tickValues(y_right_coordinates);
+        
         const svgY_left = d3.select('#insights_graph_left_vertical_svg')
             .append('svg')
             .attr('height', 500)
@@ -1263,14 +1267,6 @@ export class InsightsChartComponent implements OnInit {
             .attr('height', 500)
             .attr("width", 200)
             .attr('transform', "translate(0, 10)");
-
-        // svgY_right.append('g')
-        //     .attr('class', 'y_axis_right')
-        //     .call(yAxis_right)
-        //     .attr('dx', '-0.3em')
-        //     .attr('transform', "translate(24, 6)")
-        //     .style("color", "#B2B2B2")
-        //     .style("text-anchor", "middle");
 
         const y_text = svgY_right.append("g")
             .attr("stroke-width", "0.1")
@@ -1328,6 +1324,12 @@ export class InsightsChartComponent implements OnInit {
             .style("font-family", "Inter")
             .style("font-size", "16px")
             ;
+
+        svg.append("g")
+            .attr("stroke-width", "0.1")
+            // .attr("class", "y_right_points")
+            // .attr("transform", `translate(0,0)`) // sets last xaxis index align
+            .call(yAxis_graphLines);
 
         function formatYaxisForText(d: any) {
             if (d == 0.25) {
