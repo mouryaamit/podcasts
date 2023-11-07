@@ -875,6 +875,10 @@ main {
       padding: 6rem 2rem 4rem 3.5rem;
       text-align: start;
 
+      @media only screen and (max-width: 320px) {
+        padding: 6rem 2rem 4rem;
+      }
+
       @media only screen and (min-width: 390px) and (max-width: 394px) {
         padding-right: 2.5rem;
       }
@@ -928,7 +932,7 @@ main {
 
     .testimonial_img_con {
       overflow: hidden;
-
+      
       @media only screen and (max-width: 767px) {
         display: flex;
         justify-content: space-between;
@@ -943,6 +947,15 @@ main {
         div {
           text-align: left;
           margin-left: 3.5rem;
+        }
+      }
+
+      @media only screen and (max-width: 320px) {
+        img {
+          height: 140px;
+        }
+        div {
+          margin-left: 2rem;
         }
       }
 
@@ -1022,6 +1035,7 @@ main {
       font-size: $font-size-16px;
       line-height: normal;
       width: 90%;
+      // margin-bottom: 0;
 
       span {
         @media only screen and (max-width: 767px) {
@@ -1479,7 +1493,7 @@ main {
         flex-wrap: nowrap;
         overflow-x: scroll;
         width: 85%;
-
+        
         &::-webkit-scrollbar {
           display: none;
         }
@@ -1503,10 +1517,12 @@ main {
           font-weight: 700;
           padding-right: 1.5rem;
           padding-left: 1.5rem;
+          border-bottom: 0px solid transparent;
         }
 
         &:not(.active) {
-          border-color: transparent;
+          border-bottom: 0px solid transparent;
+          border-bottom-width: 0px;
         }
       }
     }
@@ -2073,7 +2089,7 @@ main {
         }
 
         &.content-red {
-          color: #830A0A;
+          color: #830a0a;
         }
       }
     }
