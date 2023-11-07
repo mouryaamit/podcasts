@@ -111,9 +111,11 @@ export class IndexComponent implements OnInit {
         this.contextInfoIcon = tab === 'Context';
         
         if (tab === 'Insights') {
-            $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth)
+            $("#insights_graph_svg").scrollLeft(this.insightsGraphWidth);
+            $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth);
         } else {
-            $("#mobile_context_graph_svg").scrollLeft(this.contextGraphWidth)
+            $("#context_graph_svg").scrollLeft(this.contextGraphWidth);
+            $("#mobile_context_graph_svg").scrollLeft(this.contextGraphWidth);
         }
     }
 
