@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { GraphApiService } from '../services/graph-api.service';
+import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import * as CryptoJS from 'crypto-js';
 // declare var $: any;
 
 @Component({
@@ -19,10 +21,13 @@ export class IndexComponent implements OnInit {
     contextGraphWidth: any;
     insightsInfoIcon = true;
     contextInfoIcon = false;
+    addComentaryData: any;
+    encryptedData: string;
+    downloadMonth: any;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
 
-    constructor(private graphApiService: GraphApiService) { }
+    constructor(private graphApiService: GraphApiService, public sumpoornApiService: SumpoornApiService) { }
 
     // Data for Context Table Mobile
     contextTableData = [
@@ -70,6 +75,8 @@ export class IndexComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getSumpoornData();
+
         this.graphApiService.getSumpoornGraphData().then((data) => {
             if (data) {
                 this.sumpoornGraphData = data;
@@ -77,6 +84,20 @@ export class IndexComponent implements OnInit {
             }
         }, (error) => {
             console.error("getSumpoornGraphData Error", error);
+        })
+        
+        
+    }    
+
+    getSumpoornData(){
+        const name = "SUMPOORNDATA";
+        const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
+
+        this.encryptedData = CryptoJS.AES.encrypt(name, salt).toString();
+        this.graphApiService.getSumpoornGraphApiData({ssUuid: this.encryptedData}).then((data) => {
+
+        }, (error) => {
+            console.error(error);
         })
     }
 
@@ -125,6 +146,21 @@ export class IndexComponent implements OnInit {
 
     checkContextGraphWidth(event) {
         this.contextGraphWidth = event;
+    }
+
+    downloadSumpoornData() {
+        const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
+        this.encryptedData = CryptoJS.AES.encrypt( document.getElementsByClassName('ec_month_title_download')[0].innerHTML, salt).toString();
+        
+        this.sumpoornApiService.downloadSumpoornGraphDetails({monthUuid: this.encryptedData}).then(
+          (resp: any) => {
+
+          },
+          (error) => {
+            console.error(error);
+    
+          }
+        );
     }
 }
 

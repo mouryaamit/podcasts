@@ -52,16 +52,14 @@ export class ContactComponent implements OnInit {
 
 
   saveContact(){
-    console.log("clicked");
     let postData = this.contactGroup.getRawValue();
 
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
-          console.log(resp);
           
       },
       (error) => {
-          console.log(error);
+          console.error(error);
           
       }
   );
