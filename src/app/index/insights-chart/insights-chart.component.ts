@@ -812,6 +812,10 @@ export class InsightsChartComponent implements OnInit {
                 d3.select("#mc_body_mobile")
                     .html(`${monthlyC.comment}`)
                     ;
+
+                    d3.select(".ec_month_title_download")
+                    .html(`${expertC.Month}`)
+                    ;
                 if (expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
                     // commentary member details
                     d3.select('#commentary_mem_details_mobile')
