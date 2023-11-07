@@ -856,7 +856,7 @@ export class ContextChartComponent implements OnInit {
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
-            const svgY_gva = d3.select("#context_graph_y_axis_gva_svg")
+        const svgY_gva = d3.select("#context_graph_y_axis_gva_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", 45) //set width
             .attr("height", default_height+30) //set height
