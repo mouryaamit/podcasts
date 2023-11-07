@@ -771,18 +771,18 @@ export class ContextChartComponent implements OnInit {
         // Scales
         // Add X axis 1 --> it is a month format
         const x1 = d3.scaleTime()
-            .domain(d3.extent(mydata, function (d) { return d3.timeParse("%m-%Y")(d.category); }))
-            .range([0, width]);
+        .domain(d3.extent(mydata, function (d) { return d3.timeParse("%m-%Y")(d.category); }))
+            .range([0, default_width]);
 
         // Add X axis 2 --> it is a year format
         const x2 = d3.scaleTime()
             .domain(d3.extent(mydata, function (d) { return d3.timeParse("%m-%Y")(d.category); }))
-            .range([0, width]);
+            .range([0, default_width]);
 
         // Add X axis 3 --> it is a month number format
         const x3 = d3.scaleTime()
             .domain(d3.extent(mydata, function (d) { return d3.timeParse("%m-%Y")(d.category); }))
-            .range([10, width + 10]);
+            .range([10, default_width + 10]);
 
         // Add Y axis - left side
         const y1 = d3.scaleLinear()
@@ -810,11 +810,11 @@ export class ContextChartComponent implements OnInit {
 
         //Axes
         const xAxis_month_name = d3.axisBottom(x1)
-            .tickSize([-(height)])
-            .ticks(width / 12)
-            .tickFormat(function (date) {
-                return d3.timeFormat('%b')(date);
-            });
+        .tickSize([-(height)])
+        .ticks(width / 12)
+        .tickFormat(function (date) {
+            return d3.timeFormat('%b')(date);
+        });
 
         const xAxis_year = d3.axisBottom(x2)
         .tickSize(35)
@@ -875,7 +875,7 @@ export class ContextChartComponent implements OnInit {
         
         const svg = d3.select("#context_graph_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width - 50) //set width
+            .attr("width", default_width+30) //set width
             .attr("height", default_height) //set height
             .append("g")
             .attr("transform", `translate(0,${margin.top})`);
@@ -886,42 +886,15 @@ export class ContextChartComponent implements OnInit {
             .attr("class", "x_month_num")
             .call(xAxis_month_number)
             .selectAll("text")
-            .attr("x", "0em")
+            .attr("x", "0.2em")
             .attr("y", "-1.3em");
 
-        const x_axis_months = svg.append("g")
+        const x_axis_months = svg.append("g") // TODO Check here
             .attr("transform", `translate(0, ${height})`)
             .attr("stroke-width", "0.1")
             .attr("class", "x_month_name_context")
             .call(xAxis_month_name)
-            .selectAll(".tick text") // select all the y tick texts
-            .call(function (t) {
-                t._groups[0].forEach(function (d) { // for each one
-                    var self = $(d);
-                    if (self.text() == 'May') {
-                        var s = self.text()
-                        self.text('');
-                        self.append("tspan")
-                            .attr("fill", "currentColor")
-                            .attr("x", '-1.7em')
-                            .text(s);
-                    } else if (self.text() == 'Oct') {
-                        var s = self.text()
-                        self.text('');
-                        self.append("tspan")
-                            .attr("fill", "currentColor")
-                            .attr("x", '-1.9em')
-                            .text(s);
-                    } else if (self.text() == 'Jul') {
-                        var s = self.text()
-                        self.text('');
-                        self.append("tspan")
-                            .attr("fill", "currentColor")
-                            .attr("x", '-2em')
-                            .text(s);
-                    }
-                })
-            })
+            .selectAll(".tick text")
             .attr("id", "xaxisMonths")
             .attr("x", "-1.8em")
             .attr("y", "0.5em")
@@ -965,7 +938,6 @@ export class ContextChartComponent implements OnInit {
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
         var yAxis_right_for_gva_tick;
-        // refreshYaxisTicks('iip',yAxisTickSpace[0],yAxisTickNameSpace[0])
 
         const tooltip = d3.select("#context_graph_svg") // can be body
             .append("div")
@@ -1274,9 +1246,9 @@ export class ContextChartComponent implements OnInit {
                     d3.selectAll(".x_month_name_context").classed("active", false); // xaxis selection on load
                     //creating on onload and render at last index
                     svg.append('rect')
-                        .attr('x', width)
+                        .attr('x', default_width)
                         .attr('y', 0)
-                        .attr('width', 21)
+                        .attr('width', 25)
                         .attr('height', height + 40)
                         .attr("id", "rect_xaxis_context")
                         .attr('stroke', 'black')
@@ -1320,7 +1292,7 @@ export class ContextChartComponent implements OnInit {
             svg.append('rect')
                 .attr('x', tooltip_pointer.x + 0.8)
                 .attr('y', 0)
-                .attr('width', 21)
+                .attr('width', 25)
                 .attr('height', height + 40)
                 .attr("id", "rect_xaxis_context")
                 .attr('stroke', 'black')
@@ -1401,9 +1373,9 @@ export class ContextChartComponent implements OnInit {
                 let yearSvg = svg.append("g");
                 if (years.indexOf(year) == 0) {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count)-years.indexOf(year))
+                        .attr('x1', (25 * year.count)+2)
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count)-years.indexOf(year))
+                        .attr('x2', (25 * year.count)+2)
                         .attr('y2', height + 60)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")
@@ -1411,18 +1383,18 @@ export class ContextChartComponent implements OnInit {
                         .attr("class", "year-line");
                 } else if (years.indexOf(year) == years.length - 1) {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
                         .attr('y2', height + 60)
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
                         .attr("class", "year-line");
                 } else {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
                         .attr('y2', height + 60)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")
@@ -1433,7 +1405,7 @@ export class ContextChartComponent implements OnInit {
             //top line of graph
             const top_line = svg.append("g");
             top_line.append("line")
-                .attr("x1", width + 25)
+                .attr("x1", default_width + 25)
                 .attr("x2", 0)
                 .attr("y1", 0)
                 .attr("y2", 0)
