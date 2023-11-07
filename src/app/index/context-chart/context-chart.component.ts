@@ -1323,7 +1323,7 @@ export class ContextChartComponent implements OnInit {
                 .style("opacity", 0.9);
             tooltip
                 .html(dataValue.value)
-                .style("left", (mousePointer.x + 45) + "px")
+                .style("left", (mousePointer.x - 10) + "px")
                 .style("top", (mousePointer.y - 35) + "px");
             radiation
                 .transition()
@@ -1339,15 +1339,15 @@ export class ContextChartComponent implements OnInit {
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - width - 96) + "px")
-                    .style("top", (mousePointer.y - 233) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 10) + "px");
             } else {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - width - 96) + "px")
-                    .style("top", (mousePointer.y - 233) + "px");
+                    .style("left", Math.ceil(mousePointer.x + 15) + "px")
+                    .style("top", Math.ceil(mousePointer.y + 10) + "px");
             }
         }
 
@@ -1383,9 +1383,9 @@ export class ContextChartComponent implements OnInit {
                         .attr("class", "year-line");
                 } else if (years.indexOf(year) == years.length - 1) {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.5)))
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.5)))
                         .attr('y2', height + 60)
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
