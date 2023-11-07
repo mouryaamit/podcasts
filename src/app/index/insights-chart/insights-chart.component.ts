@@ -41,7 +41,7 @@ export class InsightsChartComponent implements OnInit {
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom,
         parseDate = d3.timeParse("%m-%Y");
-        this.graphWidth.emit(width);
+        this.graphWidth.emit(default_width);
 
         // Coordinates on axes
         // Add X axis 1 --> it is a month format
@@ -1111,7 +1111,7 @@ export class InsightsChartComponent implements OnInit {
             .style("cursor", "pointer");
         path.on("click", clickPoint);
 
-        $("#mobile_insights_graph_svg").scrollLeft(width)
+        $("#mobile_insights_graph_svg").scrollLeft(default_width)
     }
 
     generateInsightsGraph() {
@@ -1138,7 +1138,7 @@ export class InsightsChartComponent implements OnInit {
         default_height = 500,
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
-
+        this.graphWidth.emit(default_width);
         const parseDate = d3.timeParse("%m-%Y");
 
         // Coordinates on axes
@@ -2476,6 +2476,7 @@ export class InsightsChartComponent implements OnInit {
             .style("cursor", "pointer")
             ;
         path.on("click", clickPoint);
+        $("#insights_graph_svg").scrollLeft(default_width);
     }
 
 }
