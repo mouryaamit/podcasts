@@ -1638,9 +1638,9 @@ export class InsightsChartComponent implements OnInit {
                     return d;
                 });
             svgY_right.append('rect')
-                .attr('x', 0)
+                .attr('x', -10)
                 .attr('y', handyValues.y)
-                .attr('width', 98)
+                .attr('width', 108)
                 .attr('height', handyValues.h)
                 .attr("id", "rect_yaxis")
                 .attr("class", function () { // color change for different indices
@@ -2043,7 +2043,6 @@ export class InsightsChartComponent implements OnInit {
         });
 
         function addCommentary(dataValue) {
-            console.log("addCommentary = ",dataValue)
             let indexValue = dataValue.value;
             let expertData = (indexData.ExpertCommentary).filter((e) => {
                 return (e.Month == dataValue.category);
