@@ -755,9 +755,12 @@ export class ContextChartComponent implements OnInit {
             bottom: 60,
             left: 65
         },
-            //1366
-            width = 1060 - margin.left - margin.right,
-            height = 450 - margin.top - margin.bottom;
+        default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
+        default_height = 450,
+        width = default_width - margin.left - margin.right,
+        height = default_height - margin.top - margin.bottom;
+        this.graphWidth.emit(width);
+
         const iipColorCode = '#24C0E2'; //2E8DFF
         const pmiColorCode = '#E1861B';
         const gvaColorCode = '#3E3EC8'; //5451FF
@@ -803,8 +806,7 @@ export class ContextChartComponent implements OnInit {
         const y4 = d3.scaleLinear()
             .domain([d3.min(dataForGVA, function (d) { return d.value - 10; }), d3.max(dataForGVA, function (d) { return d.value + 10; })])
             .nice()
-            .range([height, 0])
-            ;
+            .range([height, 0]);
 
         //Axes
         const xAxis_month_name = d3.axisBottom(x1)
@@ -812,52 +814,71 @@ export class ContextChartComponent implements OnInit {
             .ticks(width / 12)
             .tickFormat(function (date) {
                 return d3.timeFormat('%b')(date);
-            })
-            ;
+            });
 
         const xAxis_year = d3.axisBottom(x2)
-            .tickSize([35])
-            .ticks(width / 12)
-            .tickFormat(function (d, i) {
+        .tickSize(35)
+        .ticks(width / 12)
+        .tickFormat(function (d, i) {
+            if (i == 0) {
+                const year_fmt = d3.timeFormat('%Y')(d);
+                return year_fmt;
+            } else {
                 const monNum_fmt = d3.timeFormat('%m')(d);
                 const year_fmt = d3.timeFormat('%Y')(d);
-                if (monNum_fmt == '01') {
-                    return year_fmt;
-                } else if (monNum_fmt == '10' && year_fmt == '2019') {
-                    return year_fmt;
-                }
-            })
-            ;
+                return (monNum_fmt == '01') ? year_fmt : '';
+            }
+        });
 
         var xAxis_month_number = d3.axisBottom(x3)
             .tickFormat(d3.timeFormat('%m'))
             .tickSize((height))
-            .ticks(width / 12)
-            ;
+            .ticks(width / 12);
 
         const yAxis_left = d3.axisLeft(y1)
             .tickSize([-width - 21])
-            .tickValues(y_left_coordinates)
-            ;
+            .tickValues(y_left_coordinates);
 
         const yAxis_right_for_iip = d3.axisRight(y2)
-            .tickSize(0)
-            ;
-        const yAxis_right_for_pmi = d3.axisRight(y3)
-            ;
+            .tickSize(0);
+        const yAxis_right_for_pmi = d3.axisRight(y3);
 
-        const yAxis_right_for_gva = d3.axisRight(y4)
-            ;
+        const yAxis_right_for_gva = d3.axisRight(y4);
 
-        const svg = d3.select("#context_graph_svg")
+        const svgY = d3.select("#context_graph_y_axis_svg") 
             .append("svg") //append svg element inside #chart
-            // .attr("width", width + margin.left + margin.right + 100) //set width
-            // .attr("height", height + margin.top + margin.bottom + 30) //set height
-            .style("max-width", width + margin.left + margin.right + 100) //set width
-            .style("max-height", height + margin.top + margin.bottom + 30) //set height
-            .attr("viewBox", `0 0 ${width + margin.left + margin.right + 100} ${height + margin.top + margin.bottom + 30}`)
+            .attr("width", 65) //set width
+            .attr("height", default_height+30) //set height
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
+        
+        const svgY_gva = d3.select("#context_graph_y_axis_gva_svg") 
+            .append("svg") //append svg element inside #chart
+            .attr("width", 45) //set width
+            .attr("height", default_height+30) //set height
+            .append("g")
+            .attr("transform", `translate(0,${margin.top})`);
+        
+        const svgY_pmi = d3.select("#context_graph_y_axis_pmi_svg") 
+            .append("svg") //append svg element inside #chart
+            .attr("width", 40) //set width
+            .attr("height", default_height+30) //set height
+            .append("g")
+            .attr("transform", `translate(0,${margin.top})`);
+        
+        const svgY_iip = d3.select("#context_graph_y_axis_iip_svg") 
+            .append("svg") //append svg element inside #chart
+            .attr("width", 45) //set width
+            .attr("height", default_height+30) //set height
+            .append("g")
+            .attr("transform", `translate(0,${margin.top})`);
+        
+        const svg = d3.select("#context_graph_svg")
+            .append("svg") //append svg element inside #chart
+            .attr("width", default_width - 50) //set width
+            .attr("height", default_height) //set height
+            .append("g")
+            .attr("transform", `translate(0,${margin.top})`);
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
@@ -866,8 +887,7 @@ export class ContextChartComponent implements OnInit {
             .call(xAxis_month_number)
             .selectAll("text")
             .attr("x", "0em")
-            .attr("y", "-1.3em")
-            ;
+            .attr("y", "-1.3em");
 
         const x_axis_months = svg.append("g")
             .attr("transform", `translate(0, ${height})`)
@@ -909,8 +929,7 @@ export class ContextChartComponent implements OnInit {
                 return "rotate(-90)"
             })
             .attr("class", function (d, i) { return `x_month_name_context x_month_name_context_${i}`; })
-            .style("cursor", "pointer")
-            ;
+            .style("cursor", "pointer");
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
@@ -923,10 +942,9 @@ export class ContextChartComponent implements OnInit {
             .style("font-weight", "600")
             .style("fill", "#A3A3A3")
             .style("font-family", "Inter")
-            .style("font-size", "16px")
-            ;
+            .style("font-size", "16px");
 
-        svg.append("g")
+        svgY.append("g")
             .attr("stroke-width", "0.1")
             .attr("class", "y_left_points")
             .call(yAxis_left)
@@ -937,11 +955,12 @@ export class ContextChartComponent implements OnInit {
             .style("text-anchor", "end")
             .attr("fill", "#2FB36B")
             .attr("transform", "rotate(-90)")
-            .text("Jocata Sumpoorn")
-            ;
+            .text("Jocata Sumpoorn");
+        
+        svgY.select(".domain").attr("stroke", "none");
 
-        var yAxisTickSpace = [width + 45, width + 70, width + 100];
-        var yAxisTickNameSpace = [width + 47, width + 77, width + 107];
+        var yAxisTickSpace = [30, 15, 15];
+        var yAxisTickNameSpace = [32, 22, 12];
 
         var yAxis_right_for_iip_tick;
         var yAxis_right_for_pmi_tick;
@@ -951,13 +970,11 @@ export class ContextChartComponent implements OnInit {
         const tooltip = d3.select("#context_graph_svg") // can be body
             .append("div")
             .attr("class", "tooltip-area")
-            .style("opacity", 0)
-            ;
+            .style("opacity", 0);
         const radiation = d3.select("#context_graph_svg") // can be body
             .append("div")
             .attr("class", "animating_circle")
-            .style("opacity", 0)
-            ;
+            .style("opacity", 0);
 
         let line = d3.line()
             .defined(function (d) { return d; })
@@ -981,8 +998,7 @@ export class ContextChartComponent implements OnInit {
             .attr("fill", "none")
             .attr("stroke", "#2FB36B")
             .style("stroke-width", "2.5")
-            .attr("d", line)
-            ;
+            .attr("d", line);
 
         const clickPoint = (event, d) => {
             const mousePointer = d3.pointer(event);
@@ -1090,37 +1106,34 @@ export class ContextChartComponent implements OnInit {
         }
         function refreshYaxisTicks(tickName, tickWidth, yAxisTickNameSpace) {
             if (tickName == 'iip') {
-                yAxis_right_for_iip_tick = svg.append("g")
+                yAxis_right_for_iip_tick = svgY_iip.append("g")
                     .attr("stroke-width", "0")
                     .attr("transform", `translate(` + tickWidth + `,0)`) //+20
                     .call(yAxis_right_for_iip)
                     .selectAll("text")
                     .attr("text-anchor", "end")
-                    .style("color", iipColorCode)
-                    ;
+                    .style("color", iipColorCode);
 
                 d3.select("#iipYaxisTxt").remove();
-                svg.append("text")
+                svgY_iip.append("text")
                     .attr("x", -(height + 12))
                     .attr("y", yAxisTickNameSpace)
                     .attr("id", "iipYaxisTxt")
                     .style("text-anchor", "end")
                     .style('fill', iipColorCode)
                     .attr("transform", "rotate(-90)")
-                    .text("IIP")
-                    ;
+                    .text("IIP");
             } else if (tickName == 'pmi') {
-                yAxis_right_for_pmi_tick = svg.append("g")
+                yAxis_right_for_pmi_tick = svgY_pmi.append("g")
                     .attr("stroke-width", "0")
                     .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .call(yAxis_right_for_pmi)
                     .selectAll("text")
                     .attr("text-anchor", "end")
-                    .style("fill", pmiColorCode)
-                    ;
+                    .style("fill", pmiColorCode);
 
                 d3.select("#pmiYaxisTxt").remove();
-                svg.append("text").attr("opacity", "1")
+                svgY_pmi.append("text").attr("opacity", "1")
                     .attr("x", -(height + 12))
                     .attr("y", yAxisTickNameSpace)
                     .attr("id", "pmiYaxisTxt")
@@ -1131,17 +1144,16 @@ export class ContextChartComponent implements OnInit {
 
 
             } else if (tickName == 'gva') {
-                yAxis_right_for_gva_tick = svg.append("g")
+                yAxis_right_for_gva_tick = svgY_gva.append("g")
                     .attr("stroke-width", "0")
                     .attr("transform", `translate(` + tickWidth + `,00)`) //+20
                     .call(yAxis_right_for_gva)
                     .selectAll("text")
                     .attr("text-anchor", "end")
-                    .style("fill", gvaColorCode)
-                    ;
+                    .style("fill", gvaColorCode);
 
                 d3.select("#gvaYaxisTxt").remove();
-                let gvaText = svg.append("text")
+                svgY_gva.append("text")
                     .attr("x", -(height + 12))
                     .attr("y", yAxisTickNameSpace)
                     .attr("id", "gvaYaxisTxt")
@@ -1245,8 +1257,7 @@ export class ContextChartComponent implements OnInit {
                     })
                     .y(function (d) { return y4(d.value) })
                     .curve(d3.curveCatmullRom.alpha(0))
-                )
-                ;
+                );
 
         }
         function removeGVALine() {
@@ -1285,8 +1296,7 @@ export class ContextChartComponent implements OnInit {
                     d3.selectAll(".x_month_name_context").classed("active", false); // xaxis selection on load
                     const formattedDate = d3.timeFormat("%m-%Y")(d);
                     renderPointerOnLine(formattedDate)
-                })
-                    ;
+                });
             });
         }
         monthNameClickEvent();
@@ -1370,90 +1380,70 @@ export class ContextChartComponent implements OnInit {
         }
 
         function addLinesForYears() {
-            let xValue = 66.5, diffInTwoLine = 263;
-            const year_1 = svg.append("g"); //2019
-            year_1.append('line')
-                .attr('x1', 0)
+            let years: any = [];
+            mydata.forEach(element => {
+                let year = element.category.split('-')[1];
+                const i = years.findIndex(e => e['year'] === year);
+                if (i == -1)
+                    years.push({ "year": year, "count": 1 })
+                else
+                    years[i]["count"]++;
+            });
+            const firstLine = svg.append("g"); // first line
+            firstLine.append('line')
+                .attr('x1', 0.2)
                 .attr('y1', 0)
-                .attr('x2', 0)
-                .attr('y2', height + 58)
+                .attr('x2', 0.2)
+                .attr('y2', height + 60)
                 .attr('stroke', '#E1E1E1')
-                .attr("stroke-width", "1")
-                ;
-            const year_2 = svg.append("g"); //2020
-            year_2.append('line')
-                .attr('x1', xValue)
-                .attr('y1', 0)
-                .attr('x2', xValue)
-                .attr('y2', height + 58)
-                .attr('stroke', '#959595')
-                .attr("stroke-width", "1")
-                .attr("stroke-dasharray", "2")
-                ;
-            xValue = xValue + diffInTwoLine;
-            const year_3 = svg.append("g"); //2021
-            year_3.append('line')
-                .attr('x1', xValue)
-                .attr('y1', 0)
-                .attr('x2', xValue)
-                .attr('y2', height + 58)
-                .attr('stroke', '#959595')
-                .attr("stroke-width", "1")
-                .attr("stroke-dasharray", "2")
-                ;
-            xValue = xValue + diffInTwoLine;
-            const year_4 = svg.append("g"); //2022
-            year_4.append('line')
-                .attr('x1', xValue)
-                .attr('y1', 0)
-                .attr('x2', xValue)
-                .attr('y2', height + 58)
-                .attr('stroke', '#959595')
-                .attr("stroke-width", "1")
-                .attr("stroke-dasharray", "2")
-                ;
-            xValue = xValue + diffInTwoLine;
-            const year_5 = svg.append("g"); //2023
-            year_5.append('line')
-                .attr('x1', xValue)
-                .attr('y1', 0)
-                .attr('x2', xValue)
-                .attr('y2', height + 58)
-                .attr('stroke', '#959595')
-                .attr("stroke-width", "1")
-                .attr("stroke-dasharray", "2")
-                ;
-            const year_6 = svg.append("g"); //2023
-            year_6.append('line')
-                .attr('x1', width + 21)
-                .attr('y1', 0)
-                .attr('x2', width + 21)
-                .attr('y2', height + 58)
-                .attr('stroke', '#E1E1E1')
-                .attr("stroke-width", "1")
-                ;
+                .attr("stroke-width", "1");
+            years.forEach(year => {
+                let yearSvg = svg.append("g");
+                if (years.indexOf(year) == 0) {
+                    yearSvg.append('line')
+                        .attr('x1', (25 * year.count)-years.indexOf(year))
+                        .attr('y1', 0)
+                        .attr('x2', (25 * year.count)-years.indexOf(year))
+                        .attr('y2', height + 60)
+                        .attr('stroke', '#959595')
+                        .attr("stroke-width", "1")
+                        .attr("stroke-dasharray", "2")
+                        .attr("class", "year-line");
+                } else if (years.indexOf(year) == years.length - 1) {
+                    yearSvg.append('line')
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('y1', 0)
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('y2', height + 60)
+                        .attr('stroke', '#E1E1E1')
+                        .attr("stroke-width", "1")
+                        .attr("class", "year-line");
+                } else {
+                    yearSvg.append('line')
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('y1', 0)
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
+                        .attr('y2', height + 60)
+                        .attr('stroke', '#959595')
+                        .attr("stroke-width", "1")
+                        .attr("stroke-dasharray", "2")
+                        .attr("class", "year-line");
+                }
+            });
             //top line of graph
-            svg.append("line")
-                .attr("x1", width + 20)
+            const top_line = svg.append("g");
+            top_line.append("line")
+                .attr("x1", width + 25)
                 .attr("x2", 0)
                 .attr("y1", 0)
                 .attr("y2", 0)
                 .style("stroke", "#E1E1E1")
-                .attr("stroke-width", 1)
-                ;
-            //bottom line of graph
-            svg.append("line")
-                .attr("x1", width + 20)
-                .attr("x2", 0)
-                .attr("y1", height + 60)
-                .attr("y2", height + 60)
-                .style("stroke", "#E1E1E1")
-                .attr("stroke-width", 1)
-                ;
+                .attr("stroke-width", "0.7");
         }
         addLinesForYears();
         $("#IIPCheckbox").attr("checked", "true");
         iipCheckBoxEnabled();
+        $("#context_graph_svg").scrollLeft(width)
 
     }
 }

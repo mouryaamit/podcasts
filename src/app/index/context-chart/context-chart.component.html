@@ -1,6 +1,20 @@
 <div class="main_context_chart_container">
   <div class="context_chart_container d-lg-block d-md-block d-none container">
-    <div id="context_graph_svg" class="float-chart"> </div>
+    <!-- <div id="context_graph_svg" class="float-chart"> </div> -->
+    <div id="context_graph_y_axis_svg" style="float:left;position: relative;">
+    </div>
+    <!-- width: 7%; -->
+    <div id="context_graph_y_axis_gva_svg" style="float:right;position: relative;">
+    </div>
+    <!-- width: 7%; -->
+    <div id="context_graph_y_axis_pmi_svg" style="float:right;position: relative;">
+    </div>
+    <!-- width: 7%; -->
+    <div id="context_graph_y_axis_iip_svg" style="float:right;position: relative;">
+    </div>
+    <!-- width: 72%; -->
+    <div id="context_graph_svg" style="overflow-x:scroll;position: relative;">
+    </div>
     <div class="chart_desc d-md-flex">
       <div id="iipDescDiv" class="iipContent">
         <div class="iipLegendText"><input type="checkbox" id="IIPCheckbox" class="context_checkboxes"

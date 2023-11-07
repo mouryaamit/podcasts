@@ -1,3 +1,7 @@
+#context_graph_y_axis_svg svg,
+#context_graph_y_axis_iip_svg svg,
+#context_graph_y_axis_pmi_svg svg,
+#context_graph_y_axis_gva_svg svg,
 #mobile_context_graph_y_axis_svg svg,
 #mobile_context_graph_y_axis_iip_svg svg,
 #mobile_context_graph_y_axis_pmi_svg svg,
@@ -13,4 +17,7 @@
   .gvaContent {
     width: 50px;
   }
+}
+.context_chart_container {
+  max-width: 1160px;
 }
