@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   host: "/SumpoornJSON/",
-  swaraHost: ""
+  swaraHost: "https://swara-uat.jocatagrid.in/"
 };
