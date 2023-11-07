@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { GraphApiService } from '../services/graph-api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import { saveAs } from 'file-saver'; 
 import * as $ from 'jquery';
 import * as CryptoJS from 'crypto-js';
 // declare var $: any;
@@ -154,7 +155,9 @@ export class IndexComponent implements OnInit {
         
         this.sumpoornApiService.downloadSumpoornGraphDetails({monthUuid: this.encryptedData}).then(
           (resp: any) => {
-
+            const byteArray = new Uint8Array(atob(resp.pdf).split('').map(char => char.charCodeAt(0)));
+            const blob = new Blob([byteArray], {type: resp.mimeType+";charset=utf-8"});
+            saveAs(blob, resp.fileName);
           },
           (error) => {
             console.error("downloadSumpoornGraphDetails",error);
