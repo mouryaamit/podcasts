@@ -38,7 +38,7 @@ export class InsightsChartComponent implements OnInit {
             bottom: 115,
             left: 0,
         },
-        default_width = 25 * this.sumpoornGraphData.IndexGeneration.length,
+        default_width = 25 * mydata.length,
         default_height = 500,
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom,
@@ -1253,7 +1253,7 @@ export class InsightsChartComponent implements OnInit {
         // Creating svg with dimensions to chart
         const svg = d3.select("#insights_graph_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width + (2*margin.right)) //set width
+            .attr("width", default_width + 2*(margin.right)) //set width
             .attr("height", default_height) //set height
             // .style("max-width", default_width + (margin.left + margin.right)) //set width
             // .style("max-height", default_height) //set height
@@ -1436,14 +1436,14 @@ export class InsightsChartComponent implements OnInit {
                 }
             });
             //top line of graph
-            const top_line = svg.append("g");
-            top_line.append("line")
-                .attr("x1", width + 25)
-                .attr("x2", 0)
-                .attr("y1", 0)
-                .attr("y2", 0)
-                .style("stroke", "#E1E1E1")
-                .attr("stroke-width", "0.7");
+            // const top_line = svg.append("g");
+            // top_line.append("line")
+            //     .attr("x1", width + 25)
+            //     .attr("x2", 0)
+            //     .attr("y1", 0)
+            //     .attr("y2", 0)
+            //     .style("stroke", "#E1E1E1")
+            //     .attr("stroke-width", "0.7");
             // bottom line of graph
             const bottom_line = svg.append("g");
             bottom_line.append("line")
