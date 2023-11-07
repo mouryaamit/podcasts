@@ -35,18 +35,18 @@
     overflow-x:scroll; 
     overflow-y: hidden;
     /* Firefox */
-    width: -moz-calc(100% - 200px);
+    width: -moz-calc(100% - 240px);
     /* WebKit */
-    width: -webkit-calc(100% - 200px);
+    width: -webkit-calc(100% - 240px);
     /* Opera */
-    width: -o-calc(100% - 200px);
+    width: -o-calc(100% - 240px);
     /* Standard */
-    width: calc(100% - 200px);
+    width: calc(100% - 240px);
     position: relative;
 }
 
 #insights_graph_right_vertical_svg {
-    float:right;
+    float:left;
     width: 140px;
     position: relative;
     svg {

@@ -1134,7 +1134,7 @@ export class InsightsChartComponent implements OnInit {
             bottom: 115,
             left: 0,
         },
-        default_width = 20 * this.sumpoornGraphData.IndexGeneration.length, //1150
+        default_width = 25 * mydata.length, //1150
         default_height = 500,
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
@@ -1177,18 +1177,18 @@ export class InsightsChartComponent implements OnInit {
         const xAxis_month_number = d3.axisBottom<Date>(x3)
             .tickFormat(d3.timeFormat('%m'))
             .tickSize((height))
-            .ticks(width / 12)
+            .ticks(mydata.length)
             ;
 
         const xAxis_month_name = d3.axisBottom<Date>(x1)
             .tickSize(-(height))
-            .ticks(width / 12)
+            .ticks(mydata.length)
             .tickFormat(d3.timeFormat('%b'))
             ;
 
         const xAxis_year = d3.axisBottom(x2)
             .tickSize(35) // sets line for month
-            .ticks(width / 12)
+            .ticks(mydata.length)
             .tickFormat(function (d, i) {
                 if (i == 0) {
                     const year_fmt = d3.timeFormat('%Y')(d);
@@ -1243,7 +1243,7 @@ export class InsightsChartComponent implements OnInit {
         // Creating svg with dimensions to chart
         const svg = d3.select("#insights_graph_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width + (margin.left + margin.right)) //set width
+            .attr("width", default_width + (2*margin.right)) //set width
             .attr("height", default_height) //set height
             // .style("max-width", default_width + (margin.left + margin.right)) //set width
             // .style("max-height", default_height) //set height
@@ -1255,7 +1255,7 @@ export class InsightsChartComponent implements OnInit {
         const svgY_right = d3.select('#insights_graph_right_vertical_svg')
             .append('svg')
             .attr('height', 500)
-            .attr("width", 150)
+            .attr("width", 200)
             .attr('transform', "translate(0, 10)");
 
         // svgY_right.append('g')
@@ -1323,20 +1323,6 @@ export class InsightsChartComponent implements OnInit {
             .style("font-size", "16px")
             ;
 
-        // const y_points = svgY_left.append("g")
-        //     .attr("stroke-width", "0")
-        //     .attr("class", "y_left_points")
-        //     .call(yAxis_left)
-        //     .append("text")
-        //     .attr("class", "axis-title")
-        //     .attr("x", "-9.5em")
-        //     .attr("y", "-2.3em")
-        //     .style("text-anchor", "end")
-        //     .attr("fill", "#2FB36B")
-        //     .attr("transform", "rotate(-90)")
-        //     .text("Jocata Sumpoorn")
-        //     ;
-
         function formatYaxisForText(d: any) {
             if (d == 0.25) {
                 return "Substantial";
@@ -1364,11 +1350,8 @@ export class InsightsChartComponent implements OnInit {
             if (d == 0.25 || d == 1.00 || d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                 return "1em";
             }
-            // else if(d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
-            //     return "0.8em";
-            // } 
             else if (d == 0.52 || d == 0.54) {
-                return "6.69em";
+                return "8em";
             }
             return '';
         }
@@ -1396,88 +1379,7 @@ export class InsightsChartComponent implements OnInit {
             return '';
         }
 
-        // function addLinesForGraph() {
-        //     const year_1 = svg.append("g"); // first line
-        //     year_1.append('line')
-        //         .attr('x1', 0.2)
-        //         .attr('y1', 0)
-        //         .attr('x2', 0.2)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#E1E1E1')
-        //         .attr("stroke-width", "1")
-        //         ;
-        //     const year_2 = svg.append("g"); //2020
-        //     year_2.append('line')
-        //         .attr('x1', 67)
-        //         .attr('y1', 0)
-        //         .attr('x2', 67)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     const year_3 = svg.append("g"); //2021
-        //     year_3.append('line')
-        //         .attr('x1', 331.7)
-        //         .attr('y1', 0)
-        //         .attr('x2', 331.7)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     const year_4 = svg.append("g"); //2022
-        //     year_4.append('line')
-        //         .attr('x1', 595.7)
-        //         .attr('y1', 0)
-        //         .attr('x2', 595.7)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     const year_5 = svg.append("g"); //2023
-        //     year_5.append('line')
-        //         .attr('x1', 859.7)
-        //         .attr('y1', 0)
-        //         .attr('x2', 859.7)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#959595')
-        //         .attr("stroke-width", "1")
-        //         .attr("stroke-dasharray", "2")
-        //         ;
-        //     const year_6 = svg.append("g"); // last line
-        //     year_6.append('line')
-        //         .attr('x1', width + 21)
-        //         .attr('y1', 0)
-        //         .attr('x2', width + 21)
-        //         .attr('y2', height + 60)
-        //         .attr('stroke', '#E1E1E1')
-        //         .attr("stroke-width", "1")
-        //         ;
-        //     //top line of graph
-        //     const top_line = svg.append("g");
-        //     top_line.append("line")
-        //         .attr("x1", width) // + 200
-        //         .attr("x2", 0)
-        //         .attr("y1", 0)
-        //         .attr("y2", 0)
-        //         .style("stroke", "#E1E1E1")
-        //         .attr("stroke-width", "0.7")
-        //         ;
-        //     //bottom line of graph
-        //     const bottom_line = svg.append("g");
-        //     bottom_line.append("line")
-        //         .attr("x1", width) // + 200
-        //         .attr("x2", 0)
-        //         .attr("y1", height + 62)
-        //         .attr("y2", height + 62)
-        //         .style("stroke", "#E1E1E1")
-        //         .attr("stroke-width", "0.7")
-        //         ;
-        // }
-
-        function addLinesForGraph() {
+        function addLinesForYears() {
             let years: any = [];
             mydata.forEach(element => {
                 let year = element.category.split('-')[1];
@@ -1492,34 +1394,34 @@ export class InsightsChartComponent implements OnInit {
                 .attr('x1', 0.2)
                 .attr('y1', 0)
                 .attr('x2', 0.2)
-                .attr('y2', height + 60)
+                .attr('y2', height + 63)
                 .attr('stroke', '#E1E1E1')
                 .attr("stroke-width", "1");
             years.forEach(year => {
                 let yearSvg = svg.append("g");
                 if (years.indexOf(year) == 0) { // 2019
                     yearSvg.append('line')
-                        .attr('x1', 20 * year.count)
+                        .attr('x1', (25 * year.count)+2)
                         .attr('y1', 0)
-                        .attr('x2', 20 * year.count)
-                        .attr('y2', height + 60)
+                        .attr('x2', (25 * year.count)+2)
+                        .attr('y2', height + 63)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")
                         .attr("stroke-dasharray", "2");
                 } else if (years.indexOf(year) == years.length - 1) { //last line
                     yearSvg.append('line')
-                        .attr('x1', (20 * year.count) + (240 * years.indexOf(year) - (20 * (12 - years[0].count))))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4)))
                         .attr('y1', 0)
-                        .attr('x2', (20 * year.count) + (240 * years.indexOf(year) - (20 * (12 - years[0].count))))
-                        .attr('y2', height + 60)
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4)))
+                        .attr('y2', height + 63)
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
                 } else { // all year line except to 2019
                     yearSvg.append('line')
-                        .attr('x1', (20 * year.count) + (240 * years.indexOf(year) - (20 * (12 - years[0].count))))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4.8)))
                         .attr('y1', 0)
-                        .attr('x2', (20 * year.count) + (240 * years.indexOf(year) - (20 * (12 - years[0].count))))
-                        .attr('y2', height + 60)
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4.8)))
+                        .attr('y2', height + 63)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")
                         .attr("stroke-dasharray", "2");
@@ -1528,7 +1430,7 @@ export class InsightsChartComponent implements OnInit {
             //top line of graph
             const top_line = svg.append("g");
             top_line.append("line")
-                .attr("x1", width + 20)
+                .attr("x1", width + 25)
                 .attr("x2", 0)
                 .attr("y1", 0)
                 .attr("y2", 0)
@@ -1537,7 +1439,7 @@ export class InsightsChartComponent implements OnInit {
             // bottom line of graph
             const bottom_line = svg.append("g");
             bottom_line.append("line")
-                .attr("x1", width+20)
+                .attr("x1", width + 25)
                 .attr("x2", 0)
                 .attr("y1", height + 62)
                 .attr("y2", height + 62)
@@ -1562,7 +1464,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             const flag2_focus = svg.append("g")
                 .attr("class", "flag2_focus")
-                .attr("transform", "translate(" + (x_2 + 10) + "," + y_2 + ")")
+                .attr("transform", "translate(" + (x_2 + 10) + "," + (y_2 + 7) + ")")
                 ;
 
             flag2_focus.append("circle")
@@ -1592,7 +1494,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             covid_2020.append('line')
                 .attr('x1', x_1 + 9)
-                .attr('y1', y_1 - 10)
+                .attr('y1', y_1 - 6)
                 .attr('x2', x_1 + 9)
                 .attr('y2', y_1 + 55)
                 .attr('stroke', '#A0A0A0')
@@ -1621,7 +1523,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             covid_2021.append('line')
                 .attr('x1', x_2 + 10)
-                .attr('y1', y_2)
+                .attr('y1', y_2 + 2)
                 .attr('x2', x_2 + 10)
                 .attr('y2', y_2 - 55)
                 .attr('stroke', '#A0A0A0')
@@ -1676,8 +1578,9 @@ export class InsightsChartComponent implements OnInit {
                 d3.select(d_child)
                     .on("mouseover", (event, d) => {
                         if (d != 0.52 && d != 0.54) {
+                            let hoverIndex = y_right_coordinates.indexOf(d);
                             d3.selectAll(".y-axis-titles").classed("select", false);
-                            // d3.select(this).classed("select", true);
+                            d3.select(`.y-axis-title_${hoverIndex}`).classed("select", true);
                             yAxisMouseOver(event, d);
                         }
                     })
@@ -1729,7 +1632,7 @@ export class InsightsChartComponent implements OnInit {
             svgY_right.append('rect')
                 .attr('x', 0)
                 .attr('y', handyValues.y)
-                .attr('width', width + 119)
+                .attr('width', 98)
                 .attr('height', handyValues.h)
                 .attr("id", "rect_yaxis")
                 .attr("class", function () { // color change for different indices
@@ -1772,7 +1675,7 @@ export class InsightsChartComponent implements OnInit {
             svg.append('rect')
                 .attr('x', tooltip_pointer.x)
                 .attr('y', 0)
-                .attr('width', 20)
+                .attr('width', 25)
                 .attr('height', height + 40)
                 .attr("id", "rect_xaxis_sel")
                 .attr("opacity", "0.7")
@@ -1795,7 +1698,7 @@ export class InsightsChartComponent implements OnInit {
             svg.append('rect')
                 .attr('x', 0)
                 .attr('y', handyValues.y)
-                .attr('width', width + 19)
+                .attr('width', width + 25)
                 .attr('height', handyValues.h)
                 .attr("id", "rect_def_yaxis")
                 .attr("opacity", "0.5")
@@ -1808,7 +1711,7 @@ export class InsightsChartComponent implements OnInit {
 
             let handyValues_line = getYaxisValuesForLines(d);
             svgY_right.append("line")
-                .attr("x1", width + 35)
+                .attr("x1", 15)
                 .attr("x2", handyValues_line.x2)
                 .attr("y1", handyValues_line.y1)
                 .attr("y2", handyValues_line.y1)
@@ -1861,35 +1764,38 @@ export class InsightsChartComponent implements OnInit {
             }
         }
 
-        function getYaxisValuesForLines(d) {
+        function getYaxisValuesForLines(d) { //todo
             let hAndyValues = { y1: 0, x2: 0 };
             if (d == 0.00) {
                 hAndyValues.y1 = height;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 200;
             } else if (d == 0.25) {
                 hAndyValues.y1 = 282;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 95;
             } else if (d == 0.45) {
                 hAndyValues.y1 = 207;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 95;
             } else if (d == 0.50) {
                 hAndyValues.y1 = 187.5;
-                hAndyValues.x2 = width + 70;
+                hAndyValues.x2 = 70;
             } else if (d == 0.52) {
                 hAndyValues.y1 = 180.5;
-                hAndyValues.x2 = width + 70;
+                hAndyValues.x2 = 70;
             } else if (d == 0.54) {
                 hAndyValues.y1 = 173;
-                hAndyValues.x2 = width + 70;
+                hAndyValues.x2 = 70;
             } else if (d == 0.60) {
                 hAndyValues.y1 = 150.5;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 95;
             } else if (d == 0.65) {
                 hAndyValues.y1 = 131.5;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 95;
             } else if (d == 0.75) {
                 hAndyValues.y1 = 94;
-                hAndyValues.x2 = width + 112;
+                hAndyValues.x2 = 95;
+            } else if (d == 1.00) {
+                hAndyValues.y1 = 0;
+                hAndyValues.x2 = 200;
             }
             return hAndyValues;
         }
@@ -1905,7 +1811,7 @@ export class InsightsChartComponent implements OnInit {
                     svg.append('rect')
                         .attr('x', width)
                         .attr('y', 0)
-                        .attr('width', 20)
+                        .attr('width', 25)
                         .attr('height', height + 40)
                         .attr("id", "rect_xaxis")
                         .attr('stroke', 'black')
@@ -1919,7 +1825,7 @@ export class InsightsChartComponent implements OnInit {
 
                     const tooltip_pointer = getPointsOnCurve(mydata[i].category, mydata[i].value);
                     // To apply circles animation on last index
-                    // addTooltip(tooltip_pointer, mydata[i], true);
+                    addTooltip(tooltip_pointer, mydata[i], true);
                     d3.select(`.x_month_name_${i}`).classed("active", true);
                     // de highlight yaxis text
                     d3.selectAll(".y-axis-titles").classed("active", false);
@@ -1950,15 +1856,15 @@ export class InsightsChartComponent implements OnInit {
             const indexOfPoint = mydata.findIndex(x => x.category == dataValue.category);
             if (lastIndex == indexOfPoint) {
                 // To apply circles animation on last index
-                // addTooltip(tooltip_pointer, dataValue, true);
+                addTooltip(tooltip_pointer, dataValue, true);
             } else {
                 // Not to apply circles animation on other points on curve
-                // addTooltip(tooltip_pointer, dataValue, false);
+                addTooltip(tooltip_pointer, dataValue, false);
             }
             svg.append('rect')
                 .attr('x', tooltip_pointer.x)
                 .attr('y', 0)
-                .attr('width', 20)
+                .attr('width', 25)
                 .attr('height', height + 40)
                 .attr("id", "rect_xaxis")
                 .attr('stroke', 'black')
@@ -2007,7 +1913,7 @@ export class InsightsChartComponent implements OnInit {
                 .style("opacity", 0.9);
             tooltip
                 .html(dataValue.value)
-                .style("left", (mousePointer.x + 60) + "px")
+                .style("left", (mousePointer.x - 10) + "px")
                 .style("top", (mousePointer.y - 35) + "px");
             ;
             radiation
@@ -2025,15 +1931,15 @@ export class InsightsChartComponent implements OnInit {
                         "<span class=\"circle_waves circle_two\"></span> " +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - width - 225) + "px")
-                    .style("top", (mousePointer.y - 243) + "px");
+                    .style("left", (mousePointer.x + 15) + "px")
+                    .style("top", (mousePointer.y + 10) + "px");
             } else {
                 radiation
                     .html("<span id=\"radiation\" class=\"animating_circle\">" +
                         "<span class=\"circle_waves circle_three\"></span>" +
                         "</span>")
-                    .style("left", (mousePointer.x - width - 225) + "px")
-                    .style("top", (mousePointer.y - 243) + "px");
+                    .style("left", (mousePointer.x + 15) + "px")
+                    .style("top", (mousePointer.y + 10) + "px");
             }
         }
 
@@ -2402,13 +2308,13 @@ export class InsightsChartComponent implements OnInit {
                 $("#contextMenu").css("display", 'none');
             });
         }
-        addInfoIcon(default_width - 35, 5, "#insights_graph_svg", "infoIcon_1", svgY_right);
+        addInfoIcon(100, 5, "#insights_graph_svg", "infoIcon_1", svgY_right);
 
         selectionOfXaxis();
 
         function addArrowsAfterYaxis() {
             svgY_right.append("g")
-                .attr("transform", `translate(${width + 195}, ${height - 294})`)
+                .attr("transform", `translate(195, ${height - 294})`)
                 .append("text")
                 .attr("fill", "#759B67")
                 .attr("font-size", "14px")
@@ -2416,7 +2322,7 @@ export class InsightsChartComponent implements OnInit {
                 .style("transform", "rotate(-90deg)")
 
             svgY_right.append("g")
-                .attr("transform", `translate(${width + 195}, ${height - 20})`)
+                .attr("transform", `translate(195, ${height - 20})`)
                 .append("text")
                 .attr("fill", "#AC5D5D")
                 .attr("font-size", "14px")
@@ -2454,8 +2360,8 @@ export class InsightsChartComponent implements OnInit {
                 .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
             svgY_right.append("line")
-                .attr("x1", width + 192)
-                .attr("x2", width + 192)
+                .attr("x1", 192)
+                .attr("x2", 192)
                 .attr("y1", 135)
                 .attr("y2", 100)
                 .style("opacity", 0.5)
@@ -2464,8 +2370,8 @@ export class InsightsChartComponent implements OnInit {
                 .attr("marker-end", "url(#expansionArrow)");
 
             svgY_right.append("line")
-                .attr("x1", width + 192)
-                .attr("x2", width + 192)
+                .attr("x1", 192)
+                .attr("x2",192)
                 .attr("y1", 220)
                 .attr("y2", 260)
                 .style("opacity", 0.5)
@@ -2488,8 +2394,8 @@ export class InsightsChartComponent implements OnInit {
                 .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
             svgY_right.append("line")
-                .attr("x1", width + 120)
-                .attr("x2", width + 110)
+                .attr("x1", 120)
+                .attr("x2", 110)
                 .attr("y1", 167)
                 .attr("y2", 177)
                 .style("opacity", 0.5)
@@ -2497,8 +2403,8 @@ export class InsightsChartComponent implements OnInit {
                 .attr("stroke-width", 1)
 
             svgY_right.append("line")
-                .attr("x1", width + 110)
-                .attr("x2", width + 60)
+                .attr("x1", 110)
+                .attr("x2", 60)
                 .attr("y1", 177)
                 .attr("y2", 177)
                 .style("opacity", 0.5)
@@ -2521,8 +2427,8 @@ export class InsightsChartComponent implements OnInit {
                 .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
             svgY_right.append("line")
-                .attr("x1", width + 120)
-                .attr("x2", width + 60)
+                .attr("x1", 120)
+                .attr("x2", 60)
                 .attr("y1", 184)
                 .attr("y2", 184)
                 .style("opacity", 0.5)
@@ -2532,7 +2438,7 @@ export class InsightsChartComponent implements OnInit {
         }
         addArrowsAfterYaxis();
 
-        addLinesForGraph();
+        addLinesForYears();
 
         addFlags();
 
