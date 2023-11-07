@@ -52,9 +52,12 @@
                         <div class="commentary_header">
                           <!-- <p class="commentary_month mb-0 ec_month"></p> -->
                           <p class="commentary_title mb-0 ec_month_title"></p>
+                          <p class="d-none ec_month_title_download"></p>
                           <div class="commentary_download">
+                            <a [routerLink]="[]" (click)="downloadSumpoornData()">
                             <span>Download PDF</span>
                             <img src="assets/icons/download-icon.svg" class="img-fluid" />
+                            </a>
                           </div>
                         </div>
                         <div class="commentary_body">

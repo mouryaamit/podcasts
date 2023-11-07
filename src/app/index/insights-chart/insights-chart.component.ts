@@ -11,6 +11,8 @@ export class InsightsChartComponent implements OnInit {
     @Input() sumpoornGraphData;
     @Output() graphWidth = new EventEmitter<number>();
 
+    
+
     constructor() { }
 
     ngOnInit(): void {
@@ -2035,6 +2037,7 @@ export class InsightsChartComponent implements OnInit {
         });
 
         function addCommentary(dataValue) {
+            console.log("addCommentary = ",dataValue)
             let indexValue = dataValue.value;
             let expertData = (indexData.ExpertCommentary).filter((e) => {
                 return (e.Month == dataValue.category);
@@ -2071,6 +2074,10 @@ export class InsightsChartComponent implements OnInit {
                     .html(`${monthlyC.comment}`)
                     ;
                 // Right data
+                d3.select(".ec_month_title_download")
+                    .html(`${expertC.Month}`)
+                    ;
+                
                 d3.select(".ec_month_title")
                     .html(`${current_month} ${current_year}`)
                     ;

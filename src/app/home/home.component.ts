@@ -81,16 +81,14 @@ export class HomeComponent implements OnInit {
   }
 
   saveSubscription(){
-    console.log("clicked");
     let postData = this.subscribeGroup.getRawValue();
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
-          console.log(resp);
           
       },
       (error) => {
-          console.log(error);
+          console.error(error);
           
       }
   );

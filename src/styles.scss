@@ -2161,6 +2161,23 @@ main {
                   line-height: normal;
                 }
               }
+
+              .commentary_download {
+                // cursor: pointer;
+
+                span {
+                  color: #6f6f6f;
+                  font-size: $font-size-14px;
+                  line-height: normal;
+                  text-decoration-line: underline;
+                  vertical-align: middle;
+                  margin-right: 0.5rem;
+
+                  &:hover {
+                    text-decoration-line: none;
+                  }
+                }
+              }
             }
           }
         }

@@ -215,29 +215,37 @@
             <div class="modal-body">
                 <div class="complete_form_text">Enter your Institution ID to proceed login.</div>
                 <div class="required_text"><span>*</span> Required Fields</div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="institutionID" name="Institution ID"
-                                placeholder="Institution ID *" autocomplete="off">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                        <div class="d-flex align-items-center mb-3">
-                            <input type="checkbox" id="agreeCheckboxLogin">
-                            <label for="agreeCheckboxLogin" class="terms-label ps-2">
-                                By submitting this request, I agree with the Jocata
-                                <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
-                            </label>
+                <form [formGroup]="swaraLoginGroup">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="instAuid" id="institutionID" name="Institution ID"
+                                    placeholder="Institution ID *" autocomplete="off">
+                                    <div class="form-control-feedback"
+                                    *ngIf="swaraLoginGroup.get('instAuid').errors && (swaraLoginGroup.get('instAuid').dirty || swaraLoginGroup.get('instAuid').touched)">
+                                    <p *ngIf="swaraLoginGroup.get('instAuid').errors?.['required']"
+                                        class="validation-msg">Institution ID is Required</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <button class="sm-primary-button" data-bs-toggle="modal" disabled>Submit</button>
                     </div>
-                </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                            <div class="d-flex align-items-center mb-3">
+                                <input type="checkbox" id="agreeCheckboxLogin">
+                                <label for="agreeCheckboxLogin" class="terms-label ps-2">
+                                    By submitting this request, I agree with the Jocata
+                                    <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                                </label>
+                            </div>
+
+                            <!-- <button class="sm-primary-button" data-bs-toggle="modal" disabled>Submit</button> -->
+                            <button class="sm-primary-button" [disabled]="swaraLoginGroup.invalid" (click)="saveSwaraLoginForm()">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
