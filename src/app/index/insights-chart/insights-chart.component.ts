@@ -1464,7 +1464,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             const flag2_focus = svg.append("g")
                 .attr("class", "flag2_focus")
-                .attr("transform", "translate(" + (x_2 + 10) + "," + y_2 + ")")
+                .attr("transform", "translate(" + (x_2 + 10) + "," + (y_2 + 7) + ")")
                 ;
 
             flag2_focus.append("circle")
@@ -1494,7 +1494,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             covid_2020.append('line')
                 .attr('x1', x_1 + 9)
-                .attr('y1', y_1 - 10)
+                .attr('y1', y_1 - 6)
                 .attr('x2', x_1 + 9)
                 .attr('y2', y_1 + 55)
                 .attr('stroke', '#A0A0A0')
@@ -1523,7 +1523,7 @@ export class InsightsChartComponent implements OnInit {
                 ;
             covid_2021.append('line')
                 .attr('x1', x_2 + 10)
-                .attr('y1', y_2)
+                .attr('y1', y_2 + 2)
                 .attr('x2', x_2 + 10)
                 .attr('y2', y_2 - 55)
                 .attr('stroke', '#A0A0A0')
