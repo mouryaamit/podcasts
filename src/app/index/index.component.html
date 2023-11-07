@@ -305,7 +305,7 @@
                     <div class="app_index_table_mob_body">
                       <div class="app_index_table_mob_body_item" *ngFor="let item of contextTableData">
                         <h6>{{ item.title }}</h6>
-                        <div class="d-flex align-items-start" *ngFor="let item of item.items; let i = index">
+                        <div class="d-flex align-items-baseline" *ngFor="let item of item.items; let i = index">
                           <img
                             [src]="'assets/icons/circle-' + (i === 0 ? 'blue' : i === 1 ? 'orange' : 'green') + '.svg'" />
                           <p [innerHTML]="item"></p>

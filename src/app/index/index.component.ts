@@ -54,7 +54,7 @@ export class IndexComponent implements OnInit {
         },
         {
             "title": "Generation - Frequency & Date",
-            "items": ["Monthly <br/> 7 weeks later, from the current month", "Monthly <br/> 1st week of succeeding month", "Monthly <br/> 4 weeks later, from the current month"]
+            "items": ["Monthly: 7 weeks later, from the current month", "Monthly: 1st week of succeeding month", "Monthly: 4 weeks later, from the current month"]
         },
         {
             "title": "Index Type and Scale",
