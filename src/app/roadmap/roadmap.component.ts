@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-roadmap',
@@ -52,11 +53,13 @@ export class RoadmapComponent implements OnInit {
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
-          
+        $("#successModal").show();
+        $("#subscribeModal").hide();
       },
       (error) => {
           console.error(error);
-          
+          $("#errorsModal").show();
+          $("#subscribeModal").hide();
       }
   );
     

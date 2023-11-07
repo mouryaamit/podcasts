@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as CryptoJS from 'crypto-js';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-institution-login',
@@ -57,11 +58,13 @@ export class InstitutionLoginComponent implements OnInit {
 
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
-
+        $("#successModal").show();
+        $("#scheduleDemo").hide();
       },
       (error) => {
         console.error(error);
-
+        $("#errorsModal").show();
+        $("#scheduleDemo").hide();
       }
     );
 
@@ -82,11 +85,15 @@ export class InstitutionLoginComponent implements OnInit {
     
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
+        $("#loginModal").hide();
+        console.log(resp.instLoginUrl)
+        window.open(resp.instLoginUrl, "_blank");
 
       },
       (error) => {
         console.error(error);
-
+        $("#loginModal").hide();
+        $("#errorsModal").show();
       }
     );
   }

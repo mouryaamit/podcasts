@@ -157,8 +157,8 @@ export class IndexComponent implements OnInit {
 
           },
           (error) => {
-            console.error(error);
-    
+            console.error("downloadSumpoornGraphDetails",error);
+            $("#errorsModal").show();
           }
         );
     }

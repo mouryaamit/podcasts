@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-contact',
@@ -56,11 +57,11 @@ export class ContactComponent implements OnInit {
 
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
-          
+        $("#successModal").show();
       },
       (error) => {
           console.error(error);
-          
+          $("#errorsModal").show();
       }
   );
     
