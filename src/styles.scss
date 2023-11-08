@@ -2789,7 +2789,7 @@ main {
         }
       }
 
-      .success_text {
+      .success_text,.error_text,.error_text_dynamic {
         color: #696969;
         font-size: $font-size-18px;
         line-height: normal;

@@ -37,7 +37,7 @@ export class SumpoornApiService {
             resolve(resp);
           }
           else {
-            reject(this.apiService.commonStrings.http_error);
+            reject(resp);
           }
         },
         (error) => {

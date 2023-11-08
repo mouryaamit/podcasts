@@ -57,7 +57,15 @@ export class RoadmapComponent implements OnInit {
         $("#subscribeModal").hide();
       },
       (error) => {
-          console.error(error);
+        console.error(error);
+        if(error && error.statusMessage){
+          $(".error_text_dynamic").html(error.statusMessage);
+          $(".error_text").hide();
+          $(".error_text_dynamic").show();
+        } else {
+          $(".error_text").show();
+          $(".error_text_dynamic").hide();
+        }
           $("#errorsModal").show();
           $("#subscribeModal").hide();
       }

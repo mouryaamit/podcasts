@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,5 +17,8 @@ export class AppComponent implements OnInit {
 
   hideErrorModal(){
     $("#errorsModal").hide();
+    $(".error_text").show();
+    $(".error_text_dynamic").hide();
+    $('.modal-backdrop').removeClass("modal-backdrop");    
   }
 }
