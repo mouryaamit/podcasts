@@ -100,7 +100,6 @@ export class IndexComponent implements OnInit {
         this.graphApiService.getSumpoornGraphApiData({ssUuid: this.encryptedData}).then((data) => {
 
         }, (error) => {
-            console.error(error);
         })
     }
 

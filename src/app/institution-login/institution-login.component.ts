@@ -62,7 +62,6 @@ export class InstitutionLoginComponent implements OnInit {
         $("#scheduleDemo").hide();
       },
       (error) => {
-        console.error(error);
         $("#errorsModal").show();
         $("#scheduleDemo").hide();
       }
@@ -72,9 +71,15 @@ export class InstitutionLoginComponent implements OnInit {
   
   hideSuccessModal(){
     $("#successModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
   }
   hideScheduleDemoModal(){
     $("#scheduleDemo").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
   }
 
   createForm2() {
@@ -98,7 +103,6 @@ export class InstitutionLoginComponent implements OnInit {
 
       },
       (error) => {
-        console.error(error);
         $("#loginModal").hide();
         $("#errorsModal").show();
       }

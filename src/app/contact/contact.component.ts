@@ -60,7 +60,6 @@ export class ContactComponent implements OnInit {
         $("#successModal").show();
       },
       (error) => {
-          console.error(error);
           $("#errorsModal").show();
       }
   );
@@ -69,6 +68,9 @@ export class ContactComponent implements OnInit {
 
   hideSuccessModal(){
     $("#successModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
   }
 
 }

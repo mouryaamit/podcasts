@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
     $("#errorsModal").hide();
     $(".error_text").show();
     $(".error_text_dynamic").hide();
-    $('.modal-backdrop').removeClass("modal-backdrop");    
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
   }
 }

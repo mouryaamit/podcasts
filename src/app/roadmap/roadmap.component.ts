@@ -57,7 +57,6 @@ export class RoadmapComponent implements OnInit {
         $("#subscribeModal").hide();
       },
       (error) => {
-        console.error(error);
         if(error && error.statusMessage){
           $(".error_text_dynamic").html(error.statusMessage);
           $(".error_text").hide();
@@ -75,6 +74,15 @@ export class RoadmapComponent implements OnInit {
 
   hideSuccessModal(){
     $("#successModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
   }
-
+  
+  hideSubscribeModal(){
+    $("#subscribeModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
+  }
 }
