@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
     this.contactGroup.get('businessEmail').setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
     this.contactGroup.get('jobTitle').setValidators([Validators.required]);
     this.contactGroup.get('company').setValidators([Validators.required]);
-    this.contactGroup.get('contactNumber').setValidators([Validators.pattern(/^((91|0))?[0-9]{10,12}$/)]);
+    this.contactGroup.get('contactNumber').setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.contactGroup.get('messageType').setValidators([Validators.required]);
     this.contactGroup.get('message').setValidators([Validators.required]);
     this.contactGroup.get('checkedTermsAndConditions').setValidators([Validators.required]);

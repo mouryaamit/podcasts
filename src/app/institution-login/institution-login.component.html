@@ -139,7 +139,7 @@
 
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" formControlName="contactNumber"
+                                <input type="text" class="form-control" maxlength="10" formControlName="contactNumber"
                                     id="contactNumber" name="Contact Number" placeholder="Contact Number">
                                 <div class="form-control-feedback"
                                     *ngIf="scheduleDemoGroup.get('contactNumber').errors && (scheduleDemoGroup.get('contactNumber').dirty || scheduleDemoGroup.get('contactNumber').touched)">

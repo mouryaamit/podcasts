@@ -48,7 +48,7 @@ export class InstitutionLoginComponent implements OnInit {
     this.scheduleDemoGroup.get('businessEmail').setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
     this.scheduleDemoGroup.get('jobTitle').setValidators([Validators.required]);
     this.scheduleDemoGroup.get('company').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('contactNumber').setValidators([Validators.pattern(/^((91|0))?[0-9]{10,12}$/)]);
+    this.scheduleDemoGroup.get('contactNumber').setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     this.scheduleDemoGroup.get('checkedTermsAndConditions').setValidators([Validators.required]);
   }
 
