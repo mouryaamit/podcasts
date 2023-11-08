@@ -73,6 +73,9 @@ export class InstitutionLoginComponent implements OnInit {
   hideSuccessModal(){
     $("#successModal").hide();
   }
+  hideScheduleDemoModal(){
+    $("#scheduleDemo").hide();
+  }
 
   createForm2() {
     this.swaraLoginGroup = this.fb.group({
