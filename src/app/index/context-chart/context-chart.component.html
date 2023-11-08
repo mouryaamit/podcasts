@@ -3,6 +3,24 @@
     <!-- <div id="context_graph_svg" class="float-chart"> </div> -->
     <div id="context_graph_y_axis_svg" style="float:left;position: relative;">
     </div>
+    <div class="context_line_checkboxes" style="float:right;position: relative;">
+      <div style="padding-bottom:30px;">
+        <div class="iipColorClass" style="font-size: 14px;font-weight: bold;"><input type="checkbox"
+            id="IIPCheckbox" class="context_checkboxes" value="IIP" checked="true" /> &nbsp;*IIP</div>
+        <div class="checkbox_label">Index of Industrial Production </div>
+      </div>
+      <div style="padding-bottom:30px;"><label class="pmiColorClass"
+          style="font-size: 14px;font-weight: bold;"><input type="checkbox" id="PMICheckbox"
+            class="context_checkboxes" value="PMI" /> &nbsp;*PMI&#8482;</label>
+        <div class="checkbox_label">Purchasing Manager's Index (by S&P Global)</div>
+      </div>
+      <div><label class="gvaColorClass" style="font-size: 14px;font-weight: bold;width: 128px;"><input
+            type="checkbox" id="GVACheckbox" class="context_checkboxes" value="GVA" />
+          <div style="display: inline;"> &nbsp;*GVA Growth %</div>
+        </label>
+        <div class="checkbox_label">Gross Value Added</div>
+      </div>
+    </div>
     <!-- width: 7%; -->
     <div id="context_graph_y_axis_gva_svg" style="float:right;position: relative;display: none;">
     </div>
@@ -17,24 +35,29 @@
     </div>
     <div class="chart_desc d-md-flex">
       <div id="iipDescDiv" class="iipContent">
-        <div class="iipLegendText"><input type="checkbox" id="IIPCheckbox" class="context_checkboxes"
-            value="IIP" /> &nbsp;*IIP</div>
+        <div class="iipLegendText">
+          <!-- <input type="checkbox" id="IIPCheckbox" class="context_checkboxes"
+            value="IIP" /> &nbsp; -->
+            *IIP</div>
         <div class="iipLegendContent">
           General Index of Industrial Production. IIP data compiled and published by the Ministry of
           Statistics and Programme Implementation (MoSPI), GOI is updated to the latest release. </div>
       </div>
       <div id="pmiDescDiv" class="pmiContent">
-        <div class="pmiLegendText"><input type="checkbox" id="PMICheckbox" class="context_checkboxes"
-            value="PMI" /> &nbsp;*PMI&#8482;</div>
+        <div class="pmiLegendText">
+          <!-- <input type="checkbox" id="PMICheckbox" class="context_checkboxes"
+            value="PMI" /> &nbsp; -->
+            *PMI&#8482;</div>
         <div class="pmiLegendContent">
           S&P Global Composite Purchasing Managers' Index. All trademarks are property of their respective
           owners.
         </div>
       </div>
       <div id="gvaDescDiv" class="gvaContent">
-        <div class="gvaLegendText"><input type="checkbox" id="GVACheckbox" class="context_checkboxes"
-            value="GVA" />
-          &nbsp;*GVA Growth %</div>
+        <div class="gvaLegendText">
+          <!-- <input type="checkbox" id="GVACheckbox" class="context_checkboxes"
+            value="GVA" /> &nbsp; -->
+          *GVA Growth %</div>
         <div class="gvaLegendContent">
           Growth in Gross Value Added at current prices. GVA is a primary measure in national income
           statistics, defined as the value of output less the value of intermediate consumption.
