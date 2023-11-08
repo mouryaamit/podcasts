@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { GraphApiService } from '../services/graph-api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import { saveAs } from 'file-saver'; 
 import * as $ from 'jquery';
 import * as CryptoJS from 'crypto-js';
+import { InsightsChartComponent } from './insights-chart/insights-chart.component';
 // declare var $: any;
 
 @Component({
@@ -13,6 +14,7 @@ import * as CryptoJS from 'crypto-js';
     encapsulation: ViewEncapsulation.None
 })
 export class IndexComponent implements OnInit {
+    @ViewChild(InsightsChartComponent) insightsChartComponent:InsightsChartComponent | undefined;
     sumpoornGraphData: any;
     iipGraphData: any;
     pmiGraphData: any;
@@ -164,6 +166,9 @@ export class IndexComponent implements OnInit {
             $("#errorsModal").show();
           }
         );
+    }
+    openInsightsInfoIcon(event){
+        this.insightsChartComponent?.openInfoIcon("#mobile_insights_graph_svg", {clientX:event.clientX,clientY:event.clientY});
     }
 }
 

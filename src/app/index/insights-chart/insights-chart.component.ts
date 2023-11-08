@@ -20,8 +20,84 @@ export class InsightsChartComponent implements OnInit {
         this.generateMobileInsightsGraph();
 
     }
+    openInfoIcon(graph_id,evt){
+        {
+            function formatYaxisForText(d: any, fromWhere: any) {
+                if (d == 0.25) {
+                    return "Substantial";
+                    // if(fromWhere == "info") {
+                    //     return "Substantial";
+                    // } else {
+                    //     return "Substantial Contraction";
+                    // }
+                } else if (d == 0.45) {
+                    return "Significant";
+                } else if (d == 0.50) {
+                    return "Moderate";
+                } else if (d == 0.52) {
+                    return "Mild";
+                } else if (d == 0.54) {
+                    return "Marginal";
+                } else if (d == 0.60) {
+                    return "Mild";
+                } else if (d == 0.65) {
+                    return "Moderate";
+                } else if (d == 0.75) {
+                    return "Significant";
+                } else if (d == 1.00) {
+                    return "Substantial";
+                }
+                return '';
+            }
+            const y_right_coordinates = ['0.00', '0.25', '0.45', '0.50', '0.52', '0.54', '0.60', '0.65', '0.75', '1.00']; //'0.00',
+            // Position:
+                if (graph_id == "#mobile_insights_graph_svg") {
+                    const absX = evt.clientX + window.scrollX - 190;
+                    const absY = evt.clientY + window.scrollY + 20;
+                    $("#contextMenuMobile").css('top', absY + 'px');
+                    $("#contextMenuMobile").css('left', absX + 'px');
+                    $("#contextMenuMobile").css("display", 'block');
+                } else {
+                    const absX = evt.clientX + window.scrollX - 180;
+                    const absY = evt.clientY + window.scrollY - 180;
+                    $("#contextMenuMobile").css('top', absY + 'px');
+                    $("#contextMenuMobile").css('left', absX + 'px');
+                    $("#contextMenuMobile").css("display", 'block');
+                }
 
+                let indexData: any[] = [];
+                let startYaxisPoint = ""
+                y_right_coordinates.forEach(function (index) {
+                    if (startYaxisPoint == "" || startYaxisPoint.length == 0) {
+                        startYaxisPoint = index;
+                    } else {
+                        let value = formatYaxisForText(index, "info");
+                        let da: any = new Object();
+                        da.index = startYaxisPoint + "-" + index;
+                        da.value = value;
+                        indexData.push(da);
+                        startYaxisPoint = index;
+                    }
+                });
+                let infodata = ""
+                for (let i = indexData.length - 1; i >= 0; i--) {
+                    if (i <= 3) {
+                        if (i == 3)
+                            infodata += "<div style=\"padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000;\"> <span>&#8594;</span> " + indexData[i].index + "</span></div>";
+                        else
+                            infodata += "<div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
+                    } else {
+                        if (i == indexData.length - 1)
+                            infodata += "<div style=\"padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
+                        else
+                            infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
+                    }
+                }
+                $("#mobile_insights_graph_y_axis_content_info").html(infodata);
+            }
+    }
     generateMobileInsightsGraph() {
+        var outsideThis = this;
         const mydata = this.sumpoornGraphData.IndexGeneration;
         const indexData = this.sumpoornGraphData.Commentary;
 
@@ -982,33 +1058,7 @@ export class InsightsChartComponent implements OnInit {
             }
             return hAndyValues;
         }
-        function formatYaxisForText(d: any, fromWhere: any) {
-            if (d == 0.25) {
-                return "Substantial";
-                // if(fromWhere == "info") {
-                //     return "Substantial";
-                // } else {
-                //     return "Substantial Contraction";
-                // }
-            } else if (d == 0.45) {
-                return "Significant";
-            } else if (d == 0.50) {
-                return "Moderate";
-            } else if (d == 0.52) {
-                return "Mild";
-            } else if (d == 0.54) {
-                return "Marginal";
-            } else if (d == 0.60) {
-                return "Mild";
-            } else if (d == 0.65) {
-                return "Moderate";
-            } else if (d == 0.75) {
-                return "Significant";
-            } else if (d == 1.00) {
-                return "Substantial";
-            }
-            return '';
-        }
+        
         function addInfoIcon(icon_x, icon_y, graph_id, icon_id, selectedSvg) {
             let icon;
             if (graph_id == "#mobile_insights_graph_svg") {
@@ -1024,58 +1074,15 @@ export class InsightsChartComponent implements OnInit {
                     .style("cursor", "pointer");
             }
             icon.on("click", function (evt, d) {
-                    // Position:
-                    if (graph_id == "#mobile_insights_graph_svg") {
-                        const absX = evt.clientX + window.scrollX - 190;
-                        const absY = evt.clientY + window.scrollY + 20;
-                        $("#contextMenuMobile").css('top', absY + 'px');
-                        $("#contextMenuMobile").css('left', absX + 'px');
-                        $("#contextMenuMobile").css("display", 'block');
-                    } else {
-                        const absX = evt.clientX + window.scrollX - 180;
-                        const absY = evt.clientY + window.scrollY - 180;
-                        $("#contextMenuMobile").css('top', absY + 'px');
-                        $("#contextMenuMobile").css('left', absX + 'px');
-                        $("#contextMenuMobile").css("display", 'block');
-                    }
-
-                    let indexData: any[] = [];
-                    let startYaxisPoint = ""
-                    y_right_coordinates.forEach(function (index) {
-                        if (startYaxisPoint == "" || startYaxisPoint.length == 0) {
-                            startYaxisPoint = index;
-                        } else {
-                            let value = formatYaxisForText(index, "info");
-                            let da: any = new Object();
-                            da.index = startYaxisPoint + "-" + index;
-                            da.value = value;
-                            indexData.push(da);
-                            startYaxisPoint = index;
-                        }
-                    });
-                    let infodata = ""
-                    for (let i = indexData.length - 1; i >= 0; i--) {
-                        if (i <= 3) {
-                            if (i == 3)
-                                infodata += "<div style=\"padding-bottom: 10px;padding-top: 10px;color:#960000\"><b>&#8595; Contraction</b></div><div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000;\"> <span>&#8594;</span> " + indexData[i].index + "</span></div>";
-                            else
-                                infodata += "<div style=\"color:#960000;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#960000\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
-                        } else {
-                            if (i == indexData.length - 1)
-                                infodata += "<div style=\"padding-bottom: 10px;color:#1E7400\"><b>&#8593; Expansion</b></div><div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
-                            else
-                                infodata += "<div style=\"color:#1E7400;padding-left: 13px;padding-bottom: 3px;\">" + indexData[i].value + " <span style=\"float:right;color:#1E7400\"><span>&#8594;</span>  " + indexData[i].index + "</span></div>";
-                        }
-                    }
-                    $("#mobile_insights_graph_y_axis_content_info").html(infodata);
-                });
+                outsideThis.openInfoIcon(graph_id,evt);
+            });
 
             $("#closeInfoMobile").on("click", function (e) {
                 $("#contextMenuMobile").css("display", 'none');
             });
         }
 
-        addInfoIcon(0, 0, "#mobile_insights_graph_svg", "#insightsInfoIcon", null);
+        // addInfoIcon(0, 0, "#mobile_insights_graph_svg", "#insightsInfoIcon", null);
 
         selectionOfXaxis();
 

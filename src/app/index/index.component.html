@@ -15,7 +15,7 @@
                 type="button" role="tab" aria-controls="graph-context" aria-selected="false" (click)="scrollToRight('Context')">Context</button>
             </li>
           </ul>
-          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon" id="insightsInfoIcon">
+          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon" id="insightsInfoIcon" (click)="openInsightsInfoIcon($event)">
             <img src="assets/icons/info.svg" class="img-fluid" />
           </a>
           <a class="d-flex d-md-none" *ngIf="contextInfoIcon" data-bs-toggle="modal" data-bs-target="#infoModal"
