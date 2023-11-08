@@ -57,7 +57,8 @@ const routes: Routes = [
     title: `Comprehensive Portfolio Analytics for Informed Decision-Making`
   },
   { path: '**', 
-    redirectTo: 'home' 
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
 ];
 
@@ -66,6 +67,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
       anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled'
     }),
   ],
   exports: [RouterModule],

@@ -1268,7 +1268,7 @@ main {
       }
     }
 
-    p {
+    ol, p {
       color: #6f6f6f;
       font-size: $font-size-14px;
       line-height: 119.2%;
@@ -1493,7 +1493,7 @@ main {
         flex-wrap: nowrap;
         overflow-x: scroll;
         width: 85%;
-        
+        border-bottom: unset;
         &::-webkit-scrollbar {
           display: none;
         }

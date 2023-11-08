@@ -89,10 +89,17 @@
     </div>
   </div>
   <div class="row gx-0 justify-content-center app_home_minds_section">
-    <div class="col-sm-12 col-md-10 d-flex justify-content-around">
+    <div class="col-sm-12 d-none d-md-flex justify-content-around">
       <img src="assets/images/logo-jocata.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
         data-aos-duration="1000" alt="Jocata Logo" />
       <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
+        data-aos-duration="1000" alt="SIDBI Logo" />
+    </div>
+    <!-- Separate Logos for Mobile -->
+    <div class="col-md-10 d-flex d-md-none justify-content-around">
+      <img src="assets/images/logo-jocata.png" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
+        data-aos-duration="1000" alt="Jocata Logo" />
+      <img src="assets/images/logo-sidbi.png" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
         data-aos-duration="1000" alt="SIDBI Logo" />
     </div>
     <div class="col-sm-12 col-md-9 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
@@ -115,36 +122,38 @@
           <div class="col">
             <div class="app_methodology_card_box h-100">
               <img src="assets/icons/cart.svg" class="img-fluid mb-5" alt="Cart Icon">
-              <p>Using GST Returns calculate MSME <span class="fw-bold">TTM sales</span> for
-                current and previous
-                month. </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="app_methodology_card_box h-100">
-              <img src="assets/icons/gap.svg" class="img-fluid mb-5" alt="Gap Icon">
-              <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs and delta of
-                  amplitude of
-                  sales</span> between them.</p>
+              <p>Use GST Returns to calculate MSME <span class="fw-bold">TTM sales</span> for
+                current month (TTMc) and previous month (TTMp). </p>
             </div>
           </div>
           <div class="col">
             <div class="app_methodology_card_box text-center h-100">
               <img src="assets/icons/combine.svg" class="img-fluid mb-5" alt="Combine Icon">
-              <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
-                  month</span> TTM sales.</p>
+              <p>For each GSTIN, <span class="fw-bold">calculate delta of monthly sales on a YoY
+                basis, represent relative to TTMp;</span> thereafter
+            <span class="fw-bold">remove outliers</span>.
+        </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="app_methodology_card_box h-100">
+              <img src="assets/icons/gap.svg" class="img-fluid mb-5" alt="Gap Icon">
+              <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs combined
+                with their amplitude of sales.</span></p>
             </div>
           </div>
           <div class="col">
             <div class="app_methodology_card_box text-center h-100">
               <img src="assets/icons/graph.svg" class="img-fluid mb-5" alt="Graph Icon">
-              <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index.</span></p>
+              <p>Compute the <span class="fw-bold">relative amplitude adjusted diffusion
+                index</span>.</p>
             </div>
           </div>
           <div class="col">
             <div class="app_methodology_card_box text-center h-100">
               <img src="assets/icons/resize.svg" class="img-fluid mb-5" alt="Resize Icon">
-              <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1.</p>
+              <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to
+                1.</p>
             </div>
           </div>
         </div>
