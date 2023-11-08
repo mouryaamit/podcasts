@@ -57,10 +57,12 @@ export class ContactComponent implements OnInit {
 
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
+        this.contactGroup.reset();
         $("#successModal").show();
       },
       (error) => {
-          $("#errorsModal").show();
+        this.contactGroup.reset();
+        $("#errorsModal").show();
       }
   );
     

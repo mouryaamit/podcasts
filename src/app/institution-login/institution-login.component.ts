@@ -58,10 +58,12 @@ export class InstitutionLoginComponent implements OnInit {
 
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
+        this.scheduleDemoGroup.reset();
         $("#successModal").show();
         $("#scheduleDemo").hide();
       },
       (error) => {
+        this.scheduleDemoGroup.reset();
         $("#errorsModal").show();
         $("#scheduleDemo").hide();
       }
@@ -97,12 +99,14 @@ export class InstitutionLoginComponent implements OnInit {
     
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
+        this.swaraLoginGroup.reset();
         $("#loginModal").hide();
         console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
 
       },
       (error) => {
+        this.swaraLoginGroup.reset();
         $("#loginModal").hide();
         $("#errorsModal").show();
       }

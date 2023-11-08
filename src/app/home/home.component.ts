@@ -86,10 +86,12 @@ export class HomeComponent implements OnInit {
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
+        this.subscribeGroup.reset();
         $("#successModal").show();
         $("#subscribeModal").hide();
       },
       (error) => {
+        this.subscribeGroup.reset();
           if(error && error.statusMessage){
             $(".error_text_dynamic").html(error.statusMessage);
             $(".error_text").hide();
