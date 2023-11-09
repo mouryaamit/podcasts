@@ -73,7 +73,7 @@ export class InsightsChartComponent implements OnInit {
                     } else {
                         let value = formatYaxisForText(index, "info");
                         let da: any = new Object();
-                        da.index = startYaxisPoint + "-" + index;
+                        da.index = (Number(startYaxisPoint) == 0.00?startYaxisPoint : (Number(startYaxisPoint)+.01)) + "-" + index;
                         da.value = value;
                         indexData.push(da);
                         startYaxisPoint = index;
@@ -2300,7 +2300,7 @@ export class InsightsChartComponent implements OnInit {
                         } else {
                             let value = formatYaxisForText(index);
                             let da: any = new Object();
-                            da.index = startYaxisPoint + "-" + index;
+                            da.index = (Number(startYaxisPoint) == 0.00?startYaxisPoint : (Number(startYaxisPoint)+.01)) + "-" + index;
                             da.value = value;
                             indexData.push(da);
                             startYaxisPoint = index;
