@@ -11,7 +11,7 @@ export class InsightsChartComponent implements OnInit {
     @Input() sumpoornGraphData;
     @Output() graphWidth = new EventEmitter<number>();
 
-    
+
 
     constructor() { }
 
@@ -339,7 +339,7 @@ export class InsightsChartComponent implements OnInit {
             .attr("transform", `translate(${width + 25},0)`) // sets last xaxis index align
             .call(yAxis_right)
             .selectAll('.tick text'); // select all the y tick texts
-            
+
         function formatYaxisForXvalue(d: any, i: any) {
             if (d == 0.25 || d == 1.00 || d == 0.45 || d == 0.50 || d == 0.60 || d == 0.65 || d == 0.75) {
                 return "1em";
@@ -361,7 +361,7 @@ export class InsightsChartComponent implements OnInit {
                     years[i]["count"]++;
             });
             const firstLine = svg.append("g"); // first line
-            firstLine.append('line') 
+            firstLine.append('line')
                 .attr('x1', 0.2)
                 .attr('y1', 0)
                 .attr('x2', 0.2)
@@ -554,7 +554,7 @@ export class InsightsChartComponent implements OnInit {
             d3.selectAll(".y-axis-titles").classed("select", false);
         };
 
-        d3.select("#mobile_insights_graph_svg") 
+        d3.select("#mobile_insights_graph_svg")
             .on("mouseleave", (event) => {
                 removeRectsSelection();
                 removeXaxisTitleSelection();
@@ -853,7 +853,7 @@ export class InsightsChartComponent implements OnInit {
             return -1;
         }
 
-        
+
         function addCommentary(dataValue) {
             let indexValue = dataValue.value;
             let expertData = (indexData.ExpertCommentary).filter((e) => {
@@ -1058,7 +1058,7 @@ export class InsightsChartComponent implements OnInit {
             }
             return hAndyValues;
         }
-        
+
         function addInfoIcon(icon_x, icon_y, graph_id, icon_id, selectedSvg) {
             let icon;
             if (graph_id == "#mobile_insights_graph_svg") {
@@ -1228,11 +1228,11 @@ export class InsightsChartComponent implements OnInit {
                 }
             )
             ;
-        
+
         const yAxis_graphLines = d3.axisLeft(y2)
             .tickSize([-width - 25])
             .tickValues(y_right_coordinates);
-        
+
         const svgY_left = d3.select('#insights_graph_left_vertical_svg')
             .append('svg')
             .attr('height', 500)
@@ -1261,6 +1261,7 @@ export class InsightsChartComponent implements OnInit {
         const svg = d3.select("#insights_graph_svg")
             .append("svg") //append svg element inside #chart
             .attr("width", default_width + 2*(margin.right)) //set width
+            .attr("id","svg_insights_graph")
             .attr("height", default_height) //set height
             // .style("max-width", default_width + (margin.left + margin.right)) //set width
             // .style("max-height", default_height) //set height
@@ -1405,7 +1406,7 @@ export class InsightsChartComponent implements OnInit {
                     years[i]["count"]++;
             });
             const firstLine = svg.append("g"); // first line
-            firstLine.append('line') 
+            firstLine.append('line')
                 .attr('x1', 0.2)
                 .attr('y1', 0)
                 .attr('x2', 0.2)
@@ -2089,7 +2090,7 @@ export class InsightsChartComponent implements OnInit {
                 d3.select(".ec_month_title_download")
                     .html(`${expertC.Month}`)
                     ;
-                
+
                 d3.select(".ec_month_title")
                     .html(`${current_month} ${current_year}`)
                     ;
@@ -2498,4 +2499,30 @@ export class InsightsChartComponent implements OnInit {
         $("#insights_graph_svg").scrollLeft(default_width);
     }
 
+    downloadSVG(){
+      //get svg element.
+var svg = document.getElementById("svg_insights_graph");
+
+//get svg source.
+var serializer = new XMLSerializer();
+var source = serializer.serializeToString(svg);
+
+//add name spaces.
+if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
+    source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+}
+if(!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)){
+    source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+}
+
+//add xml declaration
+source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+
+//convert svg source to URI data scheme.
+var url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
+
+//set url value to a element's href attribute.
+document.getElementById("link")["href"] = url;
+//you can download svg file by right click menu.
+    }
 }
