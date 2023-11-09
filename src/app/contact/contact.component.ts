@@ -58,10 +58,16 @@ export class ContactComponent implements OnInit {
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
         this.contactGroup.reset();
+        this.contactGroup.patchValue({
+          "messageType":""
+        })
         $("#successModal").show();
       },
       (error) => {
         this.contactGroup.reset();
+        this.contactGroup.patchValue({
+          "messageType":""
+        })
         $("#errorsModal").show();
       }
   );
