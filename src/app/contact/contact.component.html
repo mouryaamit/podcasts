@@ -43,8 +43,8 @@
                                                 id="fistName" name="First Name" placeholder="First Name *"
                                                 autocomplete="off">
                                             <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('firstName').errors && (contactGroup.get('firstName').dirty || contactGroup.get('firstName').touched)">
-                                                <p *ngIf="contactGroup.get('firstName').errors?.['required']"
+                                                *ngIf="contactGroup.get('firstName')?.errors && (contactGroup.get('firstName')?.dirty || contactGroup.get('firstName')?.touched)">
+                                                <p *ngIf="contactGroup.get('firstName')?.errors?.['required']"
                                                     class="validation-msg" >First
                                                     Name Required</p>
                                             </div>
@@ -56,8 +56,8 @@
                                                 id="lastName" name="Last Name" placeholder="Last Name *"
                                                 autocomplete="off">
                                                 <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('lastName').errors && (contactGroup.get('lastName').dirty || contactGroup.get('lastName').touched)">
-                                                <p *ngIf="contactGroup.get('lastName').errors?.['required']"
+                                                *ngIf="contactGroup.get('lastName')?.errors && (contactGroup.get('lastName')?.dirty || contactGroup.get('lastName')?.touched)">
+                                                <p *ngIf="contactGroup.get('lastName')?.errors?.['required']"
                                                     class="validation-msg" >Last
                                                     Name Required</p>
                                             </div>
@@ -72,8 +72,8 @@
                                                 id="companyName" name="Company" placeholder="Company *"
                                                 autocomplete="off">
                                                 <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('company').errors && (contactGroup.get('company').dirty || contactGroup.get('company').touched)">
-                                                <p *ngIf="contactGroup.get('company').errors?.['required']"
+                                                *ngIf="contactGroup.get('company')?.errors && (contactGroup.get('company')?.dirty || contactGroup.get('company')?.touched)">
+                                                <p *ngIf="contactGroup.get('company')?.errors?.['required']"
                                                     class="validation-msg" >Company Name Required</p>
                                             </div>
                                         </div>
@@ -84,8 +84,8 @@
                                                 id="jobTitle" name="Job Title" placeholder="Job Title *"
                                                 autocomplete="off">
                                                 <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('jobTitle').errors && (contactGroup.get('jobTitle').dirty || contactGroup.get('jobTitle').touched)">
-                                                <p *ngIf="contactGroup.get('jobTitle').errors?.['required']"
+                                                *ngIf="contactGroup.get('jobTitle')?.errors && (contactGroup.get('jobTitle')?.dirty || contactGroup.get('jobTitle')?.touched)">
+                                                <p *ngIf="contactGroup.get('jobTitle')?.errors?.['required']"
                                                     class="validation-msg">Job Title Required</p>
                                             </div>
                                         </div>
@@ -99,10 +99,10 @@
                                                 id="email" name="Email" placeholder="Business Email *"
                                                 autocomplete="off">
                                                 <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('businessEmail').errors && (contactGroup.get('businessEmail').dirty || contactGroup.get('businessEmail').touched)">
-                                                <p *ngIf="contactGroup.get('businessEmail').errors?.['required']"
+                                                *ngIf="contactGroup.get('businessEmail')?.errors && (contactGroup.get('businessEmail')?.dirty || contactGroup.get('businessEmail')?.touched)">
+                                                <p *ngIf="contactGroup.get('businessEmail')?.errors?.['required']"
                                                     class="validation-msg" >Email Required</p>
-                                                    <p *ngIf="contactGroup.get('businessEmail').errors?.['pattern']"
+                                                    <p *ngIf="contactGroup.get('businessEmail')?.errors?.['pattern']"
                                                     class="validation-msg" >Email Invalid</p>
                                             </div>
                                         </div>
@@ -113,11 +113,11 @@
                                                 formControlName="contactNumber" id="contactNumber" name="Contact Number"
                                                 placeholder="Contact Number">
                                             <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('contactNumber').errors && (contactGroup.get('contactNumber').dirty || contactGroup.get('contactNumber').touched)">
-                                                <!-- <p *ngIf="contactGroup.get('contactNumber').errors?.['required']"
+                                                *ngIf="contactGroup.get('contactNumber')?.errors && (contactGroup.get('contactNumber')?.dirty || contactGroup.get('contactNumber')?.touched)">
+                                                <!-- <p *ngIf="contactGroup.get('contactNumber')?.errors?.['required']"
                                                     class="validation-msg" >Mobile
                                                     required</p> -->
-                                                <p *ngIf="contactGroup.get('contactNumber').errors?.['pattern']"
+                                                <p *ngIf="contactGroup.get('contactNumber')?.errors?.['pattern']"
                                                     class="validation-msg" >Mobile
                                                     Number is Invalid</p>
                                             </div>
@@ -139,8 +139,8 @@
                                             <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust"
                                                 alt="Chevron Down">
                                                 <!-- <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('messageType').errors && (contactGroup.get('messageType').dirty || contactGroup.get('messageType').touched)">
-                                                <p *ngIf="contactGroup.get('messageType').errors?.['required']"
+                                                *ngIf="contactGroup.get('messageType')?.errors && (contactGroup.get('messageType')?.dirty || contactGroup.get('messageType')?.touched)">
+                                                <p *ngIf="contactGroup.get('messageType')?.errors?.['required']"
                                                     class="validation-msg" >Type Required</p>
                                             </div> -->
                                         </div>
@@ -154,8 +154,8 @@
                                             <textarea class="form-control feedback" formControlName="message"
                                                 id="messageArea"></textarea>
                                                 <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('message').errors && (contactGroup.get('message').dirty || contactGroup.get('message').touched)">
-                                                <p *ngIf="contactGroup.get('message').errors?.['required']"
+                                                *ngIf="contactGroup.get('message')?.errors && (contactGroup.get('message')?.dirty || contactGroup.get('message')?.touched)">
+                                                <p *ngIf="contactGroup.get('message')?.errors?.['required']"
                                                     class="validation-msg" >Message Required</p>
                                             </div>
                                         </div>
@@ -172,8 +172,8 @@
                                                 <a class="custom-link" routerLink="/tou">Terms of Use.</a>
                                             </label>
                                             <div class="form-control-feedback"
-                                                *ngIf="contactGroup.get('checkedTermsAndConditions').errors && (contactGroup.get('checkedTermsAndConditions').dirty || contactGroup.get('checkedTermsAndConditions').touched)">
-                                                <p *ngIf="contactGroup.get('checkedTermsAndConditions').errors?.['required']"
+                                                *ngIf="contactGroup.get('checkedTermsAndConditions')?.errors && (contactGroup.get('checkedTermsAndConditions')?.dirty || contactGroup.get('checkedTermsAndConditions')?.touched)">
+                                                <p *ngIf="contactGroup.get('checkedTermsAndConditions')?.errors?.['required']"
                                                     class="validation-msg" >Please select checkbox</p>
                                             </div>
                                         </div>

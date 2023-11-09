@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit {
     insightsInfoIcon = true;
     contextInfoIcon = false;
     addComentaryData: any;
-    encryptedData: string;
+    encryptedData: string = "";
     downloadMonth: any;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;

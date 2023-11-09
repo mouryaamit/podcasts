@@ -12,9 +12,9 @@ import * as $ from 'jquery';
 })
 export class InstitutionLoginComponent implements OnInit {
 
-  scheduleDemoGroup: FormGroup;
-  swaraLoginGroup: FormGroup;
-  encryptedData: string;
+  scheduleDemoGroup!: FormGroup;
+  swaraLoginGroup!: FormGroup;
+  encryptedData: string = "";
 
   constructor(
     private apiService: ApiService,
@@ -43,13 +43,13 @@ export class InstitutionLoginComponent implements OnInit {
   }
 
   addValidations() {
-    this.scheduleDemoGroup.get('firstName').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('lastName').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('businessEmail').setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
-    this.scheduleDemoGroup.get('jobTitle').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('company').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('contactNumber').setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
-    this.scheduleDemoGroup.get('checkedTermsAndConditions').setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('firstName')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('lastName')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
+    this.scheduleDemoGroup.get('jobTitle')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('company')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
+    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
   }
 
 
