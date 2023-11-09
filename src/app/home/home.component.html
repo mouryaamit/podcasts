@@ -130,23 +130,23 @@
             <div class="app_methodology_card_box text-center h-100">
               <img src="assets/icons/combine.svg" class="img-fluid mb-5" alt="Combine Icon">
               <p>For each GSTIN, <span class="fw-bold">calculate delta of monthly sales on a YoY
-                basis, represent relative to TTMp;</span> thereafter
-            <span class="fw-bold">remove outliers</span>.
-        </p>
+                  basis, represent relative to TTMp;</span> thereafter
+                <span class="fw-bold">remove outliers</span>.
+              </p>
             </div>
           </div>
           <div class="col">
             <div class="app_methodology_card_box h-100">
               <img src="assets/icons/gap.svg" class="img-fluid mb-5" alt="Gap Icon">
               <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs combined
-                with their amplitude of sales.</span></p>
+                  with their amplitude of sales.</span></p>
             </div>
           </div>
           <div class="col">
             <div class="app_methodology_card_box text-center h-100">
               <img src="assets/icons/graph.svg" class="img-fluid mb-5" alt="Graph Icon">
               <p>Compute the <span class="fw-bold">relative amplitude adjusted diffusion
-                index</span>.</p>
+                  index</span>.</p>
             </div>
           </div>
           <div class="col">
@@ -175,19 +175,16 @@
     <div class="row gx-0">
       <div class="col-sm-12 col-md-9 col-lg-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
         data-aos-duration="1000">
-        <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well
-          acknowledged fact. However, data paucity
-          on the MSME sector often becomes a challenge for industry members and policymakers.</p>
-        <p class="testimonial_content">We at SIDBI have been constantly engaged for the development of the sector and
-          have been partnering with
-          institutions to bridge the information asymmetry to enable informed decision-making by stakeholders. It is
-          in
-          this spirit we have created ‘Sumpoorn’ with Jocata, that carries an index measuring economic activity of the
-          MSMEs leveraging the GST data.</p>
+        <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well acknowledged
+          fact. However, data paucity on the MSME sector often becomes a challenge for industry members and
+          policymakers.</p>
+        <p class="testimonial_content">We, at SIDBI, have been constantly engaged in the development of the sector and
+          have been partnering with institutions to bridge the information asymmetry to enable informed decision-making
+          by stakeholders. It is in this spirit that we have created Sumpoorn with Jocata, that carries an index which
+          measures the economic activity of MSMEs by leveraging GST data.</p>
         <p class="testimonial_content">The underlying authentic data of GST provides credibility to the Index. With
-          time, the same can be expanded
-          to include more dimensions. I hope the publication shall be of value to the readers and provide a rich
-          perspective on the prevalent trends of the MSME sector.</p>
+          time, the same can be expanded to include more dimensions. I hope the publication shall be of value to the
+          readers and provide a rich perspective on the prevalent trends of the MSME sector.</p>
         <div class="d-none d-md-block mt-5">
           <p class="testimonial-name mb-2">
             <span>Sh. Sivasubramanian </span>
@@ -227,19 +224,19 @@
       </div>
       <div class="col-sm-12 col-md-9 col-lg-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
         data-aos-duration="1000">
-        <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by
-          public and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of
-          this sector that is fact-based and dynamic has become critical for their sustained growth, especially
-          through formal credit access.</p>
+        <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by public
+          and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of this sector
+          that is fact-based and dynamic has become critical for their sustained growth, especially through formal
+          credit access.</p>
         <p class="testimonial_content">As a digital transformation partner for marquee lenders in the country, Jocata
-          has been deeply engaged in harnessing Goods and Services Tax (GST) data to provide deep insights on MSME
-          entities and powering near-instant credit decisioning and faster disbursals.</p>
-        <p class="testimonial_content">With the belief that a high-frequency indicator will help address the
-          prevailing MSME knowledge gap, Jocata, in association with SIDBI, presents “Sumpoorn”, India's first and
-          only economic activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe
-          Sumpoorn can effectively, and in a timely manner, aid various stakeholders at financial institutions, policy
-          makers, economists and researchers in strategically directing development and credit efforts to fuel the
-          growth of MSMEs across the country.</p>
+          has been deeply engaged in providing behavioural insights on MSME entities and powering near-instant credit
+          decisioning and faster disbursals.</p>
+        <p class="testimonial_content">With the belief that a high-frequency indicator will help address the prevailing
+          MSME knowledge gap, Jocata, in association with SIDBI, presents Sumpoorn, India's first and only economic
+          activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe Sumpoorn can
+          effectively, and in a timely manner, aid various stakeholders at financial institutions, policy makers,
+          economists and researchers in strategically directing development and credit efforts to fuel the growth of
+          MSMEs across the country.</p>
         <div class="d-none d-md-block mt-5">
           <p class="testimonial-name mb-2">Prashant Muddu</p>
           <p class="testimonial-detail">MD & CEO, Jocata</p>
@@ -354,13 +351,14 @@
 
             <div class="col-sm-12 col-md-6 col-lg-6">
               <div class="form-group">
-                <input type="text" class="form-control" maxlength="10" formControlName="contactNumber" id="contactNumber"
-                  name="Contact Number" placeholder="Contact Number">
-                  <div class="form-control-feedback"
+                <input type="text" class="form-control" maxlength="10" formControlName="contactNumber"
+                  id="contactNumber" name="Contact Number" placeholder="Contact Number">
+                <div class="form-control-feedback"
                   *ngIf="subscribeGroup.get('contactNumber')?.errors && (subscribeGroup.get('contactNumber')?.dirty || subscribeGroup.get('contactNumber')?.touched)">
                   <!-- <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['required']" class="validation-msg">Email
                     Required</p> -->
-                  <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']" class="validation-msg">Mobile Number Is Invalid</p>
+                  <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']" class="validation-msg">Mobile
+                    Number Is Invalid</p>
                 </div>
               </div>
             </div>
