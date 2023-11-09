@@ -12,35 +12,35 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit {
   partners: Array<any> = [
     {
-      title: 'Knowledge Partner',
+      // title: 'Partner',
+      imageSrc: 'assets/images/partner-sahamati.png',
+      imageAlt: 'Sahamati Logo'
+    },
+    {
+      // title: 'Partner',
       imageSrc: 'assets/images/partner-ceed.svg',
       imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
     },
     {
-      title: 'Affiliate Partner',
-      imageSrc: 'assets/images/partner-game.svg',
-      imageAlt: 'Global Alliance for Mass Entrepreneurship Logo'
-    },
-    {
-      title: 'Exclusive Bureau Partner',
+      // title: 'Partner',
       imageSrc: 'assets/images/partner-lead.png',
-      imageAlt: 'Experian Logo'
+      imageAlt: 'Lead Logo'
     },
     {
-      title: 'Knowledge Partner',
+      // title: 'Partner',
+      imageSrc: 'assets/images/partner-sahamati.png',
+      imageAlt: 'Sahamati Logo'
+    },
+    {
+      // title: 'Partner',
       imageSrc: 'assets/images/partner-ceed.svg',
       imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
     },
     {
-      title: 'Affiliate Partner',
-      imageSrc: 'assets/images/partner-game.svg',
-      imageAlt: 'Global Alliance for Mass Entrepreneurship Logo'
-    },
-    {
-      title: 'Exclusive Bureau Partner',
+      // title: 'Partner',
       imageSrc: 'assets/images/partner-lead.png',
-      imageAlt: 'Experian Logo'
-    }
+      imageAlt: 'Lead Logo'
+    },
   ];
 
   subscribeGroup!: FormGroup;
