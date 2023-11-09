@@ -12,9 +12,9 @@ import * as $ from 'jquery';
 })
 export class InstitutionLoginComponent implements OnInit {
 
-  scheduleDemoGroup: FormGroup;
-  swaraLoginGroup: FormGroup;
-  encryptedData: string;
+  scheduleDemoGroup!: FormGroup;
+  swaraLoginGroup!: FormGroup;
+  encryptedData: string = "";
 
   constructor(
     private apiService: ApiService,
@@ -43,13 +43,13 @@ export class InstitutionLoginComponent implements OnInit {
   }
 
   addValidations() {
-    this.scheduleDemoGroup.get('firstName').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('lastName').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('businessEmail').setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
-    this.scheduleDemoGroup.get('jobTitle').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('company').setValidators([Validators.required]);
-    this.scheduleDemoGroup.get('contactNumber').setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
-    this.scheduleDemoGroup.get('checkedTermsAndConditions').setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('firstName')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('lastName')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
+    this.scheduleDemoGroup.get('jobTitle')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('company')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
+    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
   }
 
 
@@ -58,10 +58,12 @@ export class InstitutionLoginComponent implements OnInit {
 
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
+        this.scheduleDemoGroup.reset();
         $("#successModal").show();
         $("#scheduleDemo").hide();
       },
       (error) => {
+        this.scheduleDemoGroup.reset();
         $("#errorsModal").show();
         $("#scheduleDemo").hide();
       }
@@ -97,12 +99,14 @@ export class InstitutionLoginComponent implements OnInit {
     
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
+        this.swaraLoginGroup.reset();
         $("#loginModal").hide();
         console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
 
       },
       (error) => {
+        this.swaraLoginGroup.reset();
         $("#loginModal").hide();
         $("#errorsModal").show();
       }

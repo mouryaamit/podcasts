@@ -11,7 +11,7 @@ import * as $ from 'jquery';
 })
 export class RoadmapComponent implements OnInit {
 
-  subscribeGroup: FormGroup;
+  subscribeGroup!: FormGroup;
   constructor(
     private apiService: ApiService,
     public sumpoornApiService : SumpoornApiService,
@@ -38,14 +38,14 @@ export class RoadmapComponent implements OnInit {
   }
 
   addValidations(){
-    this.subscribeGroup.get('firstName').setValidators([Validators.required]);
-    this.subscribeGroup.get('lastName').setValidators([Validators.required]);
-    this.subscribeGroup.get('businessEmail').setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
-    this.subscribeGroup.get('jobTitle').setValidators([Validators.required]);
-    this.subscribeGroup.get('company').setValidators([Validators.required]);
-    this.subscribeGroup.get('contactNumber').setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
-    // this.subscribeGroup.get('industry').setValidators([Validators.required]);
-    this.subscribeGroup.get('checkedTermsAndConditions').setValidators([Validators.required]);
+    this.subscribeGroup.get('firstName')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('lastName')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
+    this.subscribeGroup.get('jobTitle')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('company')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
+    // this.subscribeGroup.get('industry')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
   }
 
   saveSubscription(){
@@ -53,10 +53,12 @@ export class RoadmapComponent implements OnInit {
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
+        this.subscribeGroup.reset();
         $("#successModal").show();
         $("#subscribeModal").hide();
       },
       (error) => {
+        this.subscribeGroup.reset();
         if(error && error.statusMessage){
           $(".error_text_dynamic").html(error.statusMessage);
           $(".error_text").hide();

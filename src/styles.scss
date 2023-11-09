@@ -1085,11 +1085,17 @@ main {
         );
       }
     }
+    .marquee-content-title {
+      color: #000;
+      font-size: $font-size-24px;
+      line-height: 120%;
+    }
 
     .marquee-content {
       list-style: none;
       height: 100%;
       display: flex;
+      align-items: center;
       padding: 0;
       animation: marqueeMobile 15s linear infinite;
 
@@ -1110,11 +1116,6 @@ main {
           width: $marquee-element-width-md;
         }
 
-        .marquee-content-title {
-          color: #000;
-          font-size: 24px;
-          line-height: 120%;
-        }
       }
     }
   }
@@ -1155,6 +1156,7 @@ main {
     .gallery_con {
       @media only screen and (max-width: 767px) {
         text-align: center;
+        padding: 0 3.25rem;
       }
 
       .col {
@@ -1165,8 +1167,14 @@ main {
         }
 
         .figure {
-          img {
+          .figure-img {
             margin-bottom: 1.25rem;
+            @media only screen and (max-width: 767px) {
+              width: 100%;
+            }
+            @media only screen and (min-width: 768px) {
+              max-width: 100%;
+            }
           }
 
           .figure-caption {

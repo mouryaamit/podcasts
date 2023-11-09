@@ -22,7 +22,7 @@
   <div class="container-fluid app_home_msme_section">
     <div class="row gx-0 text-center text-md-start">
       <h4 class="app_home_section_title blue-text d-block d-md-none">Why Build an MSME Index?</h4>
-      <div class="col-sm-12 col-md-6 app_home_msme_chart" data-aos="fade-right" data-aos-easing="linear">
+      <div class="col-sm-12 col-md-6 d-flex app_home_msme_chart" data-aos="fade-right" data-aos-easing="linear">
         <img src="assets/images/home-msme-chart.svg" class="img-fluid" alt="Jocata Sumpoorn MSME Chart" />
       </div>
       <div class="col-sm-12 offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear">
@@ -35,9 +35,9 @@
         </p>
         <p class="app_home_section_caption">
           <span>Sumpoorn reflects – </span>
-          <span><strong>50K+</strong> MSMEs & Growing </span>
-          <span><strong>92</strong> Industries </span>
-          <span><strong>₹ 6LAC+ Crores</strong> of MSME Annual Turnover </span>
+          <span><strong>50K+</strong> MSMEs & Growing<span class="d-inline d-xl-none">,</span>&nbsp;</span>
+          <span><strong>92</strong> Industries<span class="d-inline d-xl-none">,</span>&nbsp;</span>
+          <span><strong>₹ 6LAKH+ Crores</strong> of MSME Annual Turnover </span>
         </p>
       </div>
     </div>
@@ -89,7 +89,7 @@
     </div>
   </div>
   <div class="row gx-0 justify-content-center app_home_minds_section">
-    <div class="col-sm-12 d-none d-md-flex justify-content-around">
+    <div class="col-sm-12 d-none d-md-flex justify-content-around overflow-hidden">
       <img src="assets/images/logo-jocata.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
         data-aos-duration="1000" alt="Jocata Logo" />
       <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
@@ -194,7 +194,7 @@
             <span>Ramann</span>
           </p>
           <p class="testimonial-detail">
-            <span>Chairman & Managing</span>
+            <span>Chairman & Managing </span>
             <span>Director, SIDBI</span>
           </p>
         </div>
@@ -208,7 +208,7 @@
             <span>Ramann</span>
           </p>
           <p class="testimonial-detail">
-            <span>Chairman & Managing</span>
+            <span>Chairman & Managing </span>
             <span>Director, SIDBI</span>
           </p>
         </div>
@@ -255,9 +255,10 @@
   </div>
   <div class="row gx-0 app_home_marquee">
     <div class="col-md-12">
+      <h6 class="marquee-content-title">Our Partners</h6>
       <ul class="marquee-content">
         <li *ngFor="let partner of partners">
-          <h6 class="marquee-content-title">{{ partner.title }}</h6>
+          <!-- <h6 class="marquee-content-title">{{ partner.title }}</h6> -->
           <img [src]="partner.imageSrc" class="img-fluid" [alt]="partner.imageAlt">
         </li>
       </ul>
@@ -287,8 +288,8 @@
                 <input type="text" class="form-control" formControlName="firstName" id="fistName" name="First Name"
                   placeholder="First Name *" autocomplete="off">
                 <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('firstName').errors && (subscribeGroup.get('firstName').dirty || subscribeGroup.get('firstName').touched)">
-                  <p *ngIf="subscribeGroup.get('firstName').errors?.['required']" class="validation-msg">First
+                  *ngIf="subscribeGroup.get('firstName')?.errors && (subscribeGroup.get('firstName')?.dirty || subscribeGroup.get('firstName')?.touched)">
+                  <p *ngIf="subscribeGroup.get('firstName')?.errors?.['required']" class="validation-msg">First
                     Name Required</p>
                 </div>
               </div>
@@ -299,8 +300,8 @@
                 <input type="text" class="form-control" formControlName="lastName" id="lastName" name="Last Name"
                   placeholder="Last Name *" autocomplete="off">
                 <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('lastName').errors && (subscribeGroup.get('lastName').dirty || subscribeGroup.get('lastName').touched)">
-                  <p *ngIf="subscribeGroup.get('lastName').errors?.['required']" class="validation-msg">Last
+                  *ngIf="subscribeGroup.get('lastName')?.errors && (subscribeGroup.get('lastName')?.dirty || subscribeGroup.get('lastName')?.touched)">
+                  <p *ngIf="subscribeGroup.get('lastName')?.errors?.['required']" class="validation-msg">Last
                     Name Required</p>
                 </div>
               </div>
@@ -311,10 +312,10 @@
                 <input type="text" class="form-control" formControlName="businessEmail" id="email" name="Email"
                   placeholder="Business Email *" autocomplete="off">
                 <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('businessEmail').errors && (subscribeGroup.get('businessEmail').dirty || subscribeGroup.get('businessEmail').touched)">
-                  <p *ngIf="subscribeGroup.get('businessEmail').errors?.['required']" class="validation-msg">Email
+                  *ngIf="subscribeGroup.get('businessEmail')?.errors && (subscribeGroup.get('businessEmail')?.dirty || subscribeGroup.get('businessEmail')?.touched)">
+                  <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['required']" class="validation-msg">Email
                     Required</p>
-                  <p *ngIf="subscribeGroup.get('businessEmail').errors?.['pattern']" class="validation-msg">Email
+                  <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['pattern']" class="validation-msg">Email
                     Invalid</p>
                 </div>
               </div>
@@ -325,8 +326,8 @@
                 <input type="text" class="form-control" formControlName="jobTitle" id="jobTitle" name="Job Title"
                   placeholder="Job Title *" autocomplete="off">
                 <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('jobTitle').errors && (subscribeGroup.get('jobTitle').dirty || subscribeGroup.get('jobTitle').touched)">
-                  <p *ngIf="subscribeGroup.get('jobTitle').errors?.['required']" class="validation-msg">Job Title
+                  *ngIf="subscribeGroup.get('jobTitle')?.errors && (subscribeGroup.get('jobTitle')?.dirty || subscribeGroup.get('jobTitle')?.touched)">
+                  <p *ngIf="subscribeGroup.get('jobTitle')?.errors?.['required']" class="validation-msg">Job Title
                     Required</p>
                 </div>
               </div>
@@ -337,8 +338,8 @@
                 <input type="text" class="form-control" formControlName="company" id="companyName" name="Company"
                   placeholder="Company *" autocomplete="off">
                 <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('company').errors && (subscribeGroup.get('company').dirty || subscribeGroup.get('company').touched)">
-                  <p *ngIf="subscribeGroup.get('company').errors?.['required']" class="validation-msg">Company Name
+                  *ngIf="subscribeGroup.get('company')?.errors && (subscribeGroup.get('company')?.dirty || subscribeGroup.get('company')?.touched)">
+                  <p *ngIf="subscribeGroup.get('company')?.errors?.['required']" class="validation-msg">Company Name
                     Required</p>
                 </div>
               </div>
@@ -356,10 +357,10 @@
                 <input type="text" class="form-control" maxlength="10" formControlName="contactNumber" id="contactNumber"
                   name="Contact Number" placeholder="Contact Number">
                   <div class="form-control-feedback"
-                  *ngIf="subscribeGroup.get('contactNumber').errors && (subscribeGroup.get('contactNumber').dirty || subscribeGroup.get('contactNumber').touched)">
-                  <!-- <p *ngIf="subscribeGroup.get('contactNumber').errors?.['required']" class="validation-msg">Email
+                  *ngIf="subscribeGroup.get('contactNumber')?.errors && (subscribeGroup.get('contactNumber')?.dirty || subscribeGroup.get('contactNumber')?.touched)">
+                  <!-- <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['required']" class="validation-msg">Email
                     Required</p> -->
-                  <p *ngIf="subscribeGroup.get('contactNumber').errors?.['pattern']" class="validation-msg">Mobile Number Is Invalid</p>
+                  <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']" class="validation-msg">Mobile Number Is Invalid</p>
                 </div>
               </div>
             </div>
