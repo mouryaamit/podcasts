@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Jocata Sumpoorn: India's First and Only MSME Economic Activity Index</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&family=IBM+Plex+Sans&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chart_styles.css">
+
+  <!-- Load d3.js  -->
+  <script src="libs/d3/d3.js"></script>
+</head>
+
+<body class="">
+  <header class="container-fluid d-flex justify-content-between align-items-center fixed-top app_header" id="appHeader">
+    <div class="app_header_left">
+      <a href="index.html">
+        <img src="assets/images/logo-main.svg" class="img-fluid app_logo" alt="Jocata Sumpoorn Logo" />
+      </a>
+    </div>
+    <div class="d-flex flex-column align-self-end app_header_right">
+      <div class="header_links align-self-end">
+        <a class="header_cta">Institution Login</a>
+        <a href="contact.html" class="header_page_link">Contact</a>
+      </div>
+      <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index-graph.html">Index</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="methodology.html">Methodology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="app_home text-center">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-md-12 app_home_main_title" data-aos="fade-up" data-aos-easing="linear">
+        <p>India’s only MSME economic activity index</p>
+      </div>
+      <div class="col-md-10 app_home_chart_con" data-aos="fade-up" data-aos-easing="linear">
+        <div class="app_home_chart p-5">
+          <img src="assets/images/home-chart.svg" class="img-fluid" alt="Jocata Sumpoorn Insights Chart" />
+        </div>
+      </div>
+      <div class="col-md-10 app_home_chart_info">
+        <a class="discover_cta" href="index-graph.html" data-aos="fade-up">Explore Index Features</a>
+        <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+          <span class="d-block">A unique initiative by Jocata – one of India’s most trusted Digital Lending</span>
+          <span class="d-block">Platform providers, in association with SIDBI – the Principal Financial Institution </span>
+          <span class="d-block">for MSME development, that leverages India’s Digital Public Infrastructure (DPI).</span>
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid app_home_msme_section">
+      <div class="row gx-0 text-start">
+        <div class="col-md-6 app_home_msme_chart" data-aos="fade-right" data-aos-easing="linear">
+          <img src="assets/images/home-msme-chart.svg" class="img-fluid" alt="Jocata Sumpoorn MSME Chart" />
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear">
+          <h4 class="app_home_section_title my-5 blue-text">Why Build an MSME Index?</h4>
+          <p class="app_home_section_caption">
+            <span class="d-block">Available macro indices measure</span>
+            <span class="d-block">production activity or capture business</span>
+            <span class="d-block">expectations and sentiment. There is no</span>
+            <span class="d-block">index that captures the lifeblood of the</span>
+            <span class="d-block">Indian economy – MSMEs.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_eco_section">
+      <div class="col-md-9">
+        <h4 class="app_home_section_title mb-5" style="color: #25505c;" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="500">An MSME economic activity index is vital for
+        </h4>
+        <div class="app_eco_cards py-5">
+          <div class="container">
+            <div class="row row-cols-3 gx-5">
+              <div class="col">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/savings.svg" class="img-fluid" data-aos="fade-up" data-aos-easing="linear"
+                    data-aos-delay="500" data-aos-duration="1000" alt="Savings Icon">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Lenders</h6>
+                    <p class="app_eco_card_detail">To direct developmental and commercial capital to MSMEs
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/account_balance.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="700"
+                    data-aos-duration="1000" alt="Balance Icon">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Policy makers</h6>
+                    <p class="app_eco_card_detail">To create tailored policies to propel MSME growth & development
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_eco_card_box h-100" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                  <img src="assets/icons/currency_rupee.svg" class="img-fluid" data-aos="fade-up" data-aos-delay="900"
+                    data-aos-duration="1000" alt="Curreny Icon">
+                  <div class="app_eco_card_content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                    <h6 class="app_eco_card_title">Economists and Researchers</h6>
+                    <p class="app_eco_card_detail">To study policy and credit flow impact on the segment
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_home_minds_section">
+      <div class="col-md-8 d-flex justify-content-around">
+        <img src="assets/images/logo-jocata.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
+          data-aos-duration="1000" alt="Jocata Logo" />
+        <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
+          data-aos-duration="1000" alt="SIDBI Logo" />
+      </div>
+      <div class="col-md-8 minds_content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+        data-aos-delay="500">
+        <h4 class="app_home_section_title mb-5">Minds Behind the Index</h4>
+        <p class="app_home_section_caption text-black">
+          <span class="d-block">A team of credit experts, data scientists and senior economists</span>
+          <span class="d-block">have built and tracked the Index over the past 4 years to</span>
+          <span class="d-block">ensure its ability to represent the MSME economy and capture</span>
+          <span class="d-block">the impact of macroeconomic conditions. <u><a href="about.html" class="text-black">Read
+                More</a></u></span>
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid app_home_msme_section app_home_meth_section">
+      <div class="row gx-0 text-start align-items-center">
+        <div class="col-md-6 app_methodology_cards" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+          <div class="row row-cols-3">
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/combine.svg" class="img-fluid mb-5" alt="Combine Icon">
+                <p>For each GSTIN, <span class="fw-bold">calculate % difference between current and previous
+                    month</span> TTM sales.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/graph.svg" class="img-fluid mb-5" alt="Graph Icon">
+                <p>Develop a <span class="fw-bold">relative amplitude adjusted diffusion index.</span></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="app_methodology_card_box text-center h-100">
+                <img src="assets/icons/resize.svg" class="img-fluid mb-5" alt="Resize Icon">
+                <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to 1.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-md-1 col-md-5 app_home_msme_content" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <h4 class="app_home_section_title mb-5 blue-text">Index Methodology</h4>
+          <p class="app_home_section_caption mb-0">
+            <span class="d-block">Jocata Sumpoorn is a 'relative</span>
+            <span class="d-block">amplitude adjusted diffusion index'</span>
+            <span class="d-block">generated using monthly GST sales</span>
+            <span class="d-block">data of credit-seeking MSMEs.</span>
+          </p>
+          <a class="app_home_section_caption text-decoration-none" href="methodology.html"><u>Read More</u></a>
+        </div>
+      </div>
+    </div>
+    <div class="app_home_testimonial bg-white">
+      <div class="row gx-0">
+        <div class="col-md-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <p class="testimonial_content">The significance of the MSME sector for the Indian economy is a well
+            acknowledged fact. However, data paucity
+            on the MSME sector often becomes a challenge for industry members and policymakers.</p>
+          <p class="testimonial_content">We at SIDBI have been constantly engaged for the development of the sector and
+            have been partnering with
+            institutions to bridge the information asymmetry to enable informed decision-making by stakeholders. It is
+            in
+            this spirit we have created ‘Sumpoorn’ with Jocata, that carries an index measuring economic activity of the
+            MSMEs leveraging the GST data.</p>
+          <p class="testimonial_content">The underlying authentic data of GST provides credibility to the Index. With
+            time, the same can be expanded
+            to include more dimensions. I hope the publication shall be of value to the readers and provide a rich
+            perspective on the prevalent trends of the MSME sector.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Sh. Sivasubramanian Ramann</p>
+            <p class="testimonial-detail">Chairman & Managing Director, SIDBI</p>
+          </div>
+        </div>
+        <div class="col-md-4 align-self-end text-end overflow-hidden">
+          <img src="assets/images/testimonial-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
+            data-aos-duration="1000" alt="Sivasubramanian Ramann - Chairman & Managing Director, SIDBI" />
+        </div>
+      </div>
+    </div>
+    <div class="app_home_testimonial jocata_testimonial">
+      <div class="row gx-0">
+        <div class="col-md-4 align-self-end text-start">
+          <img src="assets/images/testimonial-jocata.svg" class="img-fluid" data-aos="fade-right"
+            data-aos-easing="linear" data-aos-duration="1000" alt="Prashant Muddu - MD & CEO, Jocata" />
+        </div>
+        <div class="col-md-8 testimonial_content_con" data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1000">
+          <p class="testimonial_content">The Digital Public Infrastructure (DPI) and technology stacks developed by
+            public and private institutions are allowing Indian MSMEs to evolve at a rapid pace. An understanding of
+            this sector that is fact-based and dynamic has become critical for their sustained growth, especially
+            through formal credit access.</p>
+          <p class="testimonial_content">As a digital transformation partner for marquee lenders in the country, Jocata
+            has been deeply engaged in harnessing Goods and Services Tax (GST) data to provide deep insights on MSME
+            entities and powering near-instant credit decisioning and faster disbursals.</p>
+          <p class="testimonial_content">With the belief that a high-frequency indicator will help address the
+            prevailing MSME knowledge gap, Jocata, in association with SIDBI, presents “Sumpoorn”, India's first and
+            only economic activity index of credit-seeking MSMEs. With only a four-week reporting cycle, we believe
+            Sumpoorn can effectively, and in a timely manner, aid various stakeholders at financial institutions, policy
+            makers, economists and researchers in strategically directing development and credit efforts to fuel the
+            growth of MSMEs across the country.</p>
+          <div class="mt-5">
+            <p class="testimonial-name mb-2">Prashant Muddu</p>
+            <p class="testimonial-detail">MD & CEO, Jocata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0">
+      <div class="col-md-12 app_home_subscribe">
+        <p>For monthly Index updates</p>
+        <a class="subscribe_cta" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+      </div>
+    </div>
+    <div class="row gx-0 app_home_marquee">
+      <div class="col-md-12">
+        <ul class="marquee-content">
+          <li>
+            <h6 class="marquee-content-title">Knowledge Partner</h6>
+            <img src="assets/images/partner-ceed.svg" class="img-fluid" alt="Centre for Excellence in Entrepreneurship and Development Logo">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Affiliate Partner</h6>
+            <img src="assets/images/partner-game.svg" class="img-fluid" alt="Global Alliance for Mass Entrepreneurship Logo">
+          </li>
+          <li>
+            <h6 class="marquee-content-title">Exclusive Bureau Partner</h6>
+            <img src="assets/images/partner-experian.svg" class="img-fluid" alt="Experian Logo">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="container-fluid d-flex justify-content-between align-items-center app_footer">
+    <p class="mb-0">Copyright © 2023 Jocata. All rights reserved.</p>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="tou.html">Sumpoorn Terms of Use</a></li>
+    </ul>
+  </footer>
+
+
+  <!-- The Modal -->
+  <div class="modal" id="successModal2">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">You've successfully subscribed</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="my-3 text-center">
+            You will receive monthly updates of the Jocata Sampoorn Index.
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Subscribe Modal popup -->
+  <!-- The Modal -->
+  <div class="modal fade" id="subscribeModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title black-text">Subscribe</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="my-3 complete-form-text">Complete the form to subscribe.
+            <span class="required-text">* Required Fields</span>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="fistName" name="First Name" placeholder="First Name *" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="lastName" name="Last Name" placeholder="Last Name *" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="Email" placeholder="Business Email *" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="jobTitle" name="Job Title" placeholder="Job Title *" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="companyName" name="Company" placeholder="Company *" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="industryName" name="Industry" placeholder="Industry">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="contactNumber" name="Contact Number" placeholder="Contact Number">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+              <div class="d-flex align-items-center mb-3">
+                <input type="checkbox" id="agreeCheckbox">
+                <label for="agreeCheckbox" class="terms-label ps-2">
+                  By submitting this request, I agree with the Jocata
+                    <a class="custom-link" href="tou.html">Terms of Use.</a>
+                </label>
+              </div>
+
+              <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal2" disabled>Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Animation Library Initialization
+    AOS.init();
+
+    // Marquee Logic for HomePage
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+  </script>
+  <!-- Custom SCripts -->
+  <script src="custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<main class="app_contact">
+    <div class="row gx-0 justify-content-center">
+        <div class="col-sm-12 col-md-10 col-xl-8">
+            <div class="row gx-0 align-items-center">
+                <div class="col-sm-12 col-md-5">
+                    <div class="app_contact_left_content">
+                        <h4 class="app_contact_main_title mb-4">Contact</h4>
+                        <h6 class="app_contact_sub_title my-5">Jocata</h6>
+                        <p>
+                            <span class="d-block">Roxana Fortune Complex, 2nd</span>
+                            <span class="d-block">Floor, Road No. 12, Banjara Hills,</span>
+                            <span class="d-block">Hyderabad, Telangana - 500034</span>
+                        </p>
+                        <p>
+                            <a href="mailto:sumpoorn@jocata.com"
+                                class="d-block mb-2 text-underline-with-cursor">sumpoorn@jocata.com</a>
+                            <a href="https://jocata.com" target="_blank"
+                                class="text-underline-with-cursor">www.jocata.com</a>
+                        </p>
+                        <br>
+                        <h6 class="app_contact_sub_title my-5">SIDBI</h6>
+
+                        <p>
+                            <span class="d-block">Head Office - SIDBI Tower, 15,</span>
+                            <span class="d-block">Ashok Marg, Lucknow, Uttar</span>
+                            <span class="d-block">Pradesh - 226001</span>
+                        </p>
+                        <p>
+                            <a href="https://www.sidbi.in" target="_blank"
+                                class="text-underline-with-cursor">www.sidbi.in</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="app_contact_cards">
+                        <div class="app_contact_card_box">
+                            <h4 class="app_contact_card_box_title mb-4">We'd love to hear from you</h4>
+                            <form [formGroup]="contactGroup">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" formControlName="firstName"
+                                                id="fistName" name="First Name" placeholder="First Name *"
+                                                autocomplete="off">
+                                            <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('firstName')?.errors && (contactGroup.get('firstName')?.dirty || contactGroup.get('firstName')?.touched)">
+                                                <p *ngIf="contactGroup.get('firstName')?.errors?.['required']"
+                                                    class="validation-msg" >First
+                                                    Name Required</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" formControlName="lastName"
+                                                id="lastName" name="Last Name" placeholder="Last Name *"
+                                                autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('lastName')?.errors && (contactGroup.get('lastName')?.dirty || contactGroup.get('lastName')?.touched)">
+                                                <p *ngIf="contactGroup.get('lastName')?.errors?.['required']"
+                                                    class="validation-msg" >Last
+                                                    Name Required</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" formControlName="company"
+                                                id="companyName" name="Company" placeholder="Company *"
+                                                autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('company')?.errors && (contactGroup.get('company')?.dirty || contactGroup.get('company')?.touched)">
+                                                <p *ngIf="contactGroup.get('company')?.errors?.['required']"
+                                                    class="validation-msg" >Company Name Required</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" formControlName="jobTitle"
+                                                id="jobTitle" name="Job Title" placeholder="Job Title *"
+                                                autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('jobTitle')?.errors && (contactGroup.get('jobTitle')?.dirty || contactGroup.get('jobTitle')?.touched)">
+                                                <p *ngIf="contactGroup.get('jobTitle')?.errors?.['required']"
+                                                    class="validation-msg">Job Title Required</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" formControlName="businessEmail"
+                                                id="email" name="Email" placeholder="Business Email *"
+                                                autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('businessEmail')?.errors && (contactGroup.get('businessEmail')?.dirty || contactGroup.get('businessEmail')?.touched)">
+                                                <p *ngIf="contactGroup.get('businessEmail')?.errors?.['required']"
+                                                    class="validation-msg" >Email Required</p>
+                                                    <p *ngIf="contactGroup.get('businessEmail')?.errors?.['pattern']"
+                                                    class="validation-msg" >Email Invalid</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" maxlength="10"
+                                                formControlName="contactNumber" id="contactNumber" name="Contact Number"
+                                                placeholder="Contact Number">
+                                            <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('contactNumber')?.errors && (contactGroup.get('contactNumber')?.dirty || contactGroup.get('contactNumber')?.touched)">
+                                                <!-- <p *ngIf="contactGroup.get('contactNumber')?.errors?.['required']"
+                                                    class="validation-msg" >Mobile
+                                                    required</p> -->
+                                                <p *ngIf="contactGroup.get('contactNumber')?.errors?.['pattern']"
+                                                    class="validation-msg" >Mobile
+                                                    Number is Invalid</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group w-100 mb-5">
+                                            <select class="form-control" formControlName="messageType" id="messageType"
+                                                name="Message Type">
+                                                <option hidden value="" disabled selected>Message Type*</option>
+                                                <option>Queries</option>
+                                                <option>Feedback on the Index</option>
+                                                <option>Index Commentary for a Particular Month</option>
+                                                <option>Partnership Opportunity</option>
+                                            </select>
+                                            <img src="assets/icons/chevron_down.svg" class="dropwodn-chevron-adjust"
+                                                alt="Chevron Down">
+                                                <!-- <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('messageType')?.errors && (contactGroup.get('messageType')?.dirty || contactGroup.get('messageType')?.touched)">
+                                                <p *ngIf="contactGroup.get('messageType')?.errors?.['required']"
+                                                    class="validation-msg" >Type Required</p>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="mb-2" for="messageArea">Type your Message*</label>
+                                            <textarea class="form-control feedback" formControlName="message"
+                                                id="messageArea"></textarea>
+                                                <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('message')?.errors && (contactGroup.get('message')?.dirty || contactGroup.get('message')?.touched)">
+                                                <p *ngIf="contactGroup.get('message')?.errors?.['required']"
+                                                    class="validation-msg" >Message Required</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-terms">
+                                            <input type="checkbox" formControlName="checkedTermsAndConditions"
+                                                id="agreeCheckbox">
+                                            <label for="agreeCheckbox" class="terms-label ps-2">
+                                                By submitting this request, I agree with the Jocata
+                                                <a class="custom-link" routerLink="/tou">Terms of Use.</a>
+                                            </label>
+                                            <div class="form-control-feedback"
+                                                *ngIf="contactGroup.get('checkedTermsAndConditions')?.errors && (contactGroup.get('checkedTermsAndConditions')?.dirty || contactGroup.get('checkedTermsAndConditions')?.touched)">
+                                                <p *ngIf="contactGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                                                    class="validation-msg" >Please select checkbox</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- <button class="sm-primary-button w-100" id="contactSubmitBtn"
+                                        data-bs-toggle="modal" data-bs-target="#successModal" (click)="saveContact()">Submit</button> -->
+                                        <button class="sm-primary-button w-100" [disabled]="contactGroup.invalid"
+                                            id="contactSubmitBtn" (click)="saveContact()">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="btn-close" (click)="hideSuccessModal()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="success_text my-3">
+                    Thank you for contacting us.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

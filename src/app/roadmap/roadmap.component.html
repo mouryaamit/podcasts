@@ -1,0 +1,265 @@
+<main class="app_roadmap text-center">
+    <div class="row gx-0 app_roadmap_banner_section">
+        <div class="col-12">
+            <h4 class="app_roadmap_title mb-0">Powerful and Granular MSME Insights</h4>
+            <p class="app_roadmap_caption">
+                <span>The depth of GST returns data of MSMEs allows </span>
+                <span> for the slicing of the Sumpoorn consolidated Index </span>
+                <span>to provide more granular insights.</span>
+            </p>
+            <h4 class="app_roadmap_subtitle mb-5">Upcoming Sub-Indices</h4>
+            <img src="assets/icons/arrow_forward.svg" class="img-fluid arrow_down" alt="Arrow Down" />
+        </div>
+    </div>
+    <div class="row gx-0 justify-content-center app_roadmap_grey_section">
+        <div class="col-12">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <img src="assets/icons/active-sector.svg" class="img-fluid pb-4 pb-md-0 pe-md-3"
+                    alt="Jocata Sumpoorn - Sectoral Indices" />
+                <h5 class="section_title mb-0">Jocata Sumpoorn - Sectoral Indices</h5>
+            </div>
+            <p class="app_methodology_caption">
+                <span class="d-md-block">The sectoral indices will offer insights into how different sectors, as </span>
+                <span class="d-md-block">classified under GST by the <a data-bs-toggle="modal"
+                        data-bs-target="#HSNModal"><u>Harmonized System of Nomenclature (HSN)</u></a>, </span>
+                <span class="d-md-block">are performing as compared to the overall MSME sector.</span>
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-9">
+            <div class="app_roadmap_chart_con">
+                <img src="assets/images/roadmap-chart.svg" class="img-fluid" alt="Jocata-Sumpoorn Sectoral Indices" />
+            </div>
+            <p class="chart_caption"><span class="fw-600">Fig.-</span> Jocata-Sumpoorn Sectoral Indices</p>
+        </div>
+        <div class="col-sm-10 col-md-9 app_roadmap_note">
+            <p><span class="fw-bold">Note:</span> A GSTIN is classified as belonging to an industry,
+                if
+                the Trailing
+                Twelve Month (TTM) sales of a
+                particular HSN (at a 2 - digit level) in a month is greater than 50% of the sum of TTM sales of all HSNs
+                by
+                that GSTIN for the same month.</p>
+        </div>
+        <div class="col-sm-12 col-md-10 col-lg-9 app_roadmap_indices">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <img src="assets/icons/active-activity.svg" class="img-fluid" alt="Activity Indices" />
+                    <h5 class="section_title"><span class="app_roadmap_grey_text">Jocata
+                            Sumpoorn</span><br />Activity
+                        Indices</h5>
+                    <p class="app_methodology_caption">
+                        <span>Manufacturing, Trading and Service indices based </span>
+                        <span>on the core business activity of the MSMEs.</span>
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="assets/icons/map.svg" class="img-fluid" alt="Geographic Map" />
+                    <h5 class="section_title"><span class="app_roadmap_grey_text">Jocata
+                            Sumpoorn</span><br />Geographic
+                        Cluster Indices</h5>
+                    <p class="app_methodology_caption">
+                        <span>Region and industrial cluster-based indices based on </span>
+                        <span>location and industrial activity of the MSMEs.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 app_home_subscribe">
+            <p>Be the first to know these updates</p>
+            <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+        </div>
+    </div>
+</main>
+
+<!-- Subscribe Modal popup -->
+<div class="modal fade" id="subscribeModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Subscribe</h4>
+                <button type="button" class="btn-close" (click)="hideSubscribeModal()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="complete_form_text">Complete the form to subscribe.</div>
+                <div class="required_text"><span>*</span> Required Fields</div>
+                <form [formGroup]="subscribeGroup">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="firstName" id="fistName"
+                                    name="First Name" placeholder="First Name *" autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('firstName')?.errors && (subscribeGroup.get('firstName')?.dirty || subscribeGroup.get('firstName')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('firstName')?.errors?.['required']"
+                                        class="validation-msg">First
+                                        Name Required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="lastName" id="lastName"
+                                    name="Last Name" placeholder="Last Name *" autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('lastName')?.errors && (subscribeGroup.get('lastName')?.dirty || subscribeGroup.get('lastName')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('lastName')?.errors?.['required']"
+                                        class="validation-msg">Last
+                                        Name Required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="businessEmail" id="email"
+                                    name="Email" placeholder="Business Email *" autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('businessEmail')?.errors && (subscribeGroup.get('businessEmail')?.dirty || subscribeGroup.get('businessEmail')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['required']"
+                                        class="validation-msg">Email
+                                        Required</p>
+                                    <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['pattern']"
+                                        class="validation-msg">Email
+                                        Invalid</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="jobTitle" id="jobTitle"
+                                    name="Job Title" placeholder="Job Title *" autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('jobTitle')?.errors && (subscribeGroup.get('jobTitle')?.dirty || subscribeGroup.get('jobTitle')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('jobTitle')?.errors?.['required']"
+                                        class="validation-msg">Job Title
+                                        Required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="company" id="companyName"
+                                    name="Company" placeholder="Company *" autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('company')?.errors && (subscribeGroup.get('company')?.dirty || subscribeGroup.get('company')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('company')?.errors?.['required']"
+                                        class="validation-msg">Company Name
+                                        Required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="industry" id="industryName"
+                                    name="Industry" placeholder="Industry" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" maxlength="10" formControlName="contactNumber"
+                                    id="contactNumber" name="Contact Number" placeholder="Contact Number"
+                                    autocomplete="off">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('contactNumber')?.errors && (subscribeGroup.get('contactNumber')?.dirty || subscribeGroup.get('contactNumber')?.touched)">
+                                    <!-- <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['required']" class="validation-msg">Email
+                    Required</p> -->
+                                    <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']"
+                                        class="validation-msg">Mobile Number Is Invalid</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                            <div class="d-flex align-items-center mb-3">
+                                <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckbox">
+                                <div class="form-control-feedback"
+                                    *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && (subscribeGroup.get('checkedTermsAndConditions')?.dirty || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
+                                    <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                                        class="validation-msg">Please Select Checkbox</p>
+                                </div>
+                                <label for="agreeCheckbox" class="terms-label ps-2">
+                                    By submitting this request, I agree with the Jocata
+                                    <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                                </label>
+                            </div>
+
+                            <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
+                            disabled>Register</button> -->
+                            <button class="sm-primary-button" [disabled]="subscribeGroup.invalid"
+                                (click)="saveSubscription()">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">You've successfully subscribed</h4>
+                <button type="button" class="btn-close" (click)="hideSuccessModal()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="success_text my-3">
+                    You will receive monthly updates of the Jocata Sumpoorn Index.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HSN Modal -->
+<div class="modal fade" id="HSNModal" tabindex="-1" aria-labelledby="HSNModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered roadmap_hsn_modal">
+        <div class="modal-content">
+            <div class="row">
+                <a class="col-12" role="button" data-bs-dismiss="modal"><img class="float-end"
+                        src="assets/icons/close.svg" alt="close" /></a>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-start">
+                    <div class="col-md-7">
+                        <h5 class="hsn_modal_title">What is HSN?</h5>
+                        <p class="hsn_modal_caption">
+                            <span>Harmonized System of Nomenclature is a universally </span>
+                            <span>accepted uniform code to classify goods in a systematic </span>
+                            <span>way developed by World Customs Organization (WCO) </span>
+                            <span>and adopted in our GST regime.</span>
+                        </p>
+                        <p class="hsn_modal_caption">
+                            <span>Under the Indian GST system, there are 21 sections </span>
+                            <span>comprising 99 chapters divided into 1244 headings and </span>
+                            <span>5224 sub-headings.</span>
+                        </p>
+                        <p class="hsn_modal_caption"><a href="https://services.gst.gov.in/services/searchhsnsac"
+                                target="_blank">Here is a
+                                detailed list of HSNs</a></p>
+                    </div>
+                    <div class="col-md-5 mt-5 mt-md-0">
+                        <img src="assets/images/figure-hsn.svg" class="float-end img-fluid" alt="How to read HSN" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
