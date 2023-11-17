@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildDev": "ng build --configuration dev",
-    "buildProd": "ng build --configuration production",
+    "buildDev": "node timestamp.js; ng build --configuration dev",
+    "buildProd": "node timestamp.js; ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -27,7 +27,9 @@
     "d3-selection": "^3.0.0",
     "file-saver": "^2.0.5",
     "jquery": "^3.7.1",
+    "moment-timezone": "^0.5.43",
     "popper.js": "^1.16.1",
+    "replace-in-file": "^7.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
