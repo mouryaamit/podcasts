@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     AOS.init({
       // disable: window.innerWidth < 768
     });
-    console.log('Last release timestamp is set to:', environment.timeStamp);
+    console.info('Last release timestamp is set to:', environment.timeStamp);
   }
 
   hideErrorModal(){
