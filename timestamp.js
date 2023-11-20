@@ -30,24 +30,35 @@ var walk = function(dir, done) {
 walk('src/environments', function(err, results) {
     if (err) throw err;
     console.log(results)
-    updateTimestamp(results);
+    for(let i = 0 ; i < results.length ; i++)
+    updateTimestamp(results[i]);
 });
 
-function updateTimestamp(files){
-    const options = {
-        files: files,
-        from: /timeStamp: '(.*)'/g,
-        to: "timeStamp: '" + timeStamp + "'",
-        allowEmptyPaths: false,
-    };
-    try {
-        let changedFiles = replace.sync(options);
-        if (changedFiles == 0) {
-            throw "Please make sure that the file '" + options.files + "' has \"timeStamp: ''\"";
-        }
-        console.log('Build timestamp is set to: ' + timeStamp);
-    } catch (error) {
-        console.error('Error occurred:', error);
-        throw error
-    }
+function updateTimestamp(file){
+    // const options = {
+    //     files: files,
+    //     from: /timeStamp: '(.*)'/g,
+    //     to: "timeStamp: '" + timeStamp + "'",
+    //     allowEmptyPaths: false,
+    // };
+    // try {
+    //     let changedFiles = replace.sync(options);
+    //     if (changedFiles == 0) {
+    //         throw "Please make sure that the file '" + options.files + "' has \"timeStamp: ''\"";
+    //     }
+    //     console.log('Build timestamp is set to: ' + timeStamp);
+    // } catch (error) {
+    //     console.error('Error occurred:', error);
+    //     throw error
+    // }
+    fs.readFile(file, 'utf8', function (err,data) {
+      if (err) {
+        return console.log(err);
+      }
+      var result = data.replace(/timeStamp: '(.*)'/g, 'timeStamp: "' + timeStamp + '"');
+
+      fs.writeFile(file, result, 'utf8', function (err) {
+         if (err) return console.log(err);
+      });
+    });
 }
