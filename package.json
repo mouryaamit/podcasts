@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildDev": "node timestamp.js; ng build --configuration dev",
-    "buildProd": "node timestamp.js; ng build --configuration production",
+    "updateTimeStamp":"node timestamp.js",
+    "buildDev": "npm run updateTimeStamp & ng build --configuration dev",
+    "buildProd": "npm run updateTimeStamp & ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
