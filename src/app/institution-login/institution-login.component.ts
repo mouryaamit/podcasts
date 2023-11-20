@@ -27,7 +27,7 @@ export class InstitutionLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.addValidations();
-
+    this.addValidationsForSwaraLogin();
   }
 
   createForm1() {
@@ -90,11 +90,21 @@ export class InstitutionLoginComponent implements OnInit {
 
   createForm2() {
     this.swaraLoginGroup = this.fb.group({
-      instAuid: ["", [Validators.required]]
+      instAuid: [""],
+      checkedTnCSwara: [false]
     })
+  }
+ 
+  addValidationsForSwaraLogin() {
+    this.swaraLoginGroup.get('instAuid')?.setValidators([Validators.required]);
+    this.swaraLoginGroup.get('checkedTnCSwara')?.setValidators([Validators.requiredTrue]);
   }
 
   saveSwaraLoginForm() {
+    if (this.swaraLoginGroup.invalid) {
+      return;
+    }
+    
     const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
     this.encryptedData = CryptoJS.AES.encrypt( this.swaraLoginGroup.value.instAuid, salt).toString();
     

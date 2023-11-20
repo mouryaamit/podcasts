@@ -35,9 +35,9 @@
         </p>
         <p class="app_home_section_caption">
           <span>Sumpoorn reflects – </span>
-          <span><strong>50K+</strong> MSMEs & Growing<span class="d-inline d-xl-none">,</span>&nbsp;</span>
+          <span><strong>50k+</strong> MSMEs & Growing<span class="d-inline d-xl-none">,</span>&nbsp;</span>
           <span><strong>92</strong> Industries<span class="d-inline d-xl-none">,</span>&nbsp;</span>
-          <span><strong>₹ 6LAKH+ Crores</strong> of MSME Annual Turnover </span>
+          <span><strong>₹ 6 Lakh+ Crores</strong> of MSME Annual Turnover </span>
         </p>
       </div>
     </div>
@@ -367,24 +367,22 @@
 
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="d-flex align-items-center mb-3">
+              <div class="d-flex align-items-center">
                 <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckbox">
                 <label for="agreeCheckbox" class="terms-label ps-2">
                   By submitting this request, I agree with the Jocata
                   <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                 </label>
-                <div class="form-control-feedback"
-                    *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && 
-                    (subscribeGroup.get('checkedTermsAndConditions')?.dirty 
-                    || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
-                    <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
-                        class="validation-msg" >Please select checkbox</p>
-                </div>
               </div>
-
+              <div class="form-control-feedback" *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && 
+              (subscribeGroup.get('checkedTermsAndConditions')?.dirty 
+              || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
+                <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']" class="validation-msg">
+                  Please select checkbox</p>
+              </div>
               <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
               disabled>Register</button> -->
-              <button class="sm-primary-button" [disabled]="subscribeGroup.invalid"
+              <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid"
                 (click)="saveSubscription()">Register</button>
             </div>
           </div>

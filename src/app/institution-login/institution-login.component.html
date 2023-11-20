@@ -1,16 +1,15 @@
 <main class="app_institution">
     <div class="row gx-0 justify-content-center app_institution_cards_section">
-        <div class="col-12 col-md-9">
+        <div class="col-sm-12 col-md-11 col-xl-9">
             <p class="app_institution_main_title text-center">Unlock the Power of Comprehensive Portfolio Analytics</p>
             <div class="app_institution_cards">
                 <div class="container gx-0">
                     <div class="row row-cols-auto row-cols-md-3 gx-5">
                         <div class="col">
                             <div class="app_institution_card_box h-100">
-                                <img src="assets/icons/industry.svg" class="img-fluid" alt="Industry Icon">
+                                <img src="assets/icons/strategic.svg" class="img-fluid" alt="Strategic Icon">
                                 <div class="app_institution_card_content">
-                                    <h6 class="app_institution_card_title">Macro & Industry Insights for Strategic
-                                        Decisioning</h6>
+                                    <h6 class="app_institution_card_title">Macro Insights for Strategic Decisioning</h6>
                                     <p class="app_institution_card_detail">Understand the performance of your MSME pool
                                         vis-à-vis the combined multi-lender pool. Get industry and cluster level trends
                                         to direct your institution’s MSME credit flow.</p>
@@ -19,23 +18,23 @@
                         </div>
                         <div class="col">
                             <div class="app_institution_card_box h-100">
-                                <img src="assets/icons/decisioning.svg" alt="Decision Icon">
+                                <img src="assets/icons/portfolio.svg" alt="Decisioning Icon">
                                 <div class="app_institution_card_content">
-                                    <h6 class="app_institution_card_title">Optimised credit decision-making</h6>
-                                    <p class="app_institution_card_detail">Simplify and streamline your credit
-                                        assessment process with our comprehensive GST based scores and reports. Identify
-                                        creditworthy MSMEs and manage risk effectively.</p>
+                                    <h6 class="app_institution_card_title">Enhanced portfolio management</h6>
+                                    <p class="app_institution_card_detail">Stay ahead in MSME loan book management by
+                                        monitoring your portfolio mix as well as borrower performance and risk by
+                                        various parameters on a dynamic basis.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="app_institution_card_box h-100">
-                                <img src="assets/icons/portfolio.svg" alt="Portfolio Icon">
+                                <img src="assets/icons/industry.svg" alt="Industry Icon">
                                 <div class="app_institution_card_content">
-                                    <h6 class="app_institution_card_title">Enhanced portfolio management</h6>
-                                    <p class="app_institution_card_detail">Stay ahead in MSME loan book management by
-                                        monitoring your portfolio mix as well as borrower performance and risk by
-                                        various parameters.</p>
+                                    <h6 class="app_institution_card_title">Smart entity credit assessment</h6>
+                                    <p class="app_institution_card_detail">Simplify and streamline your credit
+                                        assessment process with our comprehensive GST based scores and reports. Identify
+                                        creditworthy MSMEs and manage risk effectively.</p>
                                 </div>
                             </div>
                         </div>
@@ -45,8 +44,8 @@
         </div>
     </div>
     <div class="row gx-0 text-start justify-content-center app_institution_login_section">
-        <div class="col-12 col-md-10 d-flex flex-column flex-md-row align-items-center">
-            <img src="assets/images/index-insights.png" class="img-fluid me-0 mb-5 mb-md-0 me-md-5" />
+        <div class="col-12 col-md-10 d-flex flex-column flex-lg-row align-items-center">
+            <img src="assets/images/index-insights.png" class="img-fluid me-0 mb-5 mb-lg-0 me-lg-5" />
             <div class="app_login_details text-center text-md-start">
                 <p class="app_home_section_title">Index + Insights for your Bank</p>
                 <a class="app_primary_btn" data-bs-toggle="modal" data-bs-target="#scheduleDemo">Schedule a Demo</a>
@@ -153,23 +152,23 @@
 
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                            <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center">
                                 <input type="checkbox" formControlName="checkedTermsAndConditions"
                                     id="agreeCheckboxDemo">
                                 <label for="agreeCheckboxDemo" class="terms-label ps-2">
                                     By submitting this request, I agree with the Jocata
                                     <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                                 </label>
-                                <div class="form-control-feedback"
-                                    *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors && (scheduleDemoGroup.get('checkedTermsAndConditions')?.dirty || scheduleDemoGroup.get('checkedTermsAndConditions')?.touched)">
-                                    <p *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors?.['required']"
-                                        class="validation-msg">Please select checkbox</p>
-                                </div>
                             </div>
 
+                            <div class="form-control-feedback"
+                                *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors && (scheduleDemoGroup.get('checkedTermsAndConditions')?.dirty || scheduleDemoGroup.get('checkedTermsAndConditions')?.touched)">
+                                <p *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                                    class="validation-msg">Please select checkbox</p>
+                            </div>
                             <!-- <button class="sm-primary-button" data-bs-toggle="modal"
                             data-bs-target="#successModal" disabled>Register</button> -->
-                            <button class="sm-primary-button" [disabled]="scheduleDemoGroup.invalid"
+                            <button class="sm-primary-button mt-3" [disabled]="scheduleDemoGroup.invalid"
                                 (click)="saveScheduleDemoForm()">Register</button>
                         </div>
                     </div>
@@ -219,9 +218,9 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" formControlName="instAuid" id="institutionID" name="Institution ID"
-                                    placeholder="Institution ID *" autocomplete="off">
-                                    <div class="form-control-feedback"
+                                <input type="text" class="form-control" formControlName="instAuid" id="institutionID"
+                                    name="Institution ID" placeholder="Institution ID *" autocomplete="off">
+                                <div class="form-control-feedback"
                                     *ngIf="swaraLoginGroup.get('instAuid')?.errors && (swaraLoginGroup.get('instAuid')?.dirty || swaraLoginGroup.get('instAuid')?.touched)">
                                     <p *ngIf="swaraLoginGroup.get('instAuid')?.errors?.['required']"
                                         class="validation-msg">Institution ID is Required</p>
@@ -233,16 +232,22 @@
 
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                            <div class="d-flex align-items-center mb-3">
-                                <input type="checkbox" id="agreeCheckboxLogin">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" formControlName="checkedTnCSwara" id="agreeCheckboxLogin">
                                 <label for="agreeCheckboxLogin" class="terms-label ps-2">
                                     By submitting this request, I agree with the Jocata
                                     <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                                 </label>
                             </div>
 
+                            <div class="form-control-feedback"
+                                *ngIf="swaraLoginGroup.get('checkedTnCSwara')?.errors && (swaraLoginGroup.get('checkedTnCSwara')?.dirty || swaraLoginGroup.get('checkedTnCSwara')?.touched)">
+                                <p *ngIf="swaraLoginGroup.get('checkedTnCSwara')?.errors?.['required']"
+                                    class="validation-msg">Please select checkbox</p>
+                            </div>
                             <!-- <button class="sm-primary-button" data-bs-toggle="modal" disabled>Submit</button> -->
-                            <button class="sm-primary-button" [disabled]="swaraLoginGroup.invalid" (click)="saveSwaraLoginForm()">Submit</button>
+                            <button class="sm-primary-button mt-3" [disabled]="swaraLoginGroup.invalid"
+                                (click)="saveSwaraLoginForm()">Submit</button>
                         </div>
                     </div>
                 </form>

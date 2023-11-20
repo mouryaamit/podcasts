@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isResponsive = !this.isResponsive;
+    document.body.classList.toggle('no-scroll');
   }
 
   constructor(private router: Router) { }
@@ -26,6 +27,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd && this.isResponsive) {
         this.isResponsive = false;
+        document.body.classList.remove('no-scroll');
       }
     });
   }

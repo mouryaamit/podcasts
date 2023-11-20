@@ -15,6 +15,9 @@ html {
 body {
   font-family: "Inter";
   font-weight: 400;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -44,18 +47,6 @@ a {
 
 .fw-600 {
   font-weight: 600 !important;
-}
-
-main {
-  // padding-top: 3rem !important;
-
-  // @media only screen and (min-width: 481px) and (max-width: 1199px) {
-  //   padding-top: 6rem !important;
-  // }
-
-  // @media only screen and (min-width: 1200px) {
-  //   padding-top: 10rem !important;
-  // }
 }
 
 // Generic Styles Start
@@ -266,6 +257,15 @@ main {
   color: #656565;
 }
 
+.form-control-feedback {
+  p.validation-msg {
+    text-align: start;
+    color: #d9534f;
+    font-size: $font-size-12px;
+    margin-bottom: 0;
+  }
+}
+
 .form-group {
   margin-bottom: 20px;
 
@@ -296,13 +296,6 @@ main {
     }
   }
 
-  .form-control-feedback {
-    p.validation-msg {
-      color: #d9534f;
-      font-size: $font-size-12px;
-    }
-  }
-
   textarea {
     &.form-control {
       resize: none;
@@ -328,7 +321,6 @@ main {
 
 .form-terms {
   display: flex;
-  margin-bottom: 2rem;
 }
 
 .sm-primary-button {
@@ -366,6 +358,22 @@ main {
   color: #3e3ec8;
 }
 
+.commentary_download {
+  cursor: pointer;
+  span {
+    color: #6f6f6f;
+    font-size: $font-size-14px;
+    line-height: normal;
+    text-decoration-line: underline;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+}
+
 // Generic Styles End
 
 // Header Styles Start
@@ -374,8 +382,8 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: $app-white;
-  height: 84px;
-  padding: 0 2rem;
+  height: auto;
+  padding: 0.25rem 2rem;
 
   @media only screen and (min-width: 768px) {
     height: 123px;
@@ -525,6 +533,10 @@ main {
           font: 500 $font-size-16px "Poppins", sans-serif;
           padding: 1rem;
           line-height: normal;
+
+          @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+            padding: 0.5rem;
+          }
 
           @media only screen and (min-width: 1200px) {
             font-size: $font-size-19px;
@@ -936,7 +948,7 @@ main {
 
     .testimonial_img_con {
       overflow: hidden;
-      
+
       @media only screen and (max-width: 767px) {
         display: flex;
         justify-content: space-between;
@@ -1119,7 +1131,6 @@ main {
         @media only screen and (min-width: 768px) {
           width: $marquee-element-width-md;
         }
-
       }
     }
   }
@@ -1280,7 +1291,8 @@ main {
       }
     }
 
-    ol, p {
+    ol,
+    p {
       color: #6f6f6f;
       font-size: $font-size-14px;
       line-height: 119.2%;
@@ -2189,23 +2201,6 @@ main {
                   line-height: normal;
                 }
               }
-
-              .commentary_download {
-                // cursor: pointer;
-
-                span {
-                  color: #6f6f6f;
-                  font-size: $font-size-14px;
-                  line-height: normal;
-                  text-decoration-line: underline;
-                  vertical-align: middle;
-                  margin-right: 0.5rem;
-
-                  &:hover {
-                    text-decoration-line: none;
-                  }
-                }
-              }
             }
           }
         }
@@ -2572,7 +2567,6 @@ main {
       color: $app-black;
       font: 700 $font-size-24px "Poppins", sans-serif;
       line-height: 119.2%;
-      /* 28.608px */
     }
 
     .app_contact_sub_title {
@@ -2580,7 +2574,6 @@ main {
       font-size: $font-size-16px;
       font-weight: 600;
       line-height: 119.2%;
-      /* 19.072px */
     }
 
     p {
@@ -2645,7 +2638,6 @@ main {
       color: #25505c;
       font: 700 $font-size-32px "Poppins", sans-serif;
       line-height: 150%;
-      /* 48px */
       margin-bottom: 4rem;
 
       @media only screen and (max-width: 767px) {
@@ -2740,6 +2732,9 @@ main {
           margin-bottom: 0;
           margin-right: 2.5rem;
         }
+        @media only screen and (min-width: 991px) and (max-width: 1199px) {
+          margin-bottom: 3rem;
+        }
       }
 
       .app_secondary_btn {
@@ -2750,6 +2745,183 @@ main {
 }
 
 // Institution Login Page Styles End
+
+// Media Kit Page Styles Start
+.app_mediakit {
+  padding-top: 6rem;
+  @media only screen and (min-width: 768px) {
+    padding-top: 10rem;
+  }
+  .app_mediakit_banner {
+    background: #c4e2fd;
+    padding: 3.5rem 2rem;
+    @media only screen and (min-width: 768px) {
+      padding: 7rem 0;
+    }
+    .app_mediakit_title {
+      color: #194974;
+      font: 700 $font-size-28px "Poppins", sans-serif;
+      font-weight: 700;
+      line-height: 130.5%;
+      margin-bottom: 1rem;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-36px;
+      }
+    }
+  }
+  .app_mediakit_body {
+    padding: 5rem 0;
+    .app_home_section_title {
+      color: #4a4a4a;
+      margin-bottom: 1.5rem;
+    }
+    .app_home_section_caption {
+      color: #4a4a4a;
+      font-size: $font-size-18px;
+      margin-bottom: 0;
+      @media only screen and (max-width: 767px) {
+        padding: unset;
+      }
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-22px;
+      }
+    }
+    .mediakit_body_events {
+      .mediakit_events_info {
+        margin-top: 4rem;
+        .mediakit_event_item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 0.6px solid #595959;
+          padding: 1.5rem 0;
+          &:first-of-type {
+            border-top: 0.6px solid #595959;
+          }
+          .mediakit_event_detail {
+            text-align: start;
+            @media only screen and (max-width: 767px) {
+              max-width: 65%;
+            }
+            .app_home_section_caption {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .mediakit_body_logos {
+      margin-top: 4rem;
+      .mediakit_logo_cards {
+        margin-top: 4.75rem;
+        .mediakit_card_box {
+          display: flex;
+          justify-content: center;
+          border-radius: 7px;
+          background: $app-white;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+          min-height: 206px;
+          max-height: 206px;
+          margin-top: 1.5rem;
+          @media only screen and (max-width: 480px) {
+            &:first-of-type {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+    .mediakit_gallery {
+      margin-top: 6.5rem;
+      @media only screen and (min-width: 1200px) {
+        margin-top: 11.5rem;
+      }
+      .gallery_container {
+        margin-top: 5rem;
+        text-align: start;
+        @media only screen and (min-width: 768px) {
+          margin-top: 7rem;
+        }
+        .col {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2.5rem;
+
+          .gallery-img {
+            margin-top: 1.5rem;
+            margin-bottom: 1.25rem;
+          }
+
+          .img-name {
+            color: #000;
+            font-size: $font-size-18px;
+            font-weight: 600;
+            line-height: normal;
+          }
+
+          .img-designation {
+            color: #7d7d7d;
+            font-size: $font-size-16px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .mediakit_other_info {
+      margin-top: 3.25rem;
+      @media only screen and (min-width: 768px) {
+        margin-top: 7.25rem;
+      }
+    }
+  }
+}
+// Media Kit Page Styles End
+
+// Newsroom Page Styles Start
+.app_newsroom {
+  background: $app-white;
+  .app_roadmap_banner_section {
+    background: #d1f2e8;
+    position: relative;
+    .app_roadmap_caption {
+      margin-bottom: 1.6rem;
+    }
+
+    .app_newsroom_subtitle {
+      color: #194974;
+      font-size: $font-size-16px;
+      line-height: normal;
+    }
+
+    .app_roadmap_banner_overlap {
+      position: absolute;
+      bottom: -120px;
+      background: $app-white;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3.5rem 2.75rem;
+
+      .banner_overlap_left {
+        .app_home_section_caption {
+          color: #4a4a4a;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+        }
+
+        .banner_left_subtitle {
+          color: #000;
+          font: 400 $font-size-16px "Poppins", sans-serif;
+          line-height: 120%;
+          text-align: start;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+// Newsroom Page Styles End
 
 // Modal Styles Start
 .modal {
@@ -2801,7 +2973,9 @@ main {
         }
       }
 
-      .success_text,.error_text,.error_text_dynamic {
+      .success_text,
+      .error_text,
+      .error_text_dynamic {
         color: #696969;
         font-size: $font-size-18px;
         line-height: normal;
@@ -2904,8 +3078,10 @@ main {
       }
     }
 
-    &:not(:last-of-type) {
-      border-right: 1px solid #d0d0d0;
+    &:first-child {
+      border-right: 1px solid #5c5c5c;
+      padding-right: 0.75rem;
+      margin-right: 0.75rem;
     }
   }
 }
