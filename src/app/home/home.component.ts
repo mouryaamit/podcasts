@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
       company: [""],
       contactNumber: [""],
       industry: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
@@ -78,10 +78,14 @@ export class HomeComponent implements OnInit {
     this.subscribeGroup.get('company')?.setValidators([Validators.required]);
     this.subscribeGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.subscribeGroup.get('industry')?.setValidators([Validators.required]);
-    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
   saveSubscription(){
+    if (this.subscribeGroup.invalid) {
+      return;
+    }
+
     let postData = this.subscribeGroup.getRawValue();
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(

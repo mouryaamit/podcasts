@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit {
       contactNumber: [""],
       messageType: [""],
       message: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
@@ -48,11 +48,15 @@ export class ContactComponent implements OnInit {
     this.contactGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.contactGroup.get('messageType')?.setValidators([Validators.required]);
     this.contactGroup.get('message')?.setValidators([Validators.required]);
-    this.contactGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.contactGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
 
   saveContact(){
+    if (this.contactGroup.invalid) {
+      return;
+    }
+
     let postData = this.contactGroup.getRawValue();
 
     this.sumpoornApiService.saveContactDetails(postData).then(

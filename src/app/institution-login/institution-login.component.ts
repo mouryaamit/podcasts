@@ -38,7 +38,7 @@ export class InstitutionLoginComponent implements OnInit {
       jobTitle: [""],
       company: [""],
       contactNumber: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
@@ -49,11 +49,15 @@ export class InstitutionLoginComponent implements OnInit {
     this.scheduleDemoGroup.get('jobTitle')?.setValidators([Validators.required]);
     this.scheduleDemoGroup.get('company')?.setValidators([Validators.required]);
     this.scheduleDemoGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
-    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
 
   saveScheduleDemoForm() {
+    if (this.scheduleDemoGroup.invalid) {
+      return;
+    }
+
     let postData = this.scheduleDemoGroup.getRawValue();
 
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(

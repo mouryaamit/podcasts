@@ -373,6 +373,13 @@
                   By submitting this request, I agree with the Jocata
                   <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                 </label>
+                <div class="form-control-feedback"
+                    *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && 
+                    (subscribeGroup.get('checkedTermsAndConditions')?.dirty 
+                    || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
+                    <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                        class="validation-msg" >Please select checkbox</p>
+                </div>
               </div>
 
               <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
