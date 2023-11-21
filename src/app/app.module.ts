@@ -17,6 +17,8 @@ import { InstitutionLoginComponent } from './institution-login/institution-login
 import { InsightsChartComponent } from './index/insights-chart/insights-chart.component';
 import { ContextChartComponent } from './index/context-chart/context-chart.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MediaKitComponent } from './media-kit/media-kit.component';
+import { NewsroomComponent } from './newsroom/newsroom.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     TouComponent,
     InstitutionLoginComponent,
     InsightsChartComponent,
-    ContextChartComponent
+    ContextChartComponent,
+    MediaKitComponent,
+    NewsroomComponent
   ],
   imports: [
     HttpClientModule,

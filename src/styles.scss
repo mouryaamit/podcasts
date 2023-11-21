@@ -494,7 +494,10 @@ a {
         color: rgba(0, 0, 0, 0.8);
         font: 600 $font-size-16px "Poppins", sans-serif;
         margin-left: 27px;
-        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 1rem;
+        }
 
         &.active {
           border-bottom: 3px solid $app-black;
@@ -535,7 +538,7 @@ a {
           line-height: normal;
 
           @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-            padding: 0.5rem;
+            padding: 0.25rem;
           }
 
           @media only screen and (min-width: 1200px) {
@@ -1967,7 +1970,7 @@ a {
 }
 
 .app_index {
-  padding-top: 6rem;
+  padding-top: 7.5rem;
 
   @media only screen and (min-width: 768px) {
     padding-top: 10rem;
@@ -2895,27 +2898,60 @@ a {
 
     .app_roadmap_banner_overlap {
       position: absolute;
-      bottom: -120px;
+      top: 90%;
       background: $app-white;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 3.5rem 2.75rem;
-
+      padding: 1.5rem 1rem;
+      @media only screen and (min-width: 992px) {
+        flex-direction: row;
+        padding: 3.5rem 2.75rem;
+      }
       .banner_overlap_left {
         .app_home_section_caption {
           color: #4a4a4a;
           font-weight: 600;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
+          padding: unset;
+          @media only screen and (min-width: 768px) {
+            margin-bottom: 1.5rem;
+          }
         }
 
         .banner_left_subtitle {
           color: #000;
           font: 400 $font-size-16px "Poppins", sans-serif;
           line-height: 120%;
-          text-align: start;
           margin-bottom: 0;
+          @media only screen and (min-width: 992px) {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+
+  .app_newsroom_gallery {
+    padding: 14rem 0 3rem;
+    @media only screen and (max-width: 390px) {
+      padding-top: 17rem;
+    }
+    .row {
+      .col {
+        margin-bottom: 3rem;
+        .img_caption {
+          margin-left: 0.25rem;
+          .news_title,
+          .news_detail {
+            color: $app-black;
+            font-size: $font-size-18px;
+            line-height: 28px;
+            margin-bottom: 0;
+            text-align: start;
+          }
         }
       }
     }
@@ -3078,11 +3114,12 @@ a {
       }
     }
 
-    &:first-child {
-      border-right: 1px solid #5c5c5c;
-      padding-right: 0.75rem;
-      margin-right: 0.75rem;
-    }
+    // Enable below CSS only if there's one more child in the right side of footer
+    // &:first-child {
+    //   border-right: 1px solid #5c5c5c;
+    //   padding-right: 0.75rem;
+    //   margin-right: 0.75rem;
+    // }
   }
 }
 
