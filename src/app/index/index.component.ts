@@ -80,16 +80,14 @@ export class IndexComponent implements OnInit {
     ngOnInit(): void {
         this.getSumpoornData();
 
-        this.graphApiService.getSumpoornGraphData().then((data) => {
-            if (data) {
-                this.sumpoornGraphData = data;
-                this.getContextGraphData();
-            }
-        }, (error) => {
-            console.error("getSumpoornGraphData Error", error);
-        })
-        
-        
+        // this.graphApiService.getSumpoornGraphData().then((data) => {
+        //     if (data) {
+        //         this.sumpoornGraphData = data;
+        //         this.getContextGraphData();
+        //     }
+        // }, (error) => {
+        //     console.error("getSumpoornGraphData Error", error);
+        // })        
     }    
 
     getSumpoornData(){
@@ -97,38 +95,45 @@ export class IndexComponent implements OnInit {
         const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
 
         this.encryptedData = CryptoJS.AES.encrypt(name, salt).toString();
-        this.graphApiService.getSumpoornGraphApiData({ssUuid: this.encryptedData}).then((data) => {
-
+        this.graphApiService.getSumpoornGraphApiData({ssUuid: this.encryptedData}).then((response: any) => {
+            if (response && response.statusCode == "200") {
+                this.sumpoornGraphData = response.sumpoornData;
+                this.iipGraphData = response.iipData;
+                this.pmiGraphData = response.pmiData;
+                this.gvaGraphData = response.gvaData;
+            }
         }, (error) => {
+
         })
     }
 
-    getContextGraphData() {
-        this.graphApiService.getIipGraphData().then((IIPGraphData) => {
-            this.iipGraphData = IIPGraphData;
-            getPmiGraphData();
-        }, (error) => {
-            getPmiGraphData();
-            console.error("getSumpoornGraphData Error", error);
-        });
-        let getPmiGraphData = () => {
-            this.graphApiService.getPmiGraphData().then((PmiGraphData) => {
-                this.pmiGraphData = PmiGraphData;
-                getGvaGraphData();
-            }, (error) => {
-                getGvaGraphData();
-                console.error("getSumpoornGraphData Error", error);
-            });
-        }
-        let getGvaGraphData = () => {
-            this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
-                this.gvaGraphData = GvaGraphData;
+    // getContextGraphData() {
+    //     this.graphApiService.getIipGraphData().then((IIPGraphData) => {
+    //         this.iipGraphData = IIPGraphData;
+    //         getPmiGraphData();
+    //     }, (error) => {
+    //         getPmiGraphData();
+    //         console.error("getSumpoornGraphData Error", error);
+    //     });
+    //     let getPmiGraphData = () => {
+    //         this.graphApiService.getPmiGraphData().then((PmiGraphData) => {
+    //             this.pmiGraphData = PmiGraphData;
+    //             getGvaGraphData();
+    //         }, (error) => {
+    //             getGvaGraphData();
+    //             console.error("getSumpoornGraphData Error", error);
+    //         });
+    //     }
+    //     let getGvaGraphData = () => {
+    //         this.graphApiService.getGvaGraphData().then((GvaGraphData) => {
+    //             this.gvaGraphData = GvaGraphData;
 
-            }, (error) => {
-                console.error("getSumpoornGraphData Error", error);
-            });
-        }
-    }
+    //         }, (error) => {
+    //             console.error("getSumpoornGraphData Error", error);
+    //         });
+    //     }
+    // }
+
     scrollToRight(tab) {
         this.insightsInfoIcon = tab === 'Insights';
         this.contextInfoIcon = tab === 'Context';
