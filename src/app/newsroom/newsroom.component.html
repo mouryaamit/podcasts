@@ -3,8 +3,10 @@
         <div class="col-sm-12 col-md-10">
             <h4 class="app_roadmap_title mb-0">Launch Event Highlights</h4>
             <p class="app_roadmap_caption">
-                <span class="d-inline d-xxl-block">Jocata launches “Sumpoorn” India’s first MSME Economic Activity Index in </span>
-                <span class="d-inline d-xxl-block">association with SIDBI to further MSME development by enabling strategic action </span>
+                <span class="d-inline d-xxl-block">Jocata launches “Sumpoorn” India’s first MSME Economic Activity Index
+                    in </span>
+                <span class="d-inline d-xxl-block">association with SIDBI to further MSME development by enabling
+                    strategic action </span>
                 <span class="d-inline d-xxl-block">and credit inclusion efforts.</span>
             </p>
             <p class="app_newsroom_subtitle">Mumbai, November 10, 2023</p>
@@ -31,46 +33,11 @@
     <div class="row gx-0 app_newsroom_gallery justify-content-center">
         <div class="col-10">
             <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col">
-                    <img src="assets/images/news-lamp-lighting.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Lamp lighting">
+                <div class="col" *ngFor="let event of events">
+                    <img [src]="event.imageURL" class="img-fluid w-100" [alt]="event.title">
                     <div class="img_caption">
-                        <p class="news_title fw-bold">Lamp lighting</p>
-                        <p class="news_detail">Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prakash Kumar, Deputy Managing Director, SIDBI; Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics and Mr. Prashant Muddu, CEO, Jocata</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="assets/images/news-innaugural-address.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Inaugral Address">
-                    <div class="img_caption">
-                        <p class="news_title fw-bold">Inaugral Address</p>
-                        <p class="news_detail">Mr. S Ramann, Chairman and Managing Director, SIDBI</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="assets/images/news-keynote-address.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Keynote Address">
-                    <div class="img_caption">
-                        <p class="news_title fw-bold">Keynote Address</p>
-                        <p class="news_detail">Mr. Rajiv Mishra, Senior Economic Advisor, Ministry of Finance, Government of India.</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="assets/images/news-launch-report.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Launch Report">
-                    <div class="img_caption">
-                        <p class="news_title fw-bold">Release of Jocata Sumpoorn in association with SIDBI - Launch Report</p>
-                        <p class="news_detail">Index Steering and Working Group members - Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. S N Singh, CGM, SIDBI; Mr. Vivek Malhotra, CGM, SIDBI; Mr. Prashant Muddu, CEO, Jocata; Mr. Narasimhan Venkatesan, Principal Advisor, Jocata and Dr. Sumita Kale, Principal Economist, Jocata.</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="assets/images/news-discussion.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Decade of MSMEs">
-                    <div class="img_caption">
-                        <p class="news_title fw-bold">"Is this the Decade of MSMEs"</p>
-                        <p class="news_detail">panel discussion with panelists - Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prashant Muddu, CEO, Jocata and Dr. Sumita Kale, Principal Economist, Jocata (moderator).</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="assets/images/news-vote.svg" class="img-fluid w-100" alt="Jocata Sumpoorn Vote of Thanks">
-                    <div class="img_caption">
-                        <p class="news_title fw-bold">Vote of Thanks</p>
-                        <p class="news_detail">Mr. Prashant Muddu, CEO, Jocata.</p>
+                        <p class="news_title fw-bold">{{ event.title }}</p>
+                        <p class="news_detail">{{ event.detail }}</p>
                     </div>
                 </div>
             </div>
