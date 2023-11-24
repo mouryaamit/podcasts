@@ -538,7 +538,7 @@ a {
           line-height: normal;
 
           @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-            padding: 0.25rem;
+            padding: 0.125rem;
           }
 
           @media only screen and (min-width: 1200px) {
@@ -2894,6 +2894,7 @@ a {
       color: #194974;
       font-size: $font-size-16px;
       line-height: normal;
+      margin-bottom: 4rem;
     }
 
     .app_roadmap_banner_overlap {
@@ -2905,8 +2906,8 @@ a {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 1rem;
-      @media only screen and (min-width: 992px) {
+      padding: 2.5rem 1rem;
+      @media only screen and (min-width: 1200px) {
         flex-direction: row;
         padding: 3.5rem 2.75rem;
       }
@@ -2914,10 +2915,10 @@ a {
         .app_home_section_caption {
           color: #4a4a4a;
           font-weight: 600;
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
           padding: unset;
-          @media only screen and (min-width: 768px) {
-            margin-bottom: 1.5rem;
+          @media only screen and (min-width: 1200px) {
+            margin-bottom: 0;
           }
         }
 
@@ -2935,9 +2936,9 @@ a {
   }
 
   .app_newsroom_gallery {
-    padding: 14rem 0 3rem;
-    @media only screen and (max-width: 390px) {
-      padding-top: 17rem;
+    padding: 20rem 0 3rem;
+    @media only screen and (min-width: 767px) {
+      padding-top: 14rem;
     }
     .row {
       .col {
