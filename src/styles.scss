@@ -1075,11 +1075,11 @@ a {
     width: $marquee-width;
     overflow: hidden;
     position: relative;
-    padding: 7rem 0;
+    padding: 3.5rem 0;
 
-    @media only screen and (min-width: 1200px) {
-      height: $marquee-height;
-    }
+    // @media only screen and (min-width: 1200px) {
+    //   height: $marquee-height;
+    // }
 
     @keyframes marqueeMobile {
       0% {
@@ -1116,6 +1116,7 @@ a {
       display: flex;
       align-items: center;
       padding: 0;
+      margin-bottom: 0;
       animation: marqueeMobile 15s linear infinite;
 
       @media only screen and (min-width: 768px) {
@@ -2944,7 +2945,11 @@ a {
       .col {
         margin-bottom: 3rem;
         .img_caption {
+          margin-top: 1rem;
           margin-left: 0.25rem;
+          .news_title {
+            font-family: "Poppins", sans-serif;
+          }
           .news_title,
           .news_detail {
             color: $app-black;
@@ -3090,15 +3095,37 @@ a {
   align-items: center;
   text-align: center;
   background: #e3e3e3;
-  color: #5c5c5c;
-  height: 70px;
-  font-size: $font-size-16px;
+  height: auto;
+  padding: 0.25rem 2rem;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     height: 48px;
     padding: 0 7rem 0 3rem;
+  }
+  .app_footer_left {
+    margin-bottom: 1rem;
+    @media only screen and (min-width: 767px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .footer_copyrights {
+      color: #5c5c5c;
+      font-size: $font-size-16px;
+      @media only screen and (min-width: 767px) {
+        border-right: 1px solid #5c5c5c;
+        padding-right: 1.5rem;
+        margin-bottom: 0;
+      }
+    }
+    a:first-of-type {
+      margin-right: 1rem;
+      @media only screen and (min-width: 767px) {
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   .list-group-item {
@@ -3108,6 +3135,7 @@ a {
 
     a {
       color: #5c5c5c;
+      font-size: $font-size-16px;
       text-decoration: underline;
 
       &:hover {

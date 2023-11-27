@@ -36,7 +36,7 @@ export class NewsroomComponent implements OnInit {
 
   events = [
     {
-      "title": "Lamp lighting",
+      "title": "Lamp Lighting",
       "detail": "Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prakash Kumar, Deputy Managing Director, SIDBI; Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics and Mr. Prashant Muddu, CEO, Jocata.",
       "imageURL": "assets/images/news-lamp-lighting.svg"
     },
@@ -51,13 +51,13 @@ export class NewsroomComponent implements OnInit {
       "imageURL": "assets/images/news-keynote-address.svg"
     },
     {
-      "title": "Release of Jocata Sumpoorn in association with SIDBI - Launch Report",
+      "title": "Release of Sumpoorn Launch Report",
       "detail": "Index Steering and Working Group members - Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. S N Singh, CGM, SIDBI; Mr. Vivek Malhotra, CGM, SIDBI; Mr. Prashant Muddu, CEO, Jocata; Mr. Narasimhan Venkatesan, Principal Advisor, Jocata and Dr. Sumita Kale, Principal Economist, Jocata.",
       "imageURL": "assets/images/news-launch-report.svg"
     },
     {
       "title": "\"Is this the Decade of MSMEs\"",
-      "detail": "panel discussion with panelists - Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prashant Muddu, CEO, Jocata and Dr. Sumita Kale, Principal Economist, Jocata (moderator).",
+      "detail": "Panel discussion with Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prashant Muddu, CEO, Jocata and Dr. Sumita Kale, Principal Economist, Jocata (moderator).",
       "imageURL": "assets/images/news-discussion.svg"
     },
     {
