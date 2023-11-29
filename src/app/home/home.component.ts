@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -49,11 +50,19 @@ export class HomeComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService : SumpoornApiService,
     private fb: FormBuilder,
+    private toastr: ToastrService,
   ) { 
     this.createForm();
   }
 
   ngOnInit(): void {
+    this.toastr.error('We are unable to process your request. Please try again after sometime.', 'hkjhkjhkjhk', {
+      timeOut: 900000,
+      extendedTimeOut: 900000,
+      positionClass: 'toast-bottom-center',
+      progressBar: true,
+      progressAnimation: 'increasing',
+    });
     this.addValidations();
   }
 
@@ -91,10 +100,25 @@ export class HomeComponent implements OnInit {
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
         this.subscribeGroup.reset();
-        $("#successModal").show();
+        // $("#successModal").show();
         $("#subscribeModal").hide();
+        $('.modal-backdrop').remove();
+        this.toastr.success('You will receive monthly updates of the Jocata Sumpoorn Index.', "You've successfully subscribed", {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+        });
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+        });
         this.subscribeGroup.reset();
           if(error && error.statusMessage){
             $(".error_text_dynamic").html(error.statusMessage);
@@ -104,8 +128,9 @@ export class HomeComponent implements OnInit {
             $(".error_text").show();
             $(".error_text_dynamic").hide();            
           }
-          $("#errorsModal").show();
+          // $("#errorsModal").show();
           $("#subscribeModal").hide();
+          $('.modal-backdrop').remove();
       }
   );
     

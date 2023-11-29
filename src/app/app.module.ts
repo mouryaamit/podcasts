@@ -21,6 +21,7 @@ import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './services/loading.interceptor';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoadingInterceptor } from './services/loading.interceptor';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     {

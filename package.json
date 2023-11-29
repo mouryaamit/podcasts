@@ -30,6 +30,7 @@
     "fs": "^0.0.1-security",
     "jquery": "^3.7.1",
     "moment-timezone": "^0.5.43",
+    "ngx-toastr": "^13.1.0",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
     "replace-in-file": "^7.0.2",
