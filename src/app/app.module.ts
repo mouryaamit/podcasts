@@ -19,6 +19,7 @@ import { ContextChartComponent } from './index/context-chart/context-chart.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { NewsroomComponent } from './newsroom/newsroom.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
