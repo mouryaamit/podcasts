@@ -15,6 +15,7 @@ html {
 body {
   font-family: "Inter";
   font-weight: 400;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -47,6 +48,62 @@ a {
 
 .fw-600 {
   font-weight: 600 !important;
+}
+
+//toaster css
+.toast-container {
+  .ngx-toastr {
+    border-radius: 16px;
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.10), 0px 86px 86px 0px rgba(0, 0, 0, 0.09), 0px 194px 116px 0px rgba(0, 0, 0, 0.05), 0px 345px 138px 0px rgba(0, 0, 0, 0.01), 0px 539px 151px 0px rgba(0, 0, 0, 0.00);
+    padding: 2rem;
+    width: 90vw !important;
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      width: 60vw !important;
+    }
+
+    @media only screen and (min-width: 992px) {
+      width: 40vw !important;
+    }
+
+    &:hover {
+      border: none;
+      box-shadow: inherit;
+    }
+
+    &.toast-error {
+      background: linear-gradient(0deg, rgba(254, 0, 8, 0.10) 0%, rgba(254, 0, 8, 0.10) 100%), #FFF;
+      
+      .toast-progress {
+        background-color: #FE0008;
+      }
+    }
+
+    &.toast-warning {
+      background: linear-gradient(0deg, rgba(255, 157, 89, 0.10) 0%, rgba(255, 157, 89, 0.10) 100%), #FFF;
+      .toast-progress {
+        background-color: #FF9D59;
+      }
+    }
+
+    &.toast-success {
+      background: linear-gradient(0deg, rgba(37, 187, 97, 0.10) 0%, rgba(37, 187, 97, 0.10) 100%), #FFF;
+      .toast-progress {
+        background-color: #25bb61;
+      }
+    }
+
+    .toast-title, .toast-message {
+      color: $app-black;
+      font: 500 $font-size-16px "Poppins", sans-serif;
+      line-height: normal;
+    }
+
+    .toast-message {
+      font-weight: normal;
+      margin-top: 1.75rem;
+    }
+  }
 }
 
 // Generic Styles Start
@@ -360,6 +417,7 @@ a {
 
 .commentary_download {
   cursor: pointer;
+
   span {
     color: #6f6f6f;
     font-size: $font-size-14px;
@@ -973,6 +1031,7 @@ a {
         img {
           height: 140px;
         }
+
         div {
           margin-left: 2rem;
         }
@@ -1087,9 +1146,7 @@ a {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-sm * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
       }
     }
 
@@ -1099,11 +1156,10 @@ a {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-md * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
       }
     }
+
     .marquee-content-title {
       color: #000;
       font-size: $font-size-24px;
@@ -1187,9 +1243,11 @@ a {
         .figure {
           .figure-img {
             margin-bottom: 1.25rem;
+
             @media only screen and (max-width: 767px) {
               width: 100%;
             }
+
             @media only screen and (min-width: 768px) {
               max-width: 100%;
             }
@@ -1495,7 +1553,7 @@ a {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      > span:not(span span) {
+      >span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -1521,6 +1579,7 @@ a {
         overflow-x: scroll;
         width: 85%;
         border-bottom: unset;
+
         &::-webkit-scrollbar {
           display: none;
         }
@@ -2009,9 +2068,11 @@ a {
         background: #f5f5f5;
         border-radius: 20px;
         padding: 12px 16px;
+
         &.active {
           background: #d9d9d9;
         }
+
         .checkbox__label {
           display: inline-flex;
           align-items: center;
@@ -2022,16 +2083,19 @@ a {
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+
           input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
             height: 0;
             width: 0;
+
             &:checked {
               ~ {
                 .checkbox__checkmark {
                   background-color: #6d6d6d;
+
                   &::after {
                     opacity: 1;
                   }
@@ -2039,6 +2103,7 @@ a {
               }
             }
           }
+
           .checkbox__checkmark {
             position: absolute;
             left: 0;
@@ -2067,7 +2132,8 @@ a {
           .checkbox__content {
             font-size: 14px;
             font-weight: 600;
-            line-height: 119.2%; /* 16.688px */
+            line-height: 119.2%;
+            /* 16.688px */
           }
         }
       }
@@ -2087,14 +2153,17 @@ a {
         -3px 43px 12px 0px rgba(0, 0, 0, 0);
       padding: 1rem;
       z-index: 99;
+
       .chart_info_content {
         .chart_info_title {
           display: flex;
           align-items: center;
           font-size: 13px;
           font-weight: 600;
-          line-height: 119.2%; /* 15.496px */
+          line-height: 119.2%;
+          /* 15.496px */
           margin-bottom: 1rem;
+
           .btn-close {
             opacity: 1;
             margin-left: auto;
@@ -2120,11 +2189,13 @@ a {
         }
       }
     }
+
     @media only screen and (min-width: 768px) {
       .app_index_commentary_con {
         padding-bottom: 10rem;
       }
     }
+
     .app_index_commentary_con {
       background: #fafafa;
 
@@ -2223,6 +2294,7 @@ a {
             font: 700 $font-size-20px "Alegreya Sans", sans-serif;
             line-height: normal;
             margin-bottom: 0;
+
             @media only screen and (min-width: 992px) {
               font-style: $font-size-18px;
               font-family: "Inter", sans-serif;
@@ -2250,6 +2322,7 @@ a {
               background: #ff5c00;
               animation: circleOne 1.5s infinite ease-out;
             }
+
             &.circle_two {
               background: #fff;
               animation: circleTwo 1.5s infinite ease-out;
@@ -2265,6 +2338,7 @@ a {
             font-size: $font-size-20px;
             font-family: "Alegreya Sans";
             line-height: 130%;
+
             @media only screen and (min-width: 992px) {
               font-size: 17px;
               font-family: "Inter", sans-serif;
@@ -2278,6 +2352,7 @@ a {
             font: 700 $font-size-20px "Alegreya Sans", sans-serif;
             line-height: 120%;
             margin-left: 5px;
+
             @media only screen and (min-width: 992px) {
               font-size: 17px;
               font-family: "Inter", sans-serif;
@@ -2294,9 +2369,11 @@ a {
 
             .member_details {
               color: $app-black;
+
               @media only screen and (min-width: 992px) {
                 color: #4a4a4a;
               }
+
               .member_name {
                 font: 600 $font-size-18px "Work Sans";
                 line-height: 120%;
@@ -2317,6 +2394,7 @@ a {
               font-size: $font-size-20px;
               font-family: "Alegreya Sans";
               line-height: 130%;
+
               @media only screen and (min-width: 992px) {
                 color: #4a4a4a;
                 font-size: 17px;
@@ -2735,6 +2813,7 @@ a {
           margin-bottom: 0;
           margin-right: 2.5rem;
         }
+
         @media only screen and (min-width: 991px) and (max-width: 1199px) {
           margin-bottom: 3rem;
         }
@@ -2752,60 +2831,76 @@ a {
 // Media Kit Page Styles Start
 .app_mediakit {
   padding-top: 6rem;
+
   @media only screen and (min-width: 768px) {
     padding-top: 10rem;
   }
+
   .app_mediakit_banner {
     background: #c4e2fd;
     padding: 3.5rem 2rem;
+
     @media only screen and (min-width: 768px) {
       padding: 7rem 0;
     }
+
     .app_mediakit_title {
       color: #194974;
       font: 700 $font-size-28px "Poppins", sans-serif;
       font-weight: 700;
       line-height: 130.5%;
       margin-bottom: 1rem;
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-36px;
       }
     }
   }
+
   .app_mediakit_body {
     padding: 5rem 0;
+
     .app_home_section_title {
       color: #4a4a4a;
       margin-bottom: 1.5rem;
     }
+
     .app_home_section_caption {
       color: #4a4a4a;
       font-size: $font-size-18px;
       margin-bottom: 0;
+
       @media only screen and (max-width: 767px) {
         padding: unset;
       }
+
       @media only screen and (min-width: 768px) {
         font-size: $font-size-22px;
       }
     }
+
     .mediakit_body_events {
       .mediakit_events_info {
         margin-top: 4rem;
+
         .mediakit_event_item {
           display: flex;
           justify-content: space-between;
           align-items: center;
           border-bottom: 0.6px solid #595959;
           padding: 1.5rem 0;
+
           &:first-of-type {
             border-top: 0.6px solid #595959;
           }
+
           .mediakit_event_detail {
             text-align: start;
+
             @media only screen and (max-width: 767px) {
               max-width: 65%;
             }
+
             .app_home_section_caption {
               margin-bottom: 0.5rem;
             }
@@ -2813,10 +2908,13 @@ a {
         }
       }
     }
+
     .mediakit_body_logos {
       margin-top: 4rem;
+
       .mediakit_logo_cards {
         margin-top: 4.75rem;
+
         .mediakit_card_box {
           display: flex;
           justify-content: center;
@@ -2826,6 +2924,7 @@ a {
           min-height: 206px;
           max-height: 206px;
           margin-top: 1.5rem;
+
           @media only screen and (max-width: 480px) {
             &:first-of-type {
               margin-bottom: 3rem;
@@ -2834,17 +2933,22 @@ a {
         }
       }
     }
+
     .mediakit_gallery {
       margin-top: 6.5rem;
+
       @media only screen and (min-width: 1200px) {
         margin-top: 11.5rem;
       }
+
       .gallery_container {
         margin-top: 5rem;
         text-align: start;
+
         @media only screen and (min-width: 768px) {
           margin-top: 7rem;
         }
+
         .col {
           display: flex;
           flex-direction: column;
@@ -2870,22 +2974,27 @@ a {
         }
       }
     }
+
     .mediakit_other_info {
       margin-top: 3.25rem;
+
       @media only screen and (min-width: 768px) {
         margin-top: 7.25rem;
       }
     }
   }
 }
+
 // Media Kit Page Styles End
 
 // Newsroom Page Styles Start
 .app_newsroom {
   background: $app-white;
+
   .app_roadmap_banner_section {
     background: #d1f2e8;
     position: relative;
+
     .app_roadmap_caption {
       margin-bottom: 1.6rem;
     }
@@ -2907,16 +3016,19 @@ a {
       justify-content: space-between;
       align-items: center;
       padding: 2.5rem 1rem;
+
       @media only screen and (min-width: 1200px) {
         flex-direction: row;
         padding: 3.5rem 2.75rem;
       }
+
       .banner_overlap_left {
         .app_home_section_caption {
           color: #4a4a4a;
           font-weight: 600;
           margin-bottom: 1.5rem;
           padding: unset;
+
           @media only screen and (min-width: 1200px) {
             margin-bottom: 0;
           }
@@ -2927,6 +3039,7 @@ a {
           font: 400 $font-size-16px "Poppins", sans-serif;
           line-height: 120%;
           margin-bottom: 0;
+
           @media only screen and (min-width: 992px) {
             text-align: start;
           }
@@ -2937,14 +3050,18 @@ a {
 
   .app_newsroom_gallery {
     padding: 20rem 0 3rem;
+
     @media only screen and (min-width: 767px) {
       padding-top: 14rem;
     }
+
     .row {
       .col {
         margin-bottom: 3rem;
+
         .img_caption {
           margin-left: 0.25rem;
+
           .news_title,
           .news_detail {
             color: $app-black;
@@ -2958,6 +3075,7 @@ a {
     }
   }
 }
+
 // Newsroom Page Styles End
 
 // Modal Styles Start

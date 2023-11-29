@@ -12,6 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
+    "skipLibCheck":true,
     "useUnknownInCatchVariables": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

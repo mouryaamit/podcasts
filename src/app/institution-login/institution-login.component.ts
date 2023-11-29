@@ -4,6 +4,7 @@ import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as CryptoJS from 'crypto-js';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-institution-login',
@@ -20,6 +21,7 @@ export class InstitutionLoginComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
+    private toastr: ToastrService
   ) {
     this.createForm1();
     this.createForm2();
@@ -63,13 +65,29 @@ export class InstitutionLoginComponent implements OnInit {
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
         this.scheduleDemoGroup.reset();
-        $("#successModal").show();
+        // $("#successModal").show();
         $("#scheduleDemo").hide();
+        $('.modal-backdrop').remove();
+         this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
+        timeOut: 10000,
+        extendedTimeOut: 10000,
+        positionClass: 'toast-bottom-center',
+        progressBar: true,
+        'progressAnimation': 'increasing'
+    });
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          'progressAnimation': 'increasing',
+        });
         this.scheduleDemoGroup.reset();
-        $("#errorsModal").show();
+        // $("#errorsModal").show();
         $("#scheduleDemo").hide();
+        $('.modal-backdrop').remove();
       }
     );
 
@@ -117,12 +135,27 @@ export class InstitutionLoginComponent implements OnInit {
         $("#loginModal").hide();
         console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
-
+        this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          'progressAnimation': 'increasing',
+        });
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          
+        });
         this.swaraLoginGroup.reset();
         $("#loginModal").hide();
-        $("#errorsModal").show();
+        $('.modal-backdrop').remove();
+        // $("#errorsModal").show();
       }
     );
   }

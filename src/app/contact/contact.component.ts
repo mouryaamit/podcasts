@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -16,6 +17,7 @@ export class ContactComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService : SumpoornApiService,
     private fb: FormBuilder,
+    private toastr: ToastrService,
   ) { 
     this.createForm();
   }
@@ -65,14 +67,29 @@ export class ContactComponent implements OnInit {
         this.contactGroup.patchValue({
           "messageType":""
         })
-        $("#successModal").show();
+        // $("#successModal").show();
+        this.toastr.success('Thank you for contacting us.', "", {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+        });
       },
       (error) => {
         this.contactGroup.reset();
         this.contactGroup.patchValue({
           "messageType":""
         })
-        $("#errorsModal").show();
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 10000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+        });
+        // $("#errorsModal").show();
+        
       }
   );
     
