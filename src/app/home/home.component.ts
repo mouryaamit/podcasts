@@ -56,13 +56,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.toastr.error('We are unable to process your request. Please try again after sometime.', 'hkjhkjhkjhk', {
-      timeOut: 900000,
-      extendedTimeOut: 900000,
-      positionClass: 'toast-bottom-center',
-      progressBar: true,
-      progressAnimation: 'increasing',
-    });
     this.addValidations();
   }
 
