@@ -12,13 +12,15 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { TouComponent } from './tou/tou.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
 import { InsightsChartComponent } from './index/insights-chart/insights-chart.component';
 import { ContextChartComponent } from './index/context-chart/context-chart.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './services/loading.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -37,7 +39,8 @@ import { ToastrModule } from 'ngx-toastr';
     InsightsChartComponent,
     ContextChartComponent,
     MediaKitComponent,
-    NewsroomComponent
+    NewsroomComponent,
+    SpinnerComponent
   ],
   imports: [
     HttpClientModule,
@@ -46,7 +49,11 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
