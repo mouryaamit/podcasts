@@ -22,6 +22,7 @@ import { NewsroomComponent } from './newsroom/newsroom.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './services/loading.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,18 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      maxOpened: 1,
+      iconClasses  : {
+        error: 'toast-error',
+        info: 'toast-info',
+        success: 'toast-success',
+        warning: 'toast-warning',
+      }
+    }
+
+    ),
   ],
   providers: [
     {
