@@ -22,6 +22,7 @@ import { NewsroomComponent } from './newsroom/newsroom.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { LoadingInterceptor } from './services/loading.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ToastrModule } from 'ngx-toastr';
     ContextChartComponent,
     MediaKitComponent,
     NewsroomComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NewsroomEventsComponent
   ],
   imports: [
     HttpClientModule,

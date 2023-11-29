@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import { saveAs } from 'file-saver';
@@ -11,8 +12,8 @@ import * as $ from 'jquery';
 })
 export class NewsroomComponent implements OnInit {
   encryptedData: string = "";
-
-  constructor(public sumpoornApiService: SumpoornApiService) { }
+  isShowCaseSelect: boolean = false;
+  constructor(public sumpoornApiService: SumpoornApiService, public router: Router, public route: ActivatedRoute,) { }
 
   ngOnInit(): void {
   }
@@ -34,36 +35,7 @@ export class NewsroomComponent implements OnInit {
     );
   }
 
-  events = [
-    {
-      "title": "Lamp Lighting",
-      "detail": "Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prakash Kumar, Deputy Managing Director, SIDBI; Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics and Mr. Prashant Muddu, CEO, Jocata.",
-      "imageURL": "assets/images/news-lamp-lighting.svg"
-    },
-    {
-      "title": "Inaugural Address",
-      "detail": "Mr. S Ramann, Chairman and Managing Director, SIDBI.",
-      "imageURL": "assets/images/news-innaugural-address.svg"
-    },
-    {
-      "title": "Keynote Address",
-      "detail": "Mr. Rajiv Mishra, Senior Economic Advisor, Ministry of Finance, Government of India.",
-      "imageURL": "assets/images/news-keynote-address.svg"
-    },
-    {
-      "title": "Release of Sumpoorn Launch Report",
-      "detail": "Index Steering and Working Group members - Mr. S Ramann, Chairman and Managing Director, SIDBI; Mr. S N Singh, CGM, SIDBI; Mr. Vivek Malhotra, CGM, SIDBI; Mr. Prashant Muddu, CEO, Jocata; Mr. Narasimhan Venkatesan, Principal Advisor, Jocata and Dr. Sumita Kale, Principal Economist, Jocata.",
-      "imageURL": "assets/images/news-launch-report.svg"
-    },
-    {
-      "title": "\"Is this the Decade of MSMEs\"",
-      "detail": "Panel discussion with Dr. Ajit Ranade, Vice Chancellor, Gokhale Institute of Politics and Economics; Mr. Sudatta Mandal, Deputy Managing Director, SIDBI; Mr. Prashant Muddu, CEO, Jocata and Dr. Sumita Kale, Principal Economist, Jocata (moderator).",
-      "imageURL": "assets/images/news-discussion.svg"
-    },
-    {
-      "title": "Vote of Thanks",
-      "detail": "Mr. Prashant Muddu, CEO, Jocata.",
-      "imageURL": "assets/images/news-vote.svg"
-    }
-  ]
+  goToGallery(param) {
+    this.router.navigate(['/newsroom-events'], param);
+  }
 }

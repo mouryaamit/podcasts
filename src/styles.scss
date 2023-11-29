@@ -2990,83 +2990,43 @@ a {
 
 // Newsroom Page Styles Start
 .app_newsroom {
-  background: $app-white;
-
+  background: #f6f6f6;
+  padding-top: 7rem;
   .app_roadmap_banner_section {
     background: #d1f2e8;
     position: relative;
-
+    .app_secondary_btn {
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-18px;
+      }
+    }
     .app_roadmap_caption {
-      margin-bottom: 1.6rem;
+      margin: 4rem auto 1.6rem;
     }
 
     .app_newsroom_subtitle {
       color: #194974;
       font-size: $font-size-16px;
       line-height: normal;
-      margin-bottom: 4rem;
-    }
-
-    .app_roadmap_banner_overlap {
-      position: absolute;
-      top: 90%;
-      background: $app-white;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2.5rem 1rem;
-
-      @media only screen and (min-width: 1200px) {
-        flex-direction: row;
-        padding: 3.5rem 2.75rem;
-      }
-
-      .banner_overlap_left {
-        .app_home_section_caption {
-          color: #4a4a4a;
-          font-weight: 600;
-          margin-bottom: 1.5rem;
-          padding: unset;
-
-          @media only screen and (min-width: 1200px) {
-            margin-bottom: 0;
-          }
-        }
-
-        .banner_left_subtitle {
-          color: #000;
-          font: 400 $font-size-16px "Poppins", sans-serif;
-          line-height: 120%;
-          margin-bottom: 0;
-
-          @media only screen and (min-width: 992px) {
-            text-align: start;
-          }
-        }
-      }
+      // margin-bottom: 4rem;
     }
   }
 
   .app_newsroom_gallery {
-    padding: 20rem 0 3rem;
-
-    @media only screen and (min-width: 767px) {
-      padding-top: 14rem;
-    }
-
+    padding: 4.5rem 0 5.25rem;
     .row {
       .col {
         margin-bottom: 3rem;
-
+        .news_img {
+          width: 100%;
+          max-width: 100%;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
         .img_caption {
           margin-top: 1rem;
-          margin-left: 0.25rem;
           .news_title {
             font-family: "Poppins", sans-serif;
           }
-
           .news_title,
           .news_detail {
             color: $app-black;
@@ -3075,6 +3035,42 @@ a {
             margin-bottom: 0;
             text-align: start;
           }
+        }
+      }
+    }
+  }
+
+  .app_roadmap_banner_overlap {
+    background: $app-white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+      padding: 3.5rem 2.75rem;
+    }
+    .banner_overlap_left {
+      .app_home_section_caption {
+        color: #4a4a4a;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        padding: unset;
+        @media only screen and (min-width: 1200px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .banner_left_subtitle {
+        color: #000;
+        font: 400 $font-size-16px "Poppins", sans-serif;
+        line-height: 120%;
+        margin-bottom: 0;
+        @media only screen and (min-width: 992px) {
+          text-align: start;
         }
       }
     }

@@ -10,6 +10,7 @@ import { TouComponent } from './tou/tou.component';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
 import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
+import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 
 const routes: Routes = [
   {
@@ -66,7 +67,12 @@ const routes: Routes = [
   {
     path: 'newsroom',
     component: NewsroomComponent,
-    title: `Jocata Sumpoorn Launch Event Highlights: Unveiling India’s First MSME Economic Activity Index in Partnership with SIDBI`
+    title: `Jocata Sumpoorn: News, Updates, and Event Highlights | Download Press Releases and Launch Reports`
+  },
+  {
+    path: 'newsroom-events',
+    component: NewsroomEventsComponent,
+    title: `Jocata Sumpoorn Highlights: Unveiling India’s First MSME Economic Activity Index in Partnership with SIDBI`
   },
   { path: '**', 
     redirectTo: 'home',
