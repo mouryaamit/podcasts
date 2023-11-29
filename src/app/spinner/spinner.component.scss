@@ -1,0 +1,28 @@
+.loader-message {
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: calc(50% + 50px)
+}
+
+.cssload-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.loader-spinner {
+  display: block;
+  position: absolute;
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
