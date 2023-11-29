@@ -60,25 +60,25 @@ export class RoadmapComponent implements OnInit {
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
         this.subscribeGroup.reset();
-        // $("#successModal").show();
-        $("#subscribeModal").hide();
-        $('.modal-backdrop').remove();
-        this.toastr.success('You will receive monthly updates of the Jocata Sumpoorn Index.', "You've successfully subscribed", {
+          this.toastr.success('You will receive monthly updates of the Jocata Sumpoorn Index.', "You've successfully subscribed", {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
-          'progressAnimation': 'increasing',
+          progressAnimation: 'increasing',
+          closeButton: true,
         });
+        this.hideSubscribeModal();
       },
       (error) => {
         this.subscribeGroup.reset();
         this.toastr.error('We are unable to process your request. Please try again after sometime.', "", {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
-          'progressAnimation': 'increasing',
+          progressAnimation: 'increasing',
+          closeButton: true,
         });
         if(error && error.statusMessage){
           $(".error_text_dynamic").html(error.statusMessage);
@@ -88,9 +88,7 @@ export class RoadmapComponent implements OnInit {
           $(".error_text").show();
           $(".error_text_dynamic").hide();
         }
-          // $("#errorsModal").show();
-          $("#subscribeModal").hide();
-          $('.modal-backdrop').remove();
+          this.hideSubscribeModal();
       }
   );
     

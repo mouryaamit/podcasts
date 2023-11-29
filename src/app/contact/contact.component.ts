@@ -15,10 +15,10 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    public sumpoornApiService : SumpoornApiService,
+    public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
     private toastr: ToastrService,
-  ) { 
+  ) {
     this.createForm();
   }
 
@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
 
   }
 
-  createForm(){
+  createForm() {
     this.contactGroup = this.fb.group({
       firstName: [""],
       lastName: [""],
@@ -41,7 +41,7 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  addValidations(){
+  addValidations() {
     this.contactGroup.get('firstName')?.setValidators([Validators.required]);
     this.contactGroup.get('lastName')?.setValidators([Validators.required]);
     this.contactGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
   }
 
 
-  saveContact(){
+  saveContact() {
     if (this.contactGroup.invalid) {
       return;
     }
@@ -65,37 +65,37 @@ export class ContactComponent implements OnInit {
       (resp: any) => {
         this.contactGroup.reset();
         this.contactGroup.patchValue({
-          "messageType":""
+          "messageType": ""
         })
-        // $("#successModal").show();
         this.toastr.success('Thank you for contacting us.', "", {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
           progressAnimation: 'increasing',
+          closeButton: true,
         });
       },
       (error) => {
         this.contactGroup.reset();
         this.contactGroup.patchValue({
-          "messageType":""
+          "messageType": ""
         })
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
           progressAnimation: 'increasing',
+          closeButton: true,
         });
-        // $("#errorsModal").show();
-        
+
       }
-  );
-    
+    );
+
   }
 
-  hideSuccessModal(){
+  hideSuccessModal() {
     $("#successModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");

@@ -65,41 +65,39 @@ export class InstitutionLoginComponent implements OnInit {
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
         this.scheduleDemoGroup.reset();
-        // $("#successModal").show();
-        $("#scheduleDemo").hide();
-        $('.modal-backdrop').remove();
-         this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
-        timeOut: 10000,
-        extendedTimeOut: 10000,
-        positionClass: 'toast-bottom-center',
-        progressBar: true,
-        'progressAnimation': 'increasing'
-    });
+        this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+        this.hideScheduleDemoModal();
       },
       (error) => {
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
-          'progressAnimation': 'increasing',
+          progressAnimation: 'increasing',
+          closeButton: true,
         });
         this.scheduleDemoGroup.reset();
-        // $("#errorsModal").show();
-        $("#scheduleDemo").hide();
-        $('.modal-backdrop').remove();
+        this.hideScheduleDemoModal();
       }
     );
 
   }
-  
-  hideSuccessModal(){
+
+  hideSuccessModal() {
     $("#successModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
     $(document.body).removeAttr("style");
   }
-  hideScheduleDemoModal(){
+  hideScheduleDemoModal() {
     $("#scheduleDemo").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
@@ -112,50 +110,55 @@ export class InstitutionLoginComponent implements OnInit {
       checkedTnCSwara: [false]
     })
   }
- 
+
   addValidationsForSwaraLogin() {
     this.swaraLoginGroup.get('instAuid')?.setValidators([Validators.required]);
     this.swaraLoginGroup.get('checkedTnCSwara')?.setValidators([Validators.requiredTrue]);
   }
-
+  hideLoginSwaraModal() {
+    $("#loginModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
+  }
   saveSwaraLoginForm() {
     if (this.swaraLoginGroup.invalid) {
       return;
     }
-    
+
     const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
-    this.encryptedData = CryptoJS.AES.encrypt( this.swaraLoginGroup.value.instAuid, salt).toString();
-    
+    this.encryptedData = CryptoJS.AES.encrypt(this.swaraLoginGroup.value.instAuid, salt).toString();
+
     let postData = this.swaraLoginGroup.getRawValue();
     postData.instAuid = this.encryptedData;
-    
+
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
         this.swaraLoginGroup.reset();
-        $("#loginModal").hide();
         console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
         this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
-          'progressAnimation': 'increasing',
+          progressAnimation: 'increasing',
+          closeButton: true,
         });
+        this.hideLoginSwaraModal();
       },
       (error) => {
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
-          extendedTimeOut: 10000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
           progressBar: true,
           progressAnimation: 'increasing',
-          
+          closeButton: true,
+
         });
         this.swaraLoginGroup.reset();
-        $("#loginModal").hide();
-        $('.modal-backdrop').remove();
-        // $("#errorsModal").show();
+        this.hideLoginSwaraModal();
       }
     );
   }
