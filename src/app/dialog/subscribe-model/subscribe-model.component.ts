@@ -1,70 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { ApiService } from '../services/api.service';
-import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import { ApiService } from '../../services/api.service';
+import { SumpoornApiService } from '../../services/sumpoorn-api.service';
 import * as $ from 'jquery';
 import { ToastrService } from 'ngx-toastr';
-import { SubscribeModelComponent } from '../dialog/subscribe-model/subscribe-model.component';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-subscribe-model',
+  templateUrl: './subscribe-model.component.html',
+  styleUrls: ['./subscribe-model.component.scss']
 })
-export class HomeComponent implements OnInit {
-  partners: Array<any> = [
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-sahamati.png',
-      imageAlt: 'Sahamati Logo'
-    },
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-ceed.svg',
-      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
-    },
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-lead.png',
-      imageAlt: 'Lead Logo'
-    },
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-sahamati.png',
-      imageAlt: 'Sahamati Logo'
-    },
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-ceed.svg',
-      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
-    },
-    {
-      // title: 'Partner',
-      imageSrc: 'assets/images/partner-lead.png',
-      imageAlt: 'Lead Logo'
-    },
-  ];
-
+export class SubscribeModelComponent implements OnInit {
   subscribeGroup!: FormGroup;
-
-  constructor(
-    private apiService: ApiService,
+  constructor( private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
-    private toastr: ToastrService,
-    public dialog: MatDialog,
-  ) {
-    this.createForm();
-  }
+    private toastr: ToastrService,) { this.createForm()
+    }
 
   ngOnInit(): void {
     this.addValidations();
   }
-
   createForm() {
     this.subscribeGroup = this.fb.group({
       firstName: [""],
@@ -77,7 +32,6 @@ export class HomeComponent implements OnInit {
       checkedTermsAndConditions: [false]
     })
   }
-
   addValidations() {
     this.subscribeGroup.get('firstName')?.setValidators([Validators.required]);
     this.subscribeGroup.get('lastName')?.setValidators([Validators.required]);
@@ -88,7 +42,6 @@ export class HomeComponent implements OnInit {
     // this.subscribeGroup.get('industry')?.setValidators([Validators.required]);
     this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
-
   saveSubscription() {
     if (this.subscribeGroup.invalid) {
       return;
@@ -107,7 +60,6 @@ export class HomeComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.hideSubscribeModal();
       },
       (error) => {
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
@@ -119,47 +71,12 @@ export class HomeComponent implements OnInit {
           closeButton: true,
         });
         this.subscribeGroup.reset();
-        if (error && error.statusMessage) {
-          $(".error_text_dynamic").html(error.statusMessage);
-          $(".error_text").hide();
-          $(".error_text_dynamic").show();
-        } else {
-          $(".error_text").show();
-          $(".error_text_dynamic").hide();
-        }
-        this.hideSubscribeModal();
-
       }
     );
 
   }
 
-  hideSuccessModal() {
-    $("#successModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
-
   hideSubscribeModal() {
-    $("#subscribeModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
+   
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(SubscribeModelComponent, {
-      data: {
-        data: { mobileNumber: '' },
-      },
-      disableClose: true,
-      width: '500px',
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-      } else {
-      }
-    });
-  }
-
 }

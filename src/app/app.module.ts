@@ -24,7 +24,8 @@ import { LoadingInterceptor } from './services/loading.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { SubscribeModelComponent } from './dialog/subscribe-model/subscribe-model.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MediaKitComponent,
     NewsroomComponent,
     SpinnerComponent,
-    NewsroomEventsComponent
+    NewsroomEventsComponent,
+    SubscribeModelComponent
   ],
   imports: [
     HttpClientModule,
@@ -51,6 +53,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatDialogModule,
     ToastrModule.forRoot({
       maxOpened: 1,
       iconClasses  : {
