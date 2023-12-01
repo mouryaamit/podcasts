@@ -4,6 +4,7 @@ import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as CryptoJS from 'crypto-js';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-institution-login',
@@ -20,6 +21,7 @@ export class InstitutionLoginComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
+    private toastr: ToastrService
   ) {
     this.createForm1();
     this.createForm2();
@@ -27,7 +29,7 @@ export class InstitutionLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.addValidations();
-
+    this.addValidationsForSwaraLogin();
   }
 
   createForm1() {
@@ -38,7 +40,7 @@ export class InstitutionLoginComponent implements OnInit {
       jobTitle: [""],
       company: [""],
       contactNumber: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
@@ -49,35 +51,53 @@ export class InstitutionLoginComponent implements OnInit {
     this.scheduleDemoGroup.get('jobTitle')?.setValidators([Validators.required]);
     this.scheduleDemoGroup.get('company')?.setValidators([Validators.required]);
     this.scheduleDemoGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
-    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.scheduleDemoGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
 
   saveScheduleDemoForm() {
+    if (this.scheduleDemoGroup.invalid) {
+      return;
+    }
+
     let postData = this.scheduleDemoGroup.getRawValue();
 
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
         this.scheduleDemoGroup.reset();
-        $("#successModal").show();
-        $("#scheduleDemo").hide();
+        this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+        this.hideScheduleDemoModal();
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
         this.scheduleDemoGroup.reset();
-        $("#errorsModal").show();
-        $("#scheduleDemo").hide();
+        this.hideScheduleDemoModal();
       }
     );
 
   }
-  
-  hideSuccessModal(){
+
+  hideSuccessModal() {
     $("#successModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
     $(document.body).removeAttr("style");
   }
-  hideScheduleDemoModal(){
+  hideScheduleDemoModal() {
     $("#scheduleDemo").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
@@ -86,29 +106,59 @@ export class InstitutionLoginComponent implements OnInit {
 
   createForm2() {
     this.swaraLoginGroup = this.fb.group({
-      instAuid: ["", [Validators.required]]
+      instAuid: [""],
+      checkedTnCSwara: [false]
     })
   }
 
+  addValidationsForSwaraLogin() {
+    this.swaraLoginGroup.get('instAuid')?.setValidators([Validators.required]);
+    this.swaraLoginGroup.get('checkedTnCSwara')?.setValidators([Validators.requiredTrue]);
+  }
+  hideLoginSwaraModal() {
+    $("#loginModal").hide();
+    $('.modal-backdrop').remove();
+    $(document.body).removeClass("modal-open");
+    $(document.body).removeAttr("style");
+  }
   saveSwaraLoginForm() {
+    if (this.swaraLoginGroup.invalid) {
+      return;
+    }
+
     const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
-    this.encryptedData = CryptoJS.AES.encrypt( this.swaraLoginGroup.value.instAuid, salt).toString();
-    
+    this.encryptedData = CryptoJS.AES.encrypt(this.swaraLoginGroup.value.instAuid, salt).toString();
+
     let postData = this.swaraLoginGroup.getRawValue();
     postData.instAuid = this.encryptedData;
-    
+
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
         this.swaraLoginGroup.reset();
-        $("#loginModal").hide();
         console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
-
+        this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+        this.hideLoginSwaraModal();
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+
+        });
         this.swaraLoginGroup.reset();
-        $("#loginModal").hide();
-        $("#errorsModal").show();
+        this.hideLoginSwaraModal();
       }
     );
   }

@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   host: "/assets/json/",
-  swaraHost: "https://swara-staging.jocatagrid.in/"
+  swaraHost: "https://swara-staging.jocatagrid.in/",
+  timeStamp: ''
 };
 
 /*

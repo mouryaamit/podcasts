@@ -96,6 +96,7 @@ export class InsightsChartComponent implements OnInit {
                 $("#mobile_insights_graph_y_axis_content_info").html(infodata);
             }
     }
+
     generateMobileInsightsGraph() {
         var outsideThis = this;
         const mydata = this.sumpoornGraphData.IndexGeneration;
@@ -111,11 +112,11 @@ export class InsightsChartComponent implements OnInit {
         const margin = {
             top: 20,
             right: 25,
-            bottom: 115,
+            bottom: 100,
             left: 0,
         },
         default_width = 25 * mydata.length,
-        default_height = 500,
+        default_height = 485, //500
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom,
         parseDate = d3.timeParse("%m-%Y");
@@ -1144,11 +1145,11 @@ export class InsightsChartComponent implements OnInit {
         const margin = {
             top: 10,
             right: 10,
-            bottom: 115,
+            bottom: 60,
             left: 0,
         },
         default_width = 25 * mydata.length, //1150
-        default_height = 500,
+        default_height = 445, //500
         width = default_width - margin.left - margin.right,
         height = default_height - margin.top - margin.bottom;
         this.graphWidth.emit(default_width);

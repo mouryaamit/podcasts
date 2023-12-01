@@ -15,6 +15,10 @@ html {
 body {
   font-family: "Inter";
   font-weight: 400;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -46,16 +50,62 @@ a {
   font-weight: 600 !important;
 }
 
-main {
-  // padding-top: 3rem !important;
+//toaster css
+.toast-container {
+  .ngx-toastr {
+    border-radius: 16px;
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.10), 0px 86px 86px 0px rgba(0, 0, 0, 0.09), 0px 194px 116px 0px rgba(0, 0, 0, 0.05), 0px 345px 138px 0px rgba(0, 0, 0, 0.01), 0px 539px 151px 0px rgba(0, 0, 0, 0.00);
+    padding: 2rem;
+    width: 90vw !important;
+.toast-close-button{
+  color: black;
+}
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      width: 60vw !important;
+    }
 
-  // @media only screen and (min-width: 481px) and (max-width: 1199px) {
-  //   padding-top: 6rem !important;
-  // }
+    @media only screen and (min-width: 992px) {
+      width: 40vw !important;
+    }
 
-  // @media only screen and (min-width: 1200px) {
-  //   padding-top: 10rem !important;
-  // }
+    &:hover {
+      border: none;
+      box-shadow: inherit;
+    }
+
+    &.toast-error {
+      background: linear-gradient(0deg, rgba(254, 0, 8, 0.10) 0%, rgba(254, 0, 8, 0.10) 100%), #FFF;
+      
+      .toast-progress {
+        background-color: #FE0008;
+      }
+    }
+
+    &.toast-warning {
+      background: linear-gradient(0deg, rgba(255, 157, 89, 0.10) 0%, rgba(255, 157, 89, 0.10) 100%), #FFF;
+      .toast-progress {
+        background-color: #FF9D59;
+      }
+    }
+
+    &.toast-success {
+      background: linear-gradient(0deg, rgba(37, 187, 97, 0.10) 0%, rgba(37, 187, 97, 0.10) 100%), #FFF;
+      .toast-progress {
+        background-color: #25bb61;
+      }
+    }
+
+    .toast-title, .toast-message {
+      color: $app-black;
+      font: 500 $font-size-16px "Poppins", sans-serif;
+      line-height: normal;
+    }
+
+    .toast-message {
+      font-weight: normal;
+      margin-top: 1.75rem;
+    }
+  }
 }
 
 // Generic Styles Start
@@ -266,6 +316,15 @@ main {
   color: #656565;
 }
 
+.form-control-feedback {
+  p.validation-msg {
+    text-align: start;
+    color: #d9534f;
+    font-size: $font-size-12px;
+    margin-bottom: 0;
+  }
+}
+
 .form-group {
   margin-bottom: 20px;
 
@@ -296,13 +355,6 @@ main {
     }
   }
 
-  .form-control-feedback {
-    p.validation-msg {
-      color: #d9534f;
-      font-size: $font-size-12px;
-    }
-  }
-
   textarea {
     &.form-control {
       resize: none;
@@ -328,7 +380,6 @@ main {
 
 .form-terms {
   display: flex;
-  margin-bottom: 2rem;
 }
 
 .sm-primary-button {
@@ -366,6 +417,23 @@ main {
   color: #3e3ec8;
 }
 
+.commentary_download {
+  cursor: pointer;
+
+  span {
+    color: #6f6f6f;
+    font-size: $font-size-14px;
+    line-height: normal;
+    text-decoration-line: underline;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+}
+
 // Generic Styles End
 
 // Header Styles Start
@@ -374,8 +442,8 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: $app-white;
-  height: 84px;
-  padding: 0 2rem;
+  height: auto;
+  padding: 0.25rem 2rem;
 
   @media only screen and (min-width: 768px) {
     height: 123px;
@@ -486,7 +554,10 @@ main {
         color: rgba(0, 0, 0, 0.8);
         font: 600 $font-size-16px "Poppins", sans-serif;
         margin-left: 27px;
-        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 1rem;
+        }
 
         &.active {
           border-bottom: 3px solid $app-black;
@@ -526,6 +597,10 @@ main {
           padding: 1rem;
           line-height: normal;
 
+          @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+            padding: 0.125rem;
+          }
+
           @media only screen and (min-width: 1200px) {
             font-size: $font-size-19px;
             padding: 1.25rem 1rem;
@@ -542,13 +617,13 @@ main {
           }
         }
 
-        &:not(:nth-last-child(3)) {
+        &:not(:nth-last-child(4)) {
           @media only screen and (min-width: 1200px) {
             margin-right: 36px;
           }
         }
 
-        &:nth-last-child(-n + 2) {
+        &:nth-last-child(-n + 3) {
           @media only screen and (min-width: 1200px) {
             display: none;
           }
@@ -936,7 +1011,7 @@ main {
 
     .testimonial_img_con {
       overflow: hidden;
-      
+
       @media only screen and (max-width: 767px) {
         display: flex;
         justify-content: space-between;
@@ -958,6 +1033,7 @@ main {
         img {
           height: 140px;
         }
+
         div {
           margin-left: 2rem;
         }
@@ -1060,11 +1136,11 @@ main {
     width: $marquee-width;
     overflow: hidden;
     position: relative;
-    padding: 7rem 0;
+    padding: 3.5rem 0;
 
-    @media only screen and (min-width: 1200px) {
-      height: $marquee-height;
-    }
+    // @media only screen and (min-width: 1200px) {
+    //   height: $marquee-height;
+    // }
 
     @keyframes marqueeMobile {
       0% {
@@ -1072,9 +1148,7 @@ main {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-sm * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
       }
     }
 
@@ -1084,11 +1158,10 @@ main {
       }
 
       100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-md * $marquee-elements)
-        );
+        transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
       }
     }
+
     .marquee-content-title {
       color: #000;
       font-size: $font-size-24px;
@@ -1101,6 +1174,7 @@ main {
       display: flex;
       align-items: center;
       padding: 0;
+      margin-bottom: 0;
       animation: marqueeMobile 15s linear infinite;
 
       @media only screen and (min-width: 768px) {
@@ -1119,7 +1193,6 @@ main {
         @media only screen and (min-width: 768px) {
           width: $marquee-element-width-md;
         }
-
       }
     }
   }
@@ -1173,9 +1246,11 @@ main {
         .figure {
           .figure-img {
             margin-bottom: 1.25rem;
+
             @media only screen and (max-width: 767px) {
               width: 100%;
             }
+
             @media only screen and (min-width: 768px) {
               max-width: 100%;
             }
@@ -1280,7 +1355,8 @@ main {
       }
     }
 
-    ol, p {
+    ol,
+    p {
       color: #6f6f6f;
       font-size: $font-size-14px;
       line-height: 119.2%;
@@ -1480,7 +1556,7 @@ main {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      > span:not(span span) {
+      >span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -1506,6 +1582,7 @@ main {
         overflow-x: scroll;
         width: 85%;
         border-bottom: unset;
+
         &::-webkit-scrollbar {
           display: none;
         }
@@ -1955,7 +2032,7 @@ main {
 }
 
 .app_index {
-  padding-top: 6rem;
+  padding-top: 7.5rem;
 
   @media only screen and (min-width: 768px) {
     padding-top: 10rem;
@@ -1994,9 +2071,11 @@ main {
         background: #f5f5f5;
         border-radius: 20px;
         padding: 12px 16px;
+
         &.active {
           background: #d9d9d9;
         }
+
         .checkbox__label {
           display: inline-flex;
           align-items: center;
@@ -2007,16 +2086,19 @@ main {
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+
           input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
             height: 0;
             width: 0;
+
             &:checked {
               ~ {
                 .checkbox__checkmark {
                   background-color: #6d6d6d;
+
                   &::after {
                     opacity: 1;
                   }
@@ -2024,6 +2106,7 @@ main {
               }
             }
           }
+
           .checkbox__checkmark {
             position: absolute;
             left: 0;
@@ -2052,7 +2135,8 @@ main {
           .checkbox__content {
             font-size: 14px;
             font-weight: 600;
-            line-height: 119.2%; /* 16.688px */
+            line-height: 119.2%;
+            /* 16.688px */
           }
         }
       }
@@ -2072,14 +2156,17 @@ main {
         -3px 43px 12px 0px rgba(0, 0, 0, 0);
       padding: 1rem;
       z-index: 99;
+
       .chart_info_content {
         .chart_info_title {
           display: flex;
           align-items: center;
           font-size: 13px;
           font-weight: 600;
-          line-height: 119.2%; /* 15.496px */
+          line-height: 119.2%;
+          /* 15.496px */
           margin-bottom: 1rem;
+
           .btn-close {
             opacity: 1;
             margin-left: auto;
@@ -2105,11 +2192,13 @@ main {
         }
       }
     }
+
     @media only screen and (min-width: 768px) {
       .app_index_commentary_con {
         padding-bottom: 10rem;
       }
     }
+
     .app_index_commentary_con {
       background: #fafafa;
 
@@ -2189,23 +2278,6 @@ main {
                   line-height: normal;
                 }
               }
-
-              .commentary_download {
-                // cursor: pointer;
-
-                span {
-                  color: #6f6f6f;
-                  font-size: $font-size-14px;
-                  line-height: normal;
-                  text-decoration-line: underline;
-                  vertical-align: middle;
-                  margin-right: 0.5rem;
-
-                  &:hover {
-                    text-decoration-line: none;
-                  }
-                }
-              }
             }
           }
         }
@@ -2225,6 +2297,7 @@ main {
             font: 700 $font-size-20px "Alegreya Sans", sans-serif;
             line-height: normal;
             margin-bottom: 0;
+
             @media only screen and (min-width: 992px) {
               font-style: $font-size-18px;
               font-family: "Inter", sans-serif;
@@ -2252,6 +2325,7 @@ main {
               background: #ff5c00;
               animation: circleOne 1.5s infinite ease-out;
             }
+
             &.circle_two {
               background: #fff;
               animation: circleTwo 1.5s infinite ease-out;
@@ -2267,6 +2341,7 @@ main {
             font-size: $font-size-20px;
             font-family: "Alegreya Sans";
             line-height: 130%;
+
             @media only screen and (min-width: 992px) {
               font-size: 17px;
               font-family: "Inter", sans-serif;
@@ -2280,6 +2355,7 @@ main {
             font: 700 $font-size-20px "Alegreya Sans", sans-serif;
             line-height: 120%;
             margin-left: 5px;
+
             @media only screen and (min-width: 992px) {
               font-size: 17px;
               font-family: "Inter", sans-serif;
@@ -2296,9 +2372,11 @@ main {
 
             .member_details {
               color: $app-black;
+
               @media only screen and (min-width: 992px) {
                 color: #4a4a4a;
               }
+
               .member_name {
                 font: 600 $font-size-18px "Work Sans";
                 line-height: 120%;
@@ -2319,6 +2397,7 @@ main {
               font-size: $font-size-20px;
               font-family: "Alegreya Sans";
               line-height: 130%;
+
               @media only screen and (min-width: 992px) {
                 color: #4a4a4a;
                 font-size: 17px;
@@ -2572,7 +2651,6 @@ main {
       color: $app-black;
       font: 700 $font-size-24px "Poppins", sans-serif;
       line-height: 119.2%;
-      /* 28.608px */
     }
 
     .app_contact_sub_title {
@@ -2580,7 +2658,6 @@ main {
       font-size: $font-size-16px;
       font-weight: 600;
       line-height: 119.2%;
-      /* 19.072px */
     }
 
     p {
@@ -2645,7 +2722,6 @@ main {
       color: #25505c;
       font: 700 $font-size-32px "Poppins", sans-serif;
       line-height: 150%;
-      /* 48px */
       margin-bottom: 4rem;
 
       @media only screen and (max-width: 767px) {
@@ -2740,6 +2816,10 @@ main {
           margin-bottom: 0;
           margin-right: 2.5rem;
         }
+
+        @media only screen and (min-width: 991px) and (max-width: 1199px) {
+          margin-bottom: 3rem;
+        }
       }
 
       .app_secondary_btn {
@@ -2750,6 +2830,256 @@ main {
 }
 
 // Institution Login Page Styles End
+
+// Media Kit Page Styles Start
+.app_mediakit {
+  padding-top: 6rem;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 10rem;
+  }
+
+  .app_mediakit_banner {
+    background: #c4e2fd;
+    padding: 3.5rem 2rem;
+
+    @media only screen and (min-width: 768px) {
+      padding: 7rem 0;
+    }
+
+    .app_mediakit_title {
+      color: #194974;
+      font: 700 $font-size-28px "Poppins", sans-serif;
+      font-weight: 700;
+      line-height: 130.5%;
+      margin-bottom: 1rem;
+
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-36px;
+      }
+    }
+  }
+
+  .app_mediakit_body {
+    padding: 5rem 0;
+
+    .app_home_section_title {
+      color: #4a4a4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .app_home_section_caption {
+      color: #4a4a4a;
+      font-size: $font-size-18px;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: 767px) {
+        padding: unset;
+      }
+
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-22px;
+      }
+    }
+
+    .mediakit_body_events {
+      .mediakit_events_info {
+        margin-top: 4rem;
+
+        .mediakit_event_item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 0.6px solid #595959;
+          padding: 1.5rem 0;
+
+          &:first-of-type {
+            border-top: 0.6px solid #595959;
+          }
+
+          .mediakit_event_detail {
+            text-align: start;
+
+            @media only screen and (max-width: 767px) {
+              max-width: 65%;
+            }
+
+            .app_home_section_caption {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .mediakit_body_logos {
+      margin-top: 4rem;
+
+      .mediakit_logo_cards {
+        margin-top: 4.75rem;
+
+        .mediakit_card_box {
+          display: flex;
+          justify-content: center;
+          border-radius: 7px;
+          background: $app-white;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+          min-height: 206px;
+          max-height: 206px;
+          margin-top: 1.5rem;
+
+          @media only screen and (max-width: 480px) {
+            &:first-of-type {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .mediakit_gallery {
+      margin-top: 6.5rem;
+
+      @media only screen and (min-width: 1200px) {
+        margin-top: 11.5rem;
+      }
+
+      .gallery_container {
+        margin-top: 5rem;
+        text-align: start;
+
+        @media only screen and (min-width: 768px) {
+          margin-top: 7rem;
+        }
+
+        .col {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2.5rem;
+
+          .gallery-img {
+            margin-top: 1.5rem;
+            margin-bottom: 1.25rem;
+          }
+
+          .img-name {
+            color: #000;
+            font-size: $font-size-18px;
+            font-weight: 600;
+            line-height: normal;
+          }
+
+          .img-designation {
+            color: #7d7d7d;
+            font-size: $font-size-16px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .mediakit_other_info {
+      margin-top: 3.25rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-top: 7.25rem;
+      }
+    }
+  }
+}
+
+// Media Kit Page Styles End
+
+// Newsroom Page Styles Start
+.app_newsroom {
+  background: #f6f6f6;
+  padding-top: 7rem;
+  .app_roadmap_banner_section {
+    background: #d1f2e8;
+    position: relative;
+    .app_secondary_btn {
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-18px;
+      }
+    }
+    .app_roadmap_caption {
+      margin: 4rem auto 1.6rem;
+    }
+
+    .app_newsroom_subtitle {
+      color: #194974;
+      font-size: $font-size-16px;
+      line-height: normal;
+      // margin-bottom: 4rem;
+    }
+  }
+
+  .app_newsroom_gallery {
+    padding: 4.5rem 0 5.25rem;
+    .row {
+      .col {
+        margin-bottom: 3rem;
+        .news_img {
+          width: 100%;
+          max-width: 100%;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        .img_caption {
+          margin-top: 1rem;
+          .news_title {
+            font-family: "Poppins", sans-serif;
+          }
+          .news_title,
+          .news_detail {
+            color: $app-black;
+            font-size: $font-size-18px;
+            line-height: 28px;
+            margin-bottom: 0;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+
+  .app_roadmap_banner_overlap {
+    background: $app-white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+      padding: 3.5rem 2.75rem;
+    }
+    .banner_overlap_left {
+      .app_home_section_caption {
+        color: #4a4a4a;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        padding: unset;
+        @media only screen and (min-width: 1200px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .banner_left_subtitle {
+        color: #000;
+        font: 400 $font-size-16px "Poppins", sans-serif;
+        line-height: 120%;
+        margin-bottom: 0;
+        @media only screen and (min-width: 992px) {
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+// Newsroom Page Styles End
 
 // Modal Styles Start
 .modal {
@@ -2801,7 +3131,9 @@ main {
         }
       }
 
-      .success_text,.error_text,.error_text_dynamic {
+      .success_text,
+      .error_text,
+      .error_text_dynamic {
         color: #696969;
         font-size: $font-size-18px;
         line-height: normal;
@@ -2879,15 +3211,37 @@ main {
   align-items: center;
   text-align: center;
   background: #e3e3e3;
-  color: #5c5c5c;
-  height: 70px;
-  font-size: $font-size-16px;
+  height: auto;
+  padding: 0.25rem 2rem;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     height: 48px;
     padding: 0 7rem 0 3rem;
+  }
+  .app_footer_left {
+    margin-bottom: 1rem;
+    @media only screen and (min-width: 767px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .footer_copyrights {
+      color: #5c5c5c;
+      font-size: $font-size-16px;
+      @media only screen and (min-width: 767px) {
+        border-right: 1px solid #5c5c5c;
+        padding-right: 1.5rem;
+        margin-bottom: 0;
+      }
+    }
+    a:first-of-type {
+      margin-right: 1rem;
+      @media only screen and (min-width: 767px) {
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   .list-group-item {
@@ -2897,6 +3251,7 @@ main {
 
     a {
       color: #5c5c5c;
+      font-size: $font-size-16px;
       text-decoration: underline;
 
       &:hover {
@@ -2904,9 +3259,12 @@ main {
       }
     }
 
-    &:not(:last-of-type) {
-      border-right: 1px solid #d0d0d0;
-    }
+    // Enable below CSS only if there's one more child in the right side of footer
+    // &:first-child {
+    //   border-right: 1px solid #5c5c5c;
+    //   padding-right: 0.75rem;
+    //   margin-right: 0.75rem;
+    // }
   }
 }
 

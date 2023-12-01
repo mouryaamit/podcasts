@@ -34,10 +34,10 @@
           <span>lifeblood of the Indian economy – MSMEs.</span>
         </p>
         <p class="app_home_section_caption">
-          <span>Sumpoorn reflects – </span>
-          <span><strong>50K+</strong> MSMEs & Growing<span class="d-inline d-xl-none">,</span>&nbsp;</span>
+          <span>Sumpoorn reflects: </span>
+          <span><strong>50k+</strong> MSMEs & Growing<span class="d-inline d-xl-none">,</span>&nbsp;</span>
           <span><strong>92</strong> Industries<span class="d-inline d-xl-none">,</span>&nbsp;</span>
-          <span><strong>₹ 6LAKH+ Crores</strong> of MSME Annual Turnover </span>
+          <span><strong>₹ 6 Lakh+ Crores</strong> of MSME Annual Turnover </span>
         </p>
       </div>
     </div>
@@ -89,14 +89,14 @@
     </div>
   </div>
   <div class="row gx-0 justify-content-center app_home_minds_section">
-    <div class="col-sm-12 d-none d-md-flex justify-content-around overflow-hidden">
+    <div class="col-md-12 col-lg-10 col-xl-8 d-none d-md-flex justify-content-around overflow-hidden">
       <img src="assets/images/logo-jocata.svg" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
         data-aos-duration="1000" alt="Jocata Logo" />
       <img src="assets/images/logo-sidbi.svg" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
         data-aos-duration="1000" alt="SIDBI Logo" />
     </div>
     <!-- Separate Logos for Mobile -->
-    <div class="col-md-10 d-flex d-md-none justify-content-around">
+    <div class="col-10 d-flex d-md-none justify-content-between">
       <img src="assets/images/logo-jocata.png" class="img-fluid" data-aos="fade-right" data-aos-easing="linear"
         data-aos-duration="1000" alt="Jocata Logo" />
       <img src="assets/images/logo-sidbi.png" class="img-fluid" data-aos="fade-left" data-aos-easing="linear"
@@ -252,7 +252,7 @@
   </div>
   <div class="row gx-0 app_home_marquee">
     <div class="col-md-12">
-      <h6 class="marquee-content-title">Our Partners</h6>
+      <h6 class="app_home_section_title mb-0">Our Partners</h6>
       <ul class="marquee-content">
         <li *ngFor="let partner of partners">
           <!-- <h6 class="marquee-content-title">{{ partner.title }}</h6> -->
@@ -367,17 +367,22 @@
 
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="d-flex align-items-center mb-3">
+              <div class="d-flex align-items-center">
                 <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckbox">
                 <label for="agreeCheckbox" class="terms-label ps-2">
                   By submitting this request, I agree with the Jocata
                   <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                 </label>
               </div>
-
+              <div class="form-control-feedback" *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && 
+              (subscribeGroup.get('checkedTermsAndConditions')?.dirty 
+              || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
+                <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']" class="validation-msg">
+                  Please select checkbox</p>
+              </div>
               <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
               disabled>Register</button> -->
-              <button class="sm-primary-button" [disabled]="subscribeGroup.invalid"
+              <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid"
                 (click)="saveSubscription()">Register</button>
             </div>
           </div>

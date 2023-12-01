@@ -8,6 +8,9 @@ import { MethodologyComponent } from './methodology/methodology.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
 import { TouComponent } from './tou/tou.component';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
+import { MediaKitComponent } from './media-kit/media-kit.component';
+import { NewsroomComponent } from './newsroom/newsroom.component';
+import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 
 const routes: Routes = [
   {
@@ -55,6 +58,21 @@ const routes: Routes = [
     path: 'institution',
     component: InstitutionLoginComponent,
     title: `Comprehensive Portfolio Analytics for Informed Decision-Making`
+  },
+  {
+    path: 'mediakit',
+    component: MediaKitComponent,
+    title: `Unlocking Sumpoorn's Media Potential: Download Press Resources, Logos, and High-Res Executive Team Photos for Comprehensive Coverage`
+  },
+  {
+    path: 'newsroom',
+    component: NewsroomComponent,
+    title: `Jocata Sumpoorn: News, Updates, and Event Highlights | Download Press Releases and Launch Reports`
+  },
+  {
+    path: 'newsroom-events',
+    component: NewsroomEventsComponent,
+    title: `Jocata Sumpoorn Highlights: Unveiling India’s First MSME Economic Activity Index in Partnership with SIDBI`
   },
   { path: '**', 
     redirectTo: 'home',

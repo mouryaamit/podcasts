@@ -100,4 +100,22 @@ export class SumpoornApiService {
       );
     });
   }
+
+  downloadNewsroomReport(data) {
+    return new Promise((resolve, reject) => {
+      this.apiService.postApi(environment.swaraHost+"swara-sumpoorn/report/services/v1/get-news-room-report", data, null).then(
+        (resp: any) => {
+          if (resp && resp.statusCode == 200) {
+            resolve(resp);
+          }
+          else {
+            reject(this.apiService.commonStrings.http_error);
+          }
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
 }

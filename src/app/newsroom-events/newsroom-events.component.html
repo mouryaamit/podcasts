@@ -1,0 +1,55 @@
+<main class="app_roadmap app_newsroom">
+    <div class="row gx-0 app_roadmap_banner_section justify-content-center">
+        <div class="col-sm-12 col-md-10">
+            <a class="app_secondary_btn mb-5 mb-md-0" routerLink="/newsroom">
+                <img src="assets/icons/back.svg" />
+                <span class="ms-3">Go Back</span>
+            </a>
+            <h4 class="app_roadmap_title mb-0 text-center"> {{eventTitle}} </h4>
+            <p class="app_roadmap_caption text-center">
+                <ng-container *ngIf="getNavParam == 'showcase'; else launch">
+                    <span class="d-inline d-xxl-block">Jocata presented “Sumpoorn” India’s first MSME Economic Activity
+                        Index in </span>
+                    <span class="d-inline d-xxl-block">association with SIDBI at the Global Partnership for Financial
+                        Inclusion (GPFI) </span>
+                    <span class="d-inline d-xxl-block">meeting under the G20 Presidency at the Global SME Finance Forum,
+                        managed by </span>
+                    <span class="d-inline d-xxl-block">IFC (International Finance Corporation).</span>
+                </ng-container>
+                <ng-template #launch>
+                    <span class="d-inline d-xxl-block">Jocata launches “Sumpoorn” India’s first MSME Economic Activity
+                        Index
+                        in </span>
+                    <span class="d-inline d-xxl-block">association with SIDBI to further MSME development by enabling
+                        strategic action </span>
+                    <span class="d-inline d-xxl-block">and credit inclusion efforts.</span>
+                </ng-template>
+            </p>
+            <p class="app_newsroom_subtitle text-center"> {{eventDate}} </p>
+        </div>
+    </div>
+
+    <div class="row gx-0 app_newsroom_gallery justify-content-center">
+        <div class="col-10">
+            <div class="row row-cols-1 row-cols-lg-2" *ngIf="getNavParam == 'showcase'">
+                <div class="col" *ngFor="let event of events.showcaseEvent">
+                    <img [src]="event.imageURL" class="news_img" [alt]="event.title">
+                    <div class="img_caption">
+                        <p class="news_title fw-bold">{{ event.title }}</p>
+                        <p class="news_detail">{{ event.detail }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-lg-2" *ngIf="getNavParam == 'launch'">
+                <div class="col" *ngFor="let event of events.launchEvent">
+                    <img [src]="event.imageURL" class="news_img" [alt]="event.title">
+                    <div class="img_caption">
+                        <p class="news_title fw-bold">{{ event.title }}</p>
+                        <p class="news_detail">{{ event.detail }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

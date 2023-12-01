@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-roadmap',
@@ -16,6 +17,7 @@ export class RoadmapComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService : SumpoornApiService,
     private fb: FormBuilder,
+    private toastr: ToastrService,
   ) { 
     this.createForm();
   }
@@ -33,7 +35,7 @@ export class RoadmapComponent implements OnInit {
       company: [""],
       contactNumber: [""],
       industry: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
@@ -45,20 +47,39 @@ export class RoadmapComponent implements OnInit {
     this.subscribeGroup.get('company')?.setValidators([Validators.required]);
     this.subscribeGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.subscribeGroup.get('industry')?.setValidators([Validators.required]);
-    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
   saveSubscription(){
+    if (this.subscribeGroup.invalid) {
+      return;
+    }
+    
     let postData = this.subscribeGroup.getRawValue();
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
         this.subscribeGroup.reset();
-        $("#successModal").show();
-        $("#subscribeModal").hide();
+          this.toastr.success('You will receive monthly updates of the Jocata Sumpoorn Index.', "You've successfully subscribed", {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+        this.hideSubscribeModal();
       },
       (error) => {
         this.subscribeGroup.reset();
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', "", {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
         if(error && error.statusMessage){
           $(".error_text_dynamic").html(error.statusMessage);
           $(".error_text").hide();
@@ -67,8 +88,7 @@ export class RoadmapComponent implements OnInit {
           $(".error_text").show();
           $(".error_text_dynamic").hide();
         }
-          $("#errorsModal").show();
-          $("#subscribeModal").hide();
+          this.hideSubscribeModal();
       }
   );
     

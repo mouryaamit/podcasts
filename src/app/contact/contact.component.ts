@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -14,9 +15,10 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    public sumpoornApiService : SumpoornApiService,
+    public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
-  ) { 
+    private toastr: ToastrService,
+  ) {
     this.createForm();
   }
 
@@ -25,7 +27,7 @@ export class ContactComponent implements OnInit {
 
   }
 
-  createForm(){
+  createForm() {
     this.contactGroup = this.fb.group({
       firstName: [""],
       lastName: [""],
@@ -35,11 +37,11 @@ export class ContactComponent implements OnInit {
       contactNumber: [""],
       messageType: [""],
       message: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
-  addValidations(){
+  addValidations() {
     this.contactGroup.get('firstName')?.setValidators([Validators.required]);
     this.contactGroup.get('lastName')?.setValidators([Validators.required]);
     this.contactGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
@@ -48,33 +50,52 @@ export class ContactComponent implements OnInit {
     this.contactGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.contactGroup.get('messageType')?.setValidators([Validators.required]);
     this.contactGroup.get('message')?.setValidators([Validators.required]);
-    this.contactGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.contactGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
 
-  saveContact(){
+  saveContact() {
+    if (this.contactGroup.invalid) {
+      return;
+    }
+
     let postData = this.contactGroup.getRawValue();
 
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
         this.contactGroup.reset();
         this.contactGroup.patchValue({
-          "messageType":""
+          "messageType": ""
         })
-        $("#successModal").show();
+        this.toastr.success('Thank you for contacting us.', "", {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
       },
       (error) => {
         this.contactGroup.reset();
         this.contactGroup.patchValue({
-          "messageType":""
+          "messageType": ""
         })
-        $("#errorsModal").show();
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+
       }
-  );
-    
+    );
+
   }
 
-  hideSuccessModal(){
+  hideSuccessModal() {
     $("#successModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");

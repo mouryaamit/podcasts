@@ -12,11 +12,18 @@ import { RoadmapComponent } from './roadmap/roadmap.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { TouComponent } from './tou/tou.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InstitutionLoginComponent } from './institution-login/institution-login.component';
 import { InsightsChartComponent } from './index/insights-chart/insights-chart.component';
 import { ContextChartComponent } from './index/context-chart/context-chart.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MediaKitComponent } from './media-kit/media-kit.component';
+import { NewsroomComponent } from './newsroom/newsroom.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './services/loading.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,15 +39,35 @@ import { ReactiveFormsModule } from '@angular/forms';
     TouComponent,
     InstitutionLoginComponent,
     InsightsChartComponent,
-    ContextChartComponent
+    ContextChartComponent,
+    MediaKitComponent,
+    NewsroomComponent,
+    SpinnerComponent,
+    NewsroomEventsComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      maxOpened: 1,
+      iconClasses  : {
+        error: 'toast-error',
+        info: 'toast-info',
+        success: 'toast-success',
+        warning: 'toast-warning',
+      }
+    }
+
+    ),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

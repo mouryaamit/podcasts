@@ -27,7 +27,7 @@
         </div>
         <div class="col-sm-12 col-md-9">
             <div class="app_roadmap_chart_con">
-                <img src="assets/images/roadmap-chart.svg" class="img-fluid" alt="Jocata-Sumpoorn Sectoral Indices" />
+                <img src="assets/images/roadmap-sectoral-chart.svg" class="img-fluid py-3 p-md-4 px-xl-5" alt="Jocata-Sumpoorn Sectoral Indices" />
             </div>
             <p class="chart_caption"><span class="fw-600">Fig.-</span> Jocata-Sumpoorn Sectoral Indices</p>
         </div>
@@ -40,7 +40,35 @@
                 by
                 that GSTIN for the same month.</p>
         </div>
-        <div class="col-sm-12 col-md-10 col-lg-9 app_roadmap_indices">
+        <div class="col-12 col-md-9 mt-5">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <img src="assets/icons/map.svg" class="img-fluid pb-4 pb-md-0 pe-md-3"
+                    alt="Jocata Sumpoorn - Sectoral Indices" />
+                <h5 class="section_title mb-0">Jocata Sumpoorn - Geographic Cluster Indices</h5>
+            </div>
+            <p class="app_methodology_caption">
+                <span class="d-md-block">Region and industrial cluster-based indices based on </span>
+                <span class="d-md-block">location and industrial activity of the MSMEs.</span>
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-9">
+            <div class="app_roadmap_chart_con">
+                <img src="assets/images/roadmap-geographical-chart.svg" class="img-fluid py-3 p-md-4 px-xl-5" alt="Jocata-Sumpoorn Geographical Indices" />
+            </div>
+            <p class="chart_caption"><span class="fw-600">Fig.-</span> Jocata-Sumpoorn Geographical Indices</p>
+        </div>
+        <div class="col-12 my-5 pb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <img src="assets/icons/active-activity.svg" class="img-fluid pb-4 pb-md-0 pe-md-3"
+                    alt="Jocata Sumpoorn - Sectoral Indices" />
+                <h5 class="section_title mb-0">Jocata Sumpoorn - Activity Indices</h5>
+            </div>
+            <p class="app_methodology_caption">
+                <span class="d-md-block">Manufacturing, Trading and Service indices based </span>
+                <span class="d-md-block">on the core business activity of the MSMEs.</span>
+            </p>
+        </div>
+        <!-- <div class="col-sm-12 col-md-10 col-lg-9 app_roadmap_indices">
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col">
                     <img src="assets/icons/active-activity.svg" class="img-fluid" alt="Activity Indices" />
@@ -48,8 +76,8 @@
                             Sumpoorn</span><br />Activity
                         Indices</h5>
                     <p class="app_methodology_caption">
-                        <span>Manufacturing, Trading and Service indices based </span>
-                        <span>on the core business activity of the MSMEs.</span>
+                        <span class="d-inline d-xxl-block">Manufacturing, Trading and Service indices based </span>
+                        <span class="d-inline d-xxl-block">on the core business activity of the MSMEs.</span>
                     </p>
                 </div>
                 <div class="col">
@@ -58,12 +86,12 @@
                             Sumpoorn</span><br />Geographic
                         Cluster Indices</h5>
                     <p class="app_methodology_caption">
-                        <span>Region and industrial cluster-based indices based on </span>
-                        <span>location and industrial activity of the MSMEs.</span>
+                        <span class="d-inline d-xxl-block">Region and industrial cluster-based indices based on </span>
+                        <span class="d-inline d-xxl-block">location and industrial activity of the MSMEs.</span>
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="col-md-12 app_home_subscribe">
             <p>Be the first to know these updates</p>
             <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
@@ -182,22 +210,21 @@
 
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                            <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center">
                                 <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckbox">
-                                <div class="form-control-feedback"
-                                    *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && (subscribeGroup.get('checkedTermsAndConditions')?.dirty || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
-                                    <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
-                                        class="validation-msg">Please Select Checkbox</p>
-                                </div>
                                 <label for="agreeCheckbox" class="terms-label ps-2">
                                     By submitting this request, I agree with the Jocata
                                     <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
                                 </label>
                             </div>
-
+                            <div class="form-control-feedback"
+                                *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors && (subscribeGroup.get('checkedTermsAndConditions')?.dirty || subscribeGroup.get('checkedTermsAndConditions')?.touched)">
+                                <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                                    class="validation-msg">Please Select Checkbox</p>
+                            </div>
                             <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
                             disabled>Register</button> -->
-                            <button class="sm-primary-button" [disabled]="subscribeGroup.invalid"
+                            <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid"
                                 (click)="saveSubscription()">Register</button>
                         </div>
                     </div>

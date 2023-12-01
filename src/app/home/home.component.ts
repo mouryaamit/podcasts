@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -47,9 +48,10 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    public sumpoornApiService : SumpoornApiService,
+    public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
-  ) { 
+    private toastr: ToastrService,
+  ) {
     this.createForm();
   }
 
@@ -57,7 +59,7 @@ export class HomeComponent implements OnInit {
     this.addValidations();
   }
 
-  createForm(){
+  createForm() {
     this.subscribeGroup = this.fb.group({
       firstName: [""],
       lastName: [""],
@@ -66,11 +68,11 @@ export class HomeComponent implements OnInit {
       company: [""],
       contactNumber: [""],
       industry: [""],
-      checkedTermsAndConditions: [""]
+      checkedTermsAndConditions: [false]
     })
   }
 
-  addValidations(){
+  addValidations() {
     this.subscribeGroup.get('firstName')?.setValidators([Validators.required]);
     this.subscribeGroup.get('lastName')?.setValidators([Validators.required]);
     this.subscribeGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
@@ -78,43 +80,62 @@ export class HomeComponent implements OnInit {
     this.subscribeGroup.get('company')?.setValidators([Validators.required]);
     this.subscribeGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     // this.subscribeGroup.get('industry')?.setValidators([Validators.required]);
-    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.required]);
+    this.subscribeGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }
 
-  saveSubscription(){
+  saveSubscription() {
+    if (this.subscribeGroup.invalid) {
+      return;
+    }
+
     let postData = this.subscribeGroup.getRawValue();
 
     this.sumpoornApiService.saveSubscriptionDetails(postData).then(
       (resp: any) => {
         this.subscribeGroup.reset();
-        $("#successModal").show();
-        $("#subscribeModal").hide();
+        this.toastr.success('You will receive monthly updates of the Jocata Sumpoorn Index.', "You've successfully subscribed", {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+        this.hideSubscribeModal();
       },
       (error) => {
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
         this.subscribeGroup.reset();
-          if(error && error.statusMessage){
-            $(".error_text_dynamic").html(error.statusMessage);
-            $(".error_text").hide();
-            $(".error_text_dynamic").show();
-          } else {
-            $(".error_text").show();
-            $(".error_text_dynamic").hide();            
-          }
-          $("#errorsModal").show();
-          $("#subscribeModal").hide();
+        if (error && error.statusMessage) {
+          $(".error_text_dynamic").html(error.statusMessage);
+          $(".error_text").hide();
+          $(".error_text_dynamic").show();
+        } else {
+          $(".error_text").show();
+          $(".error_text_dynamic").hide();
+        }
+        this.hideSubscribeModal();
+
       }
-  );
-    
+    );
+
   }
 
-  hideSuccessModal(){
+  hideSuccessModal() {
     $("#successModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
     $(document.body).removeAttr("style");
   }
 
-  hideSubscribeModal(){
+  hideSubscribeModal() {
     $("#subscribeModal").hide();
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");

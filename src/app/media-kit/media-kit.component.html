@@ -1,0 +1,79 @@
+<main class="app_mediakit text-center">
+    <div class="app_mediakit_banner">
+        <div class="row gx-0 justify-content-center">
+            <div class="col-sm-12 col-md-9 col-lg-7">
+                <h2 class="app_mediakit_title">Sumpoorn press media kit</h2>
+                <p class="app_methodology_caption blue-text">
+                    <span>Download our resources and marketing material for your reports/ </span>
+                    <span>publications</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="app_mediakit_body">
+        <div class="row gx-0 justify-content-center">
+            <div class="col-11 col-md-10">
+                <div class="mediakit_body_events">
+                    <h4 class="app_home_section_title">Presentations/documents</h4>
+                    <p class="app_home_section_caption">Below you can find the three most recent presentations and
+                        documents.</p>
+                    <div class="mediakit_events_info">
+                        <div class="mediakit_event_item" *ngFor="let event of eventsData">
+                            <div class="mediakit_event_detail">
+                                <p class="app_home_section_caption">{{ event.title }}</p>
+                                <p class="app_methodology_caption fw-600">{{ event.date }}</p>
+                            </div>
+                            <a class="commentary_download">
+                                <span>Download</span>
+                                <img src="assets/icons/download-icon.svg" class="img-fluid" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediakit_body_logos">
+                    <h4 class="app_home_section_title">Sumpoorn and SIDBI brand logo asset</h4>
+                    <p class="app_home_section_caption">High resolution vector image of Sumpoorn and SIDBI logos</p>
+                    <div class="container gx-0 mediakit_logo_cards">
+                        <div class="row row-cols-1 row-cols-md-2 gx-0 gx-md-5 justify-content-center">
+                            <div class="col-sm-12 col-md-5 text-start" *ngFor="let logo of logoData">
+                                <a class="commentary_download" (click)="downloadImage(logo.imageUrl, logo.name)">
+                                    <span>Download logo kit</span>
+                                    <img src="assets/icons/download-icon.svg" class="img-fluid" />
+                                </a>
+                                <div class="mediakit_card_box px-5">
+                                    <img [src]="logo.imageUrl" class="img-fluid" [alt]="logo.name + ' Logo'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediakit_gallery">
+                    <h4 class="app_home_section_title">Media gallery downloads</h4>
+                    <p class="app_home_section_caption">High resolutions pictures of executive team available for media
+                        related usage.</p>
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gallery_container">
+                        <div class="col" *ngFor="let item of galleryData">
+                            <a class="commentary_download" (click)="downloadImage(item.imageUrl, item.name)">
+                                <span>Download</span>
+                                <img src="assets/icons/download-icon.svg" class="img-fluid" />
+                            </a>
+                            <img [src]="item.imageUrl" class="gallery-img" [alt]="item.title" />
+                            <p class="img-name mb-2">{{ item.title }}</p>
+                            <p class="img-designation">{{ item.designation }}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mediakit_other_info">
+                    <h4 class="app_home_section_title">Looking for Something Else?</h4>
+                    <p class="app_home_section_caption">
+                        <span class="d-inline d-lg-block">Contact media@sumpoorn.com if you need a different logo
+                            version, </span>
+                        <span class="d-inline d-lg-block">including single-color logos or versions for print or for
+                            media queries</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
