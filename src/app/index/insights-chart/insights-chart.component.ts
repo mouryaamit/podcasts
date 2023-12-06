@@ -893,7 +893,7 @@ export class InsightsChartComponent implements OnInit {
                     d3.select(".ec_month_title_download")
                     .html(`${expertC.Month}`)
                     ;
-                if (expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
+                if (expertC.ExpertImageDetails && expertC.ExpertName && expertC.ExpertDetails) {
                     // commentary member details
                     d3.select('#commentary_mem_details_mobile')
                         .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
@@ -2095,7 +2095,7 @@ export class InsightsChartComponent implements OnInit {
                 d3.select(".ec_month_title")
                     .html(`${current_month} ${current_year}`)
                     ;
-                if (expertC.ExpertImageDetails != "" && expertC.ExpertName != "" && expertC.ExpertDetails != "") {
+                if (expertC.ExpertImageDetails && expertC.ExpertName && expertC.ExpertDetails) {
                     // commentary member details
                     d3.select('#commentary_mem_details')
                         .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />

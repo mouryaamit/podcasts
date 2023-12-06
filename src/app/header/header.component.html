@@ -11,7 +11,7 @@
         <img [src]="isInstitutionActive ? 'assets/icons/login-white.svg' : 'assets/icons/login-black.svg'" class="pe-3" alt="Institution Login Icon"/>
         <span>Institution Login</span>
       </a>
-      <!-- <a routerLink="newsroom" routerLinkActive="active" class="header_page_link">Newsroom</a> -->
+      <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
       <a routerLink="contact" routerLinkActive="active" class="header_page_link">Contact</a>
     </div>
     <ul class="nav nav-underline" [class.responsive_menu]="isResponsive">
@@ -33,9 +33,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="contact">Contact</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="newsroom">Newsroom</a>
-      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="newsroom" [class.active]="isNewsroomEventsActive">Newsroom</a>
+      </li>
       <li class="nav-item">
         <a class="header_cta" routerLinkActive="active" routerLink="institution">
           <img [src]="isInstitutionActive ? 'assets/icons/login-white.svg' : 'assets/icons/login-black.svg'" class="pe-3" alt="Institution Login Icon"/>
