@@ -26,6 +26,9 @@ import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubscribeModelComponent } from './dialog/subscribe-model/subscribe-model.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
+import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     NewsroomComponent,
     SpinnerComponent,
     NewsroomEventsComponent,
-    SubscribeModelComponent
+    SubscribeModelComponent,
+    InstitutionLoginModelComponent,
+    RoadmapModelComponent
+  ],
+  entryComponents:[
+    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
+  ],
+  exports: [
+    
   ],
   imports: [
     HttpClientModule,

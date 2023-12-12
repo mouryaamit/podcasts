@@ -48,26 +48,26 @@
             <img src="assets/images/index-insights.png" class="img-fluid me-0 mb-5 mb-lg-0 me-lg-5" />
             <div class="app_login_details text-center text-md-start">
                 <p class="app_home_section_title">Index + Insights for your Bank</p>
-                <a class="app_primary_btn" data-bs-toggle="modal" data-bs-target="#scheduleDemo">Schedule a Demo</a>
-                <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login to SWARA</a>
+                <a class="app_primary_btn" data-bs-toggle="modal" (click)="openDialog('scheduleDemo')">Schedule a Demo</a>
+                <a class="app_secondary_btn" data-bs-toggle="modal" (click)="openDialog('loginModal')">Login to SWARA</a>
             </div>
         </div>
     </div>
 </main>
 
 <!-- Schedule Demo Popup -->
-<div class="modal fade" id="scheduleDemo">
+<!-- <div class="modal fade" id="scheduleDemo">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content"> -->
 
             <!-- Modal Header -->
-            <div class="modal-header">
+            <!-- <div class="modal-header">
                 <h4 class="modal-title">Schedule a Demo</h4>
                 <button type="button" class="btn-close" (click)="hideScheduleDemoModal()"></button>
-            </div>
+            </div> -->
 
             <!-- Modal body -->
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <div class="complete_form_text">Complete the form to schedule a demo.</div>
                 <div class="required_text"><span>*</span> Required Fields</div>
                 <form [formGroup]="scheduleDemoGroup">
@@ -166,17 +166,15 @@
                                 <p *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors?.['required']"
                                     class="validation-msg">Please select checkbox</p>
                             </div>
-                            <!-- <button class="sm-primary-button" data-bs-toggle="modal"
-                            data-bs-target="#successModal" disabled>Register</button> -->
                             <button class="sm-primary-button mt-3" [disabled]="scheduleDemoGroup.invalid"
                                 (click)="saveScheduleDemoForm()">Request Demo</button>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div>
     </div>
-</div>
+</div> -->
 
 <!-- Success Modal -->
 <div class="modal" id="successModal">
@@ -200,18 +198,18 @@
 </div>
 
 <!-- Login Popup -->
-<div class="modal fade" id="loginModal">
+<!-- <div class="modal fade" id="loginModal">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content"> -->
 
             <!-- Modal Header -->
-            <div class="modal-header">
+            <!-- <div class="modal-header">
                 <h4 class="modal-title">Login</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+            </div> -->
 
             <!-- Modal body -->
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <div class="complete_form_text">Enter your Institution ID to proceed login.</div>
                 <div class="required_text"><span>*</span> Required Fields</div>
                 <form [formGroup]="swaraLoginGroup">
@@ -245,13 +243,12 @@
                                 <p *ngIf="swaraLoginGroup.get('checkedTnCSwara')?.errors?.['required']"
                                     class="validation-msg">Please select checkbox</p>
                             </div>
-                            <!-- <button class="sm-primary-button" data-bs-toggle="modal" disabled>Submit</button> -->
                             <button class="sm-primary-button mt-3" [disabled]="swaraLoginGroup.invalid"
                                 (click)="saveSwaraLoginForm()">Submit</button>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div>
     </div>
-</div>
+</div> -->

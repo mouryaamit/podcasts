@@ -149,11 +149,11 @@ export class HomeComponent implements OnInit {
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(SubscribeModelComponent, {
+      disableClose: true,
+      width: '30vw',
       data: {
         data: { mobileNumber: '' },
       },
-      disableClose: true,
-      width: '500px',
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {

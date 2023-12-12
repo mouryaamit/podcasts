@@ -1,15 +1,14 @@
-<div class="modal fade" id="subscribeModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Subscribe</h4>
-          <button type="button" class="btn-close" (click)="hideSubscribeModal()"></button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
+<div class="jo-generic-styles-wrapper">
+  <div class="jo-right-main-content jo-full-width">
+    <div class="popover-header jo-sectional-heading characteristic-dialog-heading">
+      <h2>Subscribe</h2>
+      <span>
+        <a class="modal-close-icon" (click)="hideSubscribeModal()">
+          <i class="material-icons md-24 md-dark">close</i>
+        </a>
+      </span>
+    </div>
+        <div>
           <div class="complete_form_text">Complete the form to subscribe.</div>
           <div class="required_text"><span>*</span> Required Fields</div>
           <form [formGroup]="subscribeGroup">
@@ -122,6 +121,5 @@
             </div>
           </form>
         </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>

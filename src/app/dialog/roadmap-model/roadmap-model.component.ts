@@ -2,22 +2,28 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../../services/api.service';
 import { SumpoornApiService } from '../../services/sumpoorn-api.service';
+import * as CryptoJS from 'crypto-js';
 import * as $ from 'jquery';
 import { ToastrService } from 'ngx-toastr';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
 @Component({
-  selector: 'app-subscribe-model',
-  templateUrl: './subscribe-model.component.html',
-  styleUrls: ['./subscribe-model.component.scss']
-})
-export class SubscribeModelComponent implements OnInit {
-  subscribeGroup!: FormGroup;
-  constructor( private dialogRef: MatDialogRef<SubscribeModelComponent>,
+    selector: 'app-roadmap-model',
+    templateUrl: './roadmap-model.component.html',
+    styleUrls: ['./roadmap-model.component.scss']
+  })
+  export class RoadmapModelComponent implements OnInit {
+    subscribeGroup!: FormGroup;
+    roadmapType: any;
+
+  constructor( private dialogRef: MatDialogRef<RoadmapModelComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
-    private toastr: ToastrService,) { this.createForm()
+    private dialog: MatDialog,
+    private toastr: ToastrService,) { this.createForm();
+        this.roadmapType = this.data.type;
     }
 
   ngOnInit(): void {
@@ -63,7 +69,6 @@ export class SubscribeModelComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        
       },
       (error) => {
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
@@ -77,10 +82,10 @@ export class SubscribeModelComponent implements OnInit {
         this.subscribeGroup.reset();
       }
     );
-    this.hideSubscribeModal();
+    this.closeModal();
   }
-
-  hideSubscribeModal(){
-    this.dialogRef.close('close');
+   closeModal(){
+        this.dialogRef.close('close');
+    }
+   
   }
-}

@@ -20,8 +20,8 @@
             </div>
             <p class="app_methodology_caption">
                 <span class="d-md-block">The sectoral indices will offer insights into how different sectors, as </span>
-                <span class="d-md-block">classified under GST by the <a data-bs-toggle="modal"
-                        data-bs-target="#HSNModal"><u>Harmonized System of Nomenclature (HSN)</u></a>, </span>
+                <span class="d-md-block">classified under GST by the <a
+                        (click)="openDialog('HSNModal')"><u>Harmonized System of Nomenclature (HSN)</u></a>, </span>
                 <span class="d-md-block">are performing as compared to the overall MSME sector.</span>
             </p>
         </div>
@@ -94,24 +94,24 @@
         </div> -->
         <div class="col-md-12 app_home_subscribe">
             <p>Be the first to know these updates</p>
-            <a class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+            <a class="app_secondary_btn" (click)="openDialog('subscribeModal')">Subscribe</a>
         </div>
     </div>
 </main>
 
 <!-- Subscribe Modal popup -->
-<div class="modal fade" id="subscribeModal">
+<!-- <div class="modal fade" id="subscribeModal">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content"> -->
 
             <!-- Modal Header -->
-            <div class="modal-header">
+            <!-- <div class="modal-header">
                 <h4 class="modal-title">Subscribe</h4>
                 <button type="button" class="btn-close" (click)="hideSubscribeModal()"></button>
-            </div>
+            </div> -->
 
             <!-- Modal body -->
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <div class="complete_form_text">Complete the form to subscribe.</div>
                 <div class="required_text"><span>*</span> Required Fields</div>
                 <form [formGroup]="subscribeGroup">
@@ -198,8 +198,6 @@
                                     autocomplete="off">
                                 <div class="form-control-feedback"
                                     *ngIf="subscribeGroup.get('contactNumber')?.errors && (subscribeGroup.get('contactNumber')?.dirty || subscribeGroup.get('contactNumber')?.touched)">
-                                    <!-- <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['required']" class="validation-msg">Email
-                    Required</p> -->
                                     <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']"
                                         class="validation-msg">Mobile Number Is Invalid</p>
                                 </div>
@@ -222,17 +220,15 @@
                                 <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
                                     class="validation-msg">Please Select Checkbox</p>
                             </div>
-                            <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
-                            disabled>Register</button> -->
                             <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid"
                                 (click)="saveSubscription()">Register</button>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div>
     </div>
-</div>
+</div> -->
 
 <!-- Success Modal -->
 <div class="modal" id="successModal">
@@ -256,7 +252,7 @@
 </div>
 
 <!-- HSN Modal -->
-<div class="modal fade" id="HSNModal" tabindex="-1" aria-labelledby="HSNModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="HSNModal" tabindex="-1" aria-labelledby="HSNModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered roadmap_hsn_modal">
         <div class="modal-content">
             <div class="row">
@@ -264,29 +260,8 @@
                         src="assets/icons/close.svg" alt="close" /></a>
             </div>
             <div class="modal-body">
-                <div class="row justify-content-start">
-                    <div class="col-md-7">
-                        <h5 class="hsn_modal_title">What is HSN?</h5>
-                        <p class="hsn_modal_caption">
-                            <span>Harmonized System of Nomenclature is a universally </span>
-                            <span>accepted uniform code to classify goods in a systematic </span>
-                            <span>way developed by World Customs Organization (WCO) </span>
-                            <span>and adopted in our GST regime.</span>
-                        </p>
-                        <p class="hsn_modal_caption">
-                            <span>Under the Indian GST system, there are 21 sections </span>
-                            <span>comprising 99 chapters divided into 1244 headings and </span>
-                            <span>5224 sub-headings.</span>
-                        </p>
-                        <p class="hsn_modal_caption"><a href="https://services.gst.gov.in/services/searchhsnsac"
-                                target="_blank">Here is a
-                                detailed list of HSNs</a></p>
-                    </div>
-                    <div class="col-md-5 mt-5 mt-md-0">
-                        <img src="assets/images/figure-hsn.svg" class="float-end img-fluid" alt="How to read HSN" />
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
-</div>
+</div> -->
