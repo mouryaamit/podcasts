@@ -43,10 +43,14 @@ a {
 .toast-container {
   .ngx-toastr {
     border-radius: 16px;
-    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.10), 0px 86px 86px 0px rgba(0, 0, 0, 0.09), 0px 194px 116px 0px rgba(0, 0, 0, 0.05), 0px 345px 138px 0px rgba(0, 0, 0, 0.01), 0px 539px 151px 0px rgba(0, 0, 0, 0.00);
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
+      0px 86px 86px 0px rgba(0, 0, 0, 0.09),
+      0px 194px 116px 0px rgba(0, 0, 0, 0.05),
+      0px 345px 138px 0px rgba(0, 0, 0, 0.01),
+      0px 539px 151px 0px rgba(0, 0, 0, 0);
     padding: 2rem;
     width: 90vw !important;
-    .toast-close-button{
+    .toast-close-button {
       color: black;
     }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -60,25 +64,41 @@ a {
       box-shadow: inherit;
     }
     &.toast-error {
-      background: linear-gradient(0deg, rgba(254, 0, 8, 0.10) 0%, rgba(254, 0, 8, 0.10) 100%), #FFF;
-      
+      background: linear-gradient(
+          0deg,
+          rgba(254, 0, 8, 0.1) 0%,
+          rgba(254, 0, 8, 0.1) 100%
+        ),
+        #fff;
+
       .toast-progress {
-        background-color: #FE0008;
+        background-color: #fe0008;
       }
     }
     &.toast-warning {
-      background: linear-gradient(0deg, rgba(255, 157, 89, 0.10) 0%, rgba(255, 157, 89, 0.10) 100%), #FFF;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 157, 89, 0.1) 0%,
+          rgba(255, 157, 89, 0.1) 100%
+        ),
+        #fff;
       .toast-progress {
-        background-color: #FF9D59;
+        background-color: #ff9d59;
       }
     }
     &.toast-success {
-      background: linear-gradient(0deg, rgba(37, 187, 97, 0.10) 0%, rgba(37, 187, 97, 0.10) 100%), #FFF;
+      background: linear-gradient(
+          0deg,
+          rgba(37, 187, 97, 0.1) 0%,
+          rgba(37, 187, 97, 0.1) 100%
+        ),
+        #fff;
       .toast-progress {
         background-color: #25bb61;
       }
     }
-    .toast-title, .toast-message {
+    .toast-title,
+    .toast-message {
       color: $app-black;
       font: 500 $font-size-16px "Poppins", sans-serif;
       line-height: normal;
@@ -363,192 +383,132 @@ a {
 }
 // Generic Styles End
 // Header Styles Start
-.app_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $app-white;
+.app_header_wrapper {
   height: auto;
-  padding: 0.25rem 2rem;
-  @media only screen and (min-width: 768px) {
-    height: 123px;
-    padding: 0 7rem 0 3rem;
-  }
-  .app_hamburger_icon {
+  .header_cta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.80);
+    border-radius: 32px;
+    padding: 3px 15px;
+    margin: 1rem;
+    font: 400 $font-size-14px "Poppins", sans-serif;
     @media only screen and (min-width: 1200px) {
-      display: none;
+      background-color: $app-white;
+      color: rgba(0, 0, 0, 0.80);
+      margin: unset;
+    }
+    &.active {
+      background: $app-black;
+      color: $app-white;
     }
   }
-  .app_header_hamburger {
-    width: 45px;
-    height: 45px;
-    position: relative;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    span {
-      display: block;
-      position: absolute;
-      height: 5px;
-      width: 100%;
-      background: #797979;
-      left: 0;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: 0.25s ease-in-out;
-      -moz-transition: 0.25s ease-in-out;
-      -o-transition: 0.25s ease-in-out;
-      transition: 0.25s ease-in-out;
-      &:nth-child(1) {
-        top: 0px;
-      }
-      &:nth-child(2),
-      &:nth-child(3) {
-        top: 18px;
-      }
-      &:nth-child(4) {
-        top: 36px;
-      }
-    }
-    &.open {
-      span {
-        &:nth-child(1) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
-        &:nth-child(2) {
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
-        &:nth-child(3) {
-          -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-        }
-        &:nth-child(4) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
-      }
-    }
-    @media only screen and (min-width: 1200px) {
-      display: none;
-    }
-  }
-  .app_header_left {
-    @media only screen and (max-width: 480px) {
-      max-width: 60vw;
-    }
-  }
-  .app_header_right {
+  .app_header_strip {
+    background: #5b5959;
     display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    .header_links {
-      align-self: flex-end;
-      margin-bottom: 0.75rem;
-      .header_page_link {
-        color: rgba(0, 0, 0, 0.8);
-        font: 600 $font-size-16px "Poppins", sans-serif;
-        margin-left: 27px;
-        &:last-child {
-          margin-right: 1rem;
-        }
-        &.active {
-          border-bottom: 3px solid $app-black;
-        }
+    justify-content: flex-end;
+    align-items: center;
+    height: 44px;
+    padding-right: 8rem;
+    .header_page_link {
+      color: $app-white;
+      font: 600 $font-size-14px "Poppins", sans-serif;
+      margin-left: 27px;
+      &.active {
+        border-bottom: 3px solid $app-white;
       }
       @media only screen and (max-width: 1199px) {
         display: none;
       }
     }
-    .header_cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.1);
-      color: rgba(0, 0, 0, 0.8);
-      border-radius: 32px;
-      padding: 3px 15px;
-      font: 400 $font-size-16px "Poppins", sans-serif;
-      @media only screen and (max-width: 1199px) {
-        margin: 1rem;
-      }
-      &.active {
-        background: $app-black;
-        color: $app-white;
+    @media only screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+  .app_header_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $app-white;
+    height: auto;
+    padding: 0.25rem 2rem;
+    @media only screen and (min-width: 768px) {
+      padding: 0.25rem 7rem 0 3rem;
+    }
+    .app_hamburger_icon {
+      @media only screen and (min-width: 1200px) {
+        display: none;
       }
     }
-    .nav-underline {
-      .nav-item {
-        .nav-link {
-          color: $app-black;
-          font: 500 $font-size-16px "Poppins", sans-serif;
-          padding: 1rem;
-          line-height: normal;
-          @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-            padding: 0.125rem;
-          }
-          @media only screen and (min-width: 1200px) {
-            font-size: $font-size-19px;
-            padding: 1.25rem 1rem;
-          }
-          &.active {
-            background-color: #efefef;
-            font-weight: 600;
+    .app_header_left {
+      @media only screen and (max-width: 480px) {
+        max-width: 60vw;
+      }
+    }
+    .app_header_right {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      .nav-underline {
+        .nav-item {
+          .nav-link {
+            color: $app-black;
+            font: 500 $font-size-16px "Poppins", sans-serif;
+            padding: 1rem;
+            line-height: normal;
+            @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+              padding: 0.125rem;
+            }
             @media only screen and (min-width: 1200px) {
-              background-color: transparent;
-              border-bottom: 3px solid $app-black;
+              font-size: $font-size-19px;
+              padding: 1.25rem 1rem;
+            }
+            &.active {
+              background-color: #efefef;
+              font-weight: 600;
+              @media only screen and (min-width: 1200px) {
+                background-color: transparent;
+                border-bottom: 3px solid $app-black;
+              }
+            }
+          }
+          &:not(:nth-last-child(4)) {
+            @media only screen and (min-width: 1200px) {
+              margin-right: 36px;
+            }
+          }
+          &:nth-last-child(-n + 3) {
+            @media only screen and (min-width: 1200px) {
+              display: none;
             }
           }
         }
-        &:not(:nth-last-child(4)) {
-          @media only screen and (min-width: 1200px) {
-            margin-right: 36px;
-          }
+        @media only screen and (max-width: 1199px) {
+          display: none;
         }
-        &:nth-last-child(-n + 3) {
-          @media only screen and (min-width: 1200px) {
-            display: none;
-          }
+        &.responsive_menu {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          background-color: $app-white;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          z-index: 1000;
+          width: 100%;
+          transition: all 0.3s ease;
         }
-      }
-      @media only screen and (max-width: 1199px) {
-        display: none;
-      }
-      &.responsive_menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-color: $app-white;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        z-index: 1000;
-        width: 100%;
-        transition: all 0.3s ease;
       }
     }
   }
-}
-.app_header_shadow {
-  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
-    0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
-    0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
+  &.app_header_shadow {
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
+      0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+      0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
+  }
 }
 // Header Styles End
 // Home Page Styles Start
@@ -944,7 +904,9 @@ a {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
+        transform: translateX(
+          calc(-1 * $marquee-element-width-sm * $marquee-elements)
+        );
       }
     }
     @keyframes marqueeWeb {
@@ -952,7 +914,9 @@ a {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
+        transform: translateX(
+          calc(-1 * $marquee-element-width-md * $marquee-elements)
+        );
       }
     }
     .marquee-content-title {
@@ -1266,7 +1230,7 @@ a {
       line-height: 130.5%;
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
-      >span:not(span span) {
+      > span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -1661,7 +1625,7 @@ a {
 .app_index {
   padding-top: 7.5rem;
   @media only screen and (min-width: 768px) {
-    padding-top: 10rem;
+    padding-top: 11rem;
   }
   .app_index_chart_con {
     .nav-pills-static-text {
@@ -2227,7 +2191,7 @@ a {
 // Institution Login Page Styles Start
 .app_institution {
   @media only screen and (min-width: 768px) {
-    padding-top: 9.5rem;
+    padding-top: 6.5rem;
   }
   .app_institution_cards_section {
     background: #c4e2fd;
@@ -2520,7 +2484,7 @@ a {
       .app_home_section_caption {
         color: #4a4a4a;
         font-weight: 600;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 1.5rem;
         padding: unset;
         @media only screen and (min-width: 1200px) {
