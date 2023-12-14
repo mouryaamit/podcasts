@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   appHeaderShadow = false;
   isResponsive = false;
   isInstitutionActive: boolean = false;
+  isNewsroomEventsActive: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -21,10 +22,11 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle('no-scroll');
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
+      const currentUrl = this.router.url;
       // Automatically close the responsive menu on navigation
       if (event instanceof NavigationEnd && this.isResponsive) {
         this.isResponsive = false;
@@ -33,7 +35,12 @@ export class HeaderComponent implements OnInit {
 
       // Check if institution login is active
       if (event instanceof NavigationEnd) {
-        this.isInstitutionActive = this.router.isActive('institution', true);
+        this.isInstitutionActive = currentUrl.includes('/institution');
+      }
+
+      // Check if Newsroom events is active
+      if (event instanceof NavigationEnd) {
+        this.isNewsroomEventsActive = currentUrl.includes('/newsroom') || currentUrl.includes('/newsroom-events');
       }
     });
   }
