@@ -1,12 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/variables.scss";
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // border: 1px solid red;
 }
 
 html {
@@ -49,6 +47,10 @@ a {
 
 .fw-600 {
   font-weight: 600 !important;
+}
+
+.fixed-top {
+  z-index: 999;
 }
 
 //toaster css
@@ -3139,6 +3141,11 @@ a {
       }
       .btn-close {
         opacity: 1;
+        &:focus,
+        &.active {
+          outline: none;
+          box-shadow: none;
+        }
       }
     }
 
