@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as CryptoJS from 'crypto-js';
 import * as $ from 'jquery';
 import { ToastrService } from 'ngx-toastr';
+import { MatDialog } from '@angular/material/dialog';
+import { InstitutionLoginModelComponent } from '../dialog/institution-login-model/institution-login-model.component';
 
 @Component({
   selector: 'app-institution-login',
@@ -21,7 +23,8 @@ export class InstitutionLoginComponent implements OnInit {
     private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private dialog: MatDialog,
   ) {
     this.createForm1();
     this.createForm2();
@@ -89,6 +92,22 @@ export class InstitutionLoginComponent implements OnInit {
       }
     );
 
+  }
+
+  openDialog(string): void {
+    const dialogRef = this.dialog.open(InstitutionLoginModelComponent, {
+      disableClose: true,
+      panelClass: 'app_generic_modal',
+      data: {
+        data: { mobileNumber: '' },
+        type: string
+      },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+      } else {
+      }
+    });
   }
 
   hideSuccessModal() {

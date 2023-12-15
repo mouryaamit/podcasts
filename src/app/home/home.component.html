@@ -240,7 +240,7 @@
   <div class="row gx-0">
     <div class="col-md-12 app_home_subscribe">
       <p>For monthly Index updates</p>
-      <span class="app_secondary_btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</span>
+      <span class="app_secondary_btn" (click)="openDialog()">Subscribe</span>
     </div>
   </div>
   <div class="row gx-0 app_home_marquee">
@@ -257,18 +257,18 @@
 </main>
 
 <!-- Subscribe Modal popup -->
-<div class="modal fade" id="subscribeModal">
+<!-- <div class="modal fade" id="subscribeModal">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content"> -->
 
       <!-- Modal Header -->
-      <div class="modal-header">
+      <!-- <div class="modal-header">
         <h4 class="modal-title">Subscribe</h4>
         <button type="button" class="btn-close" (click)="hideSubscribeModal()"></button>
-      </div>
+      </div> -->
 
       <!-- Modal body -->
-      <div class="modal-body">
+      <!-- <div class="modal-body">
         <div class="complete_form_text">Complete the form to subscribe.</div>
         <div class="required_text"><span>*</span> Required Fields</div>
         <form [formGroup]="subscribeGroup">
@@ -348,8 +348,6 @@
                   id="contactNumber" name="Contact Number" placeholder="Contact Number">
                 <div class="form-control-feedback"
                   *ngIf="subscribeGroup.get('contactNumber')?.errors && (subscribeGroup.get('contactNumber')?.dirty || subscribeGroup.get('contactNumber')?.touched)">
-                  <!-- <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['required']" class="validation-msg">Email
-                    Required</p> -->
                   <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']" class="validation-msg">Mobile
                     Number Is Invalid</p>
                 </div>
@@ -373,17 +371,15 @@
                 <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']" class="validation-msg">
                   Please select checkbox</p>
               </div>
-              <!-- <button class="sm-primary-button" data-bs-toggle="modal" data-bs-target="#successModal"
-              disabled>Register</button> -->
               <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid"
                 (click)="saveSubscription()">Register</button>
             </div>
           </div>
         </form>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div>
   </div>
-</div>
+</div> -->
 
 <!-- Success Modal -->
 <div class="modal" id="successModal">

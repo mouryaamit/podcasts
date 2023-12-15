@@ -4,7 +4,12 @@ import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
 import { ToastrService } from 'ngx-toastr';
-
+import { SubscribeModelComponent } from '../dialog/subscribe-model/subscribe-model.component';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -51,6 +56,7 @@ export class HomeComponent implements OnInit {
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
     private toastr: ToastrService,
+    public dialog: MatDialog,
   ) {
     this.createForm();
   }
@@ -140,6 +146,20 @@ export class HomeComponent implements OnInit {
     $('.modal-backdrop').remove();
     $(document.body).removeClass("modal-open");
     $(document.body).removeAttr("style");
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(SubscribeModelComponent, {
+      disableClose: true,
+      panelClass: 'app_generic_modal',
+      data: {
+        data: { mobileNumber: '' },
+      },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+      } else {
+      }
+    });
   }
 
 }
