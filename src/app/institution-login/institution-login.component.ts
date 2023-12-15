@@ -97,7 +97,7 @@ export class InstitutionLoginComponent implements OnInit {
   openDialog(string): void {
     const dialogRef = this.dialog.open(InstitutionLoginModelComponent, {
       disableClose: true,
-      width: '30vw',
+      panelClass: 'app_generic_modal',
       data: {
         data: { mobileNumber: '' },
         type: string

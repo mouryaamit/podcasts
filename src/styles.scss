@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/variables.scss";
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 * {
   padding: 0;
@@ -55,12 +55,16 @@ a {
 .toast-container {
   .ngx-toastr {
     border-radius: 16px;
-    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.10), 0px 86px 86px 0px rgba(0, 0, 0, 0.09), 0px 194px 116px 0px rgba(0, 0, 0, 0.05), 0px 345px 138px 0px rgba(0, 0, 0, 0.01), 0px 539px 151px 0px rgba(0, 0, 0, 0.00);
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
+      0px 86px 86px 0px rgba(0, 0, 0, 0.09),
+      0px 194px 116px 0px rgba(0, 0, 0, 0.05),
+      0px 345px 138px 0px rgba(0, 0, 0, 0.01),
+      0px 539px 151px 0px rgba(0, 0, 0, 0);
     padding: 2rem;
     width: 90vw !important;
-.toast-close-button{
-  color: black;
-}
+    .toast-close-button {
+      color: black;
+    }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       width: 60vw !important;
     }
@@ -75,28 +79,44 @@ a {
     }
 
     &.toast-error {
-      background: linear-gradient(0deg, rgba(254, 0, 8, 0.10) 0%, rgba(254, 0, 8, 0.10) 100%), #FFF;
-      
+      background: linear-gradient(
+          0deg,
+          rgba(254, 0, 8, 0.1) 0%,
+          rgba(254, 0, 8, 0.1) 100%
+        ),
+        #fff;
+
       .toast-progress {
-        background-color: #FE0008;
+        background-color: #fe0008;
       }
     }
 
     &.toast-warning {
-      background: linear-gradient(0deg, rgba(255, 157, 89, 0.10) 0%, rgba(255, 157, 89, 0.10) 100%), #FFF;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 157, 89, 0.1) 0%,
+          rgba(255, 157, 89, 0.1) 100%
+        ),
+        #fff;
       .toast-progress {
-        background-color: #FF9D59;
+        background-color: #ff9d59;
       }
     }
 
     &.toast-success {
-      background: linear-gradient(0deg, rgba(37, 187, 97, 0.10) 0%, rgba(37, 187, 97, 0.10) 100%), #FFF;
+      background: linear-gradient(
+          0deg,
+          rgba(37, 187, 97, 0.1) 0%,
+          rgba(37, 187, 97, 0.1) 100%
+        ),
+        #fff;
       .toast-progress {
         background-color: #25bb61;
       }
     }
 
-    .toast-title, .toast-message {
+    .toast-title,
+    .toast-message {
       color: $app-black;
       font: 500 $font-size-16px "Poppins", sans-serif;
       line-height: normal;
@@ -1149,7 +1169,9 @@ a {
       }
 
       100% {
-        transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
+        transform: translateX(
+          calc(-1 * $marquee-element-width-sm * $marquee-elements)
+        );
       }
     }
 
@@ -1159,7 +1181,9 @@ a {
       }
 
       100% {
-        transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
+        transform: translateX(
+          calc(-1 * $marquee-element-width-md * $marquee-elements)
+        );
       }
     }
 
@@ -1557,7 +1581,7 @@ a {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      >span:not(span span) {
+      > span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -3083,8 +3107,19 @@ a {
 // Newsroom Page Styles End
 
 // Modal Styles Start
-.modal {
-  .modal-content {
+.app_generic_modal {
+  max-width: 95vw !important;
+  z-index: 1099 !important;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 60vw !important;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 35vw !important;
+  }
+
+  .mat-dialog-container {
     border-radius: 16px;
     background: #fff;
     box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
@@ -3093,18 +3128,15 @@ a {
       0px 345px 138px 0px rgba(0, 0, 0, 0.01),
       0px 539px 151px 0px rgba(0, 0, 0, 0);
     padding: 2rem;
-
     .modal-header {
       padding: unset;
       border-bottom: none;
-
       // padding: 3rem 1.25rem 1.25rem 3rem;
       .modal-title {
         color: $app-black;
         font: 700 $font-size-20px "Poppins", sans-serif;
         line-height: normal;
       }
-
       .btn-close {
         opacity: 1;
       }
@@ -3126,7 +3158,6 @@ a {
         font-size: $font-size-15px;
         line-height: normal;
         margin: 0.5rem 0 2.5rem;
-
         span {
           color: #932d2d;
         }
@@ -3146,7 +3177,6 @@ a {
           font-weight: 600;
           line-height: 119.2%;
         }
-
         p {
           color: #818181;
           font-size: $font-size-14px;
@@ -3155,47 +3185,51 @@ a {
       }
     }
   }
+}
 
-  .roadmap_hsn_modal {
-    max-width: 944px;
+.app_hsn_modal {
+  max-width: 95vw !important;
+  z-index: 1099 !important;
 
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-      margin-right: 2rem;
-      margin-left: 2rem;
-    }
+  @media only screen and (min-width: 768px) {
+    max-width: 90vw !important;
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: 70vw !important;
+  }
 
-    .modal-content {
-      box-shadow: none;
+  .mat-dialog-container {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
+      0px 86px 86px 0px rgba(0, 0, 0, 0.09),
+      0px 194px 116px 0px rgba(0, 0, 0, 0.05),
+      0px 345px 138px 0px rgba(0, 0, 0, 0.01),
+      0px 539px 151px 0px rgba(0, 0, 0, 0);
+    .modal-body {
+      padding: 10px 20px 44px;
+      @media only screen and (min-width: 768px) {
+        padding: 10px 60px 44px 44px;
+      }
 
-      .modal-body {
-        padding: 10px 20px 44px;
-
-        @media only screen and (min-width: 768px) {
-          padding: 10px 60px 44px 44px;
-        }
-
-        .hsn_modal_title {
-          color: #4a4a4a;
-          font: 600 22px "Poppins";
-          line-height: 120%;
-          margin-bottom: 2rem;
-        }
-
-        .hsn_modal_caption {
-          color: rgba(74, 74, 74, 0.92);
-          font-size: $font-size-16px;
-          line-height: normal;
-
-          span {
-            @media only screen and (min-width: 992px) {
-              display: block;
-            }
+      .hsn_modal_title {
+        color: #4a4a4a;
+        font: 600 22px "Poppins";
+        line-height: 120%;
+        margin-bottom: 2rem;
+      }
+      .hsn_modal_caption {
+        color: rgba(74, 74, 74, 0.92);
+        font-size: $font-size-16px;
+        line-height: normal;
+        span {
+          @media only screen and (min-width: 992px) {
+            display: block;
           }
-
-          a {
-            color: inherit;
-            text-decoration: underline;
-          }
+        }
+        a {
+          color: inherit;
+          text-decoration: underline;
         }
       }
     }
@@ -3279,5 +3313,3 @@ a {
     transform: none !important;
   }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

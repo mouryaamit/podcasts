@@ -150,7 +150,7 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(SubscribeModelComponent, {
       disableClose: true,
-      width: '30vw',
+      panelClass: 'app_generic_modal',
       data: {
         data: { mobileNumber: '' },
       },
