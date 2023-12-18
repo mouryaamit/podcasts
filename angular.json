@@ -50,8 +50,12 @@
                 "inject": true,
                 "bundleName": "lib-toastr"
               },
-              "src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+              {
+                "input": "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                "inject": true,
+                "bundleName": "lib-deeppurple"
+              },
+              "src/styles.scss"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.js"
