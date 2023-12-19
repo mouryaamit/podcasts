@@ -1,12 +1,12 @@
 <header class="fixed-top app_header_wrapper" [class.app_header_shadow]="appHeaderShadow">
   <div class="app_header_strip">
+    <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
+    <a routerLink="contact" routerLinkActive="active" class="header_page_link">Contact</a>
     <a routerLink="institution" routerLinkActive="active" class="header_cta">
-      <img [src]="isInstitutionActive ? 'assets/icons/login-white.svg' : 'assets/icons/login-black.svg'" class="pe-3"
+      <img [src]="isInstitutionActive ? 'assets/icons/login-white.svg' : 'assets/icons/login-black.svg'" class="pe-3" width="26" height="26"
         alt="Institution Login Icon" />
       <span>Institution Login</span>
     </a>
-    <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
-    <a routerLink="contact" routerLinkActive="active" class="header_page_link">Contact</a>
   </div>
   <div class="app_header_main">
     <div class="app_header_left">
