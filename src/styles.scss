@@ -1919,21 +1919,37 @@ a {
             background: #d2f3e1;
             border-radius: 8px;
             display: flex;
-            justify-content: start;
-            align-items: center;
-            overflow: hidden;
-            .member_details {
-              color: $app-black;
-              @media only screen and (min-width: 992px) {
-                color: #4a4a4a;
-              }
-              .member_name {
-                font: 600 $font-size-18px "Work Sans";
-                line-height: 120%;
-              }
-              .member_title {
-                font: 400 $font-size-14px "Work Sans";
-                line-height: 120%;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+            padding: 0 2rem;
+            @media only screen and (min-width: 768px) {
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            }
+            .expert_comm_mem, .expert_comm_mem_mobile {
+              display: flex;
+              align-items: center;
+              border: 1px solid #2fb36b;
+              border-radius: 10px;
+              margin: .75rem 0;
+              overflow: hidden;
+
+              .member_details {
+                color: $app-black;
+                max-width: 50%;
+                @media only screen and (min-width: 992px) {
+                  color: #4a4a4a;
+                }
+                .member_name {
+                  font: 600 $font-size-14px "Work Sans";
+                  line-height: 120%;
+                  margin-bottom: .25rem;
+                }
+                .member_title {
+                  font: 400 $font-size-12px "Work Sans";
+                  line-height: 120%;
+                }
               }
             }
           }
