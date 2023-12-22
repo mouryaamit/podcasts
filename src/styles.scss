@@ -1924,8 +1924,13 @@ a {
             padding: 0 2rem;
             @media only screen and (min-width: 768px) {
               flex-direction: row;
-              justify-content: space-between;
+              justify-content: space-around;
               align-items: center;
+              gap: 10px;
+              padding: 0;
+            }
+            @media only screen and (min-width: 992px) {
+              padding: 0 1rem;
             }
             .expert_comm_mem, .expert_comm_mem_mobile {
               display: flex;
