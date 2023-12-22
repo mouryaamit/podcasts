@@ -890,22 +890,44 @@ export class InsightsChartComponent implements OnInit {
                     .html(`${monthlyC.comment}`)
                     ;
 
-                    d3.select(".ec_month_title_download")
+                d3.select(".ec_month_title_download")
                     .html(`${expertC.Month}`)
                     ;
-                if (expertC.ExpertImageDetails && expertC.ExpertName && expertC.ExpertDetails) {
-                    // commentary member details
-                    d3.select('#commentary_mem_details_mobile')
-                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
-                        <div class="member_details">
-                        <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
-                        <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
-                        </div>`)
-                        .style("margin-bottom", "15px")
-                        ;
-                    d3.select("#ec_title_mobile")
-                        .html(`Expert Commentary`)
-                        ;
+                // expertC.AuthorDetails = [
+                //     {
+                //         "ExpertName": "Dr. Sumita Kale",
+                //         "ExpertDetails": "Principal Economist, Jocata",
+                //         "ExpertImageDetails": "commentor-sumita.png"
+                //     },
+                //     {
+                //         "ExpertName": "Mr. Narasimhan Venkatesan",
+                //         "ExpertDetails": "Principal Advisor, Jocata",
+                //         "ExpertImageDetails": "commentator-narasima.png"
+                //     }
+                // ];
+                if(expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
+                    d3.selectAll('.expert_comm_mem_mobile').remove();
+                    expertC.AuthorDetails.forEach((expertAD, i) => {
+                        if (expertAD.ExpertImageDetails && expertAD.ExpertName && expertAD.ExpertDetails) {
+                            // commentary member details
+                            d3.select('#commentary_mem_details_mobile')
+                                .style("margin-bottom", "15px")
+                                .append("div")
+                                .attr("class", "expert_comm_mem_mobile")
+                                .attr("id", `expert_comm_mem_mobile_${i}`)
+                                .style("margin-bottom", "15px");
+                            d3.select(`#expert_comm_mem_mobile_${i}`).html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
+                                <div class="member_details">
+                                <p class="member_name mb-0 ec_author">${expertAD.ExpertName}</p>
+                                <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails}</p>
+                                </div>`)
+                                .style("margin-bottom", "15px")
+                                ;
+                            d3.select("#ec_title_mobile")
+                                .html(`Expert Commentary`)
+                                ;
+                        }
+                    });
                 } else {
                     d3.select('#commentary_mem_details_mobile').html("").style("margin-bottom", "0px");
                     d3.select("#ec_title_mobile")
@@ -2095,19 +2117,40 @@ export class InsightsChartComponent implements OnInit {
                 d3.select(".ec_month_title")
                     .html(`${current_month} ${current_year}`)
                     ;
-                if (expertC.ExpertImageDetails && expertC.ExpertName && expertC.ExpertDetails) {
-                    // commentary member details
-                    d3.select('#commentary_mem_details')
-                        .html(`<img src="assets/images/${expertC.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
-                        <div class="member_details">
-                        <p class="member_name mb-0 ec_author">${expertC.ExpertName}</p>
-                        <p class="member_title mb-0 ec_author_designation">${expertC.ExpertDetails}</p>
-                        </div>`)
-                        .style("margin-bottom", "15px")
-                        ;
-                    d3.select(".ec_title")
-                        .html(`Expert Commentary`)
-                        ;
+                // expertC.AuthorDetails = [
+                //     {
+                //         "ExpertName": "Dr. Sumita Kale",
+                //         "ExpertDetails": "Principal Economist, Jocata",
+                //         "ExpertImageDetails": "commentor-sumita.png"
+                //     },
+                //     {
+                //         "ExpertName": "Mr. Narasimhan Venkatesan",
+                //         "ExpertDetails": "Principal Advisor, Jocata",
+                //         "ExpertImageDetails": "commentator-narasima.png"
+                //     }
+                // ];
+                if(expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
+                    d3.selectAll('.expert_comm_mem').remove();
+                    expertC.AuthorDetails.forEach((expertAD, i) => {
+                        if (expertAD.ExpertImageDetails && expertAD.ExpertName && expertAD.ExpertDetails) {
+                            // commentary member details
+                            d3.select('#commentary_mem_details')
+                                .style("margin-bottom", "15px")
+                                .append("div")
+                                .attr("class", "expert_comm_mem")
+                                .attr("id", `expert_comm_mem_${i}`)
+                                .style("margin-bottom", "15px");
+                            d3.select(`#expert_comm_mem_${i}`).html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid me-3" />
+                                <div class="member_details">
+                                <p class="member_name mb-0 ec_author">${expertAD.ExpertName}</p>
+                                <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails}</p>
+                                </div>`)
+                                ;
+                            d3.select(".ec_title")
+                                .html(`Expert Commentary`)
+                                ;
+                        }
+                    });
                 } else {
                     d3.select('#commentary_mem_details').html("").style("margin-bottom", "0px");
                     d3.select(".ec_title")
