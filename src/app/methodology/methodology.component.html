@@ -18,8 +18,8 @@
                         <button class="nav-link d-flex align-items-center" id="geographic-tab" data-bs-toggle="tab"
                             data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
                             aria-selected="true" [ngClass]="{ 'active': isGeoActive }" (click)="toggleIcons('geo')">
-                            <img src="assets/icons/active-geo.svg" alt="Active Geo Icon" *ngIf="isGeoActive" />
-                            <img src="assets/icons/inactive-geo.svg" alt="Inactive Geo Icon" *ngIf="!isGeoActive" />
+                            <img src="assets/icons/active-geo.svg" width="52" height="54" alt="Active Geo Icon" *ngIf="isGeoActive" />
+                            <img src="assets/icons/inactive-geo.svg" width="52" height="54" alt="Inactive Geo Icon" *ngIf="!isGeoActive" />
                             <span>Geographic<br />Distribution</span>
                         </button>
                     </li>
@@ -29,9 +29,9 @@
                             data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
                             aria-selected="false" [ngClass]="{ 'active': isTurnoverActive }"
                             (click)="toggleIcons('turnover')">
-                            <img src="assets/icons/active-turnover.svg" alt="Active Turnover Icon"
+                            <img src="assets/icons/active-turnover.svg" width="49" height="50" alt="Active Turnover Icon"
                                 *ngIf="isTurnoverActive" />
-                            <img src="assets/icons/inactive-turnover.svg" alt="Inactive Turnover Icon"
+                            <img src="assets/icons/inactive-turnover.svg" width="49" height="50" alt="Inactive Turnover Icon"
                                 *ngIf="!isTurnoverActive" />
                             <span>Turnover<br />Distribution</span>
                         </button>
@@ -42,8 +42,8 @@
                             data-bs-target="#tab-sector" type="button" role="tab" aria-controls="tab-sector"
                             aria-selected="false" [ngClass]="{ 'active': isSectorActive }"
                             (click)="toggleIcons('sector')">
-                            <img src="assets/icons/active-sector.svg" alt="Active Sector Icon" *ngIf="isSectorActive" />
-                            <img src="assets/icons/inactive-sector.svg" alt="Inactive Sector Icon"
+                            <img src="assets/icons/active-sector.svg" width="48" height="48" alt="Active Sector Icon" *ngIf="isSectorActive" />
+                            <img src="assets/icons/inactive-sector.svg" width="48" height="48" alt="Inactive Sector Icon"
                                 *ngIf="!isSectorActive" />
                             <span>Sector<br />Distribution</span>
                         </button>
@@ -54,9 +54,9 @@
                             data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
                             aria-selected="false" [ngClass]="{ 'active': isActivityActive }"
                             (click)="toggleIcons('activity')">
-                            <img src="assets/icons/active-activity.svg" alt="Active Activity Icon"
+                            <img src="assets/icons/active-activity.svg" width="48" height="48" alt="Active Activity Icon"
                                 *ngIf="isActivityActive" />
-                            <img src="assets/icons/inactive-activity.svg" alt="Inactive Activity Icon"
+                            <img src="assets/icons/inactive-activity.svg" width="48" height="48" alt="Inactive Activity Icon"
                                 *ngIf="!isActivityActive" />
                             <span>Activity<br />Distribution</span>
                         </button>
@@ -66,17 +66,17 @@
                 <div class="tab-content p-2 overflow-hidden mb-5" id="methodology-tabContent">
                     <div class="tab-pane fade show active" id="tab-geographic" role="tabpanel"
                         aria-labelledby="geographic-tab">
-                        <h5 class="section_title">Geographic Distribution of Sumpoorn MSMEs</h5>
+                        <p class="section_title">Geographic Distribution of Sumpoorn MSMEs</p>
                         <p class="app_methodology_caption">The sample is well-distributed across India ensuring
                             representativeness
                             of the Index.</p>
                         <div class="row justify-content-center">
                             <div class="col-10 col-md-8">
-                                <img src="assets/images/geo-map.webp" width="596" class="img-fluid mb-5"
+                                <img src="assets/images/geo-map.webp" width="596" height="663" class="img-fluid mb-5"
                                     id="fixedImage" alt="Geographic Distribution Map" />
                             </div>
                             <div class="col-10 col-md-3 app_methodology_state_cities">
-                                <h6>States & UTs</h6>
+                                <div class="state_list_title">States & UTs</div>
                                 <div class="accordion" id="accordionPanelsStayOpenExample">
                                     <div *ngFor="let state of stateCityData.states; let i = index"
                                         class="accordion-item">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-turnover" role="tabpanel" aria-labelledby="turnover-tab">
-                        <h5 class="section_title">Turnover Distribution of Sumpoorn MSMEs</h5>
+                        <p class="section_title">Turnover Distribution of Sumpoorn MSMEs</p>
                         <p class="app_methodology_caption">
                             <span>The sample is well-distributed as per turnover ensuring </span>
                             <span>representativeness and stability of the Index. </span>
@@ -158,8 +158,8 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-sector" role="tabpanel" aria-labelledby="sector-tab">
-                        <h5 class="section_title">Sector-wise Distribution by Value <br />(Top
-                            7 HSNs)</h5>
+                        <p class="section_title">Sector-wise Distribution by Value <br />(Top
+                            7 HSNs)</p>
                         <p class="app_methodology_caption">
                             <span>The sample is well-distributed across sectors as reflected by the Top
                                 7 HSN
@@ -182,8 +182,8 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
-                        <h5 class="section_title">Activity Distribution (Non-Services and Services)
-                        </h5>
+                        <p class="section_title">Activity Distribution (Non-Services and Services)
+                        </p>
                         <p class="app_methodology_caption">
                             <span>The split of GSTINs engaged in non-service (manufacturing +
                                 trading) </span>
@@ -209,7 +209,7 @@
     <div class="app_methodology_section">
         <div class="row gx-0 justify-content-center">
             <div class="col-sm-12 col-md-10 order-1 order-md-0">
-                <h5 class="section_title blue-text">Methodology</h5>
+                <p class="section_title blue-text">Methodology</p>
                 <p class="app_methodology_caption col-md-12 col-lg-9 mx-auto blue-text">
                     <span>Jocata Sumpoorn is a relative amplitude adjusted composite diffusion
                         index </span>
@@ -224,14 +224,14 @@
                         <div class="row row-cols-auto row-cols-md-5 ps-0">
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/cart.svg" class="img-fluid mb-5" alt="Cart Icon">
+                                    <img src="assets/icons/cart.svg" width="65" height="64" class="img-fluid mb-5" alt="Cart Icon">
                                     <p>Use GST Returns to calculate MSME <span class="fw-bold">TTM sales</span> for
                                         current month (TTMc) and previous month (TTMp). </p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/combine.svg" class="img-fluid mb-5" alt="Combine Icon">
+                                    <img src="assets/icons/combine.svg" width="65" height="64" class="img-fluid mb-5" alt="Combine Icon">
                                     <p>For each GSTIN, <span class="fw-bold">calculate delta of monthly sales on a YoY
                                             basis, represent relative to TTMp;</span> thereafter
                                         <span class="fw-bold">remove outliers</span>.
@@ -240,21 +240,21 @@
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/gap.svg" class="img-fluid mb-5" alt="Gap Icon">
+                                    <img src="assets/icons/gap.svg" width="65" height="64" class="img-fluid mb-5" alt="Gap Icon">
                                     <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs combined
                                             with their amplitude of sales.</span></p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/graph.svg" class="img-fluid mb-5" alt="Graph Icon">
+                                    <img src="assets/icons/graph.svg" width="65" height="64" class="img-fluid mb-5" alt="Graph Icon">
                                     <p>Compute the <span class="fw-bold">relative amplitude adjusted diffusion
                                             index</span>.</p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/resize.svg" class="img-fluid mb-5" alt="Resize Icon">
+                                    <img src="assets/icons/resize.svg" width="65" height="64" class="img-fluid mb-5" alt="Resize Icon">
                                     <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to
                                         1.</p>
                                 </div>
@@ -268,12 +268,12 @@
     <div class="app_consideration_section">
         <div class="row gx-0 justify-content-center">
             <div class="col-sm-12 col-md-10">
-                <h5 class="section_title blue-text">Considerations</h5>
+                <p class="section_title blue-text">Considerations</p>
                 <div class="app_consideration_cards mt-5">
                     <div class="container">
                         <div class="row row-cols-1 row-cols-md-3 gx-0 gx-md-5">
                             <div class="col">
-                                <h6>Data Source</h6>
+                                <div class="app_consideration_card_title">Data Source</div>
                                 <div class="app_consideration_card_box">
                                     <ul class="pl-2">
                                         <li>GSTIN is an authentic, reliable, and official source of MSME sales data.
@@ -286,7 +286,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <h6>Approach Rationale</h6>
+                                <div class="app_consideration_card_title">Approach Rationale</div>
                                 <div class="app_consideration_card_box">
                                     <ul class="pl-2">
                                         <li>Using count and amplitude overcomes shortcomings of a count-based diffusion
@@ -304,7 +304,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <h6>Data Length & Sample</h6>
+                                <div class="app_consideration_card_title">Data Length & Sample</div>
                                 <div class="app_consideration_card_box">
                                     <ul class="pl-2">
                                         <li>Minimum 13 months of sales data (GSTR1) is required to calculate the Index
@@ -327,15 +327,15 @@
     <div class="app_methodology_index_bin">
         <div class="row gx-0 justify-content-center">
             <div class="col-12">
-                <h5 class="section_title">Index Bin Ranges<br />
-                    and their Interpretation</h5>
+                <p class="section_title">Index Bin Ranges<br />
+                    and their Interpretation</p>
                 <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto">
                     <span>The Index measures MSME sales performance on a scale </span>
                     <span>of 0 to 1, where the bin ranges represent the state of </span>
                     <span>contraction or expansion of economic activity of the sector.</span>
                 </p>
                 <div class="meth_index_gif_con col-sm-12 col-md-9 col-lg-8 col-xl-5 mx-auto">
-                    <img src="assets/images/meth-range-chart.gif" class="img-fluid rounded-2" alt="Index Bin Ranges" />
+                    <img src="assets/images/meth-range-chart.avifs" class="img-fluid rounded-2" alt="Index Bin Ranges" />
                 </div>
             </div>
         </div>
@@ -343,8 +343,8 @@
     <div class="app_methodology_index_frequency">
         <div class="row gx-0 justify-content-center">
             <div class="col-md-12">
-                <img src="assets/images/calender.png" class="img-fluid" alt="Index Publishing Frequency" />
-                <h5 class="section_title blue-text">Index Publishing Frequency</h5>
+                <img src="assets/images/calender.webp" width="672" height="300" class="img-fluid" alt="Index Publishing Frequency" />
+                <p class="section_title blue-text">Index Publishing Frequency</p>
                 <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto blue-text">
                     <span>The Index will be released monthly with only a four-week </span>
                     <span>reporting cycle after the reference month ends (the Index for </span>

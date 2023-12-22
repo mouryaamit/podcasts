@@ -1146,6 +1146,9 @@ a {
     padding-top: 4rem;
     .app_methodology_caption {
       padding-top: 2rem;
+      u {
+        cursor: pointer;
+      }
     }
     .section_title,
     .app_methodology_caption {
@@ -1381,11 +1384,11 @@ a {
             }
           }
         }
-        h6 {
+        .state_list_title {
           position: sticky;
           top: -2px;
           background: $app-white;
-          z-index: 1;
+          z-index: 99;
           color: #000;
           font-size: 16.263px;
           font-weight: 700;
@@ -1528,7 +1531,7 @@ a {
             margin-bottom: 4.25rem;
           }
         }
-        h6 {
+        .app_consideration_card_title {
           color: #194974;
           font: 600 $font-size-18px "Poppins", sans-serif;
           line-height: 120%;
