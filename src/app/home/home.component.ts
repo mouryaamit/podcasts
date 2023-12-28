@@ -107,9 +107,10 @@ export class HomeComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.hideSubscribeModal();
+        // this.hideSubscribeModal();
       },
       (error) => {
+        this.subscribeGroup.reset();
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
           extendedTimeOut: 5000,
@@ -118,35 +119,36 @@ export class HomeComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.subscribeGroup.reset();
-        if (error && error.statusMessage) {
-          $(".error_text_dynamic").html(error.statusMessage);
-          $(".error_text").hide();
-          $(".error_text_dynamic").show();
-        } else {
-          $(".error_text").show();
-          $(".error_text_dynamic").hide();
-        }
-        this.hideSubscribeModal();
+
+        // if (error && error.statusMessage) {
+        //   $(".error_text_dynamic").html(error.statusMessage);
+        //   $(".error_text").hide();
+        //   $(".error_text_dynamic").show();
+        // } else {
+        //   $(".error_text").show();
+        //   $(".error_text_dynamic").hide();
+        // }
+        // this.hideSubscribeModal();
 
       }
     );
 
   }
 
-  hideSuccessModal() {
-    $("#successModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
+  // hideSuccessModal() {
+  //   $("#successModal").hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass("modal-open");
+  //   $(document.body).removeAttr("style");
+  // }
 
-  hideSubscribeModal() {
-    $("#subscribeModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
+  // hideSubscribeModal() {
+  //   $("#subscribeModal").hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass("modal-open");
+  //   $(document.body).removeAttr("style");
+  // }
+  
   openDialog(): void {
     const dialogRef = this.dialog.open(SubscribeModelComponent, {
       disableClose: true,

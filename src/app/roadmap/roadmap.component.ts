@@ -129,25 +129,26 @@ export class RoadmapComponent implements OnInit {
             closeButton: true,
           }
         );
-        if (error && error.statusMessage) {
-          $('.error_text_dynamic').html(error.statusMessage);
-          $('.error_text').hide();
-          $('.error_text_dynamic').show();
-        } else {
-          $('.error_text').show();
-          $('.error_text_dynamic').hide();
-        }
+
+        // if (error && error.statusMessage) {
+        //   $('.error_text_dynamic').html(error.statusMessage);
+        //   $('.error_text').hide();
+        //   $('.error_text_dynamic').show();
+        // } else {
+        //   $('.error_text').show();
+        //   $('.error_text_dynamic').hide();
+        // }
         // this.hideSubscribeModal();
       }
     );
   }
 
-  hideSuccessModal() {
-    $('#successModal').hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass('modal-open');
-    $(document.body).removeAttr('style');
-  }
+  // hideSuccessModal() {
+  //   $('#successModal').hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass('modal-open');
+  //   $(document.body).removeAttr('style');
+  // }
 
   // hideSubscribeModal(){
   //   $("#subscribeModal").hide();

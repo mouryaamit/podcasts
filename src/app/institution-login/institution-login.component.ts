@@ -76,9 +76,10 @@ export class InstitutionLoginComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.hideScheduleDemoModal();
+        // this.hideScheduleDemoModal();
       },
       (error) => {
+        this.scheduleDemoGroup.reset();
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
           extendedTimeOut: 5000,
@@ -87,8 +88,7 @@ export class InstitutionLoginComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.scheduleDemoGroup.reset();
-        this.hideScheduleDemoModal();
+        // this.hideScheduleDemoModal();
       }
     );
 
@@ -110,18 +110,19 @@ export class InstitutionLoginComponent implements OnInit {
     });
   }
 
-  hideSuccessModal() {
-    $("#successModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
-  hideScheduleDemoModal() {
-    $("#scheduleDemo").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
+  // hideSuccessModal() {
+  //   $("#successModal").hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass("modal-open");
+  //   $(document.body).removeAttr("style");
+  // }
+
+  // hideScheduleDemoModal() {
+  //   $("#scheduleDemo").hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass("modal-open");
+  //   $(document.body).removeAttr("style");
+  // }
 
   createForm2() {
     this.swaraLoginGroup = this.fb.group({
@@ -134,12 +135,14 @@ export class InstitutionLoginComponent implements OnInit {
     this.swaraLoginGroup.get('instAuid')?.setValidators([Validators.required]);
     this.swaraLoginGroup.get('checkedTnCSwara')?.setValidators([Validators.requiredTrue]);
   }
-  hideLoginSwaraModal() {
-    $("#loginModal").hide();
-    $('.modal-backdrop').remove();
-    $(document.body).removeClass("modal-open");
-    $(document.body).removeAttr("style");
-  }
+
+  // hideLoginSwaraModal() {
+  //   $("#loginModal").hide();
+  //   $('.modal-backdrop').remove();
+  //   $(document.body).removeClass("modal-open");
+  //   $(document.body).removeAttr("style");
+  // }
+
   saveSwaraLoginForm() {
     if (this.swaraLoginGroup.invalid) {
       return;
@@ -164,9 +167,10 @@ export class InstitutionLoginComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        this.hideLoginSwaraModal();
+        // this.hideLoginSwaraModal();
       },
       (error) => {
+        this.swaraLoginGroup.reset();
         this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
           timeOut: 10000,
           extendedTimeOut: 5000,
@@ -174,10 +178,8 @@ export class InstitutionLoginComponent implements OnInit {
           progressBar: true,
           progressAnimation: 'increasing',
           closeButton: true,
-
         });
-        this.swaraLoginGroup.reset();
-        this.hideLoginSwaraModal();
+        // this.hideLoginSwaraModal();
       }
     );
   }
