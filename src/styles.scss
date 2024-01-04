@@ -398,13 +398,15 @@ a {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.80);
     border-radius: 32px;
-    padding: 2px 15px;
     margin: 1rem;
+    padding: 3px 15px;
     font: 400 $font-size-14px "Poppins", sans-serif;
     @media only screen and (min-width: 1200px) {
       background-color: $app-white;
       color: rgba(0, 0, 0, 0.80);
+      font-size: $font-size-12px;
       margin: unset;
+      padding: 1px 15px;
     }
     &.active {
       background: $app-black;
@@ -413,24 +415,15 @@ a {
   }
   .app_header_strip {
     background: #5b5959;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 44px;
+    height: 38px;
     padding-right: 8rem;
     .header_page_link {
       color: $app-white;
-      font: 600 $font-size-14px "Poppins", sans-serif;
+      font: 500 $font-size-12px "Poppins", sans-serif;
       margin-right: 27px;
       &.active {
         border-bottom: 3px solid $app-white;
       }
-      @media only screen and (max-width: 1199px) {
-        display: none;
-      }
-    }
-    @media only screen and (max-width: 1199px) {
-      display: none;
     }
   }
   .app_header_main {
@@ -454,9 +447,6 @@ a {
       }
     }
     .app_header_right {
-      display: flex;
-      flex-direction: column;
-      align-self: flex-end;
       .nav-underline {
         .nav-item {
           .nav-link {
@@ -491,11 +481,8 @@ a {
             }
           }
         }
-        @media only screen and (max-width: 1199px) {
-          display: none;
-        }
         &.responsive_menu {
-          display: flex;
+          display: flex !important;
           flex-direction: column;
           justify-content: center;
           text-align: center;
@@ -520,48 +507,36 @@ a {
 // Home Page Styles Start
 .app_home {
   background-color: #d1f2e8;
-  padding-top: 3rem;
-  @media only screen and (min-width: 768px) {
-    padding-top: 7rem;
-  }
+  padding-top: 10rem;
+
   @media only screen and (min-width: 1200px) {
-    padding-top: 10rem;
-  }
-  .app_home_main_title {
-    p {
-      color: #25505c;
-      font: 700 $font-size-28px "Poppins", sans-serif;
-      margin: 5.25rem 1.5rem 3rem;
-      line-height: 140%;
-      overflow-x: hidden;
-      @media only screen and (min-width: 768px) {
-        font-size: $font-size-36px;
-        font-weight: 600;
-        margin: 5.25rem 0 4.5rem;
-      }
-    }
+    padding-top: 15rem;
   }
   .app_home_chart_con {
-    background: #6ca88f;
+    background: $app-white;
     box-shadow: 0px 12px 26px 0px rgba(21, 138, 102, 0.19),
       0px 47px 47px 0px rgba(21, 138, 102, 0.17),
       0px 106px 64px 0px rgba(21, 138, 102, 0.1),
       0px 189px 76px 0px rgba(21, 138, 102, 0.03),
       0px 295px 83px 0px rgba(21, 138, 102, 0);
-    padding: 0.25rem 0;
+    border-top: 3px solid #2A9F6E;
+    border-bottom: 3px solid #2A9F6E;
     @media only screen and (min-width: 768px) {
+      border: 6px solid #2A9F6E;
       border-radius: 20px;
-      padding: 0.5rem;
     }
-    .app_home_chart {
-      border-top: 1.419px solid #000;
-      border-bottom: 1.419px solid #000;
-      background: #fff;
-      padding: 1.5rem 0.5rem;
+    .app_home_main_title {
+      color: #03325C;
+      font: 700 $font-size-18px "Poppins", sans-serif;
+      margin-top: 1.5rem;
+      line-height: 120%;
       @media only screen and (min-width: 768px) {
-        border: 1.419px solid #000;
-        border-radius: 14px;
-        padding: 3rem;
+        font-size: $font-size-32px;
+        font-weight: 600;
+        margin-top: 2.5rem;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: $font-size-36px;
       }
     }
   }
