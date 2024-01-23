@@ -1184,7 +1184,7 @@ export class InsightsChartComponent implements OnInit {
       d3.selectAll('#infoIcon_2_mobile').remove();
       addInfoIcon(
         default_width_c - 85,
-        default_height_c - 120,
+        default_height_c - 250,
         '#commentary_graph_mobile',
         'infoIcon_2_mobile',
         svg_c
@@ -2537,7 +2537,7 @@ export class InsightsChartComponent implements OnInit {
       d3.selectAll('#infoIcon_2').remove();
       addInfoIcon(
         default_width_c - 85,
-        default_height_c - 120,
+        default_height_c - 250,
         '#commentary_graph',
         'infoIcon_2',
         svg_c
