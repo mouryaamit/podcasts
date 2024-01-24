@@ -1054,7 +1054,7 @@ export class InsightsChartComponent implements OnInit {
                 .attr('class', 'expert_comm_mem_mobile')
                 .attr('id', `expert_comm_mem_mobile_${i}`);
               d3.select(`#expert_comm_mem_mobile_${i}`)
-                .html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid mx-3" />
+                .html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid ms-3 me-2" />
                                 <div class="member_details">
                                 <p class="member_name mb-0 ec_author">${expertAD.ExpertName}</p>
                                 <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails}</p>
@@ -2408,7 +2408,7 @@ export class InsightsChartComponent implements OnInit {
                 .attr('class', 'expert_comm_mem')
                 .attr('id', `expert_comm_mem_${i}`);
               d3.select(`#expert_comm_mem_${i}`)
-                .html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid mx-3" />
+                .html(`<img src="assets/images/${expertAD.ExpertImageDetails}" alt="expert image" class="img-fluid ms-3 me-2" />
                                 <div class="member_details">
                                 <p class="member_name mb-0 ec_author">${expertAD.ExpertName}</p>
                                 <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails}</p>
