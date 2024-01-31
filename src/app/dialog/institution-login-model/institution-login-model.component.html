@@ -1,0 +1,161 @@
+<div *ngIf="institutionLoginType == 'scheduleDemo'">
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Schedule a Demo</h4>
+        <button type="button" class="btn-close" (click)="hideScheduleModal()"></button>
+    </div>
+    <!-- Modal Body -->
+    <div class="modal-body">
+        <div class="complete_form_text">Complete the form to schedule a demo.</div>
+        <div class="required_text"><span>*</span> Required Fields</div>
+        <form [formGroup]="scheduleDemoGroup">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="firstName" id="fistName"
+                            name="First Name" placeholder="First Name *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('firstName')?.errors && (scheduleDemoGroup.get('firstName')?.dirty || scheduleDemoGroup.get('firstName')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('firstName')?.errors?.['required']" class="validation-msg">
+                                First
+                                Name Required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="lastName" id="lastName"
+                            name="Last Name" placeholder="Last Name *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('lastName')?.errors && (scheduleDemoGroup.get('lastName')?.dirty || scheduleDemoGroup.get('lastName')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('lastName')?.errors?.['required']" class="validation-msg">
+                                Last
+                                Name Required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="businessEmail" id="email" name="Email"
+                            placeholder="Business Email *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('businessEmail')?.errors && (scheduleDemoGroup.get('businessEmail')?.dirty || scheduleDemoGroup.get('businessEmail')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('businessEmail')?.errors?.['required']"
+                                class="validation-msg">Email Required</p>
+                            <p *ngIf="scheduleDemoGroup.get('businessEmail')?.errors?.['pattern']"
+                                class="validation-msg">Email Invalid</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="jobTitle" id="jobTitle"
+                            name="Job Title" placeholder="Job Title *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('jobTitle')?.errors && (scheduleDemoGroup.get('jobTitle')?.dirty || scheduleDemoGroup.get('jobTitle')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('jobTitle')?.errors?.['required']" class="validation-msg">
+                                Job Title Required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="company" id="companyName"
+                            name="Company" placeholder="Company *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('company')?.errors && (scheduleDemoGroup.get('company')?.dirty || scheduleDemoGroup.get('company')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('company')?.errors?.['required']" class="validation-msg">
+                                Company Name Required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" maxlength="10" formControlName="contactNumber"
+                            id="contactNumber" name="Contact Number" placeholder="Contact Number">
+                        <div class="form-control-feedback"
+                            *ngIf="scheduleDemoGroup.get('contactNumber')?.errors && (scheduleDemoGroup.get('contactNumber')?.dirty || scheduleDemoGroup.get('contactNumber')?.touched)">
+                            <p *ngIf="scheduleDemoGroup.get('contactNumber')?.errors?.['pattern']"
+                                class="validation-msg">Mobile Number is Invalid</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckboxDemo">
+                        <label for="agreeCheckboxDemo" class="terms-label ps-2">
+                            By submitting this request, I agree with the Jocata
+                            <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                        </label>
+                    </div>
+
+                    <div class="form-control-feedback"
+                        *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors && (scheduleDemoGroup.get('checkedTermsAndConditions')?.dirty || scheduleDemoGroup.get('checkedTermsAndConditions')?.touched)">
+                        <p *ngIf="scheduleDemoGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                            class="validation-msg">Please select checkbox</p>
+                    </div>
+                    <button class="sm-primary-button mt-3" [disabled]="scheduleDemoGroup.invalid"
+                        (click)="saveScheduleDemoForm()">Request Demo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="institutionLoginType == 'loginModal'">
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <button type="button" class="btn-close" (click)="hideLoginModal()"></button>
+    </div>
+    <!-- Modal body -->
+    <div class="modal-body">
+        <div class="complete_form_text">Enter your Institution ID to proceed login.</div>
+        <div class="required_text"><span>*</span> Required Fields</div>
+        <form [formGroup]="swaraLoginGroup">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="instAuid" id="institutionID"
+                            name="Institution ID" placeholder="Institution ID *" autocomplete="off">
+                        <div class="form-control-feedback"
+                            *ngIf="swaraLoginGroup.get('instAuid')?.errors && (swaraLoginGroup.get('instAuid')?.dirty || swaraLoginGroup.get('instAuid')?.touched)">
+                            <p *ngIf="swaraLoginGroup.get('instAuid')?.errors?.['required']" class="validation-msg">
+                                Institution ID is Required</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" formControlName="checkedTnCSwara" id="agreeCheckboxLogin">
+                        <label for="agreeCheckboxLogin" class="terms-label ps-2">
+                            By submitting this request, I agree with the Jocata
+                            <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+                        </label>
+                    </div>
+
+                    <div class="form-control-feedback"
+                        *ngIf="swaraLoginGroup.get('checkedTnCSwara')?.errors && (swaraLoginGroup.get('checkedTnCSwara')?.dirty || swaraLoginGroup.get('checkedTnCSwara')?.touched)">
+                        <p *ngIf="swaraLoginGroup.get('checkedTnCSwara')?.errors?.['required']" class="validation-msg">
+                            Please select checkbox</p>
+                    </div>
+                    <button class="sm-primary-button mt-3" [disabled]="swaraLoginGroup.invalid"
+                        (click)="saveSwaraLoginForm()">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

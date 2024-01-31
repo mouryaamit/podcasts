@@ -25,45 +25,45 @@ export class MediaKitComponent implements OnInit {
   galleryData = [
     {
       name: 'ramann',
-      imageUrl: 'assets/images/media-ramann.png',
+      imageUrl: 'assets/images/media-ramann.webp',
       title: 'Sh. Sivasubramanian Ramann',
       designation: 'Chairman & Managing Director, SIDBI',
     },
     {
       name: 'singh',
-      imageUrl: 'assets/images/media-singh.png',
+      imageUrl: 'assets/images/media-singh.webp',
       title: 'Sh. S.N. Singh',
       designation: 'CGM, SIDBI',
     },
     {
       name: 'prashant',
-      imageUrl: 'assets/images/media-prashant.png',
+      imageUrl: 'assets/images/media-prashant.webp',
       title: 'Sh. Prashant Muddu',
       designation: 'MD & CEO, Jocata',
     },
     {
       name: 'narasima',
-      imageUrl: 'assets/images/media-narasima.png',
+      imageUrl: 'assets/images/media-narasima.webp',
       title: 'Sh. Narasimhan V',
       designation:
         'Principal Advisor, Jocata. Former COO, Dun & Bradstreet - SAARC, Middle East and Africa (EWN). Former Director, Board of SMERA (now Acuite Ratings)',
     },
     {
       name: 'sumita',
-      imageUrl: 'assets/images/media-sumita.png',
+      imageUrl: 'assets/images/media-sumita.webp',
       title: 'Dr. Sumita Kale',
       designation:
         'CEO and Senior Fellow, Indicus Foundation. Former Chief Economist – Indicus Analytics.',
     },
     {
       name: 'vivek',
-      imageUrl: 'assets/images/media-vivek.png',
+      imageUrl: 'assets/images/media-vivek.webp',
       title: 'Sh. Vivek Kumar Malhotra',
       designation: 'CGM, SIDBI',
     },
     {
       name: 'sanjay',
-      imageUrl: 'assets/images/media-sanjay.png',
+      imageUrl: 'assets/images/media-sanjay.webp',
       title: 'Sh. Sanjay Jain',
       designation: 'CGM, SIDBI',
     },

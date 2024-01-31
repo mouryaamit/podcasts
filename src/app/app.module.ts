@@ -24,6 +24,10 @@ import { LoadingInterceptor } from './services/loading.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SubscribeModelComponent } from './dialog/subscribe-model/subscribe-model.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
+import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MediaKitComponent,
     NewsroomComponent,
     SpinnerComponent,
-    NewsroomEventsComponent
+    NewsroomEventsComponent,
+    SubscribeModelComponent,
+    InstitutionLoginModelComponent,
+    RoadmapModelComponent
+  ],
+  entryComponents:[
+    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
+  ],
+  exports: [
+    
   ],
   imports: [
     HttpClientModule,
@@ -51,6 +64,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatDialogModule,
     ToastrModule.forRoot({
       maxOpened: 1,
       iconClasses  : {

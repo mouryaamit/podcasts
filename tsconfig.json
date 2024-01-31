@@ -26,6 +26,11 @@
       "dom"
     ]
   },
+  "paths": {
+    "@syncfusion/*": [
+        "./node_modules/@syncfusion/*"
+    ],
+},
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

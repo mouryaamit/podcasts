@@ -39,6 +39,9 @@ a {
 .fw-600 {
   font-weight: 600 !important;
 }
+.fixed-top {
+  z-index: 999;
+}
 //toaster css
 .toast-container {
   .ngx-toastr {
@@ -97,6 +100,7 @@ a {
         background-color: #25bb61;
       }
     }
+
     .toast-title,
     .toast-message {
       color: $app-black;
@@ -144,6 +148,7 @@ a {
   border-radius: 56px;
   font: 500 $font-size-16px "Poppins", sans-serif;
   margin-bottom: 3rem;
+  cursor: pointer;
   &:hover {
     color: $app-white;
   }
@@ -159,6 +164,7 @@ a {
   color: $app-white;
   padding: 12px 24px;
   border-radius: 60px;
+  cursor: pointer;
   font: 500 $font-size-16px "Poppins", sans-serif;
   &:hover {
     color: $app-white;
@@ -392,13 +398,15 @@ a {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.80);
     border-radius: 32px;
-    padding: 3px 15px;
     margin: 1rem;
+    padding: 3px 15px;
     font: 400 $font-size-14px "Poppins", sans-serif;
     @media only screen and (min-width: 1200px) {
       background-color: $app-white;
       color: rgba(0, 0, 0, 0.80);
+      font-size: $font-size-12px;
       margin: unset;
+      padding: 1px 15px;
     }
     &.active {
       background: $app-black;
@@ -407,24 +415,15 @@ a {
   }
   .app_header_strip {
     background: #5b5959;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 44px;
+    height: 38px;
     padding-right: 8rem;
     .header_page_link {
       color: $app-white;
-      font: 600 $font-size-14px "Poppins", sans-serif;
-      margin-left: 27px;
+      font: 500 $font-size-12px "Poppins", sans-serif;
+      margin-right: 27px;
       &.active {
         border-bottom: 3px solid $app-white;
       }
-      @media only screen and (max-width: 1199px) {
-        display: none;
-      }
-    }
-    @media only screen and (max-width: 1199px) {
-      display: none;
     }
   }
   .app_header_main {
@@ -435,7 +434,7 @@ a {
     height: auto;
     padding: 0.25rem 2rem;
     @media only screen and (min-width: 768px) {
-      padding: 0.25rem 7rem 0 3rem;
+      padding: 0.5rem 7rem 0 3rem;
     }
     .app_hamburger_icon {
       @media only screen and (min-width: 1200px) {
@@ -448,9 +447,6 @@ a {
       }
     }
     .app_header_right {
-      display: flex;
-      flex-direction: column;
-      align-self: flex-end;
       .nav-underline {
         .nav-item {
           .nav-link {
@@ -485,11 +481,8 @@ a {
             }
           }
         }
-        @media only screen and (max-width: 1199px) {
-          display: none;
-        }
         &.responsive_menu {
-          display: flex;
+          display: flex !important;
           flex-direction: column;
           justify-content: center;
           text-align: center;
@@ -514,48 +507,36 @@ a {
 // Home Page Styles Start
 .app_home {
   background-color: #d1f2e8;
-  padding-top: 3rem;
-  @media only screen and (min-width: 768px) {
-    padding-top: 7rem;
-  }
+  padding-top: 10rem;
+
   @media only screen and (min-width: 1200px) {
-    padding-top: 10rem;
-  }
-  .app_home_main_title {
-    p {
-      color: #25505c;
-      font: 700 $font-size-28px "Poppins", sans-serif;
-      margin: 5.25rem 1.5rem 3rem;
-      line-height: 140%;
-      overflow-x: hidden;
-      @media only screen and (min-width: 768px) {
-        font-size: $font-size-36px;
-        font-weight: 600;
-        margin: 5.25rem 0 4.5rem;
-      }
-    }
+    padding-top: 15rem;
   }
   .app_home_chart_con {
-    background: #6ca88f;
+    background: $app-white;
     box-shadow: 0px 12px 26px 0px rgba(21, 138, 102, 0.19),
       0px 47px 47px 0px rgba(21, 138, 102, 0.17),
       0px 106px 64px 0px rgba(21, 138, 102, 0.1),
       0px 189px 76px 0px rgba(21, 138, 102, 0.03),
       0px 295px 83px 0px rgba(21, 138, 102, 0);
-    padding: 0.25rem 0;
+    border-top: 3px solid #2A9F6E;
+    border-bottom: 3px solid #2A9F6E;
     @media only screen and (min-width: 768px) {
+      border: 6px solid #2A9F6E;
       border-radius: 20px;
-      padding: 0.5rem;
     }
-    .app_home_chart {
-      border-top: 1.419px solid #000;
-      border-bottom: 1.419px solid #000;
-      background: #fff;
-      padding: 1.5rem 0.5rem;
+    .app_home_main_title {
+      color: #03325C;
+      font: 700 $font-size-18px "Poppins", sans-serif;
+      margin-top: 1.5rem;
+      line-height: 120%;
       @media only screen and (min-width: 768px) {
-        border: 1.419px solid #000;
-        border-radius: 14px;
-        padding: 3rem;
+        font-size: $font-size-32px;
+        font-weight: 600;
+        margin-top: 2.5rem;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: $font-size-36px;
       }
     }
   }
@@ -1140,6 +1121,9 @@ a {
     padding-top: 4rem;
     .app_methodology_caption {
       padding-top: 2rem;
+      u {
+        cursor: pointer;
+      }
     }
     .section_title,
     .app_methodology_caption {
@@ -1230,6 +1214,7 @@ a {
       line-height: 130.5%;
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
+
       > span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
@@ -1374,11 +1359,11 @@ a {
             }
           }
         }
-        h6 {
+        .state_list_title {
           position: sticky;
           top: -2px;
           background: $app-white;
-          z-index: 1;
+          z-index: 99;
           color: #000;
           font-size: 16.263px;
           font-weight: 700;
@@ -1521,7 +1506,7 @@ a {
             margin-bottom: 4.25rem;
           }
         }
-        h6 {
+        .app_consideration_card_title {
           color: #194974;
           font: 600 $font-size-18px "Poppins", sans-serif;
           line-height: 120%;
@@ -1909,21 +1894,39 @@ a {
             background: #d2f3e1;
             border-radius: 8px;
             display: flex;
-            justify-content: start;
-            align-items: center;
-            overflow: hidden;
-            .member_details {
-              color: $app-black;
-              @media only screen and (min-width: 992px) {
-                color: #4a4a4a;
-              }
-              .member_name {
-                font: 600 $font-size-18px "Work Sans";
-                line-height: 120%;
-              }
-              .member_title {
-                font: 400 $font-size-14px "Work Sans";
-                line-height: 120%;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+            padding: 0 0.75rem;
+            @media only screen and (min-width: 768px) {
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              padding: 0;
+            }
+            .expert_comm_mem, .expert_comm_mem_mobile {
+              display: flex;
+              flex-basis: 100%;
+              align-items: center;
+              border: 1px solid #2fb36b;
+              border-radius: 10px;
+              margin: .75rem;
+              overflow: hidden;
+
+              .member_details {
+                color: $app-black;
+                max-width: 50%;
+                @media only screen and (min-width: 992px) {
+                  color: #4a4a4a;
+                }
+                .member_name {
+                  font: 600 $font-size-14px "Work Sans";
+                  line-height: 120%;
+                  margin-bottom: .25rem;
+                }
+                .member_title {
+                  font: 400 $font-size-12px "Work Sans";
+                  line-height: 120%;
+                }
               }
             }
           }
@@ -2505,8 +2508,19 @@ a {
 }
 // Newsroom Page Styles End
 // Modal Styles Start
-.modal {
-  .modal-content {
+.app_generic_modal {
+  max-width: 95vw !important;
+  z-index: 1099 !important;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 60vw !important;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 35vw !important;
+  }
+
+  .mat-dialog-container {
     border-radius: 16px;
     background: #fff;
     box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
@@ -2518,6 +2532,7 @@ a {
     .modal-header {
       padding: unset;
       border-bottom: none;
+      // padding: 3rem 1.25rem 1.25rem 3rem;
       .modal-title {
         color: $app-black;
         font: 700 $font-size-20px "Poppins", sans-serif;
@@ -2525,6 +2540,11 @@ a {
       }
       .btn-close {
         opacity: 1;
+        &:focus,
+        &.active {
+          outline: none;
+          box-shadow: none;
+        }
       }
     }
     .modal-body {
@@ -2566,38 +2586,51 @@ a {
       }
     }
   }
-  .roadmap_hsn_modal {
-    max-width: 944px;
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-      margin-right: 2rem;
-      margin-left: 2rem;
-    }
-    .modal-content {
-      box-shadow: none;
-      .modal-body {
-        padding: 10px 20px 44px;
-        @media only screen and (min-width: 768px) {
-          padding: 10px 60px 44px 44px;
-        }
-        .hsn_modal_title {
-          color: #4a4a4a;
-          font: 600 22px "Poppins";
-          line-height: 120%;
-          margin-bottom: 2rem;
-        }
-        .hsn_modal_caption {
-          color: rgba(74, 74, 74, 0.92);
-          font-size: $font-size-16px;
-          line-height: normal;
-          span {
-            @media only screen and (min-width: 992px) {
-              display: block;
-            }
+}
+
+.app_hsn_modal {
+  max-width: 95vw !important;
+  z-index: 1099 !important;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 90vw !important;
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: 70vw !important;
+  }
+
+  .mat-dialog-container {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
+      0px 86px 86px 0px rgba(0, 0, 0, 0.09),
+      0px 194px 116px 0px rgba(0, 0, 0, 0.05),
+      0px 345px 138px 0px rgba(0, 0, 0, 0.01),
+      0px 539px 151px 0px rgba(0, 0, 0, 0);
+    .modal-body {
+      padding: 10px 20px 44px;
+      @media only screen and (min-width: 768px) {
+        padding: 10px 60px 44px 44px;
+      }
+
+      .hsn_modal_title {
+        color: #4a4a4a;
+        font: 600 22px "Poppins";
+        line-height: 120%;
+        margin-bottom: 2rem;
+      }
+      .hsn_modal_caption {
+        color: rgba(74, 74, 74, 0.92);
+        font-size: $font-size-16px;
+        line-height: normal;
+        span {
+          @media only screen and (min-width: 992px) {
+            display: block;
           }
-          a {
-            color: inherit;
-            text-decoration: underline;
-          }
+        }
+        a {
+          color: inherit;
+          text-decoration: underline;
         }
       }
     }
