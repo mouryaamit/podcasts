@@ -79,7 +79,8 @@ export class IndexComponent implements OnInit {
 
     ngOnInit(): void {
         this.getSumpoornData();
-
+        // this.getSumpoornDataFromJson();
+        
         // this.graphApiService.getSumpoornGraphData().then((data) => {
         //     if (data) {
         //         this.sumpoornGraphData = data;
@@ -105,6 +106,19 @@ export class IndexComponent implements OnInit {
         }, (error) => {
 
         })
+    }
+
+    getSumpoornDataFromJson() {
+        this.graphApiService.getSumpoornGraphApiDataFromJson().then((response:any) => {
+            if (response && response.statusCode == "200") {
+                this.sumpoornGraphData = response.sumpoornData;
+                this.iipGraphData = response.iipData;
+                this.pmiGraphData = response.pmiData;
+                this.gvaGraphData = response.gvaData;
+            }
+        }, (error) => {
+            console.error("getSumpoornGraphData Error", error);
+        }) 
     }
 
     // getContextGraphData() {
