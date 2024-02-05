@@ -148,6 +148,7 @@ export class IndexComponent implements OnInit {
     //     }
     // }
 
+    
     scrollToRight(tab) {
         this.insightsInfoIcon = tab === 'Insights';
         this.contextInfoIcon = tab === 'Context';
