@@ -20,6 +20,9 @@ export class NewsroomEventsComponent implements OnInit {
     } else if (this.getNavParam == 'launch') {
       this.eventTitle = "Launch Event Highlights";
       this.eventDate = "Mumbai, November 10, 2023"
+    } else if (this.getNavParam == 'stakeholder') {
+      this.eventTitle = "Strategic Context of MSME Financing";
+      this.eventDate = "New Delhi, December 12, 2023"
     }
   }
 
@@ -64,6 +67,13 @@ export class NewsroomEventsComponent implements OnInit {
         "title": "G20 Showcase",
         "detail": "Mr. Narasimhan Venkatesan, Principal Advisor, Jocata presented the Index to dignitaries from the Ministry of Finance, Department of Economic Affairs, International Finance Corporation, Reserve Bank of India and senior leaders from Indian and global financial institutions.",
         "imageURL": "assets/images/news-g20.png"
+      }
+    ],
+    "msmeFinancing": [
+      {
+        "title": "Strategic Context of MSME Financing",
+        "detail": `Jocata Sumpoorn's contribution to empowering MSME lending with SIDBI was recently recognised in the Inclusive Finance India Report (2023) , in its chapter "MSMEs: The Pillars of India's Economic Strength" by Ramesh S. Arunachalam. The index's dynamic and digital approach to data has steered SIDBI's efforts to provide a "data-driven understanding of MSMEs to improve credit access for the sector and fuel its growth." The Report, an annual publication presenting advancements in financial inclusion, is published by The Global Inclusive Finance Initiative, a think-tank advocating for financial inclusion in India.`,
+        "imageURL": "assets/images/news-financing.svg"
       }
     ]
   }
