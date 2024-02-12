@@ -396,14 +396,14 @@ a {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.80);
+    color: rgba(0, 0, 0, 0.8);
     border-radius: 32px;
     margin: 1rem;
     padding: 3px 15px;
     font: 400 $font-size-14px "Poppins", sans-serif;
     @media only screen and (min-width: 1200px) {
       background-color: $app-white;
-      color: rgba(0, 0, 0, 0.80);
+      color: rgba(0, 0, 0, 0.8);
       font-size: $font-size-12px;
       margin: unset;
       padding: 1px 15px;
@@ -499,7 +499,8 @@ a {
   }
   &.app_header_shadow {
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
-      0px 22px 22px 0px rgba(0, 0, 0, 0.05), 0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+      0px 22px 22px 0px rgba(0, 0, 0, 0.05),
+      0px 50px 30px 0px rgba(0, 0, 0, 0.03),
       0px 89px 36px 0px rgba(0, 0, 0, 0.01), 0px 139px 39px 0px rgba(0, 0, 0, 0);
   }
 }
@@ -519,14 +520,14 @@ a {
       0px 106px 64px 0px rgba(21, 138, 102, 0.1),
       0px 189px 76px 0px rgba(21, 138, 102, 0.03),
       0px 295px 83px 0px rgba(21, 138, 102, 0);
-    border-top: 3px solid #2A9F6E;
-    border-bottom: 3px solid #2A9F6E;
+    border-top: 3px solid #2a9f6e;
+    border-bottom: 3px solid #2a9f6e;
     @media only screen and (min-width: 768px) {
-      border: 6px solid #2A9F6E;
+      border: 6px solid #2a9f6e;
       border-radius: 20px;
     }
     .app_home_main_title {
-      color: #03325C;
+      color: #03325c;
       font: 700 $font-size-18px "Poppins", sans-serif;
       margin-top: 1.5rem;
       line-height: 120%;
@@ -569,16 +570,16 @@ a {
       padding: 7rem 0;
     }
     .app_home_msme_chart {
-      background: #fff;
-      box-shadow: 0px 8px 18px 0px rgba(3, 61, 114, 0.1),
-        0px 33px 33px 0px rgba(3, 61, 114, 0.09),
-        0px 75px 45px 0px rgba(3, 61, 114, 0.05),
-        0px 133px 53px 0px rgba(3, 61, 114, 0.01),
-        0px 208px 58px 0px rgba(3, 61, 114, 0);
+      background: $app-white;
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.06),
+        0px 22px 22px 0px rgba(0, 0, 0, 0.05),
+        0px 50px 30px 0px rgba(0, 0, 0, 0.03),
+        0px 89px 36px 0px rgba(0, 0, 0, 0.01),
+        0px 139px 39px 0px rgba(0, 0, 0, 0);
       margin: 0.5rem 0 6.5rem;
       @media only screen and (min-width: 768px) {
-        border-top-right-radius: 1.25rem;
-        border-bottom-right-radius: 1.25rem;
+        border-top-right-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
         margin: unset;
       }
     }
@@ -1903,13 +1904,14 @@ a {
               align-items: center;
               padding: 0;
             }
-            .expert_comm_mem, .expert_comm_mem_mobile {
+            .expert_comm_mem,
+            .expert_comm_mem_mobile {
               display: flex;
               flex-basis: 100%;
               align-items: center;
               border: 1px solid #2fb36b;
               border-radius: 10px;
-              margin: .75rem;
+              margin: 0.75rem;
               overflow: hidden;
 
               .member_details {
@@ -1921,7 +1923,7 @@ a {
                 .member_name {
                   font: 600 $font-size-14px "Work Sans";
                   line-height: 120%;
-                  margin-bottom: .25rem;
+                  margin-bottom: 0.25rem;
                 }
                 .member_title {
                   font: 400 $font-size-12px "Work Sans";
