@@ -373,7 +373,7 @@ export class InsightsChartComponent implements OnInit {
     const svg = d3
       .select('#mobile_insights_graph_svg')
       .append('svg') //append svg element inside #chart
-      .attr('width', default_width + margin.left) //set width
+      .attr('width', default_width + margin.left + 20) //set width (remove 20 later)
       .attr('height', default_height) //set height
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -425,6 +425,7 @@ export class InsightsChartComponent implements OnInit {
       .append('g')
       .attr('stroke-width', '0.1')
       .attr('transform', `translate(${width + 25},0)`) // sets last xaxis index align
+      .attr('class', 'y_axis_text')
       .call(yAxis_right)
       .selectAll('.tick text'); // select all the y tick texts
 
@@ -490,7 +491,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) - 25 * (12 - years[0].count))
             )
-            .attr('y2', height + 60)
+            .attr('y2', height + 35) //60
             .attr('stroke', '#E1E1E1')
             .attr('stroke-width', '1');
         } else {
@@ -765,7 +766,7 @@ export class InsightsChartComponent implements OnInit {
         .append('rect')
         .attr('x', 0)
         .attr('y', handyValues.y)
-        .attr('width', width + 19)
+        .attr('width', width + 25)
         .attr('height', handyValues.h)
         .attr('id', 'rect_def_yaxis')
         .attr('opacity', '0.5')
@@ -1464,7 +1465,7 @@ export class InsightsChartComponent implements OnInit {
     const svg = d3
       .select('#insights_graph_svg')
       .append('svg') //append svg element inside #chart
-      .attr('width', default_width + 2 * margin.right) //set width
+      .attr('width', default_width + 2 * margin.right + 15) //set width (remove 15 later)
       .attr('id', 'svg_insights_graph')
       .attr('height', default_height) //set height
       // .style("max-width", default_width + (margin.left + margin.right)) //set width
@@ -1646,7 +1647,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 4)
+                  years.indexOf(year) * 3) //4
             )
             .attr('y1', 0)
             .attr(
@@ -1654,9 +1655,9 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 4)
+                  years.indexOf(year) * 3) //4
             )
-            .attr('y2', height + 63)
+            .attr('y2', height + 35) //63
             .attr('stroke', '#E1E1E1')
             .attr('stroke-width', '1');
         } else {
@@ -1668,7 +1669,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 4.8)
+                  years.indexOf(year) * 3.8) //4.8
             )
             .attr('y1', 0)
             .attr(
@@ -1676,7 +1677,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 4.8)
+                  years.indexOf(year) * 3.8) //4.8
             )
             .attr('y2', height + 63)
             .attr('stroke', '#959595')

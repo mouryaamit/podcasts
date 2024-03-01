@@ -213,6 +213,9 @@
         color: #959595;
         font-weight: 500;
     }
+    .y_axis_text .tick text {
+        display: none;
+    }
     /* End of graph css */
     /* start of context graph css */
     .float-checkboxes {
