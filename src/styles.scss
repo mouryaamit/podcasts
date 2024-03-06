@@ -2506,6 +2506,29 @@ a {
   }
 }
 // Newsroom Page Styles End
+// FAB Subscribe Styles
+.app_subscribe_fab_wrapper {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  z-index: 100;
+  .app_secondary_btn {
+    font-size: $font-size-12px;
+    padding: 13px 20px;
+  }
+  .mat-mini-fab {
+    box-shadow: none;
+    background-color: #25bb61;
+    color: $app-white;
+    width: 44px;
+    height: 44px;
+    &.fab_close {
+      background-color: $app-white;
+      border: 1.5px solid #25bb61;
+      color: #25bb61;
+    }
+  }
+}
 // Modal Styles Start
 .app_generic_modal {
   max-width: 95vw !important;
