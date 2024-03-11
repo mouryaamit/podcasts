@@ -26,8 +26,11 @@ import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubscribeModelComponent } from './dialog/subscribe-model/subscribe-model.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
+import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.comp
     NewsroomEventsComponent,
     SubscribeModelComponent,
     InstitutionLoginModelComponent,
-    RoadmapModelComponent
+    RoadmapModelComponent,
+    SubscribeButtonComponent
   ],
   entryComponents:[
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
@@ -63,6 +67,8 @@ import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.comp
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     MatDialogModule,
     ToastrModule.forRoot({

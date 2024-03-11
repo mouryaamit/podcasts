@@ -1,0 +1,6 @@
+<div class="app_subscribe_fab_wrapper">
+    <span class="app_secondary_btn me-3" *ngIf="!isAddIcon"  (click)="openDialog()">Subscribe</span>
+    <button mat-mini-fab disableRipple [class.fab_close] = "!isAddIcon" (click)="toggleIcon()">
+        <mat-icon>{{ isAddIcon ? 'add' : 'close' }}</mat-icon>
+    </button>
+</div>

@@ -172,7 +172,7 @@ export class ContextChartComponent implements OnInit {
 
         const svg = d3.select("#mobile_context_graph_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width + (margin.left)) //set width
+            .attr("width", default_width + (margin.left) + 20) //set width (remove 20 later)
             .attr("height", default_height) //set height
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -387,7 +387,7 @@ export class ContextChartComponent implements OnInit {
                         .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
                         .attr('y1', 0)
                         .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) - (years.indexOf(year))))
-                        .attr('y2', height + 60)
+                        .attr('y2', height + 35) //60
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
                 } else {
@@ -879,7 +879,7 @@ export class ContextChartComponent implements OnInit {
 
         const svg = d3.select("#context_graph_svg")
             .append("svg") //append svg element inside #chart
-            .attr("width", default_width+30) //set width
+            .attr("width", default_width+45) //set width (remove 45 and keep 30)
             .attr("height", default_height) //set height
             .append("g")
             .attr("transform", `translate(0,${margin.top})`);
@@ -1398,18 +1398,18 @@ export class ContextChartComponent implements OnInit {
                         .attr("class", "year-line");
                 } else if (years.indexOf(year) == years.length - 1) {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.5)))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.5
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.5)))
-                        .attr('y2', height + 60)
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.5
+                        .attr('y2', height + 35) // 60
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
                         .attr("class", "year-line");
                 } else {
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.2))) //7.5
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*7.5)))
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.2))) //7.5
                         .attr('y2', height + 60)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")

@@ -63,10 +63,12 @@ export class SubscribeModelComponent implements OnInit {
           progressAnimation: 'increasing',
           closeButton: true,
         });
-        
       },
       (error) => {
-        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+        console.log("subscribe api error ", error);
+        let errorMsg, internalErrorText = "We are unable to process your request. Please try again after sometime.";
+        errorMsg = (error && error.statusCode == "404") ? error.statusMessage : internalErrorText;
+        this.toastr.error(errorMsg, '', {
           timeOut: 10000,
           extendedTimeOut: 5000,
           positionClass: 'toast-bottom-center',
