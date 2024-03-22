@@ -1,41 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SubscribeModelComponent } from '../dialog/subscribe-model/subscribe-model.component';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-subscribe-button',
   templateUrl: './subscribe-button.component.html',
-  styleUrls: ['./subscribe-button.component.scss']
+  styleUrls: ['./subscribe-button.component.scss'],
 })
-export class SubscribeButtonComponent implements OnInit {
-  isAddIcon: boolean = true;
+export class SubscribeButtonComponent {
+  addIcon = true;
+  subscribeButton = true;
+  fabButton = false;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.subscribeButton = window.scrollY <= 0;
+    this.fabButton = !this.subscribeButton;
+    this.addIcon = true;
   }
 
   toggleIcon() {
-    this.isAddIcon = !this.isAddIcon;
+    this.addIcon = !this.addIcon;
+    this.subscribeButton = !this.subscribeButton;
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(SubscribeModelComponent, {
+    this.dialog.open(SubscribeModelComponent, {
       disableClose: true,
       panelClass: 'app_generic_modal',
-      data: {
-        data: { mobileNumber: '' },
-      },
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-      } else {
-      }
+      data: { mobileNumber: '' },
     });
   }
-
 }
