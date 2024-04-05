@@ -31,6 +31,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.co
     SubscribeModelComponent,
     InstitutionLoginModelComponent,
     RoadmapModelComponent,
-    SubscribeButtonComponent
+    SubscribeButtonComponent,
+    PartnersComponent
   ],
   entryComponents:[
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent

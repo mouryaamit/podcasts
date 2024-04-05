@@ -11,6 +11,7 @@ import { InstitutionLoginComponent } from './institution-login/institution-login
 import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
 import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
+import { PartnersComponent } from './partners/partners.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,15 @@ const routes: Routes = [
       title: `Jocata Sumpoorn: Upcoming Sub-Indices for Granular MSME Analysis`,
       description: `Explore to know upcoming sub-indices, including Jocata Sumpoorn - Sectoral Indices, Geographical Indices, and Activity Indices. Get ready to embark on a journey of powerful and granular MSME insights.`,
       keywords: `msme data analysis, granular insights, gst returns data, sectoral performance, jocata sumpoorn sectoral indices, region-based indices, industrial activity insights, jocata sumpoorn geographical indices, manufacturing indices, trading performance, service sector insights, jocata sumpoorn activity indices, jocata sumpoorn newsletter, harmonized system of nomenclature, hsn code explanation, goods classification, gst hsn details, hsn information modal, msme insights, granular data analysis, gst sectoral performance`
+    }
+  },
+  {
+    path: 'partners',
+    component: PartnersComponent,
+    data: {
+      title: `Partner with us for MSME Impact`,
+      description: `Partner with us for MSME Econsystem reach, data driven impact, and policy & research support, all to create a positive impact for MSMEs`,
+      keywords: `MSME Economic Activity Index India, Partner with Jocata Sumpoorn, MSME data insights India, Support MSME growth India, Thought leadership India, MSME decision-making India, Jocata Sumpoorn Partner Program, Economic indicators for MSMEs India, Financial institutions & MSMEs India, Policymakers & MSME data India`
     }
   },
   {

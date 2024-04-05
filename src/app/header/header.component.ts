@@ -17,11 +17,6 @@ export class HeaderComponent implements OnInit {
     this.appHeaderShadow = scroll > 0;
   }
 
-  toggleMenu() {
-    this.isResponsive = !this.isResponsive;
-    document.body.classList.toggle('no-scroll');
-  }
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -43,5 +38,10 @@ export class HeaderComponent implements OnInit {
         this.isNewsroomEventsActive = currentUrl.includes('/newsroom') || currentUrl.includes('/newsroom-events');
       }
     });
+  }
+
+  toggleMenu() {
+    this.isResponsive = !this.isResponsive;
+    document.body.classList.toggle('no-scroll');
   }
 }
