@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder,Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
+import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import * as $ from 'jquery';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-partners',
@@ -7,10 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder,private apiService: ApiService,public sumpoornApiService: SumpoornApiService,
+    private toastr: ToastrService, ) { 
+    this.createForm();
+  }
 
   ngOnInit(): void {
+    this.addValidations()
   }
+
+  partnersFormGroup!: FormGroup;
 
   partners: Array<any> = [
     {
@@ -72,6 +83,68 @@ export class PartnersComponent implements OnInit {
         "Visit our “Partner” page and express your interest in partnering with Jocata Sumpoorn by filling out the brief partnership form, and our team will be happy to discuss potential collaboration opportunities."
       ]
     }
-  ]  
+  ]
 
+  createForm() {
+    this.partnersFormGroup = this.fb.group({
+      firstName: [''],
+      lastName: [''],
+      company: [''],
+      designation: [''],
+      businessEmail: [''],
+      contactNumber: [''],
+      message: ["I'm interested in partnering to drive MSME impact. Let's explore collaboration opportunities."],
+      checkedTermsAndConditions: [false]
+    })
+  }
+
+  addValidations() {
+    this.partnersFormGroup.get('firstName')?.setValidators([Validators.required]);
+    this.partnersFormGroup.get('lastName')?.setValidators([Validators.required]);
+    this.partnersFormGroup.get('company')?.setValidators([Validators.required]);
+    this.partnersFormGroup.get('designation')?.setValidators([Validators.required]);
+    this.partnersFormGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
+    this.partnersFormGroup.get('contactNumber')?.setValidators([Validators.required,Validators.pattern(/^[9876]\d{9}$/)]);
+    this.partnersFormGroup.get('message')?.setValidators([Validators.required]);
+    this.partnersFormGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
+  }
+
+  savePartnerInfo() {
+    if (this.partnersFormGroup.invalid) {
+      return;
+    }
+
+    let postData = this.partnersFormGroup.getRawValue();
+
+    this.sumpoornApiService.savePartnerDetails(postData).then(
+      (resp: any) => {
+        this.partnersFormGroup.reset();
+        this.partnersFormGroup.patchValue({
+          "messageType": ""
+        })
+        this.toastr.success(resp.statusMessage, "", {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+      },
+      (error) => {
+        this.partnersFormGroup.reset();
+        this.partnersFormGroup.patchValue({
+          "messageType": ""
+        })
+        this.toastr.error('We are unable to process your request. Please try again after sometime.', '', {
+          timeOut: 10000,
+          extendedTimeOut: 5000,
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+          progressAnimation: 'increasing',
+          closeButton: true,
+        });
+      }
+    );
+  }
 }
