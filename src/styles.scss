@@ -348,18 +348,20 @@ a {
 }
 .sm-primary-button {
   border: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: #25bb61;
   color: $app-white;
-  padding: 6px 35px;
+  padding: 11px 35px;
   border-radius: 8px;
   font: 500 $font-size-16px "Poppins", sans-serif;
-}
-.sm-primary-button[disabled],
-.sm-primary-button.disabled {
-  opacity: 0.7;
-  pointer-events: none;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+  }
 }
 .table-blue {
   color: #24c0e2;
@@ -505,6 +507,7 @@ a {
   }
 }
 // Header Styles End
+
 // Home Page Styles Start
 .app_home {
   background-color: #d1f2e8;
@@ -577,6 +580,7 @@ a {
         0px 89px 36px 0px rgba(0, 0, 0, 0.01),
         0px 139px 39px 0px rgba(0, 0, 0, 0);
       margin: 0.5rem 0 1.25rem;
+      padding: 2rem;
       @media only screen and (min-width: 992px) {
         border-top-right-radius: 0.6rem;
         border-bottom-right-radius: 0.6rem;
@@ -872,64 +876,68 @@ a {
       }
     }
   }
-  .app_home_marquee {
-    background: $app-white;
-    width: $marquee-width;
-    overflow: hidden;
-    position: relative;
-    padding: 3.5rem 0;
-    @keyframes marqueeMobile {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-sm * $marquee-elements)
-        );
-      }
+}
+// Home Page Styles End
+
+// Marquee Styles Home Start
+.app_home_marquee {
+  background: $app-white;
+  width: $marquee-width;
+  overflow: hidden;
+  position: relative;
+  padding: 3.5rem 0;
+  @keyframes marqueeMobile {
+    0% {
+      transform: translateX(0);
     }
-    @keyframes marqueeWeb {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(
-          calc(-1 * $marquee-element-width-md * $marquee-elements)
-        );
-      }
+    100% {
+      transform: translateX(
+        calc(-1 * $marquee-element-width-sm * $marquee-elements)
+      );
     }
-    .marquee-content-title {
-      color: #000;
-      font-size: $font-size-24px;
-      line-height: 120%;
+  }
+  @keyframes marqueeWeb {
+    0% {
+      transform: translateX(0);
     }
-    .marquee-content {
-      list-style: none;
-      height: 100%;
+    100% {
+      transform: translateX(
+        calc(-1 * $marquee-element-width-md * $marquee-elements)
+      );
+    }
+  }
+  .marquee-content-title {
+    color: #000;
+    font-size: $font-size-24px;
+    line-height: 120%;
+  }
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+    animation: marqueeMobile 15s linear infinite;
+    @media only screen and (min-width: 768px) {
+      animation: marqueeWeb 15s linear infinite;
+    }
+    li {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      padding: 0;
-      margin-bottom: 0;
-      animation: marqueeMobile 15s linear infinite;
+      flex-shrink: 0;
+      width: $marquee-element-width-sm;
+      max-height: 100%;
       @media only screen and (min-width: 768px) {
-        animation: marqueeWeb 15s linear infinite;
-      }
-      li {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        flex-shrink: 0;
-        width: $marquee-element-width-sm;
-        max-height: 100%;
-        @media only screen and (min-width: 768px) {
-          width: $marquee-element-width-md;
-        }
+        width: $marquee-element-width-md;
       }
     }
   }
 }
-// Home Page Styles End
+// Marquee Styles Home End
+
 // About Page Styles Start
 .app_about {
   padding-top: 8rem;
@@ -1578,6 +1586,7 @@ a {
   }
 }
 // Methodology Page Styles End
+
 // Index Page Styles Start Here
 @keyframes circleOne {
   0% {
@@ -1608,7 +1617,7 @@ a {
 .app_index {
   padding-top: 7.5rem;
   @media only screen and (min-width: 768px) {
-    padding-top: 11rem;
+    padding-top: 12rem;
   }
   .app_index_chart_con {
     .nav-pills-static-text {
@@ -2138,11 +2147,11 @@ a {
 .app_contact {
   background-color: #f2f2f2;
   padding: 9rem 0 0;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     padding: 17rem 0 10.75rem;
   }
   .app_contact_left_content {
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 991px) {
       padding: 0 2rem 4.5rem;
     }
     .app_contact_main_title {
@@ -2172,7 +2181,7 @@ a {
       flex-direction: column;
       padding: 3rem 2rem 4rem;
       background: $app-white;
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 992px) {
         padding: 3rem;
         border-radius: 16px;
         box-shadow: 0px 22px 47px 0px rgba(0, 0, 0, 0.1),
@@ -2190,6 +2199,7 @@ a {
   }
 }
 // Contact Page Styles End
+
 // Institution Login Page Styles Start
 .app_institution {
   @media only screen and (min-width: 768px) {
@@ -2294,6 +2304,7 @@ a {
   }
 }
 // Institution Login Page Styles End
+
 // Media Kit Page Styles Start
 .app_mediakit {
   padding-top: 6rem;
@@ -2421,6 +2432,7 @@ a {
   }
 }
 // Media Kit Page Styles End
+
 // Newsroom Page Styles Start
 .app_newsroom {
   background: #f6f6f6;
@@ -2506,6 +2518,81 @@ a {
   }
 }
 // Newsroom Page Styles End
+
+// Partners Page Styles Start
+.app_partners {
+  padding-top: 8rem;
+  .app_contact {
+    padding-top: 4rem;
+    @media screen and (min-width: 992px) {
+      padding: 4rem 0;
+    }
+
+    .app_contact_left_content {
+      .nav-tabs {
+        background-color: #e3e3e3;
+        border-radius: 32px;
+        border: none;
+        display: inline-flex;
+        flex-wrap: unset;
+        .nav-link {
+          border-radius: 32px;
+          color: $app-black;
+          font: 600 $font-size-16px "Poppins", sans-serif;
+          padding: 13px 20px;
+          &.active {
+            background-color: #25bb61;
+            border-radius: 32px;
+            color: $app-white;
+          }
+        }
+      }
+      .tab-content {
+        ul {
+          li {
+            font: 600 $font-size-18px "Poppins", sans-serif;
+            line-height: 26.64px;
+            margin-bottom: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+  .app_roadmap {
+    padding: 0;
+    .app_roadmap_banner_section {
+      padding: 4rem 0;
+      .app_partners_accordion {
+        background: $app-white;
+        border: 1px solid #8b8b8b;
+        box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+        padding: 1rem 1.5rem;
+        --bs-accordion-btn-focus-border-color: none;
+        --bs-accordion-btn-focus-box-shadow: none;
+        --bs-accordion-btn-icon: url("assets/icons/accordion-plus.svg");
+        --bs-accordion-btn-active-icon: url("assets/icons/accordion-minus.svg");
+        --bs-accordion-btn-icon-transform: rotate(0deg);
+        .accordion-item {
+          .accordion-header {
+            .accordion-button {
+              background-color: transparent;
+              color: #25505c;
+              font: 700 $font-size-20px "Poppins", sans-serif;
+              line-height: 28px;
+            }
+          }
+          .accordion-body {
+            font: 400 $font-size-16px "Poppins", sans-serif;
+            line-height: 28px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+// Parnters Page Styles End
+
 // FAB Subscribe Styles
 .app_subscribe_fab_wrapper {
   position: fixed;
@@ -2529,6 +2616,7 @@ a {
     }
   }
 }
+
 // Modal Styles Start
 .app_generic_modal {
   max-width: 95vw !important;
@@ -2659,6 +2747,7 @@ a {
   }
 }
 // Modal Styles End
+
 // Footer Styles Start
 .app_footer {
   display: flex;
@@ -2714,6 +2803,7 @@ a {
   }
 }
 // Footer Styles End
+
 // Animation disable on mobile
 @media screen and (max-width: 767px) {
   [data-aos] {
