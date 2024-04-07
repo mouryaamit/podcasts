@@ -7,6 +7,12 @@
             </a>
             <h4 class="app_roadmap_title mb-0 text-center"> {{eventTitle}} </h4>
             <p class="app_roadmap_caption text-center">
+                <ng-container *ngIf="getNavParam == 'unitednations'">
+                    <span class="d-inline d-xxl-block">As part of India’s presentation to the world at Citizen Stack - The First United Nations </span>
+                    <span class="d-inline d-xxl-block">Conference in New York on DPI (Digital Public Infrastructure), the Jocata Sumpoorn Index - </span>
+                    <span class="d-inline d-xxl-block">a unique usecase of DPI - private infrastructure that is publicly provisioned, </span>
+                    <span class="d-inline d-xxl-block">stands as a testament to this synergy. </span>
+                </ng-container>
                 <ng-container *ngIf="getNavParam == 'showcase'">
                     <span class="d-inline d-xxl-block">Jocata presented “Sumpoorn” India’s first MSME Economic Activity
                         Index in </span>
@@ -25,9 +31,12 @@
                     <span class="d-inline d-xxl-block">and credit inclusion efforts.</span>
                 </ng-container>
                 <ng-container *ngIf="getNavParam == 'stakeholder'">
-                    <span class="d-inline d-xxl-block">The Inclusive Finance India Report 2023, acknowledges Sumpoorn's role as a </span>
-                    <span class="d-inline d-xxl-block">stakeholder in facilitating MSME financing and brings out the index's potential </span>
-                    <span class="d-inline d-xxl-block">to address the information gaps hindering MSME credit access.</span>
+                    <span class="d-inline d-xxl-block">The Inclusive Finance India Report 2023, acknowledges Sumpoorn's
+                        role as a </span>
+                    <span class="d-inline d-xxl-block">stakeholder in facilitating MSME financing and brings out the
+                        index's potential </span>
+                    <span class="d-inline d-xxl-block">to address the information gaps hindering MSME credit
+                        access.</span>
                 </ng-container>
             </p>
             <p class="app_newsroom_subtitle text-center"> {{eventDate}} </p>
@@ -36,6 +45,28 @@
 
     <div class="row gx-0 app_newsroom_gallery justify-content-center">
         <div class="col-10">
+            <div class="row row-cols-1 row-cols-lg-2" *ngIf="getNavParam == 'unitednations'">
+                <div class="col">
+                    <img src="assets/images/news-un.png" class="news_img" alt="Sumpoorn at UN">
+                    <div class="img_caption">
+                        <p class="news_title fw-bold">India Presents Jocata Sumpoorn at Citizen Stack - The First United Nations Conference in New York
+                             on DPI</p>
+                        <p class="news_detail">Our CEO, Prashant Muddu will be a speaker at the conference on April 25<sup>th</sup>. He will be presenting Sumpoorn as the coming together of Developmental Finance
+                            Institution
+                            - SIDBI (Public) and Jocata (Private tech startup) to build a public good on top of India's
+                            Digital Public Infrastructure - the India Stack.
+                            <br /><br />
+                            This is a significant moment for India and a powerful illustration of the potential of DPI
+                            to drive inclusive economic growth. Stay tuned for further updates on the
+                            conference.<br /><br />
+                            <!-- Click on the link to know more:<br />
+                            <a href="https://www.citizenstack.world/" class="text-black text-decoration-underline"
+                                target="_blank">https://www.citizenstack.world/</a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="row row-cols-1 row-cols-lg-2" *ngIf="getNavParam == 'showcase'">
                 <div class="col" *ngFor="let event of events.showcaseEvent">
                     <img [src]="event.imageURL" class="news_img" [alt]="event.title">
@@ -61,7 +92,9 @@
                     <img [src]="event.imageURL" class="news_img" [alt]="event.title">
                     <div class="img_caption">
                         <p class="news_title fw-bold">{{ event.title }}</p>
-                        <p class="news_detail">{{ event.detail }} <a href="https://inclusivefinanceindia.org/wp-content/uploads/2023/12/IFI-Report-2023.pdf" class="text-black text-decoration-underline" target="_blank">Read More</a></p>
+                        <p class="news_detail">{{ event.detail }} <a
+                                href="https://inclusivefinanceindia.org/wp-content/uploads/2023/12/IFI-Report-2023.pdf"
+                                class="text-black text-decoration-underline" target="_blank">Read More</a></p>
                     </div>
                 </div>
             </div>

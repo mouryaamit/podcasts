@@ -44,4 +44,9 @@ export class HeaderComponent implements OnInit {
     this.isResponsive = !this.isResponsive;
     document.body.classList.toggle('no-scroll');
   }
+
+  goToGallery(param) {
+    console.log('hi')
+    this.router.navigate(['/newsroom-events'], param);
+  }
 }
