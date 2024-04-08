@@ -104,7 +104,7 @@ export class PartnersComponent implements OnInit {
     this.partnersFormGroup.get('company')?.setValidators([Validators.required]);
     this.partnersFormGroup.get('designation')?.setValidators([Validators.required]);
     this.partnersFormGroup.get('businessEmail')?.setValidators([Validators.required, Validators.pattern(/^[a-zA-Z0-9]+[a-zA-Z0-9.!#$%&'*+-/=?^_`{]+@[a-zA-Z0-9!#$%&'*+-/=?^_`{]+\.[a-zA-Z.]{2,8}$/)]);
-    this.partnersFormGroup.get('contactNumber')?.setValidators([Validators.required,Validators.pattern(/^[9876]\d{9}$/)]);
+    this.partnersFormGroup.get('contactNumber')?.setValidators([Validators.pattern(/^[9876]\d{9}$/)]);
     this.partnersFormGroup.get('message')?.setValidators([Validators.required]);
     this.partnersFormGroup.get('checkedTermsAndConditions')?.setValidators([Validators.requiredTrue]);
   }

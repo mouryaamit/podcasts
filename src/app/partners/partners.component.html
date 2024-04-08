@@ -133,8 +133,6 @@
                                                     name="Contact Number" placeholder="Contact Number">
                                                 <div class="form-control-feedback"
                                                     *ngIf="partnersFormGroup.get('contactNumber')?.errors && (partnersFormGroup.get('contactNumber')?.dirty || partnersFormGroup.get('contactNumber')?.touched)">
-                                                    <p *ngIf="partnersFormGroup.get('contactNumber')?.errors?.['required']"
-                                                        class="validation-msg">Mobile Number Required</p>
                                                     <p *ngIf="partnersFormGroup.get('contactNumber')?.errors?.['pattern']"
                                                         class="validation-msg">Mobile
                                                         Number is Invalid</p>
