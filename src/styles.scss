@@ -429,20 +429,17 @@ a {
       width: 100%;
       height: 100%;
       background: rgba(180, 180, 180, 0.5);
-      animation: flash 1s ease-in-out infinite;
+      animation: flash 3s ease-in-out infinite;
       z-index: -1;
     }
   
     @keyframes flash {
       0% {
         opacity: 1;
-      }
-    
+      }    
       50% {
         opacity: 0;
-      }
-      
-      
+      }    
       100% {
         opacity: 1;
       }
@@ -2492,7 +2489,7 @@ a {
 // Newsroom Page Styles Start
 .app_newsroom {
   background: #f6f6f6;
-  padding-top: 11rem;
+  padding-top: 10rem;
   .app_roadmap_banner_section {
     background: #d1f2e8;
     position: relative;
@@ -2633,7 +2630,7 @@ a {
             .accordion-button {
               background-color: transparent;
               color: #25505c;
-              font: 700 $font-size-20px "Poppins", sans-serif;
+              font: 700 $font-size-18px "Poppins", sans-serif;
               line-height: 28px;
             }
           }
