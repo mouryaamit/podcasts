@@ -12,6 +12,7 @@ import { MediaKitComponent } from './media-kit/media-kit.component';
 import { NewsroomComponent } from './newsroom/newsroom.component';
 import { NewsroomEventsComponent } from './newsroom-events/newsroom-events.component';
 import { PartnersComponent } from './partners/partners.component';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 const routes: Routes = [
   {
@@ -117,6 +118,10 @@ const routes: Routes = [
       description: `Stay informed and engaged with the latest happenings at Sumpoorn on our Newsroom page. Explore a dynamic space where we bring you real-time updates on the Index, event highlights, closed group discussion outcomes, and much more.`,
       keywords: `sumpoorn news, sumpoorn updates, sumpoorn index news, sumpoorn highlights, sumpoorn launch, sumpoorn showcase, sumpoorn gallery, sumpoorn discussion`
     }
+  },
+  {
+    path: 'maintenance',
+    component: MaintenanceComponent,
   },
   { path: '**', 
     redirectTo: 'home',

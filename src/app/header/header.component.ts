@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   isResponsive = false;
   isInstitutionActive: boolean = false;
   isNewsroomEventsActive: boolean = false;
+  isUnderMaintenance: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -36,6 +37,11 @@ export class HeaderComponent implements OnInit {
       // Check if Newsroom events is active
       if (event instanceof NavigationEnd) {
         this.isNewsroomEventsActive = currentUrl.includes('/newsroom') || currentUrl.includes('/newsroom-events');
+      }
+
+      // Check if Maintenance is active
+      if (event instanceof NavigationEnd) {
+        this.isUnderMaintenance = currentUrl.includes('/maintenance');
       }
     });
   }

@@ -32,6 +32,7 @@ import { InstitutionLoginModelComponent } from './dialog/institution-login-model
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { PartnersComponent } from './partners/partners.component';
     InstitutionLoginModelComponent,
     RoadmapModelComponent,
     SubscribeButtonComponent,
-    PartnersComponent
+    PartnersComponent,
+    MaintenanceComponent
   ],
   entryComponents:[
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent

@@ -1,5 +1,5 @@
-<header class="fixed-top app_header_wrapper" [class.app_header_shadow]="appHeaderShadow">
-  <div class="app_header_un_strip d-block d-md-flex justify-content-center align-items-center px-3 px-md-0">
+<header class="fixed-top app_header_wrapper" [class.app_header_shadow]="appHeaderShadow && !isUnderMaintenance">
+  <div class="app_header_un_strip d-block d-md-flex justify-content-center align-items-center px-3 px-md-0" *ngIf="!isUnderMaintenance">
       <p><span class="fw-bold">Sumpoorn</span> at the <span class="fw-bold">United Nations</span> in New York</p>
       <p class="mx-2">|</p>
       <p>
@@ -9,7 +9,7 @@
         <a (click)="goToGallery('unitednations')">Click here</a>
       </p>
   </div>
-  <div class="app_header_strip d-none d-xl-flex justify-content-end align-items-center">
+  <div class="app_header_strip d-none d-xl-flex justify-content-end align-items-center" *ngIf="!isUnderMaintenance">
     <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
     <a routerLink="contact" routerLinkActive="active" class="header_page_link">Contact</a>
     <a routerLink="institution" routerLinkActive="active" class="header_cta">
@@ -25,7 +25,7 @@
           alt="Jocata Sumpoorn Logo" fetchpriority="high" />
       </a>
     </div>
-    <div class="app_header_right d-flex flex-column align-self-center align-self-xl-end">
+    <div class="app_header_right d-flex flex-column align-self-center align-self-xl-end" *ngIf="!isUnderMaintenance">
       <ul class="nav nav-underline d-none d-xl-flex" [class.responsive_menu]="isResponsive">
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="home">Home</a>

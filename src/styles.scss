@@ -2620,6 +2620,39 @@ a {
 }
 // Parnters Page Styles End
 
+// Maintenance Page Styles Start
+.app_maintenance {
+  background: $app-white;
+  @media only screen and (min-width: 1200px) {
+    padding: 10rem 0 5rem;
+  }
+  .app_maintenance_img_con {
+    background: $app-white;
+    box-shadow: 0px 10.82px 23.44px 0px #158A6630;
+    border: 6px solid #6CA88F;
+    border-radius: 20px;
+    padding: 2rem;
+    
+    .app_maintenance_title {
+      color: #25505c;
+      font: 700 $font-size-18px "Poppins", sans-serif;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-24px;
+      }
+    }
+    .app_maintenance_subtitle {
+      color: #25505c;
+      font-size: $font-size-16px;
+      font-weight: 500;
+      line-height: 27px;
+      @media only screen and (min-width: 768px) {
+        font-size: $font-size-18px;
+      }
+    }
+  }
+}
+// Maintenance Page Styles End
+
 // FAB Subscribe Styles
 .app_subscribe_fab_wrapper {
   position: fixed;

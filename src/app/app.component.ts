@@ -52,4 +52,9 @@ export class AppComponent implements OnInit {
     $(document.body).removeClass('modal-open');
     $(document.body).removeAttr('style');
   }
+
+  // Check for Maintenance State
+  isUnderMaintenance(): boolean {
+    return this.router.url.includes('maintenance');
+  }
 }
