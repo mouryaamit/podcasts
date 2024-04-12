@@ -1,4 +1,4 @@
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,28 +10,6 @@ export class NewsroomEventsComponent implements OnInit {
   getNavParam: any;
   eventTitle: string | undefined;
   eventDate: string | undefined;
-  route: any;
-
-  constructor(public router: Router) {
-    this.getNavParam = this.router.getCurrentNavigation()?.extras;
-    if (this.getNavParam == 'showcase') {
-      this.eventTitle = 'G20 Showcase Highlights';
-      this.eventDate = 'Mumbai, September 12, 2023';
-    } else if (this.getNavParam == 'launch') {
-      this.eventTitle = 'Launch Event Highlights';
-      this.eventDate = 'Mumbai, November 10, 2023';
-    } else if (this.getNavParam == 'stakeholder') {
-      this.eventTitle = 'Strategic Context of MSME Financing';
-      this.eventDate = 'New Delhi, December 12, 2023';
-    } else if (this.getNavParam == 'unitednations') {
-      this.eventTitle =
-        'Jocata Sumpoorn in association with SIDBI at Citizen Stack';
-      this.eventDate = 'New York, April 25-26';
-    }
-  }
-
-  ngOnInit(): void {}
-
   events = {
     launchEvent: [
       {
@@ -85,4 +63,30 @@ export class NewsroomEventsComponent implements OnInit {
       },
     ]    
   };
+
+  constructor(private route: ActivatedRoute) {
+    
+  }
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.getNavParam= params.get('id');
+    });
+    // this.getNavParam = this.router.getCurrentNavigation()?.extras;
+    if (this.getNavParam == 'showcase') {
+      this.eventTitle = 'G20 Showcase Highlights';
+      this.eventDate = 'Mumbai, September 12, 2023';
+    } else if (this.getNavParam == 'launch') {
+      this.eventTitle = 'Launch Event Highlights';
+      this.eventDate = 'Mumbai, November 10, 2023';
+    } else if (this.getNavParam == 'stakeholder') {
+      this.eventTitle = 'Strategic Context of MSME Financing';
+      this.eventDate = 'New Delhi, December 12, 2023';
+    } else if (this.getNavParam == 'unitednations') {
+      this.eventTitle =
+        'Jocata Sumpoorn in association with SIDBI at Citizen Stack';
+      this.eventDate = 'New York, April 25-26';
+    }
+  }
+
 }

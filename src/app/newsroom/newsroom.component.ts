@@ -36,6 +36,6 @@ export class NewsroomComponent implements OnInit {
   }
 
   goToGallery(param) {
-    this.router.navigate(['/newsroom-events'], param);
+    this.router.navigate(['/newsroom-events', param]);
   }
 }

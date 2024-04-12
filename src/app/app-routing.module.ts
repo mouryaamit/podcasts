@@ -111,7 +111,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'newsroom-events',
+    path: 'newsroom-events/:id',
     component: NewsroomEventsComponent,
     data: {
       title: `Jocata Sumpoorn Highlights: Unveiling India’s First MSME Economic Activity Index in Partnership with SIDBI`,

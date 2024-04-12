@@ -53,6 +53,6 @@ export class HeaderComponent implements OnInit {
 
   goToGallery(param) {
     console.log('hi')
-    this.router.navigate(['/newsroom-events'], param);
+    this.router.navigate(['/newsroom-events', param]);
   }
 }
