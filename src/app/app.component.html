@@ -2,8 +2,8 @@
 <!-- <div class="container"> -->
     <router-outlet></router-outlet>
 <!-- </div> -->
-<app-subscribe-button></app-subscribe-button>
-<app-footer></app-footer>
+<app-subscribe-button *ngIf="!isUnderMaintenance()"></app-subscribe-button>
+<app-footer *ngIf="!isUnderMaintenance()"></app-footer>
 
 <!-- Generic Modal for Errors -->
 <div class="modal" id="errorsModal">

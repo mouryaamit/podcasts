@@ -29,6 +29,24 @@ export class SumpoornApiService {
     });
   }
 
+  savePartnerDetails(data) {
+    return new Promise((resolve, reject) => {
+      this.apiService.postApi(environment.swaraHost+"swara-sumpoorn/services/partner/v1/save-partner-details", data, null).then(
+        (resp: any) => {
+          if (resp && resp.statusCode == 200) {
+            resolve(resp);
+          }
+          else {
+            reject(this.apiService.commonStrings.http_error);
+          }
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+
   saveSubscriptionDetails(data) {
     return new Promise((resolve, reject) => {
       this.apiService.postApi(environment.swaraHost+"swara-sumpoorn/services/subscription/v1/save-subscription-details", data, null).then(

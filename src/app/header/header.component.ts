@@ -10,16 +10,12 @@ export class HeaderComponent implements OnInit {
   isResponsive = false;
   isInstitutionActive: boolean = false;
   isNewsroomEventsActive: boolean = false;
+  isUnderMaintenance: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scroll = window.scrollY;
     this.appHeaderShadow = scroll > 0;
-  }
-
-  toggleMenu() {
-    this.isResponsive = !this.isResponsive;
-    document.body.classList.toggle('no-scroll');
   }
 
   constructor(private router: Router) { }
@@ -42,6 +38,21 @@ export class HeaderComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.isNewsroomEventsActive = currentUrl.includes('/newsroom') || currentUrl.includes('/newsroom-events');
       }
+
+      // Check if Maintenance is active
+      if (event instanceof NavigationEnd) {
+        this.isUnderMaintenance = currentUrl.includes('/maintenance');
+      }
     });
+  }
+
+  toggleMenu() {
+    this.isResponsive = !this.isResponsive;
+    document.body.classList.toggle('no-scroll');
+  }
+
+  goToGallery(param) {
+    console.log('hi')
+    this.router.navigate(['/newsroom-events', param]);
   }
 }

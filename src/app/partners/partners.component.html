@@ -1,0 +1,219 @@
+<main class="app_partners">
+    <div class="row gx-0 text-center app_home_marquee">
+        <div class="col-md-12">
+            <span class="app_home_section_title mb-0">Our Partners</span>
+            <ul class="marquee-content">
+                <li *ngFor="let partner of partners">
+                    <!-- <h6 class="marquee-content-title">{{ partner.title }}</h6> -->
+                    <img [src]="partner.imageSrc" width="400" height="200" class="img-fluid" [alt]="partner.imageAlt"
+                        loading="lazy">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="app_contact">
+        <div class="row gx-0 justify-content-center">
+            <div class="col-sm-12 col-lg-10">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-sm-12 col-lg-5">
+                        <div class="app_contact_left_content">
+                            <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="first-tab" data-bs-toggle="tab"
+                                        data-bs-target="#first-tab-pane" type="button" role="tab"
+                                        aria-controls="first-tab-pane" aria-selected="true">Who should partner?</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="second-tab" data-bs-toggle="tab"
+                                        data-bs-target="#second-tab-pane" type="button" role="tab"
+                                        aria-controls="second-tab-pane" aria-selected="false">Why partner with
+                                        us?</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="first-tab-pane" role="tabpanel"
+                                    aria-labelledby="first-tab" tabindex="0">
+                                    <ul>
+                                        <li>Digital Ecosystem Enablers</li>
+                                        <li>Industry Associations, Trade & MSME Bodies</li>
+                                        <li>MSME Think Tanks & Knowledge Institutions</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="second-tab-pane" role="tabpanel"
+                                    aria-labelledby="second-tab" tabindex="0">
+                                    <ul>
+                                        <li>MSME Ecosystem Reach</li>
+                                        <li>Data Driven Impact</li>
+                                        <li>Policy & Research Support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-7">
+                        <div class="app_contact_cards">
+                            <div class="app_contact_card_box">
+                                <h4 class="app_contact_card_box_title mb-4">Partner with us for MSME impact</h4>
+                                <form [formGroup]="partnersFormGroup">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="firstName"
+                                                    id="fistName" name="First Name" placeholder="First Name *"
+                                                    autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('firstName')?.errors && (partnersFormGroup.get('firstName')?.dirty || partnersFormGroup.get('firstName')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('firstName')?.errors?.['required']"
+                                                        class="validation-msg">First
+                                                        Name Required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="lastName"
+                                                    id="lastName" name="Last Name" placeholder="Last Name *"
+                                                    autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('lastName')?.errors && (partnersFormGroup.get('lastName')?.dirty || partnersFormGroup.get('lastName')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('lastName')?.errors?.['required']"
+                                                        class="validation-msg">Last
+                                                        Name Required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="company"
+                                                    id="companyName" name="Company" placeholder="Company *"
+                                                    autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('company')?.errors && (partnersFormGroup.get('company')?.dirty || partnersFormGroup.get('company')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('company')?.errors?.['required']"
+                                                        class="validation-msg">Company Name Required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="designation"
+                                                    id="designation" name="Designation" placeholder="Designation *"
+                                                    autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('designation')?.errors && (partnersFormGroup.get('designation')?.dirty || partnersFormGroup.get('designation')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('designation')?.errors?.['required']"
+                                                        class="validation-msg">Designation Required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="businessEmail"
+                                                    id="email" name="Email" placeholder="Business Email *"
+                                                    autocomplete="off">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('businessEmail')?.errors && (partnersFormGroup.get('businessEmail')?.dirty || partnersFormGroup.get('businessEmail')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('businessEmail')?.errors?.['required']"
+                                                        class="validation-msg">Email Required</p>
+                                                    <p *ngIf="partnersFormGroup.get('businessEmail')?.errors?.['pattern']"
+                                                        class="validation-msg">Email Invalid</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" maxlength="10"
+                                                    formControlName="contactNumber" id="contactNumber"
+                                                    name="Contact Number" placeholder="Contact Number">
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('contactNumber')?.errors && (partnersFormGroup.get('contactNumber')?.dirty || partnersFormGroup.get('contactNumber')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('contactNumber')?.errors?.['pattern']"
+                                                        class="validation-msg">Mobile
+                                                        Number is Invalid</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="mb-2" for="messageArea">Type your Message*</label>
+                                                <textarea class="form-control feedback" formControlName="message"
+                                                    id="messageArea">
+                                                </textarea>
+                                                <div class="form-control-feedback"
+                                                    *ngIf="partnersFormGroup.get('message')?.errors && (partnersFormGroup.get('message')?.dirty || partnersFormGroup.get('message')?.touched)">
+                                                    <p *ngIf="partnersFormGroup.get('message')?.errors?.['required']"
+                                                        class="validation-msg">Message Required</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 form-terms">
+                                            <input type="checkbox" formControlName="checkedTermsAndConditions"
+                                                id="agreeCheckbox">
+                                            <label for="agreeCheckbox" class="terms-label ps-2">
+                                                By submitting this request, I agree with the Jocata
+                                                <a class="custom-link" routerLink="/tou">Terms of Use.</a>
+                                            </label>
+                                        </div>
+                                        <div class="col-12 form-control-feedback"
+                                        *ngIf="partnersFormGroup.get('checkedTermsAndConditions')?.errors && (partnersFormGroup.get('checkedTermsAndConditions')?.dirty || partnersFormGroup.get('checkedTermsAndConditions')?.touched)">
+                                        <p *ngIf="partnersFormGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+                                            class="validation-msg">Please select checkbox</p>
+                                    </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <div class="col-sm-12 col-lg-8 col-xl-9">
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4 col-xl-3">
+                                            <button class="sm-primary-button w-100" [disabled]="partnersFormGroup.invalid" (click)="savePartnerInfo()">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app_roadmap">
+        <div class="row gx-0 text-center app_roadmap_banner_section">
+            <div class="col-12">
+                <h4 class="app_roadmap_title mb-5">FAQ</h4>
+            </div>
+            <div class="col-sm-10 mx-auto">
+                <div class="accordion accordion-flush app_partners_accordion" id="accordionFlushPartners">
+                    <div class="accordion-item" *ngFor="let item of accordionData; let i = index">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#flush-collapse' + i" aria-expanded="false"
+                                [attr.aria-controls]="'flush-collapse' + i">
+                                {{ item.question }}
+                            </button>
+                        </h2>
+                        <div [id]="'flush-collapse' + i" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushPartners">
+                            <div class="accordion-body">
+                                <ng-container *ngFor="let paragraph of item.answer">
+                                    <p [innerHTML]="paragraph"></p>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
