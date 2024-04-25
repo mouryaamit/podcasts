@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UnitedNationsModelComponent } from '../dialog/united-nations/united-nations.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -39,8 +41,23 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.openDialog();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(UnitedNationsModelComponent, {
+      disableClose: true,
+      panelClass: 'app_generic_modal',
+      data: {}
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+      } else {
+      }
+    });
+  }
   
 }
