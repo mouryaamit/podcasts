@@ -59,7 +59,7 @@ import { PartnersComponent } from './partners/partners.component';
     PartnersComponent
   ],
   entryComponents:[
-    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent, InstitutionLoginModelComponent
+    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
   ],
   exports: [
     
