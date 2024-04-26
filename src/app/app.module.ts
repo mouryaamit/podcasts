@@ -30,7 +30,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
-import { UnitedNationsModelComponent } from './dialog/united-nations/united-nations.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
 
@@ -56,7 +55,6 @@ import { PartnersComponent } from './partners/partners.component';
     SubscribeModelComponent,
     InstitutionLoginModelComponent,
     RoadmapModelComponent,
-    UnitedNationsModelComponent,
     SubscribeButtonComponent,
     PartnersComponent
   ],
