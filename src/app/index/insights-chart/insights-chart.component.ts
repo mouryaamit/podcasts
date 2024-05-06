@@ -2083,7 +2083,7 @@ export class InsightsChartComponent implements OnInit {
             .append('rect')
             .attr('x', width)
             .attr('y', 0)
-            .attr('width', 25)
+            .attr('width', 26.5)
             .attr('height', height + 40)
             .attr('id', 'rect_xaxis')
             .attr('stroke', 'black')

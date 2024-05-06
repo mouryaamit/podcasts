@@ -1263,7 +1263,7 @@ export class ContextChartComponent implements OnInit {
                     svg.append('rect')
                         .attr('x', default_width)
                         .attr('y', 0)
-                        .attr('width', 25)
+                        .attr('width', 26.5)
                         .attr('height', height + 40)
                         .attr("id", "rect_xaxis_context")
                         .attr('stroke', 'black')
