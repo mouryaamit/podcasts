@@ -52,7 +52,7 @@ export class NewsroomEventsComponent implements OnInit {
         imageURL: 'assets/images/news-digital-stack.jpg',
       },
       {
-        title: 'DPI powered Jocata Sumpoorn Index to unlock MSME potential',
+        title: 'DPI powered Jocata Sumpoorn to unlock MSME potential',
         detail:
           'Jocata CEO Prashant Muddu presented Jocata Sumpoorn, a public-private partnership with Small Industries Development Bank (SIDBI) as a unique use case of DPI - private infrastructure that is publicly provisioned. This initiative aims to bridge the MSME data-for-insights gap, empowering stakeholders to strategize credit flow and create tailored policies for the sustainable growth of the sector. As a deep tech company having served in the digital lending and analytics space for over a decade, Jocata Sumpoorn is a way of giving back to the financial and MSME ecosystem.',
         imageURL: 'assets/images/news-dpi-powered.jpg',
