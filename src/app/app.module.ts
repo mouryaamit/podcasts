@@ -32,6 +32,7 @@ import { InstitutionLoginModelComponent } from './dialog/institution-login-model
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
+import { AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaOnlyDirective, AlphaWithSpacesCommaDirective, AlphaWithSpacesDirective, AlphaWithUnderscoreCommaDirective, NumberOnlyDirective } from './directive/common.directive';
 
 @NgModule({
   declarations: [
@@ -56,13 +57,19 @@ import { PartnersComponent } from './partners/partners.component';
     InstitutionLoginModelComponent,
     RoadmapModelComponent,
     SubscribeButtonComponent,
-    PartnersComponent
+    PartnersComponent,
+    AlphaOnlyDirective,
+    AlphaWithSpacesDirective,
+    AlphaNumericWithSpecialsAndSpaceOnlyDirective,
+    NumberOnlyDirective,
+    AlphaWithSpacesCommaDirective,
+    AlphaWithUnderscoreCommaDirective
   ],
-  entryComponents:[
+  entryComponents: [
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
   ],
   exports: [
-    
+
   ],
   imports: [
     HttpClientModule,
@@ -75,7 +82,7 @@ import { PartnersComponent } from './partners/partners.component';
     MatDialogModule,
     ToastrModule.forRoot({
       maxOpened: 1,
-      iconClasses  : {
+      iconClasses: {
         error: 'toast-error',
         info: 'toast-info',
         success: 'toast-success',
