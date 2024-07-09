@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { GraphApiService } from '../services/graph-api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
-import { saveAs } from 'file-saver'; 
+import { saveAs } from 'file-saver';
 import * as $ from 'jquery';
 import * as CryptoJS from 'crypto-js';
 import { InsightsChartComponent } from './insights-chart/insights-chart.component';
+import { Router } from '@angular/router';
 // declare var $: any;
 
 @Component({
@@ -27,10 +28,17 @@ export class IndexComponent implements OnInit {
     addComentaryData: any;
     encryptedData: string = "";
     downloadMonth: any;
+    hide:boolean = false;
     // @ViewChild('slide_prev') slide_prev: ElementRef;
     // @ViewChild('slide_next') slide_next: ElementRef;
 
-    constructor(private graphApiService: GraphApiService, public sumpoornApiService: SumpoornApiService) { }
+    constructor(private graphApiService: GraphApiService, public sumpoornApiService: SumpoornApiService, private router: Router) {
+      this.router.events.subscribe((event) => {
+        const currentUrl = this.router.url;
+        this.hide = (currentUrl === "/index?hide=true");
+        console.log("currentUrl",currentUrl,"hide",this.hide)
+          });
+     }
 
     // Data for Context Table Mobile
     contextTableData = [
@@ -80,7 +88,7 @@ export class IndexComponent implements OnInit {
     ngOnInit(): void {
         this.getSumpoornData();
         // this.getSumpoornDataFromJson();
-        
+
         // this.graphApiService.getSumpoornGraphData().then((data) => {
         //     if (data) {
         //         this.sumpoornGraphData = data;
@@ -88,8 +96,8 @@ export class IndexComponent implements OnInit {
         //     }
         // }, (error) => {
         //     console.error("getSumpoornGraphData Error", error);
-        // })        
-    }    
+        // })
+    }
 
     getSumpoornData(){
         const name = "SUMPOORNDATA";
@@ -118,7 +126,7 @@ export class IndexComponent implements OnInit {
             }
         }, (error) => {
             console.error("getSumpoornGraphData Error", error);
-        }) 
+        })
     }
 
     // getContextGraphData() {
@@ -148,11 +156,11 @@ export class IndexComponent implements OnInit {
     //     }
     // }
 
-    
+
     scrollToRight(tab) {
         this.insightsInfoIcon = tab === 'Insights';
         this.contextInfoIcon = tab === 'Context';
-        
+
         if (tab === 'Insights') {
             $("#insights_graph_svg").scrollLeft(this.insightsGraphWidth);
             $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth);
@@ -173,7 +181,7 @@ export class IndexComponent implements OnInit {
     downloadSumpoornData() {
         const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
         this.encryptedData = CryptoJS.AES.encrypt( document.getElementsByClassName('ec_month_title_download')[0].innerHTML, salt).toString();
-        
+
         this.sumpoornApiService.downloadSumpoornGraphDetails({monthUuid: this.encryptedData}).then(
           (resp: any) => {
             const byteArray = new Uint8Array(atob(resp.pdf).split('').map(char => char.charCodeAt(0)));
