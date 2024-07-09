@@ -179,6 +179,36 @@ export class AlphaNumericWithSpecialsAndSpaceOnlyDirective {
 }
 
 @Directive({
+  selector: '[messageAlpha]',
+  inputs: ['maxlength', 'upperOnly'],
+})
+export class messageAlphaDirective {
+  private maxlength!: number;
+  private upperOnly!: boolean;
+
+  constructor(private el: ElementRef, private control: NgControl) {
+  }
+  @HostListener('input', ['$event']) onInputChange(event) {
+    const initialValue = this.el.nativeElement.value;
+    let newValue = initialValue;
+
+    newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, '');
+
+    if (this.maxlength && newValue.length > this.maxlength) {
+      newValue = newValue.substring(0, this.maxlength);
+    }
+    if (this.upperOnly) newValue = newValue.toUpperCase();
+    this.el.nativeElement.value = newValue;
+    this.control?.control?.setValue(newValue);
+
+    if (initialValue !== this.el.nativeElement.value) {
+      event.stopPropagation();
+    }
+    // console.log(initialValue, newValue);
+  }
+}
+
+@Directive({
   selector: '[numberOnly]',
   inputs: ['length', 'cropZero'],
 })
