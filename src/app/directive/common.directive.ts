@@ -149,7 +149,7 @@ export class AlphaNumericWithSpecialsAndSpaceOnlyDirective {
   inputs: ['maxlength', 'upperOnly'],
 })
 export class AlphaNumSpecialsDirective {
-  private maxlength!: number;
+  public maxlength!: number;
   private upperOnly!: boolean;
 
   constructor(private el: ElementRef, private control: NgControl) {
@@ -159,7 +159,17 @@ export class AlphaNumSpecialsDirective {
     let newValue = initialValue;
 
     newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, ''); // ^[A-Za-z][A-Za-z0-9_@.&-,()?\s]{0,499}$ 
+    if (newValue.length == 1) {
+      const regexAlpha = /^[a-zA-Z]*$/;
+      // console.log(regexAlpha.test(newValue), "initialValue ", initialValue);
 
+      if (!regexAlpha.test(newValue))
+        newValue = "";
+
+    } else {
+      newValue = newValue.replace(/[^a-zA-Z0-9]/g, '');
+
+    }
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
     }
