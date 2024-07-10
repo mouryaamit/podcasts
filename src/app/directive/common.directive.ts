@@ -157,8 +157,9 @@ export class AlphaNumSpecialsDirective {
   @HostListener('input', ['$event']) onInputChange(event) {
     const initialValue = this.el.nativeElement.value;
     let newValue = initialValue;
-
+    newValue = newValue.replace(/^\s/g, '');
     newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, ''); // ^[A-Za-z][A-Za-z0-9_@.&-,()?\s]{0,499}$ 
+    newValue = newValue.replace(/\s\s/g, ' ');
     if (newValue.length == 1) {
       const regexAlpha = /^[a-zA-Z]*$/;
       // console.log(regexAlpha.test(newValue), "initialValue ", initialValue);
@@ -167,7 +168,7 @@ export class AlphaNumSpecialsDirective {
         newValue = "";
 
     } else {
-      newValue = newValue.replace(/[^a-zA-Z0-9]/g, '');
+      newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, '');
 
     }
     if (this.maxlength && newValue.length > this.maxlength) {
@@ -228,5 +229,37 @@ export class NumberOnlyDirective {
     if (event.keyCode == 8 && event.srcElement.previousElementSibling) {
       event.srcElement.previousElementSibling.focus();
     }
+  }
+}
+
+@Directive({
+  selector: '[alphaEmail]',
+  inputs: ['maxlength'],
+})
+export class AlphaWithUnderscoreCommaDirective {
+  public maxlength!: number;
+
+  constructor(private control: NgControl, private el: ElementRef) {
+
+  }
+  @HostListener('input', ['$event']) onInputChange(event) {
+    const initialValue = this.el.nativeElement.value;
+    let newValue = initialValue;
+
+    // newValue = newValue.replace(/^\s/g, '');
+    newValue = newValue.replace(/[^0-9a-zA-Z.@_-  ]*/g, '');
+    // newValue = newValue.replace(/\s\s/g, ' ');
+
+    if (this.maxlength && newValue.length > this.maxlength) {
+      newValue = newValue.substring(0, this.maxlength);
+    }
+    // if (this.upperOnly) newValue = newValue.toUpperCase();
+    this.el.nativeElement.value = newValue;
+    this.control?.control?.setValue(newValue);
+
+    if (initialValue !== this.el.nativeElement.value) {
+      event.stopPropagation();
+    }
+    // console.log(initialValue, newValue);
   }
 }

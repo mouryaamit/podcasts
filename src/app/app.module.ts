@@ -35,7 +35,7 @@ import { PartnersComponent } from './partners/partners.component';
 import {
   AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaNumericOnlyDirective,
   AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
-  NumberOnlyDirective, AlphaNumSpecialsDirective
+  NumberOnlyDirective, AlphaNumSpecialsDirective, AlphaWithUnderscoreCommaDirective
 } from './directive/common.directive';
 
 @NgModule({
@@ -67,6 +67,7 @@ import {
     AlphaNumericWithSpecialsAndSpaceOnlyDirective,
     NumberOnlyDirective,
     AlphaWithSpacesCommaHiphenDirective,
+    AlphaWithUnderscoreCommaDirective,
     AlphaNumSpecialsDirective
   ],
   entryComponents: [

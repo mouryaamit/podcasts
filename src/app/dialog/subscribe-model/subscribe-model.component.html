@@ -1,7 +1,11 @@
 <!-- Modal Header -->
 <div class="modal-header">
   <h4 class="modal-title">Subscribe</h4>
-  <button type="button" class="btn-close" (click)="hideSubscribeModal()"></button>
+  <button
+    type="button"
+    class="btn-close"
+    (click)="hideSubscribeModal()"
+  ></button>
 </div>
 
 <!-- Modal body -->
@@ -12,14 +16,28 @@
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="firstName" id="fistName" name="First Name"
-            placeholder="First Name *" autocomplete="off" alphaWithSpaces />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            id="fistName"
+            name="First Name"
+            placeholder="First Name *"
+            autocomplete="off"
+            alphaWithSpaces
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('firstName')?.errors &&
               (subscribeGroup.get('firstName')?.dirty ||
                 subscribeGroup.get('firstName')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('firstName')?.errors?.['required']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('firstName')?.errors?.['required']"
+              class="validation-msg"
+            >
               First Name Required
             </p>
           </div>
@@ -28,14 +46,28 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="lastName" id="lastName" name="Last Name"
-            placeholder="Last Name *" autocomplete="off" alphaWithSpaces />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            id="lastName"
+            name="Last Name"
+            placeholder="Last Name *"
+            autocomplete="off"
+            alphaWithSpaces
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('lastName')?.errors &&
               (subscribeGroup.get('lastName')?.dirty ||
                 subscribeGroup.get('lastName')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('lastName')?.errors?.['required']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('lastName')?.errors?.['required']"
+              class="validation-msg"
+            >
               Last Name Required
             </p>
           </div>
@@ -44,17 +76,34 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="businessEmail" id="email" name="Email"
-            placeholder="Business Email *" autocomplete="off" AlphaWithUnderscoreCommaDirective />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            formControlName="businessEmail"
+            id="email"
+            name="Email"
+            placeholder="Business Email *"
+            autocomplete="off"
+            alphaEmail
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('businessEmail')?.errors &&
               (subscribeGroup.get('businessEmail')?.dirty ||
                 subscribeGroup.get('businessEmail')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['required']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('businessEmail')?.errors?.['required']"
+              class="validation-msg"
+            >
               Email Required
             </p>
-            <p *ngIf="subscribeGroup.get('businessEmail')?.errors?.['pattern']" class="validation-msg">
+            <p
+              *ngIf="subscribeGroup.get('businessEmail')?.errors?.['pattern']"
+              class="validation-msg"
+            >
               Email Invalid
             </p>
           </div>
@@ -63,14 +112,28 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="jobTitle" id="jobTitle" name="Job Title"
-            placeholder="Job Title *" autocomplete="off" alphaWithSpacesCommaHiphen />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            formControlName="jobTitle"
+            id="jobTitle"
+            name="Job Title"
+            placeholder="Job Title *"
+            autocomplete="off"
+            alphaWithSpacesCommaHiphen
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('jobTitle')?.errors &&
               (subscribeGroup.get('jobTitle')?.dirty ||
                 subscribeGroup.get('jobTitle')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('jobTitle')?.errors?.['required']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('jobTitle')?.errors?.['required']"
+              class="validation-msg"
+            >
               Job Title Required
             </p>
           </div>
@@ -79,14 +142,28 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="company" id="companyName" name="Company"
-            placeholder="Company *" autocomplete="off" alphaNumericWithSpecialsAndSpaceOnly />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            formControlName="company"
+            id="companyName"
+            name="Company"
+            placeholder="Company *"
+            autocomplete="off"
+            alphaNumericWithSpecialsAndSpaceOnly
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('company')?.errors &&
               (subscribeGroup.get('company')?.dirty ||
                 subscribeGroup.get('company')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('company')?.errors?.['required']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('company')?.errors?.['required']"
+              class="validation-msg"
+            >
               Company Name Required
             </p>
           </div>
@@ -95,21 +172,42 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="industry" id="industryName" name="Industry"
-            placeholder="Industry" alphaNumericWithSpecialsAndSpaceOnly />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="industry"
+            id="industryName"
+            name="Industry"
+            placeholder="Industry"
+            alphaNumericWithSpecialsAndSpaceOnly
+          />
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <input type="text" class="form-control" maxlength="10" formControlName="contactNumber" id="contactNumber"
-            name="Contact Number" placeholder="Contact Number" numberOnly />
-          <div class="form-control-feedback" *ngIf="
+          <input
+            type="text"
+            class="form-control"
+            maxlength="10"
+            formControlName="contactNumber"
+            id="contactNumber"
+            name="Contact Number"
+            placeholder="Contact Number"
+            numberOnly
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
               subscribeGroup.get('contactNumber')?.errors &&
               (subscribeGroup.get('contactNumber')?.dirty ||
                 subscribeGroup.get('contactNumber')?.touched)
-            ">
-            <p *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']" class="validation-msg">
+            "
+          >
+            <p
+              *ngIf="subscribeGroup.get('contactNumber')?.errors?.['pattern']"
+              class="validation-msg"
+            >
               Mobile Number Is Invalid
             </p>
           </div>
@@ -120,22 +218,38 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 text-center">
         <div class="d-flex align-items-center">
-          <input type="checkbox" formControlName="checkedTermsAndConditions" id="agreeCheckbox" />
+          <input
+            type="checkbox"
+            formControlName="checkedTermsAndConditions"
+            id="agreeCheckbox"
+          />
           <label for="agreeCheckbox" class="terms-label ps-2">
             By submitting this request, I agree with the Jocata
-            <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal">Terms of Use.</a>
+            <a class="custom-link" routerLink="/tou" data-bs-dismiss="modal"
+              >Terms of Use.</a
+            >
           </label>
         </div>
-        <div class="form-control-feedback" *ngIf="
+        <div
+          class="form-control-feedback"
+          *ngIf="
             subscribeGroup.get('checkedTermsAndConditions')?.errors &&
             (subscribeGroup.get('checkedTermsAndConditions')?.dirty ||
               subscribeGroup.get('checkedTermsAndConditions')?.touched)
-          ">
-          <p *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']" class="validation-msg">
+          "
+        >
+          <p
+            *ngIf="subscribeGroup.get('checkedTermsAndConditions')?.errors?.['required']"
+            class="validation-msg"
+          >
             Please select checkbox
           </p>
         </div>
-        <button class="sm-primary-button mt-3" [disabled]="subscribeGroup.invalid" (click)="saveSubscription()">
+        <button
+          class="sm-primary-button mt-3"
+          [disabled]="subscribeGroup.invalid"
+          (click)="saveSubscription()"
+        >
           Register
         </button>
       </div>
