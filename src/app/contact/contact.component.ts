@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, SecurityContext } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ApiService } from '../services/api.service';
 import { SumpoornApiService } from '../services/sumpoorn-api.service';
 import * as $ from 'jquery';
 import { ToastrService } from 'ngx-toastr';
+import { DomSanitizer } from '@angular/platform-browser';
+import * as xss from 'xss';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -12,12 +15,12 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactComponent implements OnInit {
   contactGroup!: FormGroup;
-
   constructor(
     private apiService: ApiService,
     public sumpoornApiService: SumpoornApiService,
     private fb: FormBuilder,
     private toastr: ToastrService,
+    private sanitizer: DomSanitizer
   ) {
     this.createForm();
   }
@@ -60,6 +63,7 @@ export class ContactComponent implements OnInit {
     }
 
     let postData = this.contactGroup.getRawValue();
+    postData.message = this.onMessageChange(postData.message)
 
     this.sumpoornApiService.saveContactDetails(postData).then(
       (resp: any) => {
@@ -101,5 +105,20 @@ export class ContactComponent implements OnInit {
   //   $(document.body).removeClass("modal-open");
   //   $(document.body).removeAttr("style");
   // }
+
+
+  onMessageChange(val) {
+    console.log("val", val);
+
+    return xss.filterXSS(val, {
+      whiteList: { a: ['href'] }
+    });
+    // let sanitizedHtml = sanitizedOutput;
+    // this.contactGroup.patchValue({
+    //   message: sanitizedHtml
+    // })
+    // console.log(sanitizedHtml);
+
+  }
 
 }
