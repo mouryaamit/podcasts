@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header *ngIf="!hide"></app-header>
 <!-- <div class="container"> -->
     <router-outlet></router-outlet>
 <!-- </div> -->
-<app-subscribe-button *ngIf="!isUnderMaintenance()"></app-subscribe-button>
-<app-footer *ngIf="!isUnderMaintenance()"></app-footer>
+<app-subscribe-button *ngIf="!isUnderMaintenance() && !hide"></app-subscribe-button>
+<app-footer *ngIf="!isUnderMaintenance() && !hide"></app-footer>
 
 <!-- Generic Modal for Errors -->
 <div class="modal" id="errorsModal">
@@ -26,4 +26,4 @@
         </div>
     </div>
 </div>
-<app-spinner></app-spinner>
+<app-spinner *ngIf="!hide"></app-spinner>
