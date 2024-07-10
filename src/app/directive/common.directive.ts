@@ -247,7 +247,7 @@ export class AlphaWithUnderscoreCommaDirective {
     let newValue = initialValue;
 
     // newValue = newValue.replace(/^\s/g, '');
-    newValue = newValue.replace(/[^0-9a-zA-Z.@_-  ]*/g, '');
+    newValue = newValue.replace(/[^0-9a-zA-Z.@_-]*/g, '');
     // newValue = newValue.replace(/\s\s/g, ' ');
 
     if (this.maxlength && newValue.length > this.maxlength) {
