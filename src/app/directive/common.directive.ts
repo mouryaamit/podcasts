@@ -158,7 +158,7 @@ export class AlphaNumSpecialsDirective {
     const initialValue = this.el.nativeElement.value;
     let newValue = initialValue;
     newValue = newValue.replace(/^\s/g, '');
-    newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, ''); // ^[A-Za-z][A-Za-z0-9_@.&-,()?\s]{0,499}$ 
+    newValue = newValue.replace(/[^A-Za-z0-9-_@.&,()?\s]*/g, ''); // ^[A-Za-z][A-Za-z0-9_@.&-,()?\s]{0,499}$ 
     newValue = newValue.replace(/\s\s/g, ' ');
     if (newValue.length == 1) {
       const regexAlpha = /^[a-zA-Z]*$/;
@@ -168,7 +168,7 @@ export class AlphaNumSpecialsDirective {
         newValue = "";
 
     } else {
-      newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, '');
+      newValue = newValue.replace(/[^A-Za-z0-9-_@.&,()?\s]*/g, '');
 
     }
     if (this.maxlength && newValue.length > this.maxlength) {
