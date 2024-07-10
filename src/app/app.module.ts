@@ -32,7 +32,11 @@ import { InstitutionLoginModelComponent } from './dialog/institution-login-model
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
-import { AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaOnlyDirective, AlphaWithSpacesCommaDirective, AlphaWithSpacesDirective, AlphaWithUnderscoreCommaDirective, NumberOnlyDirective, messageAlphaDirective } from './directive/common.directive';
+import {
+  AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaNumericOnlyDirective,
+  AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
+  NumberOnlyDirective, AlphaNumSpecialsDirective
+} from './directive/common.directive';
 
 @NgModule({
   declarations: [
@@ -58,12 +62,12 @@ import { AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaOnlyDirective, Alph
     RoadmapModelComponent,
     SubscribeButtonComponent,
     PartnersComponent,
-    AlphaOnlyDirective,
+    AlphaNumericOnlyDirective,
     AlphaWithSpacesDirective,
     AlphaNumericWithSpecialsAndSpaceOnlyDirective,
     NumberOnlyDirective,
-    AlphaWithSpacesCommaDirective,
-    AlphaWithUnderscoreCommaDirective, messageAlphaDirective
+    AlphaWithSpacesCommaHiphenDirective,
+    AlphaNumSpecialsDirective
   ],
   entryComponents: [
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent

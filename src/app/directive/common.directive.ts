@@ -1,10 +1,10 @@
 import { Directive, ElementRef, HostListener } from '@angular/core'
 import { NgControl } from '@angular/forms';
 @Directive({
-  selector: '[alphaOnly]',
+  selector: '[alphaNumericOnly]',
   inputs: ['maxlength', 'upperOnly'],
 })
-export class AlphaOnlyDirective {
+export class AlphaNumericOnlyDirective {
   public maxlength!: number;
   public upperOnly!: boolean;
 
@@ -53,7 +53,6 @@ export class AlphaOnlyDirective {
     // console.log(initialValue, newValue);
   }
 }
-
 @Directive({
   selector: '[alphaWithSpaces]',
   inputs: ['maxlength'],
@@ -85,10 +84,10 @@ export class AlphaWithSpacesDirective {
   }
 }
 @Directive({
-  selector: '[alphaWithSpacesComma]',
+  selector: '[alphaWithSpacesCommaHiphen]',
   inputs: ['maxlength'],
 })
-export class AlphaWithSpacesCommaDirective {
+export class AlphaWithSpacesCommaHiphenDirective {
   public maxlength!: number;
 
   constructor(private control: NgControl, private el: ElementRef) {
@@ -114,38 +113,6 @@ export class AlphaWithSpacesCommaDirective {
     // console.log(initialValue, newValue);
   }
 }
-
-@Directive({
-  selector: '[alphaWithSpacesUnderscore]',
-  inputs: ['maxlength'],
-})
-export class AlphaWithUnderscoreCommaDirective {
-  public maxlength!: number;
-
-  constructor(private control: NgControl, private el: ElementRef) {
-
-  }
-  @HostListener('input', ['$event']) onInputChange(event) {
-    const initialValue = this.el.nativeElement.value;
-    let newValue = initialValue;
-
-    newValue = newValue.replace(/^\s/g, '');
-    newValue = newValue.replace(/[^a-zA-Z-_@\s]*/g, '');
-    newValue = newValue.replace(/\s\s/g, ' ');
-
-    if (this.maxlength && newValue.length > this.maxlength) {
-      newValue = newValue.substring(0, this.maxlength);
-    }
-    this.el.nativeElement.value = newValue;
-    this.control?.control?.setValue(newValue);
-
-    if (initialValue !== this.el.nativeElement.value) {
-      event.stopPropagation();
-    }
-    // console.log(initialValue, newValue);
-  }
-}
-
 @Directive({
   selector: '[alphaNumericWithSpecialsAndSpaceOnly]',
   inputs: ['maxlength', 'upperOnly'],
@@ -177,12 +144,11 @@ export class AlphaNumericWithSpecialsAndSpaceOnlyDirective {
     // console.log(initialValue, newValue);
   }
 }
-
 @Directive({
-  selector: '[messageAlpha]',
+  selector: '[alphaNumSpecials]',
   inputs: ['maxlength', 'upperOnly'],
 })
-export class messageAlphaDirective {
+export class AlphaNumSpecialsDirective {
   private maxlength!: number;
   private upperOnly!: boolean;
 
@@ -192,7 +158,7 @@ export class messageAlphaDirective {
     const initialValue = this.el.nativeElement.value;
     let newValue = initialValue;
 
-    newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, '');
+    newValue = newValue.replace(/[^A-Za-z0-9_@.&-,()?\s]*/g, ''); // ^[A-Za-z][A-Za-z0-9_@.&-,()?\s]{0,499}$ 
 
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
@@ -207,7 +173,6 @@ export class messageAlphaDirective {
     // console.log(initialValue, newValue);
   }
 }
-
 @Directive({
   selector: '[numberOnly]',
   inputs: ['length', 'cropZero'],
