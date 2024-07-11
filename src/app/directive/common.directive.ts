@@ -70,7 +70,11 @@ export class AlphaWithSpacesDirective {
     newValue = newValue.replace(/^\s/g, '');
     newValue = newValue.replace(/[^a-zA-Z\s]*/g, '');
     newValue = newValue.replace(/\s\s/g, ' ');
-
+    if (newValue.length == 1) {
+      const regexAlpha = /^[a-zA-Z]*$/;
+      if (!regexAlpha.test(newValue))
+        newValue = "";
+    }
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
     }
@@ -100,7 +104,11 @@ export class AlphaWithSpacesCommaHiphenDirective {
     newValue = newValue.replace(/^\s/g, '');
     newValue = newValue.replace(/[^a-zA-Z-,\s]*/g, '');
     newValue = newValue.replace(/\s\s/g, ' ');
-
+    if (newValue.length == 1) {
+      const regexAlpha = /^[a-zA-Z]*$/;
+      if (!regexAlpha.test(newValue))
+        newValue = "";
+    }
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
     }
@@ -130,7 +138,11 @@ export class AlphaNumericWithSpecialsAndSpaceOnlyDirective {
     newValue = newValue.replace(/^\s/g, '');
     newValue = newValue.replace(/[^0-9a-zA-Z.&_-\s]*/g, '');
     newValue = newValue.replace(/\s\s/g, ' ');
-
+    if (newValue.length == 1) {
+      const regexAlpha = /^[a-zA-Z]*$/;
+      if (!regexAlpha.test(newValue))
+        newValue = "";
+    }
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
     }
@@ -209,7 +221,14 @@ export class NumberOnlyDirective {
     // 	newValue = initalValue.replace(/^0(0+)?/g, '0');
     // }
     newValue = newValue.replace(/[^0-9]*/g, '');
+    if (newValue.length == 1) {
+      if (newValue < 6) newValue = "";
 
+
+    } else {
+      newValue = newValue.replace(/[^0-9]*/g, '');
+
+    }
     if (this.length && newValue.length > this.length) {
       newValue = newValue.substring(0, this.length)
     }
@@ -249,7 +268,11 @@ export class AlphaWithUnderscoreCommaDirective {
     // newValue = newValue.replace(/^\s/g, '');
     newValue = newValue.replace(/[^0-9a-zA-Z.@_-]*/g, '');
     // newValue = newValue.replace(/\s\s/g, ' ');
-
+    if (newValue.length == 1) {
+      const regexAlpha = /^[a-zA-Z]*$/;
+      if (!regexAlpha.test(newValue))
+        newValue = "";
+    }
     if (this.maxlength && newValue.length > this.maxlength) {
       newValue = newValue.substring(0, this.maxlength);
     }
