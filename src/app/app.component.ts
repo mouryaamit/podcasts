@@ -3,7 +3,7 @@ import * as AOS from 'aos';
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
 import { MetaService } from './services/meta.service';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
@@ -11,11 +11,18 @@ import { filter, map, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  hide:boolean = false;
   constructor(
     private metaService: MetaService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.router.events.subscribe((event) => {
+      const currentUrl = this.router.url;
+      this.hide = (currentUrl === "/index?hide=true");
+      console.log("currentUrl",currentUrl,"hide",this.hide)
+        });
+  }
 
   ngOnInit() {
     AOS.init({
