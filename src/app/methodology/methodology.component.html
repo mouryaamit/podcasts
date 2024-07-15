@@ -4,7 +4,7 @@
             <p class="col-md-12">
                 <span><span class="fw-bold">Jocata Sumpoorn</span> is constructed using </span>
                 <span>consent-enabled and anonymised data of <span class="fw-600">more </span></span>
-                <span><span class="fw-600">than 66,000 MSMEs</span> seeking credit from financial </span>
+                <span><span class="fw-600">than 76,000 MSMEs</span> seeking credit from financial </span>
                 <span>institutions starting <span class="fw-600">from October 2019</span> to
                     date.</span>
             </p>
@@ -18,8 +18,10 @@
                         <button class="nav-link d-flex align-items-center" id="geographic-tab" data-bs-toggle="tab"
                             data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
                             aria-selected="true" [ngClass]="{ 'active': isGeoActive }" (click)="toggleIcons('geo')">
-                            <img src="assets/icons/active-geo.svg" width="52" height="54" alt="Active Geo Icon" *ngIf="isGeoActive" />
-                            <img src="assets/icons/inactive-geo.svg" width="52" height="54" alt="Inactive Geo Icon" *ngIf="!isGeoActive" />
+                            <img src="assets/icons/active-geo.svg" width="52" height="54" alt="Active Geo Icon"
+                                *ngIf="isGeoActive" />
+                            <img src="assets/icons/inactive-geo.svg" width="52" height="54" alt="Inactive Geo Icon"
+                                *ngIf="!isGeoActive" />
                             <span>Geographic<br />Distribution</span>
                         </button>
                     </li>
@@ -29,10 +31,10 @@
                             data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
                             aria-selected="false" [ngClass]="{ 'active': isTurnoverActive }"
                             (click)="toggleIcons('turnover')">
-                            <img src="assets/icons/active-turnover.svg" width="49" height="50" alt="Active Turnover Icon"
-                                *ngIf="isTurnoverActive" />
-                            <img src="assets/icons/inactive-turnover.svg" width="49" height="50" alt="Inactive Turnover Icon"
-                                *ngIf="!isTurnoverActive" />
+                            <img src="assets/icons/active-turnover.svg" width="49" height="50"
+                                alt="Active Turnover Icon" *ngIf="isTurnoverActive" />
+                            <img src="assets/icons/inactive-turnover.svg" width="49" height="50"
+                                alt="Inactive Turnover Icon" *ngIf="!isTurnoverActive" />
                             <span>Turnover<br />Distribution</span>
                         </button>
                     </li>
@@ -42,9 +44,10 @@
                             data-bs-target="#tab-sector" type="button" role="tab" aria-controls="tab-sector"
                             aria-selected="false" [ngClass]="{ 'active': isSectorActive }"
                             (click)="toggleIcons('sector')">
-                            <img src="assets/icons/active-sector.svg" width="48" height="48" alt="Active Sector Icon" *ngIf="isSectorActive" />
-                            <img src="assets/icons/inactive-sector.svg" width="48" height="48" alt="Inactive Sector Icon"
-                                *ngIf="!isSectorActive" />
+                            <img src="assets/icons/active-sector.svg" width="48" height="48" alt="Active Sector Icon"
+                                *ngIf="isSectorActive" />
+                            <img src="assets/icons/inactive-sector.svg" width="48" height="48"
+                                alt="Inactive Sector Icon" *ngIf="!isSectorActive" />
                             <span>Sector<br />Distribution</span>
                         </button>
                     </li>
@@ -54,10 +57,10 @@
                             data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
                             aria-selected="false" [ngClass]="{ 'active': isActivityActive }"
                             (click)="toggleIcons('activity')">
-                            <img src="assets/icons/active-activity.svg" width="48" height="48" alt="Active Activity Icon"
-                                *ngIf="isActivityActive" />
-                            <img src="assets/icons/inactive-activity.svg" width="48" height="48" alt="Inactive Activity Icon"
-                                *ngIf="!isActivityActive" />
+                            <img src="assets/icons/active-activity.svg" width="48" height="48"
+                                alt="Active Activity Icon" *ngIf="isActivityActive" />
+                            <img src="assets/icons/inactive-activity.svg" width="48" height="48"
+                                alt="Inactive Activity Icon" *ngIf="!isActivityActive" />
                             <span>Activity<br />Distribution</span>
                         </button>
                     </li>
@@ -224,14 +227,16 @@
                         <div class="row row-cols-auto row-cols-md-5 ps-0">
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/cart.svg" width="65" height="64" class="img-fluid mb-5" alt="Cart Icon">
+                                    <img src="assets/icons/cart.svg" width="65" height="64" class="img-fluid mb-5"
+                                        alt="Cart Icon">
                                     <p>Use GST Returns to calculate MSME <span class="fw-bold">TTM sales</span> for
                                         current month (TTMc) and previous month (TTMp). </p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/combine.svg" width="65" height="64" class="img-fluid mb-5" alt="Combine Icon">
+                                    <img src="assets/icons/combine.svg" width="65" height="64" class="img-fluid mb-5"
+                                        alt="Combine Icon">
                                     <p>For each GSTIN, <span class="fw-bold">calculate delta of monthly sales on a YoY
                                             basis, represent relative to TTMp;</span> thereafter
                                         <span class="fw-bold">remove outliers</span>.
@@ -240,21 +245,24 @@
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/gap.svg" width="65" height="64" class="img-fluid mb-5" alt="Gap Icon">
+                                    <img src="assets/icons/gap.svg" width="65" height="64" class="img-fluid mb-5"
+                                        alt="Gap Icon">
                                     <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs combined
                                             with their amplitude of sales.</span></p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/graph.svg" width="65" height="64" class="img-fluid mb-5" alt="Graph Icon">
+                                    <img src="assets/icons/graph.svg" width="65" height="64" class="img-fluid mb-5"
+                                        alt="Graph Icon">
                                     <p>Compute the <span class="fw-bold">relative amplitude adjusted diffusion
                                             index</span>.</p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/resize.svg" width="65" height="64" class="img-fluid mb-5" alt="Resize Icon">
+                                    <img src="assets/icons/resize.svg" width="65" height="64" class="img-fluid mb-5"
+                                        alt="Resize Icon">
                                     <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to
                                         1.</p>
                                 </div>
@@ -335,7 +343,8 @@
                     <span>contraction or expansion of economic activity of the sector.</span>
                 </p>
                 <div class="meth_index_gif_con col-sm-12 col-md-9 col-lg-8 col-xl-5 mx-auto">
-                    <img src="assets/images/meth-range-chart.avifs" class="img-fluid rounded-2" alt="Index Bin Ranges" />
+                    <img src="assets/images/meth-range-chart.avifs" class="img-fluid rounded-2"
+                        alt="Index Bin Ranges" />
                 </div>
             </div>
         </div>
@@ -343,7 +352,8 @@
     <div class="app_methodology_index_frequency">
         <div class="row gx-0 justify-content-center">
             <div class="col-md-12">
-                <img src="assets/images/calender.webp" width="672" height="300" class="img-fluid" alt="Index Publishing Frequency" />
+                <img src="assets/images/calender.webp" width="672" height="300" class="img-fluid"
+                    alt="Index Publishing Frequency" />
                 <p class="section_title blue-text">Index Publishing Frequency</p>
                 <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto blue-text">
                     <span>The Index will be released monthly with only a four-week </span>

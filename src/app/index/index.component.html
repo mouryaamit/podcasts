@@ -1,4 +1,4 @@
-<main class="app_index text-center">
+<main class="text-center app_index" [ngStyle]="{'paddingTop' : hide ? '0px':''}" >
   <div class="row gx-0 justify-content-center">
     <div class="col-12">
       <div class="app_index_chart_con">
@@ -32,7 +32,7 @@
                 <div id="contextMenuMobile" style="display: none" class="contextMenu">
                   <div id="closeInfoMobile" class="close" style="cursor: pointer;">&times;</div>
                   <div id="mobile_insights_graph_y_axis_content_info"></div>
-                </div>  
+                </div>
             </div>
             <div class="app_index_commentary_con">
               <div class="row gx-0">
@@ -102,7 +102,7 @@
                       </div>
                     </a>
                   </div>
-                </div> 
+                </div>
                 <!-- Mobile Commentary -->
                 <div class="col-12 d-block d-lg-none">
                   <!-- <div class="commentary_download my-3">
@@ -139,7 +139,7 @@
                         </div>
                       </div>
                     </div>
-  
+
                     <div class="tab-pane fade" id="expertCommentary" role="tabpanel" aria-labelledby="expertCommentary-tab">
                       <div class="row gx-0">
                         <div class="col-12 commentary_body_right">
@@ -149,11 +149,11 @@
                           <div class="commentary_body_right_detail">
                             <p id="ec_message_mobile"></p>
                           </div>
-                        </div>   
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>     
+                </div>
               </div>
             </div>
           </div>
