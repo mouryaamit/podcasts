@@ -22,6 +22,17 @@ export class AppComponent implements OnInit {
       this.hide = (currentUrl === "/index?hide=true");
       console.log("currentUrl",currentUrl,"hide",this.hide)
         });
+        this.disableConsoleInProduction();
+  }
+
+  disableConsoleInProduction(): void {
+    if(environment.production){
+      console.warn(`🚨 Console output is disabled!`);
+      console.log = function(){};
+      console.debug = function(){};
+      console.warn = function(){};
+      console.info = function(){};
+    }
   }
 
   ngOnInit() {

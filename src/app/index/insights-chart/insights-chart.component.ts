@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import * as d3 from 'd3';
 import * as $ from 'jquery';
+import * as _moment from 'moment';
 @Component({
   selector: 'app-insights-chart',
   templateUrl: './insights-chart.component.html',
@@ -1072,6 +1073,10 @@ export class InsightsChartComponent implements OnInit {
         d3.select('#ec_message_mobile').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
         createGraphForCommentary(graphC);
+      } else {
+        let lastMonth = _moment(dataValue.category,'MM-YYYY').subtract(1, 'months').format('MM-YYYY')
+        let lastMonthDataValue = mydata.filter((x) => x.category == lastMonth)[0];
+        addCommentary(lastMonthDataValue)
       }
     }
 
@@ -2426,6 +2431,10 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
         createGraphForCommentary(graphC);
+      } else {
+        let lastMonth = _moment(dataValue.category,'MM-YYYY').subtract(1, 'months').format('MM-YYYY')
+        let lastMonthDataValue = mydata.filter((x) => x.category == lastMonth)[0];
+        addCommentary(lastMonthDataValue)
       }
     }
 
