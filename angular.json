@@ -63,7 +63,7 @@
           },
           "configurations": {
             "production": {
-              "index": { 
+              "index": {
                 "input": "src/index-prod.html",
                 "output": "index.html"
               },
@@ -159,11 +159,23 @@
               "./node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
