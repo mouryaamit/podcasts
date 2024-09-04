@@ -1,13 +1,18 @@
 <header class="fixed-top app_header_wrapper" [class.app_header_shadow]="appHeaderShadow && !isUnderMaintenance">
-  <div class="app_header_un_strip d-block d-md-flex justify-content-center align-items-center px-3 px-md-0" *ngIf="!isUnderMaintenance">
-      <p><span class="fw-bold">Sumpoorn</span> at the <span class="fw-bold">United Nations</span> in New York</p>
-      <p class="mx-2">|</p>
-      <p>
-        <span class="d-none d-xl-inline">Jocata Sumpoorn in association with SIDBI at "Citizen Stack” - the First UN
-          Conference on DPI </span>
-        <span class="d-inline d-xl-none">To Know More </span>
-        <a (click)="goToGallery('unitednations')">Click here</a>
-      </p>
+  <div class="app_header_un_strip d-flex justify-content-center align-items-center px-3 px-md-0"
+    *ngIf="!isUnderMaintenance">
+    <p>
+      <span class="d-none d-xl-inline">
+        <span class="fw-bold">Jocata</span> is invited to participate at the <span class="fw-bold">Global SME Finance
+          Forum</span> in São Paulo, Brazil, 16-18 September 2024.
+        <a href="https://smefinanceforum.org/post/global-sme-finance-forum-2024"> Click here</a>
+      </span>
+      <span class="d-inline d-xl-none">
+        <span class="fw-bold">Jocata</span> at the <span class="fw-bold">Global SME Finance</span> Forum in São Paulo,
+        Brazil.
+        <a href="https://smefinanceforum.org/post/global-sme-finance-forum-2024"> Click here</a>
+      </span>
+    </p>
   </div>
   <div class="app_header_strip d-none d-xl-flex justify-content-end align-items-center" *ngIf="!isUnderMaintenance">
     <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
