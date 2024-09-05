@@ -41,7 +41,7 @@ const routes: Routes = [
     component: MethodologyComponent,
     data: {
       title: `Jocata Sumpoorn: Index Building Approach and Methodology Leveraging GST Data`,
-      description: `Unlock the essence of Jocata Sumpoorn on our Methodology page, where transparency meets precision in the construction of this one-of-a-kind MSME Economic Activity Index. Crafted using consent-enabled and anonymized data from over 50,000 MSMEs seeking credit since October 2019, Jocata Sumpoorn provides a more comprehensive and authentic representation of the dynamic MSME sector.`,
+      description: `Unlock the essence of Jocata Sumpoorn on our Methodology page, where transparency meets precision in the construction of this one-of-a-kind MSME Economic Activity Index. Crafted using consent-enabled and anonymized data from over 80,000 MSMEs seeking credit since October 2019, Jocata Sumpoorn provides a more comprehensive and authentic representation of the dynamic MSME sector.`,
       keywords: `msme credit data, geographic distribution msme, turnover distribution analysis, sector-wise distribution hsn, activity distribution msme, relative amplitude adjusted composite diffusion index, gst returns data analysis, index bin ranges interpretation, economic activity measurement, methodology of sumpoorn index, considerations for sumpoorn index, sigmoid function scaling, monthly index publishing, data authenticity in gstr returns, economic activity scale 0 to 1, msme sales performance, official gstin network, industry classification gstin, idiosyncratic fluctuations, top 7 hsn sectors, composite diffusion index, amplitude of economic activity`
     }
   },
@@ -117,7 +117,8 @@ const routes: Routes = [
       keywords: `sumpoorn news, sumpoorn updates, sumpoorn index news, sumpoorn highlights, sumpoorn launch, sumpoorn showcase, sumpoorn gallery, sumpoorn discussion`
     }
   },
-  { path: '**', 
+  {
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
   },
