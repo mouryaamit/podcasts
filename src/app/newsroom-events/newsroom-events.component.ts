@@ -41,10 +41,26 @@ export class NewsroomEventsComponent implements OnInit {
       this.eventTitle =
         'Jocata’s MSME Lending Innovation at International Finance Corporation (IFC)';
       this.eventDate = 'Washington DC, April 24, 2024 ';
+    } else if (this.getNavParam == 'smeff') {
+      this.eventTitle =
+        'Jocata Sumpoorn & SME DNA Win Global SME Finance Forum Award 2024';
+      this.eventDate = 'São Paulo, 16 - 18 September, 2024';
     }
   }
 
   events = {
+    smeffEvent: [
+      {
+        title: `A Recognition of Jocata's Initiatives in MSME Financing`,
+        detail: `This award is a testament to our commitment to building a financially inclusive future for MSMEs by harnessing the power of Al & data analytics.<br/><br/>We are deeply grateful to SIDBI for their support and for trusting us to build a one-of-its-kind country level index for the MSME ecosystem. It's a moment of pride and we thank our incredible team of data scientists, credit experts, and our valued financial institution partners.<br/><br/>This milestone strengthens our resolve to continue pushing the boundaries of MSME financing, as we strive to drive growth both in India and globally.`,
+        imageURL: 'assets/images/news-brazil-award.webp',
+      },
+      {
+        title: `Jocata CEO Prashant Muddu Speaks at Global SME Finance Forum in São Paulo`,
+        detail: `Our CEO, Prashant Muddu recently participated in a panel discussion at the Global SME Finance Forum in São Paulo, Brazil. The panel, titled “AI & Alternative Data: Balancing Efficiency & Risk in SME Financing,” brought together industry leaders. Prashant was joined by Anderson Pereira (CEO, Kapitale), Rigo Van den Broeck (EVP Cybersecurity Product Innovation, Mastercard), and Leila F. Search (Lead, Latin America FinTech Investments, IFC), with the session hosted by Patrick Reily (Co-Founder, Uplinq Financial Technologies). The discussion highlighted innovative approaches to SME financing using AI and alternative data.`,
+        imageURL: 'assets/images/news-brazil-speech.jfif',
+      },
+    ],
     csEvent: [
       {
         title: `India's Digital Stack Takes Center Stage`,
