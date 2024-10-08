@@ -57,7 +57,7 @@ export class NewsroomEventsComponent implements OnInit {
       },
       {
         title: `Jocata CEO Prashant Muddu Speaks at Global SME Finance Forum in São Paulo`,
-        detail: `Our CEO, Prashant Muddu recently participated in a panel discussion at the Global SME Finance Forum in São Paulo, Brazil. The panel, titled “AI & Alternative Data: Balancing Efficiency & Risk in SME Financing,” brought together industry leaders. Prashant was joined by Anderson Pereira (CEO, Kapitale), Rigo Van den Broeck (EVP Cybersecurity Product Innovation, Mastercard), and Leila F. Search (Lead, Latin America FinTech Investments, IFC), with the session hosted by Patrick Reily (Co-Founder, Uplinq Financial Technologies). The discussion highlighted innovative approaches to SME financing using AI and alternative data.`,
+        detail: `Our CEO, <strong>Prashant Muddu</strong> recently participated in a panel discussion at the Global SME Finance Forum in São Paulo, Brazil. The panel, titled “AI & Alternative Data: Balancing Efficiency & Risk in SME Financing”, brought together industry leaders. Prashant was joined by <strong>Anderson Pereira</strong> (CEO, Kapitale), <strong>Rigo Van den Broeck</strong> (EVP Cybersecurity Product Innovation, Mastercard), and <strong>Leila F. Search</strong> (Lead, Latin America FinTech Investments, IFC), with the session hosted by <strong>Patrick Reily</strong> (Co-Founder, Uplinq Financial Technologies). The discussion highlighted innovative approaches to SME financing using AI and alternative data.`,
         imageURL: 'assets/images/news-brazil-speech.jfif',
       },
     ],
