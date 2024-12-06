@@ -1,0 +1,84 @@
+.word-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 45px;
+  text-align: start;
+
+  @media only screen and (min-width: 768px) {
+    height: 90px;
+  }
+
+  &:hover {
+    .flip-animation {
+      animation-play-state: paused;
+    }
+  }
+
+  .flip-animation {
+    animation: scroll-auto-mobile 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    list-style: none;
+    padding-left: 0;
+
+    @media only screen and (min-width: 768px) {
+      animation: scroll-auto-web 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    }
+
+    li {
+      height: 45px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #03325c;
+      text-align: start;
+
+      @media only screen and (min-width: 768px) {
+        height: 90px;
+        font-size: 18px;
+      }
+      @media only screen and (min-width: 992px) {
+        font-size: 24px;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: 28px;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@keyframes scroll-auto-mobile {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-45px);
+  }
+  40% {
+    transform: translateY(-100px);
+  }
+  60% {
+    transform: translateY(-45px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-auto-web {
+  0%,
+  20%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-90px);
+  }
+  60% {
+    transform: translateY(-200px);
+  }
+  80% {
+    transform: translateY(-90px);
+  }
+}

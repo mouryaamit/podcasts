@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as AOS from 'aos';
 
 @Component({
@@ -41,6 +41,10 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   constructor() {}
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   ngAfterViewInit(): void {
     AOS.init({
