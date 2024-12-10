@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
   partners: Array<any> = [
     {
       // title: 'Partner',
@@ -41,7 +42,19 @@ export class HomeComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    AOS.init();
+  }
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      offset: 100,
+      easing: 'linear',
+    });
+  }
+
+  ngAfterViewChecked(): void {
+    AOS.refresh();
   }
 
 }

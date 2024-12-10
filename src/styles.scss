@@ -416,9 +416,9 @@ a {
     }
   }
   .app_header_un_strip {
-    background: #5916FF;
+    background: #5916ff;
     height: 48px;
-    
+
     p {
       display: inline;
       color: $app-white;
@@ -433,7 +433,7 @@ a {
         line-height: 17px;
 
         a {
-          color: #86E9B3;
+          color: #86e9b3;
           text-decoration: underline;
           &:hover {
             text-decoration: none;
@@ -543,8 +543,10 @@ a {
   @media only screen and (min-width: 1200px) {
     padding-top: 20rem;
   }
-  .app_home_chart_con {
-    background: $app-white;
+  .app_home_main_con {
+    background: #f1f0f0;
+    background-image: url("assets/images/home-main-bg-mobile.webp");
+    background-size: contain;
     box-shadow: 0px 12px 26px 0px rgba(21, 138, 102, 0.19),
       0px 47px 47px 0px rgba(21, 138, 102, 0.17),
       0px 106px 64px 0px rgba(21, 138, 102, 0.1),
@@ -552,22 +554,27 @@ a {
       0px 295px 83px 0px rgba(21, 138, 102, 0);
     border-top: 3px solid #2a9f6e;
     border-bottom: 3px solid #2a9f6e;
+    padding: 1.5rem 1.5rem 0;
     @media only screen and (min-width: 768px) {
+      background-image: url("assets/images/home-main-bg.webp");
       border: 6px solid #2a9f6e;
       border-radius: 20px;
+      padding: 4.5rem 2rem 0 3rem;
     }
     .app_home_main_title {
       color: #03325c;
-      font: 700 $font-size-18px "Poppins", sans-serif;
-      margin-top: 1.5rem;
+      font: 600 $font-size-28px "Poppins", sans-serif;
+      // margin-top: 1.5rem;
+      // margin-left: 1.75rem;
       line-height: 120%;
+      text-align: start;
       @media only screen and (min-width: 768px) {
         font-size: $font-size-32px;
-        font-weight: 600;
-        margin-top: 2.5rem;
+        // margin-top: 2.5rem;
       }
       @media only screen and (min-width: 1200px) {
-        font-size: $font-size-36px;
+        font-size: $font-size-54px;
+        // margin-top: 4.5rem;
       }
     }
   }
@@ -2629,11 +2636,11 @@ a {
   }
   .app_maintenance_img_con {
     background: $app-white;
-    box-shadow: 0px 10.82px 23.44px 0px #158A6630;
-    border: 6px solid #6CA88F;
+    box-shadow: 0px 10.82px 23.44px 0px #158a6630;
+    border: 6px solid #6ca88f;
     border-radius: 20px;
     padding: 2rem;
-    
+
     .app_maintenance_title {
       color: #25505c;
       font: 700 $font-size-18px "Poppins", sans-serif;
