@@ -77,7 +77,28 @@
                               </div>
                             </div>
                             <div class="col-md-8 commentary_body_right">
+                              <div class="row align-items-center">
                               <h6 class="commentary_body_right_title ec_title"></h6>
+                              <div class="col-auto">
+                              <select [(ngModel)]="selectedVoice" (change)="startSpeech()">
+                                <option *ngFor="let voice of voices" [ngValue]="voice">
+                                  {{ voice.name }} {{ voice.lang }}
+                                </option>
+                              </select>
+                              <div>
+                                <button (click)="startSpeech()" [disabled]="playing">Play</button>
+                                <button (click)="pauseSpeech()" [disabled]="!playing || paused">Pause</button>
+                                <button (click)="resumeSpeech()" [disabled]="!paused">Resume</button>
+                                <button (click)="stopSpeech()" [disabled]="!playing && !paused">Stop</button>
+                                <button (click)="backward()" [disabled]="!playing && !paused">⏪ Backward</button>
+                                <button (click)="forward()" [disabled]="!playing && !paused">⏩ Forward</button>
+                              </div>
+                              <div>
+                                <p>Total Duration: {{ totalDuration | number:'1.0-0' }} seconds</p>
+                                <p>Current Time: {{ currentTime | number:'1.0-0' }} seconds</p>
+                              </div>
+                            </div>
+                          </div>
                               <div class="member_con" id="commentary_mem_details">
                                 <!-- <div id="img_commentary">
                                   </div>

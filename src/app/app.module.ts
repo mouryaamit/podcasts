@@ -37,6 +37,7 @@ import {
   AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
   NumberOnlyDirective, AlphaNumSpecialsDirective, AlphaWithUnderscoreCommaDirective
 } from './directive/common.directive';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import {
     MatButtonModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    FormsModule,
     ToastrModule.forRoot({
       maxOpened: 1,
       iconClasses: {
