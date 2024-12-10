@@ -1,12 +1,12 @@
 <header class="fixed-top app_header_wrapper" [class.app_header_shadow]="appHeaderShadow && !isUnderMaintenance">
-  <div class="app_header_un_strip d-flex justify-content-center align-items-center px-3 px-md-0"
+  <!-- <div class="app_header_un_strip d-flex justify-content-center align-items-center px-3 px-md-0"
     *ngIf="!isUnderMaintenance">
     <p>
         <span class="fw-bold">Jocata</span> has won the prestigious <span class="fw-bold">Global SME Finance
         </span> Forum 2024 award in São Paulo, Brazil.
-        <a href="https://www.smefinanceforum.org/awards-2024#award-winners" target="_blank"> Click here</a>
+        <a routerLink="newsroom-events/smeff"> Click here</a>
     </p>
-  </div>
+  </div> -->
   <div class="app_header_strip d-none d-xl-flex justify-content-end align-items-center" *ngIf="!isUnderMaintenance">
     <a routerLink="newsroom" class="header_page_link" [class.active]="isNewsroomEventsActive">Newsroom</a>
     <a routerLink="contact" routerLinkActive="active" class="header_page_link">Contact</a>
