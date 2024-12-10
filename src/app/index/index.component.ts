@@ -215,6 +215,7 @@ export class IndexComponent implements OnInit {
         .getVoices()
         .filter((voice) => voice.lang === 'en-US');
         this.selectedVoice = this.voices[0]
+        console.log(this.voices)
     }
 
     // startSpeech() {
@@ -482,6 +483,7 @@ export class IndexComponent implements OnInit {
       }
       this.playing = false;
       this.paused = false;
+      this.currentTime = 0;
     }
 
     pauseSpeech(): void {
