@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       const currentUrl = this.router.url;
       this.hide = (currentUrl === "/index?hide=true");
-      console.log("currentUrl",currentUrl,"hide",this.hide)
         });
         this.disableConsoleInProduction();
   }

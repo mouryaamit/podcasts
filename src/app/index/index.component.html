@@ -94,8 +94,8 @@
                                 <button (click)="forward()" [disabled]="!playing && !paused">⏩ Forward</button>
                               </div>
                               <div>
-                                <p>Total Duration: {{ totalDuration | number:'1.0-0' }} seconds</p>
-                                <p>Current Time: {{ currentTime | number:'1.0-0' }} seconds</p>
+                                <p>Total Duration: {{ totalDuration | secondsToTime }} seconds</p>
+                                <p>Current Time: {{ currentTime | secondsToTime }} seconds</p>
                               </div>
                             </div>
                           </div>
@@ -380,3 +380,4 @@
     </div>
   </div>
 </div>
+<div id="textForSpeech"></div>

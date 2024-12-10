@@ -37,7 +37,8 @@ import {
   AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
   NumberOnlyDirective, AlphaNumSpecialsDirective, AlphaWithUnderscoreCommaDirective
 } from './directive/common.directive';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
+import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
     NumberOnlyDirective,
     AlphaWithSpacesCommaHiphenDirective,
     AlphaWithUnderscoreCommaDirective,
-    AlphaNumSpecialsDirective
+    AlphaNumSpecialsDirective,
+    SecondsToTimePipe
   ],
   entryComponents: [
     SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent

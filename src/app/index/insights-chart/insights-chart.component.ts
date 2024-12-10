@@ -10,7 +10,6 @@ import * as _moment from 'moment';
 export class InsightsChartComponent implements OnInit {
   @Input() sumpoornGraphData;
   @Output() graphWidth = new EventEmitter<number>();
-
   constructor() {}
 
   ngOnInit(): void {
@@ -1319,7 +1318,7 @@ export class InsightsChartComponent implements OnInit {
   generateInsightsGraph() {
     const mydata = this.sumpoornGraphData.IndexGeneration;
     const indexData = this.sumpoornGraphData.Commentary;
-
+    let pageThis = this;
     const y_left_coordinates = [
       '0.00',
       '0.10',
@@ -2431,6 +2430,14 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
         createGraphForCommentary(graphC);
+        let textForSpeech = "Jocata Sumpoorn "+indexValue+" "+monthlyC.comment;
+        if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
+          textForSpeech+= " Expert Commentary "
+        } else {
+          textForSpeech+= " Macro Commentary "
+        }
+        textForSpeech+= expertC.ExpertCommentary;
+        $('#textForSpeech').html(textForSpeech);
       } else {
         let lastMonth = _moment(dataValue.category,'MM-YYYY').subtract(1, 'months').format('MM-YYYY')
         let lastMonthDataValue = mydata.filter((x) => x.category == lastMonth)[0];
