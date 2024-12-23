@@ -17,12 +17,12 @@
   }
 
   .flip-animation {
-    animation: scroll-auto-mobile 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    animation: scroll-auto-mobile 12s ease infinite;
     list-style: none;
     padding-left: 0;
 
     @media only screen and (min-width: 768px) {
-      animation: scroll-auto-web 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+      animation: scroll-auto-web 12s ease infinite;
     }
 
     li {
