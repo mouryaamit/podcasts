@@ -2710,6 +2710,7 @@ a {
     .modal-header {
       padding: unset;
       border-bottom: none;
+      justify-content: space-between;
       // padding: 3rem 1.25rem 1.25rem 3rem;
       .modal-title {
         color: $app-black;
