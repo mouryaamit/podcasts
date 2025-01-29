@@ -55,8 +55,8 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy {
       const div = this.elRef.nativeElement.querySelector('#textForSpeech');
       this.observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          console.log('Mutation detected:', mutation);
-          console.log(div.textContent || div.innerText || '')
+          // console.log('Mutation detected:', mutation);
+          // console.log(div.textContent || div.innerText || '')
           this.text = div.textContent || div.innerText || '';
       const words = this.text.split(/\s+/);
       this.totalDuration = (words.length / this.wpm) * 60;
@@ -243,7 +243,17 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy {
         .filter((voice) => voice.lang === 'en-US');
         this.selectedVoice = this.voices[0]
     }
-
+    startPlay(){
+      if(this.speechSynthesis.paused){
+        this.resumeSpeech()
+      } else {
+        this.startSpeech();
+      }
+    }
+    replaySpeech():void{
+      this.stopSpeech();
+      this.startSpeech();
+    }
     startSpeech(): void {
       if (!this.text.trim()) return;
 

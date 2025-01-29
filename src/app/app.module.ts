@@ -28,6 +28,8 @@ import { SubscribeModelComponent } from './dialog/subscribe-model/subscribe-mode
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
 import { InstitutionLoginModelComponent } from './dialog/institution-login-model/institution-login-model.component';
 import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.component';
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
@@ -88,6 +90,8 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
     MatButtonModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatProgressBarModule,
+    MatSliderModule,
     FormsModule,
     ToastrModule.forRoot({
       maxOpened: 1,

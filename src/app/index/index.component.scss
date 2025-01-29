@@ -1,361 +1,382 @@
 /* Start of graph css */
-.index_graphs,.app_index_commentary_con {
-    clear: both;
-    .insights_graph {
-        font-family: 'Inter';
-        display: flex;
-        justify-content: center;
+.index_graphs,
+.app_index_commentary_con {
+  clear: both;
+  .insights_graph {
+    font-family: "Inter";
+    display: flex;
+    justify-content: center;
+  }
+  .flag1_focus circle,
+  .flag2_focus circle,
+  .focus_circle circle {
+    fill: #2fb36b;
+  }
+  .tick text {
+    font-size: 13px;
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 119.2%;
+  }
+  .axis-title {
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: 500;
+  }
+  .x_month_num .tick text,
+  .x_month_name .tick text,
+  .x_month_year .tick text,
+  .y_left_points .tick text,
+  .x_month_name_context .tick text {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .y-axis-title_9,
+  .y-axis-title_8,
+  .y-axis-title_7,
+  .y-axis-title_6,
+  .y-axis-title_5 {
+    color: #759b67;
+  }
+  .y-axis-title_4,
+  .y-axis-title_3,
+  .y-axis-title_2,
+  .y-axis-title_1,
+  .y-axis-title_0 {
+    color: #ac5d5d;
+  }
+  .y-axis-title_9.active,
+  .y-axis-title_8.active,
+  .y-axis-title_7.active,
+  .y-axis-title_6.active,
+  .y-axis-title_5.active {
+    font-weight: 600;
+    color: #1e7400 !important;
+  }
+  .y-axis-title_4.active,
+  .y-axis-title_3.active,
+  .y-axis-title_2.active,
+  .y-axis-title_1.active,
+  .y-axis-title_0.active {
+    font-weight: 600;
+    color: #830a0a !important;
+  }
+  .y-axis-title_9.select,
+  .y-axis-title_8.select,
+  .y-axis-title_7.select,
+  .y-axis-title_6.select,
+  .y-axis-title_5.select {
+    font-weight: 600;
+    color: #1e7400 !important;
+  }
+  .y-axis-title_4.select,
+  .y-axis-title_3.select,
+  .y-axis-title_2.select,
+  .y-axis-title_1.select,
+  .y-axis-title_0.select {
+    font-weight: 600;
+    color: #830a0a !important;
+  }
+  .y-axis-titles {
+    font-size: 15px !important;
+  }
+  .x_month_name.active,
+  .x_month_name_context.active {
+    font-weight: 600;
+    color: black !important;
+  }
+  .x_month_name.select_g {
+    font-weight: 600;
+    color: #1e7400 !important;
+  }
+  .x_month_name.select_r {
+    font-weight: 600;
+    color: #830a0a !important;
+  }
+  #rect_xaxis,
+  #rect_xaxis_sel {
+    fill: rgba(226, 226, 226, 0.5);
+  }
+  #rect_def_yaxis {
+    fill: #f9f9f9;
+  }
+  .rect_yaxis_1 {
+    fill: #e6fbe9;
+    opacity: 1;
+  }
+  .rect_yaxis_2 {
+    fill: #ffdada;
+    opacity: 1;
+  }
+  #insights_graph_svg,
+  #context_graph_svg {
+    position: relative;
+  }
+  div.tooltip-area {
+    display: inline-flex;
+    padding: 1px 6px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background: #25bb61;
+    color: white;
+    font-size: 14px;
+  }
+  .animating_circle,
+  .focus_circle {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+  }
+  .circle_waves {
+    margin: 0 auto;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+  }
+  @keyframes circleOne {
+    0% {
+      transform: scale(0);
     }
-    .flag1_focus circle,
-    .flag2_focus circle,
-    .focus_circle circle {
-        fill: #2FB36B;
+    50% {
+      transform: scale(2);
+      opacity: 0.75;
     }
-    .tick text {
-        font-size: 13px;
-        font-family: "Inter";
-        font-weight: 400;
-        line-height: 119.2%;
+    100% {
+      transform: scale(3);
+      opacity: 0;
     }
-    .axis-title {
-        font-size: 14px;
-        font-family: 'Inter';
-        font-weight: 500;
+  }
+  @keyframes circleTwo {
+    0% {
+      transform: scale(0);
     }
-    .x_month_num .tick text,
-    .x_month_name .tick text,
-    .x_month_year .tick text,
-    .y_left_points .tick text,
-    .x_month_name_context .tick text {
-        color: rgba(0, 0, 0, 0.3);
+    50% {
+      transform: scale(1.25);
+      opacity: 0.75;
     }
-    .y-axis-title_9,
-    .y-axis-title_8,
-    .y-axis-title_7,
-    .y-axis-title_6,
-    .y-axis-title_5 {
-        color: #759B67;
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
-    .y-axis-title_4,
-    .y-axis-title_3,
-    .y-axis-title_2,
-    .y-axis-title_1,
-    .y-axis-title_0 {
-        color: #AC5D5D;
-    }
-    .y-axis-title_9.active,
-    .y-axis-title_8.active,
-    .y-axis-title_7.active,
-    .y-axis-title_6.active,
-    .y-axis-title_5.active {
-        font-weight: 600;
-        color: #1E7400 !important;
-    }
-    .y-axis-title_4.active,
-    .y-axis-title_3.active,
-    .y-axis-title_2.active,
-    .y-axis-title_1.active,
-    .y-axis-title_0.active {
-        font-weight: 600;
-        color: #830A0A !important;
-    }
-    .y-axis-title_9.select,
-    .y-axis-title_8.select,
-    .y-axis-title_7.select,
-    .y-axis-title_6.select,
-    .y-axis-title_5.select {
-        font-weight: 600;
-        color: #1E7400 !important;
-    }
-    .y-axis-title_4.select,
-    .y-axis-title_3.select,
-    .y-axis-title_2.select,
-    .y-axis-title_1.select,
-    .y-axis-title_0.select {
-        font-weight: 600;
-        color: #830A0A !important;
-    }
-    .y-axis-titles {
-        font-size: 15px !important;
-    }
-    .x_month_name.active,
-    .x_month_name_context.active {
-        font-weight: 600;
-        color: black !important;
-    }
-    .x_month_name.select_g {
-        font-weight: 600;
-        color: #1E7400 !important;
-    }
-    .x_month_name.select_r {
-        font-weight: 600;
-        color: #830A0A !important;
-    }
-    #rect_xaxis,
-    #rect_xaxis_sel {
-        fill: rgba(226, 226, 226, 0.5);
-    }
-    #rect_def_yaxis {
-        fill: #F9F9F9;
-    }
-    .rect_yaxis_1 {
-        fill: #E6FBE9;
-        opacity: 1;
-    }
-    .rect_yaxis_2 {
-        fill: #FFDADA;
-        opacity: 1;
-    }
-    #insights_graph_svg,
-    #context_graph_svg {
-        position: relative;
-    }
-    div.tooltip-area {
-        display: inline-flex;
-        padding: 1px 6px;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        border-radius: 6px;
-        background: #25BB61;
-        color: white;
-        font-size: 14px;
-    }
-    .animating_circle,
-    .focus_circle {
-        display: inline-flex;
-        align-items: center;
-        position: absolute;
-    }
-    .circle_waves {
-        margin: 0 auto;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        position: absolute;
-        right: 0;
-    }
-    @keyframes circleOne {
-        0% {
-            transform: scale(0);
-        }
-        50% {
-            transform: scale(2);
-            opacity: 0.75;
-        }
-        100% {
-            transform: scale(3);
-            opacity: 0;
-        }
-    }
-    @keyframes circleTwo {
-        0% {
-            transform: scale(0);
-        }
-        50% {
-            transform: scale(1.25);
-            opacity: 0.75;
-        }
-        100% {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
-    .circle_one {
-        background: #ff5c00;
-        animation: circleOne 1.5s infinite ease-out;
-    }
-    .circle_two {
-        background: #fff;
-        animation: circleTwo 1.5s infinite ease-out;
-    }
-    .circle_three {
-        background-color: #25bb61;
-    }
-    .contextMenu {
-        position: absolute;
-        z-index: 100;
-        background: white;
-        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-        padding: 5px;
-        width: 190px;
-        height: 280px;
-        overflow: visible;
-    }
-    #insights_graph_y_axis_content_info, #mobile_insights_graph_y_axis_content_info {
-        font-size: 12px;
-        text-align: left;
-        padding: 10px 20px 10px 10px;
-    }
-    .close {
-        cursor: pointer;
-        float: right;
-        text-align: end;
-        font-size: 20px;
-    }
-    .yAxisExpansionColor {
-        color: #759B67;
-    }
-    .yAxisContractorColor {
-        color: #AC5D5D;
-    }
-    /* commentary graph css */
-    .y_month_value {
-        fill: white;
-    }
-    .y_month_value .tick text {
-        fill: #2FB36B;
-        font-size: 14px;
-    }
-    .x_month_value .tick text {
-        font-size: 14px;
-        color: #959595;
-        font-weight: 500;
-    }
-    .y_axis_text .tick text {
-        display: none;
-    }
-    /* End of graph css */
-    /* start of context graph css */
-    .float-checkboxes {
-        width: 5%;
-        float: left;
-        margin-top: 100px;
-        position: static;
-    }
-    .y-axis-data {
-        width: 55px;
-        float: left;
-        margin-top: 44px;
-        margin-right: 10px;
-    }
-    .iipColorClass {
-        color: #24C0E2;
-    }
-    .pmiColorClass {
-        color: #E1861B;
-    }
-    .gvaColorClass {
-        color: #3E3EC8;
-    }
-    #rect_xaxis_context {
-        fill: #C8C8C8;
-    }
-    div.context_chart_container {
-        font-family: "Inter";
-        display: flex;
-        justify-content: center
-    }
-    div.context_line_checkboxes {
-        padding-left: 3rem;
-        padding-top: 105px;
-        font: 14px "Inter";
-        width: 100px;
-        text-align: left;
-    }
-    div.context_line_checkboxes .checkbox_label {
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 14px;
-    }
-    .fontClass {
-        font-family: "Inter";
-        font-size: 16px;
-    }
-    .serviceBox:first-child {
-        margin-left: 4%
-    }
-    #insights_graph_svg path.domain {
-        stroke: #A3A3A3; /* for insights graph */
-    }
-    #monthly_commentary_chart path.domain, #monthly_commentary_chart_mobile path.domain {
-        stroke: #DFDFDF; /* for commentary graph */
-    }
-    .x_month_value .tick line {
-        stroke-dasharray: 1;
-        stroke: #C9C9C9;
-    }
-    .chart_desc {
-        display: flex;
-        margin: 0 auto;
-        padding: 12px 0;
-    }
-    .iipContent {
-        display: flex;
-        gap: 4px;
-    }
-    .pmiContent {
-        display: flex;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    .gvaContent {
-        display: flex;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    .iipLegendText {
-        color: var(--IIP, #24C0E2);
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 119.2%;
-    }
-    .pmiLegendText {
-        color: var(--PMI, #E1861B);
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 119.2%;
-    }
-    .gvaLegendText {
-        color: var(--GOI, #3E3EC8);
-        text-align: start;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 119.2%;
-        width: 66px;
-    }
-    .iipLegendContent {
-        flex: 1 0 0;
-        align-self: stretch;
-        color: #ABABAB;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 119.2%;
-        text-align: left;
-    }
-    .pmiLegendContent {
-        flex: 1 0 0;
-        align-self: stretch;
-        color: #ABABAB;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 119.2%;
-        text-align: left;
-    }
-    .gvaLegendContent {
-        align-self: stretch;
-        color: #ABABAB;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 119.2%;
-        width: 259px;
-        text-align: left;
-    }
-    .disable_arrows {
-        opacity: 0.7;
-        pointer-events: none;
-    }
+  }
+  .circle_one {
+    background: #ff5c00;
+    animation: circleOne 1.5s infinite ease-out;
+  }
+  .circle_two {
+    background: #fff;
+    animation: circleTwo 1.5s infinite ease-out;
+  }
+  .circle_three {
+    background-color: #25bb61;
+  }
+  .contextMenu {
+    position: absolute;
+    z-index: 100;
+    background: white;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+      0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+      0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+      0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+      0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+      0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    padding: 5px;
+    width: 190px;
+    height: 280px;
+    overflow: visible;
+  }
+  #insights_graph_y_axis_content_info,
+  #mobile_insights_graph_y_axis_content_info {
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 20px 10px 10px;
+  }
+  .close {
+    cursor: pointer;
+    float: right;
+    text-align: end;
+    font-size: 20px;
+  }
+  .yAxisExpansionColor {
+    color: #759b67;
+  }
+  .yAxisContractorColor {
+    color: #ac5d5d;
+  }
+  /* commentary graph css */
+  .y_month_value {
+    fill: white;
+  }
+  .y_month_value .tick text {
+    fill: #2fb36b;
+    font-size: 14px;
+  }
+  .x_month_value .tick text {
+    font-size: 14px;
+    color: #959595;
+    font-weight: 500;
+  }
+  .y_axis_text .tick text {
+    display: none;
+  }
+  /* End of graph css */
+  /* start of context graph css */
+  .float-checkboxes {
+    width: 5%;
+    float: left;
+    margin-top: 100px;
+    position: static;
+  }
+  .y-axis-data {
+    width: 55px;
+    float: left;
+    margin-top: 44px;
+    margin-right: 10px;
+  }
+  .iipColorClass {
+    color: #24c0e2;
+  }
+  .pmiColorClass {
+    color: #e1861b;
+  }
+  .gvaColorClass {
+    color: #3e3ec8;
+  }
+  #rect_xaxis_context {
+    fill: #c8c8c8;
+  }
+  div.context_chart_container {
+    font-family: "Inter";
+    display: flex;
+    justify-content: center;
+  }
+  div.context_line_checkboxes {
+    padding-left: 3rem;
+    padding-top: 105px;
+    font: 14px "Inter";
+    width: 100px;
+    text-align: left;
+  }
+  div.context_line_checkboxes .checkbox_label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+  }
+  .fontClass {
+    font-family: "Inter";
+    font-size: 16px;
+  }
+  .serviceBox:first-child {
+    margin-left: 4%;
+  }
+  #insights_graph_svg path.domain {
+    stroke: #a3a3a3; /* for insights graph */
+  }
+  #monthly_commentary_chart path.domain,
+  #monthly_commentary_chart_mobile path.domain {
+    stroke: #dfdfdf; /* for commentary graph */
+  }
+  .x_month_value .tick line {
+    stroke-dasharray: 1;
+    stroke: #c9c9c9;
+  }
+  .chart_desc {
+    display: flex;
+    margin: 0 auto;
+    padding: 12px 0;
+  }
+  .iipContent {
+    display: flex;
+    gap: 4px;
+  }
+  .pmiContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .gvaContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .iipLegendText {
+    color: var(--IIP, #24c0e2);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119.2%;
+  }
+  .pmiLegendText {
+    color: var(--PMI, #e1861b);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119.2%;
+  }
+  .gvaLegendText {
+    color: var(--GOI, #3e3ec8);
+    text-align: start;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119.2%;
+    width: 66px;
+  }
+  .iipLegendContent {
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #ababab;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%;
+    text-align: left;
+  }
+  .pmiLegendContent {
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #ababab;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%;
+    text-align: left;
+  }
+  .gvaLegendContent {
+    align-self: stretch;
+    color: #ababab;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.2%;
+    width: 259px;
+    text-align: left;
+  }
+  .disable_arrows {
+    opacity: 0.7;
+    pointer-events: none;
+  }
 }
 /* End of context graph css */
+
+.audio-options {
+  background: #d2f3e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  padding: 0 0.75rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}

@@ -1025,6 +1025,9 @@ export class InsightsChartComponent implements OnInit {
         let monthlyC = monthlyData[0];
         let expertC = expertData[0];
         let graphC = graphData[0].monthList;
+
+        let current_month = d3.timeFormat('%b')(<Date>parseDate(expertC.Month));
+        let current_year = d3.timeFormat('%Y')(<Date>parseDate(expertC.Month));
         // Left data
         d3.select('#mc_title_mobile').html(`Jocata Sumpoorn`);
         d3.select('#mc_rating_mobile').html(`${indexValue}`);
@@ -1041,6 +1044,7 @@ export class InsightsChartComponent implements OnInit {
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
 
         d3.select('.ec_month_title_download').html(`${expertC.Month}`);
+        d3.select('.audio_title_mobile').html(`${_moment(current_month,'MMM').format('MMMM')} ${current_year} Audio Commentary` );
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           d3.selectAll('.expert_comm_mem_mobile').remove();
           expertC.AuthorDetails.forEach((expertAD, i) => {
@@ -2399,6 +2403,7 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_month_title_download').html(`${expertC.Month}`);
 
         d3.select('.ec_month_title').html(`${current_month} ${current_year}`);
+        d3.select('.audio_title').html(`${_moment(current_month,'MMM').format('MMMM')} ${current_year} Audio Commentary` );
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           d3.selectAll('.expert_comm_mem').remove();
           expertC.AuthorDetails.forEach((expertAD, i) => {
