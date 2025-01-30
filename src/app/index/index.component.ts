@@ -66,13 +66,13 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
       this.hide = currentUrl === '/index?hide=true';
     });
   }
-  
+
   ngAfterViewInit() {
     const webDiv = this.elRef.nativeElement.querySelector('.ec_message');
     const mobileDiv = this.elRef.nativeElement.querySelector('#ec_message_mobile');
-    
+
     const elementsToObserve = [webDiv, mobileDiv].filter(el => !!el);
-    
+
     this.observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         const activeElement = mutation.target as HTMLElement;
@@ -80,7 +80,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
         this.text = activeElement.textContent || activeElement.innerText || '';
         const words = this.text.split(/\s+/).filter(word => word.length > 0);
         this.totalDuration = (words.length / this.wpm) * 60;
-  
+
         setTimeout(() => {
           this.startSpeech();
           this.stopSpeech();
@@ -102,6 +102,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.observer) {
       this.observer.disconnect();
     }
+    this.stopSpeech();
   }
   // Data for Context Table Mobile
   contextTableData = [
