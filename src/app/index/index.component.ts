@@ -41,18 +41,18 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   hide: boolean = false;
   // @ViewChild('slide_prev') slide_prev: ElementRef;
   // @ViewChild('slide_next') slide_next: ElementRef;
-  text: string = '';
-  voices: SpeechSynthesisVoice[] = [];
-  selectedVoice?: SpeechSynthesisVoice;
-  private speechSynthesis = window.speechSynthesis;
-  private utterance: SpeechSynthesisUtterance | null = null;
-  currentTime: number = 0; // Current playback time in seconds
-  totalDuration: number = 0; // Estimated total duration in seconds
-  playing: boolean = false; // Speech is actively playing
-  paused: boolean = false; // Speech is paused
-  private wpm: number = 180; // Words Per Minute (adjust as needed)
+  // text: string = '';
+  // voices: SpeechSynthesisVoice[] = [];
+  // selectedVoice?: SpeechSynthesisVoice;
+  // private speechSynthesis = window.speechSynthesis;
+  // private utterance: SpeechSynthesisUtterance | null = null;
+  // currentTime: number = 0; // Current playback time in seconds
+  // totalDuration: number = 0; // Estimated total duration in seconds
+  // playing: boolean = false; // Speech is actively playing
+  // paused: boolean = false; // Speech is paused
+  // private wpm: number = 180; // Words Per Minute (adjust as needed)
   // private wordTimings: { word: string; startTime: number }[] = []; // Word boundary timings
-  wordTimings: number[] = []; // Array of time positions for each word
+  // wordTimings: number[] = []; // Array of time positions for each word
   private observer!: MutationObserver;
 
   constructor(
@@ -68,41 +68,43 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const webDiv = this.elRef.nativeElement.querySelector('.ec_message');
-    const mobileDiv = this.elRef.nativeElement.querySelector('#ec_message_mobile');
+  //   const webDiv = this.elRef.nativeElement.querySelector('.ec_message');
+  //   const mobileDiv = this.elRef.nativeElement.querySelector('#ec_message_mobile');
 
-    const elementsToObserve = [webDiv, mobileDiv].filter(el => !!el);
+  //   const elementsToObserve = [webDiv, mobileDiv].filter(el => !!el);
 
-    this.observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        const activeElement = mutation.target as HTMLElement;
+  //   this.observer = new MutationObserver((mutations) => {
+  //     mutations.forEach((mutation) => {
+  //       const activeElement = mutation.target as HTMLElement;
 
-        this.text = activeElement.textContent || activeElement.innerText || '';
-        const words = this.text.split(/\s+/).filter(word => word.length > 0);
-        this.totalDuration = (words.length / this.wpm) * 60;
+  //       this.text = activeElement.textContent || activeElement.innerText || '';
+  //       const words = this.text.split(/\s+/).filter(word => word.length > 0);
+  //       this.totalDuration = (words.length / this.wpm) * 60;
 
-        setTimeout(() => {
-          this.startSpeech();
-          this.stopSpeech();
-        }, 0);
-      });
-    });
+  //       setTimeout(() => {
+  //         this.startSpeech();
+  //         this.stopSpeech();
+  //       }, 0);
+  //     });
+  //   });
 
-    elementsToObserve.forEach(el => {
-      this.observer.observe(el, {
-        attributes: true,
-        childList: true,
-        subtree: true,
-        characterData: true,
-      });
-    });
+  //   elementsToObserve.forEach(el => {
+  //     this.observer.observe(el, {
+  //       attributes: true,
+  //       childList: true,
+  //       subtree: true,
+  //       characterData: true,
+  //     });
+  //   });
+  if (this.observer) {
+  }
   }
 
   ngOnDestroy() {
     if (this.observer) {
-      this.observer.disconnect();
+      // this.observer.disconnect();
     }
-    this.stopSpeech();
+    // this.stopSpeech();
   }
   // Data for Context Table Mobile
   contextTableData = [
@@ -181,7 +183,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
     // }, (error) => {
     //     console.error("getSumpoornGraphData Error", error);
     // })
-    setTimeout(() => this.loadVoices(), 100);
+    // setTimeout(() => this.loadVoices(), 100);
   }
 
   getSumpoornData() {
@@ -301,147 +303,147 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
       clientY: event.clientY,
     });
   }
-  loadVoices() {
-    this.voices = this.speechSynthesis
-      .getVoices()
-      .filter((voice) => voice.lang === 'en-US');
-    this.selectedVoice = this.voices[0];
-  }
-  startPlay() {
-    if (this.speechSynthesis.paused) {
-      this.resumeSpeech();
-    } else {
-      this.startSpeech();
-    }
-  }
-  replaySpeech(): void {
-    this.stopSpeech();
-    this.startSpeech();
-  }
-  startSpeech(): void {
-    if (!this.text.trim()) return;
+  // loadVoices() {
+  //   this.voices = this.speechSynthesis
+  //     .getVoices()
+  //     .filter((voice) => voice.lang === 'en-US');
+  //   this.selectedVoice = this.voices[0];
+  // }
+  // startPlay() {
+  //   if (this.speechSynthesis.paused) {
+  //     this.resumeSpeech();
+  //   } else {
+  //     this.startSpeech();
+  //   }
+  // }
+  // replaySpeech(): void {
+  //   this.stopSpeech();
+  //   this.startSpeech();
+  // }
+  // startSpeech(): void {
+  //   if (!this.text.trim()) return;
 
-    this.stopSpeech(); // Stop any ongoing speech
+  //   this.stopSpeech(); // Stop any ongoing speech
 
-    this.utterance = new SpeechSynthesisUtterance(this.text);
-    this.wordTimings = []; // Reset word timings
+  //   this.utterance = new SpeechSynthesisUtterance(this.text);
+  //   this.wordTimings = []; // Reset word timings
 
-    const words = this.text.split(/\s+/);
-    this.totalDuration = (words.length / this.wpm) * 60;
+  //   const words = this.text.split(/\s+/);
+  //   this.totalDuration = (words.length / this.wpm) * 60;
 
-    let currentWordIndex = 0;
-    let timeElapsed = 0;
+  //   let currentWordIndex = 0;
+  //   let timeElapsed = 0;
 
-    // Track word timings
-    this.utterance.addEventListener('boundary', (event) => {
-      if (event.charIndex !== undefined) {
-        const elapsedText = this.text.substring(0, event.charIndex);
-        const elapsedWords = elapsedText.split(/\s+/).length;
+  //   // Track word timings
+  //   this.utterance.addEventListener('boundary', (event) => {
+  //     if (event.charIndex !== undefined) {
+  //       const elapsedText = this.text.substring(0, event.charIndex);
+  //       const elapsedWords = elapsedText.split(/\s+/).length;
 
-        // Record word timings based on WPM
-        while (currentWordIndex < elapsedWords) {
-          this.wordTimings.push(timeElapsed);
-          timeElapsed += 60 / this.wpm; // Time for one word
-          currentWordIndex++;
-        }
+  //       // Record word timings based on WPM
+  //       while (currentWordIndex < elapsedWords) {
+  //         this.wordTimings.push(timeElapsed);
+  //         timeElapsed += 60 / this.wpm; // Time for one word
+  //         currentWordIndex++;
+  //       }
 
-        this.currentTime = timeElapsed;
-      }
-    });
+  //       this.currentTime = timeElapsed;
+  //     }
+  //   });
 
-    this.utterance.addEventListener('end', () => {
-      this.playing = false;
-      this.paused = false;
-      this.currentTime = this.totalDuration;
-    });
+  //   this.utterance.addEventListener('end', () => {
+  //     this.playing = false;
+  //     this.paused = false;
+  //     this.currentTime = this.totalDuration;
+  //   });
 
-    this.speechSynthesis.speak(this.utterance);
-    this.playing = true;
-    this.paused = false;
-  }
+  //   this.speechSynthesis.speak(this.utterance);
+  //   this.playing = true;
+  //   this.paused = false;
+  // }
 
-  stopSpeech(): void {
-    if (this.speechSynthesis.speaking) {
-      this.speechSynthesis.cancel();
-    }
-    this.playing = false;
-    this.paused = false;
-    this.currentTime = 0;
-  }
+  // stopSpeech(): void {
+  //   if (this.speechSynthesis.speaking) {
+  //     this.speechSynthesis.cancel();
+  //   }
+  //   this.playing = false;
+  //   this.paused = false;
+  //   this.currentTime = 0;
+  // }
 
-  pauseSpeech(): void {
-    if (this.speechSynthesis.speaking && !this.speechSynthesis.paused) {
-      this.speechSynthesis.pause();
-      this.paused = true;
-      this.playing = false;
-    }
-  }
+  // pauseSpeech(): void {
+  //   if (this.speechSynthesis.speaking && !this.speechSynthesis.paused) {
+  //     this.speechSynthesis.pause();
+  //     this.paused = true;
+  //     this.playing = false;
+  //   }
+  // }
 
-  resumeSpeech(): void {
-    if (this.speechSynthesis.paused) {
-      this.speechSynthesis.resume();
-      this.paused = false;
-      this.playing = true;
-    }
-  }
+  // resumeSpeech(): void {
+  //   if (this.speechSynthesis.paused) {
+  //     this.speechSynthesis.resume();
+  //     this.paused = false;
+  //     this.playing = true;
+  //   }
+  // }
 
-  forward(): void {
-    this.seekTo(this.currentTime + 10); // Seek forward by 10 seconds
-  }
+  // forward(): void {
+  //   this.seekTo(this.currentTime + 10); // Seek forward by 10 seconds
+  // }
 
-  backward(): void {
-    this.seekTo(this.currentTime - 10); // Seek backward by 10 seconds
-  }
+  // backward(): void {
+  //   this.seekTo(this.currentTime - 10); // Seek backward by 10 seconds
+  // }
 
-  seekTo(time: number): void {
-    if (!this.text.trim()) return;
+  // seekTo(time: number): void {
+  //   if (!this.text.trim()) return;
 
-    const targetTime = Math.max(0, Math.min(time, this.totalDuration)); // Ensure time is within range
-    this.stopSpeech(); // Stop any ongoing speech
+  //   const targetTime = Math.max(0, Math.min(time, this.totalDuration)); // Ensure time is within range
+  //   this.stopSpeech(); // Stop any ongoing speech
 
-    // Find the closest word to the target time
-    let startIndex = this.wordTimings.findIndex(
-      (timing) => timing >= targetTime
-    );
-    if (startIndex === -1) {
-      startIndex = this.wordTimings.length - 1;
-    }
+  //   // Find the closest word to the target time
+  //   let startIndex = this.wordTimings.findIndex(
+  //     (timing) => timing >= targetTime
+  //   );
+  //   if (startIndex === -1) {
+  //     startIndex = this.wordTimings.length - 1;
+  //   }
 
-    // Create the remaining text to read
-    const remainingText = this.text.split(/\s+/).slice(startIndex).join(' ');
+  //   // Create the remaining text to read
+  //   const remainingText = this.text.split(/\s+/).slice(startIndex).join(' ');
 
-    // Adjust the current time based on the word timing
-    this.currentTime = this.wordTimings[startIndex] || 0;
+  //   // Adjust the current time based on the word timing
+  //   this.currentTime = this.wordTimings[startIndex] || 0;
 
-    this.utterance = new SpeechSynthesisUtterance(remainingText);
+  //   this.utterance = new SpeechSynthesisUtterance(remainingText);
 
-    // Track word timings after seeking
-    let currentWordIndex = startIndex;
-    let timeElapsed = this.wordTimings[startIndex] || 0;
+  //   // Track word timings after seeking
+  //   let currentWordIndex = startIndex;
+  //   let timeElapsed = this.wordTimings[startIndex] || 0;
 
-    this.utterance.addEventListener('boundary', (event) => {
-      if (event.charIndex !== undefined) {
-        const elapsedText = this.text.substring(0, event.charIndex);
-        const elapsedWords = elapsedText.split(/\s+/).length;
+  //   this.utterance.addEventListener('boundary', (event) => {
+  //     if (event.charIndex !== undefined) {
+  //       const elapsedText = this.text.substring(0, event.charIndex);
+  //       const elapsedWords = elapsedText.split(/\s+/).length;
 
-        while (currentWordIndex < elapsedWords) {
-          this.wordTimings.push(timeElapsed);
-          timeElapsed += 60 / this.wpm;
-          currentWordIndex++;
-        }
+  //       while (currentWordIndex < elapsedWords) {
+  //         this.wordTimings.push(timeElapsed);
+  //         timeElapsed += 60 / this.wpm;
+  //         currentWordIndex++;
+  //       }
 
-        this.currentTime = timeElapsed;
-      }
-    });
+  //       this.currentTime = timeElapsed;
+  //     }
+  //   });
 
-    this.utterance.addEventListener('end', () => {
-      this.playing = false;
-      this.paused = false;
-      this.currentTime = this.totalDuration;
-    });
+  //   this.utterance.addEventListener('end', () => {
+  //     this.playing = false;
+  //     this.paused = false;
+  //     this.currentTime = this.totalDuration;
+  //   });
 
-    this.speechSynthesis.speak(this.utterance);
-    this.playing = true;
-    this.paused = false;
-  }
+  //   this.speechSynthesis.speak(this.utterance);
+  //   this.playing = true;
+  //   this.paused = false;
+  // }
 }
