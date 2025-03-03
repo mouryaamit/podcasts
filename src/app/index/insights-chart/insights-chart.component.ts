@@ -2435,11 +2435,11 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
         createGraphForCommentary(graphC);
-        let textForSpeech = "Jocata Sumpoorn "+indexValue+" "+monthlyC.comment;
+        let textForSpeech = "Jocata Sumpoorn "+indexValue+",<br/><br/>"+monthlyC.comment;
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
-          textForSpeech+= " Expert Commentary "
+          textForSpeech+= ",<br/><br/> Expert Commentary,<br/><br/>"
         } else {
-          textForSpeech+= " Macro Commentary "
+          textForSpeech+= ",<br/><br/> Macro Commentary,<br/><br/>"
         }
         textForSpeech+= expertC.ExpertCommentary;
         $('#textForSpeech').html(textForSpeech);

@@ -87,7 +87,7 @@
                               <div class="row align-items-center">
                                 <h6 class="commentary_body_right_title ec_title"></h6>
                               </div>
-                              <!-- <div class="audio-commentary">
+                              <!-- <div class="audio-commentary" [hidden]="!isVoiceFound">
                                 <div class="audio-commentary-left">
                                   <p class="audio_title"></p>
                                   <div class="audio-commentary-slider">
@@ -185,7 +185,7 @@
                       <div class="row gx-0">
                         <div class="col-12 commentary_body_right">
                           <h6 class="commentary_body_right_title" id="ec_title_mobile"></h6>
-                          <!-- <div class="audio-commentary">
+                          <!-- <div class="audio-commentary" [hidden]="!isVoiceFound">
                             <div class="audio-commentary-left">
                               <p class="audio_title_mobile"></p>
                               <div class="audio-commentary-slider">
@@ -456,3 +456,4 @@
     </div>
   </div>
 </div>
+<div id="textForSpeech" style="display: none"></div>
