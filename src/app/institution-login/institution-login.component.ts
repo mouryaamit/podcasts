@@ -157,7 +157,7 @@ export class InstitutionLoginComponent implements OnInit {
     this.sumpoornApiService.saveSwaraLoginFormDetails(postData).then(
       (resp: any) => {
         this.swaraLoginGroup.reset();
-        console.log(resp.instLoginUrl)
+        // console.log(resp.instLoginUrl)
         window.open(resp.instLoginUrl, "_blank");
         this.toastr.success('Thank you for submitting the details. One of our representative shall get in touch with you soon.', 'Thanks!', {
           timeOut: 10000,

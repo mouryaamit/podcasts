@@ -10,7 +10,6 @@ import * as _moment from 'moment';
 export class InsightsChartComponent implements OnInit {
   @Input() sumpoornGraphData;
   @Output() graphWidth = new EventEmitter<number>();
-
   constructor() {}
 
   ngOnInit(): void {
@@ -1026,6 +1025,9 @@ export class InsightsChartComponent implements OnInit {
         let monthlyC = monthlyData[0];
         let expertC = expertData[0];
         let graphC = graphData[0].monthList;
+
+        let current_month = d3.timeFormat('%b')(<Date>parseDate(expertC.Month));
+        let current_year = d3.timeFormat('%Y')(<Date>parseDate(expertC.Month));
         // Left data
         d3.select('#mc_title_mobile').html(`Jocata Sumpoorn`);
         d3.select('#mc_rating_mobile').html(`${indexValue}`);
@@ -1042,6 +1044,7 @@ export class InsightsChartComponent implements OnInit {
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
 
         d3.select('.ec_month_title_download').html(`${expertC.Month}`);
+        d3.select('.audio_title_mobile').html(`${_moment(current_month,'MMM').format('MMMM')} ${current_year} Audio Commentary` );
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           d3.selectAll('.expert_comm_mem_mobile').remove();
           expertC.AuthorDetails.forEach((expertAD, i) => {
@@ -1319,7 +1322,7 @@ export class InsightsChartComponent implements OnInit {
   generateInsightsGraph() {
     const mydata = this.sumpoornGraphData.IndexGeneration;
     const indexData = this.sumpoornGraphData.Commentary;
-
+    let pageThis = this;
     const y_left_coordinates = [
       '0.00',
       '0.10',
@@ -2400,6 +2403,7 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_month_title_download').html(`${expertC.Month}`);
 
         d3.select('.ec_month_title').html(`${current_month} ${current_year}`);
+        d3.select('.audio_title').html(`${_moment(current_month,'MMM').format('MMMM')} ${current_year} Audio Commentary` );
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           d3.selectAll('.expert_comm_mem').remove();
           expertC.AuthorDetails.forEach((expertAD, i) => {
@@ -2431,6 +2435,14 @@ export class InsightsChartComponent implements OnInit {
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
         createGraphForCommentary(graphC);
+        let textForSpeech = "Jocata Sumpoorn "+indexValue+",<br/><br/>"+monthlyC.comment;
+        if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
+          textForSpeech+= ",<br/><br/> Expert Commentary,<br/><br/>"
+        } else {
+          textForSpeech+= ",<br/><br/> Macro Commentary,<br/><br/>"
+        }
+        textForSpeech+= expertC.ExpertCommentary;
+        $('#textForSpeech').html(textForSpeech);
       } else {
         let lastMonth = _moment(dataValue.category,'MM-YYYY').subtract(1, 'months').format('MM-YYYY')
         let lastMonthDataValue = mydata.filter((x) => x.category == lastMonth)[0];

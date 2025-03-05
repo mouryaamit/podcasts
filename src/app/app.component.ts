@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
 import { MetaService } from './services/meta.service';
@@ -20,7 +19,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       const currentUrl = this.router.url;
       this.hide = (currentUrl === "/index?hide=true");
-      console.log("currentUrl",currentUrl,"hide",this.hide)
         });
         this.disableConsoleInProduction();
   }
@@ -36,9 +34,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    AOS.init({
-      // disable: window.innerWidth < 768
-    });
 
     console.info('Last release timestamp is set to:', environment.timeStamp);
 
