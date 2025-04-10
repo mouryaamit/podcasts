@@ -1655,7 +1655,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3) //4
+                  years.indexOf(year) * 2.62) //3 4
             )
             .attr('y1', 0)
             .attr(
@@ -1663,7 +1663,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3) //4
+                  years.indexOf(year) * 2.62) //3 4
             )
             .attr('y2', height + 35) //63
             .attr('stroke', '#E1E1E1')
@@ -1677,7 +1677,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3.8) //4.8
+                  years.indexOf(year) * 3) //3.8 4.8
             )
             .attr('y1', 0)
             .attr(
@@ -1685,7 +1685,7 @@ export class InsightsChartComponent implements OnInit {
               25 * year.count +
                 (300 * years.indexOf(year) -
                   25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3.8) //4.8
+                  years.indexOf(year) * 3) //3.8 4.8
             )
             .attr('y2', height + 63)
             .attr('stroke', '#959595')

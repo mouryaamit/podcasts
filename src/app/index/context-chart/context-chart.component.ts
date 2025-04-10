@@ -1386,7 +1386,7 @@ export class ContextChartComponent implements OnInit {
                 .attr("stroke-width", "1");
             years.forEach(year => {
                 let yearSvg = svg.append("g");
-                if (years.indexOf(year) == 0) {
+                if (years.indexOf(year) == 0) { // 2019
                     yearSvg.append('line')
                         .attr('x1', (25 * year.count)+2)
                         .attr('y1', 0)
@@ -1396,20 +1396,20 @@ export class ContextChartComponent implements OnInit {
                         .attr("stroke-width", "1")
                         .attr("stroke-dasharray", "2")
                         .attr("class", "year-line");
-                } else if (years.indexOf(year) == years.length - 1) {
+                } else if (years.indexOf(year) == years.length - 1) { //last line
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.5
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4.2))) //5 6.5
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.5
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*4.2))) //5 6.5
                         .attr('y2', height + 35) // 60
                         .attr('stroke', '#E1E1E1')
                         .attr("stroke-width", "1")
                         .attr("class", "year-line");
-                } else {
+                } else { // all year line except to 2019
                     yearSvg.append('line')
-                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.2))) //7.5
+                        .attr('x1', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.2 7.5
                         .attr('y1', 0)
-                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*6.2))) //7.5
+                        .attr('x2', (25 * year.count) + (300 * years.indexOf(year) - (25 * (12 - years[0].count)) + (years.indexOf(year)*5))) //6.2 7.5
                         .attr('y2', height + 60)
                         .attr('stroke', '#959595')
                         .attr("stroke-width", "1")
