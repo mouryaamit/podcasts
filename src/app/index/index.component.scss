@@ -450,6 +450,9 @@
     margin: 0.75rem 0;
     display: flex;
     width: 100%;
+    @media only screen and (min-width: 768px) {
+      margin: 0.75rem;
+    }
   }
 
   .expert_comm_border_right:not(:last-child) {
