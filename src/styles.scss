@@ -83,9 +83,11 @@ a {
     }
 
     &.toast-error {
-      background: linear-gradient(0deg,
+      background: linear-gradient(
+          0deg,
           rgba(254, 0, 8, 0.1) 0%,
-          rgba(254, 0, 8, 0.1) 100%),
+          rgba(254, 0, 8, 0.1) 100%
+        ),
         #fff;
 
       .toast-progress {
@@ -94,9 +96,11 @@ a {
     }
 
     &.toast-warning {
-      background: linear-gradient(0deg,
+      background: linear-gradient(
+          0deg,
           rgba(255, 157, 89, 0.1) 0%,
-          rgba(255, 157, 89, 0.1) 100%),
+          rgba(255, 157, 89, 0.1) 100%
+        ),
         #fff;
 
       .toast-progress {
@@ -105,9 +109,11 @@ a {
     }
 
     &.toast-success {
-      background: linear-gradient(0deg,
+      background: linear-gradient(
+          0deg,
           rgba(37, 187, 97, 0.1) 0%,
-          rgba(37, 187, 97, 0.1) 100%),
+          rgba(37, 187, 97, 0.1) 100%
+        ),
         #fff;
 
       .toast-progress {
@@ -1096,7 +1102,9 @@ a {
     }
 
     100% {
-      transform: translateX(calc(-1 * $marquee-element-width-sm * $marquee-elements));
+      transform: translateX(
+        calc(-1 * $marquee-element-width-sm * $marquee-elements)
+      );
     }
   }
 
@@ -1106,7 +1114,9 @@ a {
     }
 
     100% {
-      transform: translateX(calc(-1 * $marquee-element-width-md * $marquee-elements));
+      transform: translateX(
+        calc(-1 * $marquee-element-width-md * $marquee-elements)
+      );
     }
   }
 
@@ -1149,7 +1159,7 @@ a {
 
 // About Page Styles Start
 .app_about {
-  padding-top: 12rem;
+  padding-top: 10rem;
 
   .app_about_gallery {
     background: $app-white;
@@ -1493,7 +1503,7 @@ a {
       margin-bottom: 0;
       padding: 4.5rem 2.5rem;
 
-      >span:not(span span) {
+      > span:not(span span) {
         @media only screen and (min-width: 768px) {
           display: block;
         }
@@ -2303,7 +2313,7 @@ a {
             padding: 1rem;
 
             @media only screen and (min-width: 768px) {
-              padding: 1.75rem 2.5rem .75rem 1.5rem;
+              padding: 1.75rem 2.5rem 0.75rem 1.5rem;
             }
 
             .audio-commentary-left {
@@ -2332,7 +2342,7 @@ a {
 
                   .mat-slider-track-wrapper {
                     height: 8px;
-                    background-color: #1ED760;
+                    background-color: #1ed760;
                     border-radius: 30px;
 
                     .mat-slider-track-background {
@@ -2343,7 +2353,7 @@ a {
 
                     .mat-slider-track-fill {
                       height: 8px;
-                      background-color: #1ED760;
+                      background-color: #1ed760;
                     }
                   }
 
@@ -2359,7 +2369,7 @@ a {
                 align-items: center;
 
                 span {
-                  color: #2FB36B;
+                  color: #2fb36b;
                   font-size: $font-size-12px;
                   line-height: $font-size-14px;
                 }
@@ -2368,10 +2378,10 @@ a {
               .audio-commentary-restart {
                 display: flex;
                 align-items: center;
-                margin-top: .75rem;
+                margin-top: 0.75rem;
 
                 span {
-                  color: #4A4A4A;
+                  color: #4a4a4a;
                   font-size: $font-size-12px;
                   font-weight: 300;
                   margin-left: 4px;
