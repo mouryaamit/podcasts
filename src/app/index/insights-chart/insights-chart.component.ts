@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 import * as d3 from "d3";
 import * as $ from "jquery";
 import * as _moment from "moment";
@@ -10,7 +11,7 @@ import * as _moment from "moment";
 export class InsightsChartComponent implements OnInit {
   @Input() sumpoornGraphData;
   @Output() graphWidth = new EventEmitter<number>();
-  constructor() {}
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     this.generateInsightsGraph();
@@ -2384,8 +2385,12 @@ export class InsightsChartComponent implements OnInit {
         }
       }
     );
+    const getSafeUrl=(url: string): any =>  {
+      let safeUrl:any = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+      return safeUrl?.changingThisBreaksApplicationSecurity ? safeUrl?.changingThisBreaksApplicationSecurity : safeUrl;
+    }
 
-    function addCommentary(dataValue) {
+    const addCommentary = (dataValue) => {
       let indexValue = dataValue.value;
       let expertData = indexData.ExpertCommentary.filter((e) => {
         return e.Month == dataValue.category;
@@ -2421,6 +2426,15 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select(".mc_body").html(`${monthlyC.comment}`);
+        // monthlyC.videoUrl = 'https://www.youtube.com/embed/c9F5kMUfFKk'; // need to remove once we get from api
+        monthlyC.videoUrl = "https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared"; // need to remove once we get from api
+        if(monthlyC?.videoUrl) {
+          let videoUrl = monthlyC?.videoUrl;
+          let safeSrcUrl = getSafeUrl(videoUrl);
+          // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
+          d3.select(".mc_ytvideo").html(`<iframe src="${safeSrcUrl}" width="250" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen></iframe>`);
+        }
         // Right data
         d3.select(".ec_month_title_download").html(`${expertC.Month}`);
 
