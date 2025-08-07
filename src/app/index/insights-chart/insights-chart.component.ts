@@ -1049,9 +1049,8 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-
-        monthlyC.videoUrl =
-          'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
+        // monthlyC.videoUrl =
+        //   'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
         if (monthlyC?.videoUrl) {
           let videoUrl = monthlyC?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
@@ -2440,8 +2439,8 @@ export class InsightsChartComponent implements OnInit {
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
         // monthlyC.videoUrl = 'https://www.youtube.com/embed/c9F5kMUfFKk'; // need to remove once we get from api
-        monthlyC.videoUrl =
-          'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
+        // monthlyC.videoUrl =
+        //   'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
         if (monthlyC?.videoUrl) {
           let videoUrl = monthlyC?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
