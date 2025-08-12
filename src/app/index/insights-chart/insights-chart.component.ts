@@ -23,6 +23,12 @@ export class InsightsChartComponent implements OnInit {
       ? safeUrl?.changingThisBreaksApplicationSecurity
       : safeUrl;
   };
+  getVideoId=(url:string) : any => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|(?:live|embed)\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url?.match(regExp);
+    const videoId = (match && match[2].length === 11) ? match[2] : null;
+    return videoId;
+  }
   openInfoIcon(graph_id, evt) {
     {
       function formatYaxisForText(d: any, fromWhere: any) {
@@ -1049,8 +1055,8 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-        // monthlyC.videoUrl =
-        //   'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
+        monthlyC.videoUrl =
+          'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
         if (monthlyC?.videoUrl) {
           let videoUrl = monthlyC?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
@@ -2438,9 +2444,10 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
-        // monthlyC.videoUrl = 'https://www.youtube.com/embed/c9F5kMUfFKk'; // need to remove once we get from api
-        // monthlyC.videoUrl =
-        //   'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
+        monthlyC.videoUrl =
+          'https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared'; // need to remove once we get from api
+        // let videoId = this.getVideoId(monthlyC.videoUrl);
+        // console.log('videoId', videoId);
         if (monthlyC?.videoUrl) {
           let videoUrl = monthlyC?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
