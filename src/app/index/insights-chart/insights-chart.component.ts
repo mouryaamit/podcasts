@@ -1020,6 +1020,8 @@ export class InsightsChartComponent implements OnInit {
 
     const addCommentary = (dataValue) => {
       let indexValue = dataValue.value;
+      let MonthlyVideoCommentary = [{Month: '04-2025', videoURL: 'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'}];
+      indexData.MonthlyVideoCommentary = MonthlyVideoCommentary;
       let expertData = indexData.ExpertCommentary.filter((e) => {
         return e.Month == dataValue.category;
       });
@@ -1027,6 +1029,9 @@ export class InsightsChartComponent implements OnInit {
         return m.Month == dataValue.category;
       });
       let graphData = indexData.MonthlyCommentaryGraph.filter((m) => {
+        return m.Month == dataValue.category;
+      });
+      let videoData = indexData.MonthlyVideoCommentary.filter((m) => {
         return m.Month == dataValue.category;
       });
 
@@ -1055,13 +1060,17 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-        monthlyC.videoUrl =
+        // Static
+        monthlyC.videoURL =
           'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'; // need to remove once we get from api
-        if (monthlyC?.videoUrl) {
-          let videoUrl = monthlyC?.videoUrl;
-          let safeSrcUrl = this.getSafeUrl(videoUrl);
+        if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
+          d3.selectAll('.mc_ytvideo_url_mobile').remove();
+          d3.select('#monthly_commentary_chart_mobile').remove();
+          let videoURL = videoData[0]?.videoURL;
+          let safeSrcUrl = this.getSafeUrl(videoURL);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
-          d3.select('.mc_ytvideo_mobile')
+          d3.select('.mc_ytvideo_mobile').append('div')
+            .attr('class', 'mc_ytvideo_url_mobile')
             .html(`<iframe src="${safeSrcUrl}" class="w-100 mb-4" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen
         allowfullscreen></iframe>`);
         }
@@ -1116,7 +1125,9 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('#ec_message_mobile').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        createGraphForCommentary(graphC);
+        if (videoData && videoData.length <= 0) {
+          createGraphForCommentary(graphC);
+        }
       } else {
         let lastMonth = _moment(dataValue.category, 'MM-YYYY')
           .subtract(1, 'months')
@@ -1170,6 +1181,7 @@ export class InsightsChartComponent implements OnInit {
 
       // append the svg object to the body of the page
       d3.select('#monthly_commentary_chart_mobile').remove();
+      d3.selectAll('.mc_ytvideo_url_mobile').remove();
       const svg_c = d3
         .select('#commentary_graph_mobile')
         .append('svg')
@@ -2410,6 +2422,8 @@ export class InsightsChartComponent implements OnInit {
 
     const addCommentary = (dataValue) => {
       let indexValue = dataValue.value;
+      let MonthlyVideoCommentary = [{Month: '04-2025', videoURL: 'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'}];
+      indexData.MonthlyVideoCommentary = MonthlyVideoCommentary;
       let expertData = indexData.ExpertCommentary.filter((e) => {
         return e.Month == dataValue.category;
       });
@@ -2417,6 +2431,9 @@ export class InsightsChartComponent implements OnInit {
         return m.Month == dataValue.category;
       });
       let graphData = indexData.MonthlyCommentaryGraph.filter((m) => {
+        return m.Month == dataValue.category;
+      });
+      let videoData = indexData.MonthlyVideoCommentary.filter((m) => {
         return m.Month == dataValue.category;
       });
 
@@ -2444,15 +2461,19 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
-        monthlyC.videoUrl =
+        // Static
+        monthlyC.videoURL =
           'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'; // need to remove once we get from api
         // let videoId = this.getVideoId(monthlyC.videoUrl);
         // console.log('videoId', videoId);
-        if (monthlyC?.videoUrl) {
-          let videoUrl = monthlyC?.videoUrl;
-          let safeSrcUrl = this.getSafeUrl(videoUrl);
+        if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
+          d3.selectAll('.mc_ytvideo_url').remove();
+          d3.select('#monthly_commentary_chart').remove();
+          let videoURL = videoData[0]?.videoURL;
+          let safeSrcUrl = this.getSafeUrl(videoURL);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
-          d3.select('.mc_ytvideo')
+          d3.select('.mc_ytvideo').append('div')
+            .attr('class', 'mc_ytvideo_url')
             .html(`<iframe src="${safeSrcUrl}" class="w-100 my-4" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen
         allowfullscreen></iframe>`);
         }
@@ -2506,7 +2527,9 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        createGraphForCommentary(graphC);
+        if (videoData && videoData.length <= 0) { 
+          createGraphForCommentary(graphC);
+        }
         let textForSpeech =
           'Jocata Sumpoorn ' + indexValue + ',<br/><br/>' + monthlyC.comment;
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
@@ -2567,6 +2590,7 @@ export class InsightsChartComponent implements OnInit {
         .tickFormat('');
       // append the svg object to the body of the page
       d3.select('#monthly_commentary_chart').remove();
+      d3.selectAll('.mc_ytvideo_url').remove();
       const svg_c = d3
         .select('#commentary_graph')
         .append('svg')
