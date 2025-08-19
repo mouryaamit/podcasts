@@ -1021,8 +1021,6 @@ export class InsightsChartComponent implements OnInit {
 
     const addCommentary = (dataValue) => {
       let indexValue = dataValue.value;
-      let MonthlyVideoCommentary = [{Month: '04-2025', videoURL: 'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'}];
-      indexData.MonthlyVideoCommentary = MonthlyVideoCommentary;
       let expertData = indexData.ExpertCommentary.filter((e) => {
         return e.Month == dataValue.category;
       });
@@ -1061,11 +1059,11 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-        if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != "") {
           d3.selectAll('.mc_ytvideo_url_mobile').remove();
           d3.select('#monthly_commentary_chart_mobile').remove();
-          let videoURL = videoData[0]?.videoURL;
-          let safeSrcUrl = this.getSafeUrl(videoURL);
+          let videoUrl = videoData[0]?.videoUrl;
+          let safeSrcUrl = this.getSafeUrl(videoUrl);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
           d3.select('.mc_ytvideo_mobile').append('div')
             .attr('class', 'mc_ytvideo_url_mobile')
@@ -1123,7 +1121,7 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('#ec_message_mobile').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        if (videoData && videoData.length <= 0) {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == "") {
           createGraphForCommentary(graphC);
         }
       } else {
@@ -2420,8 +2418,6 @@ export class InsightsChartComponent implements OnInit {
 
     const addCommentary = (dataValue) => {
       let indexValue = dataValue.value;
-      let MonthlyVideoCommentary = [{Month: '04-2025', videoURL: 'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'}];
-      indexData.MonthlyVideoCommentary = MonthlyVideoCommentary;
       let expertData = indexData.ExpertCommentary.filter((e) => {
         return e.Month == dataValue.category;
       });
@@ -2460,11 +2456,11 @@ export class InsightsChartComponent implements OnInit {
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
         // let videoId = this.getVideoId(monthlyC.videoUrl);
-        if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != "") {
           d3.selectAll('.mc_ytvideo_url').remove();
           d3.select('#monthly_commentary_chart').remove();
-          let videoURL = videoData[0]?.videoURL;
-          let safeSrcUrl = this.getSafeUrl(videoURL);
+          let videoUrl = videoData[0]?.videoUrl;
+          let safeSrcUrl = this.getSafeUrl(videoUrl);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
           d3.select('.mc_ytvideo').append('div')
             .attr('class', 'mc_ytvideo_url')
@@ -2521,7 +2517,7 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        if (videoData && videoData.length <= 0) { 
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == "") { 
           createGraphForCommentary(graphC);
         }
         let textForSpeech =
