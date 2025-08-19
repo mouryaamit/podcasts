@@ -1059,13 +1059,15 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != "") {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != '') {
           d3.selectAll('.mc_ytvideo_url_mobile').remove();
           d3.select('#monthly_commentary_chart_mobile').remove();
           let videoUrl = videoData[0]?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
-          d3.select('.mc_ytvideo_mobile').append('div')
+          d3
+            .select('.mc_ytvideo_mobile')
+            .append('div')
             .attr('class', 'mc_ytvideo_url_mobile')
             .html(`<iframe src="${safeSrcUrl}" class="w-100 mb-4" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen
         allowfullscreen></iframe>`);
@@ -1081,6 +1083,7 @@ export class InsightsChartComponent implements OnInit {
           d3.selectAll('.expert_comm_mem_mobile').remove();
           d3.select('#commentary_border_mobile').remove();
           d3.select('#commentary_mem_details_mobile')
+            .style('margin-bottom', '16px')
             .append('div')
             .attr('id', 'commentary_border_mobile')
             .attr('class', 'member_border');
@@ -1121,7 +1124,7 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('#ec_message_mobile').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == "") {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == '') {
           createGraphForCommentary(graphC);
         }
       } else {
@@ -2456,14 +2459,13 @@ export class InsightsChartComponent implements OnInit {
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
         // let videoId = this.getVideoId(monthlyC.videoUrl);
-        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != "") {
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl != '') {
           d3.selectAll('.mc_ytvideo_url').remove();
           d3.select('#monthly_commentary_chart').remove();
           let videoUrl = videoData[0]?.videoUrl;
           let safeSrcUrl = this.getSafeUrl(videoUrl);
           // let safeSrcUrl: any = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
-          d3.select('.mc_ytvideo').append('div')
-            .attr('class', 'mc_ytvideo_url')
+          d3.select('.mc_ytvideo').append('div').attr('class', 'mc_ytvideo_url')
             .html(`<iframe src="${safeSrcUrl}" class="w-100 my-4" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen
         allowfullscreen></iframe>`);
         }
@@ -2480,6 +2482,7 @@ export class InsightsChartComponent implements OnInit {
           d3.selectAll('.expert_comm_mem').remove();
           d3.select('#commentary_border').remove();
           d3.select('#commentary_mem_details')
+            .style('margin-bottom', '16px')
             .append('div')
             .attr('class', 'member_border')
             .attr('id', 'commentary_border');
@@ -2517,7 +2520,7 @@ export class InsightsChartComponent implements OnInit {
         }
         d3.select('.ec_message').html(`${expertC.ExpertCommentary}`);
         // Add graph here - MonthlyCommentaryGraph
-        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == "") { 
+        if (videoData && videoData.length > 0 && videoData[0]?.videoUrl == '') {
           createGraphForCommentary(graphC);
         }
         let textForSpeech =
