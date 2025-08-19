@@ -23,12 +23,13 @@ export class InsightsChartComponent implements OnInit {
       ? safeUrl?.changingThisBreaksApplicationSecurity
       : safeUrl;
   };
-  getVideoId=(url:string) : any => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|(?:live|embed)\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url?.match(regExp);
-    const videoId = (match && match[2].length === 11) ? match[2] : null;
-    return videoId;
-  }
+  // Not using for now
+  // getVideoId=(url:string) : any => {
+  //   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|(?:live|embed)\/|watch\?v=|&v=)([^#&?]*).*/;
+  //   const match = url?.match(regExp);
+  //   const videoId = (match && match[2].length === 11) ? match[2] : null;
+  //   return videoId;
+  // }
   openInfoIcon(graph_id, evt) {
     {
       function formatYaxisForText(d: any, fromWhere: any) {
@@ -1060,9 +1061,6 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('#mc_body_mobile').html(`${monthlyC.comment}`);
-        // Static
-        monthlyC.videoURL =
-          'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'; // need to remove once we get from api
         if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
           d3.selectAll('.mc_ytvideo_url_mobile').remove();
           d3.select('#monthly_commentary_chart_mobile').remove();
@@ -2461,11 +2459,7 @@ export class InsightsChartComponent implements OnInit {
         }
 
         d3.select('.mc_body').html(`${monthlyC.comment}`);
-        // Static
-        monthlyC.videoURL =
-          'https://www.youtube.com/embed/KgFNTP_MDJU?si=dHFFROsVv7VHK7Z_'; // need to remove once we get from api
         // let videoId = this.getVideoId(monthlyC.videoUrl);
-        // console.log('videoId', videoId);
         if (videoData && videoData.length > 0 && videoData[0]?.videoURL) {
           d3.selectAll('.mc_ytvideo_url').remove();
           d3.select('#monthly_commentary_chart').remove();
