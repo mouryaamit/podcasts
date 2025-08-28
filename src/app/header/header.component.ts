@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle('no-scroll');
   }
 
-  goToGallery(param) {
-    this.router.navigate(['/newsroom-events', param]);
-  }
+  // goToGallery(param) {
+  //   this.router.navigate(['/newsroom-events', param]);
+  // }
 }

@@ -45,6 +45,10 @@ export class NewsroomEventsComponent implements OnInit {
       this.eventTitle =
         'Jocata Sumpoorn & SME DNA Win Global SME Finance Forum Award 2024';
       this.eventDate = 'São Paulo, 16 - 18 September, 2024';
+    } else if (this.getNavParam == 'pune_ppf') {
+      this.eventTitle =
+        'Jocata Sumpoorn at Pune Public Policy Festival';
+      this.eventDate = 'Pune, January 11, 2025 ';
     }
   }
 
@@ -146,6 +150,14 @@ export class NewsroomEventsComponent implements OnInit {
         imageURL: 'assets/images/news-g20.png',
       },
     ],
+    puneEvent: [
+      {
+        title: '',
+        detail: `At the Pune Public Policy Festival, Prashant Muddu, CEO of Jocata, participated in a panel discussion titled “Unlocking Economic Potential: Digital Public Infrastructure for a $10 Trillion India.” During the session, he highlighted Jocata Sumpoorn as India’s first privately provisioned public infrastructure for MSMEs, developed in collaboration with the Small Industries Development Bank of India (SIDBI). Prashant discussed how insights from Digital Public Infrastructure (DPI) can help shape decisions related to MSME lending, credit intelligence, and policy making.<br/><br/>
+        He was joined by a distinguished panel of experts, including Ritul Gaur (Policy Advisor, The Digital Impact Alliance), Amlan Mohanty (Non-Resident Research Fellow, Carnegie India), Prateek Som (Standing Counsel, Government of Haryana), and Filippa Braarud (Embassy Secretary, Royal Norwegian Embassy). The conversation centered on the broader role of Digital Public Infrastructure (DPI) in unlocking India’s economic potential.`,
+        imageURL: 'assets/images/news-puneppf.webp',
+      },
+    ]
   };
 
   downloadReport(type) {

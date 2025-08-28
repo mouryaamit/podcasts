@@ -57,6 +57,11 @@
                         strategic action </span>
                     <span class="d-inline d-xxl-block">and credit inclusion efforts.</span>
                 </ng-container>
+                <ng-container *ngIf="getNavParam == 'pune_ppf'">
+                    <span class="d-inline d-xxl-block">Unlocking Economic Potential: Digital Public Infrastructure for a </span>
+                    <span class="d-inline d-xxl-block">$10 Trillion India – Jocata Sumpoorn as an Example of Privately </span>
+                    <span class="d-inline d-xxl-block">Provisioned Public Infrastructure. </span>
+                </ng-container>
             </p>
             <p class="app_newsroom_subtitle text-center"> {{eventDate}} </p>
         </div>
@@ -150,6 +155,16 @@
                     <div class="img_caption">
                         <p class="news_title fw-bold mb-3">{{ event.title }}</p>
                         <p class="news_detail">{{ event.detail }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-lg-2 gx-5" *ngIf="getNavParam == 'pune_ppf'">
+                <div class="col" *ngFor="let event of events.puneEvent">
+                    <img width="580" height="420" [src]="event.imageURL" class="news_img" [alt]="event.title">
+                    <div class="img_caption">
+                        <p class="news_title fw-bold mb-3">{{ event.title }}</p>
+                        <p class="news_detail" [innerHTML]="event.detail"></p>
                     </div>
                 </div>
             </div>

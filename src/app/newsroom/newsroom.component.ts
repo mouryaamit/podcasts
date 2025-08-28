@@ -35,7 +35,11 @@ export class NewsroomComponent implements OnInit {
     );
   }
 
-  goToGallery(param) {
-    this.router.navigate(['/newsroom-events', param]);
+  goToGallery(param, openItemIn, link?:any) {
+    if(openItemIn == 'link') {
+      window.open(link, '_blank');
+    } else {
+      this.router.navigate(['/newsroom-events', param]);
+    }
   }
 }
