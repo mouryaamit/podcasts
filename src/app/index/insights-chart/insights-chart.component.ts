@@ -2487,44 +2487,54 @@ export class InsightsChartComponent implements OnInit {
         );
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           d3.selectAll('.expert_comm_mem').remove();
-          d3.select('#commentary_border').remove();
+          d3.select('#commentary_author_details').remove();
+          // d3.select('#commentary_border').remove();
+          // d3.select('#commentary_mem_details')
+          //   .style('margin-bottom', '16px')
+          //   .append('div')
+          //   .attr('class', 'member_border')
+          //   .attr('id', 'commentary_border');
           d3.select('#commentary_mem_details')
             .style('margin-bottom', '16px')
             .append('div')
-            .attr('class', 'member_border')
-            .attr('id', 'commentary_border');
-          expertC.AuthorDetails.forEach((expertAD, i) => {
-            if (
-              expertAD.ExpertImageDetails &&
-              expertAD.ExpertName &&
-              expertAD.ExpertDetails
-            ) {
-              // commentary member details
-              d3.select('#commentary_border')
-                .append('div')
-                .attr('class', 'expert_comm_mem expert_comm_border_right')
-                .attr('id', `expert_comm_mem_${i}`);
-              if(i < expertC.AuthorDetails.length - 1) {
-                d3.select('#commentary_border')
-                  .append('div')
-                  .attr('class', 'separator web-separator')
-                ;
-              }
-              d3.select(`#expert_comm_mem_${i}`)
-                .html(`<img src="assets/images/${
-                expertAD.ExpertImageDetails
-              }" alt="expert image" class="img-fluid ms-3 me-2" />
-                                <div class="member_details">
-                                <p class="member_name mb-0 ec_author">${
-                                  expertAD.ExpertName
-                                }</p>
-                                <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
-                                  ','
-                                ).join(',</br>')}</p>
-                                </div>`);
-              d3.select('.ec_title').html(`Expert Commentary`);
-            }
-          });
+            .attr('class', 'commentary_author_details')
+            .attr('id', 'commentary_author_details');
+          // commentary member details
+          d3.select('#commentary_author_details').html(`<img src="assets/images/${expertC.commentaryAuthorDetails}.webp" alt="expert image"/>`);
+          
+          // expertC.AuthorDetails.forEach((expertAD, i) => {
+          //   if (
+          //     expertAD.ExpertImageDetails &&
+          //     expertAD.ExpertName &&
+          //     expertAD.ExpertDetails
+          //   ) {
+          //     // commentary member details
+          //     // d3.select('#commentary_border')
+          //     //   .append('div')
+          //     //   .attr('class', 'expert_comm_mem expert_comm_border_right')
+          //     //   .attr('id', `expert_comm_mem_${i}`);
+          //     // if(i < expertC.AuthorDetails.length - 1) {
+          //     //   d3.select('#commentary_border')
+          //     //     .append('div')
+          //     //     .attr('class', 'separator web-separator')
+          //     //   ;
+          //     // }
+          //     // d3.select(`#expert_comm_mem_${i}`)
+          //     //   .html(`<img src="assets/images/${
+          //     //   expertAD.ExpertImageDetails
+          //     // }" alt="expert image" class="img-fluid ms-3 me-2" />
+          //     //                   <div class="member_details">
+          //     //                   <p class="member_name mb-0 ec_author">${
+          //     //                     expertAD.ExpertName
+          //     //                   }</p>
+          //     //                   <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
+          //     //                     ','
+          //     //                   ).join(',</br>')}</p>
+          //     //                   </div>`);
+          //     // d3.select('.ec_title').html(`Expert Commentary`);
+          //   }
+          // });
+          d3.select('.ec_title').html(`Expert Commentary`);
         } else {
           d3.select('#commentary_mem_details')
             .html('')
