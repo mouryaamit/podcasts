@@ -1101,6 +1101,12 @@ export class InsightsChartComponent implements OnInit {
                   'expert_comm_mem_mobile expert_comm_border_right'
                 )
                 .attr('id', `expert_comm_mem_mobile_${i}`);
+              if(i < expertC.AuthorDetails.length - 1) {
+                d3.select('#commentary_border_mobile')
+                  .append('div')
+                  .attr('class', 'separator mobile-separator')
+                ;
+              }
               d3.select(`#expert_comm_mem_mobile_${i}`)
                 .html(`<img src="assets/images/${
                 expertAD.ExpertImageDetails
@@ -2498,6 +2504,12 @@ export class InsightsChartComponent implements OnInit {
                 .append('div')
                 .attr('class', 'expert_comm_mem expert_comm_border_right')
                 .attr('id', `expert_comm_mem_${i}`);
+              if(i < expertC.AuthorDetails.length - 1) {
+                d3.select('#commentary_border')
+                  .append('div')
+                  .attr('class', 'separator web-separator')
+                ;
+              }
               d3.select(`#expert_comm_mem_${i}`)
                 .html(`<img src="assets/images/${
                 expertAD.ExpertImageDetails
