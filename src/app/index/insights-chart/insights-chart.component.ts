@@ -1090,47 +1090,43 @@ export class InsightsChartComponent implements OnInit {
           d3.select('#commentary_mem_details_mobile')
             .style('margin-bottom', '16px')
             .append('div')
-            .attr('class', 'commentary_author_details_mobile')
-            .attr('id', 'commentary_author_details_mobile');
-          // commentary member details mobile
-          d3.select('#commentary_author_details_mobile')
-            .html(`<img src="assets/images/${expertC.commentaryAuthorDetails}_mob.webp" alt="expert image" class="img-fluid"/>`);
-          // expertC.AuthorDetails.forEach((expertAD, i) => {
-          //   if (
-          //     expertAD.ExpertImageDetails &&
-          //     expertAD.ExpertName &&
-          //     expertAD.ExpertDetails
-          //   ) {
-          //     // commentary member details
-          //     d3.select('#commentary_border_mobile')
-          //       .append('div')
-          //       .attr(
-          //         'class',
-          //         'expert_comm_mem_mobile expert_comm_border_right'
-          //       )
-          //       .attr('id', `expert_comm_mem_mobile_${i}`);
-          //     if(i < expertC.AuthorDetails.length - 1) {
-          //       d3.select('#commentary_border_mobile')
-          //         .append('div')
-          //         .attr('class', 'separator mobile-separator')
-          //       ;
-          //     }
-          //     d3.select(`#expert_comm_mem_mobile_${i}`)
-          //       .html(`<img src="assets/images/${
-          //       expertAD.ExpertImageDetails
-          //     }" alt="expert image" class="img-fluid" />
-          //                       <div class="member_details">
-          //                       <p class="member_name mb-0 ec_author">${
-          //                         expertAD.ExpertName
-          //                       }</p>
-          //                       <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
-          //                         ','
-          //                       ).join(',</br>')}</p>
-          //                       </div>`);
-          //     d3.select('#ec_title_mobile').html(`Expert Commentary`);
-          //   }
-          // });
-          d3.select('#ec_title_mobile').html(`Expert Commentary`);
+            .attr('id', 'commentary_border_mobile')
+            .attr('class', 'member_border');
+          expertC.AuthorDetails.forEach((expertAD, i) => {
+            if (
+              expertAD.ExpertImageDetails &&
+              expertAD.ExpertName &&
+              expertAD.ExpertDetails
+            ) {
+              // commentary member details
+              d3.select('#commentary_border_mobile')
+                .append('div')
+                .attr(
+                  'class',
+                  'expert_comm_mem_mobile expert_comm_border_right'
+                )
+                .attr('id', `expert_comm_mem_mobile_${i}`);
+              // if(i < expertC.AuthorDetails.length - 1) {
+              //   d3.select('#commentary_border_mobile')
+              //     .append('div')
+              //     .attr('class', 'separator mobile-separator')
+              //   ;
+              // }
+              d3.select(`#expert_comm_mem_mobile_${i}`)
+                .html(`<img src="assets/images/${
+                expertAD.ExpertImageDetails
+              }" alt="expert image" class="img-fluid" />
+                                <div class="member_details">
+                                <p class="member_name mb-0 ec_author">${
+                                  expertAD.ExpertName
+                                }</p>
+                                <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
+                                  ','
+                                ).join(',</br>')}</p>
+                                </div>`);
+              d3.select('#ec_title_mobile').html(`Expert Commentary`);
+            }
+          });
         } else {
           d3.select('#commentary_mem_details_mobile')
             .html('')
@@ -2506,45 +2502,40 @@ export class InsightsChartComponent implements OnInit {
           d3.select('#commentary_mem_details')
             .style('margin-bottom', '16px')
             .append('div')
-            .attr('class', 'commentary_author_details')
-            .attr('id', 'commentary_author_details');
-          // commentary member details
-          d3.select('#commentary_author_details')
-            .html(`<img src="assets/images/${expertC.commentaryAuthorDetails}_web.webp" alt="expert image" class="img-fluid"/>`);
-          
-          // expertC.AuthorDetails.forEach((expertAD, i) => {
-          //   if (
-          //     expertAD.ExpertImageDetails &&
-          //     expertAD.ExpertName &&
-          //     expertAD.ExpertDetails
-          //   ) {
-          //     // commentary member details
-          //     // d3.select('#commentary_border')
-          //     //   .append('div')
-          //     //   .attr('class', 'expert_comm_mem expert_comm_border_right')
-          //     //   .attr('id', `expert_comm_mem_${i}`);
-          //     // if(i < expertC.AuthorDetails.length - 1) {
-          //     //   d3.select('#commentary_border')
-          //     //     .append('div')
-          //     //     .attr('class', 'separator web-separator')
-          //     //   ;
-          //     // }
-          //     // d3.select(`#expert_comm_mem_${i}`)
-          //     //   .html(`<img src="assets/images/${
-          //     //   expertAD.ExpertImageDetails
-          //     // }" alt="expert image" class="img-fluid ms-3 me-2" />
-          //     //                   <div class="member_details">
-          //     //                   <p class="member_name mb-0 ec_author">${
-          //     //                     expertAD.ExpertName
-          //     //                   }</p>
-          //     //                   <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
-          //     //                     ','
-          //     //                   ).join(',</br>')}</p>
-          //     //                   </div>`);
-          //     // d3.select('.ec_title').html(`Expert Commentary`);
-          //   }
-          // });
-          d3.select('.ec_title').html(`Expert Commentary`);
+            .attr('class', 'member_border')
+            .attr('id', 'commentary_border');
+          expertC.AuthorDetails.forEach((expertAD, i) => {
+            if (
+              expertAD.ExpertImageDetails &&
+              expertAD.ExpertName &&
+              expertAD.ExpertDetails
+            ) {
+              // commentary member details
+              d3.select('#commentary_border')
+                .append('div')
+                .attr('class', 'expert_comm_mem expert_comm_border_right')
+                .attr('id', `expert_comm_mem_${i}`);
+              // if(i < expertC.AuthorDetails.length - 1) {
+              //   d3.select('#commentary_border')
+              //     .append('div')
+              //     .attr('class', 'separator web-separator')
+              //   ;
+              // }
+              d3.select(`#expert_comm_mem_${i}`)
+                .html(`<img src="assets/images/${
+                expertAD.ExpertImageDetails
+              }" alt="expert image" class="img-fluid ms-3 me-2" />
+                                <div class="member_details">
+                                <p class="member_name mb-0 ec_author">${
+                                  expertAD.ExpertName
+                                }</p>
+                                <p class="member_title mb-0 ec_author_designation">${expertAD.ExpertDetails.split(
+                                  ','
+                                ).join(',</br>')}</p>
+                                </div>`);
+              d3.select('.ec_title').html(`Expert Commentary`);
+            }
+          });
         } else {
           d3.select('#commentary_mem_details')
             .html('')
