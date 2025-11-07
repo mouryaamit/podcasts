@@ -127,8 +127,8 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getSumpoornData();
-    // this.getSumpoornDataFromJson();
+    // this.getSumpoornData();
+    this.getSumpoornDataFromJson();
 
     // this.graphApiService.getSumpoornGraphData().then((data) => {
     //     if (data) {
