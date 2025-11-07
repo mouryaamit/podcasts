@@ -1087,7 +1087,9 @@ export class InsightsChartComponent implements OnInit {
             .attr('class', 'commentary_author_details_mobile')
             .attr('id', 'commentary_author_details_mobile');
           // commentary member details
-          d3.select('#commentary_author_details_mobile').html(`<img src="assets/images/${expertC.commentaryAuthorDetails}_mob.webp" alt="expert image"/>`);
+          d3.select('#commentary_author_details_mobile').html(
+            `<img class="img-fluid" src="assets/images/${expertC.commentaryAuthorDetails}_mob.webp" alt="expert image"/>`
+          );
           // expertC.AuthorDetails.forEach((expertAD, i) => {
           //   if (
           //     expertAD.ExpertImageDetails &&
@@ -2495,7 +2497,9 @@ export class InsightsChartComponent implements OnInit {
             .attr('class', 'commentary_author_details')
             .attr('id', 'commentary_author_details');
           // commentary member details
-          d3.select('#commentary_author_details').html(`<img src="assets/images/${expertC.commentaryAuthorDetails}_web.webp" alt="expert image"/>`);
+          d3.select('#commentary_author_details').html(
+            `<img class="img-fluid" src="assets/images/${expertC.commentaryAuthorDetails}_web.webp" alt="expert image"/>`
+          );
           // expertC.AuthorDetails.forEach((expertAD, i) => {
           //   if (
           //     expertAD.ExpertImageDetails &&
