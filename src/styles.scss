@@ -2415,7 +2415,7 @@ a {
               margin: 1.25rem 0.75rem;
               overflow: hidden;
               text-align: center;
-              height: -webkit-fill-available;
+              // height: -webkit-fill-available;
 
               .member_details {
                 color: $app-black;
@@ -2427,7 +2427,7 @@ a {
                 }
 
                 .member_name {
-                  font: 600 $font-size-14px "Work Sans";
+                  font: 600 $font-size-13px "Work Sans";
                   line-height: 120%;
                   margin-bottom: 0.25rem;
                 }

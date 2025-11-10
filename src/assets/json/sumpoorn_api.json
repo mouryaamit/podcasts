@@ -1,8 +1,1229 @@
 {
+    "statusCode": "200",
+    "statusMessage": "Success",
+    "iipData": {
+        "iipValues": [
+            {
+                "sortOrder": 1,
+                "category": "10-2019",
+                "value": 124
+            },
+            {
+                "sortOrder": 2,
+                "category": "11-2019",
+                "value": 128.8
+            },
+            {
+                "sortOrder": 3,
+                "category": "12-2019",
+                "value": 134.5
+            },
+            {
+                "sortOrder": 4,
+                "category": "01-2020",
+                "value": 137.4
+            },
+            {
+                "sortOrder": 5,
+                "category": "02-2020",
+                "value": 134.2
+            },
+            {
+                "sortOrder": 6,
+                "category": "03-2020",
+                "value": 117.2
+            },
+            {
+                "sortOrder": 7,
+                "category": "04-2020",
+                "value": 54
+            },
+            {
+                "sortOrder": 8,
+                "category": "05-2020",
+                "value": 90.2
+            },
+            {
+                "sortOrder": 9,
+                "category": "06-2020",
+                "value": 107.9
+            },
+            {
+                "sortOrder": 10,
+                "category": "07-2020",
+                "value": 117.9
+            },
+            {
+                "sortOrder": 11,
+                "category": "08-2020",
+                "value": 117.2
+            },
+            {
+                "sortOrder": 12,
+                "category": "09-2020",
+                "value": 124.1
+            },
+            {
+                "sortOrder": 13,
+                "category": "10-2020",
+                "value": 129.6
+            },
+            {
+                "sortOrder": 14,
+                "category": "11-2020",
+                "value": 126.7
+            },
+            {
+                "sortOrder": 15,
+                "category": "12-2020",
+                "value": 137.4
+            },
+            {
+                "sortOrder": 16,
+                "category": "01-2021",
+                "value": 136.6
+            },
+            {
+                "sortOrder": 17,
+                "category": "02-2021",
+                "value": 129.9
+            },
+            {
+                "sortOrder": 18,
+                "category": "03-2021",
+                "value": 145.6
+            },
+            {
+                "sortOrder": 19,
+                "category": "04-2021",
+                "value": 126.1
+            },
+            {
+                "sortOrder": 20,
+                "category": "05-2021",
+                "value": 115.1
+            },
+            {
+                "sortOrder": 21,
+                "category": "06-2021",
+                "value": 122.8
+            },
+            {
+                "sortOrder": 22,
+                "category": "07-2021",
+                "value": 131.5
+            },
+            {
+                "sortOrder": 23,
+                "category": "08-2021",
+                "value": 132.4
+            },
+            {
+                "sortOrder": 24,
+                "category": "09-2021",
+                "value": 129.5
+            },
+            {
+                "sortOrder": 25,
+                "category": "10-2021",
+                "value": 135
+            },
+            {
+                "sortOrder": 26,
+                "category": "11-2021",
+                "value": 128
+            },
+            {
+                "sortOrder": 27,
+                "category": "12-2021",
+                "value": 138.8
+            },
+            {
+                "sortOrder": 28,
+                "category": "01-2022",
+                "value": 139.3
+            },
+            {
+                "sortOrder": 29,
+                "category": "02-2022",
+                "value": 131.4
+            },
+            {
+                "sortOrder": 30,
+                "category": "03-2022",
+                "value": 148.8
+            },
+            {
+                "sortOrder": 31,
+                "category": "04-2022",
+                "value": 134.5
+            },
+            {
+                "sortOrder": 32,
+                "category": "05-2022",
+                "value": 137.8
+            },
+            {
+                "sortOrder": 33,
+                "category": "06-2022",
+                "value": 138.3
+            },
+            {
+                "sortOrder": 34,
+                "category": "07-2022",
+                "value": 134.4
+            },
+            {
+                "sortOrder": 35,
+                "category": "08-2022",
+                "value": 131.5
+            },
+            {
+                "sortOrder": 36,
+                "category": "09-2022",
+                "value": 133.8
+            },
+            {
+                "sortOrder": 37,
+                "category": "10-2022",
+                "value": 129.5
+            },
+            {
+                "sortOrder": 38,
+                "category": "11-2022",
+                "value": 137.7
+            },
+            {
+                "sortOrder": 39,
+                "category": "12-2022",
+                "value": 145.9
+            },
+            {
+                "sortOrder": 40,
+                "category": "01-2023",
+                "value": 147.4
+            },
+            {
+                "sortOrder": 41,
+                "category": "02-2023",
+                "value": 139.3
+            },
+            {
+                "sortOrder": 42,
+                "category": "03-2023",
+                "value": 151.7
+            },
+            {
+                "sortOrder": 43,
+                "category": "04-2023",
+                "value": 140.7
+            },
+            {
+                "sortOrder": 44,
+                "category": "05-2023",
+                "value": 145.6
+            },
+            {
+                "sortOrder": 45,
+                "category": "06-2023",
+                "value": 143.9
+            },
+            {
+                "sortOrder": 46,
+                "category": "07-2023",
+                "value": 142.7
+            },
+            {
+                "sortOrder": 47,
+                "category": "08-2023",
+                "value": 145.8
+            },
+            {
+                "sortOrder": 48,
+                "category": "09-2023",
+                "value": 142.3
+            },
+            {
+                "sortOrder": 49,
+                "category": "10-2023",
+                "value": 144.9
+            },
+            {
+                "sortOrder": 50,
+                "category": "11-2023",
+                "value": 141.1
+            },
+            {
+                "sortOrder": 51,
+                "category": "12-2023",
+                "value": 152.3
+            },
+            {
+                "sortOrder": 52,
+                "category": "01-2024",
+                "value": 153.6
+            },
+            {
+                "sortOrder": 53,
+                "category": "02-2024",
+                "value": 147.1
+            },
+            {
+                "sortOrder": 54,
+                "category": "03-2024",
+                "value": 160
+            },
+            {
+                "sortOrder": 55,
+                "category": "04-2024",
+                "value": 148
+            },
+            {
+                "sortOrder": 56,
+                "category": "05-2024",
+                "value": 154.7
+            },
+            {
+                "sortOrder": 57,
+                "category": "06-2024",
+                "value": 151
+            },
+            {
+                "sortOrder": 58,
+                "category": "07-2024",
+                "value": 149.8
+            },
+            {
+                "sortOrder": 59,
+                "category": "08-2024",
+                "value": 145.8
+            },
+            {
+                "sortOrder": 60,
+                "category": "09-2024",
+                "value": 146.9
+            },
+            {
+                "sortOrder": 61,
+                "category": "10-2024",
+                "value": 150.3
+            },
+            {
+                "sortOrder": 62,
+                "category": "11-2024",
+                "value": 148.1
+            },
+            {
+                "sortOrder": 63,
+                "category": "12-2024",
+                "value": 158
+            },
+            {
+                "sortOrder": 64,
+                "category": "01-2025",
+                "value": 161.6
+            },
+            {
+                "sortOrder": 65,
+                "category": "02-2025",
+                "value": 151.1
+            },
+            {
+                "sortOrder": 66,
+                "category": "03-2025",
+                "value": 166.3
+            },
+            {
+                "sortOrder": 67,
+                "category": "04-2025",
+                "value": 151.8
+            },
+            {
+                "sortOrder": 68,
+                "category": "05-2025",
+                "value": 157.6
+            },
+            {
+                "sortOrder": 69,
+                "category": "06-2025",
+                "value": 153.3
+            },
+            {
+                "sortOrder": 70,
+                "category": "07-2025",
+                "value": 156.2
+            },
+            {
+                "sortOrder": 71,
+                "category": "08-2025",
+                "value": 151.7
+            }
+        ]
+    },
+    "pmiData": {
+        "pmiValues": [
+            {
+                "sortOrder": 1,
+                "category": "10-2019",
+                "value": 49.6
+            },
+            {
+                "sortOrder": 2,
+                "category": "11-2019",
+                "value": 52.7
+            },
+            {
+                "sortOrder": 3,
+                "category": "12-2019",
+                "value": 53.7
+            },
+            {
+                "sortOrder": 4,
+                "category": "01-2020",
+                "value": 56.3
+            },
+            {
+                "sortOrder": 5,
+                "category": "02-2020",
+                "value": 57.6
+            },
+            {
+                "sortOrder": 6,
+                "category": "03-2020",
+                "value": 50.6
+            },
+            {
+                "sortOrder": 7,
+                "category": "04-2020",
+                "value": 7.2
+            },
+            {
+                "sortOrder": 8,
+                "category": "05-2020",
+                "value": 14.8
+            },
+            {
+                "sortOrder": 9,
+                "category": "06-2020",
+                "value": 37.8
+            },
+            {
+                "sortOrder": 10,
+                "category": "07-2020",
+                "value": 37.2
+            },
+            {
+                "sortOrder": 11,
+                "category": "08-2020",
+                "value": 46
+            },
+            {
+                "sortOrder": 12,
+                "category": "09-2020",
+                "value": 54.6
+            },
+            {
+                "sortOrder": 13,
+                "category": "10-2020",
+                "value": 58
+            },
+            {
+                "sortOrder": 14,
+                "category": "11-2020",
+                "value": 56.3
+            },
+            {
+                "sortOrder": 15,
+                "category": "12-2020",
+                "value": 54.9
+            },
+            {
+                "sortOrder": 16,
+                "category": "01-2021",
+                "value": 55.8
+            },
+            {
+                "sortOrder": 17,
+                "category": "02-2021",
+                "value": 57.3
+            },
+            {
+                "sortOrder": 18,
+                "category": "03-2021",
+                "value": 56
+            },
+            {
+                "sortOrder": 19,
+                "category": "04-2021",
+                "value": 55.4
+            },
+            {
+                "sortOrder": 20,
+                "category": "05-2021",
+                "value": 48.1
+            },
+            {
+                "sortOrder": 21,
+                "category": "06-2021",
+                "value": 43.1
+            },
+            {
+                "sortOrder": 22,
+                "category": "07-2021",
+                "value": 49.2
+            },
+            {
+                "sortOrder": 23,
+                "category": "08-2021",
+                "value": 55.4
+            },
+            {
+                "sortOrder": 24,
+                "category": "09-2021",
+                "value": 55.3
+            },
+            {
+                "sortOrder": 25,
+                "category": "10-2021",
+                "value": 58.7
+            },
+            {
+                "sortOrder": 26,
+                "category": "11-2021",
+                "value": 59.2
+            },
+            {
+                "sortOrder": 27,
+                "category": "12-2021",
+                "value": 56.4
+            },
+            {
+                "sortOrder": 28,
+                "category": "01-2022",
+                "value": 53
+            },
+            {
+                "sortOrder": 29,
+                "category": "02-2022",
+                "value": 53.5
+            },
+            {
+                "sortOrder": 30,
+                "category": "03-2022",
+                "value": 54.3
+            },
+            {
+                "sortOrder": 31,
+                "category": "04-2022",
+                "value": 57.6
+            },
+            {
+                "sortOrder": 32,
+                "category": "05-2022",
+                "value": 58.3
+            },
+            {
+                "sortOrder": 33,
+                "category": "06-2022",
+                "value": 58.2
+            },
+            {
+                "sortOrder": 34,
+                "category": "07-2022",
+                "value": 56.6
+            },
+            {
+                "sortOrder": 35,
+                "category": "08-2022",
+                "value": 58.2
+            },
+            {
+                "sortOrder": 36,
+                "category": "09-2022",
+                "value": 55.1
+            },
+            {
+                "sortOrder": 37,
+                "category": "10-2022",
+                "value": 55.5
+            },
+            {
+                "sortOrder": 38,
+                "category": "11-2022",
+                "value": 56.7
+            },
+            {
+                "sortOrder": 39,
+                "category": "12-2022",
+                "value": 59.4
+            },
+            {
+                "sortOrder": 40,
+                "category": "01-2023",
+                "value": 57.5
+            },
+            {
+                "sortOrder": 41,
+                "category": "02-2023",
+                "value": 59
+            },
+            {
+                "sortOrder": 42,
+                "category": "03-2023",
+                "value": 58.4
+            },
+            {
+                "sortOrder": 43,
+                "category": "04-2023",
+                "value": 61.6
+            },
+            {
+                "sortOrder": 44,
+                "category": "05-2023",
+                "value": 61.6
+            },
+            {
+                "sortOrder": 45,
+                "category": "06-2023",
+                "value": 59.4
+            },
+            {
+                "sortOrder": 46,
+                "category": "07-2023",
+                "value": 61.9
+            },
+            {
+                "sortOrder": 47,
+                "category": "08-2023",
+                "value": 60.9
+            },
+            {
+                "sortOrder": 48,
+                "category": "09-2023",
+                "value": 61
+            },
+            {
+                "sortOrder": 49,
+                "category": "10-2023",
+                "value": 58.4
+            },
+            {
+                "sortOrder": 50,
+                "category": "11-2023",
+                "value": 57.4
+            },
+            {
+                "sortOrder": 51,
+                "category": "12-2023",
+                "value": 58.5
+            },
+            {
+                "sortOrder": 52,
+                "category": "01-2024",
+                "value": 61.2
+            },
+            {
+                "sortOrder": 53,
+                "category": "02-2024",
+                "value": 60.6
+            },
+            {
+                "sortOrder": 54,
+                "category": "03-2024",
+                "value": 61.8
+            },
+            {
+                "sortOrder": 55,
+                "category": "04-2024",
+                "value": 61.5
+            },
+            {
+                "sortOrder": 56,
+                "category": "05-2024",
+                "value": 60.5
+            },
+            {
+                "sortOrder": 57,
+                "category": "06-2024",
+                "value": 60.9
+            },
+            {
+                "sortOrder": 58,
+                "category": "07-2024",
+                "value": 60.7
+            },
+            {
+                "sortOrder": 59,
+                "category": "08-2024",
+                "value": 60.7
+            },
+            {
+                "sortOrder": 60,
+                "category": "09-2024",
+                "value": 58.3
+            },
+            {
+                "sortOrder": 61,
+                "category": "10-2024",
+                "value": 58.6
+            },
+            {
+                "sortOrder": 62,
+                "category": "11-2024",
+                "value": 58.6
+            },
+            {
+                "sortOrder": 63,
+                "category": "12-2024",
+                "value": 59.2
+            },
+            {
+                "sortOrder": 64,
+                "category": "01-2025",
+                "value": 57.7
+            },
+            {
+                "sortOrder": 65,
+                "category": "02-2025",
+                "value": 58.8
+            },
+            {
+                "sortOrder": 66,
+                "category": "03-2025",
+                "value": 59.5
+            },
+            {
+                "sortOrder": 67,
+                "category": "04-2025",
+                "value": 59.7
+            },
+            {
+                "sortOrder": 68,
+                "category": "05-2025",
+                "value": 59.3
+            },
+            {
+                "sortOrder": 69,
+                "category": "06-2025",
+                "value": 61
+            },
+            {
+                "sortOrder": 70,
+                "category": "07-2025",
+                "value": 61.1
+            },
+            {
+                "sortOrder": 71,
+                "category": "08-2025",
+                "value": 63.2
+            }
+        ]
+    },
+    "gvaData": {
+        "gvaValues": [
+            {
+                "sortOrder": 1,
+                "category": "10-2019",
+                "value": 6.225
+            },
+            {
+                "sortOrder": 2,
+                "category": "11-2019",
+                "value": 6.225
+            },
+            {
+                "sortOrder": 3,
+                "category": "12-2019",
+                "value": 6.225
+            },
+            {
+                "sortOrder": 4,
+                "category": "01-2020",
+                "value": 6.508
+            },
+            {
+                "sortOrder": 5,
+                "category": "02-2020",
+                "value": 6.508
+            },
+            {
+                "sortOrder": 6,
+                "category": "03-2020",
+                "value": 6.508
+            },
+            {
+                "sortOrder": 7,
+                "category": "04-2020",
+                "value": -18.941
+            },
+            {
+                "sortOrder": 8,
+                "category": "05-2020",
+                "value": -18.941
+            },
+            {
+                "sortOrder": 9,
+                "category": "06-2020",
+                "value": -18.941
+            },
+            {
+                "sortOrder": 10,
+                "category": "07-2020",
+                "value": -3.732
+            },
+            {
+                "sortOrder": 11,
+                "category": "08-2020",
+                "value": -3.732
+            },
+            {
+                "sortOrder": 12,
+                "category": "09-2020",
+                "value": -3.732
+            },
+            {
+                "sortOrder": 13,
+                "category": "10-2020",
+                "value": 6.62
+            },
+            {
+                "sortOrder": 14,
+                "category": "11-2020",
+                "value": 6.62
+            },
+            {
+                "sortOrder": 15,
+                "category": "12-2020",
+                "value": 6.62
+            },
+            {
+                "sortOrder": 16,
+                "category": "01-2021",
+                "value": 11.759
+            },
+            {
+                "sortOrder": 17,
+                "category": "02-2021",
+                "value": 11.759
+            },
+            {
+                "sortOrder": 18,
+                "category": "03-2021",
+                "value": 11.759
+            },
+            {
+                "sortOrder": 19,
+                "category": "04-2021",
+                "value": 28.909
+            },
+            {
+                "sortOrder": 20,
+                "category": "05-2021",
+                "value": 28.909
+            },
+            {
+                "sortOrder": 21,
+                "category": "06-2021",
+                "value": 28.909
+            },
+            {
+                "sortOrder": 22,
+                "category": "07-2021",
+                "value": 19.12
+            },
+            {
+                "sortOrder": 23,
+                "category": "08-2021",
+                "value": 19.12
+            },
+            {
+                "sortOrder": 24,
+                "category": "09-2021",
+                "value": 19.12
+            },
+            {
+                "sortOrder": 25,
+                "category": "10-2021",
+                "value": 15.123
+            },
+            {
+                "sortOrder": 26,
+                "category": "11-2021",
+                "value": 15.123
+            },
+            {
+                "sortOrder": 27,
+                "category": "12-2021",
+                "value": 15.123
+            },
+            {
+                "sortOrder": 28,
+                "category": "01-2022",
+                "value": 14.916
+            },
+            {
+                "sortOrder": 29,
+                "category": "02-2022",
+                "value": 14.916
+            },
+            {
+                "sortOrder": 30,
+                "category": "03-2022",
+                "value": 14.916
+            },
+            {
+                "sortOrder": 31,
+                "category": "04-2022",
+                "value": 24.242
+            },
+            {
+                "sortOrder": 32,
+                "category": "05-2022",
+                "value": 24.242
+            },
+            {
+                "sortOrder": 33,
+                "category": "06-2022",
+                "value": 24.242
+            },
+            {
+                "sortOrder": 34,
+                "category": "07-2022",
+                "value": 14.853
+            },
+            {
+                "sortOrder": 35,
+                "category": "08-2022",
+                "value": 14.853
+            },
+            {
+                "sortOrder": 36,
+                "category": "09-2022",
+                "value": 14.853
+            },
+            {
+                "sortOrder": 37,
+                "category": "10-2022",
+                "value": 9.503
+            },
+            {
+                "sortOrder": 38,
+                "category": "11-2022",
+                "value": 9.503
+            },
+            {
+                "sortOrder": 39,
+                "category": "12-2022",
+                "value": 9.503
+            },
+            {
+                "sortOrder": 40,
+                "category": "01-2023",
+                "value": 9.151
+            },
+            {
+                "sortOrder": 41,
+                "category": "02-2023",
+                "value": 9.151
+            },
+            {
+                "sortOrder": 42,
+                "category": "03-2023",
+                "value": 9.151
+            },
+            {
+                "sortOrder": 43,
+                "category": "04-2023",
+                "value": 11.118
+            },
+            {
+                "sortOrder": 44,
+                "category": "05-2023",
+                "value": 11.118
+            },
+            {
+                "sortOrder": 45,
+                "category": "06-2023",
+                "value": 11.118
+            },
+            {
+                "sortOrder": 46,
+                "category": "07-2023",
+                "value": 11.957
+            },
+            {
+                "sortOrder": 47,
+                "category": "08-2023",
+                "value": 11.957
+            },
+            {
+                "sortOrder": 48,
+                "category": "09-2023",
+                "value": 11.957
+            },
+            {
+                "sortOrder": 49,
+                "category": "10-2023",
+                "value": 11.535
+            },
+            {
+                "sortOrder": 50,
+                "category": "11-2023",
+                "value": 11.535
+            },
+            {
+                "sortOrder": 51,
+                "category": "12-2023",
+                "value": 11.535
+            },
+            {
+                "sortOrder": 52,
+                "category": "01-2024",
+                "value": 10.362
+            },
+            {
+                "sortOrder": 53,
+                "category": "02-2024",
+                "value": 10.362
+            },
+            {
+                "sortOrder": 54,
+                "category": "03-2024",
+                "value": 10.362
+            },
+            {
+                "sortOrder": 55,
+                "category": "04-2024",
+                "value": 9.482
+            },
+            {
+                "sortOrder": 56,
+                "category": "05-2024",
+                "value": 9.482
+            },
+            {
+                "sortOrder": 57,
+                "category": "06-2024",
+                "value": 9.482
+            },
+            {
+                "sortOrder": 58,
+                "category": "07-2024",
+                "value": 8.25
+            },
+            {
+                "sortOrder": 59,
+                "category": "08-2024",
+                "value": 8.25
+            },
+            {
+                "sortOrder": 60,
+                "category": "09-2024",
+                "value": 8.25
+            },
+            {
+                "sortOrder": 61,
+                "category": "10-2024",
+                "value": 10.671
+            },
+            {
+                "sortOrder": 62,
+                "category": "11-2024",
+                "value": 10.671
+            },
+            {
+                "sortOrder": 63,
+                "category": "12-2024",
+                "value": 10.671
+            },
+            {
+                "sortOrder": 64,
+                "category": "01-2025",
+                "value": 9.591
+            },
+            {
+                "sortOrder": 65,
+                "category": "02-2025",
+                "value": 9.591
+            },
+            {
+                "sortOrder": 66,
+                "category": "03-2025",
+                "value": 9.591
+            },
+            {
+                "sortOrder": 67,
+                "category": "04-2025",
+                "value": 8.756
+            },
+            {
+                "sortOrder": 68,
+                "category": "05-2025",
+                "value": 8.756
+            },
+            {
+                "sortOrder": 69,
+                "category": "06-2025",
+                "value": 8.756
+            }
+        ]
+    },
+    "sumpoornMonths": [
+        "11-2020",
+        "12-2020",
+        "01-2021",
+        "02-2021",
+        "03-2021",
+        "04-2021",
+        "05-2021",
+        "06-2021",
+        "07-2021",
+        "08-2021",
+        "09-2021",
+        "10-2021",
+        "11-2021",
+        "12-2021",
+        "01-2022",
+        "02-2022",
+        "03-2022",
+        "04-2022",
+        "05-2022",
+        "06-2022",
+        "07-2022",
+        "08-2022",
+        "09-2022",
+        "10-2022",
+        "11-2022",
+        "12-2022",
+        "01-2023",
+        "02-2023",
+        "03-2023",
+        "04-2023",
+        "05-2023",
+        "06-2023",
+        "07-2023",
+        "08-2023",
+        "09-2023",
+        "10-2023"
+    ],
+    "iipMonths": [
+        "11-2020",
+        "12-2020",
+        "01-2021",
+        "02-2021",
+        "03-2021",
+        "04-2021",
+        "05-2021",
+        "06-2021",
+        "07-2021",
+        "08-2021",
+        "09-2021",
+        "10-2021",
+        "11-2021",
+        "12-2021",
+        "01-2022",
+        "02-2022",
+        "03-2022",
+        "04-2022",
+        "05-2022",
+        "06-2022",
+        "07-2022",
+        "08-2022",
+        "09-2022",
+        "10-2022",
+        "11-2022",
+        "12-2022",
+        "01-2023",
+        "02-2023",
+        "03-2023",
+        "04-2023",
+        "05-2023",
+        "06-2023",
+        "07-2023",
+        "08-2023",
+        "09-2023",
+        "10-2023"
+    ],
+    "pmiMonths": [
+        "11-2020",
+        "12-2020",
+        "01-2021",
+        "02-2021",
+        "03-2021",
+        "04-2021",
+        "05-2021",
+        "06-2021",
+        "07-2021",
+        "08-2021",
+        "09-2021",
+        "10-2021",
+        "11-2021",
+        "12-2021",
+        "01-2022",
+        "02-2022",
+        "03-2022",
+        "04-2022",
+        "05-2022",
+        "06-2022",
+        "07-2022",
+        "08-2022",
+        "09-2022",
+        "10-2022",
+        "11-2022",
+        "12-2022",
+        "01-2023",
+        "02-2023",
+        "03-2023",
+        "04-2023",
+        "05-2023",
+        "06-2023",
+        "07-2023",
+        "08-2023",
+        "09-2023",
+        "10-2023"
+    ],
+    "gvaMonths": [
+        "11-2020",
+        "12-2020",
+        "01-2021",
+        "02-2021",
+        "03-2021",
+        "04-2021",
+        "05-2021",
+        "06-2021",
+        "07-2021",
+        "08-2021",
+        "09-2021",
+        "10-2021",
+        "11-2021",
+        "12-2021",
+        "01-2022",
+        "02-2022",
+        "03-2022",
+        "04-2022",
+        "05-2022",
+        "06-2022",
+        "07-2022",
+        "08-2022",
+        "09-2022",
+        "10-2022",
+        "11-2022",
+        "12-2022",
+        "01-2023",
+        "02-2023",
+        "03-2023",
+        "04-2023",
+        "05-2023",
+        "06-2023",
+        "07-2023",
+        "08-2023",
+        "09-2023",
+        "10-2023"
+    ],
     "sumpoornData": {
         "appId": 0,
-        "reqId": 2025070801205687,
-        "reportType": "SWARA_SUMPOORN",
+        "reqId": 20251007120275690,
+        "reportType": "SUMPOORN",
         "IndexGeneration": [
             {
                 "category": "10-2019",
@@ -348,6 +1569,16 @@
                 "category": "06-2025",
                 "value": 0.58,
                 "SortOrder": 69
+            },
+            {
+                "category": "07-2025",
+                "value": 0.59,
+                "SortOrder": 70
+            },
+            {
+                "category": "08-2025",
+                "value": 0.57,
+                "SortOrder": 71
             }
         ],
         "IndexGstinCount": [
@@ -695,6 +1926,16 @@
                 "category": "06-2025",
                 "value": 4923,
                 "SortOrder": 69
+            },
+            {
+                "category": "07-2025",
+                "value": 4597,
+                "SortOrder": 70
+            },
+            {
+                "category": "08-2025",
+                "value": 4451,
+                "SortOrder": 71
             }
         ],
         "Commentary": {
@@ -703,6 +1944,7 @@
                     "previousMonth": "02-2020",
                     "Month": "03-2020",
                     "nextMonth": "10-2020",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "At 0.37 in March 2020, Jocata Sumpoorn reflected a significant contraction in the sales activity of MSMEs, a result of economic activity shutting down - the national lockdown necessitated in response to the COVID-19 pandemic. The contraction was seen across the board in the IIP, with the overall index slumping by 18.7% over the previous year. The IHS Markit Composite PMI fell to 50.6 in March from 57.6 in February, making the lowest reading in five months; while the manufacturing index dropped to 51.8 from 54.5, the services sector reported a decline to 49.3 in March from 57.5 in February. New orders saw the fastest drop since September 2013 in fresh export contracts.<br><br>With the global economy in turmoil as transport and trade restrictions came into place to safeguard countries from the spread of the pandemic, India’s exports fell by 34.6% in March, while imports fell by 28.7%.<br><br>The unprecedented nature of the crisis and uncertainty led to strident demands for government support for small businesses, in particular."
                 },
@@ -710,6 +1952,7 @@
                     "previousMonth": "03-2020",
                     "Month": "10-2020",
                     "nextMonth": "03-2021",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "After five months of contraction from March due to the severe restrictions of the national lockdown, Jocata Sumpoorn had shown marginal expansion at 0.53 in August and moderate expansion at 0.61 in September. The sales performance of credit-seeking MSMEs showed significant expansion in October, with the Jocata Sumpoorn at 0.66. The General IIP stood at 129.6, its highest level since the lockdown restrictions were put in place in April. As the IIP had gone through a phase of contraction for three months of August – October 2019, the overall growth of 4.5% in October was still muted and indicative of continuing stress in the mining and manufacturing sectors.<br><br>The responses through the survey based IHS Markit PMI showed significant strength, with the Composite PMI rising to 58.0 in October from 54.6 in September, making this the strongest increase in around nine years. The Manufacturing PMI rose to 58.9 in October from 56.8 in September, as purchasing managers reported the strongest pace of expansion in output in roughly 13 years. From its September level of 49.8, the Services PMI crossed into the expansionary zone for the first time since March and stood at 54.1 in October."
                 },
@@ -717,6 +1960,7 @@
                     "previousMonth": "10-2020",
                     "Month": "03-2021",
                     "nextMonth": "10-2021",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "Even as the second wave of COVID-19 gripped the country and localized restrictions were in place, government support measures for MSMEs and the absence of severe national lockdown have enabled growth in sales activity for the sector. Jocata Sumpoorn stood at its highest level in a year at 0.79 in March, moving into the zone of substantial expansion in sales activity for credit-seeking MSMEs.<br><br>The General IIP Index also moved to a record high level of 145.6 in March, up from the 129.9 index of February. While the significantly high growth in IIP of 24.2% can partly be attributed to the low base effect from the previous year’s lockdown in March, all segments of the IIP recorded an increase over February, reflecting a recovery in the economy.<br><br>On the other hand, the responses through the survey based IHS Markit PMI showed a slight drop in March from the previous month: the Composite PMI stood at 56.0 in March, as against 57.3 in February; the Services PMI inched down to 54.6 in March from 55.3 in February; and the Manufacturing PMI moved from 57.5 in February to 55.4 in March. Despite the fall, the PMI stayed well above the threshold level of 50, reflecting an increase in business activity from the previous month."
                 },
@@ -724,6 +1968,7 @@
                     "previousMonth": "03-2021",
                     "Month": "10-2021",
                     "nextMonth": "05-2022",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "The strong support given by the government as relief to MSMEs post-Covid continues to bolster the sector. After Jocata Sumpoorn showed substantial expansion with a level of 0.85 in April, the sales activity has been in the zones of moderate and signficant expansion.  Since September, the IIP has been settling with the overall index coming off the high double-digit growth rates of the period March-August as the previous year's base effect runs out. Though growth in manufacturing IIP stood at 4.3% for September and 3.3% for October, there are fluctuations across sectors that reveal differential impact of the pandemic and the base effect – 13 out of 23 sectors reported growth in October e.g, textile manufacture posted 30%+ growth in September and October, while leather products showed continued stress with negative growth in both months. <br><br>The IHS Markit Purchasing Managers’ Index (PMI) survey reflected the revival in the economic activity as the Services PMI went up to 58.4 in October, its highest level in ten and a half years and Manufacturing PMI reported an eight-month high at 55.9; the Composite PMI consequently stood at 58.7, up from 55.3 in September, which was the strongest monthly expansion reported by the purchasing managers since January 2012. Overall, therefore the sentiment has been very positive for economic activity. "
                 },
@@ -731,6 +1976,7 @@
                     "previousMonth": "10-2021",
                     "Month": "05-2022",
                     "nextMonth": "10-2022",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "The Jocata Sumpoorn trajectory over the past year has in general shown the sales activity of credit-seeking MSMEs expanding at moderate to significant rates of expansion, except for one month of mild expansion in December 2021. Following a streak of three consecutive months of moderate expansion over the period September–November 2021, Jocata Sumpoorn showed mild expansion in December and once again moved into zones of moderate to significant expansion until May. This trend has been broadly in sync with the IIP, which also showed low rates of 1% growth in November and December 2021; the General IIP Index moved up from 134.5 in April to 137.8 in May, showing 19.7 percent growth over the previous year, despite the high base in May 2021. The Manufacturing IIP moved up to 134.6 in May from 131.6 in April, recording a 20.7% growth over the previous year. Except for the manufacture of pharmaceuticals, all other 22 sectors showed growth in May.<br><br>The S&P Global Composite PMI also moved up to 58.3 in May from 57.6 in April. The recovery was mainly in the services sector, where respondents reported the strongest rise in activity in 11 years; the index jumped to 58.9 in May from 57.9 in April, with further relaxations in the COVID-19 restrictions. The Manufacturing PMI stayed stable across the months, with a minor drop from 54.7 in April to 54.6 in May."
                 },
@@ -738,6 +1984,7 @@
                     "previousMonth": "05-2022",
                     "Month": "10-2022",
                     "nextMonth": "01-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "The sales performance of credit-seeking MSMEs showed a mild rate of expansion in October, after the Jocata Sumpoorn had recorded moderate expansion for four months since June 2022. The General IIP index has been showing some stress over the past four months, moving from 134.4 in July to a six-month low of 131.5 in August, a slight rise to 133.8 in September, and a drop again to 129.5 in October. General IIP contracted by 4.1% in October over the previous year, with manufacturing IIP contracting by 5.8%. After expanding for nineteen months, merchandise exports contracted by 12.1% in October over the previous year, while merchandise imports expanded by 10.0%.<br><br>There was a contrasting picture coming in from the S&P Global PMI, whose Composite Index reported at 55.5 in October, marginally higher than 55.1 in the previous month. However, the survey of purchasing managers of large firms showed that manufacturing production and new orders expanded at their slowest rate since June 2022."
                 },
@@ -745,6 +1992,7 @@
                     "previousMonth": "10-2022",
                     "Month": "01-2023",
                     "nextMonth": "02-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "Since June 2022, the Jocata Sumpoorn levels have shown that growth in the sales of credit-seeking MSMEs has settled in the zone of mild to moderate expansion. The index level moved up to 0.60 in January 2023 from the 0.59 level in December 2022. This is in line with the indications from the IIP, where the General IIP rose in January to 147.4, the third consecutive month of increase in production since the drop to 129.5 in October 2022. Growth in the General IIP stood at 5.8% over the previous year. Manufacturing IIP moved up to 145.5 in January from 144.9 in December, recording year-on-year growth of 4.5%. Analysis of the 23 sectors that make up the IIP showed that 13 sectors recorded growth over the previous year, while 10 sectors contracted.<br><br>In slight contrast, the responses from the survey-based S&P Global PMI showed lower expansion than December levels; the Composite PMI came in at 57.5 in January, down from December’s near 11-year high of 59.4. The Manufacturing PMI came in at 55.4 in January, down from December’s 57.8. Meanwhile, the Services PMI decreased to 57.2 in January (December: 58.5). In both sectors, output and new orders rose at softer rates than the previous month."
                 },
@@ -752,6 +2000,7 @@
                     "previousMonth": "01-2023",
                     "Month": "02-2023",
                     "nextMonth": "03-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "The sales activity of credit-seeking MSMEs has been exhibiting mild to moderate expansion since June 2022. Jocata Sumpoorn for February stands at the same level of 0.60 as the previous month, indicating steady, albeit mild, growth. On the IIP front, the General IIP dropped to 139.3 in February from 147.4 in January, growing at a rate of 6.0% over the previous year. The Manufacturing IIP fell from 145.5 in January to 137.6 in February, now almost at the same level as November 2022 and recording a growth of 5.9% over the previous year. 11 of the 23 sectors in the IIP contracted in February, while 12 recorded growth over the previous year.<br><br>The S&P Global Composite PMI came in at 59.0 in February, up from January’s 57.5, but this was essentially on the back of a strong services sector. Based on the responses of purchasing managers surveyed in the services sector, output and new orders grew at the fastest rate in 12 years, and the Services PMI rose to 59.4 in February from the previous month’s index of 57.2. On the other hand, the Manufacturing PMI softened marginally to 55.3 in February, slightly below January’s level of 55.4."
                 },
@@ -759,6 +2008,7 @@
                     "previousMonth": "02-2023",
                     "Month": "03-2023",
                     "nextMonth": "04-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "The current uptick in the sales performance of MSMEs into the zone of moderate expansion breaks the trend of mild expansion seen since December 2022. The General IIP moved up to 151.7 in March, reversing the drop seen in February to 139.3 from January’s level of 147.4, but growth in the General IIP over the previous year was a muted 1.9%. The Manufacturing IIP grew by 1.5%, while electricity output contracted in March. 13 of the 23 sectors that make up the IIP showed contractions over the previous year. Further, India’s exports moved to an eight-month high of USD 66.14 billion in March, but even at this value, exports of goods and services registered a decline of 7.53% over the previous year.<br><br>The picture from the PMI data also gave mixed signals: the S&P Global PMI Composite Index dropped marginally to 58.4 in March from 59 in February; the Services PMI fell from 59.4 in February to 57.8 in March; and the Manufacturing PMI moved to a three-month high from 55.3 in February to 56.4 in March. Purchasing managers of large firms in manufacturing reported the strongest growth in factory orders and production in three months. Meanwhile, after expanding at the fastest pace in 12 years in February, the firms surveyed in the service sector reported output and new orders growing at slightly weaker rates in March."
                 },
@@ -766,6 +2016,7 @@
                     "previousMonth": "03-2023",
                     "Month": "04-2023",
                     "nextMonth": "05-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "There are mixed signals coming in from the macro-economic data for April. Jocata Sumpoorn has been in a phase of moderate to mild expansion since June 2022 as the economy has thrown off the impact of the pandemic, but with the April 2023 index showing marginal expansion, this indicates the MSME sector is still to fully recover. The closure of the Emergency Credit Line Guarantee Scheme will have an impact on the sector that is credit-starved in the best of times.<br><br>The General IIP Index came in at 140.7, down from the 151.7 index value in March 2023, with growth at 4.6% over the previous year. The IIP Manufacturing index also dipped in April to 138.8, down from the high of 147.5 in March 2023, reporting growth of 5.5% over the previous year. Note that 12 out of 23 sectors contracted in April, when compared to the previous year. <br><br>In contrast, the S&P Global Composite PMI Index rose significantly to 61.6 in April from 58.4 in March, now at the highest level since July 2010. Manufacturing PMI stood at a four month high in April at 57.2. The optimism was only tempered by price pressures as input costs rose at the fastest pace in three months."
                 },
@@ -773,6 +2024,7 @@
                     "previousMonth": "04-2023",
                     "Month": "05-2023",
                     "nextMonth": "06-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "Over the last three months, even as the Jocata Sumpoorn showed an expansion in the sales performance of credit-seeking MSMEs, the index has been slightly choppy, moving from 0.62 in March to 0.53 in April and recovering to 0.58 in May. Similar trends are seen in the IIP, the General IIP, which hit a high of 151.7 in March, dipped to 140.7 in April, and recovered in May to 145.6. The Manufacturing IIP hit its high of 147.5 in March, dipped in April to 138.8 and recovered in May to 142.4. The growth rates in May have been steady, with the General IIP growing at 5.3% and Manufacturing IIP up by 5.8% over the previous year. 10 out of the 23 sectors that make up the IIP contracted in May over the previous year’s levels. The exports of goods and services from India have been muted this year, with April-May registering lower than the previous year. This will clearly reflect in the performance of the MSMEs, which contribute more than 40% of India’s exports.<br><br>On the other hand, the responses from the S&P Global PMI showed bright optimism for India. The Composite PMI stayed at the 61.6 high in May, while the Manufacturing Index moved up from 57.2 in April to 58.7 in May, the strongest improvement since October 2020. The results from the survey of purchasing managers of large firms should reflect improved strength for the MSME sector down the value chain if demand persists."
                 },
@@ -780,6 +2032,7 @@
                     "previousMonth": "05-2023",
                     "Month": "06-2023",
                     "nextMonth": "07-2023",
+                    "commentaryAuthorDetails": "",
                     "AuthorDetails": [],
                     "ExpertCommentary": "Over the past year, Jocata Sumpoorn has shown a moderation in the expansion of sales activity among credit-seeking MSMEs. June was the second consecutive month of mild expansion. This is broadly in sync with the trends coming in from the Index of Industrial Production, where the General IIP moved down to 143.5 in June from its level of 145.6 in May. Manufacturing IIP has also moved down to 141.1 in June from 143.1 in May, recording year-on-year growth of 3.1% compared to 6.3% the previous month. 13 of the 23 sectors that make up the IIP contracted in June over their index the previous year. The S&P Global India Composite PMI fell to 59.4 in June 2023, down from the high 61.1 levels seen in April and May. In June, the survey of purchasing managers of large firms reported a slowdown in both factory activity and the service sector. The S&P Global India Manufacturing PMI fell to 57.8 in June 2023 from May's 31-month peak of 58.7.<br><br>The MSME sector does face constrained credit conditions, as the SIDBI-Transunion Pulse report for August 2023 has highlighted that over the quarter January-March 2023, credit demand grew by 33% while supply grew only by 11%. This will clearly impact the ability of firms to ramp up production and sales performance."
                 },
@@ -787,6 +2040,7 @@
                     "previousMonth": "06-2023",
                     "Month": "07-2023",
                     "nextMonth": "08-2023",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -805,6 +2059,7 @@
                     "previousMonth": "07-2023",
                     "Month": "08-2023",
                     "nextMonth": "09-2023",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -823,6 +2078,7 @@
                     "previousMonth": "08-2023",
                     "Month": "09-2023",
                     "nextMonth": "10-2023",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -841,6 +2097,7 @@
                     "previousMonth": "09-2023",
                     "Month": "10-2023",
                     "nextMonth": "11-2023",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -859,6 +2116,7 @@
                     "previousMonth": "10-2023",
                     "Month": "11-2023",
                     "nextMonth": "12-2023",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -877,6 +2135,7 @@
                     "previousMonth": "11-2023",
                     "Month": "12-2023",
                     "nextMonth": "01-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -895,6 +2154,7 @@
                     "previousMonth": "12-2023",
                     "Month": "01-2024",
                     "nextMonth": "02-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -913,6 +2173,7 @@
                     "previousMonth": "01-2024",
                     "Month": "02-2024",
                     "nextMonth": "03-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -931,6 +2192,7 @@
                     "previousMonth": "02-2024",
                     "Month": "03-2024",
                     "nextMonth": "04-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -949,6 +2211,7 @@
                     "previousMonth": "03-2024",
                     "Month": "04-2024",
                     "nextMonth": "05-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -967,6 +2230,7 @@
                     "previousMonth": "04-2024",
                     "Month": "05-2024",
                     "nextMonth": "06-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -985,6 +2249,7 @@
                     "previousMonth": "05-2024",
                     "Month": "06-2024",
                     "nextMonth": "07-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1003,6 +2268,7 @@
                     "previousMonth": "06-2024",
                     "Month": "07-2024",
                     "nextMonth": "08-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1021,6 +2287,7 @@
                     "previousMonth": "07-2024",
                     "Month": "08-2024",
                     "nextMonth": "09-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1039,6 +2306,7 @@
                     "previousMonth": "08-2024",
                     "Month": "09-2024",
                     "nextMonth": "10-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1057,6 +2325,7 @@
                     "previousMonth": "09-2024",
                     "Month": "10-2024",
                     "nextMonth": "11-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1075,6 +2344,7 @@
                     "previousMonth": "10-2024",
                     "Month": "11-2024",
                     "nextMonth": "12-2024",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1093,6 +2363,7 @@
                     "previousMonth": "11-2024",
                     "Month": "12-2024",
                     "nextMonth": "01-2025",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1111,6 +2382,7 @@
                     "previousMonth": "12-2024",
                     "Month": "01-2025",
                     "nextMonth": "02-2025",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1129,6 +2401,7 @@
                     "previousMonth": "01-2025",
                     "Month": "02-2025",
                     "nextMonth": "03-2025",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1147,6 +2420,7 @@
                     "previousMonth": "02-2025",
                     "Month": "03-2025",
                     "nextMonth": "04-2025",
+                    "commentaryAuthorDetails": "sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Dr. Sumita Kale",
@@ -1165,6 +2439,7 @@
                     "previousMonth": "03-2025",
                     "Month": "04-2025",
                     "nextMonth": "05-2025",
+                    "commentaryAuthorDetails": "suman_sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Mr. Suman Chowdhury",
@@ -1182,12 +2457,13 @@
                             "ExpertImageDetails": "commentator-narasima.png"
                         }
                     ],
-                    "ExpertCommentary": "f= \"\"\"Last month, we introduced a new format - blending commentary with expert conversations. This month, we continue that effort with a special guest: <b>Shri Suman Chowdhury</b>, Chief Economist at SIDBI, joining <b>Dr. Sumita Kale</b> and <b>Narasimhan V</b>.<br><br><i><b>Sumita Kale</b> & <b>Narasimhan V</b>: Welcome, Mr. Suman, great to have you join us.<br><br><b>Suman Chowdhury</b>: Thanks a lot, Dr. Sumita and Mr. Narasimhan. It’s a pleasure to be part of this conversation.<br><br><b>Sumita Kale</b>: So, we are looking forward to hearing your views on the economy at large, and how you feel small businesses, in particular, have been impacted. What do you feel is the broad trend going ahead?<br><br><b>Suman Chowdhury</b>: Should we start with a quick overview of the economy? We’ve seen the latest GDP data for the last quarter of FY25. It’s been a pleasant surprise; it surpassed expectations. GDP growth came in at 7.4% for Q4, which helped the total GDP growth for the year reach 6.5%. Most economists’ forecasts, as I understand, were lower than that.<br><br>So, from that perspective, it definitely was a surprise. I think one of the key drivers of this better-than-expected performance was clearly the pickup in public capex. It was in a slowdown last year because of general elections, but it really picked up in the last quarter. Another important trend was the export opportunity created in April and May because of tariff uncertainty. There was a window where a lot of front-loading of exports happened, and that’s what’s reflected in the export data for March and April. April in particular was good.<br><br>Merchandise exports actually rose by 10.3% in April, non-petroleum exports specifically. If you look at some goods where MSMEs are present, sectors like engineering goods saw 18.5% YoY growth, readymade garments 14.4%. These are much stronger numbers, showing it was an opportunity. Gems and jewellery grew 10.7%, plastic products 34%. So, I believe MSMEs have benefited from the tariff uncertainty. It’s not across the board, but in certain sectors, MSME exporters gained.<br><br>Coming back to the economy, we’ve started on a good note. Of course, the forecast for FY26 is a bit moderate, somewhere around 6.3% to 6.4%, a slight moderation compared to FY25. The key reason is global uncertainty - how tariff policies will shape up, and how they’ll impact global markets, which are also uncertain. Those are the risk factors. On the positive side, we have a forecast of a favourable monsoon and low inflation, which is a comfort factor. This will also help the RBI Monetary Policy Committee take decisions on rate cuts. It looks like there will probably be another 50 basis point rate cut this fiscal*. So, all these factors are positive. The downside can happen due to global factors. That’s largely the economic landscape I see.<br><br><b>Narasimhan V</b>: Right. I would largely agree with you, Mr. Suman, but perhaps we could look at a couple of aspects. One important thing would be that even when we looked at the IIP, and certain aspects, especially the GVA, it came in at 6.4%. I’m just tempering our optimism somewhat. When you break it down into sectoral growth, as you rightly noted from an MSME perspective, most of the support came from agriculture, construction, and services. So, core manufacturing didn't deliver the bolstering support one would have expected. That has a very direct correlation with the IIP numbers as well.<br><br>And then, looking at a very important thing that should always be considered, given that MSMEs are operating in a very specific, almost \"guardrail boundary\" situation, present only in certain industries and actively in trading, we looked at the Retailer Association of India’s survey data. Some numbers have moderated. This covers about nine sectors - Quick Service Restaurants (QSR), apparel, gems and jewellery - basically the consumption side. <br><br>To add another layer, it’s important to look at listed bellwethers like Blue Star, Voltas, and Amber – especially in the air conditioning segment. They usually give a good read on personal consumption. But even there, it’s been subdued. And if you look at footwear sales, brands like Relaxo at the lower end, or Metro at the higher end aren’t seeing the kind of pick-up we’d expect post school re-openings. There is a visible quietening. So, it’s a mixed bag.<br><br><b>Suman Chowdhury</b>: Yes...Urban consumption has been in a bit of slowdown mode since last year with improved rural demand supporting the overall consumption numbers. In April-May, another factor had some impact on consumer goods sales – a less intensive summer and early rains in many parts of the country. It reduced the demand for products such as cold beverages, ice creams and even air conditioners.<br><br><b>Narasimhan V</b>: Which brings me to Sumpoorn - where we look at data from a sales perspective, covering B2B & B2C. So, we’re looking at it from the consumption perspective, either for production or end consumption. Those numbers have moderated a bit, and we’re hoping May will be slightly better, or perhaps flattish. We also looked at the historic indices of April ’24 and April ’23, and it’s coming almost close. <br><br><b>Suman Chowdhury</b>: It was actually 0.53 in April ’23. 0.55 in ’24, and April ’25, 0.56. So, slightly better is what I see.<br><br><b>Sumita Kale</b>: It is, it is.<br><br><b>Narasimhan V</b>: It’s slightly better, so it’s some comfort. But as a steep fall compared to March, I don’t think we need to be too worried. As you rightly pointed out, there were a lot of front-loaded sales in March; inventories were pushed out. So, naturally, April has been a soft month.<br><br><b>Suman Chowdhury</b>: Yes, it’s seasonal.<br><br><b>Narasimhan V</b>: Correct. Let’s see how May comes up.<br><br><b>Sumita Kale</b>: Just wanted to point out that if you look at the first four months of this year, every month is higher than the corresponding month of the previous year. Plus, H1 of FY25's range is lower than the range for the second half of FY25. So, we do have a sense of resilience coming through Sumpoorn also.<br><br><b>Narasimhan V</b>: Yes. And tractor sales are pretty interesting, Dr. Sumita. We discussed this just this morning.<br><br><b>Suman Chowdhury</b>: That’s right. Tractor sales have grown. What I read is 8% in April, and I think May numbers also look good for Mahindra, based on sales…<br><br><b>Narasimhan V</b>: …Mahindra published today: 10% growth in tractor sales. Escorts Kubota has also reported a 0.7% increase in total tractor sales (domestic plus exports), largely driven by exports as domestic sales dipped by 2%. If the three top big names are delivering steady numbers, that’s another big tick mark. I expect this to be important good news from a rural consumption perspective. Credit off-take for two-wheelers and other auto consumption items is significantly a function of rural demand. If that starts picking up, I think April would have been reasonably compensated.<br><br><b>Suman Chowdhury</b>: True, true.<br><br><b>Sumita Kale</b>: Actually, I had another question when it comes to credit. We felt that the landscape has been changing quite dramatically over the past year due to certain regulatory changes concerning unsecured lending, the clamp down on personal loans. There’s been a lot of portfolio shifts for banks and NBFCs. Your SIDBI surveys have also pointed out that things are good, but small businesses are a little wary of getting credit. Am I right?<br><br><b>Suman Chowdhury</b>: You know, Dr. Sumita, MSMEs always have issues with access to credit, and credit challenges are there; I don’t think that will go away very quickly. Recently, in one study, we estimated the total credit gap in the MSME sector, including micro-enterprises, is around ₹30 lakh crore. What you’re saying is right: there are issues with unsecured loans due to regulatory tightening. You must have seen that microfinance portfolio outstanding is actually coming down; there’s negative growth. NBFC portfolios are also showing lesser growth. RBI data on MSME PSL grew 18.5% YoY in April. So, I think the MSME portfolio overall is still looking good.<br><br><b>Sumita Kale</b>: Yes, agreed.<br><br><b>Suman Chowdhury</b>: What I’m trying to say is the growth in the MSME portfolio of banks is still fairly positive. Because of many factors: policy push, different government programs, including MUDRA, I think the momentum is still on. But at the same time, as per the latest TransUnion CIBIL MSME Pulse report, disbursements have slowed down in the small and medium MSME segments. So, there’s a negative growth in disbursement in the last quarter, perhaps because of the volatile external environment. We have to see what happens this current quarter. <br><br><b>Narasimhan V</b>: I would like for us to discuss another quick point -very specifically, from your perspective, Mr. Suman, is the fact that CGTMSE has been doing stellar work. Guarantees are up very significantly by 51% YoY. But do you see potential adverse pressure, given that the RBI has advised that FLDG (First Loss Default Guarantee) is not permitted for loans already covered under CGTMSE? Is this going to be a problem for NBFC lending, etc.? I’m not speaking specific to SIDBI itself, but do you see this being somewhat adverse for the flow of credit?<br><br><b>Suman Chowdhury</b>: We are still assessing that. As we know, CGTMSE coverage has been increasing, and this is one of the factors that has helped enhance credit exposure for MSMEs, enabling banks and NBFCs to give collateral-free loans. Clearly, it’s been a game-changer, and we see coverage steadily increasing. The quantum of coverage was also enhanced in the last budget from ₹5 crore to ₹10 crore. So, on the CGTMSE part, things are going well. But to your specific question on FLDG’s impact – there is still more assessment needed. <br><br><b>Sumita Kale</b>: Since we’re looking ahead, what do you think the May 2025 Sumpoorn number might look like?<br><br><b>Narasimhan V</b>: I’d say it’ll be close to April. I don’t see any major new trigger for demand unless CapEx really kicks off or the monsoon is especially strong. April’s GST collections were phenomenal, right?<br><br><b>Suman Chowdhury</b>: Yes, absolutely.<br><br><b>Narasimhan V</b>: So maybe larger sectors are doing well and that’s driving collections. But overall, I’d guess May won’t look very different from May ’24.<br><br><b>Suman Chowdhury</b>: I agree. The flash GST numbers for May show a 16.4% rise. But it’s not translating into visible consumption yet.<br><br><b>Narasimhan V</b>: Exactly.<br><br><b>Suman Chowdhury</b>: So, we’ll have to see how domestic consumption shapes up. Exports have looked better the last couple of months - if that continues, it might improve sentiment.<br><br><b>Narasimhan V</b>: Is there anything new on SIDBI’s end that could help MSMEs?<br><br><b>Suman Chowdhury</b>: Nothing brand new, but GST Sahay is picking up. It’s still in early stages but has reached a ₹200 crore portfolio and is growing. We’re optimistic about it. The focus is on expanding digital lending.<br><br><b>Narasimhan V</b>: Right.<br><br><b>Suman Chowdhury</b>: We’re also exploring support for MSME CapEx, especially in services like hospitality. With domestic tourism rising, there’s scope to support hotel investments in the mid-market segment.<br><br><b>Narasimhan V</b>: One thing we haven’t mentioned is the sudden COVID uptick. While it doesn’t seem serious, it’s still an unpredictable factor.<br><br><b>Suman Chowdhury</b>: That’s true.<br><br><b>Sumita Kale</b>: Personally, I think May might see a slight dip - maybe down to 0.55 - because of unexpected rains disrupting operations in several cities.<br><br><b>Suman Chowdhury</b>: That could be a factor.<br><br><b>Narasimhan V</b>: Yes, it could swing a point either way. But an upside would surprise me.<br><br><b>Sumita Kale</b>: And we had disruptions from Operation Sindoor too, which affected travel.<br><br><b>Suman Chowdhury</b>: Yes, that’s right. Those disruptions might have an impact.<br><br><b>Narasimhan V</b>: Agreed. Let’s wait and watch.<br><br><b>Sumita Kale</b>: On that note, thank you so much, Mr. Suman. It was a pleasure having you with us. Let’s see what May brings - and whether our hunches hold.</i><br><br>*Note: The Reserve Bank of India announced a 50 basis points rate cut just as the Sumpoorn commentary was being finalized.<br><br><i style=\"font-size:14px\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Narasimhan V, and Suman Chowdhury. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>\"\"\""
+                    "ExpertCommentary": "Last month, we introduced a new format - blending commentary with expert conversations. This month, we continue that effort with a special guest: <b>Shri Suman Chowdhury</b>, Chief Economist at SIDBI, joining <b>Dr. Sumita Kale</b> and <b>Narasimhan V</b>.<br><br><i><b>Sumita Kale</b> & <b>Narasimhan V</b>: Welcome, Mr. Suman, great to have you join us.<br><br><b>Suman Chowdhury</b>: Thanks a lot, Dr. Sumita and Mr. Narasimhan. It’s a pleasure to be part of this conversation.<br><br><b>Sumita Kale</b>: So, we are looking forward to hearing your views on the economy at large, and how you feel small businesses, in particular, have been impacted. What do you feel is the broad trend going ahead?<br><br><b>Suman Chowdhury</b>: Should we start with a quick overview of the economy? We’ve seen the latest GDP data for the last quarter of FY25. It’s been a pleasant surprise; it surpassed expectations. GDP growth came in at 7.4% for Q4, which helped the total GDP growth for the year reach 6.5%. Most economists’ forecasts, as I understand, were lower than that.<br><br>So, from that perspective, it definitely was a surprise. I think one of the key drivers of this better-than-expected performance was clearly the pickup in public capex. It was in a slowdown last year because of general elections, but it really picked up in the last quarter. Another important trend was the export opportunity created in April and May because of tariff uncertainty. There was a window where a lot of front-loading of exports happened, and that’s what’s reflected in the export data for March and April. April in particular was good.<br><br>Merchandise exports actually rose by 10.3% in April, non-petroleum exports specifically. If you look at some goods where MSMEs are present, sectors like engineering goods saw 18.5% YoY growth, readymade garments 14.4%. These are much stronger numbers, showing it was an opportunity. Gems and jewellery grew 10.7%, plastic products 34%. So, I believe MSMEs have benefited from the tariff uncertainty. It’s not across the board, but in certain sectors, MSME exporters gained.<br><br>Coming back to the economy, we’ve started on a good note. Of course, the forecast for FY26 is a bit moderate, somewhere around 6.3% to 6.4%, a slight moderation compared to FY25. The key reason is global uncertainty - how tariff policies will shape up, and how they’ll impact global markets, which are also uncertain. Those are the risk factors. On the positive side, we have a forecast of a favourable monsoon and low inflation, which is a comfort factor. This will also help the RBI Monetary Policy Committee take decisions on rate cuts. It looks like there will probably be another 50 basis point rate cut this fiscal*. So, all these factors are positive. The downside can happen due to global factors. That’s largely the economic landscape I see.<br><br><b>Narasimhan V</b>: Right. I would largely agree with you, Mr. Suman, but perhaps we could look at a couple of aspects. One important thing would be that even when we looked at the IIP, and certain aspects, especially the GVA, it came in at 6.4%. I’m just tempering our optimism somewhat. When you break it down into sectoral growth, as you rightly noted from an MSME perspective, most of the support came from agriculture, construction, and services. So, core manufacturing didn't deliver the bolstering support one would have expected. That has a very direct correlation with the IIP numbers as well.<br><br>And then, looking at a very important thing that should always be considered, given that MSMEs are operating in a very specific, almost \"guardrail boundary\" situation, present only in certain industries and actively in trading, we looked at the Retailer Association of India’s survey data. Some numbers have moderated. This covers about nine sectors - Quick Service Restaurants (QSR), apparel, gems and jewellery - basically the consumption side. <br><br>To add another layer, it’s important to look at listed bellwethers like Blue Star, Voltas, and Amber – especially in the air conditioning segment. They usually give a good read on personal consumption. But even there, it’s been subdued. And if you look at footwear sales, brands like Relaxo at the lower end, or Metro at the higher end aren’t seeing the kind of pick-up we’d expect post school re-openings. There is a visible quietening. So, it’s a mixed bag.<br><br><b>Suman Chowdhury</b>: Yes...Urban consumption has been in a bit of slowdown mode since last year with improved rural demand supporting the overall consumption numbers. In April-May, another factor had some impact on consumer goods sales – a less intensive summer and early rains in many parts of the country. It reduced the demand for products such as cold beverages, ice creams and even air conditioners.<br><br><b>Narasimhan V</b>: Which brings me to Sumpoorn - where we look at data from a sales perspective, covering B2B & B2C. So, we’re looking at it from the consumption perspective, either for production or end consumption. Those numbers have moderated a bit, and we’re hoping May will be slightly better, or perhaps flattish. We also looked at the historic indices of April ’24 and April ’23, and it’s coming almost close. <br><br><b>Suman Chowdhury</b>: It was actually 0.53 in April ’23. 0.55 in ’24, and April ’25, 0.56. So, slightly better is what I see.<br><br><b>Sumita Kale</b>: It is, it is.<br><br><b>Narasimhan V</b>: It’s slightly better, so it’s some comfort. But as a steep fall compared to March, I don’t think we need to be too worried. As you rightly pointed out, there were a lot of front-loaded sales in March; inventories were pushed out. So, naturally, April has been a soft month.<br><br><b>Suman Chowdhury</b>: Yes, it’s seasonal.<br><br><b>Narasimhan V</b>: Correct. Let’s see how May comes up.<br><br><b>Sumita Kale</b>: Just wanted to point out that if you look at the first four months of this year, every month is higher than the corresponding month of the previous year. Plus, H1 of FY25's range is lower than the range for the second half of FY25. So, we do have a sense of resilience coming through Sumpoorn also.<br><br><b>Narasimhan V</b>: Yes. And tractor sales are pretty interesting, Dr. Sumita. We discussed this just this morning.<br><br><b>Suman Chowdhury</b>: That’s right. Tractor sales have grown. What I read is 8% in April, and I think May numbers also look good for Mahindra, based on sales…<br><br><b>Narasimhan V</b>: …Mahindra published today: 10% growth in tractor sales. Escorts Kubota has also reported a 0.7% increase in total tractor sales (domestic plus exports), largely driven by exports as domestic sales dipped by 2%. If the three top big names are delivering steady numbers, that’s another big tick mark. I expect this to be important good news from a rural consumption perspective. Credit off-take for two-wheelers and other auto consumption items is significantly a function of rural demand. If that starts picking up, I think April would have been reasonably compensated.<br><br><b>Suman Chowdhury</b>: True, true.<br><br><b>Sumita Kale</b>: Actually, I had another question when it comes to credit. We felt that the landscape has been changing quite dramatically over the past year due to certain regulatory changes concerning unsecured lending, the clamp down on personal loans. There’s been a lot of portfolio shifts for banks and NBFCs. Your SIDBI surveys have also pointed out that things are good, but small businesses are a little wary of getting credit. Am I right?<br><br><b>Suman Chowdhury</b>: You know, Dr. Sumita, MSMEs always have issues with access to credit, and credit challenges are there; I don’t think that will go away very quickly. Recently, in one study, we estimated the total credit gap in the MSME sector, including micro-enterprises, is around ₹30 lakh crore. What you’re saying is right: there are issues with unsecured loans due to regulatory tightening. You must have seen that microfinance portfolio outstanding is actually coming down; there’s negative growth. NBFC portfolios are also showing lesser growth. RBI data on MSME PSL grew 18.5% YoY in April. So, I think the MSME portfolio overall is still looking good.<br><br><b>Sumita Kale</b>: Yes, agreed.<br><br><b>Suman Chowdhury</b>: What I’m trying to say is the growth in the MSME portfolio of banks is still fairly positive. Because of many factors: policy push, different government programs, including MUDRA, I think the momentum is still on. But at the same time, as per the latest TransUnion CIBIL MSME Pulse report, disbursements have slowed down in the small and medium MSME segments. So, there’s a negative growth in disbursement in the last quarter, perhaps because of the volatile external environment. We have to see what happens this current quarter. <br><br><b>Narasimhan V</b>: I would like for us to discuss another quick point -very specifically, from your perspective, Mr. Suman, is the fact that CGTMSE has been doing stellar work. Guarantees are up very significantly by 51% YoY. But do you see potential adverse pressure, given that the RBI has advised that FLDG (First Loss Default Guarantee) is not permitted for loans already covered under CGTMSE? Is this going to be a problem for NBFC lending, etc.? I’m not speaking specific to SIDBI itself, but do you see this being somewhat adverse for the flow of credit?<br><br><b>Suman Chowdhury</b>: We are still assessing that. As we know, CGTMSE coverage has been increasing, and this is one of the factors that has helped enhance credit exposure for MSMEs, enabling banks and NBFCs to give collateral-free loans. Clearly, it’s been a game-changer, and we see coverage steadily increasing. The quantum of coverage was also enhanced in the last budget from ₹5 crore to ₹10 crore. So, on the CGTMSE part, things are going well. But to your specific question on FLDG’s impact – there is still more assessment needed. <br><br><b>Sumita Kale</b>: Since we’re looking ahead, what do you think the May 2025 Sumpoorn number might look like?<br><br><b>Narasimhan V</b>: I’d say it’ll be close to April. I don’t see any major new trigger for demand unless CapEx really kicks off or the monsoon is especially strong. April’s GST collections were phenomenal, right?<br><br><b>Suman Chowdhury</b>: Yes, absolutely.<br><br><b>Narasimhan V</b>: So maybe larger sectors are doing well and that’s driving collections. But overall, I’d guess May won’t look very different from May ’24.<br><br><b>Suman Chowdhury</b>: I agree. The flash GST numbers for May show a 16.4% rise. But it’s not translating into visible consumption yet.<br><br><b>Narasimhan V</b>: Exactly.<br><br><b>Suman Chowdhury</b>: So, we’ll have to see how domestic consumption shapes up. Exports have looked better the last couple of months - if that continues, it might improve sentiment.<br><br><b>Narasimhan V</b>: Is there anything new on SIDBI’s end that could help MSMEs?<br><br><b>Suman Chowdhury</b>: Nothing brand new, but GST Sahay is picking up. It’s still in early stages but has reached a ₹200 crore portfolio and is growing. We’re optimistic about it. The focus is on expanding digital lending.<br><br><b>Narasimhan V</b>: Right.<br><br><b>Suman Chowdhury</b>: We’re also exploring support for MSME CapEx, especially in services like hospitality. With domestic tourism rising, there’s scope to support hotel investments in the mid-market segment.<br><br><b>Narasimhan V</b>: One thing we haven’t mentioned is the sudden COVID uptick. While it doesn’t seem serious, it’s still an unpredictable factor.<br><br><b>Suman Chowdhury</b>: That’s true.<br><br><b>Sumita Kale</b>: Personally, I think May might see a slight dip - maybe down to 0.55 - because of unexpected rains disrupting operations in several cities.<br><br><b>Suman Chowdhury</b>: That could be a factor.<br><br><b>Narasimhan V</b>: Yes, it could swing a point either way. But an upside would surprise me.<br><br><b>Sumita Kale</b>: And we had disruptions from Operation Sindoor too, which affected travel.<br><br><b>Suman Chowdhury</b>: Yes, that’s right. Those disruptions might have an impact.<br><br><b>Narasimhan V</b>: Agreed. Let’s wait and watch.<br><br><b>Sumita Kale</b>: On that note, thank you so much, Mr. Suman. It was a pleasure having you with us. Let’s see what May brings - and whether our hunches hold.</i><br><br>*Note: The Reserve Bank of India announced a 50 basis points rate cut just as the Sumpoorn commentary was being finalized.<br><br><i style=\"font-size:14px\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Narasimhan V, and Suman Chowdhury. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>\"\"\""
                 },
                 {
                     "previousMonth": "04-2025",
                     "Month": "05-2025",
                     "nextMonth": "06-2025",
+                    "commentaryAuthorDetails": "suman_sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Mr. Suman Chowdhury",
@@ -1211,6 +2487,7 @@
                     "previousMonth": "05-2025",
                     "Month": "06-2025",
                     "nextMonth": "07-2025",
+                    "commentaryAuthorDetails": "zeenat_sumita_narsi",
                     "AuthorDetails": [
                         {
                             "ExpertName": "Ms. Zeenat Hamirani",
@@ -1228,7 +2505,55 @@
                             "ExpertImageDetails": "commentator-narasima.png"
                         }
                     ],
-                    "ExpertCommentary": "In this edition of MSME Conversations, we welcome <b>Ms. Zeenat Hamirani</b>, Chief Risk Officer at L&T Finance, for a discussion with <b>Sumita Kale</b> and <b>Mr. Narasimhan Venkatesan</b>.<br><br><i><b>Narasimhan V</b>: Good afternoon, everyone, and welcome to the next edition of Sumpoorn. I’m delighted to have Zeenat with us today. For those who may not know her, Zeenat is the Chief Risk Officer of L&T Finance and has a distinguished career spanning credit policy, underwriting, and pioneering digital initiatives. <br><br>Prior to joining L&T Finance, Zeenat spent approximately 18 years at ICICI, where she held leadership roles in credit and risk. She also served as a Non-Executive Director at ICICI Home Finance. During her time there, she was instrumental in shaping credit policy and underwriting frameworks across the group.<br><br>At L&T Finance, she has continued to drive innovation, most notably through Project Cyclops, which has significantly enhanced credit decisioning, particularly in underserved markets. Today, she brings to the table a deep understanding of how ambitious growth can be prudently managed through disciplined risk management and cutting-edge underwriting practices.<br><br>Without further ado, Sumita, let’s begin with a sum-up of the June Sumpoorn index.<br><br><b>Sumita Kale</b>: Thanks a lot, Narsi. It’s great to be on this edition, especially with Zeenat joining us. The Sumpoorn index, which serves as our monthly, high-frequency indicator of the sales activity of MSMEs, has come in at 0.58 for June. This is a very interesting development because it marks a consistent upward trend over the last three months, consecutively inching up from 0.56 in April and 0.57 in May. The data places us firmly in the \"zone of mild expansion,\" and while we’re not seeing a sudden burst, this stability and incremental growth confirm the sense of buoyancy we’ve discussed in previous months. It’s a reflection of the resilience we’re seeing on the ground.<br><br>This sentiment is also borne out by some of our key macroeconomic indicators. The Index of Industrial Production (IIP) for June, for instance, showed a strong YoY manufacturing growth of 3.9%, building on the 3.5% from the previous June. This points to a degree of stability in our manufacturing sector. Interestingly, our non-oil exports have also been holding up, showing a mild growth in June despite the ongoing global trade and tariff uncertainties. But, as with all economic indicators, there are nuances. While engineering goods have done well and electronic goods are slightly up, we are seeing a lack of vigorous growth in segments like ready-made garments, and exports of gems and jewellery have actually gone down.<br><br>The credit side, which is where we’d like to get Zeenat’s views, presents an even more robust picture. We have seen a surge in bank credit to the micro and small segment, with a dramatic YoY growth of 21.8% in June. For the medium segment, it's a healthy 14-15%. With all these official numbers from a macro perspective, we are very keen to know, from the industry’s point of view, what you see on the ground.<br><br><b>Zeenat Hamirani</b>: Thank you, Sumita, for that comprehensive overview, and Narsi, for the kind introduction. The MSME sector has always been close to my heart because I've had the opportunity to be involved in every aspect of it, sales, policy, underwriting, and collections. From my vantage point, I hold a firm belief there are always good people in a bad or declining industry and there are bad people in a good industry. The key lies in the resilience of the MSME sector and how they build that resilience.<br><br>What I'm seeing aligns with the data you mentioned. There is some stress in sectors like textiles, gems and jewellery, and manufacturing. This stress is often a result of extended working capital cycles, wage pressures, and reduced exports. Another major area of concern is the impact of quick commerce and e-commerce on traditional retail businesses. We used to think that digital was largely an urban phenomenon, but it's now expanding rapidly into tier two, three, and four locations.<br><br>I see other industries flourishing, driven by internal growth. We are seeing a boom in pharma and API manufacturing, food processing, logistics (which is a direct result of the e-commerce growth), and IT services. Green energy and related auto ancillaries are also showing very good growth. Health, fitness, and tourism are other sectors that are doing well. It is these internal dynamics and the government’s initiatives for MSMEs, coupled with bankers seeing the sweet spot in this segment, that are helping to balance out the external pressures.<br><br><b>Narasimhan V</b>: That’s a very valuable perspective. On the topic of credit, we saw a robust 20.5% YoY growth in June, which is the highest since December 2023. At the same time, we're hearing of institutions slowing down on or even capping unsecured credit. My personal view is that this could pose a challenge for MSMEs that are constrained by their ability to offer adequate collateral. On a different note, the latest Retailer Association survey data is quite encouraging, showing an overall growth of 8% with Western India leading at 10%. Sectors like apparel and sports goods saw growth of up to 10%. This points to robust personal consumption, which should augur well for the MSME sector.<br><br><b>Sumita Kale</b>: Zeenat, you mentioned how digital consumption is moving into smaller towns. So we're seeing different patterns of behaviour. Domestic demand, or consumption demand, which we've been talking about for a while now, is still going to be one of the strongest drivers of growth, as you said. And that’s especially true because of the many nuances in our economy, the different segments at the lower end, whether it’s small businesses, family businesses, or lower-income segments. For many of them, microfinance has been one of the most important sources of finance. What do you see happening in the microfinance sector and how are banks and NBFCs approaching it now?<br><br><b>Zeenat Hamirani</b>: In my view, FY25 was a “disruption year” for the MFI industry. While some disruptions like demonetization and COVID-19 were out of our control, this latest cycle was, to a large extent, a creation of the financial institutions themselves. In the rush for growth post-COVID, lenders began over-leveraging customers and encouraging loan stacking without a true assessment of their repayment capacity.<br><br>This highlighted the need for a more “responsible” approach to lending. At L&T Finance, our crisis mantra was to be the last to fall, fall the least, and be the first and fastest to get up. We had already implemented many of the MFI guidelines, such as income assessments without documentary proof and robust first-line field checks, a year before they became industry regulations. The key is to manage portfolio resilience, not just growth. We focused on continuous leverage monitoring, engaging with customers to ensure their economic activities were going on, and implementing geographical exposure limits all the way down to the village level. This micro-management was crucial.<br><br>Another critical point is educating the customer. We must not forget that a lender’s responsibility is to protect the borrower's interest. We need to help them understand the consequences of non-repayment, how their bureau records are impacted, and how we can support them in distress. Finally, we need to avoid the extreme approach of stopping disbursements during a stress cycle. Instead, we should continue diligent lending. By doing so, we can manage these cycles better. This approach is why we were among the least impacted by the crisis in FY25.<br><br><b>Narasimhan V</b>: Speaking of the auto sector, our Jocata Auto Index, which is based on Vahan registrations data, also shows a mixed bag. And we do see that it shows some flattening, there has been some decline in the light motor vehicles as well as in the light goods vehicles, but two-wheeler is kind of up and down.<br><br>So, this is something that definitely needs watching out for next month. July normally is a better month from many perspectives. And we're hoping that the index should look slightly better, which does seem to look so because when I'm looking at the monthly business updates from the auto majors, for both two-wheelers and four-wheelers, the numbers do seem very, very encouraging. And I hope that this continues to translate into better MSME growth as far as economic activity is concerned and more personal consumption that can trigger all around growth.<br><br>Vahan data shows that light motor vehicles were almost flat in May and then negative 4% in June, while two-wheelers saw a good growth in May before dropping to negative 2% in June. I worry about this because the auto sector is a key indicator of consumer confidence and a major driver of credit A slowdown here has wide-ranging implications for MSME growth, for broader economic activity, and for personal consumption.<br><br><b>Zeenat Hamirani</b>: I’m seeing a different picture on the ground. When I speak to dealers, they are very optimistic, especially with the festive season approaching. The slowdown you see is partly due to lenders strengthening their lending practices, which has led to a reduction in financing, particularly for low-touch products like two-wheelers. The industry is also seeing a decline in lending to \"new-to-credit\" (NTC) borrowers.<br><br>However, there is a tremendous opportunity here. We must move beyond traditional bureau and financial data. There is a huge amount of ecosystem data available now, including payments data, UPI data, and Account Aggregator banking data. At L&T Finance, we've developed an AI/ML-based initiative - Project Cyclops for two-wheelers, which we launched in June. The performance has been superlative. We are able to underwrite NTC customers better by triangulating this data.<br><br>For MSME lending, we’ve moved from simply collecting financials to using dynamic digital data. For example, the Udyam registration portal is a game changer, and I was thrilled to learn that 50% of Udyam registrations are by women. We also use GST data, but we go beyond just turnover information. We analyse sales returns, supplier and customer concentration, and the discipline of filing returns. We combine this with banking data, looking at more than just bounces, to perform a comprehensive cash flow assessment. We must use all these data points - GST, banking, bureau, and payments, to make better decisions. And as I've said, a little bit of \"happy friction\" is perfectly acceptable if it means a sustainable loan at the right cost, rather than a rapid, high-cost loan.<br><br><b>Narasimhan V</b>: That’s a very valid point. I think the idea of a slightly delayed, well-underwritten loan is far more comforting for an MSME than a two-minute decision that puts them at risk. Sumita, looking ahead, what is your best estimate for the Sumpoorn index in July?<br><br><b>Sumita Kale</b>: I'm still looking at it in a similar range of 0.57 to 0.58. While there is optimism, there's still a lot of short-term uncertainty. I’d be happy to see it at higher levels as we get into the festive season.<br><br><b>Narasimhan V</b>: I would probably stick my neck out and say it could be in the region of 0.59 or even 0.6. July has historically been a better month, and I'm optimistic about the economic activity.<br><br><b>Zeenat Hamirani</b>: I second Narsi on the optimism. I also believe the Sumpoorn index can play a much bigger role. It's a fantastic benchmark for MSMEs, which has been missing. Lenders could use it as an \"overlay\" to monitor their portfolios, helping to classify customers as red, green, or amber based on broader macro trends.<br><br><b>Narasimhan V</b>: That’s an excellent suggestion. Under the Sumpoorn initiative, we are already moving towards providing dissected versions of the data, allowing us to profile the behaviour of specific industries and even compare different geographical clusters. We’re very glad you’re finding it relevant and useful, and we're working on providing more granular analytics that can be leveraged for better risk decisioning and capital allocation. Thank you so much, Zeenat, for your deep insights and comprehensive views. It’s been an extremely interesting and insightful conversation.</i><br><br><i style=\"font-size:12px;line-height: normal;\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Ms. Zeenat Hamirani. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>"
+                    "ExpertCommentary": "In this edition of MSME Conversations, we welcome <b>Ms. Zeenat Hamirani</b>, Chief Risk Officer at L&T Finance, for a discussion with <b>Dr. Sumita Kale</b> and <b>Mr. Narasimhan Venkatesan</b>.<br><br><i><b>Narasimhan V</b>: Good afternoon, everyone, and welcome to the next edition of Sumpoorn. I’m delighted to have Zeenat with us today. For those who may not know her, Zeenat is the Chief Risk Officer of L&T Finance and has a distinguished career spanning credit policy, underwriting, and pioneering digital initiatives. <br><br>Prior to joining L&T Finance, Zeenat spent approximately 18 years at ICICI, where she held leadership roles in credit and risk. She also served as a Non-Executive Director at ICICI Home Finance. During her time there, she was instrumental in shaping credit policy and underwriting frameworks across the group.<br><br>At L&T Finance, she has continued to drive innovation, most notably through Project Cyclops, which has significantly enhanced credit decisioning, particularly in underserved markets. Today, she brings to the table a deep understanding of how ambitious growth can be prudently managed through disciplined risk management and cutting-edge underwriting practices.<br><br>Without further ado, Sumita, let’s begin with a sum-up of the June Sumpoorn index.<br><br><b>Sumita Kale</b>: Thanks a lot, Narsi. It’s great to be on this edition, especially with Zeenat joining us. The Sumpoorn index, which serves as our monthly, high-frequency indicator of the sales activity of MSMEs, has come in at 0.58 for June. This is a very interesting development because it marks a consistent upward trend over the last three months, consecutively inching up from 0.56 in April and 0.57 in May. The data places us firmly in the \"zone of mild expansion,\" and while we’re not seeing a sudden burst, this stability and incremental growth confirm the sense of buoyancy we’ve discussed in previous months. It’s a reflection of the resilience we’re seeing on the ground.<br><br>This sentiment is also borne out by some of our key macroeconomic indicators. The Index of Industrial Production (IIP) for June, for instance, showed a strong YoY manufacturing growth of 3.9%, building on the 3.5% from the previous June. This points to a degree of stability in our manufacturing sector. Interestingly, our non-oil exports have also been holding up, showing a mild growth in June despite the ongoing global trade and tariff uncertainties. But, as with all economic indicators, there are nuances. While engineering goods have done well and electronic goods are slightly up, we are seeing a lack of vigorous growth in segments like ready-made garments, and exports of gems and jewellery have actually gone down.<br><br>The credit side, which is where we’d like to get Zeenat’s views, presents an even more robust picture. We have seen a surge in bank credit to the micro and small segment, with a dramatic YoY growth of 21.8% in June. For the medium segment, it's a healthy 14-15%. With all these official numbers from a macro perspective, we are very keen to know, from the industry’s point of view, what you see on the ground.<br><br><b>Zeenat Hamirani</b>: Thank you, Sumita, for that comprehensive overview, and Narsi, for the kind introduction. The MSME sector has always been close to my heart because I've had the opportunity to be involved in every aspect of it, sales, policy, underwriting, and collections. From my vantage point, I hold a firm belief there are always good people in a bad or declining industry and there are bad people in a good industry. The key lies in the resilience of the MSME sector and how they build that resilience.<br><br>What I'm seeing aligns with the data you mentioned. There is some stress in sectors like textiles, gems and jewellery, and manufacturing. This stress is often a result of extended working capital cycles, wage pressures, and reduced exports. Another major area of concern is the impact of quick commerce and e-commerce on traditional retail businesses. We used to think that digital was largely an urban phenomenon, but it's now expanding rapidly into tier two, three, and four locations.<br><br>I see other industries flourishing, driven by internal growth. We are seeing a boom in pharma and API manufacturing, food processing, logistics (which is a direct result of the e-commerce growth), and IT services. Green energy and related auto ancillaries are also showing very good growth. Health, fitness, and tourism are other sectors that are doing well. It is these internal dynamics and the government’s initiatives for MSMEs, coupled with bankers seeing the sweet spot in this segment, that are helping to balance out the external pressures.<br><br><b>Narasimhan V</b>: That’s a very valuable perspective. On the topic of credit, we saw a robust 20.5% YoY growth in June, which is the highest since December 2023. At the same time, we're hearing of institutions slowing down on or even capping unsecured credit. My personal view is that this could pose a challenge for MSMEs that are constrained by their ability to offer adequate collateral. On a different note, the latest Retailer Association survey data is quite encouraging, showing an overall growth of 8% with Western India leading at 10%. Sectors like apparel and sports goods saw growth of up to 10%. This points to robust personal consumption, which should augur well for the MSME sector.<br><br><b>Sumita Kale</b>: Zeenat, you mentioned how digital consumption is moving into smaller towns. So we're seeing different patterns of behaviour. Domestic demand, or consumption demand, which we've been talking about for a while now, is still going to be one of the strongest drivers of growth, as you said. And that’s especially true because of the many nuances in our economy, the different segments at the lower end, whether it’s small businesses, family businesses, or lower-income segments. For many of them, microfinance has been one of the most important sources of finance. What do you see happening in the microfinance sector and how are banks and NBFCs approaching it now?<br><br><b>Zeenat Hamirani</b>: In my view, FY25 was a “disruption year” for the MFI industry. While some disruptions like demonetization and COVID-19 were out of our control, this latest cycle was, to a large extent, a creation of the financial institutions themselves. In the rush for growth post-COVID, lenders began over-leveraging customers and encouraging loan stacking without a true assessment of their repayment capacity.<br><br>This highlighted the need for a more “responsible” approach to lending. At L&T Finance, our crisis mantra was to be the last to fall, fall the least, and be the first and fastest to get up. We had already implemented many of the MFI guidelines, such as income assessments without documentary proof and robust first-line field checks, a year before they became industry regulations. The key is to manage portfolio resilience, not just growth. We focused on continuous leverage monitoring, engaging with customers to ensure their economic activities were going on, and implementing geographical exposure limits all the way down to the village level. This micro-management was crucial.<br><br>Another critical point is educating the customer. We must not forget that a lender’s responsibility is to protect the borrower's interest. We need to help them understand the consequences of non-repayment, how their bureau records are impacted, and how we can support them in distress. Finally, we need to avoid the extreme approach of stopping disbursements during a stress cycle. Instead, we should continue diligent lending. By doing so, we can manage these cycles better. This approach is why we were among the least impacted by the crisis in FY25.<br><br><b>Narasimhan V</b>: Speaking of the auto sector, our Jocata Auto Index, which is based on Vahan registrations data, also shows a mixed bag. And we do see that it shows some flattening, there has been some decline in the light motor vehicles as well as in the light goods vehicles, but two-wheeler is kind of up and down.<br><br>So, this is something that definitely needs watching out for next month. July normally is a better month from many perspectives. And we're hoping that the index should look slightly better, which does seem to look so because when I'm looking at the monthly business updates from the auto majors, for both two-wheelers and four-wheelers, the numbers do seem very, very encouraging. And I hope that this continues to translate into better MSME growth as far as economic activity is concerned and more personal consumption that can trigger all around growth.<br><br>Vahan data shows that light motor vehicles were almost flat in May and then negative 4% in June, while two-wheelers saw a good growth in May before dropping to negative 2% in June. I worry about this because the auto sector is a key indicator of consumer confidence and a major driver of credit A slowdown here has wide-ranging implications for MSME growth, for broader economic activity, and for personal consumption.<br><br><b>Zeenat Hamirani</b>: I’m seeing a different picture on the ground. When I speak to dealers, they are very optimistic, especially with the festive season approaching. The slowdown you see is partly due to lenders strengthening their lending practices, which has led to a reduction in financing, particularly for low-touch products like two-wheelers. The industry is also seeing a decline in lending to \"new-to-credit\" (NTC) borrowers.<br><br>However, there is a tremendous opportunity here. We must move beyond traditional bureau and financial data. There is a huge amount of ecosystem data available now, including payments data, UPI data, and Account Aggregator banking data. At L&T Finance, we've developed an AI/ML-based initiative - Project Cyclops for two-wheelers, which we launched in June. The performance has been superlative. We are able to underwrite NTC customers better by triangulating this data.<br><br>For MSME lending, we’ve moved from simply collecting financials to using dynamic digital data. For example, the Udyam registration portal is a game changer, and I was thrilled to learn that 50% of Udyam registrations are by women. We also use GST data, but we go beyond just turnover information. We analyse sales returns, supplier and customer concentration, and the discipline of filing returns. We combine this with banking data, looking at more than just bounces, to perform a comprehensive cash flow assessment. We must use all these data points - GST, banking, bureau, and payments, to make better decisions. And as I've said, a little bit of \"happy friction\" is perfectly acceptable if it means a sustainable loan at the right cost, rather than a rapid, high-cost loan.<br><br><b>Narasimhan V</b>: That’s a very valid point. I think the idea of a slightly delayed, well-underwritten loan is far more comforting for an MSME than a two-minute decision that puts them at risk. Sumita, looking ahead, what is your best estimate for the Sumpoorn index in July?<br><br><b>Sumita Kale</b>: I'm still looking at it in a similar range of 0.57 to 0.58. While there is optimism, there's still a lot of short-term uncertainty. I’d be happy to see it at higher levels as we get into the festive season.<br><br><b>Narasimhan V</b>: I would probably stick my neck out and say it could be in the region of 0.59 or even 0.6. July has historically been a better month, and I'm optimistic about the economic activity.<br><br><b>Zeenat Hamirani</b>: I second Narsi on the optimism. I also believe the Sumpoorn index can play a much bigger role. It's a fantastic benchmark for MSMEs, which has been missing. Lenders could use it as an \"overlay\" to monitor their portfolios, helping to classify customers as red, green, or amber based on broader macro trends.<br><br><b>Narasimhan V</b>: That’s an excellent suggestion. Under the Sumpoorn initiative, we are already moving towards providing dissected versions of the data, allowing us to profile the behaviour of specific industries and even compare different geographical clusters. We’re very glad you’re finding it relevant and useful, and we're working on providing more granular analytics that can be leveraged for better risk decisioning and capital allocation. Thank you so much, Zeenat, for your deep insights and comprehensive views. It’s been an extremely interesting and insightful conversation.</i><br><br><i style=\"font-size:12px;line-height: normal;\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Ms. Zeenat Hamirani. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>"
+                },
+                {
+                    "previousMonth": "06-2025",
+                    "Month": "07-2025",
+                    "nextMonth": "08-2025",
+                    "commentaryAuthorDetails": "rahul_sumita_narsi",
+                    "AuthorDetails": [
+                        {
+                            "ExpertName": "Mr. Rahul Mazumdar",
+                            "ExpertDetails": "Research & Analysis Group, India Exim Bank",
+                            "ExpertImageDetails": "commentator-rahul.png"
+                        },
+                        {
+                            "ExpertName": "Dr. Sumita Kale",
+                            "ExpertDetails": "Principal Economist, Jocata",
+                            "ExpertImageDetails": "commentor-sumita.png"
+                        },
+                        {
+                            "ExpertName": "Mr. Narasimhan V",
+                            "ExpertDetails": "Principal Advisor, Jocata",
+                            "ExpertImageDetails": "commentator-narasima.png"
+                        }
+                    ],
+                    "ExpertCommentary": "This July edition of MSME Conversations unfolds in two parts, capturing distinct but connected themes shaping the MSME environment.<br><br>We begin with <b>Mr. Rahul Mazumdar</b>, a trade policy expert from EXIM Bank in conversation with <b>Dr. Sumita Kale</b>, focusing on India’s export outlook, the role of tariff structures in shaping global competitiveness, and the policy signals influencing external trade.<br><br>In the second half, <b>Mr. Narasimhan Venkatesan</b> joins <b>Dr. Sumita Kale</b> to turn the lens inward, compliance fatigue, input cost pressures, and the evolving relationship between formalisation and enterprise confidence. Together, they examine what recent GST filing behaviour and sentiment trends might be telling us about the state of the MSME sector.<br><br><i><b>Commentary | Part I: Tariffs, Exports, and Global Headwinds</b><br><br><b>Sumita Kale</b>: Welcome back to MSME Conversations. In July, our Index number moved up to 0.59, from 0.58 in June. It’s been inching up since April - 0.56, 0.57, 0.58 and now 0.59. But if you look at the full year, the momentum seems to be muted compared to FY24. We had a much higher pace last year, now that momentum is moderating. This aligns with what we’re seeing in GVA numbers too.<br><br>Growth estimates show GVA at current prices in Q1 was 8.8% YoY, lower than 9.5% last year. In real terms, growth in agriculture is steady, manufacturing is flat, construction sector growth is a bit lower than last year, and services remain the standout performer.<br><br>Right now, we’re in what I’d call, not “turbulent”, that’s a strong word, but definitely not very stable times. I say this for two reasons: weather and tariffs. On the weather side, we initially expected an above average rainfall this monsoon making for bright prospects. But the intense rainfall in August has caused severe flooding and crop damage in many states, especially in Punjab, which has seen its worst flood since 1988, has about 4.5 lakh hectares affected so far. IMD has also projected September to see above-average rains.<br><br>On the tariff side, much is unfolding, and to help us unpack that, we’re joined today by <b>Rahul Mazumdar</b> from Exim Bank. He has deep expertise in trade policy. Rahul, thank you for joining us.<br><br>When I saw your LinkedIn post last month on the Trump tariffs, it struck a chord. You wrote about the \"fatigue\" of watching these tariff announcements, and how even tracking their impact was draining. So now that much of it has been implemented, how do you feel?<br><br><b>Rahul Mazumdar</b>: Thanks so much, Sumita. It’s a pleasure to be here.<br><br>Well, I think Trump is here to stay, at least for the remainder of his term. He’s clearly using it to push his trade agenda. The 50% tariffs on Indian exports were unexpected. India assumed our relationship with the U.S. was stable enough to prevent such measures, but here we are.<br><br>A big area of concern for India in global trade has always been agriculture. It’s something we’ve fought for in the WTO, and now it seems like the U.S. is trying to get a foot in the door. Recently, India has quietly reduced some agricultural imports from the U.S., and that too has had tariff implications.<br><br>Interestingly, the current focus of U.S. tariffs is mostly on goods. Services haven’t come under fire yet. That is important for India, because our exports have consistently been buoyed by services - IT, remittances, etc. Together with merchandise, our total exports crossed USD 820 billion, the highest ever. But that strength came from services, not merchandise.<br><br>Let me give you some numbers. Pre-COVID in FY20, India’s merchandise exports were USD 331 billion. They rose to USD 450 billion by FY23 and slightly dipped to USD 437 billion last year. Services carried the growth.<br><br>Meanwhile, Trump has continuously not touched sectors which are of U.S. interest, like pharma, electronic goods such as smartphones, semiconductors, rare earths, amongst a few others. <br><br>But the sectors affected most by these high tariffs are labour-intensive, and that’s where MSMEs come in, and the various clusters - gems and jewellery (Surat), textiles (Tirupur, Surat, Panipat) leather (Agra, Kanpur, Kolkata, Ambur-Ranipet), Carpets (Bhadohi, Mirzapur, Srinagar) - all these sectors are being hit hard.<br><br>Estimates show 54-55% of India’s goods exports to the U.S. are impacted, valued at nearly USD 51 billion in 2024 and which will face some element of turbulence in the short term.<br><br>The interesting thing is that many exporters had anticipated this. Early in Feb/March when Trump has announced his intention to have a 25% tariff on April 2nd (or what he called as Liberation Day), many exporters did quickly look at the short-term gains by frontloading their shipments to US which is a crucial market for them. In fact, India’s exports to the USA had increased by over 22% y-o-y during April-June 2025 (first Q1 2026), as compared to a growth of just 1.7% in overall exports from India to US. India’s export of telecom instruments to US experienced a 191% y-o-y growth, while electronic components saw y-o-y growth of 35% during Q1 of FY2026. There was also a double-digit growth of India’s exports of items like - marine products, electrical machinery, and RMG, indicating a significant frontloading of shipments.<br><br>While Q1 looks good. But this won’t last. Q2 may hold up, but Q3 and Q4 will be tough.<br><br>From April to July, India’s total merchandise exports stood at USD 144 billion, compared to USD 140 billion last year. So, the story looks good where we stand with this data but looking ahead, we’ll see stress in export numbers.<br><br><b>Sumita Kale</b>: What about the recent FTAs that have been signed, for instance with the UK, how do you view these?<br><br><b>Rahul Mazumdar</b>: So far, our trade deals have not panned out as anticipated. India has signed three major FTAs between 2010 and 2012, with ASEAN, Japan and South Korea, but all of them led to trade deficits. Then came RCEP, which we opted out of. Post- COVID, we revisited FTAs and signed new ones with UAE, Australia, and the UK.<br><br>So, India having burnt its fingers in FTA in the past, and having showed reluctance to sign RCEP, the recent ones are a brave step forward. In fact, the one with UK signed a few months back offers lot of hope for India, as it presents a huge opportunity for MSMEs as it allows duty-free access for approximately 99% of Indian exports by value into the UK, encompassing nearly entire range of goods and services, alongside simplified rules of origin. Sectors in which MSMEs may witness high gains through the FTA with UK will possibly be, textiles & garments, sports goods and toys, engineering goods, chemicals, pharmaceuticals, electronics, etc.<br><br>It may also be worth noting that in the FTA with UK, India has a dedicated Government Procurement chapter which outlines rules for fair and non-discriminatory access to procurement markets for both countries' businesses. <br><br><b>Sumita Kale</b>: That’s a huge gap. Who do you think is responsible for spreading this awareness amongst the MSMEs?<br><br><b>Rahul Mazumdar</b>: Both the government and industry chambers need to work together to ameliorate all the issues plaguing awareness. In fact, Ministries like Commerce, MSMEs, including Finance should look at providing clear directions to these chambers to disseminate relevant information towards capacity-building amongst exporters.<br><br>Remember, nearly 46% of India’s exports come from MSMEs. Without proper outreach, they’ll never tap into these opportunities like FTA. We talk about India becoming the 4th largest economy by year-end. But we forget that our global goods export share is still hovering around 1.8%.<br><br>And here’s the real reason why the U.S. can push us around but not China. We thrive because of the market we provide, and not essentially the goods that we produce. China, in contrast, built capabilities through technology-oriented products and at times also because of their ability to produce at mass scale thus offering both quality and price competitiveness.<br><br>A lot of what we export today is still commodity-based - petroleum products, gems and jewellery. Even electronics, now a top 10 export, is largely due to PLI-fuelled assembly. It’s a start, but we’re still far from becoming a hi-tech-driven exporter. No firm is ready to put in money into R&D, which needs serious introspection if India wants to be recognized beyond its huge consuming market.<br><br>If you look at pharma and auto, both came up post-2000. These were innovative sectors. Today, Tamil Nadu, Gujarat and Haryana are hubs for auto. That’s what scale and investment can do.<br><br><b>Sumita Kale</b>: So, if I summarise your views: Q1 has been good for exports, but the rest of this year will be harder. The tariff shock has sectoral and regional impacts. And unless we are jolted into long-term capability-building, we may just continue playing catch up.<br><br><b>Rahul Mazumdar</b>: Exactly. MSMEs in clusters like Surat, Tiruppur, Kanpur will feel the heat. Especially in Q3 and Q4.<br><br>There’s talk of market diversification, but that’s easier said than done. Bangladesh and Cambodia enjoy lower tariffs in many EU countries. Even if we look at the UAE or Australia, the markets are small. UK offers some hope, given the FTA and trade surplus, but it’s not enough.<br><br><b>Sumita Kale</b>: And none of this was anticipated before Trump returned to office.<br><br><b>Rahul Mazumdar</b>: Not at all. The whole strategy defies traditional trade theory. The U.S. is going against Ricardian logic. The US has even made a fuss about Harley-Davidson again. While India did reduce the tariffs from 100% to 50% and later to 30-40%, Trump continued to push for a zero-tariff policy. <br><br>But let me give you an example where we need to work on ourselves – since 2013-14, India has been exploring opportunities in CLMV countries - Cambodia, Laos, Myanmar, Vietnam, so Indian companies could enter ASEAN, and thereafter to other countries benefitting from the FTAs signed by them. But very few firms were willing to go. Even with incentives, they preferred to play safe in India.<br><br>So, unless MSMEs build an appetite for risk, nothing changes. Many don’t explore Africa either. Our share in African imports is 6-7%, while Europe’s is 33% - a huge anomaly exists.<br><br><b>Sumita Kale</b>: Is the government considering any targeted support?<br><br><b>Rahul Mazumdar</b>: Yes. The upcoming Export Promotion Mission, with a corpus of ₹25,000 crore, was announced in the February Budget to provide financial aid, improved credit facilities, enhanced market access, and branding support to help Indian businesses navigate global market challenges. It’s not just a Trump response, but a broader initiative. That said, it should’ve come earlier. <br><br>Support is one part. MSMEs also need to learn how to use these schemes and as I mentioned earlier the Chamber of Commerce has an important role to play with their members. <br><br>In fact, fintechs are playing a huge role. In fact, many banks in private and public are using digital platforms to provide in-principle sanctions up to ₹1 crore within an hour or even less. However, many a times traditional MSMEs still prefer age-old banking or in-person dealings. They need to adapt to new age tools and systems. Only then will policy support truly reach them.<br><br>There are certain things which I feel needs a concerted effort by India over a 5-year horizon which will help Indian goods to be taken seriously - firstly, producing quality goods and possibly at a mass scale; secondly, exporters should be aware of the changing market dynamics globally; and thirdly, sustainability is no more a vogue, it’s becoming a rule in many developed countries like EU and Indian businesses should plan accordingly if it wants to continue to exports in these regions. <br><br><b>Sumita Kale</b>: Absolutely. Thank you so much, Rahul. That was incredibly insightful.<br><br><b>Part II: Domestic Demand, GST Reforms, and MSME Impacts</b><br><br><b>Sumita Kale</b>: Welcome back, Narsi. We missed you in yesterday’s conversation with Rahul. Hope you enjoyed your time away. I’m sure you’ve heard the recording by now. A lot of voices in the industry feel that the GST reform was too little, too late. What’s your take on the policy changes we’ve seen? Do you think they’ll help lift demand?<br><br><b>Narasimhan Venkatesan</b>: So Sumita, I think the GST rate changes are part of a much larger rationalisation agenda and could not have come at a better time. Eventually, we’re moving to a simplified two-rate slab structure. What they’ve done is move most merit goods into the 5% slab, the larger group into the 18% slab, and a few sin and luxury goods into the 40% slab.<br><br>This is a good move. Whether the rate reduction will get passed on in full by firms, and whether that triggers demand straight away, those are two separate questions.<br><br><b>Sumita Kale</b>: So, the impact on demand is not to be seen simply as sector-wise?<br><br><b>Narasimhan Venkatesan</b>: Right. So, let’s say a particular good that costs 100 now costs ₹93. That’s ₹7 serving. But that ₹7 won’t necessarily go back into the same sector. I may use it to go get a blood test I’d been postponing, or I may renew my insurance.<br><br>So, it’s not that the electronics sector, or the diagnostic sector, or the travel sector that may see a spike. The impact is likely to be broad-based and spread across sectors.<br><br><b>Sumita Kale</b>: So, what we may see is a slow, broad-based rise in demand.<br><br><b>Narasimhan Venkatesan</b>: Exactly. In many sectors, people are already anticipating this. Take auto for example. They waited for the GST rate announcement to be implemented, and now we should see a demand spurt. If a two-wheeler that costs ₹90,000 drops by 10%, the new price becomes ₹81,000. That directly impacts EMI amounts. For people who are taking loans, this matters.<br><br><b>Sumita Kale</b>: And this kind of drop helps banks too?<br><br><b>Narasimhan Venkatesan</b>: Yes, in fact, it does. For banks, if EMIs reduce, the repayment schedule becomes less stressful. And customers may upgrade, so instead of a ₹90,000 bike, someone might now opt for a ₹1 lakh model with better features. It helps the manufacturer, the bank, and the consumer.<br><br>Also, if people start taking more loans and repaying them well, that helps the banks build a better profile of household behaviour. If more customers are added to the banking system with good repayment habits, it strengthens the financial system overall.<br><br><b>Sumita Kale</b>: And you mentioned healthcare as well earlier?<br><br><b>Narasimhan Venkatesan</b>: Yes. The reduction in diagnostic charges, say for a CT scan, might lead to more people coming in earlier for testing rather than waiting. Similarly, some may choose to buy better health insurance.<br><br>Even if 50% of the GST rate cut benefit is passed on, that still leaves people with more disposable income. And that affects how they spend or save.<br><br>Some of it may even go into CASA deposits, which again helps the banking system.<br><br><b>Sumita Kale</b>: And for firms?<br><br><b>Narasimhan Venkatesan</b>: For firms, especially in sectors like cement or construction, we’ve seen some lack of full pass-through in the past. So, implementation is key. But for industries where competition is intense, like autos or FMCG, the rate cut benefit will be passed on more aggressively.<br><br>I’d just add one note of caution, on input tax credit (ITC). In some categories, the ITC benefit may not be available anymore. So that needs to be clarified and addressed to avoid any distortions.<br><br>But overall, this is a big reform. It sends a signal to the market that the government is serious about putting more money into consumers’ hands. And if the industry responds responsibly by passing on the benefits, we’ll see a positive shift in both demand and formalisation.<br><br><b>Sumita Kale</b>: Right, we have some other positive trends for the economy also, for instance the business survey from the Retailers Association has seen a robust 8% YoY growth for two consecutive months of June and July, with good sales growth in QSR chains, jewellery, footwear. Also bank credit to MSME has been growing extremely robustly- at around 24.5% YoY for micro and small firms in July.<br><br><b>Narasimhan Venkatesan</b>: Yes, so there is some momentum in credit already. If the rate cuts spur more demand, more firms will come forward to borrow for expansion or working capital. And that becomes a virtuous cycle.<br><br><b>Sumita Kale</b>: Let’s hope so. This will prove a good counterbalance to the shocks that we were talking about earlier coming from tariff and weather. Thanks Narsi and Rahul. I think this was a very insightful session and our readers will enjoy it.</i><br><br><i style=\"font-size:12px\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Mr. Rahul Mazumdar. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>"
+                },
+                {
+                    "previousMonth": "07-2025",
+                    "Month": "08-2025",
+                    "nextMonth": "09-2025",
+                    "commentaryAuthorDetails": "srivats_sumita_narsi",
+                    "AuthorDetails": [
+                        {
+                            "ExpertName": "Mr. Srivats Ram",
+                            "ExpertDetails": "Managing Director, Wheels India Ltd.",
+                            "ExpertImageDetails": "commentator-srivats.png"
+                        },
+                        {
+                            "ExpertName": "Dr. Sumita Kale",
+                            "ExpertDetails": "Principal Economist, Jocata",
+                            "ExpertImageDetails": "commentor-sumita.png"
+                        },
+                        {
+                            "ExpertName": "Mr. Narasimhan V",
+                            "ExpertDetails": "Principal Advisor, Jocata",
+                            "ExpertImageDetails": "commentator-narasima.png"
+                        }
+                    ],
+                    "ExpertCommentary": "This month’s Sumpoorn MSME Commentary features <b>Mr. Srivats Ram</b>, Managing Director of Wheels India, in conversation with <b>Dr. Sumita Kale</b> and <b>Mr. Narasimhan Venkatesan</b> on how India’s manufacturing story is taking shape, from post-GST demand and export spillovers to the capital, confidence, and conditions needed for growth.<br><br>Together, the trio captures the rhythm of an economy steadying itself through uncertainty, resilient, restless, and looking ahead.<br><br><i><b>MSMEs through the lens of manufacturing</b><br><br><b>Sumita Kale</b>: Good afternoon and welcome to Sumpoorn MSME Conversations. Last month we deep dived into exports. This time we’re looking at MSMEs from the manufacturing perspective. We’re very happy to have <b>Srivats Ram</b>, MD, Wheels India, to help unpack this for us. <br><br>A quick introduction to Sumpoorn - it tracks MSME sales activity (since Oct 2019). Over the past year, the index has been marginally higher than the previous year but has stayed in a mild expansion zone. This shows resilience on one hand, but we’re all still waiting for a strong spurt in growth and wondering where it could possibly be coming from. Two macro notes before we begin: the RBI has raised FY26 GDP outlook to 6.8% with “risks evenly balanced” and this is good, but we all know that small businesses are more vulnerable to shocks than large firms. And the RBI Industry Outlook Survey (Oct 1) showed a lower Q2 assessment for demand conditions than Q1 (production, order books). While there is optimism, we would like to know more from Srivats about the ground reality.<br><br>With that backdrop, Srivats, what’s your six-month outlook for manufacturing, and what do you see as the big risks?<br><br><b>GST spillover, monsoon math, and where demand shows up</b><br><br><b>Srivats Ram</b>: Thanks, Sumita. A couple of points. One is, you know, when we look at outlook, it is always a relative measure. if I compare with what I probably thought the outlook would have been in March for the year, despite the fact that we've had a lot of chaos on the international side of business with the Trump tariffs, and all the uncertainty related to that, I think the GST rate reduction has definitely helped sentiment. And sentiment reflects forward expectations more than the immediate past.<br><br>On the immediate past: Q2 was fairly damp by industry standards. Some of that is expected - monsoons slow categories like construction equipment. Also, because the GST cut was announced a month in advance, buyers held back to benefit after Sept 22. I’m not sure how much of that could be completed between Sept 22-30; some will likely spill into October.<br><br>If we talk about prospects, and again, prospects are a very funny thing, because it's not exactly what you see immediately in front of you in October - October itself has fewer working days (Puja, Gandhi Jayanti, Diwali), so don’t expect a big step-up in output. But I am from the automotive industry, so will talk about that, post-monsoon, infrastructure activity should improve, so trucks should do better in Q3 vs Q2. For passenger cars and two-wheelers, the cut is price-sensitive and helps the lower end, so I expect retail growth. Tractors should benefit too.<br><br>Let me just go back a little bit and look at the various measures that the government has indicated from the beginning of the year, starting with the budget. The budget's Rs 1 lakh crore income-tax relief hasn't really boosted consumption as much as anticipated. It has probably gone more into helping citizens manage or pare down household debt. But the GST cut is consumption-oriented, and while different sectors will respond differently, it signals demand will improve, which likely shaped the RBI upgrade.<br><br>On exports: I got a chance to travel across Tamil Nadu extensively last year, at least nine of the districts or zones that CII is involved in, and I checked in again before this conversation. MSMEs are broadly positive vs last year, including exports. But some companies, sectors which are US-centric and where large global buyers can switch quickly, these have been affected, like textiles/garments in Tirupur. Some of the more labour-intensive segments, which are more of the MSME category, like textile garments, footwear, leather footwear, leather and footwear, for example, and gems and jewellery are affected. Outside of that, I think the engineering sector has not so far been hit, in engineering, switching is harder (validation/testing), so the impact is more about sharing price reductions than demand loss. This situation is not likely to change in the immediate future, provided this 50% tariff comes down. At 25% people manage, at 50% it doesn’t work. There’s hope of a US resolution by year-end; until then, there is uncertainty, and we all know that uncertainty delays capex.<br><br><b>Auto vs textiles, jobs vs value-add, and GST 2.0</b><br><br><b>Sumita Kale</b>: Narsi, you had a question about the auto sector?<br><br><b>Narasimhan V</b>: Yes, thanks. I have a few specific questions and the best person to answer is here. But just to say where I am coming from, a recent GoI study (Apr 2025) on auto components put the sector in perspective. Compared to textiles (2.3% of GDP, 100M direct+indirect jobs), auto is 7.1% of GDP with 4.5M direct and 30M total). Value-add is high, employment intensity is lower. Components alone employ about 1.5M directly. With GST 2.0, Srivats, where do you see (1) employment creation, and (2) personal consumption across PVs/2Ws/CVs?<br><br><b>Srivats Ram</b>: Thanks Narsi, I think it is a very keen observation that you have made Auto is more capital-intensive than textiles, so labour intensity is lower (with variation within auto). The recent challenge for auto has been modest growth and spare capacity. Without strong growth, firms won’t add capital or people. In fact, in the auto sector, there are constant price pressures that drive productivity, which can counter job creation. We need sustained growth for net additions.<br><br>GST 2.0 leans toward <4-metre cars, two-wheelers, and tractors. I expect retail growth in 2Ws and PVs, certainly through the festive season, likely some post-Diwali carry-over. Tractors will benefit, though they’ve already had a reasonable year. CVs should benefit too, but that depends on infrastructure. Tractors and CV segments are commercial decisions, based on forward prospects. So, we have to see how those segments translate but retail should definitely grow, and this time some of it should translate to jobs.<br><br>On MSME exporters tied to the US, retaining people is getting hard. If the US issue settles, rehiring isn’t easy, yet many are bleeding now and some support would help.<br><br><b>Sumita Kale</b>: We still haven’t seen anything specific from the government for MSMEs, especially exporters, have we?<br><br><b>Srivats Ram</b>: No, the government has acknowledged the pain but there’s nothing explicit yet. While larger firms have scale, resilience; for MSMEs, letting this drag is dangerous. Even before Trump tariffs, MSME cash flows were tight (since last July) and haven’t eased. Two steps would help: (1) ease financing for export-oriented MSMEs; (2) a time-bound employee-retention scheme (1–2 months), targeted to specific segments of MSMEs.<br><br><b>Scale, tariffs, and the “magic bullet”</b><br><br><b>Narasimhan V</b>: The government’s stated objective is to move auto-component production from approximately USD 60B to USD 145B by 2030, to lift our global value-chain share from 3% to 8–9% and shift from trade-neutral (0.99) to a USD 25B surplus. Don't you think that the auto sector is very well positioned to get to realize this ambition of higher value creation, larger ability to play a much more pivotal role in spurring the exports? With all this put together, and the fact that auto is at the centre of tremendous value creation from a manufacturing perspective, what do you see as the future?<br><br><b>Srivats Ram</b>: For the automotive sector, you know, honestly, the domestic market is much more significant. We do export about a quarter or more of our produce to other countries. But majority of it, if you look at the entire industry is largely domestic. If India grows closer to 7%, demand will spur investment. OEMs have announced expansions, and the components sector will need to invest to meet this demand.<br><br>On exports of components, if you see, the big buyers are the US, Europe, China. China is essentially not competitive for us. In the US, you have 25% duty vis-a-vis other countries like Thailand and Indonesia, who are potentially competitors, who are at 19% rate of duty, or Europe, which is at 15% for the US. So effectively, your existing business is not affected, but your future competitiveness is at a slight disadvantage vis-a-vis countries like Thailand and Indonesia. It’s manageable, but a level playing field with other countries will matter. And we need stability from the US, but I know the Indian government can't promise something that the US government themselves don't know!<br><br><b>Narasimhan V</b>: So, what’s the magic bullet? GST 2.0 has rationalized most structures (inverted duty only in a few inputs like tractors). With auto touching 49% of manufacturing GDP (within a 13-18% manufacturing band), what unlocks investment?<br><br><b>Srivats Ram</b>: See, for people to make investment, they need to have a certain degree of certainty. Uncertainty is the biggest enemy of making investment decisions, which are done looking at the next three to five years type of scenario. So, I think some degree of stability or some signal towards this is what it is going to be, would be useful. A level playing field helps. Also watch Europe’s CBAM, a sophisticated trade barrier in the making. <br><br>So, I think India's ability to navigate these are very important if our export potential is to be truly realized. Of course, India has done well too, for eg., two-wheeler manufacturers have been successful exporting to Africa and Latin America. But for the component manufacturers, the big markets are US and Europe. And the extent to which we are able to manage trade agreements or at least a stable environment with these two countries is very important. <br><br>Even now, with all the duties and the oil surcharges, which are being placed upon our country, there are a lot of manufacturers who are looking at India and who, as a matter of fact, are saying, let's wait till the end of the year. Let's see what happens. And then depending on that, we'll relocate. I've been dealing with some of these multinational companies and the global purchasing offices for 20 odd years at least and I see a better positioning of India now, they look at India as a credible supply source.<br><br>I think from a geopolitical angle, they would like to maybe limit sourcing from China, at least from a de-risking angle, because they're significantly exposed. India is relatively small. So, the opportunity for India to increase our stake in these markets is large. But I think in the US at least, what I'm hearing from customers is, let's wait and watch and see what happens before the end of the year. And then either things settle down in which we can do something or look at alternate locations to supply from. But there is a need for supply chain both in Europe and US because the labour skill level available is relatively low.<br><br>The other thing is that there are a lot of opportunities which have come to the auto competence sector also, partly due to multiple energy sources for the automotive industry. So, there's obviously there's the ICE engine, which is petrol, diesel, CNG, electric, all these expand the market a little bit, increase what is the supply content that can go into the market. So, there is enough that's kind of happening probably in the domestic market, especially now that GST is done. Export is the only side which has, hopefully, we can navigate the current uncertainty and come out of it, then we should be OK.<br><br><b>Domestic vs exports, PLI/Atmanirbhar, chips, and state capacity</b><br><br><b>Narasimhan V</b>: Given the 70:30 domestic-to-exports split (globally and in India), near-term domestic demand post-GST 2.0 is key. How does manufacturing scale to meet it (credit offtake, banking, employment)?<br><br><b>Srivats Ram</b>: The government has introduced a couple of schemes, nothing new but PLI and Atmanirbhar together encourage localization of technology and manufacturing value-add, helping rebalance exports vs imports. We’ve narrowed the tech gap. As we close it further, domestic scale lets you “do everything” locally. One area needing special attention is semiconductors/chips. Government has taken steps, but it could be a decade before full benefits accrue.<br><br><b>Sumita Kale</b>: I find that most of our expectation is from the central government. But what about the state governments? And from the point of view of Tamil Nadu, is there something that they've done specific for your sector?<br><br><b>Srivats Ram</b>: The government has been reasonably proactive in Tamil Nadu in two or three ways. One is outreach programmes to Japan, Taiwan, Germany, US, UK. The CM has travelled to these places and brought in FDI commitments. The State’s role is to attract industry, ensure infrastructure, and ease of doing business. My concern in India is that the larger you are, the easier it gets; the smaller, the harder. And I've had a unique opportunity of being in both, running a large company and also simultaneously running a small company. and the difference is stark, even with the same bank. And even though you're, you know, the same person that deals with sometimes the same bank, their expectations of smaller companies or companies that are starting up are very, very unreasonable. Working capital remains a pain point, scaling finance is also hard.<br><br><b>Narasimhan V</b>: On supplier ecosystems, how do OEMs help MSME suppliers access credit within clusters?<br><br><b>Srivats Ram</b>: The 45-day MSME payment rule has helped (with pluses/minuses - MSMEs who buy from smaller MSMEs feel a squeeze). It’s less effective when MSMEs deal with some government agencies, recoveries aren’t always smooth. Firms exposed to government or to international demand shocks are more vulnerable.<br><br>On fresh capital, risk is higher for MSMEs, any expansion is a bigger percentage of their base. A stable environment helps decisions. just one more point. There's also a lot of opportunity for, you know, component manufacturers to look at a wider set of customers, perhaps. For example, while they are focused on auto, there may be people in the industrial sector who use some similar components. So broad basing your customer base will also probably help to some extent. The government’s push for localization in allied sectors is another opportunity. <br><br><b>Monsoons, prints, and the near path</b><br><br><b>Sumita Kale</b>: We’re running out of time, but thank you, Srivats. This has been mostly positive. The economist’s dismal hat isn’t much in evidence today.<br><br><b>Narasimhan V</b>: Sumita has written about monsoon impacts, temporary demand destruction in some places, while others benefited. Marathwada is a stark case - drought-prone yet flooded this year. Still, September auto prints were striking: Royal Enfield +43% YoY, Skoda +101%, others +9-10%. How much sustains beyond Deepavali? Festive sentiment should be robust; perhaps the season holds positive cues into Christmas.<br><br><b>Srivats Ram</b>: Forecasting is thankless. Too optimistic and something drags you down, too pessimistic and you’re surprised. I’d say before the GST cut; growth could have been sub-6. The GST cut has pushed it above 6% - a conservative view. Deepavali should be good. Nov-Mar: we don’t expect major surprises; the outlook is positive.<br><br><b>Narasimhan V</b>: That should comfort banks/NBFCs on auto loans.<br><br><b>Sumita Kale</b>: We can hope so. Thank you, Srivats. Thank you, Narsi.<br><br><b>Quick wrap</b><br><br>A GST-driven nudge to consumption; export headwinds and MSME cash-flow strain (especially US-exposed); capital access gaps, and yet a supportive domestic cycle into the festive quarter, 6%+ growth expectations, and stronger localization signals. What industry asks for is simple: stability and a level playing field, so investment can follow sentiment.</i><br><br><i style=\"font-size:12px\">Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Mr. Srivats Ram. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.</i>"
                 }
             ],
             "MonthlyCommentary": [
@@ -1447,6 +2772,18 @@
                     "Month": "06-2025",
                     "nextMonth": "07-2025",
                     "comment": "Jocata Sumpoorn came in at 0.58 in June, up from 0.57 in May, indicating that the sales activity of credit-seeking MSMEs was in the phase of mild expansion."
+                },
+                {
+                    "previousMonth": "06-2025",
+                    "Month": "07-2025",
+                    "nextMonth": "08-2025",
+                    "comment": "Jocata Sumpoorn came in at 0.59 in July, up from 0.58 in June, indicating that the sales activity of credit-seeking MSMEs was in the phase of mild expansion."
+                },
+                {
+                    "previousMonth": "07-2025",
+                    "Month": "08-2025",
+                    "nextMonth": "09-2025",
+                    "comment": "Jocata Sumpoorn came in at 0.57 in August, down from 0.59 in July, indicating that the sales activity of credit-seeking MSMEs was in the phase of mild expansion."
                 }
             ],
             "MonthlyCommentaryGraph": [
@@ -2709,6 +4046,76 @@
                             "SortOrder": 6
                         }
                     ]
+                },
+                {
+                    "Month": "07-2025",
+                    "monthList": [
+                        {
+                            "category": "02-2025",
+                            "value": 0.58,
+                            "SortOrder": 1
+                        },
+                        {
+                            "category": "03-2025",
+                            "value": 0.62,
+                            "SortOrder": 2
+                        },
+                        {
+                            "category": "04-2025",
+                            "value": 0.56,
+                            "SortOrder": 3
+                        },
+                        {
+                            "category": "05-2025",
+                            "value": 0.57,
+                            "SortOrder": 4
+                        },
+                        {
+                            "category": "06-2025",
+                            "value": 0.58,
+                            "SortOrder": 5
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 0.59,
+                            "SortOrder": 6
+                        }
+                    ]
+                },
+                {
+                    "Month": "08-2025",
+                    "monthList": [
+                        {
+                            "category": "03-2025",
+                            "value": 0.62,
+                            "SortOrder": 1
+                        },
+                        {
+                            "category": "04-2025",
+                            "value": 0.56,
+                            "SortOrder": 2
+                        },
+                        {
+                            "category": "05-2025",
+                            "value": 0.57,
+                            "SortOrder": 3
+                        },
+                        {
+                            "category": "06-2025",
+                            "value": 0.58,
+                            "SortOrder": 4
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 0.59,
+                            "SortOrder": 5
+                        },
+                        {
+                            "category": "08-2025",
+                            "value": 0.57,
+                            "SortOrder": 6
+                        }
+                    ]
                 }
             ],
             "MonthlyVideoCommentary": [
@@ -2926,7 +4333,19 @@
                     "previousMonth": "05-2025",
                     "Month": "06-2025",
                     "nextMonth": "07-2025",
-                    "videoUrl": "https://www.youtube.com/embed/Iz3IJZGRY8U?feature=shared"
+                    "videoUrl": "https://www.youtube.com/embed/IESUhnXROcw?si=tBmQI0sfuEwTHnuZ"
+                },
+                {
+                    "previousMonth": "06-2025",
+                    "Month": "07-2025",
+                    "nextMonth": "08-2025",
+                    "videoUrl": ""
+                },
+                {
+                    "previousMonth": "07-2025",
+                    "Month": "08-2025",
+                    "nextMonth": "09-2025",
+                    "videoUrl": ""
                 }
             ]
         },
@@ -3192,7 +4611,7 @@
                         },
                         {
                             "category": "06-2022",
-                            "value": 8.0,
+                            "value": 8,
                             "SortOrder": 18
                         },
                         {
@@ -3437,7 +4856,7 @@
                         },
                         {
                             "category": "09-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 33
                         }
                     ]
@@ -3487,7 +4906,7 @@
                         },
                         {
                             "category": "09-2021",
-                            "value": 8.0,
+                            "value": 8,
                             "SortOrder": 9
                         },
                         {
@@ -3772,7 +5191,7 @@
                         },
                         {
                             "category": "08-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 32
                         },
                         {
@@ -3997,7 +5416,7 @@
                         },
                         {
                             "category": "09-2021",
-                            "value": 6.0,
+                            "value": 6,
                             "SortOrder": 9
                         },
                         {
@@ -4127,157 +5546,157 @@
                     "Details": [
                         {
                             "category": "01-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 1
                         },
                         {
                             "category": "02-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 2
                         },
                         {
                             "category": "03-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 3
                         },
                         {
                             "category": "04-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 4
                         },
                         {
                             "category": "05-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 5
                         },
                         {
                             "category": "06-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 6
                         },
                         {
                             "category": "07-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 7
                         },
                         {
                             "category": "08-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 8
                         },
                         {
                             "category": "09-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 9
                         },
                         {
                             "category": "10-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 10
                         },
                         {
                             "category": "11-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 11
                         },
                         {
                             "category": "12-2021",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 12
                         },
                         {
                             "category": "01-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 13
                         },
                         {
                             "category": "02-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 14
                         },
                         {
                             "category": "03-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 15
                         },
                         {
                             "category": "04-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 16
                         },
                         {
                             "category": "05-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 17
                         },
                         {
                             "category": "06-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 18
                         },
                         {
                             "category": "07-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 19
                         },
                         {
                             "category": "08-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 20
                         },
                         {
                             "category": "09-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 21
                         },
                         {
                             "category": "10-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 22
                         },
                         {
                             "category": "11-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 23
                         },
                         {
                             "category": "12-2022",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 24
                         },
                         {
                             "category": "01-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 25
                         },
                         {
                             "category": "02-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 26
                         },
                         {
                             "category": "03-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 27
                         },
                         {
                             "category": "04-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 28
                         },
                         {
                             "category": "05-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 29
                         },
                         {
                             "category": "06-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 30
                         },
                         {
                             "category": "07-2023",
-                            "value": 0.0,
+                            "value": 0,
                             "SortOrder": 31
                         },
                         {
@@ -4344,7 +5763,7 @@
                         },
                         {
                             "category": "04-2020",
-                            "value": 40.0,
+                            "value": 40,
                             "SortOrder": 10
                         },
                         {
@@ -4539,7 +5958,7 @@
                         },
                         {
                             "category": "07-2023",
-                            "value": 37.0,
+                            "value": 37,
                             "SortOrder": 49
                         },
                         {
@@ -4584,7 +6003,7 @@
                         },
                         {
                             "category": "04-2024",
-                            "value": 38.0,
+                            "value": 38,
                             "SortOrder": 58
                         },
                         {
@@ -4656,6 +6075,16 @@
                             "category": "06-2025",
                             "value": 36.33,
                             "SortOrder": 72
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 35.28,
+                            "SortOrder": 73
+                        },
+                        {
+                            "category": "08-2025",
+                            "value": 34.73,
+                            "SortOrder": 74
                         }
                     ]
                 },
@@ -4834,7 +6263,7 @@
                         },
                         {
                             "category": "05-2022",
-                            "value": 49.0,
+                            "value": 49,
                             "SortOrder": 35
                         },
                         {
@@ -5021,6 +6450,16 @@
                             "category": "06-2025",
                             "value": 53.31,
                             "SortOrder": 72
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 52.33,
+                            "SortOrder": 73
+                        },
+                        {
+                            "category": "08-2025",
+                            "value": 53.19,
+                            "SortOrder": 74
                         }
                     ]
                 },
@@ -5159,7 +6598,7 @@
                         },
                         {
                             "category": "09-2021",
-                            "value": 9.0,
+                            "value": 9,
                             "SortOrder": 27
                         },
                         {
@@ -5264,7 +6703,7 @@
                         },
                         {
                             "category": "06-2023",
-                            "value": 8.0,
+                            "value": 8,
                             "SortOrder": 48
                         },
                         {
@@ -5386,6 +6825,16 @@
                             "category": "06-2025",
                             "value": 10.36,
                             "SortOrder": 72
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 12.39,
+                            "SortOrder": 73
+                        },
+                        {
+                            "category": "08-2025",
+                            "value": 12.07,
+                            "SortOrder": 74
                         }
                     ]
                 },
@@ -5751,6 +7200,16 @@
                             "category": "06-2025",
                             "value": 0,
                             "SortOrder": 72
+                        },
+                        {
+                            "category": "07-2025",
+                            "value": 0,
+                            "SortOrder": 73
+                        },
+                        {
+                            "category": "08-2025",
+                            "value": 0,
+                            "SortOrder": 74
                         }
                     ]
                 }
@@ -6103,6 +7562,16 @@
                             "category": "Jun'25",
                             "value": 19.83,
                             "SortOrder": 69
+                        },
+                        {
+                            "category": "Jul'25",
+                            "value": 19.87,
+                            "SortOrder": 70
+                        },
+                        {
+                            "category": "Aug'25",
+                            "value": 19.33,
+                            "SortOrder": 71
                         }
                     ]
                 },
@@ -6453,6 +7922,16 @@
                             "category": "Jun'25",
                             "value": 80.17,
                             "SortOrder": 69
+                        },
+                        {
+                            "category": "Jul'25",
+                            "value": 80.13,
+                            "SortOrder": 70
+                        },
+                        {
+                            "category": "Aug'25",
+                            "value": 80.67,
+                            "SortOrder": 71
                         }
                     ]
                 }
@@ -6464,1042 +7943,5 @@
         },
         "statusCode": 200,
         "statusMsg": "Success"
-    },
-    "pmiData": {
-        "pmiValues": [
-            {
-                "sortOrder": 1,
-                "category": "10-2019",
-                "value": 49.6
-            },
-            {
-                "sortOrder": 2,
-                "category": "11-2019",
-                "value": 52.7
-            },
-            {
-                "sortOrder": 3,
-                "category": "12-2019",
-                "value": 53.7
-            },
-            {
-                "sortOrder": 4,
-                "category": "01-2020",
-                "value": 56.3
-            },
-            {
-                "sortOrder": 5,
-                "category": "02-2020",
-                "value": 57.6
-            },
-            {
-                "sortOrder": 6,
-                "category": "03-2020",
-                "value": 50.6
-            },
-            {
-                "sortOrder": 7,
-                "category": "04-2020",
-                "value": 7.2
-            },
-            {
-                "sortOrder": 8,
-                "category": "05-2020",
-                "value": 14.8
-            },
-            {
-                "sortOrder": 9,
-                "category": "06-2020",
-                "value": 37.8
-            },
-            {
-                "sortOrder": 10,
-                "category": "07-2020",
-                "value": 37.2
-            },
-            {
-                "sortOrder": 11,
-                "category": "08-2020",
-                "value": 46.0
-            },
-            {
-                "sortOrder": 12,
-                "category": "09-2020",
-                "value": 54.6
-            },
-            {
-                "sortOrder": 13,
-                "category": "10-2020",
-                "value": 58.0
-            },
-            {
-                "sortOrder": 14,
-                "category": "11-2020",
-                "value": 56.3
-            },
-            {
-                "sortOrder": 15,
-                "category": "12-2020",
-                "value": 54.9
-            },
-            {
-                "sortOrder": 16,
-                "category": "01-2021",
-                "value": 55.8
-            },
-            {
-                "sortOrder": 17,
-                "category": "02-2021",
-                "value": 57.3
-            },
-            {
-                "sortOrder": 18,
-                "category": "03-2021",
-                "value": 56.0
-            },
-            {
-                "sortOrder": 19,
-                "category": "04-2021",
-                "value": 55.4
-            },
-            {
-                "sortOrder": 20,
-                "category": "05-2021",
-                "value": 48.1
-            },
-            {
-                "sortOrder": 21,
-                "category": "06-2021",
-                "value": 43.1
-            },
-            {
-                "sortOrder": 22,
-                "category": "07-2021",
-                "value": 49.2
-            },
-            {
-                "sortOrder": 23,
-                "category": "08-2021",
-                "value": 55.4
-            },
-            {
-                "sortOrder": 24,
-                "category": "09-2021",
-                "value": 55.3
-            },
-            {
-                "sortOrder": 25,
-                "category": "10-2021",
-                "value": 58.7
-            },
-            {
-                "sortOrder": 26,
-                "category": "11-2021",
-                "value": 59.2
-            },
-            {
-                "sortOrder": 27,
-                "category": "12-2021",
-                "value": 56.4
-            },
-            {
-                "sortOrder": 28,
-                "category": "01-2022",
-                "value": 53.0
-            },
-            {
-                "sortOrder": 29,
-                "category": "02-2022",
-                "value": 53.5
-            },
-            {
-                "sortOrder": 30,
-                "category": "03-2022",
-                "value": 54.3
-            },
-            {
-                "sortOrder": 31,
-                "category": "04-2022",
-                "value": 57.6
-            },
-            {
-                "sortOrder": 32,
-                "category": "05-2022",
-                "value": 58.3
-            },
-            {
-                "sortOrder": 33,
-                "category": "06-2022",
-                "value": 58.2
-            },
-            {
-                "sortOrder": 34,
-                "category": "07-2022",
-                "value": 56.6
-            },
-            {
-                "sortOrder": 35,
-                "category": "08-2022",
-                "value": 58.2
-            },
-            {
-                "sortOrder": 36,
-                "category": "09-2022",
-                "value": 55.1
-            },
-            {
-                "sortOrder": 37,
-                "category": "10-2022",
-                "value": 55.5
-            },
-            {
-                "sortOrder": 38,
-                "category": "11-2022",
-                "value": 56.7
-            },
-            {
-                "sortOrder": 39,
-                "category": "12-2022",
-                "value": 59.4
-            },
-            {
-                "sortOrder": 40,
-                "category": "01-2023",
-                "value": 57.5
-            },
-            {
-                "sortOrder": 41,
-                "category": "02-2023",
-                "value": 59.0
-            },
-            {
-                "sortOrder": 42,
-                "category": "03-2023",
-                "value": 58.4
-            },
-            {
-                "sortOrder": 43,
-                "category": "04-2023",
-                "value": 61.6
-            },
-            {
-                "sortOrder": 44,
-                "category": "05-2023",
-                "value": 61.6
-            },
-            {
-                "sortOrder": 45,
-                "category": "06-2023",
-                "value": 59.4
-            },
-            {
-                "sortOrder": 46,
-                "category": "07-2023",
-                "value": 61.9
-            },
-            {
-                "sortOrder": 47,
-                "category": "08-2023",
-                "value": 60.9
-            },
-            {
-                "sortOrder": 48,
-                "category": "09-2023",
-                "value": 61.0
-            },
-            {
-                "sortOrder": 49,
-                "category": "10-2023",
-                "value": 58.4
-            },
-            {
-                "sortOrder": 50,
-                "category": "11-2023",
-                "value": 57.4
-            },
-            {
-                "sortOrder": 51,
-                "category": "12-2023",
-                "value": 58.5
-            },
-            {
-                "sortOrder": 52,
-                "category": "01-2024",
-                "value": 61.2
-            },
-            {
-                "sortOrder": 53,
-                "category": "02-2024",
-                "value": 60.6
-            },
-            {
-                "sortOrder": 54,
-                "category": "03-2024",
-                "value": 61.8
-            },
-            {
-                "sortOrder": 55,
-                "category": "04-2024",
-                "value": 61.5
-            },
-            {
-                "sortOrder": 56,
-                "category": "05-2024",
-                "value": 60.5
-            },
-            {
-                "sortOrder": 57,
-                "category": "06-2024",
-                "value": 60.9
-            },
-            {
-                "sortOrder": 58,
-                "category": "07-2024",
-                "value": 60.7
-            },
-            {
-                "sortOrder": 59,
-                "category": "08-2024",
-                "value": 60.7
-            },
-            {
-                "sortOrder": 60,
-                "category": "09-2024",
-                "value": 58.3
-            },
-            {
-                "sortOrder": 61,
-                "category": "10-2024",
-                "value": 58.6
-            },
-            {
-                "sortOrder": 62,
-                "category": "11-2024",
-                "value": 58.6
-            },
-            {
-                "sortOrder": 63,
-                "category": "12-2024",
-                "value": 59.2
-            },
-            {
-                "sortOrder": 64,
-                "category": "01-2025",
-                "value": 57.7
-            },
-            {
-                "sortOrder": 65,
-                "category": "02-2025",
-                "value": 58.8
-            },
-            {
-                "sortOrder": 66,
-                "category": "03-2025",
-                "value": 59.5
-            },
-            {
-                "sortOrder": 67,
-                "category": "04-2025",
-                "value": 59.7
-            },
-            {
-                "sortOrder": 68,
-                "category": "05-2025",
-                "value": 59.3
-            },
-            {
-                "sortOrder": 69,
-                "category": "06-2025",
-                "value": 61.0
-            }
-        ]
-    },
-    "iipData": {
-        "iipValues": [
-            {
-                "sortOrder": 1,
-                "category": "10-2019",
-                "value": 124.0
-            },
-            {
-                "sortOrder": 2,
-                "category": "11-2019",
-                "value": 128.8
-            },
-            {
-                "sortOrder": 3,
-                "category": "12-2019",
-                "value": 134.5
-            },
-            {
-                "sortOrder": 4,
-                "category": "01-2020",
-                "value": 137.4
-            },
-            {
-                "sortOrder": 5,
-                "category": "02-2020",
-                "value": 134.2
-            },
-            {
-                "sortOrder": 6,
-                "category": "03-2020",
-                "value": 117.2
-            },
-            {
-                "sortOrder": 7,
-                "category": "04-2020",
-                "value": 54.0
-            },
-            {
-                "sortOrder": 8,
-                "category": "05-2020",
-                "value": 90.2
-            },
-            {
-                "sortOrder": 9,
-                "category": "06-2020",
-                "value": 107.9
-            },
-            {
-                "sortOrder": 10,
-                "category": "07-2020",
-                "value": 117.9
-            },
-            {
-                "sortOrder": 11,
-                "category": "08-2020",
-                "value": 117.2
-            },
-            {
-                "sortOrder": 12,
-                "category": "09-2020",
-                "value": 124.1
-            },
-            {
-                "sortOrder": 13,
-                "category": "10-2020",
-                "value": 129.6
-            },
-            {
-                "sortOrder": 14,
-                "category": "11-2020",
-                "value": 126.7
-            },
-            {
-                "sortOrder": 15,
-                "category": "12-2020",
-                "value": 137.4
-            },
-            {
-                "sortOrder": 16,
-                "category": "01-2021",
-                "value": 136.6
-            },
-            {
-                "sortOrder": 17,
-                "category": "02-2021",
-                "value": 129.9
-            },
-            {
-                "sortOrder": 18,
-                "category": "03-2021",
-                "value": 145.6
-            },
-            {
-                "sortOrder": 19,
-                "category": "04-2021",
-                "value": 126.1
-            },
-            {
-                "sortOrder": 20,
-                "category": "05-2021",
-                "value": 115.1
-            },
-            {
-                "sortOrder": 21,
-                "category": "06-2021",
-                "value": 122.8
-            },
-            {
-                "sortOrder": 22,
-                "category": "07-2021",
-                "value": 131.5
-            },
-            {
-                "sortOrder": 23,
-                "category": "08-2021",
-                "value": 132.4
-            },
-            {
-                "sortOrder": 24,
-                "category": "09-2021",
-                "value": 129.5
-            },
-            {
-                "sortOrder": 25,
-                "category": "10-2021",
-                "value": 135.0
-            },
-            {
-                "sortOrder": 26,
-                "category": "11-2021",
-                "value": 128.0
-            },
-            {
-                "sortOrder": 27,
-                "category": "12-2021",
-                "value": 138.8
-            },
-            {
-                "sortOrder": 28,
-                "category": "01-2022",
-                "value": 139.3
-            },
-            {
-                "sortOrder": 29,
-                "category": "02-2022",
-                "value": 131.4
-            },
-            {
-                "sortOrder": 30,
-                "category": "03-2022",
-                "value": 148.8
-            },
-            {
-                "sortOrder": 31,
-                "category": "04-2022",
-                "value": 134.5
-            },
-            {
-                "sortOrder": 32,
-                "category": "05-2022",
-                "value": 137.8
-            },
-            {
-                "sortOrder": 33,
-                "category": "06-2022",
-                "value": 138.3
-            },
-            {
-                "sortOrder": 34,
-                "category": "07-2022",
-                "value": 134.4
-            },
-            {
-                "sortOrder": 35,
-                "category": "08-2022",
-                "value": 131.5
-            },
-            {
-                "sortOrder": 36,
-                "category": "09-2022",
-                "value": 133.8
-            },
-            {
-                "sortOrder": 37,
-                "category": "10-2022",
-                "value": 129.5
-            },
-            {
-                "sortOrder": 38,
-                "category": "11-2022",
-                "value": 137.7
-            },
-            {
-                "sortOrder": 39,
-                "category": "12-2022",
-                "value": 145.9
-            },
-            {
-                "sortOrder": 40,
-                "category": "01-2023",
-                "value": 147.4
-            },
-            {
-                "sortOrder": 41,
-                "category": "02-2023",
-                "value": 139.3
-            },
-            {
-                "sortOrder": 42,
-                "category": "03-2023",
-                "value": 151.7
-            },
-            {
-                "sortOrder": 43,
-                "category": "04-2023",
-                "value": 140.7
-            },
-            {
-                "sortOrder": 44,
-                "category": "05-2023",
-                "value": 145.6
-            },
-            {
-                "sortOrder": 45,
-                "category": "06-2023",
-                "value": 143.9
-            },
-            {
-                "sortOrder": 46,
-                "category": "07-2023",
-                "value": 142.7
-            },
-            {
-                "sortOrder": 47,
-                "category": "08-2023",
-                "value": 145.8
-            },
-            {
-                "sortOrder": 48,
-                "category": "09-2023",
-                "value": 142.3
-            },
-            {
-                "sortOrder": 49,
-                "category": "10-2023",
-                "value": 144.9
-            },
-            {
-                "sortOrder": 50,
-                "category": "11-2023",
-                "value": 141.1
-            },
-            {
-                "sortOrder": 51,
-                "category": "12-2023",
-                "value": 152.3
-            },
-            {
-                "sortOrder": 52,
-                "category": "01-2024",
-                "value": 153.6
-            },
-            {
-                "sortOrder": 53,
-                "category": "02-2024",
-                "value": 147.1
-            },
-            {
-                "sortOrder": 54,
-                "category": "03-2024",
-                "value": 160.0
-            },
-            {
-                "sortOrder": 55,
-                "category": "04-2024",
-                "value": 148.0
-            },
-            {
-                "sortOrder": 56,
-                "category": "05-2024",
-                "value": 154.7
-            },
-            {
-                "sortOrder": 57,
-                "category": "06-2024",
-                "value": 151.0
-            },
-            {
-                "sortOrder": 58,
-                "category": "07-2024",
-                "value": 149.8
-            },
-            {
-                "sortOrder": 59,
-                "category": "08-2024",
-                "value": 145.8
-            },
-            {
-                "sortOrder": 60,
-                "category": "09-2024",
-                "value": 146.9
-            },
-            {
-                "sortOrder": 61,
-                "category": "10-2024",
-                "value": 150.3
-            },
-            {
-                "sortOrder": 62,
-                "category": "11-2024",
-                "value": 148.1
-            },
-            {
-                "sortOrder": 63,
-                "category": "12-2024",
-                "value": 158.0
-            },
-            {
-                "sortOrder": 64,
-                "category": "01-2025",
-                "value": 161.6
-            },
-            {
-                "sortOrder": 65,
-                "category": "02-2025",
-                "value": 151.1
-            },
-            {
-                "sortOrder": 66,
-                "category": "03-2025",
-                "value": 166.3
-            },
-            {
-                "sortOrder": 67,
-                "category": "04-2025",
-                "value": 151.8
-            },
-            {
-                "sortOrder": 68,
-                "category": "05-2025",
-                "value": 157.6
-            },
-            {
-                "sortOrder": 69,
-                "category": "06-2025",
-                "value": 153.3
-            }
-        ]
-    },
-    "gvaData": {
-        "gvaValues": [
-            {
-                "sortOrder": 1,
-                "category": "10-2019",
-                "value": 6.225
-            },
-            {
-                "sortOrder": 2,
-                "category": "11-2019",
-                "value": 6.225
-            },
-            {
-                "sortOrder": 3,
-                "category": "12-2019",
-                "value": 6.225
-            },
-            {
-                "sortOrder": 4,
-                "category": "01-2020",
-                "value": 6.508
-            },
-            {
-                "sortOrder": 5,
-                "category": "02-2020",
-                "value": 6.508
-            },
-            {
-                "sortOrder": 6,
-                "category": "03-2020",
-                "value": 6.508
-            },
-            {
-                "sortOrder": 7,
-                "category": "04-2020",
-                "value": -18.941
-            },
-            {
-                "sortOrder": 8,
-                "category": "05-2020",
-                "value": -18.941
-            },
-            {
-                "sortOrder": 9,
-                "category": "06-2020",
-                "value": -18.941
-            },
-            {
-                "sortOrder": 10,
-                "category": "07-2020",
-                "value": -3.732
-            },
-            {
-                "sortOrder": 11,
-                "category": "08-2020",
-                "value": -3.732
-            },
-            {
-                "sortOrder": 12,
-                "category": "09-2020",
-                "value": -3.732
-            },
-            {
-                "sortOrder": 13,
-                "category": "10-2020",
-                "value": 6.62
-            },
-            {
-                "sortOrder": 14,
-                "category": "11-2020",
-                "value": 6.62
-            },
-            {
-                "sortOrder": 15,
-                "category": "12-2020",
-                "value": 6.62
-            },
-            {
-                "sortOrder": 16,
-                "category": "01-2021",
-                "value": 11.759
-            },
-            {
-                "sortOrder": 17,
-                "category": "02-2021",
-                "value": 11.759
-            },
-            {
-                "sortOrder": 18,
-                "category": "03-2021",
-                "value": 11.759
-            },
-            {
-                "sortOrder": 19,
-                "category": "04-2021",
-                "value": 28.909
-            },
-            {
-                "sortOrder": 20,
-                "category": "05-2021",
-                "value": 28.909
-            },
-            {
-                "sortOrder": 21,
-                "category": "06-2021",
-                "value": 28.909
-            },
-            {
-                "sortOrder": 22,
-                "category": "07-2021",
-                "value": 19.12
-            },
-            {
-                "sortOrder": 23,
-                "category": "08-2021",
-                "value": 19.12
-            },
-            {
-                "sortOrder": 24,
-                "category": "09-2021",
-                "value": 19.12
-            },
-            {
-                "sortOrder": 25,
-                "category": "10-2021",
-                "value": 15.123
-            },
-            {
-                "sortOrder": 26,
-                "category": "11-2021",
-                "value": 15.123
-            },
-            {
-                "sortOrder": 27,
-                "category": "12-2021",
-                "value": 15.123
-            },
-            {
-                "sortOrder": 28,
-                "category": "01-2022",
-                "value": 14.916
-            },
-            {
-                "sortOrder": 29,
-                "category": "02-2022",
-                "value": 14.916
-            },
-            {
-                "sortOrder": 30,
-                "category": "03-2022",
-                "value": 14.916
-            },
-            {
-                "sortOrder": 31,
-                "category": "04-2022",
-                "value": 24.242
-            },
-            {
-                "sortOrder": 32,
-                "category": "05-2022",
-                "value": 24.242
-            },
-            {
-                "sortOrder": 33,
-                "category": "06-2022",
-                "value": 24.242
-            },
-            {
-                "sortOrder": 34,
-                "category": "07-2022",
-                "value": 14.853
-            },
-            {
-                "sortOrder": 35,
-                "category": "08-2022",
-                "value": 14.853
-            },
-            {
-                "sortOrder": 36,
-                "category": "09-2022",
-                "value": 14.853
-            },
-            {
-                "sortOrder": 37,
-                "category": "10-2022",
-                "value": 9.503
-            },
-            {
-                "sortOrder": 38,
-                "category": "11-2022",
-                "value": 9.503
-            },
-            {
-                "sortOrder": 39,
-                "category": "12-2022",
-                "value": 9.503
-            },
-            {
-                "sortOrder": 40,
-                "category": "01-2023",
-                "value": 9.151
-            },
-            {
-                "sortOrder": 41,
-                "category": "02-2023",
-                "value": 9.151
-            },
-            {
-                "sortOrder": 42,
-                "category": "03-2023",
-                "value": 9.151
-            },
-            {
-                "sortOrder": 43,
-                "category": "04-2023",
-                "value": 11.118
-            },
-            {
-                "sortOrder": 44,
-                "category": "05-2023",
-                "value": 11.118
-            },
-            {
-                "sortOrder": 45,
-                "category": "06-2023",
-                "value": 11.118
-            },
-            {
-                "sortOrder": 46,
-                "category": "07-2023",
-                "value": 11.957
-            },
-            {
-                "sortOrder": 47,
-                "category": "08-2023",
-                "value": 11.957
-            },
-            {
-                "sortOrder": 48,
-                "category": "09-2023",
-                "value": 11.957
-            },
-            {
-                "sortOrder": 49,
-                "category": "10-2023",
-                "value": 11.535
-            },
-            {
-                "sortOrder": 50,
-                "category": "11-2023",
-                "value": 11.535
-            },
-            {
-                "sortOrder": 51,
-                "category": "12-2023",
-                "value": 11.535
-            },
-            {
-                "sortOrder": 52,
-                "category": "01-2024",
-                "value": 10.362
-            },
-            {
-                "sortOrder": 53,
-                "category": "02-2024",
-                "value": 10.362
-            },
-            {
-                "sortOrder": 54,
-                "category": "03-2024",
-                "value": 10.362
-            },
-            {
-                "sortOrder": 55,
-                "category": "04-2024",
-                "value": 9.482
-            },
-            {
-                "sortOrder": 56,
-                "category": "05-2024",
-                "value": 9.482
-            },
-            {
-                "sortOrder": 57,
-                "category": "06-2024",
-                "value": 9.482
-            },
-            {
-                "sortOrder": 58,
-                "category": "07-2024",
-                "value": 8.25
-            },
-            {
-                "sortOrder": 59,
-                "category": "08-2024",
-                "value": 8.25
-            },
-            {
-                "sortOrder": 60,
-                "category": "09-2024",
-                "value": 8.25
-            },
-            {
-                "sortOrder": 61,
-                "category": "10-2024",
-                "value": 10.671
-            },
-            {
-                "sortOrder": 62,
-                "category": "11-2024",
-                "value": 10.671
-            },
-            {
-                "sortOrder": 63,
-                "category": "12-2024",
-                "value": 10.671
-            },
-            {
-                "sortOrder": 64,
-                "category": "01-2025",
-                "value": 9.591
-            },
-            {
-                "sortOrder": 65,
-                "category": "02-2025",
-                "value": 9.591
-            },
-            {
-                "sortOrder": 66,
-                "category": "03-2025",
-                "value": 9.591
-            }
-        ]
-    },
-    "statusCode": 200,
-    "statusMsg": "Success",
-    "indexPublishedDay": "19-08-2025",
-    "totalExecutionTime": "00:00:00",
-    "uniqueRequestId": "20250819144657"
+    }
 }
