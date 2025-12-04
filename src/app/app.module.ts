@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { MethodologyComponent } from './methodology/methodology.component';
+import { ActivityDistributionComponent } from './methodology/activity-distribution/activity-distribution.component';
+import { SectorDistributionComponent } from './methodology/sector-distribution/sector-distribution.component';
+import { TurnoverDistributionComponent } from './methodology/turnover-distribution/turnover-distribution.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -44,7 +47,7 @@ import {
   AlphaWithUnderscoreCommaDirective,
 } from './directive/common.directive';
 import { FormsModule } from '@angular/forms';
-import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import FormsModule
+import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
     HomeComponent,
     IndexComponent,
     MethodologyComponent,
+    ActivityDistributionComponent,
+    SectorDistributionComponent,
+    TurnoverDistributionComponent,
     RoadmapComponent,
     AboutComponent,
     ContactComponent,
