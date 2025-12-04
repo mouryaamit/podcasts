@@ -232,11 +232,16 @@
               class="img-fluid mb-4 d-none d-md-inline"
               alt="Distribution by turnover size within MSME sample"
             />
-            <img
+            <!-- <img
               src="assets/images/turnover-graph-mobile.webp"
               class="img-fluid d-inline d-md-none"
               alt="Distribution by turnover size within MSME sample"
-            />
+            /> -->
+            <app-turnover-distribution
+              [turnoverDistributionData]="turnoverDistributionData"
+              (graphWidth)="checkTurnoverDistributionGraphWidth($event)"
+              *ngIf="turnoverDistributionData?.length > 0"
+            ></app-turnover-distribution>
             <!-- <p class="chart_caption pb-4">Fig.- % Distribution by turnover size within MSME sample</p> -->
             <div class="app_roadmap_note col-md-10 mx-auto">
               <div class="row gx-0 justify-content-between align-items-center">
@@ -311,11 +316,16 @@
               class="img-fluid mb-4 d-none d-md-inline"
               alt="Distribution by value of top 7 HSNs within MSME sample"
             />
-            <img
+            <!-- <img
               src="assets/images/sector-graph-mobile.webp"
               class="img-fluid d-inline d-md-none"
               alt="Distribution by value of top 7 HSNs within MSME sample"
-            />
+            /> -->
+            <app-sector-distribution
+              [sectorDistributionData]="sectorDistributionData"
+              (graphWidth)="checkSectorDistributionGraphWidth($event)"
+              *ngIf="sectorDistributionData?.length > 0"
+            ></app-sector-distribution>
             <!-- <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p> -->
             <div class="app_roadmap_note col-md-10 mx-auto mb-5">
               <p>
@@ -347,11 +357,16 @@
               class="img-fluid mb-4 d-none d-md-inline"
               alt="Monthly proportion % of Non-services and Service GSTINs"
             />
-            <img
+            <!-- <img
               src="assets/images/activity-graph-mobile.webp"
               class="img-fluid d-inline d-md-none"
               alt="Monthly proportion % of Non-services and Service GSTINs"
-            />
+            /> -->
+            <app-activity-distribution
+              [activityDistributionData]="activityDistributionData"
+              (graphWidth)="checkActivityDistributionGraphWidth($event)"
+              *ngIf="activityDistributionData?.length > 0"
+            ></app-activity-distribution>
             <!-- <p class="chart_caption pb-4">Fig.- Monthly proportion % of Non-services and Service GSTINs</p> -->
             <div class="app_roadmap_note col-md-10 mx-auto mb-5">
               <p>

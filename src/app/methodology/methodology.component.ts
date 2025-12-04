@@ -1,4 +1,10 @@
-import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Renderer2,
+  OnInit,
+  AfterViewInit,
+} from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 import { GraphApiService } from '../services/graph-api.service';
 import stateCityData from '../../assets/json/stateCityData.json';
@@ -8,7 +14,7 @@ import stateCityData from '../../assets/json/stateCityData.json';
   templateUrl: './methodology.component.html',
   styleUrls: ['./methodology.component.scss'],
 })
-export class MethodologyComponent implements OnInit {
+export class MethodologyComponent implements OnInit, AfterViewInit {
   isGeoActive = true;
   isTurnoverActive = false;
   isSectorActive = false;
@@ -18,6 +24,9 @@ export class MethodologyComponent implements OnInit {
   turnoverDistributionData: any = [];
   sectorDistributionData: any = [];
   encryptedData: string = '';
+  turnoverDistributionGraphWidth: any;
+  activityDistributionGraphWidth: any;
+  sectorDistributionGraphWidth: any;
 
   constructor(
     private graphApiService: GraphApiService,
@@ -118,5 +127,17 @@ export class MethodologyComponent implements OnInit {
     } else {
       // console.log('One or both of the elements with the specified IDs were not found.');
     }
+  }
+
+  checkTurnoverDistributionGraphWidth(event) {
+    this.turnoverDistributionGraphWidth = event;
+  }
+
+  checkActivityDistributionGraphWidth(event) {
+    this.activityDistributionGraphWidth = event;
+  }
+
+  checkSectorDistributionGraphWidth(event) {
+    this.sectorDistributionGraphWidth = event;
   }
 }
