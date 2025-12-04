@@ -46,8 +46,7 @@ export class NewsroomEventsComponent implements OnInit {
         'Jocata Sumpoorn & SME DNA Win Global SME Finance Forum Award 2024';
       this.eventDate = 'São Paulo, 16 - 18 September, 2024';
     } else if (this.getNavParam == 'pune_ppf') {
-      this.eventTitle =
-        'Jocata Sumpoorn at Pune Public Policy Festival';
+      this.eventTitle = 'Jocata Sumpoorn at Pune Public Policy Festival';
       this.eventDate = 'Pune, January 11, 2025 ';
     }
   }
@@ -157,7 +156,7 @@ export class NewsroomEventsComponent implements OnInit {
         He was joined by a distinguished panel of experts, including Ritul Gaur (Policy Advisor, The Digital Impact Alliance), Amlan Mohanty (Non-Resident Research Fellow, Carnegie India), Prateek Som (Standing Counsel, Government of Haryana), and Filippa Braarud (Embassy Secretary, Royal Norwegian Embassy). The conversation centered on the broader role of Digital Public Infrastructure (DPI) in unlocking India’s economic potential.`,
         imageURL: 'assets/images/news-puneppf.webp',
       },
-    ]
+    ],
   };
 
   downloadReport(type) {

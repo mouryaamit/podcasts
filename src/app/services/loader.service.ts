@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoaderService {
-
   private loading: boolean = false;
-  private loadingMsg: string = "";
+  private loadingMsg: string = '';
 
-  constructor() { }
+  constructor() {}
 
   setLoading(loading: boolean) {
     this.loading = loading;
@@ -25,5 +24,4 @@ export class LoaderService {
   getLoadingMessage(): string {
     return this.loadingMsg;
   }
-
 }

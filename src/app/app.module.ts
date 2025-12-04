@@ -35,9 +35,13 @@ import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.comp
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
 import {
-  AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaNumericOnlyDirective,
-  AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
-  NumberOnlyDirective, AlphaNumSpecialsDirective, AlphaWithUnderscoreCommaDirective
+  AlphaNumericWithSpecialsAndSpaceOnlyDirective,
+  AlphaNumericOnlyDirective,
+  AlphaWithSpacesCommaHiphenDirective,
+  AlphaWithSpacesDirective,
+  NumberOnlyDirective,
+  AlphaNumSpecialsDirective,
+  AlphaWithUnderscoreCommaDirective,
 } from './directive/common.directive';
 import { FormsModule } from '@angular/forms';
 import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import FormsModule
@@ -73,14 +77,14 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
     AlphaWithSpacesCommaHiphenDirective,
     AlphaWithUnderscoreCommaDirective,
     AlphaNumSpecialsDirective,
-    SecondsToTimePipe
+    SecondsToTimePipe,
   ],
   entryComponents: [
-    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
+    SubscribeModelComponent,
+    InstitutionLoginModelComponent,
+    RoadmapModelComponent,
   ],
-  exports: [
-
-  ],
+  exports: [],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -100,16 +104,16 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
         info: 'toast-info',
         success: 'toast-success',
         warning: 'toast-warning',
-      }
-    }
-
-    ),
+      },
+    }),
   ],
   providers: [
     {
-      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
-    }
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
