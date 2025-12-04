@@ -1,10 +1,7 @@
-import {
-  Component,
-  ElementRef,
-  Renderer2,
-  AfterViewInit,
-  OnInit,
-} from '@angular/core';
+import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
+import * as CryptoJS from 'crypto-js';
+import { GraphApiService } from '../services/graph-api.service';
+import stateCityData from '../../assets/json/stateCityData.json';
 
 @Component({
   selector: 'app-methodology',
@@ -17,10 +14,61 @@ export class MethodologyComponent implements OnInit {
   isSectorActive = false;
   isActivityActive = false;
   sectionStates: boolean[] = [];
+  activityDistributionData: any = [];
+  turnoverDistributionData: any = [];
+  sectorDistributionData: any = [];
+  encryptedData: string = '';
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  constructor(
+    private graphApiService: GraphApiService,
+    private renderer: Renderer2,
+    private el: ElementRef
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    // this.getSumpoornData();
+    this.getSumpoornDataFromJson();
+  }
+
+  getSumpoornData() {
+    const name = 'SUMPOORNDATA';
+    const salt = '6fbb7e4f-756d-11ee-a429-00090faa0001';
+
+    this.encryptedData = CryptoJS.AES.encrypt(name, salt).toString();
+    this.graphApiService
+      .getSumpoornGraphApiData({ ssUuid: this.encryptedData })
+      .then(
+        (response: any) => {
+          if (response && response.statusCode == '200') {
+            this.sectorDistributionData =
+              response.sumpoornData.Distributions.HsnDistributionByValue;
+            this.turnoverDistributionData =
+              response.sumpoornData.Distributions.MsmDistribution;
+            this.activityDistributionData =
+              response.sumpoornData.Distributions.ActivityDistribution;
+          }
+        },
+        (error) => {}
+      );
+  }
+
+  getSumpoornDataFromJson() {
+    this.graphApiService.getSumpoornGraphApiDataFromJson().then(
+      (response: any) => {
+        if (response && response.statusCode == '200') {
+          this.sectorDistributionData =
+            response.sumpoornData.Distributions.HsnDistributionByValue;
+          this.turnoverDistributionData =
+            response.sumpoornData.Distributions.MsmDistribution;
+          this.activityDistributionData =
+            response.sumpoornData.Distributions.ActivityDistribution;
+        }
+      },
+      (error) => {
+        console.error('getSumpoornGraphData Error', error);
+      }
+    );
+  }
 
   // Active & Inactive Icons for Tabs
   toggleIcons(type: string) {
