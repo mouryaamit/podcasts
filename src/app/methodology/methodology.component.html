@@ -35,7 +35,7 @@
               aria-controls="tab-geographic"
               aria-selected="true"
               [ngClass]="{ active: isGeoActive }"
-              (click)="toggleIcons('geo')"
+              (click)="toggleIcons('geo'); scrollToRight('geo')"
             >
               <img
                 src="assets/icons/active-geo.svg"
@@ -66,7 +66,7 @@
               aria-controls="tab-turnover"
               aria-selected="false"
               [ngClass]="{ active: isTurnoverActive }"
-              (click)="toggleIcons('turnover')"
+              (click)="toggleIcons('turnover'); scrollToRight('turnover')"
             >
               <img
                 src="assets/icons/active-turnover.svg"
@@ -97,7 +97,7 @@
               aria-controls="tab-sector"
               aria-selected="false"
               [ngClass]="{ active: isSectorActive }"
-              (click)="toggleIcons('sector')"
+              (click)="toggleIcons('sector'); scrollToRight('sector')"
             >
               <img
                 src="assets/icons/active-sector.svg"
@@ -128,7 +128,7 @@
               aria-controls="tab-activity"
               aria-selected="false"
               [ngClass]="{ active: isActivityActive }"
-              (click)="toggleIcons('activity')"
+              (click)="toggleIcons('activity'); scrollToRight('activity')"
             >
               <img
                 src="assets/icons/active-activity.svg"
@@ -227,22 +227,26 @@
               </span>
               <span>representativeness and stability of the Index. </span>
             </p>
-            <img
+            <!-- <img
               src="assets/images/turnover-graph.webp"
               class="img-fluid mb-4 d-none d-md-inline"
               alt="Distribution by turnover size within MSME sample"
-            />
+            /> -->
             <!-- <img
               src="assets/images/turnover-graph-mobile.webp"
               class="img-fluid d-inline d-md-none"
               alt="Distribution by turnover size within MSME sample"
             /> -->
-            <app-turnover-distribution
-              [turnoverDistributionData]="turnoverDistributionData"
-              (graphWidth)="checkTurnoverDistributionGraphWidth($event)"
-              *ngIf="turnoverDistributionData?.length > 0"
-            ></app-turnover-distribution>
-            <!-- <p class="chart_caption pb-4">Fig.- % Distribution by turnover size within MSME sample</p> -->
+            <div class="methodology_graphs">
+              <app-turnover-distribution
+                [turnoverDistributionData]="turnoverDistributionData"
+                (graphWidth)="checkTurnoverDistributionGraphWidth($event)"
+                *ngIf="turnoverDistributionData?.length > 0"
+              ></app-turnover-distribution>
+            </div>
+            <!-- <p class="chart_caption pb-4">
+              Fig.- % Distribution by turnover size within MSME sample
+            </p> -->
             <div class="app_roadmap_note col-md-10 mx-auto">
               <div class="row gx-0 justify-content-between align-items-center">
                 <div

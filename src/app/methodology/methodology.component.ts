@@ -8,6 +8,7 @@ import {
 import * as CryptoJS from 'crypto-js';
 import { GraphApiService } from '../services/graph-api.service';
 import stateCityData from '../../assets/json/stateCityData.json';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-methodology',
@@ -126,6 +127,25 @@ export class MethodologyComponent implements OnInit, AfterViewInit {
       });
     } else {
       // console.log('One or both of the elements with the specified IDs were not found.');
+    }
+  }
+
+  scrollToRight(tab) {
+    console.log('scrollToRight', tab);
+    if (tab === 'turnover') {
+      $('#turnover_graph_svg_inner').scrollLeft(
+        this.turnoverDistributionGraphWidth
+      );
+    } else if (tab === 'activity') {
+      $('#context_graph_svg').scrollLeft(this.activityDistributionGraphWidth);
+      $('#mobile_context_graph_svg').scrollLeft(
+        this.activityDistributionGraphWidth
+      );
+    } else if (tab === 'sector') {
+      $('#context_graph_svg').scrollLeft(this.sectorDistributionGraphWidth);
+      $('#mobile_context_graph_svg').scrollLeft(
+        this.sectorDistributionGraphWidth
+      );
     }
   }
 
