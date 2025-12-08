@@ -137,8 +137,7 @@ export class MethodologyComponent implements OnInit, AfterViewInit {
         this.turnoverDistributionGraphWidth
       );
     } else if (tab === 'activity') {
-      $('#context_graph_svg').scrollLeft(this.activityDistributionGraphWidth);
-      $('#mobile_context_graph_svg').scrollLeft(
+      $('#activity_graph_svg_inner').scrollLeft(
         this.activityDistributionGraphWidth
       );
     } else if (tab === 'sector') {
