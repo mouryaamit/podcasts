@@ -327,15 +327,15 @@ export class TurnoverDistributionComponent implements OnInit {
     // });
 
     // X axes (month number / month name / year)
-    svg
-      .append('g')
-      .attr('transform', `translate(0, ${height})`)
-      .attr('stroke-width', '0')
-      .attr('class', 'x_month_num')
-      .call(xAxis_month_number)
-      .selectAll('.tick text')
-      .attr('x', '0.1em')
-      .attr('y', '-1.3em');
+    // svg
+    //   .append('g')
+    //   .attr('transform', `translate(0, ${height})`)
+    //   .attr('stroke-width', '0')
+    //   .attr('class', 'x_month_num')
+    //   .call(xAxis_month_number)
+    //   .selectAll('.tick text')
+    //   .attr('x', '0.1em')
+    //   .attr('y', '-1.3em');
 
     svg
       .append('g')
