@@ -46,9 +46,12 @@ export class NewsroomEventsComponent implements OnInit {
         'Jocata Sumpoorn & SME DNA Win Global SME Finance Forum Award 2024';
       this.eventDate = 'São Paulo, 16 - 18 September, 2024';
     } else if (this.getNavParam == 'pune_ppf') {
-      this.eventTitle =
-        'Jocata Sumpoorn at Pune Public Policy Festival';
+      this.eventTitle = 'Jocata Sumpoorn at Pune Public Policy Festival';
       this.eventDate = 'Pune, January 11, 2025 ';
+    } else if (this.getNavParam == 'nbdnewsroom') {
+      this.eventTitle =
+        'Sumpoorn Showcased at New Development Bank (NDB) - Shanghai Headquarters';
+      this.eventDate = 'Shanghai, November 11, 2025';
     }
   }
 
@@ -150,6 +153,15 @@ export class NewsroomEventsComponent implements OnInit {
         imageURL: 'assets/images/news-g20.png',
       },
     ],
+    nbdnewsroomEvent: [
+      {
+        title:
+          'Sumpoorn Showcased at New Development Bank (NDB) - Shanghai Headquarters',
+        detail:
+          'As part of the Jocata Global AI Xchange China 2025, a high-level delegation of senior leaders from Jocata and client institutions met with officials from the New Development Bank (NDB) in Shanghai. The participants included members of NDB’s research, projects, IT and compliance teams. Jocata shared a company overview and introduced Jocata Sumpoorn, India’s first MSME economic activity index developed in partnership with SIDBI. Prashant Muddu, MD & CEO of Jocata, highlighted how the Index bridges a critical MSME data gap and provides actionable insights for lenders, policymakers, and researchers to optimize credit flow and design policies for sustainable growth. He further emphasized Sumpoorn’s potential as a transformative initiative for emerging economies. As part of the exchange, NDB officials presented their work and its impact across multiple geographies, including India. The session concluded with an engaging Q&A from both sides, making the discussion highly interactive and well received.',
+        imageURL: 'assets/images/nbdnewsroom.png',
+      },
+    ],
     puneEvent: [
       {
         title: '',
@@ -157,7 +169,7 @@ export class NewsroomEventsComponent implements OnInit {
         He was joined by a distinguished panel of experts, including Ritul Gaur (Policy Advisor, The Digital Impact Alliance), Amlan Mohanty (Non-Resident Research Fellow, Carnegie India), Prateek Som (Standing Counsel, Government of Haryana), and Filippa Braarud (Embassy Secretary, Royal Norwegian Embassy). The conversation centered on the broader role of Digital Public Infrastructure (DPI) in unlocking India’s economic potential.`,
         imageURL: 'assets/images/news-puneppf.webp',
       },
-    ]
+    ],
   };
 
   downloadReport(type) {
