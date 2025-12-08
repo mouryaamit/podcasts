@@ -48,6 +48,10 @@ export class NewsroomEventsComponent implements OnInit {
     } else if (this.getNavParam == 'pune_ppf') {
       this.eventTitle = 'Jocata Sumpoorn at Pune Public Policy Festival';
       this.eventDate = 'Pune, January 11, 2025 ';
+    } else if (this.getNavParam == 'nbdnewsroom') {
+      this.eventTitle =
+        'Sumpoorn Showcased at New Development Bank (NDB) - Shanghai Headquarters';
+      this.eventDate = 'Shanghai, November 11, 2025';
     }
   }
 
@@ -147,6 +151,15 @@ export class NewsroomEventsComponent implements OnInit {
         detail:
           'Mr. Narasimhan Venkatesan, Principal Advisor, Jocata presented the Index to dignitaries from the Ministry of Finance, Department of Economic Affairs, International Finance Corporation, Reserve Bank of India and senior leaders from Indian and global financial institutions.',
         imageURL: 'assets/images/news-g20.png',
+      },
+    ],
+    nbdnewsroomEvent: [
+      {
+        title:
+          'Sumpoorn Showcased at New Development Bank (NDB) - Shanghai Headquarters',
+        detail:
+          'As part of the Jocata Global AI Xchange China 2025, a high-level delegation of senior leaders from Jocata and client institutions met with officials from the New Development Bank (NDB) in Shanghai. The participants included members of NDB’s research, projects, IT and compliance teams. Jocata shared a company overview and introduced Jocata Sumpoorn, India’s first MSME economic activity index developed in partnership with SIDBI. Prashant Muddu, MD & CEO of Jocata, highlighted how the Index bridges a critical MSME data gap and provides actionable insights for lenders, policymakers, and researchers to optimize credit flow and design policies for sustainable growth. He further emphasized Sumpoorn’s potential as a transformative initiative for emerging economies. As part of the exchange, NDB officials presented their work and its impact across multiple geographies, including India. The session concluded with an engaging Q&A from both sides, making the discussion highly interactive and well received.',
+        imageURL: 'assets/images/nbdnewsroom.png',
       },
     ],
     puneEvent: [

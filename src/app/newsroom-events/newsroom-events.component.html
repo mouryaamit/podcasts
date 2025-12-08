@@ -7,7 +7,7 @@
       </a>
       <h4 class="app_roadmap_title mb-0 text-center">{{ eventTitle }}</h4>
       <p class="app_roadmap_caption text-center">
-        <ng-container *ngIf="getNavParam == 'smeff'">
+        <ng-container *ngIf="getNavParam === 'smeff'">
           <span class="d-inline d-xxl-block"
             >Jocata Sumpoorn and SME DNA have been recognized with the
             prestigious
@@ -18,7 +18,7 @@
           </span>
           <span class="d-inline d-xxl-block">held in Sao Paulo, Brazil.</span>
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'unitednations'">
+        <ng-container *ngIf="getNavParam === 'unitednations'">
           <span class="d-inline d-xxl-block"
             >Jocata Sumpoorn in association with SIDBI was showcased at Citizen
             Stack -
@@ -40,7 +40,7 @@
             brings scale.</span
           >
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'ifc'">
+        <ng-container *ngIf="getNavParam === 'ifc'">
           <span class="d-inline d-xxl-block"
             >Jocata’s Platform+ approach to MSME credit growth and Jocata
             Sumpoorn
@@ -51,7 +51,7 @@
           </span>
           <span class="d-inline d-xxl-block">from 100+ geographies. </span>
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'stakeholder'">
+        <ng-container *ngIf="getNavParam === 'stakeholder'">
           <span class="d-inline d-xxl-block"
             >The Inclusive Finance India Report 2023, acknowledges Sumpoorn's
             role as a
@@ -64,7 +64,7 @@
             >to address the information gaps hindering MSME credit access.</span
           >
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'showcase'">
+        <ng-container *ngIf="getNavParam === 'showcase'">
           <span class="d-inline d-xxl-block"
             >Jocata presented “Sumpoorn” India’s first MSME Economic Activity
             Index in
@@ -81,7 +81,13 @@
             >IFC (International Finance Corporation).</span
           >
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'launch'">
+        <ng-container *ngIf="getNavParam === 'nbdnewsroom'">
+          <span class="d-inline d-xxl-block"
+            >SIDBI-Jocata Sumpoorn index presented as a key enabler for MSME
+            growth in emerging economies
+          </span>
+        </ng-container>
+        <ng-container *ngIf="getNavParam === 'launch'">
           <span class="d-inline d-xxl-block"
             >Jocata launches “Sumpoorn” India’s first MSME Economic Activity
             Index in
@@ -94,7 +100,7 @@
             >and credit inclusion efforts.</span
           >
         </ng-container>
-        <ng-container *ngIf="getNavParam == 'pune_ppf'">
+        <ng-container *ngIf="getNavParam === 'pune_ppf'">
           <span class="d-inline d-xxl-block"
             >Unlocking Economic Potential: Digital Public Infrastructure for a
           </span>
@@ -112,7 +118,7 @@
 
   <div class="row gx-0 app_newsroom_gallery justify-content-center">
     <div class="col-10">
-      <div *ngIf="getNavParam == 'smeff'">
+      <div *ngIf="getNavParam === 'smeff'">
         <div class="row row-cols-1 row-cols-lg-2 gx-5">
           <div
             class="col"
@@ -141,7 +147,7 @@
           Power your MSME strategy - Email us at sumpoorn@jocata.com
         </p>
       </div>
-      <div *ngIf="getNavParam == 'unitednations'">
+      <div *ngIf="getNavParam === 'unitednations'">
         <div class="row row-cols-1 row-cols-lg-2 gx-5">
           <div
             class="col"
@@ -200,7 +206,7 @@
 
       <div
         class="row row-cols-1 row-cols-lg-2 gx-5"
-        *ngIf="getNavParam == 'ifc'"
+        *ngIf="getNavParam === 'ifc'"
       >
         <div class="col" *ngFor="let event of events.ifcEvent">
           <img
@@ -219,7 +225,7 @@
 
       <div
         class="row row-cols-1 row-cols-lg-2 gx-5"
-        *ngIf="getNavParam == 'stakeholder'"
+        *ngIf="getNavParam === 'stakeholder'"
       >
         <div class="col" *ngFor="let event of events.msmeFinancing">
           <img
@@ -246,7 +252,7 @@
 
       <div
         class="row row-cols-1 row-cols-lg-2 gx-5"
-        *ngIf="getNavParam == 'launch'"
+        *ngIf="getNavParam === 'launch'"
       >
         <div class="col" *ngFor="let event of events.launchEvent">
           <img
@@ -265,7 +271,7 @@
 
       <div
         class="row row-cols-1 row-cols-lg-2 gx-5"
-        *ngIf="getNavParam == 'showcase'"
+        *ngIf="getNavParam === 'showcase'"
       >
         <div class="col" *ngFor="let event of events.showcaseEvent">
           <img
@@ -281,10 +287,27 @@
           </div>
         </div>
       </div>
-
       <div
         class="row row-cols-1 row-cols-lg-2 gx-5"
-        *ngIf="getNavParam == 'pune_ppf'"
+        *ngIf="getNavParam === 'nbdnewsroom'"
+      >
+        <div class="col" *ngFor="let event of events.nbdnewsroomEvent">
+          <img
+            width="580"
+            height="420"
+            [src]="event.imageURL"
+            class="news_img"
+            [alt]="event.title"
+          />
+          <div class="img_caption">
+            <p class="news_title fw-bold mb-3">{{ event.title }}</p>
+            <p class="news_detail">{{ event.detail }}</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-lg-2 gx-5"
+        *ngIf="getNavParam === 'pune_ppf'"
       >
         <div class="col" *ngFor="let event of events.puneEvent">
           <img
