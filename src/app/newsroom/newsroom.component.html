@@ -1,61 +1,144 @@
 <main class="app_roadmap app_newsroom">
-    <div class="row gx-0 app_roadmap_banner_section justify-content-center">
-        <div class="col-sm-12 col-md-10">
-            <h4 class="app_roadmap_title mb-0 text-center">News & Updates</h4>
-            <p class="app_roadmap_caption text-center">
-                <span class="d-inline d-xxl-block">Watch this space for news and updates on the Index, event highlights, closed group </span>
-                <span class="d-inline d-xxl-block">discussion outcomes and more.</span>
-            </p>
+  <div class="row gx-0 app_roadmap_banner_section justify-content-center">
+    <div class="col-sm-12 col-md-10">
+      <h4 class="app_roadmap_title mb-0 text-center">News & Updates</h4>
+      <p class="app_roadmap_caption text-center">
+        <span class="d-inline d-xxl-block"
+          >Watch this space for news and updates on the Index, event highlights,
+          closed group
+        </span>
+        <span class="d-inline d-xxl-block">discussion outcomes and more.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="row gx-0 app_newsroom_gallery justify-content-center">
+    <div class="col-10">
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-nbdnewsroom.webp"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('nbdnewsroom', 'self')"
+            alt="Sumpoorn Showcased at New Development Bank (NDB)"
+          />
         </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-msme-conversations.webp"
+            role="button"
+            class="img-fluid w-100"
+            (click)="
+              goToGallery(
+                'msme_conv',
+                'link',
+                'https://www.cnbctv18.com/business/finance/msme-activity-index-resilience-demand-credit-trends-improve-sidbi-jocata-report-19617264.htm'
+              )
+            "
+            alt="Sumpoorn MSME Conversation"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-openEd.webp"
+            role="button"
+            class="img-fluid w-100"
+            (click)="
+              goToGallery(
+                'opEd',
+                'link',
+                'https://www.moneycontrol.com/news/opinion/msmes-brace-for-a-challenging-year-13007047.html'
+              )
+            "
+            alt="Sumpoorn OpEd"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-pune-ppf.webp"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('pune_ppf', 'self')"
+            alt="Sumpoorn Pune PPF"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-brazil.png"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('smeff', 'self')"
+            alt="Citizen Stack"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-un.webp"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('unitednations', 'self')"
+            alt="Citizen Stack"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-ifc.jpg"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('ifc', 'self')"
+            alt="International Finance Corporation (IFC)"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-msme.svg"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('stakeholder', 'self')"
+            alt="Sumpoorn Stakeholder"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-launch.svg"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('launch', 'self')"
+            alt="Sumpoorn Launch"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="assets/images/sumpoorn-showcase.svg"
+            role="button"
+            class="img-fluid w-100"
+            (click)="goToGallery('showcase', 'self')"
+            alt="Sumpoorn G20 Showcase"
+          />
+        </div>
+      </div>
     </div>
 
-    <div class="row gx-0 app_newsroom_gallery justify-content-center">
-        <div class="col-10">
-            <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col">
-                    <img src="assets/images/sumpoorn-msme-conversations.webp" role="button" class="img-fluid w-100" (click)="goToGallery('msme_conv','link', 'https://www.cnbctv18.com/business/finance/msme-activity-index-resilience-demand-credit-trends-improve-sidbi-jocata-report-19617264.htm')" alt="Sumpoorn MSME Conversation">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-openEd.webp" role="button" class="img-fluid w-100" (click)="goToGallery('opEd','link', 'https://www.moneycontrol.com/news/opinion/msmes-brace-for-a-challenging-year-13007047.html')" alt="Sumpoorn OpEd">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-pune-ppf.webp" role="button" class="img-fluid w-100" (click)="goToGallery('pune_ppf','self')" alt="Sumpoorn Pune PPF">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-brazil.png" role="button" class="img-fluid w-100" (click)="goToGallery('smeff','self')" alt="Citizen Stack">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-un.webp" role="button" class="img-fluid w-100" (click)="goToGallery('unitednations','self')" alt="Citizen Stack">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-ifc.jpg" role="button" class="img-fluid w-100" (click)="goToGallery('ifc','self')" alt="International Finance Corporation (IFC)">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-msme.svg" role="button" class="img-fluid w-100" (click)="goToGallery('stakeholder','self')" alt="Sumpoorn Stakeholder">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-launch.svg" role="button" class="img-fluid w-100" (click)="goToGallery('launch','self')" alt="Sumpoorn Launch">
-                </div>
-                <div class="col">
-                    <img src="assets/images/sumpoorn-showcase.svg" role="button" class="img-fluid w-100" (click)="goToGallery('showcase','self')" alt="Sumpoorn G20 Showcase">
-                </div>
-            </div>
-        </div>
-
-        <div class="app_roadmap_banner_overlap col-10">
-            <div class="banner_overlap_left">
-                <p class="app_home_section_caption">Download Releases &amp; Resources</p>
-            </div>
-            <div class="banner_overlap_right">
-                <a class="app_secondary_btn me-0 mb-3 mb-md-0 me-md-5" (click)="downloadReport('PRESS_RELEASE')">
-                    <img src="assets/icons/download-icon-transparent.svg" />
-                    <span class="ms-3">Press Release</span>
-                </a>
-                <a class="app_secondary_btn" (click)="downloadReport('LAUNCH_REPORT')">
-                    <img src="assets/icons/download-icon-transparent.svg" />
-                    <span class="ms-3">Launch Report</span>
-                </a>
-            </div>
-        </div>
+    <div class="app_roadmap_banner_overlap col-10">
+      <div class="banner_overlap_left">
+        <p class="app_home_section_caption">
+          Download Releases &amp; Resources
+        </p>
+      </div>
+      <div class="banner_overlap_right">
+        <a
+          class="app_secondary_btn me-0 mb-3 mb-md-0 me-md-5"
+          (click)="downloadReport('PRESS_RELEASE')"
+        >
+          <img src="assets/icons/download-icon-transparent.svg" />
+          <span class="ms-3">Press Release</span>
+        </a>
+        <a class="app_secondary_btn" (click)="downloadReport('LAUNCH_REPORT')">
+          <img src="assets/icons/download-icon-transparent.svg" />
+          <span class="ms-3">Launch Report</span>
+        </a>
+      </div>
     </div>
+  </div>
 </main>
