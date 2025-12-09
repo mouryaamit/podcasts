@@ -95,7 +95,7 @@ export class TurnoverDistributionComponent implements OnInit {
   }
 
   private generateTurnoverGraph(data: RawPoint[]): void {
-    console.log('generateTurnoverGraph data:', data);
+    // console.log('generateTurnoverGraph data:', data);
     const margin = {
         top: 10,
         right: 10,
@@ -107,10 +107,10 @@ export class TurnoverDistributionComponent implements OnInit {
       width = default_width - margin.left - margin.right,
       height = default_height - margin.top - margin.bottom;
 
-    console.log('generateTurnoverGraph default_width:', default_width);
-    console.log('generateTurnoverGraph default_height:', default_height);
-    console.log('generateTurnoverGraph width:', width);
-    console.log('generateTurnoverGraph height:', height);
+    // console.log('generateTurnoverGraph default_width:', default_width);
+    // console.log('generateTurnoverGraph default_height:', default_height);
+    // console.log('generateTurnoverGraph width:', width);
+    // console.log('generateTurnoverGraph height:', height);
 
     this.graphWidth.emit(default_width);
 

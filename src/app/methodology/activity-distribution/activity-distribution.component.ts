@@ -32,7 +32,7 @@ export class ActivityDistributionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('activityDistributionData', this.activityDistributionData);
+    // console.log('activityDistributionData', this.activityDistributionData);
     if (this.activityDistributionData?.length) {
       const raw = this.convertToRawData(this.activityDistributionData);
       this.generateActivityGraph(raw);
@@ -88,7 +88,7 @@ export class ActivityDistributionComponent implements OnInit {
   }
 
   private generateActivityGraph(data: RawPoint[]): void {
-    console.log('generateActivityGraph data:', data);
+    // console.log('generateActivityGraph data:', data);
     const margin = {
         top: 10,
         right: 10,
@@ -100,10 +100,10 @@ export class ActivityDistributionComponent implements OnInit {
       width = default_width - margin.left - margin.right,
       height = default_height - margin.top - margin.bottom;
 
-    console.log('generateActivityGraph default_width:', default_width);
-    console.log('generateActivityGraph default_height:', default_height);
-    console.log('generateActivityGraph width:', width);
-    console.log('generateActivityGraph height:', height);
+    // console.log('generateActivityGraph default_width:', default_width);
+    // console.log('generateActivityGraph default_height:', default_height);
+    // console.log('generateActivityGraph width:', width);
+    // console.log('generateActivityGraph height:', height);
 
     this.graphWidth.emit(default_width);
 
