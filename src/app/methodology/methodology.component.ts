@@ -141,8 +141,7 @@ export class MethodologyComponent implements OnInit, AfterViewInit {
         this.activityDistributionGraphWidth
       );
     } else if (tab === 'sector') {
-      $('#context_graph_svg').scrollLeft(this.sectorDistributionGraphWidth);
-      $('#mobile_context_graph_svg').scrollLeft(
+      $('#sector_graph_svg_inner').scrollLeft(
         this.sectorDistributionGraphWidth
       );
     }
