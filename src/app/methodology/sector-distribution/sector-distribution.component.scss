@@ -64,10 +64,10 @@
 #sector_graph_right_vertical_svg {
   // flex: 0 0 50px;
   // position: relative;
-  width: 250px; /* space for HSN + description */
-  min-width: 250px;
-  max-width: 250px;
-  flex: 0 0 250px; /* fix width in flex layout */
+  width: 220px; /* space for HSN + description */
+  min-width: 220px;
+  max-width: 220px;
+  flex: 0 0 220px; /* fix width in flex layout */
   overflow: visible; /* allow text to fully show */
 
   svg {
@@ -100,4 +100,42 @@
 /* X-axis domain line styling for sector graph */
 #sector_graph_svg path.domain {
   stroke: #a3a3a3;
+}
+
+/* ================================= */
+/* MOBILE LAYOUT (< 768px)            */
+/* ================================= */
+
+@media (max-width: 767px) {
+  .sector_graph {
+    flex-wrap: wrap !important;
+    display: flex !important;
+    align-items: flex-start;
+  }
+
+  /* ✅ LEFT AXIS (Row 1 / Left) */
+  #sector_graph_left_vertical_svg {
+    flex: 0 0 50px !important;
+    width: 50px !important;
+    max-width: 50px !important;
+    order: 1;
+  }
+
+  /* ✅ GRAPH (Row 1 / Right) */
+  #sector_graph_svg {
+    flex: calc(100% - 50px) !important;
+    width: calc(100% - 50px) !important;
+    max-width: calc(100% - 50px) !important;
+    min-width: 0;
+    order: 2;
+  }
+
+  /* ✅ LEGEND (Row 2 / Full Width) */
+  #sector_graph_right_vertical_svg {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    order: 3;
+    // margin-top: 12px;
+  }
 }

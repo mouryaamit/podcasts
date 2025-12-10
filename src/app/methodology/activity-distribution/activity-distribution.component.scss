@@ -41,12 +41,12 @@
   /* room so caption does not overlap bottom axis */
   // padding-bottom: 30px;
   overflow-x: auto;
-  padding-bottom: 34px; /* space for caption */
+  padding-bottom: 15px; /* space for caption */
 }
 
 /* Fixed caption at bottom of center container only */
 .activity_graph_caption {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0;
@@ -72,7 +72,18 @@
     position: relative;
   }
 }
+/* BELOW: segment labels (Micro / Small / Medium) */
+#activity_graph_right_vertical_mobile_svg {
+  // flex: 0 0 50px;
+  // position: relative;
+  width: 180px;
+  min-width: 80px;
+  flex: 0 0 50px;
 
+  svg {
+    position: relative;
+  }
+}
 /* Generic axis tick text */
 .tick text {
   font-size: 13px;

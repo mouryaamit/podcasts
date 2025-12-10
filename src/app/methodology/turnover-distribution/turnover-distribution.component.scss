@@ -41,12 +41,12 @@
   /* room so caption does not overlap bottom axis */
   // padding-bottom: 30px;
   overflow-x: auto;
-  padding-bottom: 34px; /* space for caption */
+  padding-bottom: 15px; /* space for caption */
 }
 
 /* Fixed caption at bottom of center container only */
 .turnover_graph_caption {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0;

@@ -119,6 +119,7 @@ export class SectorDistributionComponent implements OnInit {
     const default_height = 445;
     const width = default_width - margin.left - margin.right;
     const height = default_height - margin.top - margin.bottom;
+    const isMobile = window.innerWidth <= 767; // 👈 detect breakpoint once
 
     this.graphWidth.emit(default_width);
 
@@ -377,23 +378,26 @@ export class SectorDistributionComponent implements OnInit {
       labelYMap[series.key] = y1(middleValue);
     });
 
-    addRightSvg();
+    addRightSvg(isMobile);
 
     // ===== RIGHT SVG (HSN legend like image) =====
-    function addRightSvg() {
+    function addRightSvg(isMobile: boolean) {
+      const svgWidth = isMobile ? 400 : 240; // wider on mobile
+      const boxSize = isMobile ? 15 : 12; // bigger color box on mobile
+      const fontSize = isMobile ? 12 : 10; // bigger font on mobile
+      const rowGap = isMobile ? 52 : 52; // little more gap on mobile
+      const svgHeight = isMobile ? 450 : default_height; // wider on mobile
+
       const svgY_right = d3
         .select('#sector_graph_right_vertical_svg')
         .html('')
         .append('svg')
-        .attr('width', 280) // wide for text
-        .attr('height', default_height);
+        .attr('width', svgWidth)
+        .attr('height', svgHeight);
 
       const labelGroup = svgY_right
         .append('g')
-        .attr('transform', 'translate(5,15)');
-
-      const boxSize = 12;
-      const rowGap = 52;
+        .attr('transform', 'translate(5, 15)');
 
       // HSN Description map
       const hsnLabelMap: Record<string, string> = {
@@ -408,10 +412,11 @@ export class SectorDistributionComponent implements OnInit {
         '99': 'All Services',
       };
 
-      // 🔻 SORT legend by HSN numerically
+      // 🔻 SORT legend by HSN numerically (DESC)
       const legendData = stackedKeys
         .filter((d) => hsnLabelMap[d])
-        .sort((a, b) => Number(b) - Number(a)); // '39', '52', '84', '71', '72', '73', '84', '85', '87', '99'
+        .sort((a, b) => Number(b) - Number(a));
+
       const legendItem = labelGroup
         .selectAll('g.legend-item')
         .data(legendData)
@@ -428,7 +433,7 @@ export class SectorDistributionComponent implements OnInit {
         .attr('rx', 2)
         .attr('ry', 2)
         .attr('fill', (d) => color(d as string) as string)
-        .attr('y', 3);
+        .attr('y', isMobile ? 0 : 3); // slightly align on mobile
 
       // ✅ Label text with multiline tspans
       legendItem
@@ -436,14 +441,14 @@ export class SectorDistributionComponent implements OnInit {
         .attr('x', boxSize + 8)
         .attr('y', boxSize)
         .style('font-family', 'Inter, sans-serif')
-        .style('font-size', '13px')
+        .style('font-size', `${fontSize}px`)
         .each(function (this: SVGTextElement, d: string) {
           const text = d3.select<SVGTextElement, string>(this);
 
           const baseY = boxSize;
           const hsnX = boxSize + 8; // start of "HSN"
-          const descX = hsnX + 50; // start of description under the code
-          const maxWidth = 200;
+          const descX = hsnX + 50; // start of description
+          const maxWidth = isMobile ? 260 : 200; // wider on mobile
           const lineHeight = 1.2; // em
 
           // --- Line 1: "HSN" (normal) ---
@@ -459,16 +464,15 @@ export class SectorDistributionComponent implements OnInit {
 
           // --- Description: multiple wrapped lines under the code ---
           const description = hsnLabelMap[d] || '';
-          if (!description) {
-            return;
-          }
+          if (!description) return;
 
           const words = description.split(/\s+/);
           let line: string[] = [];
+
+          // First desc tspan
           let tspan = text
             .append('tspan')
             .attr('x', descX)
-            // .attr('dy', '1.3em') // first desc line drops below HSN line
             .style('font-weight', '400')
             .style('fill', '#000');
 
@@ -477,7 +481,12 @@ export class SectorDistributionComponent implements OnInit {
             tspan.text(line.join(' '));
 
             const node = tspan.node();
-            if (node && node.getComputedTextLength() > maxWidth) {
+            // Fallback width estimation for browsers where getComputedTextLength can be flaky
+            const approxWidth =
+              (node && node.getComputedTextLength()) ||
+              tspan.text().length * (fontSize * 0.55);
+
+            if (approxWidth > maxWidth) {
               // current word caused overflow -> move it to new line
               line.pop();
               tspan.text(line.join(' '));
