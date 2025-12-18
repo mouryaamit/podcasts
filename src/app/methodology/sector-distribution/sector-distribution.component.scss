@@ -6,7 +6,8 @@
   // justify-content: center;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* not center */
+  justify-content: flex-start;
+  /* not center */
   width: 100%;
 }
 
@@ -33,7 +34,8 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  min-width: 0; /* REQUIRED for flex scroll */
+  min-width: 0;
+  /* REQUIRED for flex scroll */
 }
 
 /* Inner holder where D3 injects the main SVG */
@@ -41,7 +43,8 @@
   /* room so caption does not overlap bottom axis */
   // padding-bottom: 30px;
   overflow-x: auto;
-  padding-bottom: 34px; /* space for caption */
+  padding-bottom: 34px;
+  /* space for caption */
 }
 
 /* Fixed caption at bottom of center container only */
@@ -57,18 +60,22 @@
   color: #444;
   background: #fff;
   padding: 4px 8px;
-  pointer-events: none; /* don't block scroll/hover */
+  pointer-events: none;
+  /* don't block scroll/hover */
 }
 
 /* RIGHT: segment labels (Micro / Small / Medium) */
 #sector_graph_right_vertical_svg {
   // flex: 0 0 50px;
   // position: relative;
-  width: 220px; /* space for HSN + description */
-  min-width: 220px;
-  max-width: 220px;
-  flex: 0 0 220px; /* fix width in flex layout */
-  overflow: visible; /* allow text to fully show */
+  width: 250px;
+  /* space for HSN + description */
+  min-width: 250px;
+  max-width: 250px;
+  flex: 0 0 250px;
+  /* fix width in flex layout */
+  overflow: visible;
+  /* allow text to fully show */
 
   svg {
     position: relative;

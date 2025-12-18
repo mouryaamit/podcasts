@@ -33,11 +33,11 @@ export class MethodologyComponent implements OnInit, AfterViewInit {
     private graphApiService: GraphApiService,
     private renderer: Renderer2,
     private el: ElementRef
-  ) {}
+  ) { }
 
   ngOnInit() {
-    // this.getSumpoornData();
-    this.getSumpoornDataFromJson();
+    this.getSumpoornData();
+    // this.getSumpoornDataFromJson();
   }
 
   getSumpoornData() {
@@ -58,7 +58,7 @@ export class MethodologyComponent implements OnInit, AfterViewInit {
               response.sumpoornData.Distributions.ActivityDistribution;
           }
         },
-        (error) => {}
+        (error) => { }
       );
   }
 

@@ -11,21 +11,13 @@ interface SegmentDetail {
 }
 
 interface Segment {
-  HsnName: string; //"services","nonServices"
+  HsnName: string; // "39"
   Details: SegmentDetail[];
 }
 
 interface RawPoint {
   category: string; // "07-2019"
-  '39': number;
-  '52': number;
-  '71': number;
-  '72': number;
-  '73': number;
-  '84': number;
-  '85': number;
-  '87': number;
-  '99': number;
+  [hsn: string]: number | string; // dynamic HSNs
 }
 
 @Component({
@@ -36,84 +28,64 @@ interface RawPoint {
 export class SectorDistributionComponent implements OnInit {
   @Input() sectorDistributionData;
   @Output() graphWidth = new EventEmitter<number>();
+  hsnRaw: Record<string, string> = {};
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     console.log('sectorDistributionData', this.sectorDistributionData);
     if (this.sectorDistributionData?.length) {
       const raw = this.convertToRawData(this.sectorDistributionData);
+      this.hsnRaw = this.filterHsnRaw(this.sectorDistributionData);
       this.generateSectorGraph(raw);
     }
+  }
+  private getHsnKeys(): string[] {
+    return Object.keys(this.hsnRaw).sort((a, b) => Number(a) - Number(b));
+  }
+
+  filterHsnRaw(sectorDistributionData: any): Record<string, string> {
+    let hsnRecord: Record<string, string> = {};
+    sectorDistributionData.forEach((hsn) => {
+      let Hsn = hsn.HsnName.split(" - ");;
+      hsnRecord[Hsn[0]] = Hsn[1].trim();
+    })
+    return hsnRecord;
   }
 
   // Convert sector-wise API data to month-wise rows
   private convertToRawData(segments: Segment[]): RawPoint[] {
     const byCategory = new Map<string, RawPoint>();
 
-    const getKeyFromSectorName = (
-      name: string
-    ): '39' | '52' | '71' | '72' | '73' | '84' | '85' | '87' | '99' => {
-      const base = name.split('(')[0].trim();
-      if (
-        base === '39' ||
-        base === '52' ||
-        base === '71' ||
-        base === '72' ||
-        base === '73' ||
-        base === '84' ||
-        base === '85' ||
-        base === '87' ||
-        base === '99'
-      ) {
-        return base;
-      }
-      // fallback – not expected with your data
-      return base as any;
-    };
-
     segments.forEach((segment) => {
-      const key = getKeyFromSectorName(segment.HsnName);
+      const hsnKey = segment.HsnName.split(' - ')[0].trim();
 
       segment.Details.forEach((detail) => {
-        // const category = _moment(detail.category, `MMM'YY`).format('MM-YYYY'); // "07-2019", ...
         const category = detail.category;
 
         let row = byCategory.get(category);
         if (!row) {
-          row = {
-            category,
-            '39': 0,
-            '52': 0,
-            '71': 0,
-            '72': 0,
-            '73': 0,
-            '84': 0,
-            '85': 0,
-            '87': 0,
-            '99': 0,
-          };
+          row = { category };
           byCategory.set(category, row);
         }
 
-        row[key] = Number(detail.value ?? 0);
+        row[hsnKey] = Number(detail.value ?? 0);
       });
     });
 
-    // Sort by date "MM-YYYY"
     const parseDate = d3.timeParse('%m-%Y');
 
     return Array.from(byCategory.values()).sort((a, b) => {
       const da = parseDate(a.category);
       const db = parseDate(b.category);
-      if (!da || !db) {
-        return a.category.localeCompare(b.category);
-      }
+      if (!da || !db) return a.category.localeCompare(b.category);
       return da.getTime() - db.getTime();
     });
   }
 
+
   private generateSectorGraph(data: RawPoint[]): void {
+    const that = this;
     const margin = { top: 10, right: 10, bottom: 60, left: 0 };
     const default_width = 25 * data.length; // 25px per real month
     const default_height = 445;
@@ -165,32 +137,67 @@ export class SectorDistributionComponent implements OnInit {
     const paddedDataForStack = [firstPadded, ...dataForStack, lastPadded];
 
     // ---- STACK CONFIG ----
-    const stackedKeys: (keyof RawPoint)[] = [
-      '39',
-      '52',
-      '71',
-      '72',
-      '73',
-      '84',
-      '85',
-      '87',
-      '99',
-    ]; // bottom -> top
+    const stackedKeys = this.getHsnKeys();
 
-    const color = d3
-      .scaleOrdinal<string>()
-      .domain(stackedKeys as string[])
-      .range([
-        '#4f81bd', // 39
-        '#FF0000', // 52
-        '#a684e0', // 71
-        '#9fd3c7', // 72
-        '#7cc576', // 73
-        '#5a9bd4', // 84
-        '#b4a7d6', // 85
-        '#f9a65a', // 87
-        '#7da7d9', // 99
-      ]);
+
+    // const color = d3
+    //   .scaleOrdinal<string>()
+    //   .domain(stackedKeys as string[])
+    //   .range([
+    //     '#4f81bd', // 39
+    //     '#FF0000', // 52
+    //     '#a684e0', // 71
+    //     '#9fd3c7', // 72
+    //     '#7cc576', // 73
+    //     '#5a9bd4', // 84
+    //     '#b4a7d6', // 85
+    //     '#f9a65a', // 87
+    //     '#7da7d9', // 99
+    //   ]);
+
+    const HSN_FIXED_COLORS: Record<string, string> = {
+      '39': '#4f81bd',
+      '52': '#FF0000',
+      '71': '#a684e0',
+      '72': '#9fd3c7',
+      '73': '#7cc576',
+      '84': '#5a9bd4',
+      '85': '#b4a7d6',
+      '87': '#f9a65a',
+      '99': '#7da7d9',
+    };
+
+    const hsnKeys = Object.keys(this.hsnRaw).sort((a, b) => Number(a) - Number(b));
+
+    const rainbowScale = d3
+      .scaleSequential()
+      .domain([0, hsnKeys.length - 1])
+      .interpolator(d3.interpolateRainbow);
+
+    const hsnColor = (hsn: string): string => {
+      // 1️⃣ Use fixed color if defined
+      if (HSN_FIXED_COLORS[hsn]) {
+        return HSN_FIXED_COLORS[hsn];
+      }
+
+      // 2️⃣ Otherwise assign from rainbow based on index
+      const index = hsnKeys.indexOf(hsn);
+
+      if (index >= 0) {
+        return rainbowScale(index);
+      }
+
+      // 3️⃣ Absolute fallback (should not happen)
+      return '#999';
+    };
+
+    // const color = d3
+    //   .scaleOrdinal<string, string>()
+    //   .domain(stackedKeys)
+    //   .range(
+    //     d3.quantize(d3.interpolateRainbow, stackedKeys.length)
+    //   );
+
 
     // stack only REAL data for drawing bars
     const stackGen = d3.stack<any>().keys(stackedKeys as string[]);
@@ -313,7 +320,7 @@ export class SectorDistributionComponent implements OnInit {
       .enter()
       .append('g')
       .attr('class', 'layer')
-      .attr('fill', (d: any) => color(d.key as string) as string);
+      .attr('fill', (d: any) => hsnColor(d.key as string) as string);
 
     seriesGroup
       .selectAll('rect')
@@ -382,7 +389,7 @@ export class SectorDistributionComponent implements OnInit {
 
     // ===== RIGHT SVG (HSN legend like image) =====
     function addRightSvg(isMobile: boolean) {
-      const svgWidth = isMobile ? 400 : 240; // wider on mobile
+      const svgWidth = isMobile ? 400 : 250; // wider on mobile
       const boxSize = isMobile ? 15 : 12; // bigger color box on mobile
       const fontSize = isMobile ? 12 : 10; // bigger font on mobile
       const rowGap = isMobile ? 52 : 52; // little more gap on mobile
@@ -400,21 +407,21 @@ export class SectorDistributionComponent implements OnInit {
         .attr('transform', 'translate(5, 15)');
 
       // HSN Description map
-      const hsnLabelMap: Record<string, string> = {
-        '39': 'Plastics',
-        '52': 'Cotton',
-        '71': 'Precious metals, metals clad with precious metal & articles thereof imitation jewellery',
-        '72': 'Iron & steel',
-        '73': 'Articles of iron or steel',
-        '84': 'Machinery & mechanical appliances, boilers, nuclear reactors; parts thereof',
-        '85': 'Electrical machinery & equipments; parts thereof',
-        '87': 'Vehicles other than railway/tramway rolling-stock, parts & accessories thereof',
-        '99': 'All Services',
-      };
+      // const hsnLabelMap: Record<string, string> = {
+      //   '39': 'Plastics',
+      //   '52': 'Cotton',
+      //   '71': 'Precious metals, metals clad with precious metal & articles thereof imitation jewellery',
+      //   '72': 'Iron & steel',
+      //   '73': 'Articles of iron or steel',
+      //   '84': 'Machinery & mechanical appliances, boilers, nuclear reactors; parts thereof',
+      //   '85': 'Electrical machinery & equipments; parts thereof',
+      //   '87': 'Vehicles other than railway/tramway rolling-stock, parts & accessories thereof',
+      //   '99': 'All Services',
+      // };
 
       // 🔻 SORT legend by HSN numerically (DESC)
       const legendData = stackedKeys
-        .filter((d) => hsnLabelMap[d])
+        .filter((d) => that.hsnRaw[d])
         .sort((a, b) => Number(b) - Number(a));
 
       const legendItem = labelGroup
@@ -432,7 +439,7 @@ export class SectorDistributionComponent implements OnInit {
         .attr('height', boxSize)
         .attr('rx', 2)
         .attr('ry', 2)
-        .attr('fill', (d) => color(d as string) as string)
+        .attr('fill', (d) => hsnColor(d as string) as string)
         .attr('y', isMobile ? 0 : 3); // slightly align on mobile
 
       // ✅ Label text with multiline tspans
@@ -463,7 +470,7 @@ export class SectorDistributionComponent implements OnInit {
           text.append('tspan').text(d).style('font-weight', '700');
 
           // --- Description: multiple wrapped lines under the code ---
-          const description = hsnLabelMap[d] || '';
+          const description = that.hsnRaw[d] || '';
           if (!description) return;
 
           const words = description.split(/\s+/);
