@@ -30,7 +30,7 @@ export class TurnoverDistributionComponent implements OnInit {
   @Input() turnoverDistributionData: Segment[] = [];
   @Output() graphWidth = new EventEmitter<number>();
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     if (this.turnoverDistributionData?.length) {
@@ -97,11 +97,11 @@ export class TurnoverDistributionComponent implements OnInit {
   private generateTurnoverGraph(data: RawPoint[]): void {
     // console.log('generateTurnoverGraph data:', data);
     const margin = {
-        top: 10,
-        right: 10,
-        bottom: 60,
-        left: 0,
-      },
+      top: 10,
+      right: 10,
+      bottom: 60,
+      left: 0,
+    },
       default_width = 25 * data.length,
       default_height = 445,
       width = default_width - margin.left - margin.right,
@@ -122,7 +122,7 @@ export class TurnoverDistributionComponent implements OnInit {
     const color = d3
       .scaleOrdinal<string>()
       .domain(stackedKeys as string[])
-      .range(['#6ccf90', '#9ddcff', '#9b89f7']); // Micro, Small, Medium
+      .range(['#78CF90', '#96D9FF', '#9981F6']); // Micro, Small, Medium
 
     const dataForStack = data
       .map((d) => {

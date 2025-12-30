@@ -29,7 +29,7 @@ export class ActivityDistributionComponent implements OnInit {
   @Input() activityDistributionData;
   @Output() graphWidth = new EventEmitter<number>();
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     // console.log('activityDistributionData', this.activityDistributionData);
@@ -90,11 +90,11 @@ export class ActivityDistributionComponent implements OnInit {
   private generateActivityGraph(data: RawPoint[]): void {
     // console.log('generateActivityGraph data:', data);
     const margin = {
-        top: 10,
-        right: 10,
-        bottom: 60,
-        left: 0,
-      },
+      top: 10,
+      right: 10,
+      bottom: 60,
+      left: 0,
+    },
       default_width = 25 * data.length,
       default_height = 445,
       width = default_width - margin.left - margin.right,
@@ -115,7 +115,7 @@ export class ActivityDistributionComponent implements OnInit {
     const color = d3
       .scaleOrdinal<string>()
       .domain(stackedKeys as string[])
-      .range(['#9b89f7', '#9ddcff']); // services, nonServices
+      .range(['#9981F6', '#96D9FF']); // services, nonServices
 
     const dataForStack = data
       .map((d) => {

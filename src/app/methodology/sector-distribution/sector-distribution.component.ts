@@ -155,16 +155,16 @@ export class SectorDistributionComponent implements OnInit {
     //     '#7da7d9', // 99
     //   ]);
 
-    const HSN_FIXED_COLORS: Record<string, string> = {
-      '39': '#4f81bd',
-      '52': '#FF0000',
-      '71': '#a684e0',
-      '72': '#9fd3c7',
-      '73': '#7cc576',
-      '84': '#5a9bd4',
-      '85': '#b4a7d6',
-      '87': '#f9a65a',
-      '99': '#7da7d9',
+    const HSN_FIXED_COLORS: Record<string, string> = { //TODO: Update color code as per veena
+      '39': '#63A2EC',
+      '52': '#3593D3',
+      '71': '#8DBBE6',
+      '72': '#B6FFCA',
+      '73': '#81B9FC',
+      '84': '#95ACFF',
+      '85': '#67E089',
+      '87': '#96D9FF',
+      '99': '#9981F6',
     };
 
     const hsnKeys = Object.keys(this.hsnRaw).sort((a, b) => Number(a) - Number(b));
