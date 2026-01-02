@@ -145,4 +145,11 @@
     order: 3;
     // margin-top: 12px;
   }
+
+}
+
+@media (max-width: 900px) {
+  .sector_graph_caption {
+    bottom: -5px;
+  }
 }

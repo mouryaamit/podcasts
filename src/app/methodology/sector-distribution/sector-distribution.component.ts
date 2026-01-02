@@ -48,7 +48,7 @@ export class SectorDistributionComponent implements OnInit {
     let hsnRecord: Record<string, string> = {};
     sectorDistributionData.forEach((hsn) => {
       let Hsn = hsn.HsnName.split(" - ");;
-      hsnRecord[Hsn[0]] = Hsn[1].trim();
+      hsnRecord[Hsn[0]] = Hsn[1]?.trim();
     })
     return hsnRecord;
   }
