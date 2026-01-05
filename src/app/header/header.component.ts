@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     this.appHeaderShadow = scroll > 0;
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -36,7 +36,9 @@ export class HeaderComponent implements OnInit {
 
       // Check if Newsroom events is active
       if (event instanceof NavigationEnd) {
-        this.isNewsroomEventsActive = currentUrl.includes('/newsroom') || currentUrl.includes('/newsroom-events');
+        this.isNewsroomEventsActive =
+          currentUrl.includes('/newsroom') ||
+          currentUrl.includes('/newsroom-events');
       }
 
       // Check if Maintenance is active

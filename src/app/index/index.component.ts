@@ -6,21 +6,21 @@ import {
   OnDestroy,
   AfterViewInit,
   ElementRef,
-} from "@angular/core";
-import { GraphApiService } from "../services/graph-api.service";
-import { SumpoornApiService } from "../services/sumpoorn-api.service";
-import { saveAs } from "file-saver";
-import * as $ from "jquery";
-import * as CryptoJS from "crypto-js";
-import { InsightsChartComponent } from "./insights-chart/insights-chart.component";
-import { Router } from "@angular/router";
-import { environment } from "../../environments/environment";
+} from '@angular/core';
+import { GraphApiService } from '../services/graph-api.service';
+import { SumpoornApiService } from '../services/sumpoorn-api.service';
+import { saveAs } from 'file-saver';
+import * as $ from 'jquery';
+import * as CryptoJS from 'crypto-js';
+import { InsightsChartComponent } from './insights-chart/insights-chart.component';
+import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 // declare var $: any;
 
 @Component({
-  selector: "app-index",
-  templateUrl: "./index.component.html",
-  styleUrls: ["./index.component.scss"],
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -37,10 +37,10 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   insightsInfoIcon = true;
   contextInfoIcon = false;
   addComentaryData: any;
-  encryptedData: string = "";
+  encryptedData: string = '';
   downloadMonth: any;
   hide: boolean = false;
-  text: string = "";
+  text: string = '';
   voices: SpeechSynthesisVoice[] = [];
   selectedVoice?: SpeechSynthesisVoice;
   private speechSynthesis = window.speechSynthesis;
@@ -57,60 +57,60 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   // Data for Context Table Mobile
   contextTableData = [
     {
-      title: "Published By",
-      items: ["GOI", "S&P Global", "Jocata"],
+      title: 'Published By',
+      items: ['GOI', 'S&P Global', 'Jocata'],
     },
     {
-      title: "Nature of Index",
+      title: 'Nature of Index',
       items: [
-        "Industrial manufacturing performance",
-        "Business optimism",
-        "Sales performance",
+        'Industrial manufacturing performance',
+        'Business optimism',
+        'Sales performance',
       ],
     },
     {
-      title: "Type of Data",
+      title: 'Type of Data',
       items: [
-        "Actual manufacturing production",
-        "Opinion based",
-        "Actual MSME monthly sales data reflected from GSTIN returns of credit-seeking entities",
+        'Actual manufacturing production',
+        'Opinion based',
+        'Actual MSME monthly sales data reflected from GSTIN returns of credit-seeking entities',
       ],
     },
     {
-      title: "Sample Size",
+      title: 'Sample Size',
       items: [
-        "--",
-        "400 companies",
-        "1000 MSMEs per month (minimum) <br/> 2000 MSMEs per month (desirable)",
+        '--',
+        '400 companies',
+        '1000 MSMEs per month (minimum) <br/> 2000 MSMEs per month (desirable)',
       ],
     },
     {
-      title: "Factors Involved",
+      title: 'Factors Involved',
       items: [
-        "Production data based on NIC (National Industrial Classification) codes",
-        "Survey based",
-        "Fact based - Delta of % of growing & declining GSTINs combined with amplitude of change in turnover.",
+        'Production data based on NIC (National Industrial Classification) codes',
+        'Survey based',
+        'Fact based - Delta of % of growing & declining GSTINs combined with amplitude of change in turnover.',
       ],
     },
     {
-      title: "Generation - Frequency & Date",
+      title: 'Generation - Frequency & Date',
       items: [
-        "Monthly: 7 weeks later, from the current month",
-        "Monthly: 1st week of succeeding month",
-        "Monthly: 4 weeks later, from the current month",
+        'Monthly: 7 weeks later, from the current month',
+        'Monthly: 1st week of succeeding month',
+        'Monthly: 4 weeks later, from the current month',
       ],
     },
     {
-      title: "Index Type and Scale",
+      title: 'Index Type and Scale',
       items: [
-        "Cumulative index <br/> Base year: 2011-12 <br/> Base value: 100",
-        "Composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 100",
-        "Relative amplitude adjusted composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 1",
+        'Cumulative index <br/> Base year: 2011-12 <br/> Base value: 100',
+        'Composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 100',
+        'Relative amplitude adjusted composite diffusion index <br/> Base year: None <br/> Base value: None <br/> Scale: 0 to 1',
       ],
     },
     {
-      title: "Seasonality Adjusted?",
-      items: ["No", "Yes", "Yes"],
+      title: 'Seasonality Adjusted?',
+      items: ['No', 'Yes', 'Yes'],
     },
   ];
 
@@ -122,7 +122,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   ) {
     this.router.events.subscribe((event) => {
       const currentUrl = this.router.url;
-      this.hide = currentUrl === "/index?hide=true";
+      this.hide = currentUrl === '/index?hide=true';
     });
   }
 
@@ -202,15 +202,15 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   getSumpoornData() {
-    const name = "SUMPOORNDATA";
-    const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
+    const name = 'SUMPOORNDATA';
+    const salt = '6fbb7e4f-756d-11ee-a429-00090faa0001';
 
     this.encryptedData = CryptoJS.AES.encrypt(name, salt).toString();
     this.graphApiService
       .getSumpoornGraphApiData({ ssUuid: this.encryptedData })
       .then(
         (response: any) => {
-          if (response && response.statusCode == "200") {
+          if (response && response.statusCode == '200') {
             this.sumpoornGraphData = response.sumpoornData;
             this.iipGraphData = response.iipData;
             this.pmiGraphData = response.pmiData;
@@ -224,7 +224,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   getSumpoornDataFromJson() {
     this.graphApiService.getSumpoornGraphApiDataFromJson().then(
       (response: any) => {
-        if (response && response.statusCode == "200") {
+        if (response && response.statusCode == '200') {
           this.sumpoornGraphData = response.sumpoornData;
           this.iipGraphData = response.iipData;
           this.pmiGraphData = response.pmiData;
@@ -232,7 +232,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       },
       (error) => {
-        console.error("getSumpoornGraphData Error", error);
+        console.error('getSumpoornGraphData Error', error);
       }
     );
   }
@@ -265,15 +265,15 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   // }
 
   scrollToRight(tab) {
-    this.insightsInfoIcon = tab === "Insights";
-    this.contextInfoIcon = tab === "Context";
+    this.insightsInfoIcon = tab === 'Insights';
+    this.contextInfoIcon = tab === 'Context';
 
-    if (tab === "Insights") {
-      $("#insights_graph_svg").scrollLeft(this.insightsGraphWidth);
-      $("#mobile_insights_graph_svg").scrollLeft(this.insightsGraphWidth);
+    if (tab === 'Insights') {
+      $('#insights_graph_svg').scrollLeft(this.insightsGraphWidth);
+      $('#mobile_insights_graph_svg').scrollLeft(this.insightsGraphWidth);
     } else {
-      $("#context_graph_svg").scrollLeft(this.contextGraphWidth);
-      $("#mobile_context_graph_svg").scrollLeft(this.contextGraphWidth);
+      $('#context_graph_svg').scrollLeft(this.contextGraphWidth);
+      $('#mobile_context_graph_svg').scrollLeft(this.contextGraphWidth);
     }
   }
 
@@ -286,9 +286,9 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   downloadSumpoornData() {
-    const salt = "6fbb7e4f-756d-11ee-a429-00090faa0001";
+    const salt = '6fbb7e4f-756d-11ee-a429-00090faa0001';
     this.encryptedData = CryptoJS.AES.encrypt(
-      document.getElementsByClassName("ec_month_title_download")[0].innerHTML,
+      document.getElementsByClassName('ec_month_title_download')[0].innerHTML,
       salt
     ).toString();
 
@@ -298,22 +298,22 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
         (resp: any) => {
           const byteArray = new Uint8Array(
             atob(resp.pdf)
-              .split("")
+              .split('')
               .map((char) => char.charCodeAt(0))
           );
           const blob = new Blob([byteArray], {
-            type: resp.mimeType + ";charset=utf-8",
+            type: resp.mimeType + ';charset=utf-8',
           });
           saveAs(blob, resp.fileName);
         },
         (error) => {
-          console.error("downloadSumpoornGraphDetails", error);
-          $("#errorsModal").show();
+          console.error('downloadSumpoornGraphDetails', error);
+          $('#errorsModal').show();
         }
       );
   }
   openInsightsInfoIcon(event) {
-    this.insightsChartComponent?.openInfoIcon("#mobile_insights_graph_svg", {
+    this.insightsChartComponent?.openInfoIcon('#mobile_insights_graph_svg', {
       clientX: event.clientX,
       clientY: event.clientY,
     });
@@ -356,7 +356,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
     let timeElapsed = 0;
 
     // Track word timings
-    this.utterance.addEventListener("boundary", (event) => {
+    this.utterance.addEventListener('boundary', (event) => {
       if (event.charIndex !== undefined) {
         const elapsedText = this.text.substring(0, event.charIndex);
         const elapsedWords = elapsedText.split(/\s+/).length;
@@ -372,7 +372,7 @@ export class IndexComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
 
-    this.utterance.addEventListener("end", () => {
+    this.utterance.addEventListener('end', () => {
       this.playing = false;
       this.paused = false;
       this.currentTime = this.totalDuration;
