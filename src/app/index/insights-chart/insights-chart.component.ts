@@ -1683,102 +1683,45 @@ export class InsightsChartComponent implements OnInit {
       return '';
     }
 
+    // ✅ Proper year boundary lines using time scale
     function addLinesForYears() {
-      let years: any = [];
-      mydata.forEach((element) => {
-        let year = element.category.split('-')[1];
-        const i = years.findIndex((e) => e['year'] === year);
-        if (i == -1) years.push({ year: year, count: 1 });
-        else years[i]['count']++;
-      });
-      const firstLine = svg.append('g'); // first line
-      firstLine
+      const xYearGrid = d3
+        .axisBottom(x2)
+        .ticks(d3.timeYear.every(1))
+        .tickSize(-height) // grid up into the chart
+        .tickFormat(() => ''); // no text here, just lines
+
+      const gYear = svg
+        .append('g')
+        .attr('class', 'x_year_grid')
+        .attr('transform', `translate(0,${height})`)
+        .call(xYearGrid);
+
+      // Style the main grid lines (inside chart)
+      gYear
+        .selectAll('.tick line')
+        .style('stroke-dasharray', '3,3')
+        .style('stroke', '#959595')
+        .style('opacity', 0.8);
+
+      // Remove the baseline
+      gYear.select('.domain').remove();
+
+      // 👉 Extend year line down till year value (same 35px used in xAxis_year.tickSize(35))
+      const extraDown = 60; // adjust if you move the year text
+
+      gYear
+        .selectAll('.tick')
         .append('line')
-        .attr('x1', 0.2)
-        .attr('y1', 0)
-        .attr('x2', 0.2)
-        .attr('y2', height + 63)
-        .attr('stroke', '#E1E1E1')
-        .attr('stroke-width', '1');
-      years.forEach((year) => {
-        let yearSvg = svg.append('g');
-        if (years.indexOf(year) == 0) {
-          // 2019
-          yearSvg
-            .append('line')
-            .attr('x1', 25 * year.count + 2)
-            .attr('y1', 0)
-            .attr('x2', 25 * year.count + 2)
-            .attr('y2', height + 63)
-            .attr('stroke', '#959595')
-            .attr('stroke-width', '1')
-            .attr('stroke-dasharray', '2');
-        } else if (years.indexOf(year) == years.length - 1) {
-          //last line
-          yearSvg
-            .append('line')
-            .attr(
-              'x1',
-              25 * year.count +
-                (300 * years.indexOf(year) -
-                  25 * (12 - years[0].count) +
-                  years.indexOf(year) * 2.62) //3 4
-            )
-            .attr('y1', 0)
-            .attr(
-              'x2',
-              25 * year.count +
-                (300 * years.indexOf(year) -
-                  25 * (12 - years[0].count) +
-                  years.indexOf(year) * 2.62) //3 4
-            )
-            .attr('y2', height + 35) //63
-            .attr('stroke', '#E1E1E1')
-            .attr('stroke-width', '1');
-        } else {
-          // all year line except to 2019
-          yearSvg
-            .append('line')
-            .attr(
-              'x1',
-              25 * year.count +
-                (300 * years.indexOf(year) -
-                  25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3) //3.8 4.8
-            )
-            .attr('y1', 0)
-            .attr(
-              'x2',
-              25 * year.count +
-                (300 * years.indexOf(year) -
-                  25 * (12 - years[0].count) +
-                  years.indexOf(year) * 3) //3.8 4.8
-            )
-            .attr('y2', height + 63)
-            .attr('stroke', '#959595')
-            .attr('stroke-width', '1')
-            .attr('stroke-dasharray', '2');
-        }
-      });
-      //top line of graph
-      // const top_line = svg.append("g");
-      // top_line.append("line")
-      //     .attr("x1", width + 25)
-      //     .attr("x2", 0)
-      //     .attr("y1", 0)
-      //     .attr("y2", 0)
-      //     .style("stroke", "#E1E1E1")
-      //     .attr("stroke-width", "0.7");
-      // bottom line of graph
-      const bottom_line = svg.append('g');
-      bottom_line
-        .append('line')
-        .attr('x1', width + 25)
+        .attr('class', 'year-line-extension')
+        .attr('x1', 0)
+        .attr('y1', 0) // start at x-axis
         .attr('x2', 0)
-        .attr('y1', height + 62)
-        .attr('y2', height + 62)
-        .style('stroke', '#E1E1E1')
-        .attr('stroke-width', '0.7');
+        .attr('y2', extraDown) // extend downward
+        .style('stroke', '#5B5B5B')
+        .style('stroke-width', 1.6)
+        .style('stroke-dasharray', '3,3')
+        .style('opacity', 0.8);
     }
 
     function addFlags() {

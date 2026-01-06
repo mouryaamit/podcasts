@@ -4,39 +4,41 @@ import * as AOS from 'aos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements AfterViewInit {
   partners: Array<any> = [
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-sahamati.webp',
-      imageAlt: 'Sahamati Logo'
+      imageAlt: 'Sahamati Logo',
     },
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-ceed.webp',
-      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
+      imageAlt:
+        'Centre for Excellence in Entrepreneurship and Development Logo',
     },
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-lead.webp',
-      imageAlt: 'Lead Logo'
+      imageAlt: 'Lead Logo',
     },
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-sahamati.webp',
-      imageAlt: 'Sahamati Logo'
+      imageAlt: 'Sahamati Logo',
     },
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-ceed.webp',
-      imageAlt: 'Centre for Excellence in Entrepreneurship and Development Logo'
+      imageAlt:
+        'Centre for Excellence in Entrepreneurship and Development Logo',
     },
     {
       // title: 'Partner',
       imageSrc: 'assets/images/partner-lead.webp',
-      imageAlt: 'Lead Logo'
+      imageAlt: 'Lead Logo',
     },
   ];
 
@@ -56,5 +58,4 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewChecked(): void {
     AOS.refresh();
   }
-
 }

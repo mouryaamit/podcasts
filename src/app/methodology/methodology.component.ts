@@ -1,22 +1,85 @@
-import { Component, ElementRef, Renderer2, AfterViewInit, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Renderer2,
+  OnInit,
+  AfterViewInit,
+} from '@angular/core';
+import * as CryptoJS from 'crypto-js';
+import { GraphApiService } from '../services/graph-api.service';
+import stateCityData from '../../assets/json/stateCityData.json';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-methodology',
   templateUrl: './methodology.component.html',
-  styleUrls: ['./methodology.component.scss']
+  styleUrls: ['./methodology.component.scss'],
 })
-export class MethodologyComponent implements OnInit {
+export class MethodologyComponent implements OnInit, AfterViewInit {
   isGeoActive = true;
   isTurnoverActive = false;
   isSectorActive = false;
   isActivityActive = false;
   sectionStates: boolean[] = [];
+  activityDistributionData: any = [];
+  turnoverDistributionData: any = [];
+  sectorDistributionData: any = [];
+  encryptedData: string = '';
+  turnoverDistributionGraphWidth: any;
+  activityDistributionGraphWidth: any;
+  sectorDistributionGraphWidth: any;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(
+    private graphApiService: GraphApiService,
+    private renderer: Renderer2,
+    private el: ElementRef
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getSumpoornData();
+    // this.getSumpoornDataFromJson();
   }
-  
+
+  getSumpoornData() {
+    const name = 'SUMPOORNDATA';
+    const salt = '6fbb7e4f-756d-11ee-a429-00090faa0001';
+
+    this.encryptedData = CryptoJS.AES.encrypt(name, salt).toString();
+    this.graphApiService
+      .getSumpoornGraphApiData({ ssUuid: this.encryptedData })
+      .then(
+        (response: any) => {
+          if (response && response.statusCode == '200') {
+            this.sectorDistributionData =
+              response.sumpoornData.Distributions.HsnDistributionByValue;
+            this.turnoverDistributionData =
+              response.sumpoornData.Distributions.MsmDistribution;
+            this.activityDistributionData =
+              response.sumpoornData.Distributions.ActivityDistribution;
+          }
+        },
+        (error) => { }
+      );
+  }
+
+  getSumpoornDataFromJson() {
+    this.graphApiService.getSumpoornGraphApiDataFromJson().then(
+      (response: any) => {
+        if (response && response.statusCode == '200') {
+          this.sectorDistributionData =
+            response.sumpoornData.Distributions.HsnDistributionByValue;
+          this.turnoverDistributionData =
+            response.sumpoornData.Distributions.MsmDistribution;
+          this.activityDistributionData =
+            response.sumpoornData.Distributions.ActivityDistribution;
+        }
+      },
+      (error) => {
+        console.error('getSumpoornGraphData Error', error);
+      }
+    );
+  }
+
   // Active & Inactive Icons for Tabs
   toggleIcons(type: string) {
     this.resetAllIcons();
@@ -37,152 +100,9 @@ export class MethodologyComponent implements OnInit {
     this.isSectorActive = false;
     this.isActivityActive = false;
   }
-  
+
   // States, UTs, Cities JSON
-  stateCityData = {
-    "states": [
-      {
-        "name": "Andaman and Nicobar Islands",
-        "cities": ["South Andaman"]
-      },
-      {
-        "name": "Andhra Pradesh",
-        "cities": ["Visakhapatnam", "Krishna", "Guntur", "Prakasam", "East Godavari", "Anantapur", "Chittoor", "Vizianagaram", "YSR", "Srikakulam", "SPSR Nellore", "West Godavari", "Kurnool", "Sri Potti Sriramulu Nellore", "Ananthapuramu", "NTR", "Konaseema", "Bapatla", "Tirupati"]
-      },
-      {
-        "name": "Arunachal Pradesh",
-        "cities": ["West Siang"]
-      },
-      {
-        "name": "Assam",
-        "cities": ["Kamrup Metropolitan", "Kamrup", "Sonitpur", "Nagaon", "Tinsukia", "Darrang", "Sivasagar", "Dibrugarh", "Lakhimpur", "Golaghat", "Karimganj", "Bongaigaon", "Jorhat", "Nalbari", "Barpeta", "Cachar", "Karbi Anglong", "Marigaon", "Dima Hasao", "Udalguri"]
-      },
-      {
-        "name": "Bihar",
-        "cities": ["Patna", "Samastipur", "Muzaffarpur", "Bhagalpur", "Gaya", "Purbi Champaran", "Vaishali", "Darbhanga", "Katihar", "Begusarai", "Pashchim Champaran", "Rohtas", "Banka", "Saran", "Sitamarhi", "Khagaria", "Madhubani", "Nalanda", "Gopalganj", "Purnea", "Aurangabad", "Bhojpur", "Jamui", "Kishanganj", "Madhepura", "Sheikhpura", "Buxar", "Munger", "Nawada", "Siwan", "Supaul", "Jehanabad", "Saharsa", "Araria", "Arwal", "Kaimur", "Lakhisarai", "Sheohar"]
-      },
-      {
-        "name": "Chandigarh",
-        "cities": ["Chandigarh"]
-      },
-      {
-        "name": "Chhattisgarh",
-        "cities": ["Raipur", "Durg", "Rajnandgaon", "Bilaspur", "Janjgir Champa", "Korba", "Raigarh", "Mahasamund", "Dhamtari", "Jashpur", "Balod", "Bemetara", "Kabirdham", "Mungeli", "Baloda Bazar", "Balodabazar Bhatapara", "Bastar", "Kanker", "Kondagaon", "Korea", "Surguja"]
-      },
-      {
-        "name": "Dadra and Nagar Haveli<br/>and Daman and Diu",
-        "cities": ["Dadra And Nagar Haveli", "Daman", "Dadra & Nagar Haveli"]
-      },
-      {
-        "name": "Delhi",
-        "cities": ["North West Delhi", "West Delhi", "New Delhi", "East Delhi", "North Delhi", "Central Delhi", "South Delhi", "South West Delhi", "North East Delhi", "South East Delhi", "Shahdara"]
-      },
-      {
-        "name": "Goa",
-        "cities": ["North Goa", "South Goa"]
-      },
-      {
-        "name": "Gujarat",
-        "cities": ["Ahmedabad", "Surat", "Rajkot", "Vadodara", "Valsad", "Kachchh", "Morbi", "Gandhinagar", "Mahesana", "Banaskantha", "Bharuch", "Bhavnagar", "Jamnagar", "Anand", "Surendranagar", "Patan", "Kheda", "Navsari", "Sabarkantha", "Mehsana", "Panch Mahals", "Dahod", "Aravalli", "Chhotaudepur", "Devbhumi Dwarka", "Junagadh", "Tapi", "Amreli", "Mahisagar", "Botad", "Gir Somnath", "Narmada", "Panchmahals"]
-      },
-      {
-        "name": "Haryana",
-        "cities": ["Faridabad", "Gurugram", "Sonipat", "Panipat", "Rohtak", "Jhajjar", "Rewari", "Hisar", "Panchkula", "Bhiwani", "Ambala", "Karnal", "Yamunanagar", "Jind", "Palwal", "Gurgaon", "Sirsa", "Fatehabad", "Mahendragarh", "Kurukshetra", "Kaithal", "Mewat", "Nuh", "Charkhi Dadri"]
-      },
-      {
-        "name": "Himachal Pradesh",
-        "cities": ["Solan", "Kangra", "Sirmaur", "Una", "Shimla", "Hamirpur", "Kullu", "Mandi", "Bilaspur"]
-      },
-      {
-        "name": "Jammu and Kashmir",
-        "cities": ["Jammu", "Samba", "Srinagar", "Anantnag", "Kathua", "Udhampur", "Budgam", "Baramulla", "Reasi", "Doda", "Ganderbal", "Kupwara", "Rajouri"]
-      },
-      {
-        "name": "Jharkhand",
-        "cities": ["Ranchi", "Seraikela Kharsawan", "East Singhbhum", "Dhanbad", "Ramgarh", "Bokaro", "Garhwa", "Palamu", "Seraikela-Kharsawan", "Hazaribag", "Deoghar", "Giridih", "Pakur", "Dumka", "Gumla", "Chatra", "West Singhbhum", "Koderma", "Lohardaga", "Simdega", "Khunti", "Sahibganj"]
-      },
-      {
-        "name": "Karnataka",
-        "cities": ["Bengaluru", "Bengaluru Rural", "Dharwad", "Mysuru", "Belagavi", "Bengaluru (Bangalore) Urban", "Shivamogga", "Ballari", "Dakshina Kannada", "Tumakuru", "Kolar", "Bagalkote", "Ramanagara", "Uttara Kannada", "Davanagere", "Belagavi (Belgaum)", "Vijayapura", "Chitradurga", "Hassan", "Udupi", "Chikkamagaluru", "Gadag", "Mandya", "Mysuru (Mysore)", "Bengaluru (Bangalore) Rural", "Kalaburagi", "Haveri", "Koppal", "Bidar", "Raichur", "Chikkaballapura", "Chamarajanagar", "Kodagu", "Ballari (Bellary)", "Yadgir", "Chamarajanagara", "Chikballapur", "Vijayanagara", "Yadgiri"]
-      },
-      {
-        "name": "Kerala",
-        "cities": ["Ernakulam", "Thrissur", "Thiruvananthapuram", "Kottayam", "Palakkad", "Kozhikode", "Alappuzha", "Kollam", "Malappuram", "Kannur", "Idukki", "Wayanad", "Pathanamthitta", "Kasaragod", "Kasargod"]
-      },
-      {
-        "name": "Ladakh",
-        "cities": ["Kargil"]
-      },
-      {
-        "name": "Madhya Pradesh",
-        "cities": ["Indore", "Bhopal", "Jabalpur", "Satna", "Dhar", "Dewas", "Chhindwara", "Ujjain", "Raisen", "Gwalior", "Katni", "Rewa", "Singrauli", "Sidhi", "Shahdol", "Mandla", "Betul", "Ratlam", "Sagar", "Shajapur", "Hoshangabad", "Narsinghpur", "East Nimar", "Neemuch", "Morena", "Balaghat", "Chhatarpur", "Khargone", "Ashoknagar", "Khandwa", "Mandsaur", "Seoni", "Umaria", "Vidisha", "Tikamgarh", "Burhanpur", "Harda", "Shivpuri", "Barwani", "Guna", "Rajgarh", "Sehore", "Alirajpur", "Bhind", "Panna"]
-      },
-      {
-        "name": "Maharashtra",
-        "cities": ["Pune", "Thane", "Mumbai", "Nashik", "Nagpur", "Aurangabad", "Kolhapur", "Palghar", "Raigad", "Sangli", "Ahmednagar", "Satara", "Amravati", "Solapur", "Chandrapur", "Jalgaon", "Jalna", "Latur", "Hingoli", "Nanded", "Akola", "Beed", "Osmanabad", "Bhandara", "Gondia", "Ratnagiri", "Sindhudurg", "Dhule", "Gadchiroli", "Nandurbar", "Parbhani", "Unknown", "Wardha", "Buldhana"]
-      },
-      {
-        "name": "Manipur",
-        "cities": ["Imphal West", "Imphal East", "Churachandpur"]
-      },
-      {
-        "name": "Meghalaya",
-        "cities": ["East Khasi Hills", "East Garo Hills", "Ri Bhoi"]
-      },
-      {
-        "name": "Mizoram",
-        "cities": ["Aizawl", "Kolasib"]
-      },
-      {
-        "name": "Nagaland",
-        "cities": ["Dimapur", "Kohima"]
-      },
-      {
-        "name": "Odisha",
-        "cities": ["Khordha", "Cuttack", "Sundargarh", "Ganjam", "Baleswar", "Jajpur", "Baleshwar", "Sambalpur", "Koraput", "Mayurbhanj", "Jharsuguda", "Kendujhar", "Angul", "Bargarh", "Rayagada", "Puri", "Bhadrak", "Jagatsinghapur", "Nabarangpur", "Boudh", "Dhenkanal", "Nayagarh", "Gajapati", "Deogarh", "Jagatsinghpur", "Balangir", "Balasore", "Kalahandi", "Kendrapara", "Malkangiri"]
-      },
-      {
-        "name": "Puducherry",
-        "cities": ["Puducherry", "Pondicherry", "Karaikal", "Mahe"]
-      },
-      {
-        "name": "Punjab",
-        "cities": ["Amritsar", "Barnala", "Bathinda", "Faridkot", "Fatehgarh Sahib", "Fazilka", "Ferozepur", "Gurdaspur", "Hoshiarpur", "Jalandhar", "Kapurthala", "Ludhiana", "Mansa", "Moga", "Pathankot", "Patiala", "Rupnagar", "SAS Nagar", "Sangrur", "Shahid Bhagat Singh Nagar", "Sri Muktsar Sahib", "Tarn Taran"]
-      },
-      {
-        "name": "Rajasthan",
-        "cities": ["Ajmer", "Alwar", "Banswara", "Baran", "Barmer", "Bharatpur", "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Churu", "Dausa", "Dholpur", "Dungarpur", "Hanumangarh", "Jaipur", "Jaisalmer", "Jalore", "Jhalawar", "Jhunjhunu", "Jodhpur", "Karauli", "Kota", "Nagaur", "Pali", "Pratapgarh", "Rajsamand", "Sawai Madhopur", "Sikar", "Sirohi", "Sri Ganganagar", "Tonk", "Udaipur"]
-      },
-      {
-        "name": "Sikkim",
-        "cities": ["East", "Gangtok", "North", "South", "West"]
-      },
-      {
-        "name": "Tamil Nadu",
-        "cities": ["Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode", "Kallakurichi", "Kanchipuram", "Kanyakumari", "Karur", "Krishnagiri", "Madurai", "Mayiladuthurai", "Nagapattinam", "Namakkal", "Nilgiris", "Perambalur", "Pudukkottai", "Ramanathapuram", "Ranipet", "Salem", "Sivaganga", "Tenkasi", "Thanjavur", "Theni", "Thoothukudi", "Tiruchirappalli", "Tirunelveli", "Tirupathur", "Tiruppur", "Thiruvallur", "Tiruvannamalai", "Thiruvarur", "Vellore", "Viluppuram", "Virudhunagar"]
-      },
-      {
-        "name": "Telangana",
-        "cities": ["Adilabad", "Bhadradri Kothagudem", "Hanumakonda", "Hyderabad", "Jagtial", "Jangaon", "Jayashankar Bhupalpally", "Jogulamba Gadwal", "Kamareddy", "Karimnagar", "Khammam", "Kumuram Bheem Asifabad", "Mahabubabad", "Mahabubnagar", "Mancherial", "Medak", "Medchal - Malkajgiri", "Nagarkurnool", "Nalgonda", "Nirmal", "Nizamabad", "Peddapalli", "Rajanna Sircilla", "Rangareddy", "Sangareddy", "Siddipet", "Suryapet", "Vikarabad", "Wanaparthy", "Warangal Rural", "Warangal Urban", "Yadadri Bhuvanagiri"]
-      },
-      {
-        "name": "Tripura",
-        "cities": ["Dhalai", "Gomati", "Khowai", "North Tripura", "Sepahijala", "South Tripura", "Unakoti", "West Tripura"]
-      },
-      {
-        "name": "Uttar Pradesh",
-        "cities": ["Agra", "Aligarh", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", "Ayodhya", "Azamgarh", "Budaun", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", "Basti", "Bhadohi", "Bijnor", "Budaun", "Bulandshahar", "Chandauli", "Chitrakoot", "Deoria", "Etah", "Etawah", "Farrukhabad", "Fatehpur", "Firozabad", "Gautam Buddha Nagar", "Ghaziabad", "Ghazipur", "Gonda", "Gorakhpur", "Hamirpur", "Hapur", "Hardoi", "Hathras", "Jalaun", "Jaunpur", "Jhansi", "Kannauj", "Kanpur Dehat", "Kanpur Nagar", "Kasganj", "Kaushambi", "Kushinagar", "Lakhimpur Kheri", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Mau", "Meerut", "Mirzapur", "Moradabad", "Muzaffarnagar", "Nayagarh", "Pilibhit", "Pratapgarh", "Prayagraj", "Rae Bareli", "Rampur", "Saharanpur", "Sambhal", "Sant Kabeer Nagar", "Shahjahanpur", "Shamli", "Shravasti", "Siddharthnagar", "Sitapur", "Sonbhadra", "Sultanpur", "Unnao", "Varanasi"]
-      },
-      {
-        "name": "Uttarakhand",
-        "cities": ["Almora", "Bageshwar", "Chamoli", "Champawat", "Dehradun", "Haridwar", "Nainital", "Pauri Garhwal", "Pithoragarh", "Rudraprayag", "Tehri Garhwal", "Udham Singh Nagar", "Uttarkashi"]
-      },
-      {
-        "name": "West Bengal",
-        "cities": ["Alipurduar", "Bankura", "Birbhum", "Cooch Behar", "Dakshin Dinajpur", "Darjeeling", "Hooghly", "Howrah", "Jalpaiguri", "Jhargram", "Kalimpong", "Kolkata", "Malda", "Murshidabad", "Nadia", "North 24 Parganas", "Paschim Bardhaman", "Paschim Medinipur", "Purba Bardhaman", "Purba Medinipur", "Purulia", "South 24 Parganas", "Uttar Dinajpur"]
-      }
-    ]
-  };
+  stateCityData = stateCityData;
 
   toggleAccordion(index: number) {
     this.sectionStates[index] = !this.sectionStates[index]; // Toggle the state
@@ -190,12 +110,16 @@ export class MethodologyComponent implements OnInit {
 
   ngAfterViewInit() {
     // Scrolling Nature of States & UTs wrt Geo Map
-    const scrollableContent = this.el.nativeElement.querySelector('#scrollableContent');
+    const scrollableContent =
+      this.el.nativeElement.querySelector('#scrollableContent');
     const fixedImage = this.el.nativeElement.querySelector('#fixedImage');
 
     if (scrollableContent && fixedImage) {
       this.renderer.listen(scrollableContent, 'scroll', (event) => {
-        if (scrollableContent.scrollHeight - scrollableContent.scrollTop === scrollableContent.clientHeight) {
+        if (
+          scrollableContent.scrollHeight - scrollableContent.scrollTop ===
+          scrollableContent.clientHeight
+        ) {
           this.renderer.setStyle(document.body, 'overflow', 'auto');
         } else {
           this.renderer.setStyle(document.body, 'overflow', 'hidden');
@@ -204,5 +128,34 @@ export class MethodologyComponent implements OnInit {
     } else {
       // console.log('One or both of the elements with the specified IDs were not found.');
     }
+  }
+
+  scrollToRight(tab) {
+    console.log('scrollToRight', tab);
+    if (tab === 'turnover') {
+      $('#turnover_graph_svg_inner').scrollLeft(
+        this.turnoverDistributionGraphWidth
+      );
+    } else if (tab === 'activity') {
+      $('#activity_graph_svg_inner').scrollLeft(
+        this.activityDistributionGraphWidth
+      );
+    } else if (tab === 'sector') {
+      $('#sector_graph_svg_inner').scrollLeft(
+        this.sectorDistributionGraphWidth
+      );
+    }
+  }
+
+  checkTurnoverDistributionGraphWidth(event) {
+    this.turnoverDistributionGraphWidth = event;
+  }
+
+  checkActivityDistributionGraphWidth(event) {
+    this.activityDistributionGraphWidth = event;
+  }
+
+  checkSectorDistributionGraphWidth(event) {
+    this.sectorDistributionGraphWidth = event;
   }
 }

@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./media-kit.component.scss'],
 })
 export class MediaKitComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
   // Data for Events
   eventsData = [
     { title: 'Executive meeting information details', date: '10/10/2023' },
     { title: 'Sumpoorn Profile Document', date: '05/10/2023' },
-    { title: 'Sumpoorn indexing report presentation', date: '23/09/2023' }
+    { title: 'Sumpoorn indexing report presentation', date: '23/09/2023' },
   ];
 
   // Data for Logos
@@ -80,5 +80,5 @@ export class MediaKitComponent implements OnInit {
     document.body.removeChild(link);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

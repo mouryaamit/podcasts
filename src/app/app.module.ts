@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { MethodologyComponent } from './methodology/methodology.component';
+import { ActivityDistributionComponent } from './methodology/activity-distribution/activity-distribution.component';
+import { SectorDistributionComponent } from './methodology/sector-distribution/sector-distribution.component';
+import { TurnoverDistributionComponent } from './methodology/turnover-distribution/turnover-distribution.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -35,12 +38,16 @@ import { RoadmapModelComponent } from './dialog/roadmap-model/roadmap-model.comp
 import { SubscribeButtonComponent } from './subscribe-button/subscribe-button.component';
 import { PartnersComponent } from './partners/partners.component';
 import {
-  AlphaNumericWithSpecialsAndSpaceOnlyDirective, AlphaNumericOnlyDirective,
-  AlphaWithSpacesCommaHiphenDirective, AlphaWithSpacesDirective,
-  NumberOnlyDirective, AlphaNumSpecialsDirective, AlphaWithUnderscoreCommaDirective
+  AlphaNumericWithSpecialsAndSpaceOnlyDirective,
+  AlphaNumericOnlyDirective,
+  AlphaWithSpacesCommaHiphenDirective,
+  AlphaWithSpacesDirective,
+  NumberOnlyDirective,
+  AlphaNumSpecialsDirective,
+  AlphaWithUnderscoreCommaDirective,
 } from './directive/common.directive';
 import { FormsModule } from '@angular/forms';
-import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import FormsModule
+import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe';
 
 @NgModule({
   declarations: [
@@ -50,6 +57,9 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
     HomeComponent,
     IndexComponent,
     MethodologyComponent,
+    ActivityDistributionComponent,
+    SectorDistributionComponent,
+    TurnoverDistributionComponent,
     RoadmapComponent,
     AboutComponent,
     ContactComponent,
@@ -73,14 +83,14 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
     AlphaWithSpacesCommaHiphenDirective,
     AlphaWithUnderscoreCommaDirective,
     AlphaNumSpecialsDirective,
-    SecondsToTimePipe
+    SecondsToTimePipe,
   ],
   entryComponents: [
-    SubscribeModelComponent, InstitutionLoginModelComponent, RoadmapModelComponent
+    SubscribeModelComponent,
+    InstitutionLoginModelComponent,
+    RoadmapModelComponent,
   ],
-  exports: [
-
-  ],
+  exports: [],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -100,16 +110,16 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe'; // Import Form
         info: 'toast-info',
         success: 'toast-success',
         warning: 'toast-warning',
-      }
-    }
-
-    ),
+      },
+    }),
   ],
   providers: [
     {
-      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
-    }
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
