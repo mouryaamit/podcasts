@@ -12,7 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "skipLibCheck":true,
+    "skipLibCheck": true,
     "useUnknownInCatchVariables": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -21,6 +21,8 @@
     "target": "es2020",
     "module": "es2020",
     "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "es2020",
       "dom"
@@ -28,9 +30,9 @@
   },
   "paths": {
     "@syncfusion/*": [
-        "./node_modules/@syncfusion/*"
+      "./node_modules/@syncfusion/*"
     ],
-},
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

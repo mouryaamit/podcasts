@@ -1,41 +1,84 @@
-<main class="text-center app_index" [ngStyle]="{ paddingTop: hide ? '0px' : '' }">
+<main
+  class="text-center app_index"
+  [ngStyle]="{ paddingTop: hide ? '0px' : '' }"
+>
   <div class="row gx-0 justify-content-center">
     <div class="col-12">
       <div class="app_index_chart_con">
         <div class="d-flex justify-content-around align-items-center">
           <p class="nav-pills-static-text d-flex d-md-none">Index</p>
-          <ul class="nav nav-pills justify-content-center p-2" id="graph-tab" role="tablist">
+          <ul
+            class="nav nav-pills justify-content-center p-2"
+            id="graph-tab"
+            role="tablist"
+          >
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="graph-insights-tab" data-bs-toggle="pill"
-                data-bs-target="#graph-insights" type="button" role="tab" aria-controls="graph-insights"
-                aria-selected="true" (click)="scrollToRight('Insights')">
+              <button
+                class="nav-link active"
+                id="graph-insights-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#graph-insights"
+                type="button"
+                role="tab"
+                aria-controls="graph-insights"
+                aria-selected="true"
+                (click)="scrollToRight('Insights')"
+              >
                 Insights
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="graph-context-tab" data-bs-toggle="pill" data-bs-target="#graph-context"
-                type="button" role="tab" aria-controls="graph-context" aria-selected="false"
-                (click)="scrollToRight('Context')">
+              <button
+                class="nav-link"
+                id="graph-context-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#graph-context"
+                type="button"
+                role="tab"
+                aria-controls="graph-context"
+                aria-selected="false"
+                (click)="scrollToRight('Context')"
+              >
                 Context
               </button>
             </li>
           </ul>
-          <a class="d-flex d-md-none" *ngIf="insightsInfoIcon" id="insightsInfoIcon"
-            (click)="openInsightsInfoIcon($event)">
+          <a
+            class="d-flex d-md-none"
+            *ngIf="insightsInfoIcon"
+            id="insightsInfoIcon"
+            (click)="openInsightsInfoIcon($event)"
+          >
             <img src="assets/icons/info.svg" class="img-fluid" />
           </a>
-          <a class="d-flex d-md-none" *ngIf="contextInfoIcon" data-bs-toggle="modal" data-bs-target="#infoModal"
-            (click)="showInfo('contextChartInfo')">
+          <a
+            class="d-flex d-md-none"
+            *ngIf="contextInfoIcon"
+            data-bs-toggle="modal"
+            data-bs-target="#infoModal"
+            (click)="showInfo('contextChartInfo')"
+          >
             <img src="assets/icons/info.svg" class="img-fluid" />
           </a>
         </div>
         <div class="tab-content" id="graph-tabContent">
-          <div class="tab-pane fade show active" id="graph-insights" role="tabpanel"
-            aria-labelledby="graph-insights-tab">
+          <div
+            class="tab-pane fade show active"
+            id="graph-insights"
+            role="tabpanel"
+            aria-labelledby="graph-insights-tab"
+          >
             <div class="index_graphs">
-              <app-insights-chart [sumpoornGraphData]="sumpoornGraphData" (graphWidth)="checkInsightsGraphWidth($event)"
-                *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"></app-insights-chart>
-              <div id="contextMenuMobile" style="display: none" class="contextMenu">
+              <app-insights-chart
+                [sumpoornGraphData]="sumpoornGraphData"
+                (graphWidth)="checkInsightsGraphWidth($event)"
+                *ngIf="sumpoornGraphData?.IndexGeneration?.length > 0"
+              ></app-insights-chart>
+              <div
+                id="contextMenuMobile"
+                style="display: none"
+                class="contextMenu"
+              >
                 <div id="closeInfoMobile" class="close" style="cursor: pointer">
                   &times;
                 </div>
@@ -46,13 +89,25 @@
               <div class="row gx-0">
                 <!-- Web Commentary -->
                 <div class="col-lg-11 col-xl-9 container d-none d-lg-block">
-                  <div id="carouselCommentary" class="carousel slide carousel-fade carousel_commentary"
-                    data-bs-wrap="false">
-                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="prev" id="#slide_prev"
-                      #slide_prev>
+                  <div
+                    id="carouselCommentary"
+                    class="carousel slide carousel-fade carousel_commentary"
+                    data-bs-wrap="false"
+                  >
+                    <a
+                      role="button"
+                      data-bs-target="#carouselCommentary"
+                      data-bs-slide="prev"
+                      id="#slide_prev"
+                      #slide_prev
+                    >
                       <div class="carousel_controls">
                         <span class="control_name" id="prev_month">Prev</span>
-                        <img src="assets/icons/chevron_left.svg" class="button_left_arrow" alt="Chevron Left" />
+                        <img
+                          src="assets/icons/chevron_left.svg"
+                          class="button_left_arrow"
+                          alt="Chevron Left"
+                        />
                       </div>
                     </a>
                     <div class="carousel-inner">
@@ -71,14 +126,24 @@
                         <div class="commentary_body">
                           <div class="row">
                             <div class="col-md-4 commentary_body_left">
-                              <div class="d-inline-flex align-items-center position-relative">
-                                <h6 class="commentary_body_left_title mc_title"></h6>
+                              <div
+                                class="d-inline-flex align-items-center position-relative"
+                              >
+                                <h6
+                                  class="commentary_body_left_title mc_title"
+                                ></h6>
                                 <span class="title_rating mc_rating"></span>
-                                <span class="circle_waves circle_one isLatestIdx"></span>
-                                <span class="circle_waves circle_two isLatestIdx"></span>
+                                <span
+                                  class="circle_waves circle_one isLatestIdx"
+                                ></span>
+                                <span
+                                  class="circle_waves circle_two isLatestIdx"
+                                ></span>
                                 <span class="circle_waves circle_three"></span>
                               </div>
-                              <p class="commentary_body_left_detail mc_body"></p>
+                              <p
+                                class="commentary_body_left_detail mc_body"
+                              ></p>
                               <div class="mc_ytvideo"></div>
                               <div class="mc_graph img-fluid">
                                 <div id="commentary_graph"></div>
@@ -86,7 +151,9 @@
                             </div>
                             <div class="col-md-8 commentary_body_right">
                               <div class="row align-items-center">
-                                <h6 class="commentary_body_right_title ec_title"></h6>
+                                <h6
+                                  class="commentary_body_right_title ec_title"
+                                ></h6>
                               </div>
                               <!-- <div class="audio-commentary" [hidden]="!isVoiceFound">
                                 <div class="audio-commentary-left">
@@ -112,7 +179,10 @@
                                     [hidden]="!playing" (click)="pauseSpeech()" />
                                 </div>
                               </div> -->
-                              <div class="member_con" id="commentary_mem_details">
+                              <div
+                                class="member_con"
+                                id="commentary_mem_details"
+                              >
                                 <!-- <div id="commentary_border" class="member_border"> -->
                                 <!-- <div class="expert_comm_mem expert_comm_border_right" id="expert_comm_mem_0"><img
                                       src="assets/images/commentor-sumita.png" alt="expert image"
@@ -148,11 +218,20 @@
                         </div>
                       </div>
                     </div>
-                    <a role="button" data-bs-target="#carouselCommentary" data-bs-slide="next" id="#slide_next"
-                      #slide_next>
+                    <a
+                      role="button"
+                      data-bs-target="#carouselCommentary"
+                      data-bs-slide="next"
+                      id="#slide_next"
+                      #slide_next
+                    >
                       <div class="carousel_controls">
                         <span class="control_name" id="next_month">Next</span>
-                        <img src="assets/icons/chevron_right.svg" class="button_right_arrow" alt="Chevron Right" />
+                        <img
+                          src="assets/icons/chevron_right.svg"
+                          class="button_right_arrow"
+                          alt="Chevron Right"
+                        />
                       </div>
                     </a>
                   </div>
@@ -167,26 +246,47 @@
                   </div> -->
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="expertCommentary-tab" data-bs-toggle="tab"
-                        data-bs-target="#expertCommentary" type="button" role="tab" aria-controls="expertCommentary"
-                        aria-selected="true">
+                      <button
+                        class="nav-link active"
+                        id="expertCommentary-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#expertCommentary"
+                        type="button"
+                        role="tab"
+                        aria-controls="expertCommentary"
+                        aria-selected="true"
+                      >
                         Expert Commentary
                       </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="indexDetails-tab" data-bs-toggle="tab"
-                        data-bs-target="#indexDetails" type="button" role="tab" aria-controls="indexDetails"
-                        aria-selected="false">
+                      <button
+                        class="nav-link"
+                        id="indexDetails-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#indexDetails"
+                        type="button"
+                        role="tab"
+                        aria-controls="indexDetails"
+                        aria-selected="false"
+                      >
                         Index Details
                       </button>
                     </li>
                   </ul>
                   <div class="tab-content commentary_body">
-                    <div class="tab-pane fade active show" id="expertCommentary" role="tabpanel"
-                      aria-labelledby="expertCommentary-tab">
+                    <div
+                      class="tab-pane fade active show"
+                      id="expertCommentary"
+                      role="tabpanel"
+                      aria-labelledby="expertCommentary-tab"
+                    >
                       <div class="row gx-0">
                         <div class="col-12 commentary_body_right">
-                          <h6 class="commentary_body_right_title" id="ec_title_mobile"></h6>
+                          <h6
+                            class="commentary_body_right_title"
+                            id="ec_title_mobile"
+                          ></h6>
                           <!-- <div class="audio-commentary" [hidden]="!isVoiceFound">
                             <div class="audio-commentary-left">
                               <p class="audio_title_mobile"></p>
@@ -211,26 +311,47 @@
                                 [hidden]="!playing" (click)="pauseSpeech()" />
                             </div>
                           </div> -->
-                          <div class="member_con" id="commentary_mem_details_mobile">
-                          </div>
+                          <div
+                            class="member_con"
+                            id="commentary_mem_details_mobile"
+                          ></div>
                           <div class="commentary_body_right_detail">
                             <p id="ec_message_mobile"></p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="indexDetails" role="tabpanel"
-                      aria-labelledby="indexDetails-tab">
+                    <div
+                      class="tab-pane fade"
+                      id="indexDetails"
+                      role="tabpanel"
+                      aria-labelledby="indexDetails-tab"
+                    >
                       <div class="row gx-0">
                         <div class="col-12 commentary_body_left">
-                          <div class="d-inline-flex align-items-center position-relative">
-                            <h6 class="commentary_body_left_title" id="mc_title_mobile"></h6>
-                            <span class="title_rating" id="mc_rating_mobile"></span>
-                            <span class="circle_waves circle_one isLatestIdx"></span>
-                            <span class="circle_waves circle_two isLatestIdx"></span>
+                          <div
+                            class="d-inline-flex align-items-center position-relative"
+                          >
+                            <h6
+                              class="commentary_body_left_title"
+                              id="mc_title_mobile"
+                            ></h6>
+                            <span
+                              class="title_rating"
+                              id="mc_rating_mobile"
+                            ></span>
+                            <span
+                              class="circle_waves circle_one isLatestIdx"
+                            ></span>
+                            <span
+                              class="circle_waves circle_two isLatestIdx"
+                            ></span>
                             <span class="circle_waves circle_three"></span>
                           </div>
-                          <p class="commentary_body_left_detail mb-5" id="mc_body_mobile"></p>
+                          <p
+                            class="commentary_body_left_detail mb-5"
+                            id="mc_body_mobile"
+                          ></p>
                           <div class="mc_ytvideo_mobile"></div>
                           <div class="mc_graph text-center">
                             <div id="commentary_graph_mobile"></div>
@@ -243,16 +364,26 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="graph-context" role="tabpanel" aria-labelledby="graph-context-tab">
+          <div
+            class="tab-pane fade"
+            id="graph-context"
+            role="tabpanel"
+            aria-labelledby="graph-context-tab"
+          >
             <div class="index_graphs">
-              <app-context-chart [sumpoornGraphData]="sumpoornGraphData" [iipGraphData]="iipGraphData"
-                [pmiGraphData]="pmiGraphData" [gvaGraphData]="gvaGraphData"
-                (graphWidth)="checkContextGraphWidth($event)" *ngIf="
+              <app-context-chart
+                [sumpoornGraphData]="sumpoornGraphData"
+                [iipGraphData]="iipGraphData"
+                [pmiGraphData]="pmiGraphData"
+                [gvaGraphData]="gvaGraphData"
+                (graphWidth)="checkContextGraphWidth($event)"
+                *ngIf="
                   sumpoornGraphData?.IndexGeneration?.length > 0 &&
                   iipGraphData?.iipValues &&
                   pmiGraphData?.pmiValues &&
                   gvaGraphData?.gvaValues
-                "></app-context-chart>
+                "
+              ></app-context-chart>
             </div>
             <div class="app_index_context_con">
               <div class="row gx-0 justify-content-center">
@@ -262,21 +393,28 @@
                     <span>other Macro Indices?</span>
                   </h6>
                   <p class="app_index_context_caption">
-                    <span>While Jocata Sumpoorn is an MSME specific fact-based
+                    <span
+                      >While Jocata Sumpoorn is an MSME specific fact-based
                       Index, readers may want
                     </span>
-                    <span>to interpret the Index movement with other published
+                    <span
+                      >to interpret the Index movement with other published
                       Indices to unearth different
                     </span>
-                    <span>dimensions at play in the Indian economy. It is important
+                    <span
+                      >dimensions at play in the Indian economy. It is important
                       to understand the
                     </span>
-                    <span>construct and scope of each Index before reading the
-                      Indices in conjunction.</span>
+                    <span
+                      >construct and scope of each Index before reading the
+                      Indices in conjunction.</span
+                    >
                   </p>
                 </div>
                 <div class="col-sm-12 col-md-11 col-lg-10">
-                  <table class="table table-responsive app_index_table_web d-none d-md-block mb-0">
+                  <table
+                    class="table table-responsive app_index_table_web d-none d-md-block mb-0"
+                  >
                     <thead>
                       <tr>
                         <th>
@@ -294,9 +432,12 @@
                         </th>
                         <th>
                           <span class="table-green">Jocata Sumpoorn</span>
-                          <span class="d-inline d-xl-block">In Association with SIDBI
+                          <span class="d-inline d-xl-block"
+                            >In Association with SIDBI
                           </span>
-                          <span class="d-inline d-xl-block">MSME Economic Activity Index</span>
+                          <span class="d-inline d-xl-block"
+                            >MSME Economic Activity Index</span
+                          >
                         </th>
                       </tr>
                     </thead>
@@ -402,15 +543,26 @@
                           <span class="table-green">Jocata Sumpoorn</span>
                         </li>
                       </ul>
-                      <a data-bs-toggle="modal" data-bs-target="#infoModal" (click)="showInfo('contextTableInfo')">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#infoModal"
+                        (click)="showInfo('contextTableInfo')"
+                      >
                         <img src="assets/icons/info.svg" class="img-fluid" />
                       </a>
                     </div>
                     <div class="app_index_table_mob_body">
-                      <div class="app_index_table_mob_body_item" *ngFor="let item of contextTableData">
+                      <div
+                        class="app_index_table_mob_body_item"
+                        *ngFor="let item of contextTableData"
+                      >
                         <h6>{{ item.title }}</h6>
-                        <div class="d-flex align-items-baseline" *ngFor="let item of item.items; let i = index">
-                          <img [src]="
+                        <div
+                          class="d-flex align-items-baseline"
+                          *ngFor="let item of item.items; let i = index"
+                        >
+                          <img
+                            [src]="
                               'assets/icons/circle-' +
                               (i === 0
                                 ? 'blue'
@@ -418,7 +570,8 @@
                                 ? 'orange'
                                 : 'green') +
                               '.svg'
-                            " />
+                            "
+                          />
                           <p [innerHTML]="item"></p>
                         </div>
                       </div>
@@ -440,7 +593,11 @@
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
       </div>
       <!-- Modal body -->
       <div class="modal-body">
@@ -461,7 +618,10 @@
           </p>
         </div>
 
-        <div class="info_modal_item" *ngIf="infoItemToShow == 'contextChartInfo'">
+        <div
+          class="info_modal_item"
+          *ngIf="infoItemToShow == 'contextChartInfo'"
+        >
           <h6 class="table-darkblue">GVA Growth %</h6>
           <p>
             Growth in Gross Value Added at current prices. GVA is a primary
@@ -470,7 +630,10 @@
           </p>
         </div>
 
-        <div class="info_modal_item" *ngIf="infoItemToShow == 'contextTableInfo'">
+        <div
+          class="info_modal_item"
+          *ngIf="infoItemToShow == 'contextTableInfo'"
+        >
           <h6 class="table-green">Jocata Sumpoorn</h6>
           <p>Association with SIDBI, MSME Economic Activity Index</p>
         </div>

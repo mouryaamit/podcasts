@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../assets/variables";
 
 .word-carousel {
   overflow: hidden;
@@ -47,15 +47,39 @@
 }
 
 @keyframes scroll-auto-mobile {
-  0%, 25% { margin-top: 0px; }
-  30%, 55% { margin-top: -50px; }
-  60%, 85% { margin-top: -100px; }
-  90%, 100% { margin-top: 0px; }
+  0%,
+  25% {
+    margin-top: 0px;
+  }
+  30%,
+  55% {
+    margin-top: -50px;
+  }
+  60%,
+  85% {
+    margin-top: -100px;
+  }
+  90%,
+  100% {
+    margin-top: 0px;
+  }
 }
 
 @keyframes scroll-auto-web {
-  0%, 25% { margin-top: 0px; }
-  30%, 55% { margin-top: -90px; }
-  60%, 85% { margin-top: -180px; }
-  90%, 100% { margin-top: 0px; }
+  0%,
+  25% {
+    margin-top: 0px;
+  }
+  30%,
+  55% {
+    margin-top: -90px;
+  }
+  60%,
+  85% {
+    margin-top: -180px;
+  }
+  90%,
+  100% {
+    margin-top: 0px;
+  }
 }
