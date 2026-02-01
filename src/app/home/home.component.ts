@@ -48,7 +48,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     AOS.init();
-    this.openFormDialog();
   }
 
   ngAfterViewInit(): void {
@@ -56,6 +55,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       offset: 100,
       easing: 'linear',
     });
+    this.openFormDialog();
   }
 
   ngAfterViewChecked(): void {
