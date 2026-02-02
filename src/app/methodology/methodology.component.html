@@ -1,366 +1,619 @@
 <main class="app_methodology text-center">
-    <div class="app_methodology_title_section">
-        <div class="row gx-0">
-            <p class="col-md-12">
-                <span><span class="fw-bold">Jocata Sumpoorn</span> is constructed using </span>
-                <span>consent-enabled and anonymised data of <span class="fw-600">more </span></span>
-                <span><span class="fw-600">than 1,14,000+ MSMEs</span> seeking credit from financial </span>
-                <span>institutions starting <span class="fw-600">from October 2019</span> to
-                    date.</span>
+  <div class="app_methodology_title_section">
+    <div class="row gx-0">
+      <p class="col-md-12">
+        <span
+          ><span class="fw-bold">Jocata Sumpoorn</span> is constructed using
+        </span>
+        <span
+          >consent-enabled and anonymised data of
+          <span class="fw-600">more </span></span
+        >
+        <span
+          ><span class="fw-600">than 1,14,000+ MSMEs</span> seeking credit from
+          financial
+        </span>
+        <span
+          >institutions starting
+          <span class="fw-600">from October 2019</span> to date.</span
+        >
+      </p>
+    </div>
+  </div>
+  <div class="app_methodology_tabs">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-sm-12 col-md-10">
+        <ul class="nav nav-tabs" id="methodology-tab" role="tablist">
+          <li class="nav-item" role="presentation" id="geoListItem">
+            <button
+              class="nav-link d-flex align-items-center"
+              id="geographic-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-geographic"
+              type="button"
+              role="tab"
+              aria-controls="tab-geographic"
+              aria-selected="true"
+              [ngClass]="{ active: isGeoActive }"
+              (click)="toggleIcons('geo'); scrollToRight('geo')"
+            >
+              <img
+                src="assets/icons/active-geo.svg"
+                width="52"
+                height="54"
+                alt="Active Geo Icon"
+                *ngIf="isGeoActive"
+              />
+              <img
+                src="assets/icons/inactive-geo.svg"
+                width="52"
+                height="54"
+                alt="Inactive Geo Icon"
+                *ngIf="!isGeoActive"
+              />
+              <span>Geographic<br />Distribution</span>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation" id="turnoverListItem">
+            <button
+              class="nav-link d-flex align-items-center"
+              id="turnover-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-turnover"
+              type="button"
+              role="tab"
+              aria-controls="tab-turnover"
+              aria-selected="false"
+              [ngClass]="{ active: isTurnoverActive }"
+              (click)="toggleIcons('turnover'); scrollToRight('turnover')"
+            >
+              <img
+                src="assets/icons/active-turnover.svg"
+                width="49"
+                height="50"
+                alt="Active Turnover Icon"
+                *ngIf="isTurnoverActive"
+              />
+              <img
+                src="assets/icons/inactive-turnover.svg"
+                width="49"
+                height="50"
+                alt="Inactive Turnover Icon"
+                *ngIf="!isTurnoverActive"
+              />
+              <span>Turnover<br />Distribution</span>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation" id="sectorListItem">
+            <button
+              class="nav-link d-flex align-items-center"
+              id="sector-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-sector"
+              type="button"
+              role="tab"
+              aria-controls="tab-sector"
+              aria-selected="false"
+              [ngClass]="{ active: isSectorActive }"
+              (click)="toggleIcons('sector'); scrollToRight('sector')"
+            >
+              <img
+                src="assets/icons/active-sector.svg"
+                width="48"
+                height="48"
+                alt="Active Sector Icon"
+                *ngIf="isSectorActive"
+              />
+              <img
+                src="assets/icons/inactive-sector.svg"
+                width="48"
+                height="48"
+                alt="Inactive Sector Icon"
+                *ngIf="!isSectorActive"
+              />
+              <span>Sector<br />Distribution</span>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation" id="activityListItem">
+            <button
+              class="nav-link d-flex align-items-center"
+              id="activity-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-activity"
+              type="button"
+              role="tab"
+              aria-controls="tab-activity"
+              aria-selected="false"
+              [ngClass]="{ active: isActivityActive }"
+              (click)="toggleIcons('activity'); scrollToRight('activity')"
+            >
+              <img
+                src="assets/icons/active-activity.svg"
+                width="48"
+                height="48"
+                alt="Active Activity Icon"
+                *ngIf="isActivityActive"
+              />
+              <img
+                src="assets/icons/inactive-activity.svg"
+                width="48"
+                height="48"
+                alt="Inactive Activity Icon"
+                *ngIf="!isActivityActive"
+              />
+              <span>Activity<br />Distribution</span>
+            </button>
+          </li>
+        </ul>
+        <div
+          class="tab-content p-2 overflow-hidden mb-5"
+          id="methodology-tabContent"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="tab-geographic"
+            role="tabpanel"
+            aria-labelledby="geographic-tab"
+          >
+            <p class="section_title">
+              Geographic Distribution of Sumpoorn MSMEs
             </p>
-        </div>
-    </div>
-    <div class="app_methodology_tabs">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-sm-12 col-md-10">
-                <ul class="nav nav-tabs" id="methodology-tab" role="tablist">
-                    <li class="nav-item" role="presentation" id="geoListItem">
-                        <button class="nav-link d-flex align-items-center" id="geographic-tab" data-bs-toggle="tab"
-                            data-bs-target="#tab-geographic" type="button" role="tab" aria-controls="tab-geographic"
-                            aria-selected="true" [ngClass]="{ 'active': isGeoActive }" (click)="toggleIcons('geo')">
-                            <img src="assets/icons/active-geo.svg" width="52" height="54" alt="Active Geo Icon"
-                                *ngIf="isGeoActive" />
-                            <img src="assets/icons/inactive-geo.svg" width="52" height="54" alt="Inactive Geo Icon"
-                                *ngIf="!isGeoActive" />
-                            <span>Geographic<br />Distribution</span>
-                        </button>
-                    </li>
-
-                    <li class="nav-item" role="presentation" id="turnoverListItem">
-                        <button class="nav-link d-flex align-items-center" id="turnover-tab" data-bs-toggle="tab"
-                            data-bs-target="#tab-turnover" type="button" role="tab" aria-controls="tab-turnover"
-                            aria-selected="false" [ngClass]="{ 'active': isTurnoverActive }"
-                            (click)="toggleIcons('turnover')">
-                            <img src="assets/icons/active-turnover.svg" width="49" height="50"
-                                alt="Active Turnover Icon" *ngIf="isTurnoverActive" />
-                            <img src="assets/icons/inactive-turnover.svg" width="49" height="50"
-                                alt="Inactive Turnover Icon" *ngIf="!isTurnoverActive" />
-                            <span>Turnover<br />Distribution</span>
-                        </button>
-                    </li>
-
-                    <li class="nav-item" role="presentation" id="sectorListItem">
-                        <button class="nav-link d-flex align-items-center" id="sector-tab" data-bs-toggle="tab"
-                            data-bs-target="#tab-sector" type="button" role="tab" aria-controls="tab-sector"
-                            aria-selected="false" [ngClass]="{ 'active': isSectorActive }"
-                            (click)="toggleIcons('sector')">
-                            <img src="assets/icons/active-sector.svg" width="48" height="48" alt="Active Sector Icon"
-                                *ngIf="isSectorActive" />
-                            <img src="assets/icons/inactive-sector.svg" width="48" height="48"
-                                alt="Inactive Sector Icon" *ngIf="!isSectorActive" />
-                            <span>Sector<br />Distribution</span>
-                        </button>
-                    </li>
-
-                    <li class="nav-item" role="presentation" id="activityListItem">
-                        <button class="nav-link d-flex align-items-center" id="activity-tab" data-bs-toggle="tab"
-                            data-bs-target="#tab-activity" type="button" role="tab" aria-controls="tab-activity"
-                            aria-selected="false" [ngClass]="{ 'active': isActivityActive }"
-                            (click)="toggleIcons('activity')">
-                            <img src="assets/icons/active-activity.svg" width="48" height="48"
-                                alt="Active Activity Icon" *ngIf="isActivityActive" />
-                            <img src="assets/icons/inactive-activity.svg" width="48" height="48"
-                                alt="Inactive Activity Icon" *ngIf="!isActivityActive" />
-                            <span>Activity<br />Distribution</span>
-                        </button>
-                    </li>
-
-                </ul>
-                <div class="tab-content p-2 overflow-hidden mb-5" id="methodology-tabContent">
-                    <div class="tab-pane fade show active" id="tab-geographic" role="tabpanel"
-                        aria-labelledby="geographic-tab">
-                        <p class="section_title">Geographic Distribution of Sumpoorn MSMEs</p>
-                        <p class="app_methodology_caption">The sample is well-distributed across India ensuring
-                            representativeness
-                            of the Index.</p>
-                        <div class="row justify-content-center">
-                            <div class="col-10 col-md-8">
-                                <img src="assets/images/geo-map.webp" width="596" height="663" class="img-fluid mb-5"
-                                    id="fixedImage" alt="Geographic Distribution Map" />
-                            </div>
-                            <div class="col-10 col-md-3 app_methodology_state_cities">
-                                <div class="state_list_title">States & UTs</div>
-                                <div class="accordion" id="accordionPanelsStayOpenExample">
-                                    <div *ngFor="let state of stateCityData.states; let i = index"
-                                        class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                (click)="toggleAccordion(i)" [attr.data-bs-toggle]="'collapse'"
-                                                [attr.data-bs-target]="'#state-' + i"
-                                                [attr.aria-expanded]="sectionStates[i] ? 'true' : 'false'"
-                                                [attr.aria-controls]="'state-' + i">
-                                                <div [innerHTML]="state.name"></div>
-                                            </button>
-                                        </h2>
-                                        <div [attr.id]="'state-' + i" class="accordion-collapse collapse"
-                                            [ngClass]="{'show': sectionStates[i]}">
-                                            <div class="accordion-body">
-                                                <ul class="city_dropdown">
-                                                    <li *ngFor="let city of state.cities">{{ city }}</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <p class="app_methodology_caption">
+              The sample is well-distributed across India ensuring
+              representativeness of the Index.
+            </p>
+            <div class="row justify-content-center">
+              <div class="col-10 col-md-8">
+                <img
+                  src="assets/images/geo-map.webp"
+                  width="596"
+                  height="663"
+                  class="img-fluid mb-5"
+                  id="fixedImage"
+                  alt="Geographic Distribution Map"
+                />
+              </div>
+              <div class="col-10 col-md-3 app_methodology_state_cities">
+                <div class="state_list_title">States & UTs</div>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div
+                    *ngFor="let state of stateCityData.states; let i = index"
+                    class="accordion-item"
+                  >
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        (click)="toggleAccordion(i)"
+                        [attr.data-bs-toggle]="'collapse'"
+                        [attr.data-bs-target]="'#state-' + i"
+                        [attr.aria-expanded]="
+                          sectionStates[i] ? 'true' : 'false'
+                        "
+                        [attr.aria-controls]="'state-' + i"
+                      >
+                        <div [innerHTML]="state.name"></div>
+                      </button>
+                    </h2>
+                    <div
+                      [attr.id]="'state-' + i"
+                      class="accordion-collapse collapse"
+                      [ngClass]="{ show: sectionStates[i] }"
+                    >
+                      <div class="accordion-body">
+                        <ul class="city_dropdown">
+                          <li *ngFor="let city of state.cities">{{ city }}</li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="tab-pane fade" id="tab-turnover" role="tabpanel" aria-labelledby="turnover-tab">
-                        <p class="section_title">Turnover Distribution of Sumpoorn MSMEs</p>
-                        <p class="app_methodology_caption">
-                            <span>The sample is well-distributed as per turnover ensuring </span>
-                            <span>representativeness and stability of the Index. </span>
-                        </p>
-                        <img src="assets/images/turnover-graph.webp" class="img-fluid mb-4 d-none d-md-inline"
-                            alt="Distribution by turnover size within MSME sample" />
-                        <img src="assets/images/turnover-graph-mobile.webp" class="img-fluid d-inline d-md-none"
-                            alt="Distribution by turnover size within MSME sample" />
-                        <!-- <p class="chart_caption pb-4">Fig.- % Distribution by turnover size within MSME sample</p> -->
-                        <div class="app_roadmap_note col-md-10 mx-auto">
-                            <div class="row gx-0 justify-content-between align-items-center">
-                                <div class="col-md-8 d-flex order-1 order-md-0 pe-0 pe-md-4 pe-lg-3">
-                                    <p><span class="fw-600">Note:</span> Above classification is based on the revised
-                                        GOI definition of
-                                        MSMEs (w.e.f 1st July 2020).
-                                        However, as Investment in plant and machinery is not available in GST returns,
-                                        the classification
-                                        is limited to TTM turnover and may not accurately represent the MSME status in
-                                        some cases. </p>
-                                </div>
-                                <div class="col-sm-12 col-md-4 app_methodology_tbl_section">
-                                    <h6>GOI Definition of MSME</h6>
-                                    <table class="table table-borderless table-responsive">
-                                        <thead>
-                                            <tr>
-                                                <th>Entity</th>
-                                                <th>Turnover</th>
-                                                <th>Investment*</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="fw-600">Micro</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 5</span> cr.</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 1</span> cr.</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-600">Small</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 10</span> cr.</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-600">Medium</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 250</span> cr.</td>
-                                                <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="tbl_caption">*Investment in Plant and Machinery or Equipment</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-sector" role="tabpanel" aria-labelledby="sector-tab">
-                        <p class="section_title">Sector-wise Distribution by Value <br />(Top
-                            7 HSNs)</p>
-                        <p class="app_methodology_caption">
-                            <span>The sample is well-distributed across sectors as reflected by the Top
-                                7 HSN
-                                mix </span>
-                            <span>remaining largely stable over time ensuring Index representativeness
-                                and
-                                stability.</span>
-                        </p>
-                        <img src="assets/images/sector-graph.webp" class="img-fluid mb-4 d-none d-md-inline"
-                            alt="Distribution by value of top 7 HSNs within MSME sample" />
-                        <img src="assets/images/sector-graph-mobile.webp" class="img-fluid d-inline d-md-none"
-                            alt="Distribution by value of top 7 HSNs within MSME sample" />
-                        <!-- <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p> -->
-                        <div class="app_roadmap_note col-md-10 mx-auto mb-5">
-                            <p><span class="fw-600">Note: </span>A GSTIN is classified as belonging to an industry, if
-                                TTM sales of
-                                a particular HSN (2-digit
-                                level) in a month is > 50% of sum of TTM sales of all HSNs by that GSTIN for the same
-                                month. </p>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
-                        <p class="section_title">Activity Distribution (Non-Services and Services)
-                        </p>
-                        <p class="app_methodology_caption">
-                            <span>The split of GSTINs engaged in non-service (manufacturing +
-                                trading) </span>
-                            <span>and service activities are stable over time.</span>
-                        </p>
-                        <img src="assets/images/activity-graph.webp" class="img-fluid mb-4 d-none d-md-inline"
-                            alt="Monthly proportion % of Non-services and Service GSTINs" />
-                        <img src="assets/images/activity-graph-mobile.webp" class="img-fluid d-inline d-md-none"
-                            alt="Monthly proportion % of Non-services and Service GSTINs" />
-                        <!-- <p class="chart_caption pb-4">Fig.- Monthly proportion % of Non-services and Service GSTINs</p> -->
-                        <div class="app_roadmap_note col-md-10 mx-auto mb-5">
-                            <p><span class="fw-600">Note: </span>Source data limitations (within consent-led GST returns
-                                data)
-                                prevent further breakdown of non-services distribution into its constituent parts -
-                                manufacturing and
-                                trading distribution. </p>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="app_methodology_section">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-sm-12 col-md-10 order-1 order-md-0">
-                <p class="section_title blue-text">Methodology</p>
-                <p class="app_methodology_caption col-md-12 col-lg-9 mx-auto blue-text">
-                    <span>Jocata Sumpoorn is a relative amplitude adjusted composite diffusion
-                        index </span>
-                    <span>that is developed using actual monthly sales data reflected in official
-                        GSTIN </span>
-                    <span>returns of credit-seeking MSMEs and is not based on survey data. </span>
-                </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab-turnover"
+            role="tabpanel"
+            aria-labelledby="turnover-tab"
+          >
+            <p class="section_title">Turnover Distribution of Sumpoorn MSMEs</p>
+            <p class="app_methodology_caption">
+              <span
+                >The sample is well-distributed as per turnover ensuring
+              </span>
+              <span>representativeness and stability of the Index. </span>
+            </p>
+            <!-- <img
+              src="assets/images/turnover-graph.webp"
+              class="img-fluid mb-4 d-none d-md-inline"
+              alt="Distribution by turnover size within MSME sample"
+            /> -->
+            <!-- <img
+              src="assets/images/turnover-graph-mobile.webp"
+              class="img-fluid d-inline d-md-none"
+              alt="Distribution by turnover size within MSME sample"
+            /> -->
+            <div class="methodology_graphs">
+              <app-turnover-distribution
+                [turnoverDistributionData]="turnoverDistributionData"
+                (graphWidth)="checkTurnoverDistributionGraphWidth($event)"
+                *ngIf="turnoverDistributionData?.length > 0"
+              ></app-turnover-distribution>
             </div>
-            <div class="col-sm-12 col-md-10">
-                <div class="app_methodology_cards pe-0">
-                    <div class="container">
-                        <div class="row row-cols-auto row-cols-md-5 ps-0">
-                            <div class="col">
-                                <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/cart.svg" width="65" height="64" class="img-fluid mb-5"
-                                        alt="Cart Icon">
-                                    <p>Use GST Returns to calculate MSME <span class="fw-bold">TTM sales</span> for
-                                        current month (TTMc) and previous month (TTMp). </p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/combine.svg" width="65" height="64" class="img-fluid mb-5"
-                                        alt="Combine Icon">
-                                    <p>For each GSTIN, <span class="fw-bold">calculate delta of monthly sales on a YoY
-                                            basis, represent relative to TTMp;</span> thereafter
-                                        <span class="fw-bold">remove outliers</span>.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/gap.svg" width="65" height="64" class="img-fluid mb-5"
-                                        alt="Gap Icon">
-                                    <p>Calculate <span class="fw-bold">delta of growing and declining MSMEs combined
-                                            with their amplitude of sales.</span></p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/graph.svg" width="65" height="64" class="img-fluid mb-5"
-                                        alt="Graph Icon">
-                                    <p>Compute the <span class="fw-bold">relative amplitude adjusted diffusion
-                                            index</span>.</p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_methodology_card_box h-100">
-                                    <img src="assets/icons/resize.svg" width="65" height="64" class="img-fluid mb-5"
-                                        alt="Resize Icon">
-                                    <p><span class="fw-bold">Algorithmically scale</span> for values ranging from 0 to
-                                        1.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- <p class="chart_caption pb-4">
+              Fig.- % Distribution by turnover size within MSME sample
+            </p> -->
+            <div class="app_roadmap_note col-md-10 mx-auto">
+              <div class="row gx-0 justify-content-between align-items-center">
+                <div
+                  class="col-md-8 d-flex order-1 order-md-0 pe-0 pe-md-4 pe-lg-3"
+                >
+                  <p>
+                    <span class="fw-600">Note:</span> Above classification is
+                    based on the revised GOI definition of MSMEs (w.e.f 1st July
+                    2020). However, as Investment in plant and machinery is not
+                    available in GST returns, the classification is limited to
+                    TTM turnover and may not accurately represent the MSME
+                    status in some cases. 
+                  </p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="app_consideration_section">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-sm-12 col-md-10">
-                <p class="section_title blue-text">Considerations</p>
-                <div class="app_consideration_cards mt-5">
-                    <div class="container">
-                        <div class="row row-cols-1 row-cols-md-3 gx-0 gx-md-5">
-                            <div class="col">
-                                <div class="app_consideration_card_title">Data Source</div>
-                                <div class="app_consideration_card_box">
-                                    <ul class="pl-2">
-                                        <li>GSTIN is an authentic, reliable, and official source of MSME sales data.
-                                        </li>
-                                        <li>As a GST-ASP (Authorised Service Provider), Jocata fetches data digitally
-                                            from the GSTIN
-                                            network, further ensuring data authenticity and accuracy.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_consideration_card_title">Approach Rationale</div>
-                                <div class="app_consideration_card_box">
-                                    <ul class="pl-2">
-                                        <li>Using count and amplitude overcomes shortcomings of a count-based diffusion
-                                            approach and
-                                            effectively captures magnitude of economic activity.
-                                        </li>
-                                        <li> As ‘sales amplitude’ has been incorporated into the diffusion approach,
-                                            outliers need to be
-                                            handled and output scaled using sigmoid function. </li>
-                                        <li> TTM approach ensures business seasonality is captured and idiosyncratic
-                                            fluctuations
-                                            smoothened out using a moving average.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="app_consideration_card_title">Data Length & Sample</div>
-                                <div class="app_consideration_card_box">
-                                    <ul class="pl-2">
-                                        <li>Minimum 13 months of sales data (GSTR1) is required to calculate the Index
-                                            for a particular
-                                            month.
-                                        </li>
-                                        <li>Minimum 1000 MSMEs are considered to release the Index for any month.
-                                        </li>
-                                        <li>Current monthly count of MSMEs is 2500 - 3000.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-sm-12 col-md-4 app_methodology_tbl_section">
+                  <h6>GOI Definition of MSME</h6>
+                  <table class="table table-borderless table-responsive">
+                    <thead>
+                      <tr>
+                        <th>Entity</th>
+                        <th>Turnover</th>
+                        <th>Investment*</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-600">Micro</td>
+                        <td>&lt;= <span class="fw-bold">₹ 5</span> cr.</td>
+                        <td>&lt;= <span class="fw-bold">₹ 1</span> cr.</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-600">Small</td>
+                        <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
+                        <td>&lt;= <span class="fw-bold">₹ 10</span> cr.</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-600">Medium</td>
+                        <td>&lt;= <span class="fw-bold">₹ 250</span> cr.</td>
+                        <td>&lt;= <span class="fw-bold">₹ 50</span> cr.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="tbl_caption">
+                    *Investment in Plant and Machinery or Equipment
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab-sector"
+            role="tabpanel"
+            aria-labelledby="sector-tab"
+          >
+            <p class="section_title">
+              Sector-wise Distribution by Value <br />(Top 7 HSNs)
+            </p>
+            <p class="app_methodology_caption">
+              <span
+                >The sample is well-distributed across sectors as reflected by
+                the Top 7 HSN mix
+              </span>
+              <span
+                >remaining largely stable over time ensuring Index
+                representativeness and stability.</span
+              >
+            </p>
+            <!-- <img
+              src="assets/images/sector-graph.webp"
+              class="img-fluid mb-4 d-none d-md-inline"
+              alt="Distribution by value of top 7 HSNs within MSME sample"
+            /> -->
+            <!-- <img
+              src="assets/images/sector-graph-mobile.webp"
+              class="img-fluid d-inline d-md-none"
+              alt="Distribution by value of top 7 HSNs within MSME sample"
+            /> -->
+            <app-sector-distribution
+              [sectorDistributionData]="sectorDistributionData"
+              (graphWidth)="checkSectorDistributionGraphWidth($event)"
+              *ngIf="sectorDistributionData?.length > 0"
+            ></app-sector-distribution>
+            <!-- <p class="chart_caption pb-4">Fig.- % Distribution by value of top 7 HSNs within MSME sample</p> -->
+            <div class="app_roadmap_note col-md-10 mx-auto mb-5">
+              <p>
+                <span class="fw-600">Note: </span>A GSTIN is classified as
+                belonging to an industry, if TTM sales of a particular HSN
+                (2-digit level) in a month is > 50% of sum of TTM sales of all
+                HSNs by that GSTIN for the same month. 
+              </p>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab-activity"
+            role="tabpanel"
+            aria-labelledby="activity-tab"
+          >
+            <p class="section_title">
+              Activity Distribution (Non-Services and Services)
+            </p>
+            <p class="app_methodology_caption">
+              <span
+                >The split of GSTINs engaged in non-service (manufacturing +
+                trading)
+              </span>
+              <span>and service activities are stable over time.</span>
+            </p>
+            <!-- <img
+              src="assets/images/activity-graph.webp"
+              class="img-fluid mb-4 d-none d-md-inline"
+              alt="Monthly proportion % of Non-services and Service GSTINs"
+            /> -->
+            <!-- <img
+              src="assets/images/activity-graph-mobile.webp"
+              class="img-fluid d-inline d-md-none"
+              alt="Monthly proportion % of Non-services and Service GSTINs"
+            /> -->
+            <app-activity-distribution
+              [activityDistributionData]="activityDistributionData"
+              (graphWidth)="checkActivityDistributionGraphWidth($event)"
+              *ngIf="activityDistributionData?.length > 0"
+            ></app-activity-distribution>
+            <!-- <p class="chart_caption pb-4">Fig.- Monthly proportion % of Non-services and Service GSTINs</p> -->
+            <div class="app_roadmap_note col-md-10 mx-auto mb-5">
+              <p>
+                <span class="fw-600">Note: </span>Source data limitations
+                (within consent-led GST returns data) prevent further breakdown
+                of non-services distribution into its constituent parts -
+                manufacturing and trading distribution. 
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="app_methodology_index_bin">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-12">
-                <p class="section_title">Index Bin Ranges<br />
-                    and their Interpretation</p>
-                <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto">
-                    <span>The Index measures MSME sales performance on a scale </span>
-                    <span>of 0 to 1, where the bin ranges represent the state of </span>
-                    <span>contraction or expansion of economic activity of the sector.</span>
-                </p>
-                <div class="meth_index_gif_con col-sm-12 col-md-9 col-lg-8 col-xl-5 mx-auto">
-                    <img src="assets/images/meth-range-chart.avifs" class="img-fluid rounded-2"
-                        alt="Index Bin Ranges" />
+  </div>
+  <div class="app_methodology_section">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-sm-12 col-md-10 order-1 order-md-0">
+        <p class="section_title blue-text">Methodology</p>
+        <p class="app_methodology_caption col-md-12 col-lg-9 mx-auto blue-text">
+          <span
+            >Jocata Sumpoorn is a relative amplitude adjusted composite
+            diffusion index
+          </span>
+          <span
+            >that is developed using actual monthly sales data reflected in
+            official GSTIN
+          </span>
+          <span
+            >returns of credit-seeking MSMEs and is not based on survey data.
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <div class="app_methodology_cards pe-0">
+          <div class="container">
+            <div class="row row-cols-auto row-cols-md-5 ps-0">
+              <div class="col">
+                <div class="app_methodology_card_box h-100">
+                  <img
+                    src="assets/icons/cart.svg"
+                    width="65"
+                    height="64"
+                    class="img-fluid mb-5"
+                    alt="Cart Icon"
+                  />
+                  <p>
+                    Use GST Returns to calculate MSME
+                    <span class="fw-bold">TTM sales</span> for current month
+                    (TTMc) and previous month (TTMp).
+                  </p>
                 </div>
+              </div>
+              <div class="col">
+                <div class="app_methodology_card_box h-100">
+                  <img
+                    src="assets/icons/combine.svg"
+                    width="65"
+                    height="64"
+                    class="img-fluid mb-5"
+                    alt="Combine Icon"
+                  />
+                  <p>
+                    For each GSTIN,
+                    <span class="fw-bold"
+                      >calculate delta of monthly sales on a YoY basis,
+                      represent relative to TTMp;</span
+                    >
+                    thereafter <span class="fw-bold">remove outliers</span>.
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_methodology_card_box h-100">
+                  <img
+                    src="assets/icons/gap.svg"
+                    width="65"
+                    height="64"
+                    class="img-fluid mb-5"
+                    alt="Gap Icon"
+                  />
+                  <p>
+                    Calculate
+                    <span class="fw-bold"
+                      >delta of growing and declining MSMEs combined with their
+                      amplitude of sales.</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_methodology_card_box h-100">
+                  <img
+                    src="assets/icons/graph.svg"
+                    width="65"
+                    height="64"
+                    class="img-fluid mb-5"
+                    alt="Graph Icon"
+                  />
+                  <p>
+                    Compute the
+                    <span class="fw-bold"
+                      >relative amplitude adjusted diffusion index</span
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_methodology_card_box h-100">
+                  <img
+                    src="assets/icons/resize.svg"
+                    width="65"
+                    height="64"
+                    class="img-fluid mb-5"
+                    alt="Resize Icon"
+                  />
+                  <p>
+                    <span class="fw-bold">Algorithmically scale</span> for
+                    values ranging from 0 to 1.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="app_methodology_index_frequency">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-md-12">
-                <img src="assets/images/calender.webp" width="672" height="300" class="img-fluid"
-                    alt="Index Publishing Frequency" />
-                <p class="section_title blue-text">Index Publishing Frequency</p>
-                <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto blue-text">
-                    <span>The Index will be released monthly with only a four-week </span>
-                    <span>reporting cycle after the reference month ends (the Index for </span>
-                    <span>January will be published in the 1st week of March).</span>
-                </p>
+  </div>
+  <div class="app_consideration_section">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-sm-12 col-md-10">
+        <p class="section_title blue-text">Considerations</p>
+        <div class="app_consideration_cards mt-5">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 gx-0 gx-md-5">
+              <div class="col">
+                <div class="app_consideration_card_title">Data Source</div>
+                <div class="app_consideration_card_box">
+                  <ul class="pl-2">
+                    <li>
+                      GSTIN is an authentic, reliable, and official source of
+                      MSME sales data.
+                    </li>
+                    <li>
+                      As a GST-ASP (Authorised Service Provider), Jocata fetches
+                      data digitally from the GSTIN network, further ensuring
+                      data authenticity and accuracy.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_consideration_card_title">
+                  Approach Rationale
+                </div>
+                <div class="app_consideration_card_box">
+                  <ul class="pl-2">
+                    <li>
+                      Using count and amplitude overcomes shortcomings of a
+                      count-based diffusion approach and effectively captures
+                      magnitude of economic activity.
+                    </li>
+                    <li>
+                      As ‘sales amplitude’ has been incorporated into the
+                      diffusion approach, outliers need to be handled and output
+                      scaled using sigmoid function.
+                    </li>
+                    <li>
+                      TTM approach ensures business seasonality is captured and
+                      idiosyncratic fluctuations smoothened out using a moving
+                      average.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="app_consideration_card_title">
+                  Data Length & Sample
+                </div>
+                <div class="app_consideration_card_box">
+                  <ul class="pl-2">
+                    <li>
+                      Minimum 13 months of sales data (GSTR1) is required to
+                      calculate the Index for a particular month.
+                    </li>
+                    <li>
+                      Minimum 1000 MSMEs are considered to release the Index for
+                      any month.
+                    </li>
+                    <li>Current monthly count of MSMEs is 2500 - 3000.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="app_methodology_index_bin">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-12">
+        <p class="section_title">
+          Index Bin Ranges<br />
+          and their Interpretation
+        </p>
+        <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto">
+          <span>The Index measures MSME sales performance on a scale </span>
+          <span>of 0 to 1, where the bin ranges represent the state of </span>
+          <span
+            >contraction or expansion of economic activity of the sector.</span
+          >
+        </p>
+        <div
+          class="meth_index_gif_con col-sm-12 col-md-9 col-lg-8 col-xl-5 mx-auto"
+        >
+          <img
+            src="assets/images/meth-range-chart.avifs"
+            class="img-fluid rounded-2"
+            alt="Index Bin Ranges"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app_methodology_index_frequency">
+    <div class="row gx-0 justify-content-center">
+      <div class="col-md-12">
+        <img
+          src="assets/images/calender.webp"
+          width="672"
+          height="300"
+          class="img-fluid"
+          alt="Index Publishing Frequency"
+        />
+        <p class="section_title blue-text">Index Publishing Frequency</p>
+        <p class="app_methodology_caption col-md-8 col-lg-7 mx-auto blue-text">
+          <span>The Index will be released monthly with only a four-week </span>
+          <span
+            >reporting cycle after the reference month ends (the Index for
+          </span>
+          <span>January will be published in the 1st week of March).</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </main>

@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
 import { MetaService } from './services/meta.service';
-import { ActivatedRoute, Router, NavigationEnd, NavigationStart } from '@angular/router';
+import {
+  ActivatedRoute,
+  Router,
+  NavigationEnd,
+  NavigationStart,
+} from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
@@ -10,7 +15,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  hide:boolean = false;
+  hide: boolean = false;
   constructor(
     private metaService: MetaService,
     private activatedRoute: ActivatedRoute,
@@ -18,23 +23,22 @@ export class AppComponent implements OnInit {
   ) {
     this.router.events.subscribe((event) => {
       const currentUrl = this.router.url;
-      this.hide = (currentUrl === "/index?hide=true");
-        });
-        this.disableConsoleInProduction();
+      this.hide = currentUrl === '/index?hide=true';
+    });
+    this.disableConsoleInProduction();
   }
 
   disableConsoleInProduction(): void {
-    if(environment.production){
+    if (environment.production) {
       console.warn(`🚨 Console output is disabled!`);
-      console.log = function(){};
-      console.debug = function(){};
-      console.warn = function(){};
-      console.info = function(){};
+      console.log = function () {};
+      console.debug = function () {};
+      console.warn = function () {};
+      console.info = function () {};
     }
   }
 
   ngOnInit() {
-
     console.info('Last release timestamp is set to:', environment.timeStamp);
 
     // Update SEO Tags
