@@ -1,12 +1,14 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import * as AOS from 'aos';
+import { HomePagePopupComponent } from '../dialog/homepage-popup/homepage-popup.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   partners: Array<any> = [
     {
       // title: 'Partner',
@@ -42,7 +44,7 @@ export class HomeComponent implements AfterViewInit {
     },
   ];
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {
     AOS.init();
@@ -53,9 +55,22 @@ export class HomeComponent implements AfterViewInit {
       offset: 100,
       easing: 'linear',
     });
+    this.openFormDialog();
   }
 
   ngAfterViewChecked(): void {
     AOS.refresh();
+  }
+
+  openFormDialog() {
+    const dialogRef = this.dialog.open(HomePagePopupComponent, {
+      disableClose: true,
+      panelClass: 'app_hsn_modal',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+      } else {
+      }
+    });
   }
 }

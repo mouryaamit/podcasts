@@ -52,6 +52,10 @@ export class NewsroomEventsComponent implements OnInit {
       this.eventTitle =
         'Sumpoorn Showcased at New Development Bank (NDB) - Shanghai Headquarters';
       this.eventDate = 'Shanghai, November 11, 2025';
+    } else if (this.getNavParam == 'cginewsroom') {
+      this.eventTitle =
+        'Jocata Global AI Xchange in China Explores DPI-Led MSME Intelligence Frameworks';
+      this.eventDate = 'China, 2025';
     }
   }
 
@@ -170,7 +174,21 @@ export class NewsroomEventsComponent implements OnInit {
         imageURL: 'assets/images/news-puneppf.webp',
       },
     ],
+    cginewsroomEvent: [
+      {
+        title:'',
+        detail: `As part of the Jocata Global AI Xchange – China 2025, jointly curated with Zhejiang University International Business School (ZIBS), senior leaders from Jocata and select client institutions undertook a multi-city engagement across China, focused on understanding the institutional design and governance of large-scale AI ecosystems. <br/><br/>
+          The programme brought together perspectives from academia, industry, and financial services on how data infrastructure, regulatory frameworks, and enterprise adoption shape AI outcomes at scale. Within this context, Jocata presented Sumpoorn, India’s first MSME Economic Activity Index, as a case study to illustrate how India’s Digital Public Infrastructure (DPI) and consent-based data architecture can be leveraged to generate high-frequency, behaviour-led MSME intelligence. The discussion highlighted how DPI-native systems enable more timely and granular insights for lenders, policymakers, and development institutions, moving beyond traditional lagging indicators. <br/><br/>
+          Prashant Muddu, MD & CEO, Jocata, shared reflections on Sumpoorn’s evolution from a composite index to an intelligence-led framework, underscoring its relevance for emerging markets seeking scalable, trusted data models.<br/><br/>
+          As part of the visit, the delegation attended an evening hosted by Pratik Mathur, Consul General of India in Shanghai, who emphasised the role of people-to-people engagement in strengthening India–China trade and technology linkages.<br/><br/>
+          The AI Xchange also featured a closed-door industry discussion on AI and data ecosystems in financial services, with Mukesh Sharma (Tech Mahindra), Shallu Kaushik (Tata Capital), and Rajarshi Gupta (Standard Chartered), moderated by Dr. Srinivas Yanamandra, Principal Advisor, Jocata.<br/><br/>
+          The Global AI Xchange reaffirmed the importance of institution-led, DPI-anchored approaches in shaping responsible and scalable AI-driven intelligence systems.`,
+        imageURL: '',
+      },
+    ],
   };
+  // `Jocata Global AI Xchange in China Explores DPI-Led MSME Intelligence Frameworks`
+  // assets/images/nbdnewsroom.png
 
   downloadReport(type) {
     const salt = '6fbb7e4f-756d-11ee-a429-00090faa0001';
