@@ -1,24 +1,10 @@
 <!-- HSN Model -->
+<div style="cursor: pointer;" class="text-end mb-3">
+  <img src="assets/icons/close.svg" (click)="closeModal()" />
+</div>
 <div>
-  <div class="row">
-    <span class="col-12">
-      <img
-        class="float-end"
-        style="cursor: pointer"
-        src="assets/icons/close.svg"
-        (click)="closeModal()"
-      />
-    </span>
-  </div>
-  <div class="row justify-content-start modal-body">
-    <div class="col-md-12 mt-5 mt-md-0">
-      <a (click)="goToForm()">
-        <img
-          src="assets/images/white_blue_simple_business_pitch_deck.svg"
-          class="float-end img-fluid"
-          alt="White Blue Simple Business Pitch Deck"
-        />
-      </a>
-    </div>
-  </div>
+  <a (click)="goToForm()">
+    <img src="assets/images/homepage-popup.webp" class="img-fluid"
+      alt="White Blue Simple Business Pitch Deck" />
+  </a>
 </div>
