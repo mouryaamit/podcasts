@@ -55,22 +55,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
       offset: 100,
       easing: 'linear',
     });
-    this.openFormDialog();
+    // this.openFormDialog();
   }
 
   ngAfterViewChecked(): void {
     AOS.refresh();
   }
 
-  openFormDialog() {
-    const dialogRef = this.dialog.open(HomePagePopupComponent, {
-      disableClose: true,
-      panelClass: 'app_hsn_modal',
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-      } else {
-      }
-    });
-  }
+  // openFormDialog() {
+  //   const dialogRef = this.dialog.open(HomePagePopupComponent, {
+  //     disableClose: true,
+  //     panelClass: 'app_hsn_modal',
+  //   });
+  //   dialogRef.afterClosed().subscribe((result) => {
+  //     if (result) {
+  //     } else {
+  //     }
+  //   });
+  // }
 }
