@@ -1046,7 +1046,7 @@ export class InsightsChartComponent implements OnInit {
         let current_month = d3.timeFormat('%b')(<Date>parseDate(expertC.Month));
         let current_year = d3.timeFormat('%Y')(<Date>parseDate(expertC.Month));
         // Left data
-        d3.select('#mc_title_mobile').html(`Jocata Sumpoorn`);
+        d3.select('#mc_title_mobile').html(`SIDBI-Jocata Sumpoorn`);
         d3.select('#mc_rating_mobile').html(`${indexValue}`);
 
         const indexOfPoint = mydata.findIndex(
@@ -1233,7 +1233,7 @@ export class InsightsChartComponent implements OnInit {
         .style('text-anchor', 'end')
         .attr('fill', '#2FB36B')
         .attr('transform', 'rotate(-90)')
-        .text('Jocata Sumpoorn');
+        .text('SIDBI-Jocata Sumpoorn');
       const yaright_text = svg_c
         .append('g')
         .attr('stroke', '#A3A3A3')
@@ -1532,7 +1532,7 @@ export class InsightsChartComponent implements OnInit {
       .style('text-anchor', 'start')
       .attr('fill', '#2FB36B')
       .attr('transform', 'rotate(-90)')
-      .text('Jocata Sumpoorn');
+      .text('SIDBI-Jocata Sumpoorn');
 
     svgY_left.select('.domain').attr('stroke', 'none');
 
@@ -2399,7 +2399,7 @@ export class InsightsChartComponent implements OnInit {
         let current_month = d3.timeFormat('%b')(<Date>parseDate(expertC.Month));
         let current_year = d3.timeFormat('%Y')(<Date>parseDate(expertC.Month));
         // Left data
-        d3.select('.mc_title').html(`Jocata Sumpoorn`);
+        d3.select('.mc_title').html(`SIDBI-Jocata Sumpoorn`);
         d3.select('.mc_rating').html(`${indexValue}`);
 
         const indexOfPoint = mydata.findIndex(
@@ -2489,7 +2489,7 @@ export class InsightsChartComponent implements OnInit {
         //   createGraphForCommentary(graphC);
         // }
         let textForSpeech =
-          'Jocata Sumpoorn ' + indexValue + ',<br/><br/>' + monthlyC.comment;
+          'SIDBI-Jocata Sumpoorn ' + indexValue + ',<br/><br/>' + monthlyC.comment;
         if (expertC.AuthorDetails && expertC.AuthorDetails.length > 0) {
           textForSpeech += ',<br/><br/> Expert Commentary,<br/><br/>';
         } else {
@@ -2590,7 +2590,7 @@ export class InsightsChartComponent implements OnInit {
         .style('text-anchor', 'end')
         .attr('fill', '#2FB36B')
         .attr('transform', 'rotate(-90)')
-        .text('Jocata Sumpoorn');
+        .text('SIDBI-Jocata Sumpoorn');
       const yaright_text = svg_c
         .append('g')
         .attr('stroke', '#A3A3A3')
