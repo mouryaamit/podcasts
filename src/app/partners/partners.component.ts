@@ -142,18 +142,39 @@ export class PartnersComponent implements OnInit {
 
     this.sumpoornApiService.savePartnerDetails(postData).then(
       (resp: any) => {
+
         this.partnersFormGroup.reset();
         this.partnersFormGroup.patchValue({
           messageType: '',
         });
-        this.toastr.success(resp.statusMessage, '', {
-          timeOut: 10000,
-          extendedTimeOut: 5000,
-          positionClass: 'toast-bottom-center',
-          progressBar: true,
-          progressAnimation: 'increasing',
-          closeButton: true,
-        });
+        if (resp && resp.statusCode == 200) {
+
+          this.toastr.success(resp.statusMessage, '', {
+            timeOut: 10000,
+            extendedTimeOut: 5000,
+            positionClass: 'toast-bottom-center',
+            progressBar: true,
+            progressAnimation: 'increasing',
+            closeButton: true,
+          });
+
+        }
+        else {
+          let errorMsg = resp.statusCode == 500 ?
+            "We are unable to process your request. Please try again after sometime." :
+            resp.statusMessage;
+          this.toastr.error(
+            errorMsg, '',
+            {
+              timeOut: 10000,
+              extendedTimeOut: 5000,
+              positionClass: 'toast-bottom-center',
+              progressBar: true,
+              progressAnimation: 'increasing',
+              closeButton: true,
+            }
+          );
+        }
       },
       (error) => {
         this.partnersFormGroup.reset();
