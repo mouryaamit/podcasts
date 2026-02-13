@@ -111,6 +111,12 @@
             >Provisioned Public Infrastructure.
           </span>
         </ng-container>
+        <ng-container *ngIf="getNavParam === 'cginewsroom'">
+          <!-- <span class="d-inline d-xxl-block"
+            >SIDBI-Jocata Sumpoorn index presented as a key enabler for MSME
+            growth in emerging economies
+          </span> -->
+        </ng-container>
       </p>
       <p class="app_newsroom_subtitle text-center">{{ eventDate }}</p>
     </div>
@@ -317,6 +323,24 @@
             class="news_img"
             [alt]="event.title"
           />
+          <div class="img_caption">
+            <p class="news_title fw-bold mb-3">{{ event.title }}</p>
+            <p class="news_detail" [innerHTML]="event.detail"></p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-lg-2 gx-5"
+        *ngIf="getNavParam === 'cginewsroom'"
+      >
+        <div class="col" *ngFor="let event of events.cginewsroomEvent">
+          <!-- <img
+            width="580"
+            height="420"
+            [src]="event.imageURL"
+            class="news_img"
+            [alt]="event.title"
+          /> -->
           <div class="img_caption">
             <p class="news_title fw-bold mb-3">{{ event.title }}</p>
             <p class="news_detail" [innerHTML]="event.detail"></p>

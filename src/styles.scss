@@ -592,11 +592,11 @@ a {
             }
           }
 
-          &:not(:nth-last-child(4)) {
-            @media only screen and (min-width: 1200px) {
-              margin-right: 36px;
-            }
-          }
+          // &:not(:nth-last-child(4)) {
+          //   @media only screen and (min-width: 1200px) {
+          //     margin-right: 36px;
+          //   }
+          // }
 
           &:nth-last-child(-n + 3) {
             @media only screen and (min-width: 1200px) {
