@@ -1168,7 +1168,7 @@ export class ContextChartComponent implements OnInit {
       .style('text-anchor', 'end')
       .attr('fill', '#2FB36B')
       .attr('transform', 'rotate(-90)')
-      .text('Jocata Sumpoorn');
+      .text('SIDBI-Jocata Sumpoorn');
 
     svgY.select('.domain').attr('stroke', 'none');
 
