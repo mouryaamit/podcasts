@@ -83,18 +83,36 @@ export class InstitutionLoginComponent implements OnInit {
     this.sumpoornApiService.saveScheduleDemoFormDetails(postData).then(
       (resp: any) => {
         this.scheduleDemoGroup.reset();
-        this.toastr.success(
-          'Thank you for submitting the details. One of our representative shall get in touch with you soon.',
-          'Thanks!',
-          {
-            timeOut: 10000,
-            extendedTimeOut: 5000,
-            positionClass: 'toast-bottom-center',
-            progressBar: true,
-            progressAnimation: 'increasing',
-            closeButton: true,
-          }
-        );
+        if (resp && resp.statusCode == 200) {
+          this.toastr.success(
+            'Thank you for submitting the details. One of our representative shall get in touch with you soon.',
+            'Thanks!',
+            {
+              timeOut: 10000,
+              extendedTimeOut: 5000,
+              positionClass: 'toast-bottom-center',
+              progressBar: true,
+              progressAnimation: 'increasing',
+              closeButton: true,
+            }
+          );
+        }
+        else {
+          let errorMsg = resp.statusCode == 500 ?
+            "We are unable to process your request. Please try again after sometime." :
+            resp.statusMessage;
+          this.toastr.error(
+            errorMsg, '',
+            {
+              timeOut: 10000,
+              extendedTimeOut: 5000,
+              positionClass: 'toast-bottom-center',
+              progressBar: true,
+              progressAnimation: 'increasing',
+              closeButton: true,
+            }
+          );
+        }
         // this.hideScheduleDemoModal();
       },
       (error) => {
