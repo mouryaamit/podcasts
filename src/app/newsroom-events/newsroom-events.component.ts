@@ -56,6 +56,9 @@ export class NewsroomEventsComponent implements OnInit {
       this.eventTitle =
         'Jocata Global AI Xchange in China Explores DPI-Led MSME Intelligence Frameworks';
       this.eventDate = 'China, 2025';
+    } else if (this.getNavParam == 'finreport') {
+      this.eventTitle = 'State of MSME Finance in India';
+      this.eventDate = 'New Delhi, December 1, 2025';
     }
   }
 
@@ -106,11 +109,11 @@ export class NewsroomEventsComponent implements OnInit {
         imageURL: 'assets/images/news-ifc.jpg',
       },
     ],
-    msmeFinancing: [
+    finreport: [
       {
-        title: 'Strategic Context of MSME Financing',
-        detail: `Jocata Sumpoorn's contribution to empowering MSME lending with SIDBI was recently recognised in the Inclusive Finance India Report (2023) , in its chapter "MSMEs: The Pillars of India's Economic Strength" by Ramesh S. Arunachalam. The index's dynamic and digital approach to data has steered SIDBI's efforts to provide a "data-driven understanding of MSMEs to improve credit access for the sector and fuel its growth." The Report, an annual publication presenting advancements in financial inclusion, is published by The Global Inclusive Finance Initiative, a think-tank advocating for financial inclusion in India.`,
-        imageURL: 'assets/images/news-financing.svg',
+        title: 'State of MSME Finance in India ',
+        detail: `Positioned alongside TReDS and Udyamimitra, the report notes that the Jocata Sumpoorn Index registered 0.59 in July 2025, up from 0.58 in June, signalling cautious expansion amid subdued FMCG, automotive, and core industry growth. As a sectoral metric, the Index contributes to a predictive financing architecture that can anticipate sectoral distress and unlock capital where it is most needed.`,
+        imageURL: 'assets/images/finreport_flow.jpg',
       },
     ],
     launchEvent: [
@@ -184,6 +187,13 @@ export class NewsroomEventsComponent implements OnInit {
           The AI Xchange also featured a closed-door industry discussion on AI and data ecosystems in financial services, with Mukesh Sharma (Tech Mahindra), Shallu Kaushik (Tata Capital), and Rajarshi Gupta (Standard Chartered), moderated by Dr. Srinivas Yanamandra, Principal Advisor, Jocata.<br/><br/>
           The Global AI Xchange reaffirmed the importance of institution-led, DPI-anchored approaches in shaping responsible and scalable AI-driven intelligence systems.`,
         imageURL: '',
+      },
+    ],
+    msmeFinancing: [
+      {
+        title: 'Strategic Context of MSME Financing',
+        detail: `Jocata Sumpoorn's contribution to empowering MSME lending with SIDBI was recently recognised in the Inclusive Finance India Report (2023) , in its chapter "MSMEs: The Pillars of India's Economic Strength" by Ramesh S. Arunachalam. The index's dynamic and digital approach to data has steered SIDBI's efforts to provide a "data-driven understanding of MSMEs to improve credit access for the sector and fuel its growth." The Report, an annual publication presenting advancements in financial inclusion, is published by The Global Inclusive Finance Initiative, a think-tank advocating for financial inclusion in India.`,
+        imageURL: 'assets/images/news-financing.svg',
       },
     ],
   };
