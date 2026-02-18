@@ -1,0 +1,85 @@
+@import "../../assets/variables";
+
+.word-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  text-align: start;
+
+  @media only screen and (min-width: 768px) {
+    height: 90px;
+  }
+
+  &:hover {
+    .flip-animation {
+      animation-play-state: paused;
+    }
+  }
+
+  .flip-animation {
+    animation: scroll-auto-mobile 12s ease infinite;
+    list-style: none;
+    padding-left: 0;
+
+    @media only screen and (min-width: 768px) {
+      animation: scroll-auto-web 12s ease infinite;
+    }
+
+    li {
+      height: 50px;
+      font-size: $font-size-16px;
+      font-weight: 500;
+      color: #03325c;
+      text-align: start;
+
+      @media only screen and (min-width: 768px) {
+        height: 90px;
+        font-size: $font-size-18px;
+      }
+      @media only screen and (min-width: 992px) {
+        font-size: $font-size-24px;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: $font-size-32px;
+      }
+    }
+  }
+}
+
+@keyframes scroll-auto-mobile {
+  0%,
+  25% {
+    margin-top: 0px;
+  }
+  30%,
+  55% {
+    margin-top: -50px;
+  }
+  60%,
+  85% {
+    margin-top: -100px;
+  }
+  90%,
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes scroll-auto-web {
+  0%,
+  25% {
+    margin-top: 0px;
+  }
+  30%,
+  55% {
+    margin-top: -90px;
+  }
+  60%,
+  85% {
+    margin-top: -180px;
+  }
+  90%,
+  100% {
+    margin-top: 0px;
+  }
+}
