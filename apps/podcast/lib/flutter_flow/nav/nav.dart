@@ -50,7 +50,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: PodcastWidget.routeName,
           path: PodcastWidget.routePath,
-          builder: (context, params) => PodcastWidget(),
+          builder: (context, params) => PodcastWidget(
+            selectedPage: params.getParam(
+              'selectedPage',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: PodcastDetailsWidget.routeName,
@@ -61,6 +66,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: PodcastDetailsBudgetWidget.routeName,
           path: PodcastDetailsBudgetWidget.routePath,
           builder: (context, params) => PodcastDetailsBudgetWidget(),
+        ),
+        FFRoute(
+          name: VideosWidget.routeName,
+          path: VideosWidget.routePath,
+          builder: (context, params) => VideosWidget(
+            currentPage: params.getParam(
+              'currentPage',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

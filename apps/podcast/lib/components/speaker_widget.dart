@@ -13,10 +13,12 @@ class SpeakerWidget extends StatefulWidget {
     super.key,
     required this.image,
     required this.name,
+    required this.description,
   });
 
   final String? image;
   final String? name;
+  final String? description;
 
   @override
   State<SpeakerWidget> createState() => _SpeakerWidgetState();
@@ -50,18 +52,17 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 150.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
         boxShadow: [
           BoxShadow(
             blurRadius: 40.0,
-            color: Colors.transparent,
+            color: Color(0xFFD0D0D0),
             offset: Offset(
               12.0,
               12.0,
             ),
-            spreadRadius: 30.0,
+            spreadRadius: 5.0,
           )
         ],
         borderRadius: BorderRadius.circular(20.0),
@@ -75,18 +76,23 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                widget!.image!,
-                width: 153.6,
-                height: 168.76,
-                fit: BoxFit.contain,
+            Container(
+              decoration: BoxDecoration(),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  widget!.image!,
+                  width:
+                      MediaQuery.sizeOf(context).width > 498.0 ? 152.0 : 87.0,
+                  height:
+                      MediaQuery.sizeOf(context).width > 498.0 ? 158.0 : 83.36,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -96,9 +102,18 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 0.0, 180.0, 0.0),
+                            0.0,
+                            0.0,
+                            valueOrDefault<double>(
+                              MediaQuery.sizeOf(context).width > 498.0
+                                  ? 100.0
+                                  : 0.0,
+                              0.0,
+                            ),
+                            0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
                               alignment: AlignmentDirectional(-1.0, 0.0),
@@ -117,25 +132,40 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                             .fontStyle,
                                       ),
                                       color: Color(0xFF111827),
-                                      fontSize: 24.0,
+                                      fontSize:
+                                          MediaQuery.sizeOf(context).width >
+                                                  498.0
+                                              ? 20.0
+                                              : 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
+                                overflow: TextOverflow.visible,
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 0.0),
+                                  0.0,
+                                  valueOrDefault<double>(
+                                    MediaQuery.sizeOf(context).width > 498.0
+                                        ? 10.0
+                                        : 5.0,
+                                    0.0,
+                                  ),
+                                  0.0,
+                                  0.0),
                               child: Text(
-                                '8+ years in market research and economic analysis, helping business navigate India\'s MSME landscape. Specialized in demand forecasting, competetive intelligence, and policy impact studies. Published in leading industry journals and spoken at national forums.',
-                                maxLines: 5,
+                                valueOrDefault<String>(
+                                  widget!.description,
+                                  'Description',
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      font: GoogleFonts.poppins(
+                                      font: GoogleFonts.inter(
                                         fontWeight: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
@@ -144,7 +174,11 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                             .fontStyle,
                                       ),
                                       color: Color(0xFF6B7280),
-                                      fontSize: 13.0,
+                                      fontSize:
+                                          MediaQuery.sizeOf(context).width >
+                                                  498.0
+                                              ? 13.0
+                                              : 10.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium

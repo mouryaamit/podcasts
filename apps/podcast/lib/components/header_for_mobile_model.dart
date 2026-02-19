@@ -9,10 +9,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class HeaderForMobileModel extends FlutterFlowModel<HeaderForMobileWidget> {
-  ///  Local state fields for this component.
-
-  bool isSelected = false;
-
   @override
   void initState(BuildContext context) {}
 

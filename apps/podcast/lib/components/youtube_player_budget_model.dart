@@ -1,16 +1,15 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_web_view.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import '/index.dart';
-import 'featured_episode_card_web_widget.dart'
-    show FeaturedEpisodeCardWebWidget;
+import 'youtube_player_budget_widget.dart' show YoutubePlayerBudgetWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class FeaturedEpisodeCardWebModel
-    extends FlutterFlowModel<FeaturedEpisodeCardWebWidget> {
+class YoutubePlayerBudgetModel
+    extends FlutterFlowModel<YoutubePlayerBudgetWidget> {
   @override
   void initState(BuildContext context) {}
 

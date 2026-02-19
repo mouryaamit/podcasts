@@ -9,6 +9,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WatchNowDialogModel extends FlutterFlowModel<WatchNowDialogWidget> {
+  ///  Local state fields for this component.
+
+  bool isLoading = false;
+
   @override
   void initState(BuildContext context) {}
 

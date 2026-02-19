@@ -50,6 +50,8 @@ class _ShortsWidgetState extends State<ShortsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 392.0,
+      height: 557.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
         borderRadius: BorderRadius.circular(8.0),
@@ -69,15 +71,18 @@ class _ShortsWidgetState extends State<ShortsWidget> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    'assets/images/image.png',
-                    width: 408.0,
-                    height: 387.0,
-                    fit: BoxFit.cover,
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      'assets/images/image.png',
+                      width: 359.0,
+                      height: 359.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -230,7 +235,7 @@ class _ShortsWidgetState extends State<ShortsWidget> {
                             EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF1DB954),
+                        color: Color(0xFF30AC6B),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   font: GoogleFonts.interTight(
@@ -261,7 +266,7 @@ class _ShortsWidgetState extends State<ShortsWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                       child: FlutterFlowIconButton(
-                        borderColor: Color(0xFF1DB954),
+                        borderColor: Color(0xFF30AC6B),
                         borderRadius: 8.0,
                         buttonSize: 38.0,
                         fillColor: Color(0x000FFFFF),

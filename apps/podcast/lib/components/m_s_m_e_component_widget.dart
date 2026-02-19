@@ -236,8 +236,8 @@ class _MSMEComponentWidgetState extends State<MSMEComponentWidget> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.network(
-                                'https://picsum.photos/seed/133/600',
+                              child: Image.asset(
+                                'assets/images/mwmx0_600',
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -322,7 +322,7 @@ class _MSMEComponentWidgetState extends State<MSMEComponentWidget> {
                                     2.0, 0.0, 2.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF1DB954),
+                                color: Color(0xFF30AC6B),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -359,7 +359,7 @@ class _MSMEComponentWidgetState extends State<MSMEComponentWidget> {
                                 fillColor: Color(0x000FFFFF),
                                 icon: Icon(
                                   Icons.ios_share,
-                                  color: Color(0xFF1DB954),
+                                  color: Color(0xFF30AC6B),
                                   size: 22.0,
                                 ),
                                 onPressed: () {
