@@ -1,0 +1,30 @@
+{
+  "name": "podcast",
+  "projectType": "application",
+  "root": "apps/podcast",
+  "sourceRoot": "apps/podcast/lib",
+  "targets": {
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "flutter run",
+        "cwd": "apps/podcast"
+      }
+    },
+    "build-android": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "flutter build apk",
+        "cwd": "apps/podcast"
+      }
+    },
+    "build-ios": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "flutter build ios",
+        "cwd": "apps/podcast"
+      }
+    }
+  },
+  "tags": []
+}
