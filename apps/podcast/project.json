@@ -7,7 +7,7 @@
     "serve": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "flutter run",
+        "command": "flutter run -d chrome --web-port=4200",
         "cwd": "apps/podcast"
       }
     },
