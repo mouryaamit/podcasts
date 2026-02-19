@@ -6,20 +6,20 @@ import { ApiService } from './api.service';
   providedIn: 'root',
 })
 export class SumpoornApiService {
-  constructor(public apiService: ApiService) {}
+  constructor(public apiService: ApiService) { }
 
   saveContactDetails(data) {
     return new Promise((resolve, reject) => {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/services/contact/v1/save-contact-details',
+          'swara-sumpoorn/services/contact/v1/save-contact-details',
           data,
           null
         )
         .then(
           (resp: any) => {
-            if (resp && resp.statusCode == 200) {
+            if (resp && (resp.statusCode == 200 || resp.statusCode == 404 || resp.statusCode == 500)) {
               resolve(resp);
             } else {
               reject(this.apiService.commonStrings.http_error);
@@ -37,13 +37,13 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/services/partner/v1/save-partner-details',
+          'swara-sumpoorn/services/partner/v1/save-partner-details',
           data,
           null
         )
         .then(
           (resp: any) => {
-            if (resp && resp.statusCode == 200) {
+            if (resp && (resp.statusCode == 200 || resp.statusCode == 404 || resp.statusCode == 500)) {
               resolve(resp);
             } else {
               reject(this.apiService.commonStrings.http_error);
@@ -61,13 +61,13 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/services/subscription/v1/save-subscription-details',
+          'swara-sumpoorn/services/subscription/v1/save-subscription-details',
           data,
           null
         )
         .then(
           (resp: any) => {
-            if (resp && resp.statusCode == 200) {
+            if (resp && (resp.statusCode == 200 || resp.statusCode == 404 || resp.statusCode == 500)) {
               resolve(resp);
             } else {
               reject(resp);
@@ -85,13 +85,13 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/services/schedule/v1/save-schedule-demo-details',
+          'swara-sumpoorn/services/schedule/v1/save-schedule-demo-details',
           data,
           null
         )
         .then(
           (resp: any) => {
-            if (resp && resp.statusCode == 200) {
+            if (resp && (resp.statusCode == 200 || resp.statusCode == 404 || resp.statusCode == 500)) {
               resolve(resp);
             } else {
               reject(this.apiService.commonStrings.http_error);
@@ -109,7 +109,7 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn//institution/services/v1/get-inst-login-details',
+          'swara-sumpoorn//institution/services/v1/get-inst-login-details',
           data,
           null
         )
@@ -133,7 +133,7 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/report/services/v1/download-sumpoorn-report',
+          'swara-sumpoorn/report/services/v1/download-sumpoorn-report',
           data,
           null
         )
@@ -157,7 +157,7 @@ export class SumpoornApiService {
       this.apiService
         .postApi(
           environment.swaraHost +
-            'swara-sumpoorn/report/services/v1/get-news-room-report',
+          'swara-sumpoorn/report/services/v1/get-news-room-report',
           data,
           null
         )

@@ -1,0 +1,16 @@
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                [2m | [22m[1mNames[22m         [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mvendor.d6084ef8f44978de.js[39m[37m         [2m | [22mvendor        [2m | [22m  [96m5.87 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mmain.76137abe83b0f86d.js[39m[37m           [2m | [22mmain          [2m | [22m[96m855.36 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mlib-bootstrap.f141012574629b8b.css[39m[37m [2m | [22mlib-bootstrap [2m | [22m[96m229.41 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mscripts.9f5edcf9fa0312f6.js[39m[37m        [2m | [22mscripts       [2m | [22m[96m142.27 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mpolyfills.7bd0b6f5c82cdf51.js[39m[37m      [2m | [22mpolyfills     [2m | [22m[96m109.32 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mstyles.8e55b73b1f92d809.css[39m[37m        [2m | [22mstyles        [2m | [22m [96m85.80 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mlib-deeppurple.01947893db0b27b9.css[39m[37m[2m | [22mlib-deeppurple[2m | [22m [96m78.88 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mlib-aos.b17fda0170606f0f.css[39m[37m       [2m | [22mlib-aos       [2m | [22m [96m26.14 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mlib-toastr.78338fe34e8f9e6f.css[39m[37m    [2m | [22mlib-toastr    [2m | [22m  [96m6.88 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mruntime.a422648e5b9e31b5.js[39m[37m        [2m | [22mruntime       [2m | [22m  [96m6.71 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1m [22m                                  [2m | [22m[1mInitial Total[22m [2m | [22m  [1m[93m7.37 MB[39m[37m[22m[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2026-02-19T07:57:28.107Z[39m[37m[22m - Hash: [1m[37m9a171c396aaec45a[39m[37m[22m - Time: [1m[37m19493[39m[37m[22mms[0m[39m

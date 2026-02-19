@@ -1,0 +1,2790 @@
+{
+  "version": "5.1",
+  "nxVersion": "15.9.7",
+  "deps": {
+    "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^14.2.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/material": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "aos": "^2.3.1",
+    "bootstrap": "5.2.1",
+    "crypto-js": "^4.2.0",
+    "d3": "^7.8.5",
+    "d3-selection": "^3.0.0",
+    "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.7.1",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.43",
+    "ngx-toastr": "^13.1.0",
+    "path": "^0.12.7",
+    "popper.js": "^1.16.1",
+    "replace-in-file": "^7.0.2",
+    "rxjs": "~7.5.0",
+    "sharp": "^0.34.5",
+    "strip-ansi": "^7.1.2",
+    "tslib": "^2.3.0",
+    "xss": "^1.0.15",
+    "zone.js": "~0.11.4",
+    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular-devkit/core": "^14.2.13",
+    "@angular-devkit/schematics": "^14.2.13",
+    "@angular-eslint/builder": "14.4.0",
+    "@angular-eslint/eslint-plugin": "14.4.0",
+    "@angular-eslint/eslint-plugin-template": "14.4.0",
+    "@angular-eslint/schematics": "14.4.0",
+    "@angular-eslint/template-parser": "14.4.0",
+    "@angular/cli": "~14.2.13",
+    "@angular/compiler-cli": "^14.2.0",
+    "@angular/language-service": "^14.2.13",
+    "@nrwl/angular": "^15.9.7",
+    "@nrwl/cypress": "15.9.7",
+    "@nrwl/eslint-plugin-nx": "15.9.7",
+    "@nrwl/jest": "15.9.7",
+    "@nrwl/js": "15.9.7",
+    "@nrwl/linter": "15.9.7",
+    "@nrwl/web": "15.9.7",
+    "@nrwl/workspace": "15.9.7",
+    "@schematics/angular": "^14.2.13",
+    "@types/aos": "^3.0.5",
+    "@types/jest": "^29.4.0",
+    "@types/jquery": "^3.5.23",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "5.43.0",
+    "@typescript-eslint/parser": "5.43.0",
+    "cypress": "^12.2.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "~13.0.0",
+    "nx": "15.9.7",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "~4.7.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "nodes": {
+    "angular": {
+      "name": "angular",
+      "type": "app",
+      "data": {
+        "name": "angular",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "prefix": "sumpoorn",
+        "sourceRoot": "apps/angular/src",
+        "tags": [],
+        "targets": {
+          "prebuild": {
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "node tools/scripts/strip-exif.js && node tools/scripts/timestamp.js"
+            }
+          },
+          "build": {
+            "dependsOn": [
+              "prebuild"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/apps/angular",
+              "index": "apps/angular/src/index.html",
+              "main": "apps/angular/src/main.ts",
+              "inlineStyleLanguage": "scss",
+              "polyfills": "apps/angular/src/polyfills.ts",
+              "tsConfig": "apps/angular/tsconfig.app.json",
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "assets": [
+                "apps/angular/src/favicon.ico",
+                "apps/angular/src/assets",
+                "apps/angular/src/robots.txt"
+              ],
+              "allowedCommonJsDependencies": [
+                "crypto-js",
+                "xss",
+                "d3",
+                "file-saver"
+              ],
+              "styles": [
+                {
+                  "input": "./node_modules/bootstrap/dist/css/bootstrap.css",
+                  "inject": true,
+                  "bundleName": "lib-bootstrap"
+                },
+                {
+                  "input": "./node_modules/aos/dist/aos.css",
+                  "inject": true,
+                  "bundleName": "lib-aos"
+                },
+                {
+                  "input": "node_modules/ngx-toastr/toastr.css",
+                  "inject": true,
+                  "bundleName": "lib-toastr"
+                },
+                {
+                  "input": "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                  "inject": true,
+                  "bundleName": "lib-deeppurple"
+                },
+                "apps/angular/src/styles.scss"
+              ],
+              "scripts": [
+                "./node_modules/bootstrap/dist/js/bootstrap.js"
+              ]
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kb",
+                    "maximumError": "10mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "12kb",
+                    "maximumError": "54kb"
+                  }
+                ],
+                "index": {
+                  "input": "apps/angular/src/index-prod.html",
+                  "output": "index.html"
+                },
+                "fileReplacements": [
+                  {
+                    "replace": "apps/angular/src/environments/environment.ts",
+                    "with": "apps/angular/src/environments/environment.production.ts"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "fileReplacements": [
+                  {
+                    "replace": "apps/angular/src/environments/environment.ts",
+                    "with": "apps/angular/src/environments/environment.development.ts"
+                  }
+                ],
+                "outputHashing": "all"
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "dependsOn": [
+              "prebuild"
+            ],
+            "configurations": {
+              "production": {
+                "browserTarget": "angular:build:production"
+              },
+              "development": {
+                "browserTarget": "angular:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "browserTarget": "angular:build"
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nrwl/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "apps/angular/**/*.ts",
+                "apps/angular/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "apps/angular",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "apps/angular/.eslintrc.json",
+            "hash": "1339822360090664025"
+          },
+          {
+            "file": "apps/angular/project.json",
+            "hash": "9222061708427450823"
+          },
+          {
+            "file": "apps/angular/src/app/about/about.component.html",
+            "hash": "15302216592181413049"
+          },
+          {
+            "file": "apps/angular/src/app/about/about.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/about/about.component.ts",
+            "hash": "10930768051058122506",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/app-routing.module.ts",
+            "hash": "14014039224226368961",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/app.component.html",
+            "hash": "15055375793093235953"
+          },
+          {
+            "file": "apps/angular/src/app/app.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/app.component.spec.ts",
+            "hash": "13074734529769787662",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/app.component.ts",
+            "hash": "17201433870044721474",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:rxjs",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/app.module.ts",
+            "hash": "8143788362553018121",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/platform-browser",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/common",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/contact/contact.component.html",
+            "hash": "5360891064346681228"
+          },
+          {
+            "file": "apps/angular/src/app/contact/contact.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/contact/contact.component.ts",
+            "hash": "14165417047074928739",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/platform-browser",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:xss",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:rxjs",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/dialog/homepage-popup/homepage-popup.component.html",
+            "hash": "12383602197740908719"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/homepage-popup/homepage-popup.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/homepage-popup/homepage-popup.component.ts",
+            "hash": "11817376879478972809",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/dialog/institution-login-model/institution-login-model.component.html",
+            "hash": "14197114053033790443"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/institution-login-model/institution-login-model.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/institution-login-model/institution-login-model.component.ts",
+            "hash": "9879397896704490521",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/dialog/roadmap-model/roadmap-model.component.html",
+            "hash": "7078171943855057186"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/roadmap-model/roadmap-model.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/roadmap-model/roadmap-model.component.ts",
+            "hash": "6525968919785427997",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/dialog/subscribe-model/subscribe-model.component.html",
+            "hash": "32398132168545613"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/subscribe-model/subscribe-model.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/dialog/subscribe-model/subscribe-model.component.ts",
+            "hash": "8435980235005343011",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/directive/common.directive.ts",
+            "hash": "16825405566913615669",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/footer/footer.component.html",
+            "hash": "5824543786811907449"
+          },
+          {
+            "file": "apps/angular/src/app/footer/footer.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/footer/footer.component.ts",
+            "hash": "8644455649352466913",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/header/header.component.html",
+            "hash": "7098885816323549798"
+          },
+          {
+            "file": "apps/angular/src/app/header/header.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/header/header.component.ts",
+            "hash": "9293677435188087087",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/home/home.component.html",
+            "hash": "17852206006201344635"
+          },
+          {
+            "file": "apps/angular/src/app/home/home.component.scss",
+            "hash": "7453217175506451802"
+          },
+          {
+            "file": "apps/angular/src/app/home/home.component.ts",
+            "hash": "16459343100949811797",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:aos",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/index/context-chart/context-chart.component.html",
+            "hash": "7717594676974807806"
+          },
+          {
+            "file": "apps/angular/src/app/index/context-chart/context-chart.component.scss",
+            "hash": "7400360867422229006"
+          },
+          {
+            "file": "apps/angular/src/app/index/context-chart/context-chart.component.ts",
+            "hash": "7151896929109136444",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:d3",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/index/index.component.html",
+            "hash": "9486944545505423833"
+          },
+          {
+            "file": "apps/angular/src/app/index/index.component.scss",
+            "hash": "1532249983057157536"
+          },
+          {
+            "file": "apps/angular/src/app/index/index.component.ts",
+            "hash": "12301642252605289260",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:file-saver",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/index/insights-chart/insights-chart.component.html",
+            "hash": "7599408648066358728"
+          },
+          {
+            "file": "apps/angular/src/app/index/insights-chart/insights-chart.component.scss",
+            "hash": "8788382400999693644"
+          },
+          {
+            "file": "apps/angular/src/app/index/insights-chart/insights-chart.component.ts",
+            "hash": "2835319835694607767",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/platform-browser",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:d3",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:moment",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/institution-login/institution-login.component.html",
+            "hash": "3301979635828528302"
+          },
+          {
+            "file": "apps/angular/src/app/institution-login/institution-login.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/institution-login/institution-login.component.ts",
+            "hash": "3535993067595689626",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/media-kit/media-kit.component.html",
+            "hash": "15589675764211140220"
+          },
+          {
+            "file": "apps/angular/src/app/media-kit/media-kit.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/media-kit/media-kit.component.ts",
+            "hash": "12790265909844026663",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/methodology/activity-distribution/activity-distribution.component.html",
+            "hash": "7696751595715557515"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/activity-distribution/activity-distribution.component.scss",
+            "hash": "11316497140456316734"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/activity-distribution/activity-distribution.component.ts",
+            "hash": "12078417309016422098",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:d3",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:moment",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/methodology/methodology.component.html",
+            "hash": "4447930299661677549"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/methodology.component.scss",
+            "hash": "4432487054361292633"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/methodology.component.ts",
+            "hash": "14491697488529262231",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/methodology/sector-distribution/sector-distribution.component.html",
+            "hash": "4952270076493928211"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/sector-distribution/sector-distribution.component.scss",
+            "hash": "13318776032281624066"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/sector-distribution/sector-distribution.component.ts",
+            "hash": "108225906114632636",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:d3",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:moment",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/methodology/turnover-distribution/turnover-distribution.component.html",
+            "hash": "10600295167158189542"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/turnover-distribution/turnover-distribution.component.scss",
+            "hash": "15385764089125686591"
+          },
+          {
+            "file": "apps/angular/src/app/methodology/turnover-distribution/turnover-distribution.component.ts",
+            "hash": "14800515534424524420",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:d3",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/newsroom-events/newsroom-events.component.html",
+            "hash": "17591711137928826503"
+          },
+          {
+            "file": "apps/angular/src/app/newsroom-events/newsroom-events.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/newsroom-events/newsroom-events.component.ts",
+            "hash": "7192108091074852593",
+            "dependencies": [
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:file-saver",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/newsroom/newsroom.component.html",
+            "hash": "7681038949306471505"
+          },
+          {
+            "file": "apps/angular/src/app/newsroom/newsroom.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/newsroom/newsroom.component.ts",
+            "hash": "7715210542193568017",
+            "dependencies": [
+              {
+                "target": "npm:@angular/router",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:file-saver",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:crypto-js",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/partners/partners.component.html",
+            "hash": "2917567975574131904"
+          },
+          {
+            "file": "apps/angular/src/app/partners/partners.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/partners/partners.component.ts",
+            "hash": "9047560015573849100",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/forms",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:jquery",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:ngx-toastr",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/pipes/seconds-to-time.pipe.ts",
+            "hash": "12588447168438056856",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/roadmap/roadmap.component.html",
+            "hash": "7312318366105276232"
+          },
+          {
+            "file": "apps/angular/src/app/roadmap/roadmap.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/roadmap/roadmap.component.ts",
+            "hash": "6962813689964421590",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/api.service.ts",
+            "hash": "7292912510138123979",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/common",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:rxjs",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/graph-api.service.ts",
+            "hash": "13459650671081583187",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/loader.service.ts",
+            "hash": "13306829519261646452",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/loading.interceptor.ts",
+            "hash": "1909206702867962060",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/common",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:rxjs",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/meta.service.ts",
+            "hash": "4104313076409858431",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/platform-browser",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/common",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/services/sumpoorn-api.service.ts",
+            "hash": "6098317451929616527",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/spinner/spinner.component.html",
+            "hash": "9293943969695409061"
+          },
+          {
+            "file": "apps/angular/src/app/spinner/spinner.component.scss",
+            "hash": "17482676429163138505"
+          },
+          {
+            "file": "apps/angular/src/app/spinner/spinner.component.ts",
+            "hash": "11420375104026840090",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/subscribe-button/subscribe-button.component.html",
+            "hash": "689435426238427977"
+          },
+          {
+            "file": "apps/angular/src/app/subscribe-button/subscribe-button.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/subscribe-button/subscribe-button.component.ts",
+            "hash": "10490830561895947665",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              },
+              {
+                "target": "npm:@angular/material",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/app/tou/tou.component.html",
+            "hash": "15048971751729998790"
+          },
+          {
+            "file": "apps/angular/src/app/tou/tou.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/app/tou/tou.component.ts",
+            "hash": "12628035590349364447",
+            "dependencies": [
+              {
+                "target": "npm:@angular/core",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/assets/.gitkeep",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/chart.png",
+            "hash": "444172990195899995"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/EUEJl7M9T6dGlGIpDicycH0BwUwKaQf6iwEMVchS8-6QMw%3Fe=vLILwR",
+            "hash": "236451778357042428"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/graph-1.svg",
+            "hash": "9317906300834830720"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/images1.png",
+            "hash": "444172990195899995"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/images2.png",
+            "hash": "10513948430078278836"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/logo-main-2x.svg",
+            "hash": "713530186001946330"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/minigraph.svg",
+            "hash": "12036195997051543270"
+          },
+          {
+            "file": "apps/angular/src/assets/emailers/novNewsLetter.svg",
+            "hash": "727676311336659887"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/accordion-minus.svg",
+            "hash": "5204543666016070242"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/accordion-plus.svg",
+            "hash": "9579204915264773413"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/account_balance.svg",
+            "hash": "16709031060619128635"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/active-activity.svg",
+            "hash": "7662212664825223520"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/active-constitution.svg",
+            "hash": "8585337840942751869"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/active-geo.svg",
+            "hash": "7517401318643914990"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/active-sector.svg",
+            "hash": "3463151166557744533"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/active-turnover.svg",
+            "hash": "1196398050734540354"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/arrow_forward.svg",
+            "hash": "10747944358082258850"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/back.svg",
+            "hash": "1141010038121846357"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/cart.svg",
+            "hash": "13531385579053102312"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chart-arrow-down.svg",
+            "hash": "2131488930310292738"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chart-arrow-right.svg",
+            "hash": "11817755657663600830"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chart-arrow-up.svg",
+            "hash": "7240926087124089203"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chevron_down.svg",
+            "hash": "3360492999192580519"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chevron_left.svg",
+            "hash": "7906262138318129057"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/chevron_right.svg",
+            "hash": "885636548123714715"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/circle-blue.svg",
+            "hash": "10661977802216379601"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/circle-green.svg",
+            "hash": "14367139328025534351"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/circle-orange.svg",
+            "hash": "1936825682581799250"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/close.svg",
+            "hash": "9295073471098285384"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/collapse_arrow.svg",
+            "hash": "5321129394857404309"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/combine.svg",
+            "hash": "6002420445878677830"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/currency_rupee.svg",
+            "hash": "11162677696680063187"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/download-icon-transparent.svg",
+            "hash": "16842440107097673969"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/download-icon.svg",
+            "hash": "17269418930400054076"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/expand_more.svg",
+            "hash": "12491299367937580618"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/favicon.png",
+            "hash": "8857170383380133544"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/gap.svg",
+            "hash": "3363813188299982599"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/graph.svg",
+            "hash": "17089073090089758899"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/hamburger-bars.svg",
+            "hash": "17613507599260318852"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/hamburger-close.svg",
+            "hash": "2451902776530928903"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/inactive-activity.svg",
+            "hash": "15053296858878859303"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/inactive-constitution.svg",
+            "hash": "16008944517502370014"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/inactive-geo.svg",
+            "hash": "17314243879399039754"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/inactive-sector.svg",
+            "hash": "9339814592753312601"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/inactive-turnover.svg",
+            "hash": "446162079854347554"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/industry.svg",
+            "hash": "2774060610929592324"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/info.svg",
+            "hash": "13780533166162054923"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/ivc-end-blue.svg",
+            "hash": "5054786751022919770"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/ivc-end-gray.svg",
+            "hash": "2395474815031675251"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/ivc-start-blue.svg",
+            "hash": "17929978761370711996"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/ivc-start-gray.svg",
+            "hash": "15395893904029389382"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/linkedin.svg",
+            "hash": "4358348300142055482"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/login-black.svg",
+            "hash": "14538739271722058536"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/login-white.svg",
+            "hash": "17174024755260371600"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/map.svg",
+            "hash": "12342066294802493014"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/portfolio-old.svg",
+            "hash": "10098375859798427668"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/portfolio.svg",
+            "hash": "12895859208161022648"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/resize.svg",
+            "hash": "2108669087854362487"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/savings.svg",
+            "hash": "12534232692145952472"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/strategic.svg",
+            "hash": "14675246396577743897"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/toast-error.svg",
+            "hash": "13950806271267332532"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/toast-success.svg",
+            "hash": "8553460447218404909"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/toast-warning.svg",
+            "hash": "4991949240265203853"
+          },
+          {
+            "file": "apps/angular/src/assets/icons/website.svg",
+            "hash": "13636710878224952967"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph-11-2025.webp",
+            "hash": "2046196764660584499"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph-bkp.webp",
+            "hash": "12304089989819554974"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph-mobile-11-2025.webp",
+            "hash": "1629920568094432298"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph-mobile-bkp.webp",
+            "hash": "16599903166262152624"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph-mobile.webp",
+            "hash": "6276970041186141379"
+          },
+          {
+            "file": "apps/angular/src/assets/images/activity-graph.webp",
+            "hash": "2794743603637911059"
+          },
+          {
+            "file": "apps/angular/src/assets/images/calender.png",
+            "hash": "12889088171760506299"
+          },
+          {
+            "file": "apps/angular/src/assets/images/calender.webp",
+            "hash": "7904432137881230179"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-narasima-left.png",
+            "hash": "8920776183788051155"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-narasima-right.png",
+            "hash": "8012752419047673569"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-narasima.png",
+            "hash": "4736780582313694104"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-rahul.png",
+            "hash": "9436529850274958169"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-singh.png",
+            "hash": "14512216689452007497"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-srivats.png",
+            "hash": "16935893060350918122"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-suman.png",
+            "hash": "18215129161448685027"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentator-zeenat.png",
+            "hash": "12754274562069320943"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentor-ajit.svg",
+            "hash": "13644587039123626907"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentor-sumita.png",
+            "hash": "1198525140022516378"
+          },
+          {
+            "file": "apps/angular/src/assets/images/commentor-sumita.svg",
+            "hash": "6167873898798019684"
+          },
+          {
+            "file": "apps/angular/src/assets/images/deepak_sumita_narsi_mob.webp",
+            "hash": "11350848038347777583"
+          },
+          {
+            "file": "apps/angular/src/assets/images/deepak_sumita_narsi_web.webp",
+            "hash": "3803654088901830625"
+          },
+          {
+            "file": "apps/angular/src/assets/images/figure-hsn.svg",
+            "hash": "17575003598185297502"
+          },
+          {
+            "file": "apps/angular/src/assets/images/finreport_flow.jpg",
+            "hash": "13354403277906701862"
+          },
+          {
+            "file": "apps/angular/src/assets/images/geo-map.webp",
+            "hash": "6993282002653739149"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-chart.svg",
+            "hash": "3373696255347847185"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-main-bg-mobile.webp",
+            "hash": "18303167811725035749"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-main-bg.webp",
+            "hash": "14944302448517725611"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-main-features-mobile.svg",
+            "hash": "16458181006156021284"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-main-features.webp",
+            "hash": "2583202874898904875"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-main-people.webp",
+            "hash": "6176021288879477708"
+          },
+          {
+            "file": "apps/angular/src/assets/images/home-msme-chart.svg",
+            "hash": "1341219740099114824"
+          },
+          {
+            "file": "apps/angular/src/assets/images/homepage-popup.webp",
+            "hash": "9302917926438640440"
+          },
+          {
+            "file": "apps/angular/src/assets/images/index-insights.png",
+            "hash": "9977909188625743542"
+          },
+          {
+            "file": "apps/angular/src/assets/images/krishnan_laveesh_anil_sumita_narsi_mob.webp",
+            "hash": "9164106340126704611"
+          },
+          {
+            "file": "apps/angular/src/assets/images/krishnan_laveesh_anil_sumita_narsi_web.webp",
+            "hash": "12694945966141251400"
+          },
+          {
+            "file": "apps/angular/src/assets/images/logo-jo-sum.svg",
+            "hash": "8820095742730510499"
+          },
+          {
+            "file": "apps/angular/src/assets/images/logo-jocata.webp",
+            "hash": "10860150039222337908"
+          },
+          {
+            "file": "apps/angular/src/assets/images/logo-main-old.webp",
+            "hash": "10841826931876239263"
+          },
+          {
+            "file": "apps/angular/src/assets/images/logo-main.webp",
+            "hash": "13257354850806561533"
+          },
+          {
+            "file": "apps/angular/src/assets/images/logo-sidbi.webp",
+            "hash": "15054817599168499065"
+          },
+          {
+            "file": "apps/angular/src/assets/images/main-image.webp",
+            "hash": "17698126280599392657"
+          },
+          {
+            "file": "apps/angular/src/assets/images/maintenance.webp",
+            "hash": "12467344437044311647"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-narasima.webp",
+            "hash": "8230930503921966999"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-prashant.webp",
+            "hash": "13362615601374019930"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-ramann.webp",
+            "hash": "572398085646247524"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-sanjay.webp",
+            "hash": "17315421620726327340"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-singh.webp",
+            "hash": "3294717695685857831"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-sumita.webp",
+            "hash": "10240259165068305347"
+          },
+          {
+            "file": "apps/angular/src/assets/images/media-vivek.webp",
+            "hash": "11739934102478930062"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-narasima.webp",
+            "hash": "10958687088061621732"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-prashant.webp",
+            "hash": "2754897313615938998"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-ramann.webp",
+            "hash": "10670276448147421514"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-sanjay.webp",
+            "hash": "12775048881568525046"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-singh.webp",
+            "hash": "10514651873390065370"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-sumita.webp",
+            "hash": "4206306827735289245"
+          },
+          {
+            "file": "apps/angular/src/assets/images/member-vivek.webp",
+            "hash": "4304430446176168398"
+          },
+          {
+            "file": "apps/angular/src/assets/images/meth-range-chart.avifs",
+            "hash": "9931657193678832235"
+          },
+          {
+            "file": "apps/angular/src/assets/images/meth-range-chart.gif",
+            "hash": "639330364520473507"
+          },
+          {
+            "file": "apps/angular/src/assets/images/metrics-bkp.webp",
+            "hash": "8620499061617164796"
+          },
+          {
+            "file": "apps/angular/src/assets/images/metrics.webp",
+            "hash": "119280964400617345"
+          },
+          {
+            "file": "apps/angular/src/assets/images/nbdnewsroom.png",
+            "hash": "17721389466456736670"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-brazil-award.webp",
+            "hash": "10152975836379072923"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-brazil-speech.jfif",
+            "hash": "15682082960055669345"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-cgi.webp",
+            "hash": "2194174471625202861"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-digital-stack.jpg",
+            "hash": "7378471572848323984"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-discussion.png",
+            "hash": "1863343305219581736"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-dpi-powered.jpg",
+            "hash": "9725167803146541540"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-financing.svg",
+            "hash": "7429908173990259826"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-g20.png",
+            "hash": "8000132537981455378"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-global-innovation.jpg",
+            "hash": "786779087271600571"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-ifc.jpg",
+            "hash": "12124933880909978290"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-innaugural-address.png",
+            "hash": "12850332745495374255"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-keynote-address.png",
+            "hash": "12290064063949247237"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-lamp-lighting.png",
+            "hash": "15457723289376662483"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-launch-report.png",
+            "hash": "8253115418058885842"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-msme-ecosystem.jpg",
+            "hash": "11334007868614532114"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-puneppf.webp",
+            "hash": "5872967659660295028"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-un.png",
+            "hash": "11661943706179315433"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-un.svg",
+            "hash": "15051921023058038686"
+          },
+          {
+            "file": "apps/angular/src/assets/images/news-vote.png",
+            "hash": "4498598123391678320"
+          },
+          {
+            "file": "apps/angular/src/assets/images/partner-ceed.webp",
+            "hash": "6834864976794178056"
+          },
+          {
+            "file": "apps/angular/src/assets/images/partner-lead.webp",
+            "hash": "17845605875715394911"
+          },
+          {
+            "file": "apps/angular/src/assets/images/partner-sahamati.webp",
+            "hash": "8525098961987231158"
+          },
+          {
+            "file": "apps/angular/src/assets/images/pause.svg",
+            "hash": "8870460977170068276"
+          },
+          {
+            "file": "apps/angular/src/assets/images/play.svg",
+            "hash": "945551466338340425"
+          },
+          {
+            "file": "apps/angular/src/assets/images/rahul_sumita_narsi_mob.webp",
+            "hash": "15614973132791439912"
+          },
+          {
+            "file": "apps/angular/src/assets/images/rahul_sumita_narsi_web.webp",
+            "hash": "10459568785760432106"
+          },
+          {
+            "file": "apps/angular/src/assets/images/replay.svg",
+            "hash": "2530142319548867537"
+          },
+          {
+            "file": "apps/angular/src/assets/images/roadmap-geographical-chart.webp",
+            "hash": "14524033471611585111"
+          },
+          {
+            "file": "apps/angular/src/assets/images/roadmap-sectoral-chart.webp",
+            "hash": "8854054770773504317"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph-11-2025.webp",
+            "hash": "2863847458184592944"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph-bkp.webp",
+            "hash": "18343525746491438069"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph-mobile-11-2025.webp",
+            "hash": "8773865876545907238"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph-mobile-bkp.webp",
+            "hash": "4566893605797350985"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph-mobile.webp",
+            "hash": "13978530097233262738"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sector-graph.webp",
+            "hash": "11186501296970402422"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sm-un.svg",
+            "hash": "7620182373458983203"
+          },
+          {
+            "file": "apps/angular/src/assets/images/srivats_sumita_narsi_mob.webp",
+            "hash": "141309463076714265"
+          },
+          {
+            "file": "apps/angular/src/assets/images/srivats_sumita_narsi_web.webp",
+            "hash": "4652215738752500678"
+          },
+          {
+            "file": "apps/angular/src/assets/images/suman_sumita_narsi_mob.webp",
+            "hash": "667030497600954667"
+          },
+          {
+            "file": "apps/angular/src/assets/images/suman_sumita_narsi_web.webp",
+            "hash": "12785852180249436334"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumita_narsi_mob.webp",
+            "hash": "11663441988494887150"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumita_narsi_web.webp",
+            "hash": "4795176281181832354"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn_finance_report.webp",
+            "hash": "4473056443671159505"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-brazil.png",
+            "hash": "11958769477632778602"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-budget.webp",
+            "hash": "870478632763986140"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-ifc.jpg",
+            "hash": "17339409090565514836"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-launch.svg",
+            "hash": "1167344226334389495"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-msme-conversations.webp",
+            "hash": "7547946008397899793"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-msme.svg",
+            "hash": "17662950332643431267"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-MSME.webp",
+            "hash": "12032297188691276525"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-nbdnewsroom.webp",
+            "hash": "14753423642568501086"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-newyork.webp",
+            "hash": "16054221428175622642"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-openEd.webp",
+            "hash": "14216483331260007685"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-pune-ppf.webp",
+            "hash": "13417682235888794919"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-showcase.svg",
+            "hash": "17791335855039155951"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-un.svg",
+            "hash": "11248430328646906602"
+          },
+          {
+            "file": "apps/angular/src/assets/images/sumpoorn-un.webp",
+            "hash": "11645823414564789506"
+          },
+          {
+            "file": "apps/angular/src/assets/images/testimonial-jocata.webp",
+            "hash": "4081681401407239424"
+          },
+          {
+            "file": "apps/angular/src/assets/images/testimonial-sidbi.webp",
+            "hash": "14906354596928827738"
+          },
+          {
+            "file": "apps/angular/src/assets/images/tirthankar_sumita_narsi_mob.webp",
+            "hash": "17279127232421321824"
+          },
+          {
+            "file": "apps/angular/src/assets/images/tirthankar_sumita_narsi_web.webp",
+            "hash": "4262582316196075652"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph-11-2025.webp",
+            "hash": "9203304532259856135"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph-bkp.webp",
+            "hash": "6334655799811724307"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph-mobile-11-2025.webp",
+            "hash": "14238113541157561465"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph-mobile-bkp.webp",
+            "hash": "17271841466644109750"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph-mobile.webp",
+            "hash": "1939057651675278389"
+          },
+          {
+            "file": "apps/angular/src/assets/images/turnover-graph.webp",
+            "hash": "14889474559405402483"
+          },
+          {
+            "file": "apps/angular/src/assets/images/white_blue_simple_business_pitch_deck.svg",
+            "hash": "16039850377621797160"
+          },
+          {
+            "file": "apps/angular/src/assets/images/zeenat_sumita_narsi_mob.webp",
+            "hash": "7030882814407486405"
+          },
+          {
+            "file": "apps/angular/src/assets/images/zeenat_sumita_narsi_web.webp",
+            "hash": "6448697833111329429"
+          },
+          {
+            "file": "apps/angular/src/assets/json/stateCityData.json",
+            "hash": "9790574612930785789"
+          },
+          {
+            "file": "apps/angular/src/assets/json/sumpoorn_api.json",
+            "hash": "5447448241649465613"
+          },
+          {
+            "file": "apps/angular/src/assets/variables.scss",
+            "hash": "12583136250055029221"
+          },
+          {
+            "file": "apps/angular/src/environments/environment.development.ts",
+            "hash": "14710123967006211346"
+          },
+          {
+            "file": "apps/angular/src/environments/environment.production.ts",
+            "hash": "3910315639064151262"
+          },
+          {
+            "file": "apps/angular/src/environments/environment.ts",
+            "hash": "4978957414936570813"
+          },
+          {
+            "file": "apps/angular/src/favicon.ico",
+            "hash": "9303420814833116677"
+          },
+          {
+            "file": "apps/angular/src/index-prod.html",
+            "hash": "9001783521444083599"
+          },
+          {
+            "file": "apps/angular/src/index.html",
+            "hash": "4657992064683166384"
+          },
+          {
+            "file": "apps/angular/src/main.ts",
+            "hash": "1634881317052260138",
+            "dependencies": [
+              {
+                "target": "npm:@angular/platform-browser-dynamic",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/polyfills.ts",
+            "hash": "13952578668946952738",
+            "dependencies": [
+              {
+                "target": "npm:zone.js",
+                "source": "angular",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/angular/src/robots.txt",
+            "hash": "3790920107759343476"
+          },
+          {
+            "file": "apps/angular/src/styles.scss",
+            "hash": "2995800143670542924"
+          },
+          {
+            "file": "apps/angular/tsconfig.app.json",
+            "hash": "10900753814126508061"
+          },
+          {
+            "file": "apps/angular/tsconfig.editor.json",
+            "hash": "12999705351854551917"
+          },
+          {
+            "file": "apps/angular/tsconfig.json",
+            "hash": "574449181837130873"
+          }
+        ]
+      }
+    }
+  },
+  "externalNodes": {
+    "npm:@angular/animations": {
+      "type": "npm",
+      "name": "npm:@angular/animations",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/animations",
+        "hash": "56694f824b0aa017d43c03e4a840a37192387907cadf2d9d7b41afa9035db96a"
+      }
+    },
+    "npm:@angular/cdk": {
+      "type": "npm",
+      "name": "npm:@angular/cdk",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/cdk",
+        "hash": "b1c6f4550640bc9f48864697494e59679747e6a02b630fe09c6bbe563d2e8f34"
+      }
+    },
+    "npm:@angular/common": {
+      "type": "npm",
+      "name": "npm:@angular/common",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/common",
+        "hash": "870b4d512e956528c7daf9a4029f2414d59e36e57f0c134b604cd4a171f84d98"
+      }
+    },
+    "npm:@angular/compiler": {
+      "type": "npm",
+      "name": "npm:@angular/compiler",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/compiler",
+        "hash": "768134a5ae661c3f265e3fef36968f328fd837ace43464be54a81f2cbee11505"
+      }
+    },
+    "npm:@angular/core": {
+      "type": "npm",
+      "name": "npm:@angular/core",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/core",
+        "hash": "9bae59d0de28d10643868bbfd31f32b0e15ceb8877087aba05a5e8419f8a4cd9"
+      }
+    },
+    "npm:@angular/forms": {
+      "type": "npm",
+      "name": "npm:@angular/forms",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/forms",
+        "hash": "ba4106079fd11459bd79ba9ad7d63c8ee1cac99ae9917f5da94e5c4a20359c29"
+      }
+    },
+    "npm:@angular/material": {
+      "type": "npm",
+      "name": "npm:@angular/material",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/material",
+        "hash": "d874a0ef90e1a38a17e740044887c5102b6f7dfeef6f6e063b2ad9d335a51b20"
+      }
+    },
+    "npm:@angular/platform-browser": {
+      "type": "npm",
+      "name": "npm:@angular/platform-browser",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/platform-browser",
+        "hash": "90c76e6c1741c8c800cca855fac6b634177c2cf1d58e94c7490a2c98dc5a89dc"
+      }
+    },
+    "npm:@angular/platform-browser-dynamic": {
+      "type": "npm",
+      "name": "npm:@angular/platform-browser-dynamic",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/platform-browser-dynamic",
+        "hash": "2cd31b8f547733e4c57b19ecd540eeb6741d3bcf7a4c59659b37ef40bc068913"
+      }
+    },
+    "npm:@angular/router": {
+      "type": "npm",
+      "name": "npm:@angular/router",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/router",
+        "hash": "4ae1eb2f45b007760219b0dc7b1295004267aca2dcc9923749b7275883ad5dfe"
+      }
+    },
+    "npm:aos": {
+      "type": "npm",
+      "name": "npm:aos",
+      "data": {
+        "version": "^2.3.1",
+        "packageName": "aos",
+        "hash": "84fe370cb48c28bef8f913be17e542ef1aef52a959571baa1858b12d1f5568d4"
+      }
+    },
+    "npm:bootstrap": {
+      "type": "npm",
+      "name": "npm:bootstrap",
+      "data": {
+        "version": "5.2.1",
+        "packageName": "bootstrap",
+        "hash": "5ac58ed2988aa3334183e5a3dce5883459274635940b0582989bd0cdc12a2531"
+      }
+    },
+    "npm:crypto-js": {
+      "type": "npm",
+      "name": "npm:crypto-js",
+      "data": {
+        "version": "^4.2.0",
+        "packageName": "crypto-js",
+        "hash": "a607db3f5a656352e5b51dd4cb00781ba31b2a9c30786f1116b0e1ac02cb3b05"
+      }
+    },
+    "npm:d3": {
+      "type": "npm",
+      "name": "npm:d3",
+      "data": {
+        "version": "^7.8.5",
+        "packageName": "d3",
+        "hash": "9f2ead5861a3719c182791f0dc56fd5cc89d332ff88aa0e0e4b09100f04fb936"
+      }
+    },
+    "npm:d3-selection": {
+      "type": "npm",
+      "name": "npm:d3-selection",
+      "data": {
+        "version": "^3.0.0",
+        "packageName": "d3-selection",
+        "hash": "80ca285b40ce4accce5e021bc3641ee7cd14f830e103edde287bf7cf151a3b62"
+      }
+    },
+    "npm:file-saver": {
+      "type": "npm",
+      "name": "npm:file-saver",
+      "data": {
+        "version": "^2.0.5",
+        "packageName": "file-saver",
+        "hash": "df6e5cb0ce3a9354cbb2c71b3293c84d47579f48069da7107e5cc1f93346333e"
+      }
+    },
+    "npm:fs": {
+      "type": "npm",
+      "name": "npm:fs",
+      "data": {
+        "version": "^0.0.1-security",
+        "packageName": "fs",
+        "hash": "6059128819a12f908f745c4dc0a368b37efbc881edea68843c5bb52d338bc60b"
+      }
+    },
+    "npm:jquery": {
+      "type": "npm",
+      "name": "npm:jquery",
+      "data": {
+        "version": "^3.7.1",
+        "packageName": "jquery",
+        "hash": "17bdc062753e7e3d872e25f872b631fa31dfd10a154f31e4fefbc4214f0dddd3"
+      }
+    },
+    "npm:moment": {
+      "type": "npm",
+      "name": "npm:moment",
+      "data": {
+        "version": "^2.30.1",
+        "packageName": "moment",
+        "hash": "fc0ada58ae2c62767a3a9aa450540b099d53bf77550da77327ef409862982f4e"
+      }
+    },
+    "npm:moment-timezone": {
+      "type": "npm",
+      "name": "npm:moment-timezone",
+      "data": {
+        "version": "^0.5.43",
+        "packageName": "moment-timezone",
+        "hash": "e5bdb732bbe7dbd0e68ec411000b337e5edf9751facb0c825ecdce8163ccb4ac"
+      }
+    },
+    "npm:ngx-toastr": {
+      "type": "npm",
+      "name": "npm:ngx-toastr",
+      "data": {
+        "version": "^13.1.0",
+        "packageName": "ngx-toastr",
+        "hash": "389f5a6e8e7d2867156592eaf1c50c6ff7b2cff7889af866b4533e9bc174aa0f"
+      }
+    },
+    "npm:path": {
+      "type": "npm",
+      "name": "npm:path",
+      "data": {
+        "version": "^0.12.7",
+        "packageName": "path",
+        "hash": "5461c9404eac65eae192ed8a89aaa326d153599f44294a0e297d4b33c71ed1a7"
+      }
+    },
+    "npm:popper.js": {
+      "type": "npm",
+      "name": "npm:popper.js",
+      "data": {
+        "version": "^1.16.1",
+        "packageName": "popper.js",
+        "hash": "246dd3d8c835b646a78004a9eb979b416e52135fad3be45e836480018c9ae967"
+      }
+    },
+    "npm:replace-in-file": {
+      "type": "npm",
+      "name": "npm:replace-in-file",
+      "data": {
+        "version": "^7.0.2",
+        "packageName": "replace-in-file",
+        "hash": "cfee64c446a8c0a0273729d1f6c1dc38d202648af549b463cf62109981ae650b"
+      }
+    },
+    "npm:rxjs": {
+      "type": "npm",
+      "name": "npm:rxjs",
+      "data": {
+        "version": "~7.5.0",
+        "packageName": "rxjs",
+        "hash": "aa112459324303e2c3a2c6033c0d5c33b5f574a48df523b7ccd42bbf2d8650b3"
+      }
+    },
+    "npm:sharp": {
+      "type": "npm",
+      "name": "npm:sharp",
+      "data": {
+        "version": "^0.34.5",
+        "packageName": "sharp",
+        "hash": "eef6d6724354f41bc657953c285eb1ba44fa5d596d96c46bede9567ee5af3a8b"
+      }
+    },
+    "npm:strip-ansi": {
+      "type": "npm",
+      "name": "npm:strip-ansi",
+      "data": {
+        "version": "^7.1.2",
+        "packageName": "strip-ansi",
+        "hash": "41399aa694a8b706d30cb2c898bb2caffa7e80cbde8402aaaac268ea614fa7e3"
+      }
+    },
+    "npm:tslib": {
+      "type": "npm",
+      "name": "npm:tslib",
+      "data": {
+        "version": "^2.3.0",
+        "packageName": "tslib",
+        "hash": "a33e74687104ec3eee715b3039ada1f6fc526a5dbb18f125cfc6c30497bfe2b7"
+      }
+    },
+    "npm:xss": {
+      "type": "npm",
+      "name": "npm:xss",
+      "data": {
+        "version": "^1.0.15",
+        "packageName": "xss",
+        "hash": "542a3352035bc3329ffad07b26b3decb4fcc1a53063c2ab2cf40d728d6287830"
+      }
+    },
+    "npm:zone.js": {
+      "type": "npm",
+      "name": "npm:zone.js",
+      "data": {
+        "version": "~0.11.4",
+        "packageName": "zone.js",
+        "hash": "a211e56d3799fbf56783773e48ad85c02c7126f69bb0919a7e2a11000feb9873"
+      }
+    },
+    "npm:@angular-devkit/build-angular": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/build-angular",
+      "data": {
+        "version": "^14.2.13",
+        "packageName": "@angular-devkit/build-angular",
+        "hash": "c2746d76e53a62778509ca1e8de04eb6b1f3d35dba585496435863fc70a81480"
+      }
+    },
+    "npm:@angular-devkit/core": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/core",
+      "data": {
+        "version": "^14.2.13",
+        "packageName": "@angular-devkit/core",
+        "hash": "6adbc3bc728d98483e8bd7d4437d639864d29d2527ddf010ea3bef043d004201"
+      }
+    },
+    "npm:@angular-devkit/schematics": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/schematics",
+      "data": {
+        "version": "^14.2.13",
+        "packageName": "@angular-devkit/schematics",
+        "hash": "cbd46b403aa8571faf2d11091b66d43f3c2512975c55cc20cc1f8814fb7325d2"
+      }
+    },
+    "npm:@angular-eslint/builder": {
+      "type": "npm",
+      "name": "npm:@angular-eslint/builder",
+      "data": {
+        "version": "14.4.0",
+        "packageName": "@angular-eslint/builder",
+        "hash": "5bd9d54c2376338159df6b248419b6e84adbad7100e36271277d8d2923b79cb5"
+      }
+    },
+    "npm:@angular-eslint/eslint-plugin": {
+      "type": "npm",
+      "name": "npm:@angular-eslint/eslint-plugin",
+      "data": {
+        "version": "14.4.0",
+        "packageName": "@angular-eslint/eslint-plugin",
+        "hash": "9c002ce02459695a7d859cdfa4d09a4e31063eed833fdaa831d7d41e2cffafc0"
+      }
+    },
+    "npm:@angular-eslint/eslint-plugin-template": {
+      "type": "npm",
+      "name": "npm:@angular-eslint/eslint-plugin-template",
+      "data": {
+        "version": "14.4.0",
+        "packageName": "@angular-eslint/eslint-plugin-template",
+        "hash": "c02e68a3678083c98ac92ddd070364280183be2929d808017d8530882068a917"
+      }
+    },
+    "npm:@angular-eslint/schematics": {
+      "type": "npm",
+      "name": "npm:@angular-eslint/schematics",
+      "data": {
+        "version": "14.4.0",
+        "packageName": "@angular-eslint/schematics",
+        "hash": "79d422a053981a44e067592459c4d9fe647a33656caa70afa155c1ad1351dc80"
+      }
+    },
+    "npm:@angular-eslint/template-parser": {
+      "type": "npm",
+      "name": "npm:@angular-eslint/template-parser",
+      "data": {
+        "version": "14.4.0",
+        "packageName": "@angular-eslint/template-parser",
+        "hash": "49f446f98e91a333e4b5a70c58a04bc27cdaf9cc12e407f307ae6e3c23d643bc"
+      }
+    },
+    "npm:@angular/cli": {
+      "type": "npm",
+      "name": "npm:@angular/cli",
+      "data": {
+        "version": "~14.2.13",
+        "packageName": "@angular/cli",
+        "hash": "c066a17a64693e9d4d4953ec1c912cfdc8946886f6bf043edb425e45abf4fdbb"
+      }
+    },
+    "npm:@angular/compiler-cli": {
+      "type": "npm",
+      "name": "npm:@angular/compiler-cli",
+      "data": {
+        "version": "^14.2.0",
+        "packageName": "@angular/compiler-cli",
+        "hash": "0743f5db0b826904ee67b6b160f1d31eb3aa158bfc2afb8fe368a84beb36d0a0"
+      }
+    },
+    "npm:@angular/language-service": {
+      "type": "npm",
+      "name": "npm:@angular/language-service",
+      "data": {
+        "version": "^14.2.13",
+        "packageName": "@angular/language-service",
+        "hash": "8b2caae53c963e7f4ec0499185bab26ce235973e3090ba246b70e20483788461"
+      }
+    },
+    "npm:@nrwl/angular": {
+      "type": "npm",
+      "name": "npm:@nrwl/angular",
+      "data": {
+        "version": "^15.9.7",
+        "packageName": "@nrwl/angular",
+        "hash": "f494cd19538074869a10fbc750380cea99bdaf674c3c4197c25ddb3b47b6cbd0"
+      }
+    },
+    "npm:@nrwl/cypress": {
+      "type": "npm",
+      "name": "npm:@nrwl/cypress",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/cypress",
+        "hash": "132336ad54a39093a1f4ad028acd9801c3bb27ffa5a4b200b3fe3f78df33460e"
+      }
+    },
+    "npm:@nrwl/eslint-plugin-nx": {
+      "type": "npm",
+      "name": "npm:@nrwl/eslint-plugin-nx",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/eslint-plugin-nx",
+        "hash": "5e82ccaed27db6188c16db57cc9b243e4d1de6d9939f3ab9aab6c051f257cd32"
+      }
+    },
+    "npm:@nrwl/jest": {
+      "type": "npm",
+      "name": "npm:@nrwl/jest",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/jest",
+        "hash": "f0f9c2b95578449ec3638000657c4e739a731558823cba885dbfaeb8c3202352"
+      }
+    },
+    "npm:@nrwl/js": {
+      "type": "npm",
+      "name": "npm:@nrwl/js",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/js",
+        "hash": "c75b1f079287ec7bd238369726dc2941da77fead5a6aea4d9a6a66ea6ac0c727"
+      }
+    },
+    "npm:@nrwl/linter": {
+      "type": "npm",
+      "name": "npm:@nrwl/linter",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/linter",
+        "hash": "9074d649d33e34a4a648da72b16afa3d048086aee9ee1cced91ee693db201e89"
+      }
+    },
+    "npm:@nrwl/web": {
+      "type": "npm",
+      "name": "npm:@nrwl/web",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/web",
+        "hash": "ca595394433b59430c7ae35abd4830fc137918c1bdcbb0e22fd98fa30f95a606"
+      }
+    },
+    "npm:@nrwl/workspace": {
+      "type": "npm",
+      "name": "npm:@nrwl/workspace",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "@nrwl/workspace",
+        "hash": "97fd2b8ee1f75b0f86c1e6398dd23afc66d415dfdd90530f285515547ef2d3e0"
+      }
+    },
+    "npm:@schematics/angular": {
+      "type": "npm",
+      "name": "npm:@schematics/angular",
+      "data": {
+        "version": "^14.2.13",
+        "packageName": "@schematics/angular",
+        "hash": "f658dbd418552f7df2d88fe167b6885c3da1973e77c4a7ff10eac628951e0eac"
+      }
+    },
+    "npm:@types/aos": {
+      "type": "npm",
+      "name": "npm:@types/aos",
+      "data": {
+        "version": "^3.0.5",
+        "packageName": "@types/aos",
+        "hash": "7563ce84407b64930ac031006ddc2d0ff756a7e129be0a16d86af195c3ef89a3"
+      }
+    },
+    "npm:@types/jest": {
+      "type": "npm",
+      "name": "npm:@types/jest",
+      "data": {
+        "version": "^29.4.0",
+        "packageName": "@types/jest",
+        "hash": "90eee2ce66d772ca89d6d89276dc58aaa3367a5abeacef95657ac797f2b654e7"
+      }
+    },
+    "npm:@types/jquery": {
+      "type": "npm",
+      "name": "npm:@types/jquery",
+      "data": {
+        "version": "^3.5.23",
+        "packageName": "@types/jquery",
+        "hash": "21e3eed48e2a4c69f71922a8a5b5603141bf60aa11f7e41ee8e059d2d4d4e218"
+      }
+    },
+    "npm:@types/node": {
+      "type": "npm",
+      "name": "npm:@types/node",
+      "data": {
+        "version": "16.11.7",
+        "packageName": "@types/node",
+        "hash": "5a2a99e687a8009eb10dd607d6bca84101ada9eb751e6f3ab9354a7541c678d3"
+      }
+    },
+    "npm:@typescript-eslint/eslint-plugin": {
+      "type": "npm",
+      "name": "npm:@typescript-eslint/eslint-plugin",
+      "data": {
+        "version": "5.43.0",
+        "packageName": "@typescript-eslint/eslint-plugin",
+        "hash": "d34bcf5d0a06df0f9b5625c962dd287b3395c399ba553932bec86f08c4aa0f28"
+      }
+    },
+    "npm:@typescript-eslint/parser": {
+      "type": "npm",
+      "name": "npm:@typescript-eslint/parser",
+      "data": {
+        "version": "5.43.0",
+        "packageName": "@typescript-eslint/parser",
+        "hash": "761a2651a1109d161fef8bd633e819a36ad29e58c77b1e92c3b107567fafcea3"
+      }
+    },
+    "npm:cypress": {
+      "type": "npm",
+      "name": "npm:cypress",
+      "data": {
+        "version": "^12.2.0",
+        "packageName": "cypress",
+        "hash": "e1423ef4f1ba4baeacf85cee00868273e39394d664bc5d51b0eea72375be8976"
+      }
+    },
+    "npm:eslint": {
+      "type": "npm",
+      "name": "npm:eslint",
+      "data": {
+        "version": "^8.28.0",
+        "packageName": "eslint",
+        "hash": "74d09eb08c12c4cd6d47ab6bd29ae0f16b9435b2f9856150a18bea71a5cf1719"
+      }
+    },
+    "npm:eslint-config-prettier": {
+      "type": "npm",
+      "name": "npm:eslint-config-prettier",
+      "data": {
+        "version": "8.1.0",
+        "packageName": "eslint-config-prettier",
+        "hash": "d3e9b67a7cfe7ef3591b6664ffb6b82f16125b94b210b3f4937b9d4e3ea07640"
+      }
+    },
+    "npm:eslint-plugin-cypress": {
+      "type": "npm",
+      "name": "npm:eslint-plugin-cypress",
+      "data": {
+        "version": "^2.10.3",
+        "packageName": "eslint-plugin-cypress",
+        "hash": "28ada4da52fb11ee58ee308bb1a7a0746a7321ab74e3ee4eb2afb0825d088fb1"
+      }
+    },
+    "npm:jest": {
+      "type": "npm",
+      "name": "npm:jest",
+      "data": {
+        "version": "^29.4.1",
+        "packageName": "jest",
+        "hash": "3af3b487c7eed4bc28feab196619415910ede8050371b0702f9ac53ac3475048"
+      }
+    },
+    "npm:jest-environment-jsdom": {
+      "type": "npm",
+      "name": "npm:jest-environment-jsdom",
+      "data": {
+        "version": "^29.4.1",
+        "packageName": "jest-environment-jsdom",
+        "hash": "0fb4564d950f26460d48e380a696ef98c50cab179bdedbc142a9cc19d1eed823"
+      }
+    },
+    "npm:jest-preset-angular": {
+      "type": "npm",
+      "name": "npm:jest-preset-angular",
+      "data": {
+        "version": "~13.0.0",
+        "packageName": "jest-preset-angular",
+        "hash": "eda154e82b379b48cbf8f959a5ef95c20375f8847923137ca7d8171f1303862b"
+      }
+    },
+    "npm:nx": {
+      "type": "npm",
+      "name": "npm:nx",
+      "data": {
+        "version": "15.9.7",
+        "packageName": "nx",
+        "hash": "5252dae2e24e550df00a1013512440b4c922fa490b8b86eae5cb6e601716dc01"
+      }
+    },
+    "npm:prettier": {
+      "type": "npm",
+      "name": "npm:prettier",
+      "data": {
+        "version": "^2.6.2",
+        "packageName": "prettier",
+        "hash": "edd656866e07e461bbb100c31431768bd26c2290760c79332661c6e4aa0cc7ca"
+      }
+    },
+    "npm:ts-jest": {
+      "type": "npm",
+      "name": "npm:ts-jest",
+      "data": {
+        "version": "^29.0.5",
+        "packageName": "ts-jest",
+        "hash": "38d8a1a23a062256ded01c065ef4bc33f7324fcc10de13131d6b86f322e6b715"
+      }
+    },
+    "npm:ts-node": {
+      "type": "npm",
+      "name": "npm:ts-node",
+      "data": {
+        "version": "10.9.1",
+        "packageName": "ts-node",
+        "hash": "9948e441d7a81407c49a16f09f63cb47b33f39f904aca2d55f060babe3dbd95f"
+      }
+    },
+    "npm:typescript": {
+      "type": "npm",
+      "name": "npm:typescript",
+      "data": {
+        "version": "~4.7.2",
+        "packageName": "typescript",
+        "hash": "0ea23206b516ba9604329e2b9f0b7cd25b9ee1b588220975e9add10f238a8a82"
+      }
+    }
+  },
+  "dependencies": {
+    "angular": [
+      {
+        "source": "angular",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/router",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:jquery",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/platform-browser",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:ngx-toastr",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/material",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:xss",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:crypto-js",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:aos",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:d3",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:file-saver",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:moment",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:@angular/platform-browser-dynamic",
+        "type": "static"
+      },
+      {
+        "source": "angular",
+        "target": "npm:zone.js",
+        "type": "static"
+      }
+    ]
+  }
+}

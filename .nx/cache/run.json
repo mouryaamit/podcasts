@@ -1,0 +1,32 @@
+{
+  "run": {
+    "command": "nx run angular:build:production --base-href / --aot",
+    "startTime": "2026-02-19T07:57:04.315Z",
+    "endTime": "2026-02-19T07:57:28.626Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "angular:prebuild",
+      "target": "prebuild",
+      "projectName": "angular",
+      "hash": "3e9d7064f270bbf71b6e055229ab03c03cfa1cf212bba6e674a2ca3195c6544d",
+      "startTime": "2026-02-19T07:57:04.318Z",
+      "endTime": "2026-02-19T07:57:05.050Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "angular:build:production",
+      "target": "build",
+      "projectName": "angular",
+      "hash": "dcf442bcf1aa7e6bf8bf0493cde5068d741c98c0e906290d35cad765f7bb3b85",
+      "startTime": "2026-02-19T07:57:05.050Z",
+      "endTime": "2026-02-19T07:57:28.625Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}
