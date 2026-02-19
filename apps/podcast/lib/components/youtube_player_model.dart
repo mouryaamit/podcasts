@@ -7,6 +7,7 @@ import 'youtube_player_widget.dart' show YoutubePlayerWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class YoutubePlayerModel extends FlutterFlowModel<YoutubePlayerWidget> {
   @override

@@ -47,42 +47,123 @@ class _WatchNowDialogWidgetState extends State<WatchNowDialogWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(20.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Align(
-            alignment: AlignmentDirectional(1.0, -1.0),
-            child: InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onTap: () async {
-                Navigator.pop(context);
-              },
-              child: Icon(
-                Icons.close_sharp,
-                color: FlutterFlowTheme.of(context).primaryText,
-                size: 35.0,
+    return Container(
+      width: valueOrDefault<double>(
+        () {
+          if (MediaQuery.sizeOf(context).width <
+              valueOrDefault<double>(
+                kBreakpointSmall,
+                600.0,
+              )) {
+            return 397;
+          } else if (MediaQuery.sizeOf(context).width >
+              valueOrDefault<double>(
+                kBreakpointLarge,
+                900.0,
+              )) {
+            return 1200;
+          } else {
+            return 1200;
+          }
+        }()
+            .toDouble(),
+        1200.0,
+      ),
+      height: valueOrDefault<double>(
+        () {
+          if (MediaQuery.sizeOf(context).width <
+              valueOrDefault<double>(
+                kBreakpointSmall,
+                600.0,
+              )) {
+            return 255;
+          } else if (MediaQuery.sizeOf(context).width >
+              valueOrDefault<double>(
+                kBreakpointLarge,
+                900.0,
+              )) {
+            return 575;
+          } else {
+            return 674;
+          }
+        }()
+            .toDouble(),
+        674.0,
+      ),
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).secondaryBackground,
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Align(
+              alignment: AlignmentDirectional(1.0, -1.0),
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  Navigator.pop(context);
+                },
+                child: Icon(
+                  Icons.close_sharp,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: MediaQuery.sizeOf(context).width <
+                          valueOrDefault<double>(
+                            kBreakpointSmall,
+                            900.0,
+                          )
+                      ? 25.0
+                      : 35.0,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: FlutterFlowWebView(
-                content: widget!.link!,
-                bypass: false,
-                width: MediaQuery.sizeOf(context).width * 0.8,
-                height: MediaQuery.sizeOf(context).height * 0.5,
-                verticalScroll: false,
-                horizontalScroll: false,
+            if (responsiveVisibility(
+              context: context,
+              phone: false,
+              tablet: false,
+            ))
+              Expanded(
+                child: Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: FlutterFlowWebView(
+                    content: widget!.link!,
+                    bypass: false,
+                    width: MediaQuery.sizeOf(context).width * 0.8,
+                    height: MediaQuery.sizeOf(context).height * 0.5,
+                    verticalScroll: false,
+                    horizontalScroll: false,
+                  ),
+                ),
               ),
-            ),
-          ),
-        ],
+            if (responsiveVisibility(
+              context: context,
+              tabletLandscape: false,
+              desktop: false,
+            ))
+              Expanded(
+                child: Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                    child: FlutterFlowWebView(
+                      content: widget!.link!,
+                      bypass: false,
+                      width: MediaQuery.sizeOf(context).width * 0.9,
+                      height: MediaQuery.sizeOf(context).height * 0.5,
+                      verticalScroll: false,
+                      horizontalScroll: false,
+                    ),
+                  ),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

@@ -72,27 +72,40 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(
+            valueOrDefault<double>(
+              MediaQuery.sizeOf(context).width > 498.0 ? 20.0 : 10.0,
+              0.0,
+            ),
+            0.0,
+            20.0,
+            0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               decoration: BoxDecoration(),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(0.0),
                 child: Image.network(
                   widget!.image!,
                   width:
-                      MediaQuery.sizeOf(context).width > 498.0 ? 152.0 : 87.0,
-                  height:
-                      MediaQuery.sizeOf(context).width > 498.0 ? 158.0 : 83.36,
+                      MediaQuery.sizeOf(context).width > 498.0 ? 152.0 : 100.0,
                   fit: BoxFit.contain,
                 ),
               ),
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 0.0, 5.0),
+                padding: EdgeInsetsDirectional.fromSTEB(
+                    valueOrDefault<double>(
+                      MediaQuery.sizeOf(context).width > 498.0 ? 20.0 : 10.0,
+                      0.0,
+                    ),
+                    0.0,
+                    0.0,
+                    0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +138,7 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      font: GoogleFonts.poppins(
+                                      font: GoogleFonts.inter(
                                         fontWeight: FontWeight.w600,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -162,31 +175,13 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                   widget!.description,
                                   'Description',
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xFF6B7280),
-                                      fontSize:
-                                          MediaQuery.sizeOf(context).width >
-                                                  498.0
-                                              ? 13.0
-                                              : 10.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
+                                style: GoogleFonts.inter(
+                                  color: Color(0xFF6B7280),
+                                  fontSize:
+                                      MediaQuery.sizeOf(context).width > 498.0
+                                          ? 13.0
+                                          : 10.0,
+                                ),
                                 overflow: TextOverflow.visible,
                               ),
                             ),

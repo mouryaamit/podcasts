@@ -1,13 +1,21 @@
-import '/components/explore_episodes_budget_widget.dart';
-import '/components/shorts_zeenat_hamirani_widget.dart';
+import '/components/budget_a_i_summary_widget.dart';
+import '/components/budget_conversation_widget.dart';
+import '/components/budget_timestamp_widget.dart';
+import '/components/choice_chips_widget.dart';
+import '/components/desktop_footer_widget.dart';
+import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/header_mobile_widget.dart';
+import '/components/mobile_footer_widget.dart';
+import '/components/shorts_budget_anil_widget.dart';
+import '/components/shorts_budget_krishnan_widget.dart';
+import '/components/shorts_budget_laveesh_widget.dart';
+import '/components/shorts_budget_special_widget.dart';
+import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/timestamp_widget.dart';
 import '/components/youtube_player_widget.dart';
-import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'podcast_details_widget.dart' show PodcastDetailsWidget;
@@ -16,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   ///  Local state fields for this page.
@@ -24,32 +33,44 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
 
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for ChoiceChips widget.
-  FormFieldController<List<String>>? choiceChipsValueController;
-  String? get choiceChipsValue =>
-      choiceChipsValueController?.value?.firstOrNull;
-  set choiceChipsValue(String? val) =>
-      choiceChipsValueController?.value = val != null ? [val] : [];
+  // Model for HeaderMobile component.
+  late HeaderMobileModel headerMobileModel;
+  // Model for ChoiceChips component.
+  late ChoiceChipsModel choiceChipsModel;
   // Model for YoutubePlayer component.
   late YoutubePlayerModel youtubePlayerModel;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel1;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel2;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel3;
-  // Model for Timestamp component.
-  late TimestampModel timestampModel1;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel4;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel5;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel6;
-  // Model for ShortsZeenatHamirani component.
-  late ShortsZeenatHamiraniModel shortsZeenatHamiraniModel7;
-  // Model for Timestamp component.
-  late TimestampModel timestampModel2;
+  // Model for ShortsBudgetSpecial component.
+  late ShortsBudgetSpecialModel shortsBudgetSpecialModel1;
+  // Model for ShortsBudgetKrishnan component.
+  late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel1;
+  // Model for ShortsBudgetLaveesh component.
+  late ShortsBudgetLaveeshModel shortsBudgetLaveeshModel1;
+  // Model for ShortsBudgetAnil component.
+  late ShortsBudgetAnilModel shortsBudgetAnilModel1;
+  // Model for ShortsBudgetUnniKrishnan component.
+  late ShortsBudgetUnniKrishnanModel shortsBudgetUnniKrishnanModel1;
+  // Model for BudgetTimestamp component.
+  late BudgetTimestampModel budgetTimestampModel1;
+  // Model for BudgetAISummary component.
+  late BudgetAISummaryModel budgetAISummaryModel1;
+  // Model for BudgetConversation component.
+  late BudgetConversationModel budgetConversationModel1;
+  // Model for ShortsBudgetSpecial component.
+  late ShortsBudgetSpecialModel shortsBudgetSpecialModel2;
+  // Model for ShortsBudgetKrishnan component.
+  late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel2;
+  // Model for ShortsBudgetLaveesh component.
+  late ShortsBudgetLaveeshModel shortsBudgetLaveeshModel2;
+  // Model for ShortsBudgetAnil component.
+  late ShortsBudgetAnilModel shortsBudgetAnilModel2;
+  // Model for ShortsBudgetUnniKrishnan component.
+  late ShortsBudgetUnniKrishnanModel shortsBudgetUnniKrishnanModel2;
+  // Model for BudgetTimestamp component.
+  late BudgetTimestampModel budgetTimestampModel2;
+  // Model for BudgetAISummary component.
+  late BudgetAISummaryModel budgetAISummaryModel2;
+  // Model for BudgetConversation component.
+  late BudgetConversationModel budgetConversationModel2;
   // Model for Speaker component.
   late SpeakerModel speakerModel1;
   // Model for Speaker component.
@@ -60,54 +81,90 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   late SpeakerModel speakerModel4;
   // Model for Speaker component.
   late SpeakerModel speakerModel5;
-  // Model for ExploreEpisodesBudget component.
-  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel;
+  // Model for ExploreEpisodesZeenat component.
+  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel1;
+  // Model for ExploreEpisodesZeenat component.
+  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel2;
+  // Model for MobileFooter component.
+  late MobileFooterModel mobileFooterModel;
+  // Model for DesktopFooter component.
+  late DesktopFooterModel desktopFooterModel;
 
   @override
   void initState(BuildContext context) {
+    headerMobileModel = createModel(context, () => HeaderMobileModel());
+    choiceChipsModel = createModel(context, () => ChoiceChipsModel());
     youtubePlayerModel = createModel(context, () => YoutubePlayerModel());
-    shortsZeenatHamiraniModel1 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    shortsZeenatHamiraniModel2 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    shortsZeenatHamiraniModel3 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    timestampModel1 = createModel(context, () => TimestampModel());
-    shortsZeenatHamiraniModel4 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    shortsZeenatHamiraniModel5 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    shortsZeenatHamiraniModel6 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    shortsZeenatHamiraniModel7 =
-        createModel(context, () => ShortsZeenatHamiraniModel());
-    timestampModel2 = createModel(context, () => TimestampModel());
+    shortsBudgetSpecialModel1 =
+        createModel(context, () => ShortsBudgetSpecialModel());
+    shortsBudgetKrishnanModel1 =
+        createModel(context, () => ShortsBudgetKrishnanModel());
+    shortsBudgetLaveeshModel1 =
+        createModel(context, () => ShortsBudgetLaveeshModel());
+    shortsBudgetAnilModel1 =
+        createModel(context, () => ShortsBudgetAnilModel());
+    shortsBudgetUnniKrishnanModel1 =
+        createModel(context, () => ShortsBudgetUnniKrishnanModel());
+    budgetTimestampModel1 = createModel(context, () => BudgetTimestampModel());
+    budgetAISummaryModel1 = createModel(context, () => BudgetAISummaryModel());
+    budgetConversationModel1 =
+        createModel(context, () => BudgetConversationModel());
+    shortsBudgetSpecialModel2 =
+        createModel(context, () => ShortsBudgetSpecialModel());
+    shortsBudgetKrishnanModel2 =
+        createModel(context, () => ShortsBudgetKrishnanModel());
+    shortsBudgetLaveeshModel2 =
+        createModel(context, () => ShortsBudgetLaveeshModel());
+    shortsBudgetAnilModel2 =
+        createModel(context, () => ShortsBudgetAnilModel());
+    shortsBudgetUnniKrishnanModel2 =
+        createModel(context, () => ShortsBudgetUnniKrishnanModel());
+    budgetTimestampModel2 = createModel(context, () => BudgetTimestampModel());
+    budgetAISummaryModel2 = createModel(context, () => BudgetAISummaryModel());
+    budgetConversationModel2 =
+        createModel(context, () => BudgetConversationModel());
     speakerModel1 = createModel(context, () => SpeakerModel());
     speakerModel2 = createModel(context, () => SpeakerModel());
     speakerModel3 = createModel(context, () => SpeakerModel());
     speakerModel4 = createModel(context, () => SpeakerModel());
     speakerModel5 = createModel(context, () => SpeakerModel());
-    exploreEpisodesBudgetModel =
-        createModel(context, () => ExploreEpisodesBudgetModel());
+    exploreEpisodesZeenatModel1 =
+        createModel(context, () => ExploreEpisodesZeenatModel());
+    exploreEpisodesZeenatModel2 =
+        createModel(context, () => ExploreEpisodesZeenatModel());
+    mobileFooterModel = createModel(context, () => MobileFooterModel());
+    desktopFooterModel = createModel(context, () => DesktopFooterModel());
   }
 
   @override
   void dispose() {
+    headerMobileModel.dispose();
+    choiceChipsModel.dispose();
     youtubePlayerModel.dispose();
-    shortsZeenatHamiraniModel1.dispose();
-    shortsZeenatHamiraniModel2.dispose();
-    shortsZeenatHamiraniModel3.dispose();
-    timestampModel1.dispose();
-    shortsZeenatHamiraniModel4.dispose();
-    shortsZeenatHamiraniModel5.dispose();
-    shortsZeenatHamiraniModel6.dispose();
-    shortsZeenatHamiraniModel7.dispose();
-    timestampModel2.dispose();
+    shortsBudgetSpecialModel1.dispose();
+    shortsBudgetKrishnanModel1.dispose();
+    shortsBudgetLaveeshModel1.dispose();
+    shortsBudgetAnilModel1.dispose();
+    shortsBudgetUnniKrishnanModel1.dispose();
+    budgetTimestampModel1.dispose();
+    budgetAISummaryModel1.dispose();
+    budgetConversationModel1.dispose();
+    shortsBudgetSpecialModel2.dispose();
+    shortsBudgetKrishnanModel2.dispose();
+    shortsBudgetLaveeshModel2.dispose();
+    shortsBudgetAnilModel2.dispose();
+    shortsBudgetUnniKrishnanModel2.dispose();
+    budgetTimestampModel2.dispose();
+    budgetAISummaryModel2.dispose();
+    budgetConversationModel2.dispose();
     speakerModel1.dispose();
     speakerModel2.dispose();
     speakerModel3.dispose();
     speakerModel4.dispose();
     speakerModel5.dispose();
-    exploreEpisodesBudgetModel.dispose();
+    exploreEpisodesZeenatModel1.dispose();
+    exploreEpisodesZeenatModel2.dispose();
+    mobileFooterModel.dispose();
+    desktopFooterModel.dispose();
   }
 }

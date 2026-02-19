@@ -22,10 +22,6 @@ class FFAppState extends ChangeNotifier {
     await _safeInitAsync(() async {
       _isSelected = await secureStorage.getBool('ff_isSelected') ?? _isSelected;
     });
-    await _safeInitAsync(() async {
-      _selectedTab =
-          await secureStorage.getInt('ff_selectedTab') ?? _selectedTab;
-    });
   }
 
   void update(VoidCallback callback) {
@@ -50,11 +46,6 @@ class FFAppState extends ChangeNotifier {
   int get selectedTab => _selectedTab;
   set selectedTab(int value) {
     _selectedTab = value;
-    secureStorage.setInt('ff_selectedTab', value);
-  }
-
-  void deleteSelectedTab() {
-    secureStorage.delete(key: 'ff_selectedTab');
   }
 }
 

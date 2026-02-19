@@ -8,6 +8,7 @@ import 'explore_episodes_budget_widget.dart' show ExploreEpisodesBudgetWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ExploreEpisodesBudgetModel
     extends FlutterFlowModel<ExploreEpisodesBudgetWidget> {

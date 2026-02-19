@@ -7,6 +7,7 @@ import 'featured_episode_card_widget.dart' show FeaturedEpisodeCardWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class FeaturedEpisodeCardModel
     extends FlutterFlowModel<FeaturedEpisodeCardWidget> {

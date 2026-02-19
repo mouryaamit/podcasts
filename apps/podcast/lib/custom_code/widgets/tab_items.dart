@@ -62,13 +62,13 @@ class _TabItemsState extends State<TabItems> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const SizedBox(height: 21),
+              const SizedBox(height: 22),
               AnimatedDefaultTextStyle(
                 duration: const Duration(milliseconds: 00),
                 style: textStyle,
                 child: Text(widget.text),
               ),
-              const SizedBox(height: 22),
+              const SizedBox(height: 22.5),
               AnimatedContainer(
                 duration: const Duration(milliseconds: 00),
                 height: widget.isSelected
