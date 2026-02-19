@@ -10,7 +10,8 @@
     "buildProd": "npm run updateTimeStamp -- angular:build:production & nx run angular:build:production",
     "serve:angular:development": "nx run angular:serve:development",
     "build:angular:development": "nx run angular:build:development --base-href / --aot && node tools/scripts/inject-nonce.js angular",
-    "build:angular:production": "nx run angular:build:production --base-href / --aot && node tools/scripts/inject-nonce.js angular"
+    "build:angular:production": "nx run angular:build:production --base-href / --aot && node tools/scripts/inject-nonce.js angular",
+    "udpate:podcast:production":"flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name 'feature-podcast' --include-assets --endpoint https://api-enterprise-india.flutterflow.io/v2 --token 5cdad8e3-7cd3-4304-a321-da16482d5fb6"
   },
   "private": true,
   "devDependencies": {

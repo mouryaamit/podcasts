@@ -65,7 +65,16 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
             spreadRadius: 5.0,
           )
         ],
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(valueOrDefault<double>(
+          MediaQuery.sizeOf(context).width >
+                  valueOrDefault<double>(
+                    kBreakpointSmall,
+                    900.0,
+                  )
+              ? 12.0
+              : 4.0,
+          0.0,
+        )),
         border: Border.all(
           color: Color(0xFFE5E7EB),
           width: 1.0,
@@ -82,17 +91,26 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
             0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               decoration: BoxDecoration(),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(0.0),
-                child: Image.network(
-                  widget!.image!,
-                  width:
-                      MediaQuery.sizeOf(context).width > 498.0 ? 152.0 : 100.0,
-                  fit: BoxFit.contain,
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(0.0),
+                  child: Image.network(
+                    widget!.image!,
+                    width: MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 140.0
+                        : 100.0,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
@@ -116,14 +134,14 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0,
-                            0.0,
+                            12.0,
                             valueOrDefault<double>(
                               MediaQuery.sizeOf(context).width > 498.0
                                   ? 100.0
                                   : 0.0,
                               0.0,
                             ),
-                            0.0),
+                            12.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,7 +165,10 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                       color: Color(0xFF111827),
                                       fontSize:
                                           MediaQuery.sizeOf(context).width >
-                                                  498.0
+                                                  valueOrDefault<double>(
+                                                    kBreakpointSmall,
+                                                    900.0,
+                                                  )
                                               ? 20.0
                                               : 14.0,
                                       letterSpacing: 0.0,
@@ -177,10 +198,13 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                 ),
                                 style: GoogleFonts.inter(
                                   color: Color(0xFF6B7280),
-                                  fontSize:
-                                      MediaQuery.sizeOf(context).width > 498.0
-                                          ? 13.0
-                                          : 10.0,
+                                  fontSize: MediaQuery.sizeOf(context).width >
+                                          valueOrDefault<double>(
+                                            kBreakpointSmall,
+                                            900.0,
+                                          )
+                                      ? 13.0
+                                      : 10.0,
                                 ),
                                 overflow: TextOverflow.visible,
                               ),

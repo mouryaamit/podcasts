@@ -24,6 +24,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -54,6 +55,11 @@ class _PodcastWidgetState extends State<PodcastWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PodcastModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setDarkModeSetting(context, ThemeMode.light);
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -137,10 +143,8 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                     Expanded(
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 0.75,
                         decoration: BoxDecoration(),
                         child: SingleChildScrollView(
-                          primary: false,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -149,15 +153,27 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 20.0, 0.0, 0.0),
+                                      0.0,
+                                      valueOrDefault<double>(
+                                        MediaQuery.sizeOf(context).width <
+                                                valueOrDefault<double>(
+                                                  kBreakpointSmall,
+                                                  900.0,
+                                                )
+                                            ? 20.0
+                                            : 32.0,
+                                        0.0,
+                                      ),
+                                      0.0,
+                                      0.0),
                                   child: Text(
-                                    'Go-to place for a deeper understanding of the MSME sector. \nConversations, Videos, Newsletters and more.',
+                                    'Resources',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .labelSmall
                                         .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w500,
+                                          font: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.bold,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelSmall
@@ -170,15 +186,14 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                         kBreakpointSmall,
                                                         900.0,
                                                       )
-                                                  ? 12.0
-                                                  : 24.0,
+                                                  ? 24.0
+                                                  : 32.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.bold,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelSmall
                                                   .fontStyle,
-                                          lineHeight: 1.5,
                                         ),
                                   ),
                                 ),
@@ -186,7 +201,9 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                               wrapWithModel(
                                 model: _model.choiceChipsModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: ChoiceChipsWidget(),
+                                child: ChoiceChipsWidget(
+                                  activeTab: 'podcast',
+                                ),
                               ),
                               Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
@@ -244,7 +261,11 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0,
                                     valueOrDefault<double>(
-                                      MediaQuery.sizeOf(context).width > 498.0
+                                      MediaQuery.sizeOf(context).width >
+                                              valueOrDefault<double>(
+                                                kBreakpointSmall,
+                                                900.0,
+                                              )
                                           ? 50.0
                                           : 25.0,
                                       0.0,
@@ -293,6 +314,8 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   0.0, 20.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
                                             children: [
                                               if (responsiveVisibility(
                                                 context: context,

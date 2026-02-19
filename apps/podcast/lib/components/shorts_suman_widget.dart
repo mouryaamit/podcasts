@@ -129,6 +129,7 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),

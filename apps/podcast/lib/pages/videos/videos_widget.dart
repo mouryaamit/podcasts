@@ -12,6 +12,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'videos_model.dart';
@@ -41,6 +42,11 @@ class _VideosWidgetState extends State<VideosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => VideosModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setDarkModeSetting(context, ThemeMode.light);
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -117,36 +123,49 @@ class _VideosWidgetState extends State<VideosWidget> {
                   ),
                 ),
               Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: MediaQuery.sizeOf(context).height * 1.0,
                           decoration: BoxDecoration(
                             color: Color(0x00FFFFFF),
                           ),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Align(
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 20.0, 0.0, 0.0),
+                                        0.0,
+                                        valueOrDefault<double>(
+                                          MediaQuery.sizeOf(context).width <
+                                                  valueOrDefault<double>(
+                                                    kBreakpointSmall,
+                                                    900.0,
+                                                  )
+                                              ? 20.0
+                                              : 32.0,
+                                          0.0,
+                                        ),
+                                        0.0,
+                                        0.0),
                                     child: Text(
-                                      'Go-to place for a deeper understanding of the MSME sector. \nConversations, Videos, Newsletters and more.',
+                                      'Resources',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .labelSmall
                                           .override(
-                                            font: GoogleFonts.inter(
-                                              fontWeight: FontWeight.w500,
+                                            font: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
                                               fontStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .labelSmall
@@ -159,15 +178,14 @@ class _VideosWidgetState extends State<VideosWidget> {
                                                       kBreakpointSmall,
                                                       900.0,
                                                     )
-                                                ? 12.0
-                                                : 24.0,
+                                                ? 24.0
+                                                : 32.0,
                                             letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.bold,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelSmall
                                                     .fontStyle,
-                                            lineHeight: 1.5,
                                           ),
                                     ),
                                   ),
@@ -175,7 +193,9 @@ class _VideosWidgetState extends State<VideosWidget> {
                                 wrapWithModel(
                                   model: _model.choiceChipsModel,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: ChoiceChipsWidget(),
+                                  child: ChoiceChipsWidget(
+                                    activeTab: 'videos',
+                                  ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -351,8 +371,8 @@ class _VideosWidgetState extends State<VideosWidget> {
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],

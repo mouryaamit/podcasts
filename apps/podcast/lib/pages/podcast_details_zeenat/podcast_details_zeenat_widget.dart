@@ -19,6 +19,7 @@ import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -47,6 +48,11 @@ class _PodcastDetailsZeenatWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => PodcastDetailsZeenatModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setDarkModeSetting(context, ThemeMode.light);
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -131,23 +137,22 @@ class _PodcastDetailsZeenatWidgetState
                         ),
                       ),
                     Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 1502.8,
-                              height: MediaQuery.sizeOf(context).height * 1.0,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(),
                               child: Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: SingleChildScrollView(
-                                  primary: false,
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
                                     children: [
@@ -157,15 +162,29 @@ class _PodcastDetailsZeenatWidgetState
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
+                                                  0.0,
+                                                  valueOrDefault<double>(
+                                                    MediaQuery.sizeOf(context)
+                                                                .width <
+                                                            valueOrDefault<
+                                                                double>(
+                                                              kBreakpointSmall,
+                                                              900.0,
+                                                            )
+                                                        ? 20.0
+                                                        : 32.0,
+                                                    0.0,
+                                                  ),
+                                                  0.0,
+                                                  0.0),
                                           child: Text(
-                                            'Go-to place for a deeper understanding of the MSME sector. \nConversations, Videos, Newsletters and more.',
+                                            'Resources',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight: FontWeight.w500,
+                                                  font: GoogleFonts.poppins(
+                                                    fontWeight: FontWeight.bold,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -181,16 +200,15 @@ class _PodcastDetailsZeenatWidgetState
                                                                 kBreakpointSmall,
                                                                 900.0,
                                                               )
-                                                          ? 12.0
-                                                          : 24.0,
+                                                          ? 24.0
+                                                          : 32.0,
                                                   letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.bold,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .labelSmall
                                                           .fontStyle,
-                                                  lineHeight: 1.5,
                                                 ),
                                           ),
                                         ),
@@ -199,7 +217,9 @@ class _PodcastDetailsZeenatWidgetState
                                         model: _model.choiceChipsModel,
                                         updateCallback: () =>
                                             safeSetState(() {}),
-                                        child: ChoiceChipsWidget(),
+                                        child: ChoiceChipsWidget(
+                                          activeTab: 'podcast',
+                                        ),
                                       ),
                                       Align(
                                         alignment:
@@ -488,7 +508,7 @@ class _PodcastDetailsZeenatWidgetState
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      498.0
+                                                      900.0
                                                   ? 50.0
                                                   : 20.0,
                                               0.0,
@@ -1394,10 +1414,13 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                 ),
                                                                                               ],
                                                                                             ),
-                                                                                            wrapWithModel(
-                                                                                              model: _model.conversationZeenatModel2,
-                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                              child: ConversationZeenatWidget(),
+                                                                                            Padding(
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                              child: wrapWithModel(
+                                                                                                model: _model.conversationZeenatModel2,
+                                                                                                updateCallback: () => safeSetState(() {}),
+                                                                                                child: ConversationZeenatWidget(),
+                                                                                              ),
                                                                                             ),
                                                                                           ],
                                                                                         );
@@ -1427,7 +1450,16 @@ class _PodcastDetailsZeenatWidgetState
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 50.0, 0.0, 0.0),
+                                            0.0,
+                                            valueOrDefault<double>(
+                                              MediaQuery.sizeOf(context).width >
+                                                      900.0
+                                                  ? 50.0
+                                                  : 25.0,
+                                              0.0,
+                                            ),
+                                            0.0,
+                                            0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -1441,7 +1473,7 @@ class _PodcastDetailsZeenatWidgetState
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Guest Speaker',
+                                                'Guest Expert',
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
@@ -1455,10 +1487,15 @@ class _PodcastDetailsZeenatWidgetState
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
+                                                      color: Color(0xFF111827),
                                                       fontSize: MediaQuery.sizeOf(
                                                                       context)
                                                                   .width >
-                                                              498.0
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                900.0,
+                                                              )
                                                           ? 32.0
                                                           : 18.0,
                                                       letterSpacing: 0.0,
@@ -1497,7 +1534,7 @@ class _PodcastDetailsZeenatWidgetState
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      498.0
+                                                      900.0
                                                   ? 100.0
                                                   : 20.0,
                                               0.0,
@@ -1517,36 +1554,40 @@ class _PodcastDetailsZeenatWidgetState
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Speaker',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width >
-                                                                  498.0
-                                                              ? 32.0
-                                                              : 18.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
+                                                'Index Experts',
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF111827),
+                                                      fontSize: MediaQuery.sizeOf(
                                                                       context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
+                                                                  .width >
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                900.0,
+                                                              )
+                                                          ? 32.0
+                                                          : 18.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -1559,9 +1600,9 @@ class _PodcastDetailsZeenatWidgetState
                                                   child: SpeakerWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/1qk54y1rx95q/sumita_img.png',
-                                                    name: 'Sumita Kale',
+                                                    name: 'Dr. Sumita Kale',
                                                     description:
-                                                        'Principal Economist, Jocata; CEO & Senior Fellow, Indicus Centre for Financial Inclusion. Distinguished macroeconomist shaping financial inclusion discourse and co-driving the vision behind the Sumpoorn Index.',
+                                                        'Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index.',
                                                   ),
                                                 ),
                                               ),
@@ -1576,9 +1617,9 @@ class _PodcastDetailsZeenatWidgetState
                                                   child: SpeakerWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/xqf2sg9at77x/narsi_img.png',
-                                                    name: 'Narasimhan V',
+                                                    name: 'Mr. Narasimhan V.',
                                                     description:
-                                                        'Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa); led multiple credit bureau builds. Veteran of credit analytics and economic intelligence.',
+                                                        'Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology.',
                                                   ),
                                                 ),
                                               ),
@@ -1616,7 +1657,18 @@ class _PodcastDetailsZeenatWidgetState
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                        fontSize: 32.0,
+                                                        color:
+                                                            Color(0xFF111827),
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 32.0
+                                                            : 24.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -1730,8 +1782,8 @@ class _PodcastDetailsZeenatWidgetState
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

@@ -125,7 +125,7 @@ class _HeaderMobileWidgetState extends State<HeaderMobileWidget> {
         if (FFAppState().isSelected)
           Container(
             width: double.infinity,
-            height: 490.14,
+            height: 479.09,
             decoration: BoxDecoration(
               color: Colors.white,
             ),
@@ -559,49 +559,42 @@ class _HeaderMobileWidgetState extends State<HeaderMobileWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
-                  child: Container(
-                    height: 31.41,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                  padding: EdgeInsetsDirectional.fromSTEB(55.0, 0.0, 55.0, 0.0),
+                  child: FFButtonWidget(
+                    onPressed: () async {
+                      await launchURL('https://www.sumpoorn.in/institution');
+                    },
+                    text: 'Institution Login',
+                    icon: Icon(
+                      Icons.person_sharp,
+                      size: 14.0,
                     ),
-                    child: FFButtonWidget(
-                      onPressed: () async {
-                        await launchURL('https://www.sumpoorn.in/institution');
-                      },
-                      text: 'Institution Login',
-                      icon: Icon(
-                        Icons.person_sharp,
-                        size: 14.0,
-                      ),
-                      options: FFButtonOptions(
-                        height: 23.53,
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
-                        iconColor: FlutterFlowTheme.of(context).primaryText,
-                        color: Color(0xFFE0E3E7),
-                        textStyle: FlutterFlowTheme.of(context)
-                            .titleSmall
-                            .override(
-                              font: GoogleFonts.interTight(
+                    options: FFButtonOptions(
+                      height: 24.6,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+                      iconColor: FlutterFlowTheme.of(context).primaryText,
+                      color: Color(0xFFE0E3E7),
+                      textStyle:
+                          FlutterFlowTheme.of(context).titleSmall.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 14.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                                 fontStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 14.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w500,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .fontStyle,
-                            ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                      elevation: 0.0,
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
                 ),

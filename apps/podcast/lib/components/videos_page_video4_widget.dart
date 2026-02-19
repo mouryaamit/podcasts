@@ -84,13 +84,19 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/videos_sumpoorn_img.png',
-                                width: 555.0,
-                                height: 271.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 555.0,
+                              height: 271.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/videos_sumpoorn_img.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(
@@ -331,13 +337,19 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/videos_sumpoorn_img.png',
-                                width: 371.0,
-                                height: 181.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 371.0,
+                              height: 181.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/videos_sumpoorn_img.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(

@@ -94,7 +94,7 @@ class _WatchNowDialogWidgetState extends State<WatchNowDialogWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(4.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,8 +117,8 @@ class _WatchNowDialogWidgetState extends State<WatchNowDialogWidget> {
                             kBreakpointSmall,
                             900.0,
                           )
-                      ? 25.0
-                      : 35.0,
+                      ? 20.0
+                      : 28.0,
                 ),
               ),
             ),

@@ -131,6 +131,7 @@ class _ShortsBudgetUnniKrishnanWidgetState
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),

@@ -169,7 +169,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                           fontWeight: FontWeight.bold,
                           fontStyle:
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                          lineHeight: 1.2,
+                          lineHeight: 1.5,
                         ),
                     overflow: TextOverflow.clip,
                   ),

@@ -58,8 +58,13 @@ class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF404040),
-                    fontSize:
-                        MediaQuery.sizeOf(context).width > 498.0 ? 32.0 : 24.0,
+                    fontSize: MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 32.0
+                        : 24.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
                     fontStyle:
@@ -394,7 +399,7 @@ class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
-                      fontSize: 20.0,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -924,7 +929,7 @@ class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
             ),
           ].divide(SizedBox(width: 31.0)),
         ),
-      ].divide(SizedBox(height: 5.0)),
+      ].divide(SizedBox(height: 10.0)),
     );
   }
 }

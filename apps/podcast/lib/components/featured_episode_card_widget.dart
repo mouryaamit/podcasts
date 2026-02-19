@@ -49,7 +49,16 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
       child: Padding(
         padding: EdgeInsets.all(10.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(valueOrDefault<double>(
+            MediaQuery.sizeOf(context).width <
+                    valueOrDefault<double>(
+                      kBreakpointSmall,
+                      900.0,
+                    )
+                ? 6.0
+                : 20.0,
+            0.0,
+          )),
           child: Container(
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -64,7 +73,16 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                   spreadRadius: 0.0,
                 )
               ],
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(valueOrDefault<double>(
+                MediaQuery.sizeOf(context).width <
+                        valueOrDefault<double>(
+                          kBreakpointSmall,
+                          900.0,
+                        )
+                    ? 6.0
+                    : 20.0,
+                0.0,
+              )),
             ),
             child: Container(
               width: 1200.0,
@@ -91,31 +109,36 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'FEATURED EPISODE',
-                                  textAlign: TextAlign.start,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodySmall
-                                      .override(
-                                        font: GoogleFonts.inter(
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 16.0, 0.0, 0.0),
+                                  child: Text(
+                                    'FEATURED EPISODE',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodySmall
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight: FontWeight.bold,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF6B7280),
+                                          fontSize: 12.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
-                                        color: Color(0xFF6B7280),
-                                        fontSize: 12.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodySmall
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 20.0, 0.0, 0.0),
+                                      0.0, 5.0, 0.0, 0.0),
                                   child: Container(
                                     width: 440.0,
                                     decoration: BoxDecoration(),
@@ -141,7 +164,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
-                                            lineHeight: 1.2,
+                                            lineHeight: 1.5,
                                           ),
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -402,30 +425,35 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'FEATURED EPISODE',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 10.0, 0.0, 0.0),
+                                child: Text(
+                                  'FEATURED EPISODE',
+                                  textAlign: TextAlign.start,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.inter(
+                                          fontWeight: FontWeight.bold,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        color: Color(0xFF6B7280),
+                                        fontSize: 10.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: Color(0xFF6B7280),
-                                      fontSize: 10.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 15.0, 0.0, 0.0),
+                                    0.0, 5.0, 0.0, 0.0),
                                 child: Container(
                                   width: 440.0,
                                   decoration: BoxDecoration(),

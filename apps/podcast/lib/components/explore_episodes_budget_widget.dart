@@ -62,7 +62,7 @@ class _ExploreEpisodesBudgetWidgetState
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: Container(
-                    height: 475.0,
+                    height: 500.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
@@ -85,44 +85,49 @@ class _ExploreEpisodesBudgetWidgetState
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/budget_explore.png',
-                                width: 555.0,
-                                height: 271.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 500.0,
+                              height: 271.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12.0),
+                                child: Image.asset(
+                                  'assets/images/budget_explore.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w600,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF111827),
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
+                              child: Container(
+                                width: 500.0,
+                                decoration: BoxDecoration(),
+                                child: Text(
+                                  'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.inter(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                  ),
-                                ],
+                                        color: Color(0xFF111827),
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w600,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                        lineHeight: 1.5,
+                                      ),
+                                ),
                               ),
                             ),
                             Padding(
@@ -204,7 +209,7 @@ class _ExploreEpisodesBudgetWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 555.0,
+                                width: 500.0,
                                 decoration: BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -410,12 +415,12 @@ class _ExploreEpisodesBudgetWidgetState
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(6.0),
                   child: Container(
                     height: 462.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(6.0),
                       border: Border.all(
                         color: Color(0x7FCBC7C7),
                       ),
@@ -432,13 +437,19 @@ class _ExploreEpisodesBudgetWidgetState
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/budget_explore.png',
-                                width: 371.0,
-                                height: 181.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 371.0,
+                              height: 181.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(6.0),
+                                child: Image.asset(
+                                  'assets/images/budget_explore.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(
@@ -474,6 +485,7 @@ class _ExploreEpisodesBudgetWidgetState
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
+                                          lineHeight: 1.5,
                                         ),
                                     overflow: TextOverflow.clip,
                                   ),

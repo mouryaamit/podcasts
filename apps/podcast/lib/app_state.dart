@@ -41,12 +41,6 @@ class FFAppState extends ChangeNotifier {
   void deleteIsSelected() {
     secureStorage.delete(key: 'ff_isSelected');
   }
-
-  int _selectedTab = 0;
-  int get selectedTab => _selectedTab;
-  set selectedTab(int value) {
-    _selectedTab = value;
-  }
 }
 
 void _safeInit(Function() initializeField) {

@@ -125,12 +125,13 @@ class _ShortsBudgetKrishnanWidgetState
                                             .fontStyle,
                                       ),
                                       color: Color(0xFF111827),
-                                      fontSize: 16.0,
+                                      fontSize: 18.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),

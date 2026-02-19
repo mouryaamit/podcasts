@@ -20,6 +20,7 @@ import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -46,6 +47,11 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PodcastDetailsModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setDarkModeSetting(context, ThemeMode.light);
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -130,20 +136,18 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                         ),
                       ),
                     Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 1502.8,
-                              height: MediaQuery.sizeOf(context).height * 1.0,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(),
                               child: Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: SingleChildScrollView(
-                                  primary: false,
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -157,15 +161,29 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
+                                                  0.0,
+                                                  valueOrDefault<double>(
+                                                    MediaQuery.sizeOf(context)
+                                                                .width <
+                                                            valueOrDefault<
+                                                                double>(
+                                                              kBreakpointSmall,
+                                                              900.0,
+                                                            )
+                                                        ? 20.0
+                                                        : 32.0,
+                                                    0.0,
+                                                  ),
+                                                  0.0,
+                                                  0.0),
                                           child: Text(
-                                            'Go-to place for a deeper understanding of the MSME sector. \nConversations, Videos, Newsletters and more.',
+                                            'Resources',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight: FontWeight.w500,
+                                                  font: GoogleFonts.poppins(
+                                                    fontWeight: FontWeight.bold,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -181,16 +199,15 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                 kBreakpointSmall,
                                                                 900.0,
                                                               )
-                                                          ? 12.0
-                                                          : 24.0,
+                                                          ? 24.0
+                                                          : 32.0,
                                                   letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.bold,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .labelSmall
                                                           .fontStyle,
-                                                  lineHeight: 1.5,
                                                 ),
                                           ),
                                         ),
@@ -199,7 +216,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                         model: _model.choiceChipsModel,
                                         updateCallback: () =>
                                             safeSetState(() {}),
-                                        child: ChoiceChipsWidget(),
+                                        child: ChoiceChipsWidget(
+                                          activeTab: 'podcast',
+                                        ),
                                       ),
                                       Align(
                                         alignment:
@@ -411,7 +430,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     children: [
                                                       TextSpan(
                                                         text:
-                                                            'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025 uptick. This post-Budget roundtable brings together voices from policy, trade, exports, credit, and fintech to assess whether Budget intent can translate into on-ground execution. In this discussion, experts examine credit and liquidity reforms like mandatory TReDS usage and the new ₹10,000 crore SME Growth Fund, alongside export opportunities from recent FTAs with the EU and UK. At the same time, panelists highlight persistent frictions - delayed payments, compliance burden, logistics variability, weak local governance, and limited state capacity. The core question remains: while capital access is improving, can India address land, labour, law, and local execution to truly reimagine MSME growth?',
+                                                            'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025 uptick. This post-Budget roundtable brings together voices from policy, trade, exports, credit, and fintech to assess whether Budget intent can translate into on-ground execution. In this discussion, experts examine credit and liquidity reforms like mandatory TReDS usage and the new ₹10,000 crore SME Growth Fund, alongside export opportunities from recent FTAs with the EU and UK. \nAt the same time, panelists highlight persistent frictions - delayed payments, compliance burden, logistics variability, weak local governance, and limited state capacity. The core question remains: while capital access is improving, can India address land, labour, law, and local execution to truly reimagine MSME growth?',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -483,7 +502,10 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      498.0
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )
                                                   ? 50.0
                                                   : 20.0,
                                               0.0,
@@ -1459,7 +1481,19 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 50.0, 0.0, 0.0),
+                                            0.0,
+                                            valueOrDefault<double>(
+                                              MediaQuery.sizeOf(context).width >
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )
+                                                  ? 50.0
+                                                  : 25.0,
+                                              0.0,
+                                            ),
+                                            0.0,
+                                            0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -1473,7 +1507,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Guest Speaker',
+                                                'Guest Experts',
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
@@ -1487,10 +1521,15 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
+                                                      color: Color(0xFF111827),
                                                       fontSize: MediaQuery.sizeOf(
                                                                       context)
                                                                   .width >
-                                                              498.0
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                900.0,
+                                                              )
                                                           ? 32.0
                                                           : 18.0,
                                                       letterSpacing: 0.0,
@@ -1517,7 +1556,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     name:
                                                         'Dr. Laveesh Bhandari',
                                                     description:
-                                                        'President & Senior Fellow at CSEP, leading applied economist focused on livelihoods, reforms, financial inclusion, and energy transition. Founder, Indicus Analytics; PhD, Boston University.',
+                                                        'President & Senior Fellow at CSEP, leading applied economist focused on livelihoods, reforms, financial inclusion, and energy transition. PhD, Boston University.',
                                                   ),
                                                 ),
                                               ),
@@ -1565,7 +1604,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      498.0
+                                                      900.0
                                                   ? 100.0
                                                   : 20.0,
                                               0.0,
@@ -1585,36 +1624,40 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Speaker',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width >
-                                                                  498.0
-                                                              ? 32.0
-                                                              : 18.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
+                                                'Index Experts',
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF111827),
+                                                      fontSize: MediaQuery.sizeOf(
                                                                       context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
+                                                                  .width >
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                900.0,
+                                                              )
+                                                          ? 32.0
+                                                          : 18.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -1629,7 +1672,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                         'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/1qk54y1rx95q/sumita_img.png',
                                                     name: 'Dr. Sumita Kale',
                                                     description:
-                                                        'Principal Economist, Jocata; CEO & Senior Fellow, Indicus Centre for Financial Inclusion. Distinguished macroeconomist shaping financial inclusion discourse and co-driving the vision behind the Sumpoorn Index.',
+                                                        'Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index.',
                                                   ),
                                                 ),
                                               ),
@@ -1646,7 +1689,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                         'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/xqf2sg9at77x/narsi_img.png',
                                                     name: 'Mr. Narasimhan V.',
                                                     description:
-                                                        'Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa); led multiple credit bureau builds. Veteran of credit analytics and economic intelligence.',
+                                                        'Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology.',
                                                   ),
                                                 ),
                                               ),
@@ -1659,7 +1702,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      498.0
+                                                      900.0
                                                   ? 50.0
                                                   : 20.0,
                                               0.0,
@@ -1811,8 +1854,8 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

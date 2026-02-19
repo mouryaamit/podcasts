@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -114,7 +113,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'What’s next for India’s MSMEs?',
+                                'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -131,6 +130,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),
@@ -242,24 +242,28 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                                   showLoadingIndicator: false,
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    15.0, 0.0, 0.0, 0.0),
-                                child: FlutterFlowIconButton(
-                                  borderColor: Color(0xFF30AC6B),
-                                  borderRadius: 8.0,
-                                  buttonSize: 36.0,
-                                  fillColor: Color(0x000FFFFF),
-                                  icon: Icon(
-                                    Icons.ios_share,
-                                    color: Color(0xFF30AC6B),
-                                    size: 22.0,
+                              Builder(
+                                builder: (context) => Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      15.0, 0.0, 0.0, 0.0),
+                                  child: FlutterFlowIconButton(
+                                    borderColor: Color(0xFF30AC6B),
+                                    borderRadius: 8.0,
+                                    buttonSize: 36.0,
+                                    fillColor: Color(0x000FFFFF),
+                                    icon: Icon(
+                                      Icons.ios_share,
+                                      color: Color(0xFF30AC6B),
+                                      size: 22.0,
+                                    ),
+                                    onPressed: () async {
+                                      await Share.share(
+                                        'https://www.youtube.com/watch?v=3skFTTsAvmo',
+                                        sharePositionOrigin:
+                                            getWidgetBoundingBox(context),
+                                      );
+                                    },
                                   ),
-                                  onPressed: () async {
-                                    await Clipboard.setData(ClipboardData(
-                                        text:
-                                            'https://www.youtube.com/watch?v=3skFTTsAvmo'));
-                                  },
                                 ),
                               ),
                             ],
@@ -326,7 +330,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                               width: 255.0,
                               decoration: BoxDecoration(),
                               child: Text(
-                                'What’s next for India’s MSMEs?',
+                                'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

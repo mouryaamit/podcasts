@@ -23,14 +23,13 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'podcast_widget.dart' show PodcastWidget;
+import 'podcast_copy_widget.dart' show PodcastCopyWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 
-class PodcastModel extends FlutterFlowModel<PodcastWidget> {
+class PodcastCopyModel extends FlutterFlowModel<PodcastCopyWidget> {
   ///  State fields for stateful widgets in this page.
 
   // Model for HeaderMobile component.

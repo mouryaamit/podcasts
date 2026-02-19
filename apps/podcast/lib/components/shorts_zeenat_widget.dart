@@ -129,6 +129,7 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),

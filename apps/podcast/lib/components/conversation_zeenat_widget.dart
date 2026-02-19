@@ -47,7 +47,7 @@ class _ConversationZeenatWidgetState extends State<ConversationZeenatWidget> {
       text: TextSpan(
         children: [
           TextSpan(
-            text: '\n\nNarasimhan V: ',
+            text: 'Narasimhan V: ',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   font: GoogleFonts.inter(
                     fontWeight: FontWeight.bold,
@@ -420,7 +420,13 @@ class _ConversationZeenatWidgetState extends State<ConversationZeenatWidget> {
               letterSpacing: 0.0,
               fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-              lineHeight: 2.0,
+              lineHeight: MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        900.0,
+                      )
+                  ? 2.0
+                  : 1.5,
             ),
       ),
     );

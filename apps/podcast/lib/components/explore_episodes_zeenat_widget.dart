@@ -62,7 +62,7 @@ class _ExploreEpisodesZeenatWidgetState
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: Container(
-                    height: 475.0,
+                    height: 500.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
@@ -85,20 +85,26 @@ class _ExploreEpisodesZeenatWidgetState
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/explore_zeenat_img.png',
-                                width: 555.0,
-                                height: 271.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 500.0,
+                              height: 271.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12.0),
+                                child: Image.asset(
+                                  'assets/images/explore_zeenat_img.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 555.0,
+                                width: 500.0,
                                 decoration: BoxDecoration(),
                                 child: Text(
                                   'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
@@ -119,6 +125,7 @@ class _ExploreEpisodesZeenatWidgetState
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
+                                        lineHeight: 1.5,
                                       ),
                                   overflow: TextOverflow.clip,
                                 ),
@@ -171,34 +178,15 @@ class _ExploreEpisodesZeenatWidgetState
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
-                              child: Wrap(
-                                spacing: 0.0,
-                                runSpacing: 0.0,
-                                alignment: WrapAlignment.start,
-                                crossAxisAlignment: WrapCrossAlignment.start,
-                                direction: Axis.horizontal,
-                                runAlignment: WrapAlignment.start,
-                                verticalDirection: VerticalDirection.down,
-                                clipBehavior: Clip.antiAlias,
-                                children: [
-                                  Text(
-                                    'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF374151),
-                                          fontSize: 14.0,
-                                          letterSpacing: 0.0,
+                              child: Container(
+                                width: 500.0,
+                                decoration: BoxDecoration(),
+                                child: Text(
+                                  'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.inter(
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -208,16 +196,25 @@ class _ExploreEpisodesZeenatWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                    overflow: TextOverflow.clip,
-                                  ),
-                                ],
+                                        color: Color(0xFF374151),
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                  overflow: TextOverflow.clip,
+                                ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 555.0,
+                                width: 500.0,
                                 decoration: BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -424,12 +421,12 @@ class _ExploreEpisodesZeenatWidgetState
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(6.0),
                   child: Container(
                     height: 462.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(6.0),
                       border: Border.all(
                         color: Color(0x7FCBC7C7),
                       ),
@@ -446,13 +443,17 @@ class _ExploreEpisodesZeenatWidgetState
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/explore_zeenat_img.png',
-                                width: 371.0,
-                                height: 181.0,
-                                fit: BoxFit.fill,
+                            Container(
+                              width: 371.0,
+                              height: 181.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(6.0),
+                                child: Image.asset(
+                                  'assets/images/explore_zeenat_img.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             Padding(
@@ -488,6 +489,7 @@ class _ExploreEpisodesZeenatWidgetState
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
+                                          lineHeight: 1.5,
                                         ),
                                     overflow: TextOverflow.clip,
                                   ),

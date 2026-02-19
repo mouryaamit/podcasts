@@ -170,7 +170,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                           fontWeight: FontWeight.bold,
                           fontStyle:
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                          lineHeight: 1.2,
+                          lineHeight: 1.5,
                         ),
                     overflow: TextOverflow.clip,
                   ),

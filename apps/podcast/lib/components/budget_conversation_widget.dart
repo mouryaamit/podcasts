@@ -152,6 +152,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight:
@@ -167,6 +168,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
@@ -183,6 +185,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight:
@@ -198,6 +201,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
@@ -214,6 +218,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight:
@@ -277,6 +282,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
@@ -293,6 +299,7 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
+                  color: Colors.black,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight:
@@ -610,251 +617,493 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
           ),
           TextSpan(
             text: 'Anil Bhardwaj: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'If I may take that first - while the Budget talks about 200 legacy clusters, there’s no additional allocation for the Ministry of MSME. The Cluster Development Programme remains at ₹431 crore, unchanged. What exactly will be done for these clusters, and with what funding, isn’t clear yet, this still feels more like an idea than an operational plan. Most of these clusters are overwhelmingly MSME-driven and face basic gaps in infrastructure and technology.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'K. Unnikrishnan: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'Just to add - many clusters struggle because of weak connectivity, lack of common facilities like effluent treatment and shared infrastructure, and poor access to raw materials. Unless these basics are fixed, cluster-level interventions won’t move the needle.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Laveesh Bhandari: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'I’d also like to add that a lot of the issues related to clusters are problems of local governance - roads, effluent treatment, water. All that the central government can do is provide finance because that mechanism is working relatively efficiently. You have to go through the local governance system and that is where the problem is.\n\n',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: ' Anil Bhardwaj: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'Actually, I just wanted to come here and add to what the question that Laveeshji has raised about the municipalities and the capacity of the state at the local level. A couple of very important announcements have been made, pledging allocation of 5,000 crore over 5 years for tier 2 and tier 3 cities. The Finance Commission has doubled the allocation to local municipalities to 7.91 lakh crore. For the first time, it is mandatory that they get their accounts audited and put into the public domain. This may address the issues Laveeshji raised by capacitating the local bodies.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.normal,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Narasimhan Venkatesan: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'Hello World  And from the SME growth fund perspective, where 10,000 crores has been allocated, how do we see the ground level action now emanating? Because the process of identification talks about champion SMEs, which are going to be future ready from an export potential perspective, from having demonstrated the production efficiencies, so on and so forth. If that be so, do you see certain immediate guidelines, regulations being notified, so that the selection of these SMEs can happen very rapidly, so that the funds get made available, etc. So, it is an interesting thing for us to look at as to how the SMEs are going to be enabled to avail this excellent opportunity.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Anil Bhardwaj: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'Hello World In all probability, SIDBI is going to be heading this fund. And I think it could be, there could be two ways. One, some part of it would be used for creating as a mother fund and, you know, there will be daughter funds created for different segments, maybe different sectors also. This is one way of going about doing it. And second is that SIDBI has its own direct connect with MSMEs.\nAnd MSMEs through, for example, there is an institution called Center of Excellence for Aspiring SMEs which FISME and IFCI has set up and SIDBI is also involved. We have an MOU. So, there are a number of MSMEs that are coming to us that are interested in raising funds with the help of external equity.\nSo, I think we have good numbers already present. There is a demand also. So, spending this money should not be a problem.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Compliance and Legal Frictions\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Sumita Kale: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'Wonderful. So, you know, we have all our newsletters and our commentary that goes out to regular readers. They have sent in some questions and one of them is a little link to what we have been talking about, is that how does the budget concretely reduce the compliance burden for MSMEs beyond intent statements?\nThe question is, are there any measurable time that a small business can expect? Are we looking at a quarter? Are we looking at rolling some?\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Anil Bhardwaj: ',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'I do not think there is any concrete initiative in the budget that would reduce the cost of compliance. The budget is almost completely silent with regards to improving access to justice and enforcement of contracts, an area where India is at the bottom of the heap.\n \n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Risks and the Year Ahead\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Sumita Kale: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'I’d like to ask all of you if you could share some concluding remarks - you know where we are today, we have had a very turbulent year, lot of uncertainty, thanks to Trump tariffs and then the war and there has been a lot of upheavals. And we have sailed through this quite well. Everything is looking really, very rosy. So, it just makes us wonder, what are the risks that you would expect small businesses to prep for at this stage? How do you see the year ahead panning out?\n \n',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'K. Unnikrishnan: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'I’d like to answer that first. One important aspect as far as MSME is concerned is involving technology. Unless they adopt technology and, you know, even as a labour-oriented production, unless you use technology, artificial intelligence, etc., it will be very difficult in the coming years. And how we can be more competitive in production that makes you profitable and makes you, you know, grow. So that is an area which one has to use technology and artificial intelligence and see that they invest in that. Especially this is the time where government is also putting in a lot of money and a lot of funding also available with organizations like SIDBI, especially on technology upgradation fund also now being extended during this budget also. I\'m sure that unless they do their homework well, it will be very difficult for them to survive in the competitive environment especially. We are also opening our market for global players. Even MSMEs, UK, UK is dominated by MSME players. So, we have a FTA and we also open up many sectors. So, we have to be competitive with them. And, unless we prepare ourselves now, it will be very difficult in coming years.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Anil Bhardwaj: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'We need to set things right to take advantage of emerging opportunities. Currently, we have an adversarial ecosystem in India; that\'s why majority of people are interested in the services sector rather than the manufacturing space. We have to work on regulations, access to technology, and scale.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Laveesh Bhandari: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'We have worked on labour laws, but there is a long path ahead; they are not flexible at the micro and small level. Space is also a very big problem; we need large amounts of space around every single city where SMEs can set up. No SME can afford to go to court for anything; they work on reputation and personal networks. These are long-term constraints. But for the next one year, I think it\'s a phenomenal path ahead.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Narasimhan Venkatesan:',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 '  MSMEs have demonstrated a lot of resilience in the face of adverse events. This is a once-in-a-lifetime opportunity to get access to a huge market. Digitally, the data infrastructure (DPI) has helped MSMEs become much more comfortable managing their business. The government is doing its bit, but strengthening awareness of the schemes from the MSME side would be a great step.\nBut notwithstanding that, what is it that they should be doing from their side from here on, to not be caught by surprise? And what is it that they would expect from the government to operationalize these policies quickly is perhaps what will allow them to ride the crest of this opportunity that is probably a once-in-a-lifetime opportunity to get started into getting access to a huge market and to become global players, albeit as SMEs.\nSo, it\'s very, very positive to see this. I\'m hopeful that MSMEs should also step forward and seek the required help and assistance that I\'m sure is available and building the awareness. Because from Jocata’s side, for example, we do help MSMEs understand their own businesses by fetching consent-based information about themselves, such as GST, etc., of their own performances. And when we hold the mirror to them, they are themselves surprised as to the facets of their performance and non-performance and allows them to introspect and get course correction done. So in a way, digitally, the data infrastructure, the DPI has helped a lot of MSMEs to become much more comfortable with fetching the data with the help of fintechs like us and starting to make sense out of it, both from managing the business as well as from even establishing their behavioural collateral with the institutions. So that\'s also what I see as a great thing.\nSo overall, I think the sentiment is the best that one can expect. And it would take two hands to clap. The government is doing its bit, but I guess being aware of the schemes, being aware of who to approach, if this is strengthened from the MSME side through various important bodies, associations, etc., I think it would be a great step to help them all move forward more confidently. That\'s my take on this.\n\n',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text: 'Sumita Kale: ',
-            style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           ),
           TextSpan(
             text:
                 'To conclude, we can say that the budget is an accounting exercise and an intent statement. Capital is being taken care of to a large extent. But the fundamentals to reimagine MSMEs are again going to be land, labour, law, and state capacity. These are the things we have to work on over the long term together.\nThank you all for joining us.',
-            style: GoogleFonts.inter(
-              fontSize: MediaQuery.sizeOf(context).width <
-                      valueOrDefault<double>(
-                        kBreakpointSmall,
-                        900.0,
-                      )
-                  ? 14.0
-                  : 16.0,
-              height: 1.2,
-            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  font: GoogleFonts.inter(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
           )
         ],
         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -866,7 +1115,13 @@ class _BudgetConversationWidgetState extends State<BudgetConversationWidget> {
               letterSpacing: 0.0,
               fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-              lineHeight: 2.0,
+              lineHeight: MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        900.0,
+                      )
+                  ? 2.0
+                  : 1.5,
             ),
       ),
     );

@@ -10,7 +10,12 @@ import 'choice_chips_model.dart';
 export 'choice_chips_model.dart';
 
 class ChoiceChipsWidget extends StatefulWidget {
-  const ChoiceChipsWidget({super.key});
+  const ChoiceChipsWidget({
+    super.key,
+    this.activeTab,
+  });
+
+  final String? activeTab;
 
   @override
   State<ChoiceChipsWidget> createState() => _ChoiceChipsWidgetState();
@@ -42,41 +47,43 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(
+          0.0,
+          valueOrDefault<double>(
+            MediaQuery.sizeOf(context).width <
+                    valueOrDefault<double>(
+                      kBreakpointSmall,
+                      900.0,
+                    )
+                ? 20.0
+                : 32.0,
+            0.0,
+          ),
+          0.0,
+          0.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FFButtonWidget(
             onPressed: () async {
-              await Future.wait([
-                Future(() async {
-                  FFAppState().selectedTab = 1;
-                  safeSetState(() {});
-                }),
-                Future(() async {
-                  context.goNamed(
-                    PodcastWidget.routeName,
-                    queryParameters: {
-                      'selectedPage': serializeParam(
-                        '',
-                        ParamType.String,
-                      ),
-                    }.withoutNulls,
-                  );
-                }),
-              ]);
+              context.goNamed(
+                PodcastWidget.routeName,
+                queryParameters: {
+                  'selectedPage': serializeParam(
+                    '',
+                    ParamType.String,
+                  ),
+                }.withoutNulls,
+              );
             },
             text: 'Podcast',
             options: FFButtonOptions(
               height: 50.0,
               padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 14.0, 10.0),
               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: (FFAppState().selectedTab == 1) ||
-                      (FFAppState().selectedTab == 0)
+              color: widget!.activeTab == 'podcast'
                   ? Color(0xFF30AC6B)
                   : FlutterFlowTheme.of(context).secondaryBackground,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
@@ -86,8 +93,7 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).titleSmall.fontStyle,
                     ),
-                    color: (FFAppState().selectedTab == 1) ||
-                            (FFAppState().selectedTab == 0)
+                    color: widget!.activeTab == 'podcast'
                         ? Colors.white
                         : Color(0xFF374151),
                     fontSize: 14.0,
@@ -99,8 +105,7 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
                   ),
               elevation: 0.0,
               borderSide: BorderSide(
-                color: (FFAppState().selectedTab == 1) ||
-                        (FFAppState().selectedTab == 0)
+                color: widget!.activeTab == 'podcast'
                     ? Color(0xFF30AC6B)
                     : Color(0xFFE5E7EB),
                 width: 0.0,
@@ -111,30 +116,22 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
           ),
           FFButtonWidget(
             onPressed: () async {
-              await Future.wait([
-                Future(() async {
-                  FFAppState().selectedTab = 2;
-                  safeSetState(() {});
-                }),
-                Future(() async {
-                  context.goNamed(
-                    VideosWidget.routeName,
-                    queryParameters: {
-                      'selectedPage': serializeParam(
-                        '',
-                        ParamType.String,
-                      ),
-                    }.withoutNulls,
-                  );
-                }),
-              ]);
+              context.goNamed(
+                VideosWidget.routeName,
+                queryParameters: {
+                  'selectedPage': serializeParam(
+                    '',
+                    ParamType.String,
+                  ),
+                }.withoutNulls,
+              );
             },
             text: 'Videos',
             options: FFButtonOptions(
               height: 50.0,
               padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 14.0, 10.0),
               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: FFAppState().selectedTab == 2
+              color: widget!.activeTab == 'videos'
                   ? Color(0xFF30AC6B)
                   : FlutterFlowTheme.of(context).secondaryBackground,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
@@ -143,7 +140,7 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).titleSmall.fontStyle,
                     ),
-                    color: FFAppState().selectedTab == 2
+                    color: widget!.activeTab == 'videos'
                         ? Colors.white
                         : Color(0xFF374151),
                     fontSize: 14.0,
@@ -154,7 +151,7 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
                   ),
               elevation: 0.0,
               borderSide: BorderSide(
-                color: FFAppState().selectedTab == 2
+                color: widget!.activeTab == 'videos'
                     ? Color(0xFF30AC6B)
                     : Color(0xFFE5E7EB),
                 width: 0.0,
@@ -163,38 +160,45 @@ class _ChoiceChipsWidgetState extends State<ChoiceChipsWidget> {
             ),
             showLoadingIndicator: false,
           ),
-          FFButtonWidget(
-            onPressed: () {
-              print('Button pressed ...');
-            },
-            text: 'Newsletter',
-            options: FFButtonOptions(
-              height: 50.0,
-              padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 14.0, 10.0),
-              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: FlutterFlowTheme.of(context).secondaryBackground,
-              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                    font: GoogleFonts.inter(
+          if (responsiveVisibility(
+            context: context,
+            phone: false,
+            tablet: false,
+            tabletLandscape: false,
+            desktop: false,
+          ))
+            FFButtonWidget(
+              onPressed: () {
+                print('Button pressed ...');
+              },
+              text: 'Newsletter',
+              options: FFButtonOptions(
+                height: 50.0,
+                padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 14.0, 10.0),
+                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                      ),
+                      color: Color(0xFF374151),
+                      fontSize: 14.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).titleSmall.fontStyle,
                     ),
-                    color: Color(0xFF374151),
-                    fontSize: 14.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                  ),
-              elevation: 0.0,
-              borderSide: BorderSide(
-                color: Color(0xFFE5E7EB),
-                width: 0.0,
+                elevation: 0.0,
+                borderSide: BorderSide(
+                  color: Color(0xFFE5E7EB),
+                  width: 0.0,
+                ),
+                borderRadius: BorderRadius.circular(24.0),
               ),
-              borderRadius: BorderRadius.circular(24.0),
+              showLoadingIndicator: false,
             ),
-            showLoadingIndicator: false,
-          ),
         ].divide(SizedBox(width: 15.0)),
       ),
     );

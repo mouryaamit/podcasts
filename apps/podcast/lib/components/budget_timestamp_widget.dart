@@ -58,8 +58,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF404040),
-                    fontSize:
-                        MediaQuery.sizeOf(context).width > 498.0 ? 32.0 : 24.0,
+                    fontSize: MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 32.0
+                        : 24.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
                     fontStyle:
@@ -125,36 +130,34 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Flexible(
-                child: Text(
-                  '[0:57-1:41]',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(
-                          fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                        color: Color(0xFF9CA3AF),
-                        fontSize: 14.0,
-                        letterSpacing: 0.0,
+              Text(
+                '[0:57-1:41]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
               ),
               Expanded(
                 child: Text(
                   'Introduction to Sumpoorn Index',
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.poppins(
+                        font: GoogleFonts.inter(
                           fontWeight: FontWeight.w500,
                           fontStyle:
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                         color: Colors.black,
-                        fontSize: 14.0,
+                        fontSize: 21.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
@@ -163,7 +166,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                   overflow: TextOverflow.visible,
                 ),
               ),
-            ].divide(SizedBox(width: 38.0)),
+            ].divide(SizedBox(width: 49.0)),
           ),
         ),
         Row(
@@ -175,13 +178,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
               child: Text(
                 '[1:54-2:00]',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Color(0xFF9CA3AF),
-                      fontSize: 14.0,
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
@@ -200,7 +203,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
-                      fontSize: 14.0,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -209,7 +212,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                 overflow: TextOverflow.visible,
               ),
             ),
-          ].divide(SizedBox(width: 34.0)),
+          ].divide(SizedBox(width: 43.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -218,13 +221,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[3:24-3:51]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
-                    fontSize: 14.0,
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -242,7 +245,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
-                      fontSize: 14.0,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -251,7 +254,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                 overflow: TextOverflow.visible,
               ),
             ),
-          ].divide(SizedBox(width: 35.0)),
+          ].divide(SizedBox(width: 45.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -260,13 +263,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[4:45-5:26]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
-                    fontSize: 14.0,
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -283,7 +286,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
-                      fontSize: 14.0,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -292,7 +295,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                 overflow: TextOverflow.visible,
               ),
             ),
-          ].divide(SizedBox(width: 32.0)),
+          ].divide(SizedBox(width: 39.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -301,13 +304,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[5:42-7:42]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
-                    fontSize: 14.0,
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -324,7 +327,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
-                      fontSize: 14.0,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -333,7 +336,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                 overflow: TextOverflow.visible,
               ),
             ),
-          ].divide(SizedBox(width: 34.0)),
+          ].divide(SizedBox(width: 42.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -342,15 +345,15 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[8:11-9:10]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
-                      fontWeight: FontWeight.w500,
+                    font: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
-                    fontSize: 14.0,
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
@@ -367,7 +370,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                         color: Colors.black,
-                        fontSize: 14.0,
+                        fontSize: 21.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
@@ -377,7 +380,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                 ),
               ),
             ),
-          ].divide(SizedBox(width: 38.0)),
+          ].divide(SizedBox(width: 51.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -386,34 +389,38 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[10:09-11:26]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
             ),
-            Text(
-              'Budget\'s Focus Areas',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+            Expanded(
+              child: Text(
+                'Budget\'s Focus Areas',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Colors.black,
+                      fontSize: 21.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Colors.black,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
+              ),
             ),
-          ].divide(SizedBox(width: 20.0)),
+          ].divide(SizedBox(width: 31.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -422,12 +429,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[11:32-12:29]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -443,13 +451,14 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Colors.black,
+                    fontSize: 21.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w500,
                     fontStyle:
                         FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                   ),
             ),
-          ].divide(SizedBox(width: 22.0)),
+          ].divide(SizedBox(width: 35.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -458,12 +467,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[13:36-14:32]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -480,6 +490,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -487,7 +498,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 19.0)),
+          ].divide(SizedBox(width: 29.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -496,12 +507,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[15:04-18:03]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -518,6 +530,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -525,7 +538,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 18.0)),
+          ].divide(SizedBox(width: 28.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -534,12 +547,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[19:55-21:22]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -556,6 +570,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -563,7 +578,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 20.0)),
+          ].divide(SizedBox(width: 30.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -572,12 +587,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[22:41-26:02]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -594,6 +610,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -601,7 +618,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 18.0)),
+          ].divide(SizedBox(width: 27.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -610,12 +627,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[27:24-29:50]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -632,6 +650,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -639,7 +658,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 17.0)),
+          ].divide(SizedBox(width: 24.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -648,12 +667,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[31:01-32:18]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -670,6 +690,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -677,7 +698,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 20.0)),
+          ].divide(SizedBox(width: 36.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -686,12 +707,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[32:27-33:31]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -708,6 +730,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -715,7 +738,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 17.0)),
+          ].divide(SizedBox(width: 30.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -724,12 +747,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[33:48-34:59]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -746,6 +770,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -753,7 +778,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 13.0)),
+          ].divide(SizedBox(width: 20.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -762,12 +787,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[35:38-38:48]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -784,6 +810,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -791,7 +818,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 14.0)),
+          ].divide(SizedBox(width: 20.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -800,12 +827,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[39:00-40:33]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -822,6 +850,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -829,7 +858,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 13.0)),
+          ].divide(SizedBox(width: 21.0)),
         ),
         Row(
           mainAxisSize: MainAxisSize.max,
@@ -838,12 +867,13 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
             Text(
               '[41:21-43:36]',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: Color(0xFF9CA3AF),
+                    fontSize: 18.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                     fontStyle:
@@ -860,6 +890,7 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Colors.black,
+                      fontSize: 21.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                       fontStyle:
@@ -867,9 +898,9 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                     ),
               ),
             ),
-          ].divide(SizedBox(width: 18.0)),
+          ].divide(SizedBox(width: 29.0)),
         ),
-      ].divide(SizedBox(height: 4.0)),
+      ].divide(SizedBox(height: 10.0)),
     );
   }
 }

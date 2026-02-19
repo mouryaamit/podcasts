@@ -130,6 +130,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                                 overflow: TextOverflow.clip,
                               ),

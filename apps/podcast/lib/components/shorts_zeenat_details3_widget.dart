@@ -95,7 +95,7 @@ class _ShortsZeenatDetails3WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_zeenat_details3_img.png',
+                              'assets/images/shorts_zeenat_details3_image.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -313,7 +313,7 @@ class _ShortsZeenatDetails3WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_zeenat_details3_img.png',
+                              'assets/images/shorts_zeenat_details3_image.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,

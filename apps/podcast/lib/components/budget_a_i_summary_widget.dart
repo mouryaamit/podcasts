@@ -44,7 +44,20 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
     return Container(
       decoration: BoxDecoration(),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 100.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(
+            0.0,
+            20.0,
+            valueOrDefault<double>(
+              MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        900.0,
+                      )
+                  ? 150.0
+                  : 10.0,
+              0.0,
+            ),
+            0.0),
         child: RichText(
           textScaler: MediaQuery.of(context).textScaler,
           text: TextSpan(
@@ -430,7 +443,13 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                   fontWeight:
                       FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                   fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  lineHeight: 2.0,
+                  lineHeight: MediaQuery.sizeOf(context).width >
+                          valueOrDefault<double>(
+                            kBreakpointSmall,
+                            900.0,
+                          )
+                      ? 2.0
+                      : 1.5,
                 ),
           ),
           textAlign: TextAlign.start,
