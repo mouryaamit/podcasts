@@ -3,15 +3,23 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "nxReset":"nx reset",
     "start": "nx run angular:serve:development",
     "startProd": "nx run angular:serve:production",
     "updateTimeStamp": "node tools/scripts/timestamp.js",
-    "buildDev": "npm run updateTimeStamp -- angular:build:development & nx run angular:build:development",
+    "buildDev":"nx run podcast:build-web:development",
+    "_buildDev": "npm run updateTimeStamp -- angular:build:development & nx run angular:build:development",
     "buildProd": "npm run updateTimeStamp -- angular:build:production & nx run angular:build:production",
     "serve:angular:development": "nx run angular:serve:development",
     "build:angular:development": "nx run angular:build:development --base-href / --aot && node tools/scripts/inject-nonce.js angular",
     "build:angular:production": "nx run angular:build:production --base-href / --aot && node tools/scripts/inject-nonce.js angular",
-"update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-podcast --include-assets"
+    "update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-podcast --include-assets",
+    "runConsumer": "cd consumer && flutter run -d chrome --web-port=4200 --hot",
+    "buildConsumer": "cd consumer && ./replace_env.sh dev && ./setup_biocatch.sh && flutter build web --base-href='/consumer-card/'",
+    "buildConsumerQA": "cd consumer && ./replace_env.sh qa && ./setup_biocatch.sh && flutter build web --release --base-href='/consumer-card/'",
+    "buildConsumerUAT": "cd consumer && ./replace_env.sh uat https://amex-cob-uat.jocatagrid.in/jeag/  && ./setup_biocatch.sh && flutter build web --release --base-href='/consumer-card/'",
+    "buildConsumerProd": "cd consumer && ./replace_env.sh prod && ./setup_biocatch.sh && flutter build web --release --base-href='/consumer-card/'"
+
   },
   "private": true,
   "devDependencies": {

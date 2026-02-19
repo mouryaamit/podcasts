@@ -11,6 +11,20 @@
         "cwd": "apps/podcast"
       }
     },
+    "build-web": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/podcast"
+      },
+      "configurations": {
+        "development": {
+          "command": "flutter build web --output ../../dist/sumpoorn_ui"
+        },
+        "production": {
+          "command": "flutter build web --output ../../dist/sumpoorn_ui --release"
+        }
+      }
+    },
     "build-android": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {

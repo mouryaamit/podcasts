@@ -19,7 +19,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/angular",
+        "outputPath": "dist/sumpoorn_ui",
         "index": "apps/angular/src/index.html",
         "main": "apps/angular/src/main.ts",
         "inlineStyleLanguage": "scss",

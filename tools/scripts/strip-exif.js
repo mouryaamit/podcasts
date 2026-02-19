@@ -58,4 +58,4 @@ function stripExif(dir) {
   });
 }
 
-stripExif(assetsDir);
+// stripExif(assetsDir);
