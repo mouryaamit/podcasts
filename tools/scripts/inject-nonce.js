@@ -8,7 +8,7 @@ if (!yourProjectName) {
   );
   process.exit(1);
 }
-const distPath = path.join("dist/apps", yourProjectName, "index.html"); // Adjust this path!
+const distPath = path.join("dist", yourProjectName, "index.html"); // Adjust this path!
 console.log("distPath", distPath)
 // const nonceValue = "random-csp-nonce"; // Use dynamic nonce if you generate it per request
 const nonceValue = '<!--#echo var="UNIQUE_ID" -->';
