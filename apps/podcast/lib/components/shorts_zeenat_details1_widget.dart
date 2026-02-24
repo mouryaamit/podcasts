@@ -196,6 +196,8 @@ class _ShortsZeenatDetails1WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/veBfkxTIGuQ?si=01PuSNIfBcXDH3fJ',
+                                              title:
+                                                  'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
                                             ),
                                           ),
                                         );
@@ -362,7 +364,7 @@ class _ShortsZeenatDetails1WidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 • 1.52 min',
+                                'MSME Conversations • June 2025 \n• 1.52 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -413,6 +415,8 @@ class _ShortsZeenatDetails1WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/veBfkxTIGuQ?si=01PuSNIfBcXDH3fJ',
+                                              title:
+                                                  'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
                                             ),
                                           ),
                                         );

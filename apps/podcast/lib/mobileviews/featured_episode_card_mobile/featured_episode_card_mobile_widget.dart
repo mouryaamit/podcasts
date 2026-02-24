@@ -148,6 +148,7 @@ class _FeaturedEpisodeCardMobileWidgetState
                                   fontStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
+                                  lineHeight: 1.5,
                                 ),
                           ),
                         ),

@@ -9,7 +9,7 @@ import '/components/shorts_zeenat_details2_widget.dart';
 import '/components/shorts_zeenat_details3_widget.dart';
 import '/components/shorts_zeenat_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/youtube_player_zeenat_widget.dart';
+import '/components/youtube_player_with_widget_widget.dart';
 import '/components/zeenat_a_i_summary_widget.dart';
 import '/components/zeenat_timestamp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -17,8 +17,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
-import '/index.dart';
-import 'podcast_details_zeenat_widget.dart' show PodcastDetailsZeenatWidget;
+import 'podcast_details_sumita_widget.dart' show PodcastDetailsSumitaWidget;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -27,8 +26,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-class PodcastDetailsZeenatModel
-    extends FlutterFlowModel<PodcastDetailsZeenatWidget> {
+class PodcastDetailsSumitaModel
+    extends FlutterFlowModel<PodcastDetailsSumitaWidget> {
   ///  Local state fields for this page.
 
   int selectedIndex = 1;
@@ -39,8 +38,8 @@ class PodcastDetailsZeenatModel
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
-  // Model for YoutubePlayerZeenat component.
-  late YoutubePlayerZeenatModel youtubePlayerZeenatModel;
+  // Model for YoutubePlayerWithWidget component.
+  late YoutubePlayerWithWidgetModel youtubePlayerWithWidgetModel;
   // Model for ShortsZeenat component.
   late ShortsZeenatModel shortsZeenatModel1;
   // Model for ShortsZeenatDetails1 component.
@@ -88,8 +87,8 @@ class PodcastDetailsZeenatModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerZeenatModel =
-        createModel(context, () => YoutubePlayerZeenatModel());
+    youtubePlayerWithWidgetModel =
+        createModel(context, () => YoutubePlayerWithWidgetModel());
     shortsZeenatModel1 = createModel(context, () => ShortsZeenatModel());
     shortsZeenatDetails1Model1 =
         createModel(context, () => ShortsZeenatDetails1Model());
@@ -127,7 +126,7 @@ class PodcastDetailsZeenatModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerZeenatModel.dispose();
+    youtubePlayerWithWidgetModel.dispose();
     shortsZeenatModel1.dispose();
     shortsZeenatDetails1Model1.dispose();
     shortsZeenatDetails2Model1.dispose();

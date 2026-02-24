@@ -40,12 +40,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => PodcastWidget(),
+      errorBuilder: (context, state) => PodcastDetailsSumitaWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => PodcastWidget(),
+          builder: (context, _) => PodcastDetailsSumitaWidget(),
         ),
         FFRoute(
           name: PodcastWidget.routeName,
@@ -78,16 +78,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => PodcastDetailsZeenatWidget(),
         ),
         FFRoute(
-          name: PodcastCopyWidget.routeName,
-          path: PodcastCopyWidget.routePath,
-          builder: (context, params) => PodcastCopyWidget(
-            selectedPage: params.getParam(
-              'selectedPage',
-              ParamType.String,
-            ),
-          ),
+          name: PodcastDetailsSumitaWidget.routeName,
+          path: PodcastDetailsSumitaWidget.routePath,
+          builder: (context, params) => PodcastDetailsSumitaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

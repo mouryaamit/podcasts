@@ -205,6 +205,8 @@ class _VideosPageVideo3WidgetState extends State<VideosPageVideo3Widget> {
                                                           WatchNowDialogWidget(
                                                         link:
                                                             'https://www.youtube.com/embed/WREowglaKx4?si=0zfhKE4ocVFlY_RS',
+                                                        title:
+                                                            'A New Lens for Inclusive MSME Growth',
                                                       ),
                                                     ),
                                                   );
@@ -337,21 +339,18 @@ class _VideosPageVideo3WidgetState extends State<VideosPageVideo3Widget> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Expanded(
-                              child: Container(
-                                width: 371.0,
-                                height: 181.0,
-                                decoration: BoxDecoration(),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/videos_lens_img.png',
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 1.0,
-                                    height:
-                                        MediaQuery.sizeOf(context).height * 1.0,
-                                    fit: BoxFit.fill,
-                                  ),
+                            Container(
+                              width: 371.0,
+                              height: 181.0,
+                              decoration: BoxDecoration(),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/videos_lens_img.png',
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -466,6 +465,8 @@ class _VideosPageVideo3WidgetState extends State<VideosPageVideo3Widget> {
                                                 child: WatchNowDialogWidget(
                                                   link:
                                                       'https://www.youtube.com/embed/WREowglaKx4?si=0zfhKE4ocVFlY_RS',
+                                                  title:
+                                                      'A New Lens for Inclusive MSME Growth',
                                                 ),
                                               ),
                                             );

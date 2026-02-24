@@ -162,8 +162,12 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                 .fontStyle,
                           ),
                           color: Color(0xFF111827),
-                          fontSize: MediaQuery.sizeOf(context).width > 498.0
-                              ? 40.0
+                          fontSize: MediaQuery.sizeOf(context).width >
+                                  valueOrDefault<double>(
+                                    kBreakpointSmall,
+                                    900.0,
+                                  )
+                              ? 32.0
                               : 18.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -176,140 +180,138 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                width: valueOrDefault<double>(
-                  () {
-                    if (MediaQuery.sizeOf(context).width <
-                        valueOrDefault<double>(
-                          kBreakpointSmall,
-                          600.0,
-                        )) {
-                      return 365;
-                    } else if (MediaQuery.sizeOf(context).width >
-                        valueOrDefault<double>(
-                          kBreakpointLarge,
-                          1200.0,
-                        )) {
-                      return 1080;
-                    } else {
-                      return 1000;
-                    }
-                  }()
-                      .toDouble(),
-                  1000.0,
-                ),
-                height: valueOrDefault<double>(
-                  () {
-                    if (MediaQuery.sizeOf(context).width <
-                        valueOrDefault<double>(
-                          kBreakpointSmall,
-                          600.0,
-                        )) {
-                      return 181;
-                    } else if (MediaQuery.sizeOf(context).width >
-                        valueOrDefault<double>(
-                          kBreakpointLarge,
-                          1200.0,
-                        )) {
-                      return 453;
-                    } else {
-                      return 4532;
-                    }
-                  }()
-                      .toDouble(),
-                  453.0,
-                ),
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        valueOrDefault<double>(
-                          () {
-                            if (MediaQuery.sizeOf(context).width <
-                                valueOrDefault<double>(
-                                  kBreakpointSmall,
-                                  900.0,
-                                )) {
-                              return 20;
-                            } else if (MediaQuery.sizeOf(context).width >
-                                valueOrDefault<double>(
-                                  kBreakpointLarge,
-                                  900.0,
-                                )) {
-                              return 0;
-                            } else {
-                              return 0;
-                            }
-                          }()
-                              .toDouble(),
-                          0.0,
-                        ),
+            Container(
+              width: valueOrDefault<double>(
+                () {
+                  if (MediaQuery.sizeOf(context).width <
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        600.0,
+                      )) {
+                    return 365;
+                  } else if (MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointLarge,
+                        1200.0,
+                      )) {
+                    return 1080;
+                  } else {
+                    return 1000;
+                  }
+                }()
+                    .toDouble(),
+                1000.0,
+              ),
+              height: valueOrDefault<double>(
+                () {
+                  if (MediaQuery.sizeOf(context).width <
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        600.0,
+                      )) {
+                    return 181;
+                  } else if (MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointLarge,
+                        1200.0,
+                      )) {
+                    return 453;
+                  } else {
+                    return 4532;
+                  }
+                }()
+                    .toDouble(),
+                453.0,
+              ),
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+              ),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(
+                      valueOrDefault<double>(
+                        () {
+                          if (MediaQuery.sizeOf(context).width <
+                              valueOrDefault<double>(
+                                kBreakpointSmall,
+                                900.0,
+                              )) {
+                            return 20;
+                          } else if (MediaQuery.sizeOf(context).width >
+                              valueOrDefault<double>(
+                                kBreakpointLarge,
+                                900.0,
+                              )) {
+                            return 0;
+                          } else {
+                            return 0;
+                          }
+                        }()
+                            .toDouble(),
                         0.0,
-                        valueOrDefault<double>(
-                          (MediaQuery.sizeOf(context).width <
-                                      valueOrDefault<double>(
-                                        kBreakpointSmall,
-                                        900.0,
-                                      )
-                                  ? 20
-                                  : 0)
-                              .toDouble(),
-                          0.0,
-                        ),
-                        0.0),
-                    child: FlutterFlowWebView(
-                      content:
-                          'https://www.youtube.com/embed/eL6ee7hfAqo?si=FY9LMI-4m25IROvv',
-                      bypass: false,
-                      width: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )) {
-                            return 365;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                900.0,
-                              )) {
-                            return 1080;
-                          } else {
-                            return 1000;
-                          }
-                        }()
-                            .toDouble(),
-                        1000.0,
                       ),
-                      height: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                600.0,
-                              )) {
-                            return 181;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                1200.0,
-                              )) {
-                            return 453;
-                          } else {
-                            return 4532;
-                          }
-                        }()
+                      0.0,
+                      valueOrDefault<double>(
+                        (MediaQuery.sizeOf(context).width <
+                                    valueOrDefault<double>(
+                                      kBreakpointSmall,
+                                      900.0,
+                                    )
+                                ? 20
+                                : 0)
                             .toDouble(),
-                        453.0,
+                        0.0,
                       ),
-                      verticalScroll: false,
-                      horizontalScroll: false,
+                      0.0),
+                  child: FlutterFlowWebView(
+                    content:
+                        'https://www.youtube.com/embed/eL6ee7hfAqo?playsinline=1&rel=0&modestbranding=1',
+                    bypass: false,
+                    width: valueOrDefault<double>(
+                      () {
+                        if (MediaQuery.sizeOf(context).width <
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )) {
+                          return 365;
+                        } else if (MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointLarge,
+                              900.0,
+                            )) {
+                          return 1080;
+                        } else {
+                          return 1000;
+                        }
+                      }()
+                          .toDouble(),
+                      1000.0,
                     ),
+                    height: valueOrDefault<double>(
+                      () {
+                        if (MediaQuery.sizeOf(context).width <
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              600.0,
+                            )) {
+                          return 181;
+                        } else if (MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointLarge,
+                              1200.0,
+                            )) {
+                          return 453;
+                        } else {
+                          return 4532;
+                        }
+                      }()
+                          .toDouble(),
+                      453.0,
+                    ),
+                    verticalScroll: false,
+                    horizontalScroll: false,
                   ),
                 ),
               ),
@@ -323,7 +325,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                               900.0,
                             )
                         ? 20.0
-                        : 55.0,
+                        : 60.0,
                     0.0,
                   ),
                   0.0,
@@ -334,7 +336,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                   900.0,
                                 )
                             ? 20
-                            : 50)
+                            : 60)
                         .toDouble(),
                     0.0,
                   ),
@@ -373,7 +375,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                       kBreakpointLarge,
                                       900.0,
                                     )) {
-                                  return 49;
+                                  return 40;
                                 } else {
                                   return 49;
                                 }
@@ -394,7 +396,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                       kBreakpointLarge,
                                       900.0,
                                     )) {
-                                  return 49;
+                                  return 38;
                                 } else {
                                   return 4532;
                                 }
@@ -402,7 +404,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                   .toDouble(),
                               453.0,
                             ),
-                            fit: BoxFit.contain,
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ),
@@ -513,7 +515,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                   kBreakpointLarge,
                                   900.0,
                                 )) {
-                              return 44;
+                              return 40;
                             } else {
                               return 44;
                             }
@@ -575,7 +577,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 4.0)),
+                ],
               ),
             ),
           ],

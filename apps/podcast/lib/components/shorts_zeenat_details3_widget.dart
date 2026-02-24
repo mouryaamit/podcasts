@@ -195,6 +195,8 @@ class _ShortsZeenatDetails3WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                              title:
+                                                  'What Data Reveals About MSME Resilience?',
                                             ),
                                           ),
                                         );
@@ -361,7 +363,7 @@ class _ShortsZeenatDetails3WidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 • 1.06 min',
+                                'MSME Conversations • June 2025 \n• 1.06 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -412,6 +414,8 @@ class _ShortsZeenatDetails3WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                              title:
+                                                  'What Data Reveals About MSME Resilience?',
                                             ),
                                           ),
                                         );

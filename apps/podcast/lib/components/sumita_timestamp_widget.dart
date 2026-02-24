@@ -6,18 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'zeenat_timestamp_model.dart';
-export 'zeenat_timestamp_model.dart';
+import 'sumita_timestamp_model.dart';
+export 'sumita_timestamp_model.dart';
 
-class ZeenatTimestampWidget extends StatefulWidget {
-  const ZeenatTimestampWidget({super.key});
+class SumitaTimestampWidget extends StatefulWidget {
+  const SumitaTimestampWidget({super.key});
 
   @override
-  State<ZeenatTimestampWidget> createState() => _ZeenatTimestampWidgetState();
+  State<SumitaTimestampWidget> createState() => _SumitaTimestampWidgetState();
 }
 
-class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
-  late ZeenatTimestampModel _model;
+class _SumitaTimestampWidgetState extends State<SumitaTimestampWidget> {
+  late SumitaTimestampModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -28,7 +28,7 @@ class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ZeenatTimestampModel());
+    _model = createModel(context, () => SumitaTimestampModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -45,102 +45,83 @@ class _ZeenatTimestampWidgetState extends State<ZeenatTimestampWidget> {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(
-              0.0,
-              0.0,
-              valueOrDefault<double>(
-                (MediaQuery.sizeOf(context).width <
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              900.0,
-                            )
-                        ? 20
-                        : 35)
-                    .toDouble(),
-                0.0,
-              ),
-              0.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Timestamp',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.bold,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      color: Color(0xFF404040),
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 32.0
-                          : 24.0,
-                      letterSpacing: 0.0,
+        Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Timestamp',
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    font: GoogleFonts.inter(
                       fontWeight: FontWeight.bold,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-              ),
-              if (responsiveVisibility(
-                context: context,
-                phone: false,
-              ))
-                Builder(
-                  builder: (context) => FFButtonWidget(
-                    onPressed: () async {
-                      await Share.share(
-                        'https://youtu.be/hhbeWmcBhHo?si=htWAA-sa7FHdXRuu',
-                        sharePositionOrigin: getWidgetBoundingBox(context),
-                      );
-                    },
-                    text: 'Share',
-                    icon: Icon(
-                      Icons.ios_share_outlined,
-                      size: 18.0,
+                    color: Color(0xFF404040),
+                    fontSize: MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 32.0
+                        : 24.0,
+                    letterSpacing: 0.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+            ),
+            if (responsiveVisibility(
+              context: context,
+              phone: false,
+            ))
+              Builder(
+                builder: (context) => FFButtonWidget(
+                  onPressed: () async {
+                    await Share.share(
+                      'https://youtu.be/hhbeWmcBhHo?si=htWAA-sa7FHdXRuu',
+                      sharePositionOrigin: getWidgetBoundingBox(context),
+                    );
+                  },
+                  text: 'Share',
+                  icon: Icon(
+                    Icons.ios_share_outlined,
+                    size: 18.0,
+                  ),
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: Color(0x00FFFFFF),
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          font: GoogleFonts.interTight(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontStyle,
+                          ),
+                          color: Color(0xFF4A4A4A),
+                          fontSize: 15.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .titleSmall
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                        ),
+                    elevation: 0.0,
+                    borderSide: BorderSide(
+                      color: Color(0xFFDEDEDE),
                     ),
-                    options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0x00FFFFFF),
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                font: GoogleFonts.interTight(
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontStyle,
-                                ),
-                                color: Color(0xFF4A4A4A),
-                                fontSize: 15.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .fontStyle,
-                              ),
-                      elevation: 0.0,
-                      borderSide: BorderSide(
-                        color: Color(0xFFDEDEDE),
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-            ],
-          ),
+              ),
+          ],
         ),
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),

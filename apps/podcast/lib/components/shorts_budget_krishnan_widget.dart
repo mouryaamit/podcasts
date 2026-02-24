@@ -125,7 +125,7 @@ class _ShortsBudgetKrishnanWidgetState
                                             .fontStyle,
                                       ),
                                       color: Color(0xFF111827),
-                                      fontSize: 18.0,
+                                      fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
@@ -197,6 +197,8 @@ class _ShortsBudgetKrishnanWidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/k2eFUgXjDNc?si=LNHdxtzmAgdnRWdY',
+                                              title:
+                                                  'India\'s MSME Export Challenge: What\'s Holding Small Businesses Back?',
                                             ),
                                           ),
                                         );
@@ -363,7 +365,7 @@ class _ShortsBudgetKrishnanWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 • 1.47 min',
+                                'MSME Conversations • February 2026 \n• 1.47 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -414,6 +416,8 @@ class _ShortsBudgetKrishnanWidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/k2eFUgXjDNc?si=LNHdxtzmAgdnRWdY',
+                                              title:
+                                                  'India\'s MSME Export Challenge: What\'s Holding Small Businesses Back?',
                                             ),
                                           ),
                                         );

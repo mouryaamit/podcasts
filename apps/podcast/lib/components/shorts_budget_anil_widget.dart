@@ -195,6 +195,8 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/270f2erlmyM?si=yll1Ktr6RxYnRAsb',
+                                              title:
+                                                  'India\'s MSME Paradox: ₹10,000 Crore Announced, But 50% of Funds Go Unspent',
                                             ),
                                           ),
                                         );
@@ -361,7 +363,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 • 2.31 min',
+                                'MSME Conversations • February 2026 \n• 2.31 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -412,6 +414,8 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/270f2erlmyM?si=yll1Ktr6RxYnRAsb',
+                                              title:
+                                                  'India\'s MSME Paradox: ₹10,000 Crore Announced, But 50% of Funds Go Unspent',
                                             ),
                                           ),
                                         );

@@ -205,6 +205,8 @@ class _VideosPageVideo2WidgetState extends State<VideosPageVideo2Widget> {
                                                           WatchNowDialogWidget(
                                                         link:
                                                             'https://www.youtube.com/embed/IESUhnXROcw?si=rCyOzrbHjJToUSRV',
+                                                        title:
+                                                            'Build in India for the World | Jocata Sumpoorn at the United Nations',
                                                       ),
                                                     ),
                                                   );
@@ -463,6 +465,8 @@ class _VideosPageVideo2WidgetState extends State<VideosPageVideo2Widget> {
                                                 child: WatchNowDialogWidget(
                                                   link:
                                                       'https://www.youtube.com/embed/IESUhnXROcw?si=rCyOzrbHjJToUSRV',
+                                                  title:
+                                                      'Build in India for the World | Jocata Sumpoorn at the United Nations',
                                                 ),
                                               ),
                                             );

@@ -205,6 +205,8 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                                                           WatchNowDialogWidget(
                                                         link:
                                                             'https://www.youtube.com/embed/dqFPKlCGEZo?si=bJrh9z0-SjyO71S0',
+                                                        title:
+                                                            'AI & Alternative Data: Balancing Efficiency & Risk in SME Financing',
                                                       ),
                                                     ),
                                                   );
@@ -463,6 +465,8 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                                                 child: WatchNowDialogWidget(
                                                   link:
                                                       'https://www.youtube.com/embed/dqFPKlCGEZo?si=bJrh9z0-SjyO71S0',
+                                                  title:
+                                                      'AI & Alternative Data: Balancing Efficiency & Risk in SME Financing',
                                                 ),
                                               ),
                                             );

@@ -45,83 +45,102 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Timestamp',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
-                      fontWeight: FontWeight.bold,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF404040),
-                    fontSize: MediaQuery.sizeOf(context).width >
+        Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(
+              0.0,
+              0.0,
+              valueOrDefault<double>(
+                (MediaQuery.sizeOf(context).width <
                             valueOrDefault<double>(
                               kBreakpointSmall,
                               900.0,
                             )
-                        ? 32.0
-                        : 24.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.bold,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            if (responsiveVisibility(
-              context: context,
-              phone: false,
-            ))
-              Builder(
-                builder: (context) => FFButtonWidget(
-                  onPressed: () async {
-                    await Share.share(
-                      'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC',
-                      sharePositionOrigin: getWidgetBoundingBox(context),
-                    );
-                  },
-                  text: 'Share',
-                  icon: Icon(
-                    Icons.ios_share_outlined,
-                    size: 18.0,
-                  ),
-                  options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0x00FFFFFF),
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .fontStyle,
-                          ),
-                          color: Color(0xFF4A4A4A),
-                          fontSize: 15.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                        ),
-                    elevation: 0.0,
-                    borderSide: BorderSide(
-                      color: Color(0xFFDEDEDE),
+                        ? 20
+                        : 35)
+                    .toDouble(),
+                0.0,
+              ),
+              0.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Timestamp',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: FontWeight.bold,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF404040),
+                      fontSize: MediaQuery.sizeOf(context).width >
+                              valueOrDefault<double>(
+                                kBreakpointSmall,
+                                900.0,
+                              )
+                          ? 32.0
+                          : 24.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+              ),
+              if (responsiveVisibility(
+                context: context,
+                phone: false,
+              ))
+                Builder(
+                  builder: (context) => FFButtonWidget(
+                    onPressed: () async {
+                      await Share.share(
+                        'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC',
+                        sharePositionOrigin: getWidgetBoundingBox(context),
+                      );
+                    },
+                    text: 'Share',
+                    icon: Icon(
+                      Icons.ios_share_outlined,
+                      size: 18.0,
+                    ),
+                    options: FFButtonOptions(
+                      height: 40.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Color(0x00FFFFFF),
+                      textStyle:
+                          FlutterFlowTheme.of(context).titleSmall.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                                color: Color(0xFF4A4A4A),
+                                fontSize: 15.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontStyle,
+                              ),
+                      elevation: 0.0,
+                      borderSide: BorderSide(
+                        color: Color(0xFFDEDEDE),
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
                   ),
                 ),
-              ),
-          ],
+            ],
+          ),
         ),
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),

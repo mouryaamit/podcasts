@@ -194,6 +194,8 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/aTaC-fRVMos?si=9U6vjtHGe_WM-LGb',
+                                              title:
+                                                  'Credit Landscape: Has The Share Of Micro Borrowers Gone Up?',
                                             ),
                                           ),
                                         );
@@ -360,7 +362,7 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 • 2.13 min',
+                                'MSME Conversations • June 2025 \n• 2.13 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -411,6 +413,8 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/aTaC-fRVMos?si=9U6vjtHGe_WM-LGb',
+                                              title:
+                                                  'Credit Landscape: Has The Share Of Micro Borrowers Gone Up?',
                                             ),
                                           ),
                                         );

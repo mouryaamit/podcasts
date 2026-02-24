@@ -1,24 +1,22 @@
-import '/components/budget_a_i_summary_widget.dart';
-import '/components/budget_conversation_widget.dart';
-import '/components/budget_timestamp_widget.dart';
 import '/components/choice_chips_widget.dart';
+import '/components/conversation_zeenat_widget.dart';
 import '/components/desktop_footer_widget.dart';
-import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_budget_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
-import '/components/shorts_budget_anil_widget.dart';
-import '/components/shorts_budget_krishnan_widget.dart';
-import '/components/shorts_budget_laveesh_widget.dart';
-import '/components/shorts_budget_special_widget.dart';
-import '/components/shorts_budget_unni_krishnan_widget.dart';
+import '/components/shorts_zeenat_details1_widget.dart';
+import '/components/shorts_zeenat_details2_widget.dart';
+import '/components/shorts_zeenat_details3_widget.dart';
+import '/components/shorts_zeenat_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/youtube_player_widget.dart';
+import '/components/youtube_player_with_widget_widget.dart';
+import '/components/zeenat_a_i_summary_widget.dart';
+import '/components/zeenat_timestamp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
-import '/index.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -26,28 +24,30 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'podcast_details_model.dart';
-export 'podcast_details_model.dart';
+import 'podcast_details_sumita_model.dart';
+export 'podcast_details_sumita_model.dart';
 
-class PodcastDetailsWidget extends StatefulWidget {
-  const PodcastDetailsWidget({super.key});
+class PodcastDetailsSumitaWidget extends StatefulWidget {
+  const PodcastDetailsSumitaWidget({super.key});
 
-  static String routeName = 'PodcastDetails';
-  static String routePath = '/podcastDetails';
+  static String routeName = 'PodcastDetailsSumita';
+  static String routePath = '/podcastDetailsSumita';
 
   @override
-  State<PodcastDetailsWidget> createState() => _PodcastDetailsWidgetState();
+  State<PodcastDetailsSumitaWidget> createState() =>
+      _PodcastDetailsSumitaWidgetState();
 }
 
-class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
-  late PodcastDetailsModel _model;
+class _PodcastDetailsSumitaWidgetState
+    extends State<PodcastDetailsSumitaWidget> {
+  late PodcastDetailsSumitaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PodcastDetailsModel());
+    _model = createModel(context, () => PodcastDetailsSumitaModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -140,7 +140,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
                             child: Container(
@@ -383,20 +383,14 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                           alignment:
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
-                                                          child: Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
+                                                          child: wrapWithModel(
+                                                            model: _model
+                                                                .youtubePlayerWithWidgetModel,
+                                                            updateCallback: () =>
+                                                                safeSetState(
+                                                                    () {}),
                                                             child:
-                                                                wrapWithModel(
-                                                              model: _model
-                                                                  .youtubePlayerModel,
-                                                              updateCallback: () =>
-                                                                  safeSetState(
-                                                                      () {}),
-                                                              child:
-                                                                  YoutubePlayerWidget(),
-                                                            ),
+                                                                YoutubePlayerWithWidgetWidget(),
                                                           ),
                                                         ),
                                                       ),
@@ -418,7 +412,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
-                                                0.75,
+                                                0.8,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -431,7 +425,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     children: [
                                                       TextSpan(
                                                         text:
-                                                            'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025 uptick. This post-Budget roundtable brings together voices from policy, trade, exports, credit, and fintech to assess whether Budget intent can translate into on-ground execution. In this discussion, experts examine credit and liquidity reforms like mandatory TReDS usage and the new ₹10,000 crore SME Growth Fund, alongside export opportunities from recent FTAs with the EU and UK. \n\nAt the same time, panelists highlight persistent frictions - delayed payments, compliance burden, logistics variability, weak local governance, and limited state capacity. The core question remains: while capital access is improving, can India address land, labour, law, and local execution to truly reimagine MSME growth?',
+                                                            'India\'s MSME sector is resilient but that doesn\'t mean lenders should deploy capital indiscriminately. In this crucial conversation, Zeenat Hamirani, Chief Risk Officer at L&T Finance, breaks down what sustainable MSME growth requires: good data, disciplined decision-making, and moving beyond fragmented credit signals.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -464,35 +458,45 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     ],
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodySmall
+                                                        .bodyMedium
                                                         .override(
                                                           font:
                                                               GoogleFonts.inter(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
-                                                                    .bodySmall
+                                                                    .bodyMedium
                                                                     .fontWeight,
                                                             fontStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
-                                                                    .bodySmall
+                                                                    .bodyMedium
                                                                     .fontStyle,
                                                           ),
+                                                          color: Colors.black,
+                                                          fontSize: MediaQuery.sizeOf(
+                                                                          context)
+                                                                      .width <
+                                                                  valueOrDefault<
+                                                                      double>(
+                                                                    kBreakpointSmall,
+                                                                    900.0,
+                                                                  )
+                                                              ? 14.0
+                                                              : 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
-                                                                  .bodySmall
+                                                                  .bodyMedium
                                                                   .fontWeight,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
-                                                                  .bodySmall
+                                                                  .bodyMedium
                                                                   .fontStyle,
                                                         ),
                                                   ),
-                                                  textAlign: TextAlign.justify,
                                                 ),
                                               ],
                                             ),
@@ -504,10 +508,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      valueOrDefault<double>(
-                                                        kBreakpointSmall,
-                                                        900.0,
-                                                      )
+                                                      900.0
                                                   ? 50.0
                                                   : 20.0,
                                               0.0,
@@ -515,30 +516,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             0.0),
                                         child: Container(
-                                          width: valueOrDefault<double>(
-                                            () {
-                                              if (MediaQuery.sizeOf(context)
-                                                      .width <
-                                                  valueOrDefault<double>(
-                                                    kBreakpointSmall,
-                                                    900.0,
-                                                  )) {
-                                                return 350;
-                                              } else if (MediaQuery.sizeOf(
-                                                          context)
-                                                      .width >
-                                                  valueOrDefault<double>(
-                                                    kBreakpointLarge,
-                                                    900.0,
-                                                  )) {
-                                                return 1200;
-                                              } else {
-                                                return 1200;
-                                              }
-                                            }()
-                                                .toDouble(),
-                                            1200.0,
-                                          ),
+                                          width:
+                                              MediaQuery.sizeOf(context).width *
+                                                  0.85,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -825,19 +805,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetSpecialModel1,
+                                                                                                            model: _model.shortsZeenatModel1,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetSpecialWidget(
-                                                                                                              watchNow: () async {},
-                                                                                                              share: () async {},
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                        Container(
-                                                                                                          child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetKrishnanModel1,
-                                                                                                            updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetKrishnanWidget(
+                                                                                                            child: ShortsZeenatWidget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -845,9 +815,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetLaveeshModel1,
+                                                                                                            model: _model.shortsZeenatDetails1Model1,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetLaveeshWidget(
+                                                                                                            child: ShortsZeenatDetails1Widget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -855,9 +825,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetAnilModel1,
+                                                                                                            model: _model.shortsZeenatDetails2Model1,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetAnilWidget(
+                                                                                                            child: ShortsZeenatDetails2Widget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -865,9 +835,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetUnniKrishnanModel1,
+                                                                                                            model: _model.shortsZeenatDetails3Model1,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetUnniKrishnanWidget(
+                                                                                                            child: ShortsZeenatDetails3Widget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -883,9 +853,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                         } else if (_model.selectedIndex == 2) {
                                                                                           return Container(
                                                                                             child: wrapWithModel(
-                                                                                              model: _model.budgetTimestampModel1,
+                                                                                              model: _model.zeenatTimestampModel1,
                                                                                               updateCallback: () => safeSetState(() {}),
-                                                                                              child: BudgetTimestampWidget(),
+                                                                                              child: ZeenatTimestampWidget(),
                                                                                             ),
                                                                                           );
                                                                                         } else if (_model.selectedIndex == 3) {
@@ -913,9 +883,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                 ],
                                                                                               ),
                                                                                               wrapWithModel(
-                                                                                                model: _model.budgetAISummaryModel1,
+                                                                                                model: _model.zeenatAISummaryModel1,
                                                                                                 updateCallback: () => safeSetState(() {}),
-                                                                                                child: BudgetAISummaryWidget(),
+                                                                                                child: ZeenatAISummaryWidget(),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -943,13 +913,10 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                   ),
                                                                                                 ],
                                                                                               ),
-                                                                                              Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                child: wrapWithModel(
-                                                                                                  model: _model.budgetConversationModel1,
-                                                                                                  updateCallback: () => safeSetState(() {}),
-                                                                                                  child: BudgetConversationWidget(),
-                                                                                                ),
+                                                                                              wrapWithModel(
+                                                                                                model: _model.conversationZeenatModel1,
+                                                                                                updateCallback: () => safeSetState(() {}),
+                                                                                                child: ConversationZeenatWidget(),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -1189,199 +1156,12 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [
-                                                                                              Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                                    0.0,
-                                                                                                    0.0,
-                                                                                                    valueOrDefault<double>(
-                                                                                                      (MediaQuery.sizeOf(context).width <
-                                                                                                                  valueOrDefault<double>(
-                                                                                                                    kBreakpointSmall,
-                                                                                                                    900.0,
-                                                                                                                  )
-                                                                                                              ? 20
-                                                                                                              : 35)
-                                                                                                          .toDouble(),
-                                                                                                      0.0,
-                                                                                                    ),
-                                                                                                    0.0),
-                                                                                                child: Row(
-                                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                  children: [
-                                                                                                    Text(
-                                                                                                      'Highlights',
-                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                            font: GoogleFonts.mulish(
-                                                                                                              fontWeight: FontWeight.w900,
-                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                            ),
-                                                                                                            color: Color(0xFF404040),
-                                                                                                            fontSize: 32.0,
-                                                                                                            letterSpacing: 0.0,
-                                                                                                            fontWeight: FontWeight.w900,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                          ),
-                                                                                                    ),
-                                                                                                    Builder(
-                                                                                                      builder: (context) => FFButtonWidget(
-                                                                                                        onPressed: () async {
-                                                                                                          await Share.share(
-                                                                                                            'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC',
-                                                                                                            sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                          );
-                                                                                                        },
-                                                                                                        text: 'Share',
-                                                                                                        icon: Icon(
-                                                                                                          Icons.ios_share_outlined,
-                                                                                                          size: 18.0,
-                                                                                                        ),
-                                                                                                        options: FFButtonOptions(
-                                                                                                          height: 40.0,
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                          color: Color(0x00FFFFFF),
-                                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                                font: GoogleFonts.interTight(
-                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                                ),
-                                                                                                                color: Color(0xFF4A4A4A),
-                                                                                                                fontSize: 15.0,
-                                                                                                                letterSpacing: 0.0,
-                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                              ),
-                                                                                                          elevation: 0.0,
-                                                                                                          borderSide: BorderSide(
-                                                                                                            color: Color(0xFFDEDEDE),
-                                                                                                          ),
-                                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ],
-                                                                                                ),
-                                                                                              ),
-                                                                                              Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                child: Row(
-                                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                                  mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                  children: [
-                                                                                                    Container(
-                                                                                                      child: wrapWithModel(
-                                                                                                        model: _model.shortsBudgetSpecialModel2,
-                                                                                                        updateCallback: () => safeSetState(() {}),
-                                                                                                        child: ShortsBudgetSpecialWidget(
-                                                                                                          watchNow: () async {},
-                                                                                                          share: () async {},
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                    Container(
-                                                                                                      child: wrapWithModel(
-                                                                                                        model: _model.shortsBudgetKrishnanModel2,
-                                                                                                        updateCallback: () => safeSetState(() {}),
-                                                                                                        child: ShortsBudgetKrishnanWidget(
-                                                                                                          share: () async {},
-                                                                                                          watchNow: () async {},
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ].divide(SizedBox(width: 25.0)),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
-                                                                                                child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                                                                                                  child: Row(
-                                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                    children: [
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsBudgetLaveeshModel2,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsBudgetLaveeshWidget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsBudgetAnilModel2,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsBudgetAnilWidget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ].divide(SizedBox(width: 25.0)),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
-                                                                                                child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                                                                                                  child: Row(
-                                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                    children: [
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsBudgetUnniKrishnanModel2,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsBudgetUnniKrishnanWidget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ].divide(SizedBox(width: 25.0)),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                            ],
-                                                                                          ),
-                                                                                        );
-                                                                                      } else if (_model.selectedIndex == 2) {
-                                                                                        return wrapWithModel(
-                                                                                          model: _model.budgetTimestampModel2,
-                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                          child: BudgetTimestampWidget(),
-                                                                                        );
-                                                                                      } else if (_model.selectedIndex == 3) {
-                                                                                        return Column(
-                                                                                          mainAxisSize: MainAxisSize.max,
-                                                                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                          children: [
-                                                                                            Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                                  0.0,
-                                                                                                  0.0,
-                                                                                                  valueOrDefault<double>(
-                                                                                                    (MediaQuery.sizeOf(context).width <
-                                                                                                                valueOrDefault<double>(
-                                                                                                                  kBreakpointSmall,
-                                                                                                                  900.0,
-                                                                                                                )
-                                                                                                            ? 20
-                                                                                                            : 35)
-                                                                                                        .toDouble(),
-                                                                                                    0.0,
-                                                                                                  ),
-                                                                                                  0.0),
-                                                                                              child: Row(
+                                                                                              Row(
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                 children: [
                                                                                                   Text(
-                                                                                                    'AI Summary',
+                                                                                                    'Highlights',
                                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                           font: GoogleFonts.mulish(
                                                                                                             fontWeight: FontWeight.w900,
@@ -1398,7 +1178,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                     builder: (context) => FFButtonWidget(
                                                                                                       onPressed: () async {
                                                                                                         await Share.share(
-                                                                                                          'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC',
+                                                                                                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
                                                                                                           sharePositionOrigin: getWidgetBoundingBox(context),
                                                                                                         );
                                                                                                       },
@@ -1433,11 +1213,143 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                   ),
                                                                                                 ],
                                                                                               ),
+                                                                                              Padding(
+                                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                                child: Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                  children: [
+                                                                                                    Container(
+                                                                                                      child: wrapWithModel(
+                                                                                                        model: _model.shortsZeenatModel2,
+                                                                                                        updateCallback: () => safeSetState(() {}),
+                                                                                                        child: ShortsZeenatWidget(
+                                                                                                          share: () async {},
+                                                                                                          watchNow: () async {},
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                    Container(
+                                                                                                      child: wrapWithModel(
+                                                                                                        model: _model.shortsZeenatDetails1Model2,
+                                                                                                        updateCallback: () => safeSetState(() {}),
+                                                                                                        child: ShortsZeenatDetails1Widget(
+                                                                                                          share: () async {},
+                                                                                                          watchNow: () async {},
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  ].divide(SizedBox(width: 25.0)),
+                                                                                                ),
+                                                                                              ),
+                                                                                              Align(
+                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                child: Padding(
+                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                                                                                                  child: Row(
+                                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                    children: [
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsZeenatDetails2Model2,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsZeenatDetails2Widget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsZeenatDetails3Model2,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsZeenatDetails3Widget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ].divide(SizedBox(width: 25.0)),
+                                                                                                  ),
+                                                                                                ),
+                                                                                              ),
+                                                                                            ],
+                                                                                          ),
+                                                                                        );
+                                                                                      } else if (_model.selectedIndex == 2) {
+                                                                                        return Container(
+                                                                                          child: wrapWithModel(
+                                                                                            model: _model.zeenatTimestampModel2,
+                                                                                            updateCallback: () => safeSetState(() {}),
+                                                                                            child: ZeenatTimestampWidget(),
+                                                                                          ),
+                                                                                        );
+                                                                                      } else if (_model.selectedIndex == 3) {
+                                                                                        return Column(
+                                                                                          mainAxisSize: MainAxisSize.max,
+                                                                                          children: [
+                                                                                            Row(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                              children: [
+                                                                                                Text(
+                                                                                                  'AI Summary',
+                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                        font: GoogleFonts.mulish(
+                                                                                                          fontWeight: FontWeight.w900,
+                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                        ),
+                                                                                                        color: Color(0xFF404040),
+                                                                                                        fontSize: 32.0,
+                                                                                                        letterSpacing: 0.0,
+                                                                                                        fontWeight: FontWeight.w900,
+                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                      ),
+                                                                                                ),
+                                                                                                Builder(
+                                                                                                  builder: (context) => FFButtonWidget(
+                                                                                                    onPressed: () async {
+                                                                                                      await Share.share(
+                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                      );
+                                                                                                    },
+                                                                                                    text: 'Share',
+                                                                                                    icon: Icon(
+                                                                                                      Icons.ios_share_outlined,
+                                                                                                      size: 18.0,
+                                                                                                    ),
+                                                                                                    options: FFButtonOptions(
+                                                                                                      height: 40.0,
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      color: Color(0x00FFFFFF),
+                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                            font: GoogleFonts.interTight(
+                                                                                                              fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                            ),
+                                                                                                            color: Color(0xFF4A4A4A),
+                                                                                                            fontSize: 15.0,
+                                                                                                            letterSpacing: 0.0,
+                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                          ),
+                                                                                                      elevation: 0.0,
+                                                                                                      borderSide: BorderSide(
+                                                                                                        color: Color(0xFFDEDEDE),
+                                                                                                      ),
+                                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                ),
+                                                                                              ],
                                                                                             ),
                                                                                             wrapWithModel(
-                                                                                              model: _model.budgetAISummaryModel2,
+                                                                                              model: _model.zeenatAISummaryModel2,
                                                                                               updateCallback: () => safeSetState(() {}),
-                                                                                              child: BudgetAISummaryWidget(),
+                                                                                              child: ZeenatAISummaryWidget(),
                                                                                             ),
                                                                                           ],
                                                                                         );
@@ -1445,86 +1357,69 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                         return Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
-                                                                                            Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                                  0.0,
-                                                                                                  0.0,
-                                                                                                  valueOrDefault<double>(
-                                                                                                    (MediaQuery.sizeOf(context).width <
-                                                                                                                valueOrDefault<double>(
-                                                                                                                  kBreakpointSmall,
-                                                                                                                  900.0,
-                                                                                                                )
-                                                                                                            ? 20
-                                                                                                            : 35)
-                                                                                                        .toDouble(),
-                                                                                                    0.0,
-                                                                                                  ),
-                                                                                                  0.0),
-                                                                                              child: Row(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                children: [
-                                                                                                  Text(
-                                                                                                    'Conversation',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.mulish(
-                                                                                                            fontWeight: FontWeight.w900,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                          ),
-                                                                                                          color: Color(0xFF404040),
-                                                                                                          fontSize: 32.0,
-                                                                                                          letterSpacing: 0.0,
+                                                                                            Row(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                              children: [
+                                                                                                Text(
+                                                                                                  'Conversation',
+                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                        font: GoogleFonts.mulish(
                                                                                                           fontWeight: FontWeight.w900,
                                                                                                           fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                         ),
-                                                                                                  ),
-                                                                                                  Builder(
-                                                                                                    builder: (context) => FFButtonWidget(
-                                                                                                      onPressed: () async {
-                                                                                                        await Share.share(
-                                                                                                          'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC',
-                                                                                                          sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                        );
-                                                                                                      },
-                                                                                                      text: 'Share',
-                                                                                                      icon: Icon(
-                                                                                                        Icons.ios_share,
-                                                                                                        size: 18.0,
+                                                                                                        color: Color(0xFF404040),
+                                                                                                        fontSize: 32.0,
+                                                                                                        letterSpacing: 0.0,
+                                                                                                        fontWeight: FontWeight.w900,
+                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                       ),
-                                                                                                      options: FFButtonOptions(
-                                                                                                        height: 40.0,
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                        color: Color(0x00FFFFFF),
-                                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                              font: GoogleFonts.interTight(
-                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                              ),
-                                                                                                              color: Color(0xFF4A4A4A),
-                                                                                                              fontSize: 15.0,
-                                                                                                              letterSpacing: 0.0,
+                                                                                                ),
+                                                                                                Builder(
+                                                                                                  builder: (context) => FFButtonWidget(
+                                                                                                    onPressed: () async {
+                                                                                                      await Share.share(
+                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                      );
+                                                                                                    },
+                                                                                                    text: 'Share',
+                                                                                                    icon: Icon(
+                                                                                                      Icons.ios_share,
+                                                                                                      size: 18.0,
+                                                                                                    ),
+                                                                                                    options: FFButtonOptions(
+                                                                                                      height: 40.0,
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      color: Color(0x00FFFFFF),
+                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                            font: GoogleFonts.interTight(
                                                                                                               fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                                               fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                                             ),
-                                                                                                        elevation: 0.0,
-                                                                                                        borderSide: BorderSide(
-                                                                                                          color: Color(0xFFDEDEDE),
-                                                                                                        ),
-                                                                                                        borderRadius: BorderRadius.circular(10.0),
+                                                                                                            color: Color(0xFF4A4A4A),
+                                                                                                            fontSize: 15.0,
+                                                                                                            letterSpacing: 0.0,
+                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                          ),
+                                                                                                      elevation: 0.0,
+                                                                                                      borderSide: BorderSide(
+                                                                                                        color: Color(0xFFDEDEDE),
                                                                                                       ),
+                                                                                                      borderRadius: BorderRadius.circular(10.0),
                                                                                                     ),
                                                                                                   ),
-                                                                                                ],
-                                                                                              ),
+                                                                                                ),
+                                                                                              ],
                                                                                             ),
                                                                                             Padding(
                                                                                               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                                                                                               child: wrapWithModel(
-                                                                                                model: _model.budgetConversationModel2,
+                                                                                                model: _model.conversationZeenatModel2,
                                                                                                 updateCallback: () => safeSetState(() {}),
-                                                                                                child: BudgetConversationWidget(),
+                                                                                                child: ConversationZeenatWidget(),
                                                                                               ),
                                                                                             ),
                                                                                           ],
@@ -1558,10 +1453,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             0.0,
                                             valueOrDefault<double>(
                                               MediaQuery.sizeOf(context).width >
-                                                      valueOrDefault<double>(
-                                                        kBreakpointSmall,
-                                                        900.0,
-                                                      )
+                                                      900.0
                                                   ? 50.0
                                                   : 25.0,
                                               0.0,
@@ -1581,7 +1473,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Guest Experts',
+                                                'Guest Expert',
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
@@ -1626,46 +1518,10 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/ibjji7k96agt/Laveesh_Bhandari.png',
-                                                    name:
-                                                        'Dr. Laveesh Bhandari',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/vayqcgy5fkq7/Zeenat_hamirani.png',
+                                                    name: 'Ms. Zeenat Hamirani',
                                                     description:
-                                                        'President & Senior Fellow at CSEP, leading applied economist focused on livelihoods, reforms, financial inclusion, and energy transition. PhD, Boston University.',
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 20.0, 0.0, 0.0),
-                                                child: wrapWithModel(
-                                                  model: _model.speakerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child: SpeakerWidget(
-                                                    image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/n02qy5xay3n1/Anil_Bharadwaj.png',
-                                                    name: 'Mr. Anil Bharadwaj',
-                                                    description:
-                                                        'Secretary General, FISME. Senior MSME policy advocate specialising in trade, exports, and regulatory reform. Member, Economic Advisory Group, Government of Uttar Pradesh.',
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 20.0, 0.0, 0.0),
-                                                child: wrapWithModel(
-                                                  model: _model.speakerModel3,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child: SpeakerWidget(
-                                                    image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/lnrttxd9k9c1/Unnikrishnan.png',
-                                                    name:
-                                                        'Mr. Unnikrishnan Kottekkat',
-                                                    description:
-                                                        'Joint Director General, FIEO. Trade facilitation leader focused on export strategy, policy engagement, and strengthening India’s global competitiveness.',
+                                                        'Chief Risk Officer, L&T Finance. Leads enterprise-wide risk and credit oversight, embedding disciplined growth and resilience in India’s NBFC ecosystem.',
                                                   ),
                                                 ),
                                               ),
@@ -1738,7 +1594,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     .fromSTEB(
                                                         0.0, 10.0, 0.0, 0.0),
                                                 child: wrapWithModel(
-                                                  model: _model.speakerModel4,
+                                                  model: _model.speakerModel2,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
@@ -1755,7 +1611,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     .fromSTEB(
                                                         0.0, 20.0, 0.0, 0.0),
                                                 child: wrapWithModel(
-                                                  model: _model.speakerModel5,
+                                                  model: _model.speakerModel3,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
@@ -1773,16 +1629,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0,
-                                            valueOrDefault<double>(
-                                              MediaQuery.sizeOf(context).width >
-                                                      900.0
-                                                  ? 50.0
-                                                  : 20.0,
-                                              0.0,
-                                            ),
-                                            0.0,
-                                            50.0),
+                                            0.0, 50.0, 0.0, 50.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -1790,45 +1637,18 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
                                             children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'Explore Podcast',
-                                                    textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF111827),
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )
-                                                              ? 24.0
-                                                              : 32.0,
-                                                          letterSpacing: 0.0,
+                                              Align(
+                                                alignment: AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                child: Text(
+                                                  'Explore Podcast',
+                                                  textAlign: TextAlign.start,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           fontStyle:
@@ -1837,155 +1657,28 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                  FFButtonWidget(
-                                                    onPressed: () async {
-                                                      context.pushNamed(
-                                                          PodcastWidget
-                                                              .routeName);
-                                                    },
-                                                    text: 'Go To Home',
-                                                    options: FFButtonOptions(
-                                                      width: valueOrDefault<
-                                                          double>(
-                                                        () {
-                                                          if (MediaQuery.sizeOf(
-                                                                      context)
-                                                                  .width <
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointSmall,
-                                                                600.0,
-                                                              )) {
-                                                            return 78;
-                                                          } else if (MediaQuery
-                                                                      .sizeOf(
-                                                                          context)
-                                                                  .width >
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointLarge,
-                                                                900.0,
-                                                              )) {
-                                                            return 101;
-                                                          } else {
-                                                            return 101;
-                                                          }
-                                                        }()
-                                                            .toDouble(),
-                                                        101.0,
-                                                      ),
-                                                      height: valueOrDefault<
-                                                          double>(
-                                                        () {
-                                                          if (MediaQuery.sizeOf(
-                                                                      context)
-                                                                  .width <
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointSmall,
-                                                                600.0,
-                                                              )) {
-                                                            return 31;
-                                                          } else if (MediaQuery
-                                                                      .sizeOf(
-                                                                          context)
-                                                                  .width >
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointLarge,
-                                                                900.0,
-                                                              )) {
-                                                            return 40;
-                                                          } else {
-                                                            return 44;
-                                                          }
-                                                        }()
-                                                            .toDouble(),
-                                                        44.0,
-                                                      ),
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: Color(0x00FFFFFF),
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .interTight(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF30AC6B),
-                                                                fontSize:
-                                                                    valueOrDefault<
-                                                                        double>(
-                                                                  () {
-                                                                    if (MediaQuery.sizeOf(context)
-                                                                            .width <
-                                                                        valueOrDefault<
-                                                                            double>(
-                                                                          kBreakpointSmall,
-                                                                          600.0,
-                                                                        )) {
-                                                                      return 12;
-                                                                    } else if (MediaQuery.sizeOf(context)
-                                                                            .width >
-                                                                        valueOrDefault<
-                                                                            double>(
-                                                                          kBreakpointLarge,
-                                                                          900.0,
-                                                                        )) {
-                                                                      return 15;
-                                                                    } else {
-                                                                      return 15;
-                                                                    }
-                                                                  }()
-                                                                      .toDouble(),
-                                                                  15.0,
-                                                                ),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .fontStyle,
-                                                              ),
-                                                      elevation: 0.0,
-                                                      borderSide: BorderSide(
                                                         color:
-                                                            Color(0xFF1DB954),
+                                                            Color(0xFF111827),
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 32.0
+                                                            : 24.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10.0),
-                                                    ),
-                                                  ),
-                                                ],
+                                                ),
                                               ),
                                               if (responsiveVisibility(
                                                 context: context,
@@ -1995,22 +1688,20 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          0.0, 20.0, 0.0, 0.0),
+                                                          0.0, 15.0, 0.0, 0.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     children: [
                                                       Container(
-                                                        decoration:
-                                                            BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesZeenatModel1,
+                                                              .exploreEpisodesBudgetModel1,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ExploreEpisodesZeenatWidget(),
+                                                              ExploreEpisodesBudgetWidget(),
                                                         ),
                                                       ),
                                                     ],
@@ -2034,12 +1725,12 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesZeenatModel2,
+                                                              .exploreEpisodesBudgetModel2,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ExploreEpisodesZeenatWidget(),
+                                                              ExploreEpisodesBudgetWidget(),
                                                         ),
                                                       ),
                                                     ],
@@ -2050,7 +1741,13 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                         ),
                                       ),
                                       Container(
-                                        decoration: BoxDecoration(),
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                1.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                        ),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [

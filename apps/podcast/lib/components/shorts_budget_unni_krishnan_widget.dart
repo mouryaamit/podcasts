@@ -197,6 +197,8 @@ class _ShortsBudgetUnniKrishnanWidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/humb-kbsNDY?si=nVq6-2Hm0-aj3n9t',
+                                              title:
+                                                  'Technology Is No Longer Optional for Indian MSMEs',
                                             ),
                                           ),
                                         );
@@ -363,7 +365,7 @@ class _ShortsBudgetUnniKrishnanWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 • 1.18 min',
+                                'MSME Conversations • February 2026 \n• 1.18 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -414,6 +416,8 @@ class _ShortsBudgetUnniKrishnanWidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/humb-kbsNDY?si=nVq6-2Hm0-aj3n9t',
+                                              title:
+                                                  'Technology Is No Longer Optional for Indian MSMEs',
                                             ),
                                           ),
                                         );

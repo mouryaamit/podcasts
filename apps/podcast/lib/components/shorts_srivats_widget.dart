@@ -194,6 +194,8 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/LpOLpSboZUw?si=N2OVWv5B-CdQkkY4',
+                                              title:
+                                                  'Is There A Magic Bullet to Aid the Auto Sector?',
                                             ),
                                           ),
                                         );
@@ -360,7 +362,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • August 2025 • 1.31 min',
+                                'MSME Conversations • August 2025 \n• 1.31 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -411,6 +413,8 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/LpOLpSboZUw?si=N2OVWv5B-CdQkkY4',
+                                              title:
+                                                  'Is There A Magic Bullet to Aid the Auto Sector?',
                                             ),
                                           ),
                                         );

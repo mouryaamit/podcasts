@@ -13,9 +13,11 @@ class WatchNowDialogWidget extends StatefulWidget {
   const WatchNowDialogWidget({
     super.key,
     required this.link,
+    required this.title,
   });
 
   final String? link;
+  final String? title;
 
   @override
   State<WatchNowDialogWidget> createState() => _WatchNowDialogWidgetState();
@@ -99,27 +101,64 @@ class _WatchNowDialogWidgetState extends State<WatchNowDialogWidget> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
-              child: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  Navigator.pop(context);
-                },
-                child: Icon(
-                  Icons.close_sharp,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: MediaQuery.sizeOf(context).width <
-                          valueOrDefault<double>(
-                            kBreakpointSmall,
-                            900.0,
-                          )
-                      ? 20.0
-                      : 28.0,
-                ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(-1.0, -1.0),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 0.0, 0.0),
+                      child: Text(
+                        valueOrDefault<String>(
+                          widget!.title,
+                          'title',
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              font: GoogleFonts.inter(
+                                fontWeight: FontWeight.w600,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
+                              color: Color(0xFF111827),
+                              fontSize: 16.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(1.0, -1.0),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.close_sharp,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: MediaQuery.sizeOf(context).width <
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 20.0
+                            : 28.0,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             if (responsiveVisibility(

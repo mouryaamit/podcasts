@@ -196,6 +196,8 @@ class _ShortsZeenatDetails2WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                              title:
+                                                  'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
                                             ),
                                           ),
                                         );
@@ -362,7 +364,7 @@ class _ShortsZeenatDetails2WidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 • 1.27 min',
+                                'MSME Conversations • June 2025 \n• 1.27 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -413,6 +415,8 @@ class _ShortsZeenatDetails2WidgetState
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                              title:
+                                                  'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
                                             ),
                                           ),
                                         );

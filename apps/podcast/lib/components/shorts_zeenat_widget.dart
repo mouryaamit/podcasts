@@ -194,6 +194,8 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/tblOtk562Mo?si=ld-Xz1YK0Xdcc6km',
+                                              title:
+                                                  'Happy Friction Beats Fast Money for India’s MSMEs',
                                             ),
                                           ),
                                         );
@@ -360,7 +362,7 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • July 2025 • 1.08 min',
+                                'MSME Conversations • July 2025 \n• 1.08 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -411,6 +413,8 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/tblOtk562Mo?si=ld-Xz1YK0Xdcc6km',
+                                              title:
+                                                  'Happy Friction Beats Fast Money for India’s MSMEs',
                                             ),
                                           ),
                                         );

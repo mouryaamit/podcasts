@@ -62,7 +62,14 @@ class _ExploreEpisodesZeenatWidgetState
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: Container(
-                    height: 500.0,
+                    width: MediaQuery.sizeOf(context).width * 0.4,
+                    height: MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              1700.0,
+                            )
+                        ? 555.0
+                        : 500.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
@@ -86,8 +93,8 @@ class _ExploreEpisodesZeenatWidgetState
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: 500.0,
-                              height: 271.0,
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              height: MediaQuery.sizeOf(context).height * 0.3,
                               decoration: BoxDecoration(),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
@@ -104,7 +111,7 @@ class _ExploreEpisodesZeenatWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 500.0,
+                                width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: BoxDecoration(),
                                 child: Text(
                                   'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
@@ -179,7 +186,7 @@ class _ExploreEpisodesZeenatWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 500.0,
+                                width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: BoxDecoration(),
                                 child: Text(
                                   'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
@@ -214,7 +221,7 @@ class _ExploreEpisodesZeenatWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),
                               child: Container(
-                                width: 500.0,
+                                width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -239,7 +246,7 @@ class _ExploreEpisodesZeenatWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            'Sumita Kale',
+                                            'Dr. Sumita Kale',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -618,7 +625,7 @@ class _ExploreEpisodesZeenatWidgetState
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              'Sumita Kale',
+                                              'Dr. Sumita Kale',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium

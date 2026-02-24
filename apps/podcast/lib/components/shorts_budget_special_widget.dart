@@ -196,6 +196,8 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/3skFTTsAvmo?si=OdZzDb4_4wH2QnCq',
+                                              title:
+                                                  'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
                                             ),
                                           ),
                                         );
@@ -362,7 +364,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 • 0.46 sec',
+                                'MSME Conversations • February 2026 \n• 0.46 sec',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -413,6 +415,8 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/3skFTTsAvmo?si=OdZzDb4_4wH2QnCq',
+                                              title:
+                                                  'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
                                             ),
                                           ),
                                         );

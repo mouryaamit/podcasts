@@ -205,6 +205,8 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                                           WatchNowDialogWidget(
                                                         link:
                                                             'https://www.youtube.com/embed/KgFNTP_MDJU?si=JO7hzhi25b-3NajW',
+                                                        title:
+                                                            'Jocata Sumpoorn: India’s First MSME Economic Activity Index',
                                                       ),
                                                     ),
                                                   );
@@ -463,6 +465,8 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                                 child: WatchNowDialogWidget(
                                                   link:
                                                       'https://www.youtube.com/embed/KgFNTP_MDJU?si=JO7hzhi25b-3NajW',
+                                                  title:
+                                                      'Jocata Sumpoorn: India’s First MSME Economic Activity Index',
                                                 ),
                                               ),
                                             );

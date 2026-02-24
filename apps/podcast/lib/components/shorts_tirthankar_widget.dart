@@ -194,6 +194,8 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/zyJczm_CqW4?si=kceA1aIUJcM8aM1b',
+                                              title:
+                                                  'How Stricter Listing Rules Cut IPOs But Improved Performance',
                                             ),
                                           ),
                                         );
@@ -360,7 +362,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • November 2025 • 1.27 min',
+                                'MSME Conversations • November 2025 \n• 1.27 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -411,6 +413,8 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/zyJczm_CqW4?si=kceA1aIUJcM8aM1b',
+                                              title:
+                                                  'How Stricter Listing Rules Cut IPOs But Improved Performance',
                                             ),
                                           ),
                                         );

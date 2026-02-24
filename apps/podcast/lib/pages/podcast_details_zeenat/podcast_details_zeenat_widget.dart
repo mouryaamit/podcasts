@@ -17,6 +17,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/index.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -412,7 +413,7 @@ class _PodcastDetailsZeenatWidgetState
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
-                                                0.8,
+                                                0.75,
                                             decoration: BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -474,16 +475,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                     .fontStyle,
                                                           ),
                                                           color: Colors.black,
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )
-                                                              ? 14.0
-                                                              : 16.0,
+                                                          fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
@@ -497,6 +489,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                   .fontStyle,
                                                         ),
                                                   ),
+                                                  textAlign: TextAlign.justify,
                                                 ),
                                               ],
                                             ),
@@ -1156,62 +1149,79 @@ class _PodcastDetailsZeenatWidgetState
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [
-                                                                                              Row(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                children: [
-                                                                                                  Text(
-                                                                                                    'Highlights',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.mulish(
+                                                                                              Padding(
+                                                                                                padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                    0.0,
+                                                                                                    0.0,
+                                                                                                    valueOrDefault<double>(
+                                                                                                      (MediaQuery.sizeOf(context).width <
+                                                                                                                  valueOrDefault<double>(
+                                                                                                                    kBreakpointSmall,
+                                                                                                                    900.0,
+                                                                                                                  )
+                                                                                                              ? 20
+                                                                                                              : 35)
+                                                                                                          .toDouble(),
+                                                                                                      0.0,
+                                                                                                    ),
+                                                                                                    0.0),
+                                                                                                child: Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                  children: [
+                                                                                                    Text(
+                                                                                                      'Highlights',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                            font: GoogleFonts.mulish(
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                            color: Color(0xFF404040),
+                                                                                                            fontSize: 32.0,
+                                                                                                            letterSpacing: 0.0,
                                                                                                             fontWeight: FontWeight.w900,
                                                                                                             fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                           ),
-                                                                                                          color: Color(0xFF404040),
-                                                                                                          fontSize: 32.0,
-                                                                                                          letterSpacing: 0.0,
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                    ),
+                                                                                                    Builder(
+                                                                                                      builder: (context) => FFButtonWidget(
+                                                                                                        onPressed: () async {
+                                                                                                          await Share.share(
+                                                                                                            'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                            sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                          );
+                                                                                                        },
+                                                                                                        text: 'Share',
+                                                                                                        icon: Icon(
+                                                                                                          Icons.ios_share_outlined,
+                                                                                                          size: 18.0,
                                                                                                         ),
-                                                                                                  ),
-                                                                                                  Builder(
-                                                                                                    builder: (context) => FFButtonWidget(
-                                                                                                      onPressed: () async {
-                                                                                                        await Share.share(
-                                                                                                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                          sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                        );
-                                                                                                      },
-                                                                                                      text: 'Share',
-                                                                                                      icon: Icon(
-                                                                                                        Icons.ios_share_outlined,
-                                                                                                        size: 18.0,
-                                                                                                      ),
-                                                                                                      options: FFButtonOptions(
-                                                                                                        height: 40.0,
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                        color: Color(0x00FFFFFF),
-                                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                              font: GoogleFonts.interTight(
+                                                                                                        options: FFButtonOptions(
+                                                                                                          height: 40.0,
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                          color: Color(0x00FFFFFF),
+                                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                                font: GoogleFonts.interTight(
+                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                ),
+                                                                                                                color: Color(0xFF4A4A4A),
+                                                                                                                fontSize: 15.0,
+                                                                                                                letterSpacing: 0.0,
                                                                                                                 fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                                                 fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                                               ),
-                                                                                                              color: Color(0xFF4A4A4A),
-                                                                                                              fontSize: 15.0,
-                                                                                                              letterSpacing: 0.0,
-                                                                                                              fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                              fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                            ),
-                                                                                                        elevation: 0.0,
-                                                                                                        borderSide: BorderSide(
-                                                                                                          color: Color(0xFFDEDEDE),
+                                                                                                          elevation: 0.0,
+                                                                                                          borderSide: BorderSide(
+                                                                                                            color: Color(0xFFDEDEDE),
+                                                                                                          ),
+                                                                                                          borderRadius: BorderRadius.circular(10.0),
                                                                                                         ),
-                                                                                                        borderRadius: BorderRadius.circular(10.0),
                                                                                                       ),
                                                                                                     ),
-                                                                                                  ),
-                                                                                                ],
+                                                                                                  ],
+                                                                                                ),
                                                                                               ),
                                                                                               Padding(
                                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -1289,62 +1299,79 @@ class _PodcastDetailsZeenatWidgetState
                                                                                         return Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
-                                                                                            Row(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                              children: [
-                                                                                                Text(
-                                                                                                  'AI Summary',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                        font: GoogleFonts.mulish(
+                                                                                            Padding(
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                  0.0,
+                                                                                                  0.0,
+                                                                                                  valueOrDefault<double>(
+                                                                                                    (MediaQuery.sizeOf(context).width <
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointSmall,
+                                                                                                                  900.0,
+                                                                                                                )
+                                                                                                            ? 20
+                                                                                                            : 35)
+                                                                                                        .toDouble(),
+                                                                                                    0.0,
+                                                                                                  ),
+                                                                                                  0.0),
+                                                                                              child: Row(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                children: [
+                                                                                                  Text(
+                                                                                                    'AI Summary',
+                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                          font: GoogleFonts.mulish(
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                          color: Color(0xFF404040),
+                                                                                                          fontSize: 32.0,
+                                                                                                          letterSpacing: 0.0,
                                                                                                           fontWeight: FontWeight.w900,
                                                                                                           fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                         ),
-                                                                                                        color: Color(0xFF404040),
-                                                                                                        fontSize: 32.0,
-                                                                                                        letterSpacing: 0.0,
-                                                                                                        fontWeight: FontWeight.w900,
-                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                  ),
+                                                                                                  Builder(
+                                                                                                    builder: (context) => FFButtonWidget(
+                                                                                                      onPressed: () async {
+                                                                                                        await Share.share(
+                                                                                                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                          sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                        );
+                                                                                                      },
+                                                                                                      text: 'Share',
+                                                                                                      icon: Icon(
+                                                                                                        Icons.ios_share_outlined,
+                                                                                                        size: 18.0,
                                                                                                       ),
-                                                                                                ),
-                                                                                                Builder(
-                                                                                                  builder: (context) => FFButtonWidget(
-                                                                                                    onPressed: () async {
-                                                                                                      await Share.share(
-                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                      );
-                                                                                                    },
-                                                                                                    text: 'Share',
-                                                                                                    icon: Icon(
-                                                                                                      Icons.ios_share_outlined,
-                                                                                                      size: 18.0,
-                                                                                                    ),
-                                                                                                    options: FFButtonOptions(
-                                                                                                      height: 40.0,
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                      color: Color(0x00FFFFFF),
-                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                            font: GoogleFonts.interTight(
+                                                                                                      options: FFButtonOptions(
+                                                                                                        height: 40.0,
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                        color: Color(0x00FFFFFF),
+                                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                              font: GoogleFonts.interTight(
+                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                              ),
+                                                                                                              color: Color(0xFF4A4A4A),
+                                                                                                              fontSize: 15.0,
+                                                                                                              letterSpacing: 0.0,
                                                                                                               fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                                               fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                                             ),
-                                                                                                            color: Color(0xFF4A4A4A),
-                                                                                                            fontSize: 15.0,
-                                                                                                            letterSpacing: 0.0,
-                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                          ),
-                                                                                                      elevation: 0.0,
-                                                                                                      borderSide: BorderSide(
-                                                                                                        color: Color(0xFFDEDEDE),
+                                                                                                        elevation: 0.0,
+                                                                                                        borderSide: BorderSide(
+                                                                                                          color: Color(0xFFDEDEDE),
+                                                                                                        ),
+                                                                                                        borderRadius: BorderRadius.circular(10.0),
                                                                                                       ),
-                                                                                                      borderRadius: BorderRadius.circular(10.0),
                                                                                                     ),
                                                                                                   ),
-                                                                                                ),
-                                                                                              ],
+                                                                                                ],
+                                                                                              ),
                                                                                             ),
                                                                                             wrapWithModel(
                                                                                               model: _model.zeenatAISummaryModel2,
@@ -1357,62 +1384,79 @@ class _PodcastDetailsZeenatWidgetState
                                                                                         return Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
-                                                                                            Row(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                              children: [
-                                                                                                Text(
-                                                                                                  'Conversation',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                        font: GoogleFonts.mulish(
+                                                                                            Padding(
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                  0.0,
+                                                                                                  0.0,
+                                                                                                  valueOrDefault<double>(
+                                                                                                    (MediaQuery.sizeOf(context).width <
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointSmall,
+                                                                                                                  900.0,
+                                                                                                                )
+                                                                                                            ? 20
+                                                                                                            : 35)
+                                                                                                        .toDouble(),
+                                                                                                    0.0,
+                                                                                                  ),
+                                                                                                  0.0),
+                                                                                              child: Row(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                children: [
+                                                                                                  Text(
+                                                                                                    'Conversation',
+                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                          font: GoogleFonts.mulish(
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                          color: Color(0xFF404040),
+                                                                                                          fontSize: 32.0,
+                                                                                                          letterSpacing: 0.0,
                                                                                                           fontWeight: FontWeight.w900,
                                                                                                           fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                         ),
-                                                                                                        color: Color(0xFF404040),
-                                                                                                        fontSize: 32.0,
-                                                                                                        letterSpacing: 0.0,
-                                                                                                        fontWeight: FontWeight.w900,
-                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                  ),
+                                                                                                  Builder(
+                                                                                                    builder: (context) => FFButtonWidget(
+                                                                                                      onPressed: () async {
+                                                                                                        await Share.share(
+                                                                                                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                          sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                        );
+                                                                                                      },
+                                                                                                      text: 'Share',
+                                                                                                      icon: Icon(
+                                                                                                        Icons.ios_share,
+                                                                                                        size: 18.0,
                                                                                                       ),
-                                                                                                ),
-                                                                                                Builder(
-                                                                                                  builder: (context) => FFButtonWidget(
-                                                                                                    onPressed: () async {
-                                                                                                      await Share.share(
-                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                      );
-                                                                                                    },
-                                                                                                    text: 'Share',
-                                                                                                    icon: Icon(
-                                                                                                      Icons.ios_share,
-                                                                                                      size: 18.0,
-                                                                                                    ),
-                                                                                                    options: FFButtonOptions(
-                                                                                                      height: 40.0,
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                      color: Color(0x00FFFFFF),
-                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                            font: GoogleFonts.interTight(
+                                                                                                      options: FFButtonOptions(
+                                                                                                        height: 40.0,
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                        color: Color(0x00FFFFFF),
+                                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                              font: GoogleFonts.interTight(
+                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                              ),
+                                                                                                              color: Color(0xFF4A4A4A),
+                                                                                                              fontSize: 15.0,
+                                                                                                              letterSpacing: 0.0,
                                                                                                               fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                                               fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                                             ),
-                                                                                                            color: Color(0xFF4A4A4A),
-                                                                                                            fontSize: 15.0,
-                                                                                                            letterSpacing: 0.0,
-                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                          ),
-                                                                                                      elevation: 0.0,
-                                                                                                      borderSide: BorderSide(
-                                                                                                        color: Color(0xFFDEDEDE),
+                                                                                                        elevation: 0.0,
+                                                                                                        borderSide: BorderSide(
+                                                                                                          color: Color(0xFFDEDEDE),
+                                                                                                        ),
+                                                                                                        borderRadius: BorderRadius.circular(10.0),
                                                                                                       ),
-                                                                                                      borderRadius: BorderRadius.circular(10.0),
                                                                                                     ),
                                                                                                   ),
-                                                                                                ),
-                                                                                              ],
+                                                                                                ],
+                                                                                              ),
                                                                                             ),
                                                                                             Padding(
                                                                                               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -1638,47 +1682,207 @@ class _PodcastDetailsZeenatWidgetState
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Align(
-                                                alignment: AlignmentDirectional(
-                                                    -1.0, 0.0),
-                                                child: Text(
-                                                  'Explore Podcast',
-                                                  textAlign: TextAlign.start,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            Color(0xFF111827),
-                                                        fontSize: MediaQuery.sizeOf(
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -1.0, 0.0),
+                                                    child: Text(
+                                                      'Explore Podcast',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF111827),
+                                                                fontSize: MediaQuery.sizeOf(context)
+                                                                            .width >
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointSmall,
+                                                                          900.0,
+                                                                        )
+                                                                    ? 32.0
+                                                                    : 24.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontStyle: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .width >
-                                                                valueOrDefault<
-                                                                    double>(
-                                                                  kBreakpointSmall,
-                                                                  900.0,
-                                                                )
-                                                            ? 32.0
-                                                            : 24.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                  FFButtonWidget(
+                                                    onPressed: () async {
+                                                      context.pushNamed(
+                                                          PodcastWidget
+                                                              .routeName);
+                                                    },
+                                                    text: 'Go To Home',
+                                                    options: FFButtonOptions(
+                                                      width: valueOrDefault<
+                                                          double>(
+                                                        () {
+                                                          if (MediaQuery.sizeOf(
+                                                                      context)
+                                                                  .width <
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                600.0,
+                                                              )) {
+                                                            return 78;
+                                                          } else if (MediaQuery
+                                                                      .sizeOf(
+                                                                          context)
+                                                                  .width >
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointLarge,
+                                                                900.0,
+                                                              )) {
+                                                            return 101;
+                                                          } else {
+                                                            return 101;
+                                                          }
+                                                        }()
+                                                            .toDouble(),
+                                                        101.0,
                                                       ),
-                                                ),
+                                                      height: valueOrDefault<
+                                                          double>(
+                                                        () {
+                                                          if (MediaQuery.sizeOf(
+                                                                      context)
+                                                                  .width <
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointSmall,
+                                                                600.0,
+                                                              )) {
+                                                            return 31;
+                                                          } else if (MediaQuery
+                                                                      .sizeOf(
+                                                                          context)
+                                                                  .width >
+                                                              valueOrDefault<
+                                                                  double>(
+                                                                kBreakpointLarge,
+                                                                900.0,
+                                                              )) {
+                                                            return 40;
+                                                          } else {
+                                                            return 44;
+                                                          }
+                                                        }()
+                                                            .toDouble(),
+                                                        44.0,
+                                                      ),
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      iconPadding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      color: Color(0x00FFFFFF),
+                                                      textStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmall
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmall
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF30AC6B),
+                                                                fontSize:
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                  () {
+                                                                    if (MediaQuery.sizeOf(context)
+                                                                            .width <
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointSmall,
+                                                                          600.0,
+                                                                        )) {
+                                                                      return 12;
+                                                                    } else if (MediaQuery.sizeOf(context)
+                                                                            .width >
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointLarge,
+                                                                          900.0,
+                                                                        )) {
+                                                                      return 15;
+                                                                    } else {
+                                                                      return 15;
+                                                                    }
+                                                                  }()
+                                                                      .toDouble(),
+                                                                  15.0,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .fontStyle,
+                                                              ),
+                                                      elevation: 0.0,
+                                                      borderSide: BorderSide(
+                                                        color:
+                                                            Color(0xFF1DB954),
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10.0),
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                               if (responsiveVisibility(
                                                 context: context,

@@ -1,25 +1,26 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_web_view.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_youtube_player.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'youtube_player_zeenat_model.dart';
-export 'youtube_player_zeenat_model.dart';
+import 'youtube_player_with_widget_model.dart';
+export 'youtube_player_with_widget_model.dart';
 
-class YoutubePlayerZeenatWidget extends StatefulWidget {
-  const YoutubePlayerZeenatWidget({super.key});
+class YoutubePlayerWithWidgetWidget extends StatefulWidget {
+  const YoutubePlayerWithWidgetWidget({super.key});
 
   @override
-  State<YoutubePlayerZeenatWidget> createState() =>
-      _YoutubePlayerZeenatWidgetState();
+  State<YoutubePlayerWithWidgetWidget> createState() =>
+      _YoutubePlayerWithWidgetWidgetState();
 }
 
-class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
-  late YoutubePlayerZeenatModel _model;
+class _YoutubePlayerWithWidgetWidgetState
+    extends State<YoutubePlayerWithWidgetWidget> {
+  late YoutubePlayerWithWidgetModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,7 +31,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => YoutubePlayerZeenatModel());
+    _model = createModel(context, () => YoutubePlayerWithWidgetModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -73,7 +74,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                 kBreakpointSmall,
                 900.0,
               )) {
-            return 355;
+            return 318;
           } else if (MediaQuery.sizeOf(context).width >
               valueOrDefault<double>(
                 kBreakpointLarge,
@@ -153,7 +154,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                   ),
                   decoration: BoxDecoration(),
                   child: Text(
-                    'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
+                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.poppins(
@@ -228,94 +229,16 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
-                child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        valueOrDefault<double>(
-                          () {
-                            if (MediaQuery.sizeOf(context).width <
-                                valueOrDefault<double>(
-                                  kBreakpointSmall,
-                                  900.0,
-                                )) {
-                              return 20;
-                            } else if (MediaQuery.sizeOf(context).width >
-                                valueOrDefault<double>(
-                                  kBreakpointLarge,
-                                  900.0,
-                                )) {
-                              return 0;
-                            } else {
-                              return 0;
-                            }
-                          }()
-                              .toDouble(),
-                          0.0,
-                        ),
-                        0.0,
-                        valueOrDefault<double>(
-                          (MediaQuery.sizeOf(context).width <
-                                      valueOrDefault<double>(
-                                        kBreakpointSmall,
-                                        900.0,
-                                      )
-                                  ? 20
-                                  : 0)
-                              .toDouble(),
-                          0.0,
-                        ),
-                        0.0),
-                    child: FlutterFlowWebView(
-                      content:
-                          'https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_',
-                      bypass: false,
-                      width: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )) {
-                            return 365;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                900.0,
-                              )) {
-                            return 1080;
-                          } else {
-                            return 1000;
-                          }
-                        }()
-                            .toDouble(),
-                        1000.0,
-                      ),
-                      height: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                600.0,
-                              )) {
-                            return 181;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                1200.0,
-                              )) {
-                            return 453;
-                          } else {
-                            return 4532;
-                          }
-                        }()
-                            .toDouble(),
-                        453.0,
-                      ),
-                      verticalScroll: false,
-                      horizontalScroll: false,
-                    ),
-                  ),
+                child: FlutterFlowYoutubePlayer(
+                  url: 'https://www.youtube.com/watch?v=GpXjU-ieAKU',
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  autoPlay: false,
+                  looping: true,
+                  mute: false,
+                  showControls: true,
+                  showFullScreen: false,
+                  pauseOnNavigate: false,
+                  strictRelatedVideos: true,
                 ),
               ),
             ),
@@ -331,16 +254,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                         : 60.0,
                     0.0,
                   ),
-                  valueOrDefault<double>(
-                    MediaQuery.sizeOf(context).width <
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              900.0,
-                            )
-                        ? 10.0
-                        : 0.0,
-                    0.0,
-                  ),
+                  0.0,
                   valueOrDefault<double>(
                     (MediaQuery.sizeOf(context).width <
                                 valueOrDefault<double>(
@@ -463,7 +377,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                     builder: (context) => FFButtonWidget(
                       onPressed: () async {
                         await Share.share(
-                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                          'https://youtu.be/eL6ee7hfAqo?si=NNTopsNeGdYJwgX2',
                           sharePositionOrigin: getWidgetBoundingBox(context),
                         );
                       },

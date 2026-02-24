@@ -196,6 +196,8 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/oQfrtpOHFJE?si=LvPO0jTqFWJvP1Yj',
+                                              title:
+                                                  'India’s ‘Plumbing’ Needs Fixing for SME Growth',
                                             ),
                                           ),
                                         );
@@ -362,7 +364,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 • 2.30 min',
+                                'MSME Conversations • February 2026 \n• 2.30 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -413,6 +415,8 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                                             child: WatchNowDialogWidget(
                                               link:
                                                   'https://www.youtube.com/embed/oQfrtpOHFJE?si=LvPO0jTqFWJvP1Yj',
+                                              title:
+                                                  'India’s ‘Plumbing’ Needs Fixing for SME Growth',
                                             ),
                                           ),
                                         );

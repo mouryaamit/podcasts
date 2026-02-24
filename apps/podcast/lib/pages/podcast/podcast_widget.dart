@@ -315,7 +315,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
-                                                MainAxisAlignment.start,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               if (responsiveVisibility(
                                                 context: context,
@@ -349,7 +349,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                         ExploreEpisodesZeenatWidget(),
                                                   ),
                                                 ),
-                                            ].divide(SizedBox(width: 25.0)),
+                                            ],
                                           ),
                                         ),
                                       if (responsiveVisibility(
@@ -514,6 +514,8 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                                         WatchNowDialogWidget(
                                                                       link:
                                                                           'https://www.youtube.com/embed/3skFTTsAvmo?si=mfTb_zUk6fPjmLlt',
+                                                                      title:
+                                                                          'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
                                                                     ),
                                                                   ),
                                                                 ),

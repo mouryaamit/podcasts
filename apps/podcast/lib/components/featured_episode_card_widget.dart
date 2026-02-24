@@ -85,7 +85,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
               )),
             ),
             child: Container(
-              width: 1200.0,
+              width: MediaQuery.sizeOf(context).width * 1.0,
               decoration: BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -99,7 +99,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                       padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Align(
