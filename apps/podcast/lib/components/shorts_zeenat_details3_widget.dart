@@ -95,7 +95,7 @@ class _ShortsZeenatDetails3WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_zeenat_details3_image.png',
+                              'assets/images/fijek_4.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -144,7 +144,7 @@ class _ShortsZeenatDetails3WidgetState
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • June 2025 • 1.06 min',
+                              'MSME Conversation • June 2025 • 1.06 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

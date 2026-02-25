@@ -181,140 +181,138 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                width: valueOrDefault<double>(
-                  () {
-                    if (MediaQuery.sizeOf(context).width <
-                        valueOrDefault<double>(
-                          kBreakpointSmall,
-                          600.0,
-                        )) {
-                      return 365;
-                    } else if (MediaQuery.sizeOf(context).width >
-                        valueOrDefault<double>(
-                          kBreakpointLarge,
-                          1200.0,
-                        )) {
-                      return 1080;
-                    } else {
-                      return 1000;
-                    }
-                  }()
-                      .toDouble(),
-                  1000.0,
-                ),
-                height: valueOrDefault<double>(
-                  () {
-                    if (MediaQuery.sizeOf(context).width <
-                        valueOrDefault<double>(
-                          kBreakpointSmall,
-                          600.0,
-                        )) {
-                      return 181;
-                    } else if (MediaQuery.sizeOf(context).width >
-                        valueOrDefault<double>(
-                          kBreakpointLarge,
-                          1200.0,
-                        )) {
-                      return 453;
-                    } else {
-                      return 4532;
-                    }
-                  }()
-                      .toDouble(),
-                  453.0,
-                ),
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        valueOrDefault<double>(
-                          () {
-                            if (MediaQuery.sizeOf(context).width <
-                                valueOrDefault<double>(
-                                  kBreakpointSmall,
-                                  900.0,
-                                )) {
-                              return 20;
-                            } else if (MediaQuery.sizeOf(context).width >
-                                valueOrDefault<double>(
-                                  kBreakpointLarge,
-                                  900.0,
-                                )) {
-                              return 0;
-                            } else {
-                              return 0;
-                            }
-                          }()
-                              .toDouble(),
-                          0.0,
-                        ),
+            Container(
+              width: valueOrDefault<double>(
+                () {
+                  if (MediaQuery.sizeOf(context).width <
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        600.0,
+                      )) {
+                    return 365;
+                  } else if (MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointLarge,
+                        1200.0,
+                      )) {
+                    return 1080;
+                  } else {
+                    return 1000;
+                  }
+                }()
+                    .toDouble(),
+                1000.0,
+              ),
+              height: valueOrDefault<double>(
+                () {
+                  if (MediaQuery.sizeOf(context).width <
+                      valueOrDefault<double>(
+                        kBreakpointSmall,
+                        600.0,
+                      )) {
+                    return 181;
+                  } else if (MediaQuery.sizeOf(context).width >
+                      valueOrDefault<double>(
+                        kBreakpointLarge,
+                        1200.0,
+                      )) {
+                    return 453;
+                  } else {
+                    return 4532;
+                  }
+                }()
+                    .toDouble(),
+                453.0,
+              ),
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+              ),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(
+                      valueOrDefault<double>(
+                        () {
+                          if (MediaQuery.sizeOf(context).width <
+                              valueOrDefault<double>(
+                                kBreakpointSmall,
+                                900.0,
+                              )) {
+                            return 20;
+                          } else if (MediaQuery.sizeOf(context).width >
+                              valueOrDefault<double>(
+                                kBreakpointLarge,
+                                900.0,
+                              )) {
+                            return 0;
+                          } else {
+                            return 0;
+                          }
+                        }()
+                            .toDouble(),
                         0.0,
-                        valueOrDefault<double>(
-                          (MediaQuery.sizeOf(context).width <
-                                      valueOrDefault<double>(
-                                        kBreakpointSmall,
-                                        900.0,
-                                      )
-                                  ? 20
-                                  : 0)
-                              .toDouble(),
-                          0.0,
-                        ),
-                        0.0),
-                    child: FlutterFlowWebView(
-                      content:
-                          'https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_',
-                      bypass: false,
-                      width: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )) {
-                            return 365;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                900.0,
-                              )) {
-                            return 1080;
-                          } else {
-                            return 1000;
-                          }
-                        }()
-                            .toDouble(),
-                        1000.0,
                       ),
-                      height: valueOrDefault<double>(
-                        () {
-                          if (MediaQuery.sizeOf(context).width <
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                600.0,
-                              )) {
-                            return 181;
-                          } else if (MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointLarge,
-                                1200.0,
-                              )) {
-                            return 453;
-                          } else {
-                            return 4532;
-                          }
-                        }()
+                      0.0,
+                      valueOrDefault<double>(
+                        (MediaQuery.sizeOf(context).width <
+                                    valueOrDefault<double>(
+                                      kBreakpointSmall,
+                                      900.0,
+                                    )
+                                ? 20
+                                : 0)
                             .toDouble(),
-                        453.0,
+                        0.0,
                       ),
-                      verticalScroll: false,
-                      horizontalScroll: false,
+                      0.0),
+                  child: FlutterFlowWebView(
+                    content:
+                        'https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_',
+                    bypass: false,
+                    width: valueOrDefault<double>(
+                      () {
+                        if (MediaQuery.sizeOf(context).width <
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )) {
+                          return 365;
+                        } else if (MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointLarge,
+                              900.0,
+                            )) {
+                          return 1080;
+                        } else {
+                          return 1000;
+                        }
+                      }()
+                          .toDouble(),
+                      1000.0,
                     ),
+                    height: valueOrDefault<double>(
+                      () {
+                        if (MediaQuery.sizeOf(context).width <
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              600.0,
+                            )) {
+                          return 181;
+                        } else if (MediaQuery.sizeOf(context).width >
+                            valueOrDefault<double>(
+                              kBreakpointLarge,
+                              1200.0,
+                            )) {
+                          return 453;
+                        } else {
+                          return 4532;
+                        }
+                      }()
+                          .toDouble(),
+                      453.0,
+                    ),
+                    verticalScroll: false,
+                    horizontalScroll: false,
                   ),
                 ),
               ),
@@ -338,7 +336,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                               900.0,
                             )
                         ? 10.0
-                        : 0.0,
+                        : 20.0,
                     0.0,
                   ),
                   valueOrDefault<double>(
@@ -373,7 +371,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
                           child: Image.asset(
-                            'assets/images/youtube_img.png',
+                            'assets/images/YT_icon_jpg.jpg',
                             width: valueOrDefault<double>(
                               () {
                                 if (MediaQuery.sizeOf(context).width <
@@ -446,8 +444,8 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                                   ),
                                   fontSize:
                                       MediaQuery.sizeOf(context).width > 900.0
-                                          ? 20.0
-                                          : 14.0,
+                                          ? 16.0
+                                          : 10.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                   fontStyle: FlutterFlowTheme.of(context)

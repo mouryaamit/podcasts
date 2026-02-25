@@ -145,7 +145,7 @@ class _ShortsBudgetUnniKrishnanWidgetState
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • February 2026 • 1.18 min',
+                              'MSME Conversation • February 2026 • 1.18 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

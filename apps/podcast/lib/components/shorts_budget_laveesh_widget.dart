@@ -144,7 +144,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • February 2026 • 2.30 min',
+                              'MSME Conversation • February 2026 • 2.30 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

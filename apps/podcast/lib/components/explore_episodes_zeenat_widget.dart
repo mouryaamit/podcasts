@@ -89,7 +89,7 @@ class _ExploreEpisodesZeenatWidgetState
                         padding: EdgeInsets.all(10.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
@@ -107,89 +107,44 @@ class _ExploreEpisodesZeenatWidgetState
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 0.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                decoration: BoxDecoration(),
-                                child: Text(
-                                  'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                        color: Color(0xFF111827),
-                                        fontSize: 16.0,
-                                        letterSpacing: 0.0,
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(),
+                              child: Text(
+                                'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.inter(
                                         fontWeight: FontWeight.w600,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
-                                        lineHeight: 1.5,
                                       ),
-                                  overflow: TextOverflow.clip,
-                                ),
+                                      color: Color(0xFF111827),
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                      lineHeight: 1.5,
+                                    ),
+                                overflow: TextOverflow.clip,
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 0.0, 0.0),
-                              child: Wrap(
-                                spacing: 0.0,
-                                runSpacing: 0.0,
-                                alignment: WrapAlignment.start,
-                                crossAxisAlignment: WrapCrossAlignment.start,
-                                direction: Axis.horizontal,
-                                runAlignment: WrapAlignment.start,
-                                verticalDirection: VerticalDirection.down,
-                                clipBehavior: Clip.none,
-                                children: [
-                                  Text(
-                                    'MSME Conversations • June 2025 • 42 min',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF6B7280),
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 0.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                decoration: BoxDecoration(),
-                                child: Text(
-                                  'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
+                            Wrap(
+                              spacing: 0.0,
+                              runSpacing: 0.0,
+                              alignment: WrapAlignment.start,
+                              crossAxisAlignment: WrapCrossAlignment.start,
+                              direction: Axis.horizontal,
+                              runAlignment: WrapAlignment.start,
+                              verticalDirection: VerticalDirection.down,
+                              clipBehavior: Clip.none,
+                              children: [
+                                Text(
+                                  'MSME Conversation • June 2025 • 42 min',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -203,8 +158,8 @@ class _ExploreEpisodesZeenatWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color: Color(0xFF374151),
-                                        fontSize: 14.0,
+                                        color: Color(0xFF6B7280),
+                                        fontSize: 13.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -213,54 +168,109 @@ class _ExploreEpisodesZeenatWidgetState
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                  overflow: TextOverflow.clip,
                                 ),
+                              ],
+                            ),
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(),
+                              child: Text(
+                                'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xFF374151),
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                overflow: TextOverflow.clip,
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 0.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                decoration: BoxDecoration(),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        ClipRRect(
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(
+                                          'assets/images/sumita_circle_img.png',
+                                          width: 32.0,
+                                          height: 32.0,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10.0, 0.0, 0.0, 0.0),
+                                        child: Text(
+                                          'Dr. Sumita Kale',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.inter(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF111827),
+                                                fontSize: 13.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 0.0, 0.0, 0.0),
+                                        child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           child: Image.asset(
-                                            'assets/images/sumita_circle_img.png',
+                                            'assets/images/narsi_circle_img.png',
                                             width: 32.0,
                                             height: 32.0,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  10.0, 0.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Dr. Sumita Kale',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight: FontWeight.w600,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: Color(0xFF111827),
-                                                  fontSize: 13.0,
-                                                  letterSpacing: 0.0,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10.0, 0.0, 0.0, 0.0),
+                                        child: Text(
+                                          'Mr. Narasimhan V',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.inter(
                                                   fontWeight: FontWeight.w600,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
@@ -268,94 +278,45 @@ class _ExploreEpisodesZeenatWidgetState
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                          ),
+                                                color: Color(0xFF111827),
+                                                fontSize: 13.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
                                         ),
-                                        Padding(
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      FFButtonWidget(
+                                        onPressed: () async {
+                                          context.pushNamed(
+                                              PodcastDetailsZeenatWidget
+                                                  .routeName);
+                                        },
+                                        text: 'Watch Now',
+                                        options: FFButtonOptions(
+                                          width: 104.0,
+                                          height: 36.0,
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 0.0, 0.0, 0.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.asset(
-                                              'assets/images/narsi_circle_img.png',
-                                              width: 32.0,
-                                              height: 32.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
+                                                  2.0, 0.0, 2.0, 0.0),
+                                          iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  10.0, 0.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Mr. Narasimhan V',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight: FontWeight.w600,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: Color(0xFF111827),
-                                                  fontSize: 13.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        FFButtonWidget(
-                                          onPressed: () async {
-                                            context.pushNamed(
-                                                PodcastDetailsZeenatWidget
-                                                    .routeName);
-                                          },
-                                          text: 'Watch Now',
-                                          options: FFButtonOptions(
-                                            width: 104.0,
-                                            height: 36.0,
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    2.0, 0.0, 2.0, 0.0),
-                                            iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: Color(0xFF30AC6B),
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .titleSmall
-                                                .override(
-                                                  font: GoogleFonts.interTight(
-                                                    fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleSmall
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleSmall
-                                                            .fontStyle,
-                                                  ),
-                                                  color: Colors.white,
-                                                  fontSize: 13.0,
-                                                  letterSpacing: 0.0,
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: Color(0xFF30AC6B),
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .titleSmall
+                                              .override(
+                                                font: GoogleFonts.interTight(
                                                   fontWeight:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -367,45 +328,56 @@ class _ExploreEpisodesZeenatWidgetState
                                                           .titleSmall
                                                           .fontStyle,
                                                 ),
-                                            elevation: 0.0,
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Builder(
-                                            builder: (context) => Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 0.0, 0.0, 0.0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor: Color(0xFF1DB954),
-                                                borderRadius: 8.0,
-                                                buttonSize: 36.0,
-                                                fillColor: Color(0x000FFFFF),
-                                                icon: Icon(
-                                                  Icons.ios_share,
-                                                  color: Color(0xFF1DB954),
-                                                  size: 22.0,
-                                                ),
-                                                onPressed: () async {
-                                                  await Share.share(
-                                                    'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
-                                                    sharePositionOrigin:
-                                                        getWidgetBoundingBox(
-                                                            context),
-                                                  );
-                                                },
+                                                color: Colors.white,
+                                                fontSize: 13.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .fontStyle,
                                               ),
+                                          elevation: 0.0,
+                                          borderRadius:
+                                              BorderRadius.circular(12.0),
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional(0.0, 0.0),
+                                        child: Builder(
+                                          builder: (context) => Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    15.0, 0.0, 0.0, 0.0),
+                                            child: FlutterFlowIconButton(
+                                              borderColor: Color(0xFF1DB954),
+                                              borderRadius: 8.0,
+                                              buttonSize: 36.0,
+                                              fillColor: Color(0x000FFFFF),
+                                              icon: Icon(
+                                                Icons.ios_share,
+                                                color: Color(0xFF1DB954),
+                                                size: 22.0,
+                                              ),
+                                              onPressed: () async {
+                                                await Share.share(
+                                                  'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
+                                                  sharePositionOrigin:
+                                                      getWidgetBoundingBox(
+                                                          context),
+                                                );
+                                              },
                                             ),
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                           ],

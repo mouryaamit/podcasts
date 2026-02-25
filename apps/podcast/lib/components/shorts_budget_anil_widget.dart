@@ -93,7 +93,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_budget_anil_img.png',
+                              'assets/images/12.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -143,7 +143,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • February 2026 • 2.31 min',
+                              'MSME Conversation • February 2026 • 2.31 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

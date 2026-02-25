@@ -145,7 +145,7 @@ class _ShortsZeenatDetails2WidgetState
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • June 2025 • 1.27 min',
+                              'MSME Conversation • June 2025 • 1.27 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

@@ -328,7 +328,16 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                         : 60.0,
                     0.0,
                   ),
-                  0.0,
+                  valueOrDefault<double>(
+                    MediaQuery.sizeOf(context).width <
+                            valueOrDefault<double>(
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 10.0
+                        : 20.0,
+                    0.0,
+                  ),
                   valueOrDefault<double>(
                     (MediaQuery.sizeOf(context).width <
                                 valueOrDefault<double>(
@@ -361,7 +370,7 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
                           child: Image.asset(
-                            'assets/images/youtube_img.png',
+                            'assets/images/YT_icon_jpg.jpg',
                             width: valueOrDefault<double>(
                               () {
                                 if (MediaQuery.sizeOf(context).width <
@@ -434,8 +443,8 @@ class _YoutubePlayerWidgetState extends State<YoutubePlayerWidget> {
                                   ),
                                   fontSize:
                                       MediaQuery.sizeOf(context).width > 900.0
-                                          ? 20.0
-                                          : 14.0,
+                                          ? 17.0
+                                          : 11.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                   fontStyle: FlutterFlowTheme.of(context)

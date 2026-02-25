@@ -143,7 +143,7 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • June 2025 • 2.13 min',
+                              'MSME Conversation • June 2025 • 2.13 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

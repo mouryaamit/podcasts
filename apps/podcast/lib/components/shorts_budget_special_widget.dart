@@ -144,7 +144,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • February 2026 • 0.46 sec',
+                              'MSME Conversation • February 2026 • 0.46 sec',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

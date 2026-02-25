@@ -120,7 +120,7 @@ class _ExploreEpisodesWidgetState extends State<ExploreEpisodesWidget> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    'MSME Conversations • June 2025 • 42 min',
+                                    'MSME Conversation • June 2025 • 42 min',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

@@ -365,7 +365,7 @@ class _ShortsBudgetKrishnanWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • February 2026 \n• 1.47 min',
+                                'MSME Conversation • February 2026 \n• 1.47 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

@@ -143,7 +143,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • November 2025 • 1.27 min',
+                              'MSME Conversation • November 2025 • 1.27 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

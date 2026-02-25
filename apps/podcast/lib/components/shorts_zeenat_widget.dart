@@ -362,7 +362,7 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • July 2025 \n• 1.08 min',
+                                'MSME Conversation • July 2025 \n• 1.08 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

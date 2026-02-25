@@ -40,12 +40,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => PodcastDetailsSumitaWidget(),
+      errorBuilder: (context, state) => PodcastWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => PodcastDetailsSumitaWidget(),
+          builder: (context, _) => PodcastWidget(),
         ),
         FFRoute(
           name: PodcastWidget.routeName,

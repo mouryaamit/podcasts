@@ -145,7 +145,7 @@ class _ExploreEpisodesSumitaWidgetState
                                 clipBehavior: Clip.none,
                                 children: [
                                   Text(
-                                    'MSME Conversations • June 2025 • 42 min',
+                                    'MSME Conversation • June 2025 • 42 min',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
