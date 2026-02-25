@@ -40,12 +40,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => PodcastWidget(),
+      errorBuilder: (context, state) => PodcastCopyWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => PodcastWidget(),
+          builder: (context, _) => PodcastCopyWidget(),
         ),
         FFRoute(
           name: PodcastWidget.routeName,
@@ -81,6 +81,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: PodcastDetailsSumitaWidget.routeName,
           path: PodcastDetailsSumitaWidget.routePath,
           builder: (context, params) => PodcastDetailsSumitaWidget(),
+        ),
+        FFRoute(
+          name: PodcastCopyWidget.routeName,
+          path: PodcastCopyWidget.routePath,
+          builder: (context, params) => PodcastCopyWidget(
+            selectedPage: params.getParam(
+              'selectedPage',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

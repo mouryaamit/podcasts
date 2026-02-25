@@ -2,7 +2,7 @@ import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_budget_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
-import '/components/featured_episode_card_widget.dart';
+import '/components/featured_episode_card_copy_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
@@ -25,6 +25,7 @@ import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'podcast_copy_widget.dart' show PodcastCopyWidget;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -36,8 +37,8 @@ class PodcastCopyModel extends FlutterFlowModel<PodcastCopyWidget> {
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
-  // Model for featuredEpisodeCard component.
-  late FeaturedEpisodeCardModel featuredEpisodeCardModel;
+  // Model for featuredEpisodeCardCopy component.
+  late FeaturedEpisodeCardCopyModel featuredEpisodeCardCopyModel;
   // Model for ExploreEpisodesBudget component.
   late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel1;
   // Model for ExploreEpisodesZeenat component.
@@ -79,8 +80,8 @@ class PodcastCopyModel extends FlutterFlowModel<PodcastCopyWidget> {
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    featuredEpisodeCardModel =
-        createModel(context, () => FeaturedEpisodeCardModel());
+    featuredEpisodeCardCopyModel =
+        createModel(context, () => FeaturedEpisodeCardCopyModel());
     exploreEpisodesBudgetModel1 =
         createModel(context, () => ExploreEpisodesBudgetModel());
     exploreEpisodesZeenatModel1 =
@@ -116,7 +117,7 @@ class PodcastCopyModel extends FlutterFlowModel<PodcastCopyWidget> {
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    featuredEpisodeCardModel.dispose();
+    featuredEpisodeCardCopyModel.dispose();
     exploreEpisodesBudgetModel1.dispose();
     exploreEpisodesZeenatModel1.dispose();
     exploreEpisodesBudgetModel2.dispose();

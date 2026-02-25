@@ -41,35 +41,90 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '[0:57-1:41]',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.poppins(
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '[0:57-1:41]',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Color(0xFF9CA3AF),
+                        fontSize: 18.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Color(0xFF9CA3AF),
-                      fontSize: 18.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
+                Expanded(
+                  child: Text(
+                    'Introduction to Sumpoorn Index',
+                    textAlign: TextAlign.start,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          font: GoogleFonts.inter(
+                            fontWeight: FontWeight.w500,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
+                          color: Colors.black,
+                          fontSize: MediaQuery.sizeOf(context).width >
+                                  valueOrDefault<double>(
+                                    kBreakpointSmall,
+                                    900.0,
+                                  )
+                              ? 21.0
+                              : 16.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                    overflow: TextOverflow.visible,
+                  ),
+                ),
+              ].divide(SizedBox(width: 49.0)),
+            ),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Flexible(
+                child: Text(
+                  '[1:54-2:00]',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Color(0xFF9CA3AF),
+                        fontSize: 18.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
               ),
               Expanded(
                 child: Text(
-                  'Introduction to Sumpoorn Index',
+                  'Government\'s Vision for Small Businesses',
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         font: GoogleFonts.inter(
@@ -93,17 +148,14 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                   overflow: TextOverflow.visible,
                 ),
               ),
-            ].divide(SizedBox(width: 49.0)),
+            ].divide(SizedBox(width: 43.0)),
           ),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Flexible(
-              child: Text(
-                '[1:54-2:00]',
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[3:24-3:51]',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       font: GoogleFonts.poppins(
                         fontWeight: FontWeight.w600,
@@ -118,202 +170,10 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
               ),
-            ),
-            Expanded(
-              child: Text(
-                'Government\'s Vision for Small Businesses',
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                overflow: TextOverflow.visible,
-              ),
-            ),
-          ].divide(SizedBox(width: 43.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[3:24-3:51]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Dysfunctional Local Governments',
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                overflow: TextOverflow.visible,
-              ),
-            ),
-          ].divide(SizedBox(width: 45.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[4:45-5:26]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Empowering Local Government Managers',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                overflow: TextOverflow.visible,
-              ),
-            ),
-          ].divide(SizedBox(width: 39.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[5:42-7:42]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'EU-FTA Deal and Export Opportunities',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                overflow: TextOverflow.visible,
-              ),
-            ),
-          ].divide(SizedBox(width: 42.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[8:11-9:10]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+              Expanded(
                 child: Text(
-                  'India\'s Manufacturing Landscape for Export',
+                  'Dysfunctional Local Governments',
+                  textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         font: GoogleFonts.inter(
                           fontWeight: FontWeight.w500,
@@ -336,606 +196,753 @@ class _BudgetTimestampWidgetState extends State<BudgetTimestampWidget> {
                   overflow: TextOverflow.visible,
                 ),
               ),
-            ),
-          ].divide(SizedBox(width: 51.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[10:09-11:26]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Budget\'s Focus Areas',
+            ].divide(SizedBox(width: 45.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[4:45-5:26]',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
               ),
-            ),
-          ].divide(SizedBox(width: 31.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[11:32-12:29]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Text(
-              'Mechanism',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Colors.black,
-                    fontSize: MediaQuery.sizeOf(context).width >
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              900.0,
-                            )
-                        ? 21.0
-                        : 16.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-          ].divide(SizedBox(width: 35.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[13:36-14:32]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Key Beneficiary Industries from FTAs',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              Expanded(
+                child: Text(
+                  'Empowering Local Government Managers',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                  overflow: TextOverflow.visible,
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 29.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[15:04-18:03]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 39.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[5:42-7:42]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Budget Measures for TReDS',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'EU-FTA Deal and Export Opportunities',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                  overflow: TextOverflow.visible,
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 28.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[19:55-21:22]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 42.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[8:11-9:10]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+                  child: Text(
+                    'India\'s Manufacturing Landscape for Export',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          font: GoogleFonts.inter(
+                            fontWeight: FontWeight.w500,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
+                          color: Colors.black,
+                          fontSize: MediaQuery.sizeOf(context).width >
+                                  valueOrDefault<double>(
+                                    kBreakpointSmall,
+                                    900.0,
+                                  )
+                              ? 21.0
+                              : 16.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                    overflow: TextOverflow.visible,
                   ),
-            ),
-            Expanded(
-              child: Text(
-                'Champion MSMEs and SME Growth Fund',
+                ),
+              ),
+            ].divide(SizedBox(width: 51.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[10:09-11:26]',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: FontWeight.w500,
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-              ),
-            ),
-          ].divide(SizedBox(width: 30.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[22:41-26:02]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Expediting Import/Export Clearances',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Budget\'s Focus Areas',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 27.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[27:24-29:50]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 31.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[11:32-12:29]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Focus on 200 Legacy Clusters',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Mechanism',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 24.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[31:01-32:18]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 35.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[13:36-14:32]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Capacity of State at Local Level',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Key Beneficiary Industries from FTAs',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 36.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[32:27-33:31]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 29.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[15:04-18:03]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Ground Rules for MSME Growth Fund',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Budget Measures for TReDS',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 30.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[33:48-34:59]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 28.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[19:55-21:22]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Reducing Compliance Burden',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Champion MSMEs and SME Growth Fund',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 20.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[35:38-38:48]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 30.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[22:41-26:02]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Year Ahead Outlook and Risks',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Expediting Import/Export Clearances',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 20.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[39:00-40:33]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 27.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[27:24-29:50]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Long-Term Constraints for MSME Growth',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Focus on 200 Legacy Clusters',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
+                ),
               ),
-            ),
-          ].divide(SizedBox(width: 21.0)),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '[41:21-43:36]',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.poppins(
+            ].divide(SizedBox(width: 24.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[31:01-32:18]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 18.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w600,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                  ),
-            ),
-            Expanded(
-              child: Text(
-                'Role of MSMEs and Government in Opportunities',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+              ),
+              Expanded(
+                child: Text(
+                  'Capacity of State at Local Level',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      color: Colors.black,
-                      fontSize: MediaQuery.sizeOf(context).width >
-                              valueOrDefault<double>(
-                                kBreakpointSmall,
-                                900.0,
-                              )
-                          ? 21.0
-                          : 16.0,
+                ),
+              ),
+            ].divide(SizedBox(width: 36.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[32:27-33:31]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
                       letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
               ),
-            ),
-          ].divide(SizedBox(width: 29.0)),
-        ),
-      ].divide(SizedBox(height: 10.0)),
+              Expanded(
+                child: Text(
+                  'Ground Rules for MSME Growth Fund',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
+              ),
+            ].divide(SizedBox(width: 30.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[33:48-34:59]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+              ),
+              Expanded(
+                child: Text(
+                  'Reducing Compliance Burden',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
+              ),
+            ].divide(SizedBox(width: 20.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[35:38-38:48]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+              ),
+              Expanded(
+                child: Text(
+                  'Year Ahead Outlook and Risks',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
+              ),
+            ].divide(SizedBox(width: 20.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[39:00-40:33]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+              ),
+              Expanded(
+                child: Text(
+                  'Long-Term Constraints for MSME Growth',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
+              ),
+            ].divide(SizedBox(width: 21.0)),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[41:21-43:36]',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: Color(0xFF9CA3AF),
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+              ),
+              Expanded(
+                child: Text(
+                  'Role of MSMEs and Government in Opportunities',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: Colors.black,
+                        fontSize: MediaQuery.sizeOf(context).width >
+                                valueOrDefault<double>(
+                                  kBreakpointSmall,
+                                  900.0,
+                                )
+                            ? 21.0
+                            : 16.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ),
+              ),
+            ].divide(SizedBox(width: 29.0)),
+          ),
+        ].divide(SizedBox(height: 10.0)),
+      ),
     );
   }
 }

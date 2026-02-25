@@ -7,3 +7,4 @@ export '/pages/podcast_details_zeenat/podcast_details_zeenat_widget.dart'
     show PodcastDetailsZeenatWidget;
 export '/pages/podcast_details_sumita/podcast_details_sumita_widget.dart'
     show PodcastDetailsSumitaWidget;
+export '/pages/podcast_copy/podcast_copy_widget.dart' show PodcastCopyWidget;

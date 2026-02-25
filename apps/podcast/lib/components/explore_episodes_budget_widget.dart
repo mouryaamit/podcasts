@@ -188,7 +188,7 @@ class _ExploreEpisodesBudgetWidgetState
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: BoxDecoration(),
                                 child: Text(
-                                  'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead...',
+                                  'India’s Union Budget 2026 arrives as MSMEs show cautious recovery...',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(

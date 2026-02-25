@@ -114,7 +114,7 @@ class _ShortsZeenatDetails3WidgetState
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'What Data Reveals About MSME Resilience?',
+                                'What Data Reveals about MSME Resilience?',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

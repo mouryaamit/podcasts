@@ -114,7 +114,7 @@ class _ShortsZeenatDetails2WidgetState
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
+                                'Digital India’s Real Impact: How Tier 3 & 4 MSMEs are Unlocking Growth',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

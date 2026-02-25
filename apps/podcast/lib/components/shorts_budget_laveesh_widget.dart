@@ -94,7 +94,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_budget_laveesh_img.png',
+                              'assets/images/14.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -113,7 +113,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'India’s ‘Plumbing’ Needs Fixing for SME Growth',
+                                'India’s ‘Plumbing’ Needs Fixing for MSME Growth',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

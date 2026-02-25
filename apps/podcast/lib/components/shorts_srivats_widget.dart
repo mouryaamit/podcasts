@@ -93,7 +93,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_srivats_image.png',
+                              'assets/images/Sumpoorn_Highlights_Thumbnail_(10).png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -112,7 +112,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'Is There A Magic Bullet to Aid the Auto Sector?',
+                                'Is there a Magic Bullet to Aid the Auto Sector?',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

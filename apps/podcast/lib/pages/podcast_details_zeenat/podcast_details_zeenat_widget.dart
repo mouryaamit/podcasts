@@ -520,7 +520,7 @@ class _PodcastDetailsZeenatWidgetState
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
-                                                  0.75,
+                                                  0.85,
                                           decoration: BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -567,214 +567,331 @@ class _PodcastDetailsZeenatWidgetState
                                                               if (responsiveVisibility(
                                                                 context:
                                                                     context,
+                                                                tablet: false,
+                                                                tabletLandscape:
+                                                                    false,
                                                                 desktop: false,
                                                               ))
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          0.0,
-                                                                          20.0,
-                                                                          20.0,
-                                                                          20.0),
-                                                                      child:
-                                                                          SingleChildScrollView(
-                                                                        scrollDirection:
-                                                                            Axis.horizontal,
+                                                                Container(
+                                                                  width: MediaQuery.sizeOf(
+                                                                              context)
+                                                                          .width *
+                                                                      0.85,
+                                                                  decoration:
+                                                                      BoxDecoration(),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            20.0,
+                                                                            20.0,
+                                                                            20.0),
                                                                         child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children:
-                                                                              [
-                                                                            FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                _model.selectedIndex = 1;
-                                                                                safeSetState(() {});
-                                                                              },
-                                                                              text: 'Highlights',
-                                                                              icon: Icon(
-                                                                                Icons.videocam_outlined,
-                                                                                size: 22.0,
-                                                                              ),
-                                                                              options: FFButtonOptions(
-                                                                                width: 148.0,
-                                                                                height: 44.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                color: _model.selectedIndex == 1 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      font: GoogleFonts.inter(
+                                                                            SingleChildScrollView(
+                                                                          scrollDirection:
+                                                                              Axis.horizontal,
+                                                                          child:
+                                                                              Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.start,
+                                                                            children:
+                                                                                [
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 1;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Highlights',
+                                                                                icon: Icon(
+                                                                                  Icons.videocam_outlined,
+                                                                                  size: 22.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 148.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 1 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 1 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                         fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                       ),
-                                                                                      color: _model.selectedIndex == 1 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                      fontSize: 15.0,
-                                                                                      letterSpacing: 0.0,
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                elevation: 0.0,
-                                                                                borderSide: BorderSide(
-                                                                                  color: Color(0xFFDEDEDE),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
-                                                                                borderRadius: BorderRadius.circular(10.0),
                                                                               ),
-                                                                            ),
-                                                                            FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                _model.selectedIndex = 2;
-                                                                                safeSetState(() {});
-                                                                              },
-                                                                              text: 'Timestamp',
-                                                                              icon: FaIcon(
-                                                                                FontAwesomeIcons.clock,
-                                                                                size: 16.0,
-                                                                              ),
-                                                                              options: FFButtonOptions(
-                                                                                width: 148.0,
-                                                                                height: 44.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                color: _model.selectedIndex == 2 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      font: GoogleFonts.inter(
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 2;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Timestamp',
+                                                                                icon: FaIcon(
+                                                                                  FontAwesomeIcons.clock,
+                                                                                  size: 16.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 148.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 2 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 2 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                         fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                       ),
-                                                                                      color: _model.selectedIndex == 2 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                      fontSize: 15.0,
-                                                                                      letterSpacing: 0.0,
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                elevation: 0.0,
-                                                                                borderSide: BorderSide(
-                                                                                  color: Color(0xFFDEDEDE),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
-                                                                                borderRadius: BorderRadius.circular(10.0),
                                                                               ),
-                                                                            ),
-                                                                            FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                _model.selectedIndex = 3;
-                                                                                safeSetState(() {});
-                                                                              },
-                                                                              text: 'AI Summary',
-                                                                              icon: Icon(
-                                                                                Icons.celebration_rounded,
-                                                                                size: 22.0,
-                                                                              ),
-                                                                              options: FFButtonOptions(
-                                                                                width: 148.0,
-                                                                                height: 44.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                color: _model.selectedIndex == 3 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      font: GoogleFonts.inter(
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 3;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'AI Summary',
+                                                                                icon: Icon(
+                                                                                  Icons.celebration_rounded,
+                                                                                  size: 22.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 148.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 3 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 3 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                         fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                       ),
-                                                                                      color: _model.selectedIndex == 3 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                      fontSize: 15.0,
-                                                                                      letterSpacing: 0.0,
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                elevation: 0.0,
-                                                                                borderSide: BorderSide(
-                                                                                  color: Color(0xFFDEDEDE),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
-                                                                                borderRadius: BorderRadius.circular(10.0),
                                                                               ),
-                                                                            ),
-                                                                            FFButtonWidget(
-                                                                              onPressed: () async {
-                                                                                _model.selectedIndex = 4;
-                                                                                safeSetState(() {});
-                                                                              },
-                                                                              text: 'Conversation',
-                                                                              icon: FaIcon(
-                                                                                FontAwesomeIcons.pen,
-                                                                                size: 16.0,
-                                                                              ),
-                                                                              options: FFButtonOptions(
-                                                                                width: 148.0,
-                                                                                height: 44.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                color: _model.selectedIndex == 4 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                      font: GoogleFonts.inter(
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 4;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Conversation',
+                                                                                icon: FaIcon(
+                                                                                  FontAwesomeIcons.pen,
+                                                                                  size: 16.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 148.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 4 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 4 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
                                                                                         fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                       ),
-                                                                                      color: _model.selectedIndex == 4 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                      fontSize: 15.0,
-                                                                                      letterSpacing: 0.0,
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                elevation: 0.0,
-                                                                                borderSide: BorderSide(
-                                                                                  color: Color(0xFFDEDEDE),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
-                                                                                borderRadius: BorderRadius.circular(10.0),
                                                                               ),
-                                                                            ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                            ].divide(SizedBox(width: 20.0)),
+                                                                          ),
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                    Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          -1.0,
-                                                                          -1.0),
-                                                                      child:
-                                                                          Card(
-                                                                        clipBehavior:
-                                                                            Clip.antiAliasWithSaveLayer,
-                                                                        color: Color(
-                                                                            0x00FFFFFF),
-                                                                        elevation:
-                                                                            0.0,
-                                                                        shape:
-                                                                            RoundedRectangleBorder(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
-                                                                        ),
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            -1.0,
+                                                                            -1.0),
                                                                         child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            Card(
+                                                                          clipBehavior:
+                                                                              Clip.antiAliasWithSaveLayer,
+                                                                          color:
+                                                                              Color(0x00FFFFFF),
+                                                                          elevation:
                                                                               0.0,
-                                                                              10.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                          shape:
+                                                                              RoundedRectangleBorder(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(8.0),
+                                                                          ),
                                                                           child:
-                                                                              SingleChildScrollView(
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                10.0,
+                                                                                0.0,
+                                                                                0.0),
                                                                             child:
-                                                                                Column(
-                                                                              mainAxisSize: MainAxisSize.min,
-                                                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                                                              children: [
-                                                                                Stack(
-                                                                                  children: [
-                                                                                    Builder(
-                                                                                      builder: (context) {
-                                                                                        if (_model.selectedIndex == 1) {
-                                                                                          return Container(
-                                                                                            width: 945.74,
-                                                                                            decoration: BoxDecoration(),
-                                                                                            child: Column(
+                                                                                SingleChildScrollView(
+                                                                              child: Column(
+                                                                                mainAxisSize: MainAxisSize.min,
+                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                children: [
+                                                                                  Stack(
+                                                                                    children: [
+                                                                                      Builder(
+                                                                                        builder: (context) {
+                                                                                          if (_model.selectedIndex == 1) {
+                                                                                            return Container(
+                                                                                              width: 945.74,
+                                                                                              decoration: BoxDecoration(),
+                                                                                              child: Column(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                children: [
+                                                                                                  Row(
+                                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                    children: [
+                                                                                                      Text(
+                                                                                                        'Highlights',
+                                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                              font: GoogleFonts.mulish(
+                                                                                                                fontWeight: FontWeight.w900,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                              ),
+                                                                                                              color: Color(0xFF404040),
+                                                                                                              fontSize: 24.0,
+                                                                                                              letterSpacing: 0.0,
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                      ),
+                                                                                                    ],
+                                                                                                  ),
+                                                                                                  Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                                    child: SingleChildScrollView(
+                                                                                                      scrollDirection: Axis.horizontal,
+                                                                                                      child: Row(
+                                                                                                        mainAxisSize: MainAxisSize.max,
+                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                        children: [
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatModel1,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatWidget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatDetails1Model1,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatDetails1Widget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatDetails2Model1,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatDetails2Widget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatDetails3Model1,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatDetails3Widget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                        ].divide(SizedBox(width: 15.0)),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                ],
+                                                                                              ),
+                                                                                            );
+                                                                                          } else if (_model.selectedIndex == 2) {
+                                                                                            return Container(
+                                                                                              decoration: BoxDecoration(),
+                                                                                              child: Column(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                children: [
+                                                                                                  Text(
+                                                                                                    'Timestamp',
+                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                          font: GoogleFonts.inter(
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                          color: Color(0xFF404040),
+                                                                                                          fontSize: 24.0,
+                                                                                                          letterSpacing: 0.0,
+                                                                                                          fontWeight: FontWeight.w900,
+                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                        ),
+                                                                                                  ),
+                                                                                                  wrapWithModel(
+                                                                                                    model: _model.zeenatTimestampModel1,
+                                                                                                    updateCallback: () => safeSetState(() {}),
+                                                                                                    child: ZeenatTimestampWidget(),
+                                                                                                  ),
+                                                                                                ],
+                                                                                              ),
+                                                                                            );
+                                                                                          } else if (_model.selectedIndex == 3) {
+                                                                                            return Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               children: [
                                                                                                 Row(
@@ -782,7 +899,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                   children: [
                                                                                                     Text(
-                                                                                                      'Highlights',
+                                                                                                      'AI Summary',
                                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                             font: GoogleFonts.mulish(
                                                                                                               fontWeight: FontWeight.w900,
@@ -797,17 +914,334 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                     ),
                                                                                                   ],
                                                                                                 ),
-                                                                                                Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                  child: SingleChildScrollView(
-                                                                                                    scrollDirection: Axis.horizontal,
+                                                                                                wrapWithModel(
+                                                                                                  model: _model.zeenatAISummaryModel1,
+                                                                                                  updateCallback: () => safeSetState(() {}),
+                                                                                                  child: ZeenatAISummaryWidget(),
+                                                                                                ),
+                                                                                              ],
+                                                                                            );
+                                                                                          } else {
+                                                                                            return Column(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              children: [
+                                                                                                Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                  children: [
+                                                                                                    Text(
+                                                                                                      'Conversation',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                            font: GoogleFonts.mulish(
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                            color: Color(0xFF404040),
+                                                                                                            fontSize: 24.0,
+                                                                                                            letterSpacing: 0.0,
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                    ),
+                                                                                                  ],
+                                                                                                ),
+                                                                                                wrapWithModel(
+                                                                                                  model: _model.conversationZeenatModel1,
+                                                                                                  updateCallback: () => safeSetState(() {}),
+                                                                                                  child: ConversationZeenatWidget(),
+                                                                                                ),
+                                                                                              ],
+                                                                                            );
+                                                                                          }
+                                                                                        },
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              if (responsiveVisibility(
+                                                                context:
+                                                                    context,
+                                                                phone: false,
+                                                              ))
+                                                                Align(
+                                                                  alignment:
+                                                                      AlignmentDirectional(
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child:
+                                                                      Container(
+                                                                    width: MediaQuery.sizeOf(context)
+                                                                            .width *
+                                                                        0.75,
+                                                                    decoration:
+                                                                        BoxDecoration(),
+                                                                    child: Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              80.0,
+                                                                              50.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.min,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceEvenly,
+                                                                            crossAxisAlignment:
+                                                                                CrossAxisAlignment.start,
+                                                                            children:
+                                                                                [
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 1;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Highlights',
+                                                                                icon: Icon(
+                                                                                  Icons.videocam_outlined,
+                                                                                  size: 22.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 132.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 1 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 1 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
+                                                                                        fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                        fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                      ),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
+                                                                                ),
+                                                                              ),
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 2;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Timestamp',
+                                                                                icon: FaIcon(
+                                                                                  FontAwesomeIcons.clock,
+                                                                                  size: 16.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 140.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 2 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 2 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
+                                                                                        fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                        fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                      ),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
+                                                                                ),
+                                                                              ),
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 3;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'AI Summary',
+                                                                                icon: Icon(
+                                                                                  Icons.celebration_rounded,
+                                                                                  size: 22.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 146.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 3 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 3 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
+                                                                                        fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                        fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                      ),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
+                                                                                ),
+                                                                              ),
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  _model.selectedIndex = 4;
+                                                                                  safeSetState(() {});
+                                                                                },
+                                                                                text: 'Conversation',
+                                                                                icon: FaIcon(
+                                                                                  FontAwesomeIcons.pen,
+                                                                                  size: 16.0,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 156.0,
+                                                                                  height: 44.0,
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: _model.selectedIndex == 4 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        font: GoogleFonts.inter(
+                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                        ),
+                                                                                        color: _model.selectedIndex == 4 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
+                                                                                        fontSize: 15.0,
+                                                                                        letterSpacing: 0.0,
+                                                                                        fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                        fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                      ),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFDEDEDE),
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(10.0),
+                                                                                ),
+                                                                              ),
+                                                                            ].divide(SizedBox(height: 25.0)),
+                                                                          ),
+                                                                        ),
+                                                                        Expanded(
+                                                                          child:
+                                                                              Card(
+                                                                            clipBehavior:
+                                                                                Clip.antiAliasWithSaveLayer,
+                                                                            color:
+                                                                                Color(0x00FFFFFF),
+                                                                            elevation:
+                                                                                0.0,
+                                                                            shape:
+                                                                                RoundedRectangleBorder(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                            ),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(40.0, 10.0, 0.0, 0.0),
+                                                                              child: Column(
+                                                                                mainAxisSize: MainAxisSize.min,
+                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                children: [
+                                                                                  Stack(
+                                                                                    children: [
+                                                                                      Builder(
+                                                                                        builder: (context) {
+                                                                                          if (_model.selectedIndex == 1) {
+                                                                                            return Container(
+                                                                                              decoration: BoxDecoration(),
+                                                                                              child: Column(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                children: [
+                                                                                                  Row(
+                                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                    children: [
+                                                                                                      Text(
+                                                                                                        'Highlights',
+                                                                                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                              font: GoogleFonts.mulish(
+                                                                                                                fontWeight: FontWeight.w900,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                              ),
+                                                                                                              color: Color(0xFF404040),
+                                                                                                              fontSize: 32.0,
+                                                                                                              letterSpacing: 0.0,
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                      ),
+                                                                                                      Builder(
+                                                                                                        builder: (context) => FFButtonWidget(
+                                                                                                          onPressed: () async {
+                                                                                                            await Share.share(
+                                                                                                              'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                              sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                            );
+                                                                                                          },
+                                                                                                          text: 'Share',
+                                                                                                          icon: Icon(
+                                                                                                            Icons.ios_share_outlined,
+                                                                                                            size: 18.0,
+                                                                                                          ),
+                                                                                                          options: FFButtonOptions(
+                                                                                                            height: 40.0,
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                            color: Color(0x00FFFFFF),
+                                                                                                            textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                                  font: GoogleFonts.interTight(
+                                                                                                                    fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                    fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                  ),
+                                                                                                                  color: Color(0xFF4A4A4A),
+                                                                                                                  fontSize: 15.0,
+                                                                                                                  letterSpacing: 0.0,
+                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                ),
+                                                                                                            elevation: 0.0,
+                                                                                                            borderSide: BorderSide(
+                                                                                                              color: Color(0xFFDEDEDE),
+                                                                                                            ),
+                                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ],
+                                                                                                  ),
+                                                                                                  Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
-                                                                                                      mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatModel1,
+                                                                                                            model: _model.shortsZeenatModel2,
                                                                                                             updateCallback: () => safeSetState(() {}),
                                                                                                             child: ShortsZeenatWidget(
                                                                                                               share: () async {},
@@ -817,7 +1251,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                         ),
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatDetails1Model1,
+                                                                                                            model: _model.shortsZeenatDetails1Model2,
                                                                                                             updateCallback: () => safeSetState(() {}),
                                                                                                             child: ShortsZeenatDetails1Widget(
                                                                                                               share: () async {},
@@ -825,678 +1259,267 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
-                                                                                                        Container(
-                                                                                                          child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatDetails2Model1,
-                                                                                                            updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsZeenatDetails2Widget(
-                                                                                                              share: () async {},
-                                                                                                              watchNow: () async {},
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                        Container(
-                                                                                                          child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatDetails3Model1,
-                                                                                                            updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsZeenatDetails3Widget(
-                                                                                                              share: () async {},
-                                                                                                              watchNow: () async {},
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ].divide(SizedBox(width: 15.0)),
+                                                                                                      ].divide(SizedBox(width: 25.0)),
                                                                                                     ),
                                                                                                   ),
-                                                                                                ),
-                                                                                              ],
-                                                                                            ),
-                                                                                          );
-                                                                                        } else if (_model.selectedIndex == 2) {
-                                                                                          return Container(
-                                                                                            decoration: BoxDecoration(),
-                                                                                            child: wrapWithModel(
-                                                                                              model: _model.zeenatTimestampModel1,
-                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                              child: ZeenatTimestampWidget(),
-                                                                                            ),
-                                                                                          );
-                                                                                        } else if (_model.selectedIndex == 3) {
-                                                                                          return Column(
-                                                                                            mainAxisSize: MainAxisSize.max,
-                                                                                            children: [
-                                                                                              Row(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                children: [
-                                                                                                  Text(
-                                                                                                    'AI Summary',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.mulish(
-                                                                                                            fontWeight: FontWeight.w900,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                          ),
-                                                                                                          color: Color(0xFF404040),
-                                                                                                          fontSize: 24.0,
-                                                                                                          letterSpacing: 0.0,
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                  ),
-                                                                                                ],
-                                                                                              ),
-                                                                                              wrapWithModel(
-                                                                                                model: _model.zeenatAISummaryModel1,
-                                                                                                updateCallback: () => safeSetState(() {}),
-                                                                                                child: ZeenatAISummaryWidget(),
-                                                                                              ),
-                                                                                            ],
-                                                                                          );
-                                                                                        } else {
-                                                                                          return Column(
-                                                                                            mainAxisSize: MainAxisSize.max,
-                                                                                            children: [
-                                                                                              Row(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                children: [
-                                                                                                  Text(
-                                                                                                    'Conversation',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.mulish(
-                                                                                                            fontWeight: FontWeight.w900,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                          ),
-                                                                                                          color: Color(0xFF404040),
-                                                                                                          fontSize: 24.0,
-                                                                                                          letterSpacing: 0.0,
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                  ),
-                                                                                                ],
-                                                                                              ),
-                                                                                              wrapWithModel(
-                                                                                                model: _model.conversationZeenatModel1,
-                                                                                                updateCallback: () => safeSetState(() {}),
-                                                                                                child: ConversationZeenatWidget(),
-                                                                                              ),
-                                                                                            ],
-                                                                                          );
-                                                                                        }
-                                                                                      },
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                              ],
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              if (responsiveVisibility(
-                                                                context:
-                                                                    context,
-                                                                phone: false,
-                                                              ))
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          0.0,
-                                                                          80.0,
-                                                                          50.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Column(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.min,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.spaceEvenly,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.start,
-                                                                        children:
-                                                                            [
-                                                                          FFButtonWidget(
-                                                                            onPressed:
-                                                                                () async {
-                                                                              _model.selectedIndex = 1;
-                                                                              safeSetState(() {});
-                                                                            },
-                                                                            text:
-                                                                                'Highlights',
-                                                                            icon:
-                                                                                Icon(
-                                                                              Icons.videocam_outlined,
-                                                                              size: 22.0,
-                                                                            ),
-                                                                            options:
-                                                                                FFButtonOptions(
-                                                                              width: 132.0,
-                                                                              height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: _model.selectedIndex == 1 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    font: GoogleFonts.inter(
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                    color: _model.selectedIndex == 1 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                    fontSize: 15.0,
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                  ),
-                                                                              elevation: 0.0,
-                                                                              borderSide: BorderSide(
-                                                                                color: Color(0xFFDEDEDE),
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(10.0),
-                                                                            ),
-                                                                          ),
-                                                                          FFButtonWidget(
-                                                                            onPressed:
-                                                                                () async {
-                                                                              _model.selectedIndex = 2;
-                                                                              safeSetState(() {});
-                                                                            },
-                                                                            text:
-                                                                                'Timestamp',
-                                                                            icon:
-                                                                                FaIcon(
-                                                                              FontAwesomeIcons.clock,
-                                                                              size: 16.0,
-                                                                            ),
-                                                                            options:
-                                                                                FFButtonOptions(
-                                                                              width: 140.0,
-                                                                              height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: _model.selectedIndex == 2 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    font: GoogleFonts.inter(
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                    color: _model.selectedIndex == 2 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                    fontSize: 15.0,
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                  ),
-                                                                              elevation: 0.0,
-                                                                              borderSide: BorderSide(
-                                                                                color: Color(0xFFDEDEDE),
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(10.0),
-                                                                            ),
-                                                                          ),
-                                                                          FFButtonWidget(
-                                                                            onPressed:
-                                                                                () async {
-                                                                              _model.selectedIndex = 3;
-                                                                              safeSetState(() {});
-                                                                            },
-                                                                            text:
-                                                                                'AI Summary',
-                                                                            icon:
-                                                                                Icon(
-                                                                              Icons.celebration_rounded,
-                                                                              size: 22.0,
-                                                                            ),
-                                                                            options:
-                                                                                FFButtonOptions(
-                                                                              width: 146.0,
-                                                                              height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: _model.selectedIndex == 3 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    font: GoogleFonts.inter(
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                    color: _model.selectedIndex == 3 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                    fontSize: 15.0,
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                  ),
-                                                                              elevation: 0.0,
-                                                                              borderSide: BorderSide(
-                                                                                color: Color(0xFFDEDEDE),
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(10.0),
-                                                                            ),
-                                                                          ),
-                                                                          FFButtonWidget(
-                                                                            onPressed:
-                                                                                () async {
-                                                                              _model.selectedIndex = 4;
-                                                                              safeSetState(() {});
-                                                                            },
-                                                                            text:
-                                                                                'Conversation',
-                                                                            icon:
-                                                                                FaIcon(
-                                                                              FontAwesomeIcons.pen,
-                                                                              size: 16.0,
-                                                                            ),
-                                                                            options:
-                                                                                FFButtonOptions(
-                                                                              width: 156.0,
-                                                                              height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: _model.selectedIndex == 4 ? Color(0xFF30AC6B) : Color(0x00FFFFFF),
-                                                                              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    font: GoogleFonts.inter(
-                                                                                      fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                      fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                    ),
-                                                                                    color: _model.selectedIndex == 4 ? FlutterFlowTheme.of(context).primaryBackground : Color(0xFF4A4A4A),
-                                                                                    fontSize: 15.0,
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                  ),
-                                                                              elevation: 0.0,
-                                                                              borderSide: BorderSide(
-                                                                                color: Color(0xFFDEDEDE),
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(10.0),
-                                                                            ),
-                                                                          ),
-                                                                        ].divide(SizedBox(height: 25.0)),
-                                                                      ),
-                                                                    ),
-                                                                    Expanded(
-                                                                      child:
-                                                                          Card(
-                                                                        clipBehavior:
-                                                                            Clip.antiAliasWithSaveLayer,
-                                                                        color: Color(
-                                                                            0x00FFFFFF),
-                                                                        elevation:
-                                                                            0.0,
-                                                                        shape:
-                                                                            RoundedRectangleBorder(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
-                                                                        ),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              40.0,
-                                                                              10.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.min,
-                                                                            crossAxisAlignment:
-                                                                                CrossAxisAlignment.start,
-                                                                            children: [
-                                                                              Stack(
-                                                                                children: [
-                                                                                  Builder(
-                                                                                    builder: (context) {
-                                                                                      if (_model.selectedIndex == 1) {
-                                                                                        return Container(
-                                                                                          decoration: BoxDecoration(),
-                                                                                          child: Column(
-                                                                                            mainAxisSize: MainAxisSize.max,
-                                                                                            children: [
-                                                                                              Row(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                children: [
-                                                                                                  Text(
-                                                                                                    'Highlights',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.mulish(
-                                                                                                            fontWeight: FontWeight.w900,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                          ),
-                                                                                                          color: Color(0xFF404040),
-                                                                                                          fontSize: 32.0,
-                                                                                                          letterSpacing: 0.0,
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                  ),
-                                                                                                  Builder(
-                                                                                                    builder: (context) => FFButtonWidget(
-                                                                                                      onPressed: () async {
-                                                                                                        await Share.share(
-                                                                                                          'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                          sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                        );
-                                                                                                      },
-                                                                                                      text: 'Share',
-                                                                                                      icon: Icon(
-                                                                                                        Icons.ios_share_outlined,
-                                                                                                        size: 18.0,
-                                                                                                      ),
-                                                                                                      options: FFButtonOptions(
-                                                                                                        height: 40.0,
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                        color: Color(0x00FFFFFF),
-                                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                              font: GoogleFonts.interTight(
-                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                  Align(
+                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                    child: Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                                                                                                      child: Row(
+                                                                                                        mainAxisSize: MainAxisSize.max,
+                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                        children: [
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatDetails2Model2,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatDetails2Widget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
                                                                                                               ),
-                                                                                                              color: Color(0xFF4A4A4A),
-                                                                                                              fontSize: 15.0,
-                                                                                                              letterSpacing: 0.0,
-                                                                                                              fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                              fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                                                             ),
-                                                                                                        elevation: 0.0,
-                                                                                                        borderSide: BorderSide(
-                                                                                                          color: Color(0xFFDEDEDE),
-                                                                                                        ),
-                                                                                                        borderRadius: BorderRadius.circular(10.0),
+                                                                                                          ),
+                                                                                                          Container(
+                                                                                                            child: wrapWithModel(
+                                                                                                              model: _model.shortsZeenatDetails3Model2,
+                                                                                                              updateCallback: () => safeSetState(() {}),
+                                                                                                              child: ShortsZeenatDetails3Widget(
+                                                                                                                share: () async {},
+                                                                                                                watchNow: () async {},
+                                                                                                              ),
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                        ].divide(SizedBox(width: 25.0)),
                                                                                                       ),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ],
                                                                                               ),
-                                                                                              Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                child: Row(
+                                                                                            );
+                                                                                          } else if (_model.selectedIndex == 2) {
+                                                                                            return Column(
+                                                                                              mainAxisSize: MainAxisSize.min,
+                                                                                              children: [
+                                                                                                Row(
                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                   children: [
-                                                                                                    Container(
-                                                                                                      child: wrapWithModel(
-                                                                                                        model: _model.shortsZeenatModel2,
-                                                                                                        updateCallback: () => safeSetState(() {}),
-                                                                                                        child: ShortsZeenatWidget(
-                                                                                                          share: () async {},
-                                                                                                          watchNow: () async {},
+                                                                                                    Text(
+                                                                                                      'Timestamp',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                            font: GoogleFonts.inter(
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                            color: Color(0xFF404040),
+                                                                                                            fontSize: 32.0,
+                                                                                                            letterSpacing: 0.0,
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                    ),
+                                                                                                    Builder(
+                                                                                                      builder: (context) => FFButtonWidget(
+                                                                                                        onPressed: () async {
+                                                                                                          await Share.share(
+                                                                                                            'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                            sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                          );
+                                                                                                        },
+                                                                                                        text: 'Share',
+                                                                                                        icon: Icon(
+                                                                                                          Icons.ios_share_outlined,
+                                                                                                          size: 18.0,
+                                                                                                        ),
+                                                                                                        options: FFButtonOptions(
+                                                                                                          height: 40.0,
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                          color: Color(0x000FFFFF),
+                                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                                font: GoogleFonts.interTight(
+                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                ),
+                                                                                                                color: Color(0xFF4A4A4A),
+                                                                                                                fontSize: 15.0,
+                                                                                                                letterSpacing: 0.0,
+                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                              ),
+                                                                                                          elevation: 0.0,
+                                                                                                          borderSide: BorderSide(
+                                                                                                            color: Color(0xFFDEDEDE),
+                                                                                                          ),
+                                                                                                          borderRadius: BorderRadius.circular(10.0),
                                                                                                         ),
                                                                                                       ),
                                                                                                     ),
-                                                                                                    Container(
-                                                                                                      child: wrapWithModel(
-                                                                                                        model: _model.shortsZeenatDetails1Model2,
-                                                                                                        updateCallback: () => safeSetState(() {}),
-                                                                                                        child: ShortsZeenatDetails1Widget(
-                                                                                                          share: () async {},
-                                                                                                          watchNow: () async {},
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ].divide(SizedBox(width: 25.0)),
+                                                                                                  ],
                                                                                                 ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
-                                                                                                child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                                                                                                  child: Row(
-                                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                    children: [
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatDetails2Model2,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatDetails2Widget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatDetails3Model2,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatDetails3Widget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ].divide(SizedBox(width: 25.0)),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                            ],
-                                                                                          ),
-                                                                                        );
-                                                                                      } else if (_model.selectedIndex == 2) {
-                                                                                        return Column(
-                                                                                          mainAxisSize: MainAxisSize.max,
-                                                                                          children: [
-                                                                                            Row(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                              children: [
-                                                                                                Text(
-                                                                                                  'Timestamp',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                        font: GoogleFonts.inter(
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                        color: Color(0xFF404040),
-                                                                                                        fontSize: 32.0,
-                                                                                                        letterSpacing: 0.0,
-                                                                                                        fontWeight: FontWeight.w900,
-                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                      ),
-                                                                                                ),
-                                                                                                FFButtonWidget(
-                                                                                                  onPressed: () {
-                                                                                                    print('Button pressed ...');
-                                                                                                  },
-                                                                                                  text: 'Share',
-                                                                                                  icon: Icon(
-                                                                                                    Icons.ios_share_outlined,
-                                                                                                    size: 18.0,
-                                                                                                  ),
-                                                                                                  options: FFButtonOptions(
-                                                                                                    height: 40.0,
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                    color: Color(0x000FFFFF),
-                                                                                                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                          font: GoogleFonts.interTight(
-                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                          ),
-                                                                                                          color: Color(0xFF4A4A4A),
-                                                                                                          fontSize: 15.0,
-                                                                                                          letterSpacing: 0.0,
-                                                                                                          fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                        ),
-                                                                                                    elevation: 0.0,
-                                                                                                    borderSide: BorderSide(
-                                                                                                      color: Color(0xFFDEDEDE),
-                                                                                                    ),
-                                                                                                    borderRadius: BorderRadius.circular(10.0),
+                                                                                                Padding(
+                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                                  child: wrapWithModel(
+                                                                                                    model: _model.zeenatTimestampModel2,
+                                                                                                    updateCallback: () => safeSetState(() {}),
+                                                                                                    child: ZeenatTimestampWidget(),
                                                                                                   ),
                                                                                                 ),
                                                                                               ],
-                                                                                            ),
-                                                                                            Expanded(
-                                                                                              child: Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                child: wrapWithModel(
-                                                                                                  model: _model.zeenatTimestampModel2,
+                                                                                            );
+                                                                                          } else if (_model.selectedIndex == 3) {
+                                                                                            return Column(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              children: [
+                                                                                                Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                  children: [
+                                                                                                    Text(
+                                                                                                      'AI Summary',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                            font: GoogleFonts.mulish(
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                            ),
+                                                                                                            color: Color(0xFF404040),
+                                                                                                            fontSize: 32.0,
+                                                                                                            letterSpacing: 0.0,
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                                          ),
+                                                                                                    ),
+                                                                                                    Builder(
+                                                                                                      builder: (context) => FFButtonWidget(
+                                                                                                        onPressed: () async {
+                                                                                                          await Share.share(
+                                                                                                            'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                            sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                          );
+                                                                                                        },
+                                                                                                        text: 'Share',
+                                                                                                        icon: Icon(
+                                                                                                          Icons.ios_share_outlined,
+                                                                                                          size: 18.0,
+                                                                                                        ),
+                                                                                                        options: FFButtonOptions(
+                                                                                                          height: 40.0,
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                          color: Color(0x00FFFFFF),
+                                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                                font: GoogleFonts.interTight(
+                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                ),
+                                                                                                                color: Color(0xFF4A4A4A),
+                                                                                                                fontSize: 15.0,
+                                                                                                                letterSpacing: 0.0,
+                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                              ),
+                                                                                                          elevation: 0.0,
+                                                                                                          borderSide: BorderSide(
+                                                                                                            color: Color(0xFFDEDEDE),
+                                                                                                          ),
+                                                                                                          borderRadius: BorderRadius.circular(10.0),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  ],
+                                                                                                ),
+                                                                                                wrapWithModel(
+                                                                                                  model: _model.zeenatAISummaryModel2,
                                                                                                   updateCallback: () => safeSetState(() {}),
-                                                                                                  child: ZeenatTimestampWidget(),
+                                                                                                  child: ZeenatAISummaryWidget(),
                                                                                                 ),
-                                                                                              ),
-                                                                                            ),
-                                                                                          ],
-                                                                                        );
-                                                                                      } else if (_model.selectedIndex == 3) {
-                                                                                        return Column(
-                                                                                          mainAxisSize: MainAxisSize.max,
-                                                                                          children: [
-                                                                                            Row(
+                                                                                              ],
+                                                                                            );
+                                                                                          } else {
+                                                                                            return Column(
                                                                                               mainAxisSize: MainAxisSize.max,
-                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                               children: [
-                                                                                                Text(
-                                                                                                  'AI Summary',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                        font: GoogleFonts.mulish(
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                        color: Color(0xFF404040),
-                                                                                                        fontSize: 32.0,
-                                                                                                        letterSpacing: 0.0,
-                                                                                                        fontWeight: FontWeight.w900,
-                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                      ),
-                                                                                                ),
-                                                                                                Builder(
-                                                                                                  builder: (context) => FFButtonWidget(
-                                                                                                    onPressed: () async {
-                                                                                                      await Share.share(
-                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                      );
-                                                                                                    },
-                                                                                                    text: 'Share',
-                                                                                                    icon: Icon(
-                                                                                                      Icons.ios_share_outlined,
-                                                                                                      size: 18.0,
-                                                                                                    ),
-                                                                                                    options: FFButtonOptions(
-                                                                                                      height: 40.0,
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                      color: Color(0x00FFFFFF),
-                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                            font: GoogleFonts.interTight(
-                                                                                                              fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                              fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                  children: [
+                                                                                                    Text(
+                                                                                                      'Conversation',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                            font: GoogleFonts.mulish(
+                                                                                                              fontWeight: FontWeight.w900,
+                                                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                             ),
-                                                                                                            color: Color(0xFF4A4A4A),
-                                                                                                            fontSize: 15.0,
+                                                                                                            color: Color(0xFF404040),
+                                                                                                            fontSize: 32.0,
                                                                                                             letterSpacing: 0.0,
-                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                            fontWeight: FontWeight.w900,
+                                                                                                            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                           ),
-                                                                                                      elevation: 0.0,
-                                                                                                      borderSide: BorderSide(
-                                                                                                        color: Color(0xFFDEDEDE),
-                                                                                                      ),
-                                                                                                      borderRadius: BorderRadius.circular(10.0),
                                                                                                     ),
+                                                                                                    Builder(
+                                                                                                      builder: (context) => FFButtonWidget(
+                                                                                                        onPressed: () async {
+                                                                                                          await Share.share(
+                                                                                                            'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
+                                                                                                            sharePositionOrigin: getWidgetBoundingBox(context),
+                                                                                                          );
+                                                                                                        },
+                                                                                                        text: 'Share',
+                                                                                                        icon: Icon(
+                                                                                                          Icons.ios_share,
+                                                                                                          size: 18.0,
+                                                                                                        ),
+                                                                                                        options: FFButtonOptions(
+                                                                                                          height: 40.0,
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                          color: Color(0x00FFFFFF),
+                                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                                                font: GoogleFonts.interTight(
+                                                                                                                  fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                  fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                                ),
+                                                                                                                color: Color(0xFF4A4A4A),
+                                                                                                                fontSize: 15.0,
+                                                                                                                letterSpacing: 0.0,
+                                                                                                                fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                                                                fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                                                              ),
+                                                                                                          elevation: 0.0,
+                                                                                                          borderSide: BorderSide(
+                                                                                                            color: Color(0xFFDEDEDE),
+                                                                                                          ),
+                                                                                                          borderRadius: BorderRadius.circular(10.0),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  ],
+                                                                                                ),
+                                                                                                Padding(
+                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                                  child: wrapWithModel(
+                                                                                                    model: _model.conversationZeenatModel2,
+                                                                                                    updateCallback: () => safeSetState(() {}),
+                                                                                                    child: ConversationZeenatWidget(),
                                                                                                   ),
                                                                                                 ),
                                                                                               ],
-                                                                                            ),
-                                                                                            wrapWithModel(
-                                                                                              model: _model.zeenatAISummaryModel2,
-                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                              child: ZeenatAISummaryWidget(),
-                                                                                            ),
-                                                                                          ],
-                                                                                        );
-                                                                                      } else {
-                                                                                        return Column(
-                                                                                          mainAxisSize: MainAxisSize.max,
-                                                                                          children: [
-                                                                                            Row(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                              children: [
-                                                                                                Text(
-                                                                                                  'Conversation',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                        font: GoogleFonts.mulish(
-                                                                                                          fontWeight: FontWeight.w900,
-                                                                                                          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                        ),
-                                                                                                        color: Color(0xFF404040),
-                                                                                                        fontSize: 32.0,
-                                                                                                        letterSpacing: 0.0,
-                                                                                                        fontWeight: FontWeight.w900,
-                                                                                                        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                                                      ),
-                                                                                                ),
-                                                                                                Builder(
-                                                                                                  builder: (context) => FFButtonWidget(
-                                                                                                    onPressed: () async {
-                                                                                                      await Share.share(
-                                                                                                        'https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu',
-                                                                                                        sharePositionOrigin: getWidgetBoundingBox(context),
-                                                                                                      );
-                                                                                                    },
-                                                                                                    text: 'Share',
-                                                                                                    icon: Icon(
-                                                                                                      Icons.ios_share,
-                                                                                                      size: 18.0,
-                                                                                                    ),
-                                                                                                    options: FFButtonOptions(
-                                                                                                      height: 40.0,
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                                      color: Color(0x00FFFFFF),
-                                                                                                      textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                            font: GoogleFonts.interTight(
-                                                                                                              fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                              fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                            ),
-                                                                                                            color: Color(0xFF4A4A4A),
-                                                                                                            fontSize: 15.0,
-                                                                                                            letterSpacing: 0.0,
-                                                                                                            fontWeight: FlutterFlowTheme.of(context).titleSmall.fontWeight,
-                                                                                                            fontStyle: FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                                                                                                          ),
-                                                                                                      elevation: 0.0,
-                                                                                                      borderSide: BorderSide(
-                                                                                                        color: Color(0xFFDEDEDE),
-                                                                                                      ),
-                                                                                                      borderRadius: BorderRadius.circular(10.0),
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ],
-                                                                                            ),
-                                                                                            Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                              child: wrapWithModel(
-                                                                                                model: _model.conversationZeenatModel2,
-                                                                                                updateCallback: () => safeSetState(() {}),
-                                                                                                child: ConversationZeenatWidget(),
-                                                                                              ),
-                                                                                            ),
-                                                                                          ],
-                                                                                        );
-                                                                                      }
-                                                                                    },
+                                                                                            );
+                                                                                          }
+                                                                                        },
+                                                                                      ),
+                                                                                    ],
                                                                                   ),
                                                                                 ],
                                                                               ),
-                                                                            ],
+                                                                            ),
                                                                           ),
                                                                         ),
-                                                                      ),
+                                                                      ],
                                                                     ),
-                                                                  ],
+                                                                  ),
                                                                 ),
                                                             ],
                                                           ),

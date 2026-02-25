@@ -91,11 +91,11 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
-                                  'assets/images/videos_ai_img.png',
+                                  'assets/images/vnimc_1.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -346,11 +346,11 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
-                                  'assets/images/videos_ai_img.png',
+                                  'assets/images/vnimc_1.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),

@@ -7,19 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'featured_episode_card_model.dart';
-export 'featured_episode_card_model.dart';
+import 'featured_episode_card_copy_model.dart';
+export 'featured_episode_card_copy_model.dart';
 
-class FeaturedEpisodeCardWidget extends StatefulWidget {
-  const FeaturedEpisodeCardWidget({super.key});
+class FeaturedEpisodeCardCopyWidget extends StatefulWidget {
+  const FeaturedEpisodeCardCopyWidget({super.key});
 
   @override
-  State<FeaturedEpisodeCardWidget> createState() =>
-      _FeaturedEpisodeCardWidgetState();
+  State<FeaturedEpisodeCardCopyWidget> createState() =>
+      _FeaturedEpisodeCardCopyWidgetState();
 }
 
-class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
-  late FeaturedEpisodeCardModel _model;
+class _FeaturedEpisodeCardCopyWidgetState
+    extends State<FeaturedEpisodeCardCopyWidget> {
+  late FeaturedEpisodeCardCopyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,7 +31,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => FeaturedEpisodeCardModel());
+    _model = createModel(context, () => FeaturedEpisodeCardCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }

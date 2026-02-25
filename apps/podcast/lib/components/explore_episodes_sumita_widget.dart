@@ -92,7 +92,7 @@ class _ExploreEpisodesSumitaWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
-                                  'assets/images/explore_zeenat_img.png',
+                                  'assets/images/Zeenat_Nugget_Option_(1).png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,

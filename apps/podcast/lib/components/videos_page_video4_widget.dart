@@ -91,11 +91,11 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
-                                  'assets/images/videos_sumpoorn_img.png',
+                                  'assets/images/YouTube_Thumbnail_(2).png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
