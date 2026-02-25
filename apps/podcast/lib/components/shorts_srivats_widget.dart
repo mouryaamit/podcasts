@@ -83,17 +83,21 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 359.0,
                           height: 359.0,
+                          constraints: BoxConstraints(
+                            minHeight: 359.0,
+                            maxHeight: 359.0,
+                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/Sumpoorn_Highlights_Thumbnail_(10).png',
+                              'assets/images/2emqy_5.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -105,6 +109,9 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
                             width: 359.0,
+                            constraints: BoxConstraints(
+                              minHeight: 48.0,
+                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -143,7 +150,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversation • August 2025 • 1.31 min',
+                              'MSME Conversations • August 2025 • 1.31 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

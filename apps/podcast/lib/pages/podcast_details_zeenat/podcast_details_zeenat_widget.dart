@@ -1268,7 +1268,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                       padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                                                                                                       child: Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
-                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                         children: [
                                                                                                           Container(
                                                                                                             child: wrapWithModel(

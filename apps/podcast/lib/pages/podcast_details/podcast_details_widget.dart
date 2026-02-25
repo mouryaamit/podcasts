@@ -9,7 +9,6 @@ import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
 import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
-import '/components/shorts_budget_special_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
 import '/components/youtube_player_widget.dart';
@@ -927,16 +926,6 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                         children: [
                                                                                                           Container(
                                                                                                             child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetSpecialModel1,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetSpecialWidget(
-                                                                                                                watchNow: () async {},
-                                                                                                                share: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
                                                                                                               model: _model.shortsBudgetKrishnanModel1,
                                                                                                               updateCallback: () => safeSetState(() {}),
                                                                                                               child: ShortsBudgetKrishnanWidget(
@@ -1367,19 +1356,20 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetSpecialModel2,
+                                                                                                            model: _model.shortsBudgetKrishnanModel2,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetSpecialWidget(
-                                                                                                              watchNow: () async {},
+                                                                                                            child: ShortsBudgetKrishnanWidget(
                                                                                                               share: () async {},
+                                                                                                              watchNow: () async {},
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                         Container(
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsBudgetKrishnanModel2,
+                                                                                                            model: _model.shortsBudgetLaveeshModel2,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsBudgetKrishnanWidget(
+                                                                                                            child: ShortsBudgetLaveeshWidget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -1398,16 +1388,6 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                         children: [
                                                                                                           Container(
                                                                                                             child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetLaveeshModel2,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetLaveeshWidget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
                                                                                                               model: _model.shortsBudgetAnilModel2,
                                                                                                               updateCallback: () => safeSetState(() {}),
                                                                                                               child: ShortsBudgetAnilWidget(
@@ -1416,19 +1396,8 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
-                                                                                                        ].divide(SizedBox(width: 25.0)),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                  Align(
-                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                                                                                    child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                                                                                                      child: Row(
-                                                                                                        mainAxisSize: MainAxisSize.max,
-                                                                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                        children: [
                                                                                                           Container(
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: wrapWithModel(
                                                                                                               model: _model.shortsBudgetUnniKrishnanModel2,
                                                                                                               updateCallback: () => safeSetState(() {}),

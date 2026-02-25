@@ -9,7 +9,6 @@ import '/components/shorts_zeenat_details2_widget.dart';
 import '/components/shorts_zeenat_details3_widget.dart';
 import '/components/shorts_zeenat_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/youtube_player_with_widget_widget.dart';
 import '/components/zeenat_a_i_summary_widget.dart';
 import '/components/zeenat_timestamp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -38,8 +37,6 @@ class PodcastDetailsSumitaModel
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
-  // Model for YoutubePlayerWithWidget component.
-  late YoutubePlayerWithWidgetModel youtubePlayerWithWidgetModel;
   // Model for ShortsZeenat component.
   late ShortsZeenatModel shortsZeenatModel1;
   // Model for ShortsZeenatDetails1 component.
@@ -87,8 +84,6 @@ class PodcastDetailsSumitaModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerWithWidgetModel =
-        createModel(context, () => YoutubePlayerWithWidgetModel());
     shortsZeenatModel1 = createModel(context, () => ShortsZeenatModel());
     shortsZeenatDetails1Model1 =
         createModel(context, () => ShortsZeenatDetails1Model());
@@ -126,7 +121,6 @@ class PodcastDetailsSumitaModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerWithWidgetModel.dispose();
     shortsZeenatModel1.dispose();
     shortsZeenatDetails1Model1.dispose();
     shortsZeenatDetails2Model1.dispose();

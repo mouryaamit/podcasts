@@ -83,17 +83,21 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 359.0,
                           height: 359.0,
+                          constraints: BoxConstraints(
+                            minHeight: 359.0,
+                            maxHeight: 359.0,
+                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/Sumpoorn_Highlights_Thumbnail_(12).png',
+                              'assets/images/dfjsb_6.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -105,6 +109,9 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
                             width: 359.0,
+                            constraints: BoxConstraints(
+                              minHeight: 48.0,
+                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -112,7 +119,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(-1.0, -1.0),
                               child: Text(
-                                'How Stricter Listing Rules Cut IPOs But Improved Performance',
+                                'How Stricter Listing Rules Cut IPOs but Improved Performance',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -143,7 +150,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversation • November 2025 • 1.27 min',
+                              'MSME Conversations • November 2025 • 1.27 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

@@ -1,14 +1,15 @@
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_budget_widget.dart';
+import '/components/explore_episodes_budget_with_container_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/featured_episode_card_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
 import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
-import '/components/shorts_budget_special_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/shorts_srivats_widget.dart';
 import '/components/shorts_suman_widget.dart';
@@ -17,7 +18,6 @@ import '/components/shorts_zeenat_details1_widget.dart';
 import '/components/shorts_zeenat_details2_widget.dart';
 import '/components/shorts_zeenat_details3_widget.dart';
 import '/components/shorts_zeenat_widget.dart';
-import '/components/watch_now_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -27,7 +27,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 import 'podcast_model.dart';
 export 'podcast_model.dart';
 
@@ -323,14 +322,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 tablet: false,
                                               ))
                                                 Container(
-                                                  decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesBudgetModel1,
+                                                        .exploreEpisodesBudgetWithContainerModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
-                                                        ExploreEpisodesBudgetWidget(),
+                                                        ExploreEpisodesBudgetWithContainerWidget(),
                                                   ),
                                                 ),
                                               if (responsiveVisibility(
@@ -339,14 +337,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 tablet: false,
                                               ))
                                                 Container(
-                                                  decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesZeenatModel1,
+                                                        .exploreEpisodesZeenatWithContainerModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
-                                                        ExploreEpisodesZeenatWidget(),
+                                                        ExploreEpisodesZeenatWithContainerWidget(),
                                                   ),
                                                 ),
                                             ],
@@ -373,7 +370,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesBudgetModel2,
+                                                        .exploreEpisodesBudgetModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
@@ -389,7 +386,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesZeenatModel2,
+                                                        .exploreEpisodesZeenatModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
@@ -432,7 +429,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                         alignment:
                                             AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          'Shorts',
+                                          'Episode Highlights',
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -463,72 +460,6 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Container(
-                                                child: Builder(
-                                                  builder: (context) =>
-                                                      wrapWithModel(
-                                                    model: _model
-                                                        .shortsBudgetSpecialModel,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ShortsBudgetSpecialWidget(
-                                                      watchNow: () async {
-                                                        await showDialog(
-                                                          barrierColor:
-                                                              Color(0x66000000),
-                                                          context: context,
-                                                          builder:
-                                                              (dialogContext) {
-                                                            return Dialog(
-                                                              elevation: 0,
-                                                              insetPadding:
-                                                                  EdgeInsets
-                                                                      .zero,
-                                                              backgroundColor:
-                                                                  Colors
-                                                                      .transparent,
-                                                              alignment: AlignmentDirectional(
-                                                                      0.0, 0.0)
-                                                                  .resolve(
-                                                                      Directionality.of(
-                                                                          context)),
-                                                              child:
-                                                                  WebViewAware(
-                                                                child:
-                                                                    GestureDetector(
-                                                                  onTap: () {
-                                                                    FocusScope.of(
-                                                                            dialogContext)
-                                                                        .unfocus();
-                                                                    FocusManager
-                                                                        .instance
-                                                                        .primaryFocus
-                                                                        ?.unfocus();
-                                                                  },
-                                                                  child:
-                                                                      Container(
-                                                                    height:
-                                                                        70.0,
-                                                                    child:
-                                                                        WatchNowDialogWidget(
-                                                                      link:
-                                                                          'https://www.youtube.com/embed/3skFTTsAvmo?si=mfTb_zUk6fPjmLlt',
-                                                                      title:
-                                                                          'Sumpoorn Budget Special | What\'s Next for India\'s MSMEs',
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            );
-                                                          },
-                                                        );
-                                                      },
-                                                      share: () async {},
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
                                               Container(
                                                 child: wrapWithModel(
                                                   model: _model

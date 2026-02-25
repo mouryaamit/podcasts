@@ -83,12 +83,16 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 359.0,
                           height: 359.0,
+                          constraints: BoxConstraints(
+                            minHeight: 359.0,
+                            maxHeight: 359.0,
+                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -105,6 +109,9 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
                             width: 359.0,
+                            constraints: BoxConstraints(
+                              minHeight: 48.0,
+                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -362,7 +369,7 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversation • July 2025 \n• 1.08 min',
+                                'MSME Conversations • July 2025 \n• 1.08 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

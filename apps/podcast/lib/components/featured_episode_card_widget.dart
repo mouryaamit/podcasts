@@ -62,17 +62,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
           child: Container(
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 40.0,
-                  color: Color(0xFFD0D0D0),
-                  offset: Offset(
-                    -12.0,
-                    12.0,
-                  ),
-                  spreadRadius: 0.0,
-                )
-              ],
               borderRadius: BorderRadius.circular(valueOrDefault<double>(
                 MediaQuery.sizeOf(context).width <
                         valueOrDefault<double>(
@@ -260,7 +249,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 20.0, 0.0, 0.0),
+                                      0.0, 20.0, 0.0, 16.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,

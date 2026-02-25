@@ -85,17 +85,21 @@ class _ShortsZeenatDetails1WidgetState
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 359.0,
                           height: 359.0,
+                          constraints: BoxConstraints(
+                            minHeight: 359.0,
+                            maxHeight: 359.0,
+                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_zeenat_details1_img.png',
+                              'assets/images/49svh_2.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
@@ -107,6 +111,9 @@ class _ShortsZeenatDetails1WidgetState
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
                             width: 359.0,
+                            constraints: BoxConstraints(
+                              minHeight: 48.0,
+                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -145,7 +152,7 @@ class _ShortsZeenatDetails1WidgetState
                             width: 359.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversation • June 2025 • 1.52 min',
+                              'MSME Conversations • June 2025 • 1.52 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

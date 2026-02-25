@@ -9,7 +9,6 @@ import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
 import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
-import '/components/shorts_budget_special_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
 import '/components/youtube_player_widget.dart';
@@ -41,8 +40,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   late ChoiceChipsModel choiceChipsModel;
   // Model for YoutubePlayer component.
   late YoutubePlayerModel youtubePlayerModel;
-  // Model for ShortsBudgetSpecial component.
-  late ShortsBudgetSpecialModel shortsBudgetSpecialModel1;
   // Model for ShortsBudgetKrishnan component.
   late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel1;
   // Model for ShortsBudgetLaveesh component.
@@ -57,8 +54,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   late BudgetAISummaryModel budgetAISummaryModel1;
   // Model for BudgetConversation component.
   late BudgetConversationModel budgetConversationModel1;
-  // Model for ShortsBudgetSpecial component.
-  late ShortsBudgetSpecialModel shortsBudgetSpecialModel2;
   // Model for ShortsBudgetKrishnan component.
   late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel2;
   // Model for ShortsBudgetLaveesh component.
@@ -97,8 +92,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
     youtubePlayerModel = createModel(context, () => YoutubePlayerModel());
-    shortsBudgetSpecialModel1 =
-        createModel(context, () => ShortsBudgetSpecialModel());
     shortsBudgetKrishnanModel1 =
         createModel(context, () => ShortsBudgetKrishnanModel());
     shortsBudgetLaveeshModel1 =
@@ -111,8 +104,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     budgetAISummaryModel1 = createModel(context, () => BudgetAISummaryModel());
     budgetConversationModel1 =
         createModel(context, () => BudgetConversationModel());
-    shortsBudgetSpecialModel2 =
-        createModel(context, () => ShortsBudgetSpecialModel());
     shortsBudgetKrishnanModel2 =
         createModel(context, () => ShortsBudgetKrishnanModel());
     shortsBudgetLaveeshModel2 =
@@ -143,7 +134,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
     youtubePlayerModel.dispose();
-    shortsBudgetSpecialModel1.dispose();
     shortsBudgetKrishnanModel1.dispose();
     shortsBudgetLaveeshModel1.dispose();
     shortsBudgetAnilModel1.dispose();
@@ -151,7 +141,6 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     budgetTimestampModel1.dispose();
     budgetAISummaryModel1.dispose();
     budgetConversationModel1.dispose();
-    shortsBudgetSpecialModel2.dispose();
     shortsBudgetKrishnanModel2.dispose();
     shortsBudgetLaveeshModel2.dispose();
     shortsBudgetAnilModel2.dispose();

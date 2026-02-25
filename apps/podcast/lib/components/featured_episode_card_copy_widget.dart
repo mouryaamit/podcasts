@@ -141,7 +141,8 @@ class _FeaturedEpisodeCardCopyWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 5.0, 0.0, 0.0),
                                   child: Container(
-                                    width: 440.0,
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 0.4,
                                     decoration: BoxDecoration(),
                                     child: Text(
                                       'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
@@ -175,7 +176,8 @@ class _FeaturedEpisodeCardCopyWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: Container(
-                                    width: 510.0,
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 0.4,
                                     decoration: BoxDecoration(),
                                     child: Text(
                                       'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025...',
@@ -209,54 +211,36 @@ class _FeaturedEpisodeCardCopyWidgetState
                                     ),
                                   ),
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 20.0, 0.0, 0.0),
-                                    child: Wrap(
-                                      spacing: 0.0,
-                                      runSpacing: 0.0,
-                                      alignment: WrapAlignment.start,
-                                      crossAxisAlignment:
-                                          WrapCrossAlignment.start,
-                                      direction: Axis.horizontal,
-                                      runAlignment: WrapAlignment.start,
-                                      verticalDirection: VerticalDirection.down,
-                                      clipBehavior: Clip.none,
-                                      children: [
-                                        Text(
-                                          'Mr. Unnikrishnan Kottekkat • Dr. Laveesh Bhandari • Mr. Anil Bhardwaj \n • Dr. Sumita Kale • Mr. Narasimhan V • 45 min',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.inter(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0xFF6B7280),
-                                                fontSize: 13.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
+                                Container(
+                                  width: MediaQuery.sizeOf(context).width * 0.4,
+                                  decoration: BoxDecoration(),
+                                  child: Text(
+                                    'Mr. Unnikrishnan Kottekkat • Dr. Laveesh Bhandari • Mr. Anil Bhardwaj \n • Dr. Sumita Kale • Mr. Narasimhan V • 45 min',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF6B7280),
+                                          fontSize: 13.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
-                                      ],
-                                    ),
                                   ),
                                 ),
                                 Padding(

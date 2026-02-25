@@ -8,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'explore_episodes_zeenat_model.dart';
-export 'explore_episodes_zeenat_model.dart';
+import 'explore_episodes_zeenat_with_container_model.dart';
+export 'explore_episodes_zeenat_with_container_model.dart';
 
-class ExploreEpisodesZeenatWidget extends StatefulWidget {
-  const ExploreEpisodesZeenatWidget({super.key});
+class ExploreEpisodesZeenatWithContainerWidget extends StatefulWidget {
+  const ExploreEpisodesZeenatWithContainerWidget({super.key});
 
   @override
-  State<ExploreEpisodesZeenatWidget> createState() =>
-      _ExploreEpisodesZeenatWidgetState();
+  State<ExploreEpisodesZeenatWithContainerWidget> createState() =>
+      _ExploreEpisodesZeenatWithContainerWidgetState();
 }
 
-class _ExploreEpisodesZeenatWidgetState
-    extends State<ExploreEpisodesZeenatWidget> {
-  late ExploreEpisodesZeenatModel _model;
+class _ExploreEpisodesZeenatWithContainerWidgetState
+    extends State<ExploreEpisodesZeenatWithContainerWidget> {
+  late ExploreEpisodesZeenatWithContainerModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -32,7 +32,8 @@ class _ExploreEpisodesZeenatWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ExploreEpisodesZeenatModel());
+    _model =
+        createModel(context, () => ExploreEpisodesZeenatWithContainerModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -117,29 +118,35 @@ class _ExploreEpisodesZeenatWidgetState
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            font: GoogleFonts.inter(
+                                    Container(
+                                      constraints: BoxConstraints(
+                                        minHeight: 48.0,
+                                      ),
+                                      decoration: BoxDecoration(),
+                                      child: Text(
+                                        'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFF111827),
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
+                                              lineHeight: 1.5,
                                             ),
-                                            color: Color(0xFF111827),
-                                            fontSize: 16.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w600,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                            lineHeight: 1.5,
-                                          ),
-                                      overflow: TextOverflow.clip,
+                                        overflow: TextOverflow.clip,
+                                      ),
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
