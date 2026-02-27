@@ -18,10 +18,10 @@
       },
       "configurations": {
         "development": {
-          "command": "flutter build web --output ../../dist/resources_ui"
+          "command": "flutter build web --base-href '/resources/' --output ../../dist/resources_ui"
         },
         "production": {
-          "command": "flutter build web --output ../../dist/resources_ui --release"
+          "command": "flutter build web --base-href '/resources/' --output ../../dist/resources_ui --release"
         }
       }
     },
