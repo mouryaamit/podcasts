@@ -8,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'explore_episodes_zeenat_copy_model.dart';
-export 'explore_episodes_zeenat_copy_model.dart';
+import 'explore_episodes_budget_with_container_model.dart';
+export 'explore_episodes_budget_with_container_model.dart';
 
-class ExploreEpisodesZeenatCopyWidget extends StatefulWidget {
-  const ExploreEpisodesZeenatCopyWidget({super.key});
+class ExploreEpisodesBudgetWithContainerWidget extends StatefulWidget {
+  const ExploreEpisodesBudgetWithContainerWidget({super.key});
 
   @override
-  State<ExploreEpisodesZeenatCopyWidget> createState() =>
-      _ExploreEpisodesZeenatCopyWidgetState();
+  State<ExploreEpisodesBudgetWithContainerWidget> createState() =>
+      _ExploreEpisodesBudgetWithContainerWidgetState();
 }
 
-class _ExploreEpisodesZeenatCopyWidgetState
-    extends State<ExploreEpisodesZeenatCopyWidget> {
-  late ExploreEpisodesZeenatCopyModel _model;
+class _ExploreEpisodesBudgetWithContainerWidgetState
+    extends State<ExploreEpisodesBudgetWithContainerWidget> {
+  late ExploreEpisodesBudgetWithContainerModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -32,7 +32,8 @@ class _ExploreEpisodesZeenatCopyWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ExploreEpisodesZeenatCopyModel());
+    _model =
+        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -47,7 +48,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.max,
+      mainAxisSize: MainAxisSize.min,
       children: [
         if (responsiveVisibility(
           context: context,
@@ -66,9 +67,9 @@ class _ExploreEpisodesZeenatCopyWidgetState
                     height: MediaQuery.sizeOf(context).width >
                             valueOrDefault<double>(
                               kBreakpointSmall,
-                              1700.0,
+                              2000.0,
                             )
-                        ? 500.0
+                        ? 550.0
                         : 445.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -99,54 +100,74 @@ class _ExploreEpisodesZeenatCopyWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
-                                  'assets/images/explore_zeenat_img.png',
+                                  'assets/images/budget_explore.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
-                            Container(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w600,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF111827),
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                          lineHeight: 1.5,
-                                        ),
-                                    overflow: TextOverflow.clip,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
-                                    child: Text(
-                                      'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            font: GoogleFonts.inter(
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 15.0, 0.0, 0.0),
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width * 1.0,
+                                decoration: BoxDecoration(),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      constraints: BoxConstraints(
+                                        minHeight: 48.0,
+                                      ),
+                                      decoration: BoxDecoration(),
+                                      child: Text(
+                                        'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFF111827),
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                              lineHeight: 1.5,
+                                            ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 0.0),
+                                      child: Text(
+                                        'India’s Union Budget 2026 arrives as MSMEs show cautious recovery...',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFF374151),
+                                              fontSize: 14.0,
+                                              letterSpacing: 0.0,
                                               fontWeight:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -156,22 +177,11 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: Color(0xFF374151),
-                                            fontSize: 14.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                      overflow: TextOverflow.clip,
+                                        overflow: TextOverflow.clip,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                             Wrap(
@@ -185,7 +195,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                               clipBehavior: Clip.none,
                               children: [
                                 Text(
-                                  'MSME Conversations • June 2025 • 42 min',
+                                  'MSME Conversations • February 2026 • 45 min',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -213,6 +223,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                               ],
                             ),
                             Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(),
                               child: Text(
                                 'With Index Expert',
@@ -234,12 +245,14 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                           .fontStyle,
                                       lineHeight: 1.5,
                                     ),
-                                overflow: TextOverflow.clip,
                               ),
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              decoration: BoxDecoration(),
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -335,8 +348,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                       FFButtonWidget(
                                         onPressed: () async {
                                           context.pushNamed(
-                                              PodcastDetailsZeenatWidget
-                                                  .routeName);
+                                              PodcastDetailsWidget.routeName);
                                         },
                                         text: 'Watch Now',
                                         options: FFButtonOptions(
@@ -402,7 +414,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                               ),
                                               onPressed: () async {
                                                 await Share.share(
-                                                  'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
+                                                  'https://youtu.be/eL6ee7hfAqo?si=24Aeas1Kls7RDONK',
                                                   sharePositionOrigin:
                                                       getWidgetBoundingBox(
                                                           context),
@@ -466,9 +478,11 @@ class _ExploreEpisodesZeenatCopyWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(6.0),
                                 child: Image.asset(
-                                  'assets/images/explore_zeenat_img.png',
+                                  'assets/images/budget_explore.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
-                                  fit: BoxFit.fill,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 1.0,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -486,7 +500,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit',
+                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -526,7 +540,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'Practical tips and patterns for inclusive product experiences that work for everyone.',
+                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead...',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -571,7 +585,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'MSME Conversations • June 2025 • 42 min',
+                                    'MSME Conversations • February 2026 • 45 min',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -763,7 +777,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                   FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
-                                          PodcastDetailsZeenatWidget.routeName);
+                                          PodcastDetailsWidget.routeName);
                                     },
                                     text: 'Watch Now',
                                     options: FFButtonOptions(
@@ -820,7 +834,7 @@ class _ExploreEpisodesZeenatCopyWidgetState
                                         ),
                                         onPressed: () async {
                                           await Share.share(
-                                            'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
+                                            'https://youtu.be/eL6ee7hfAqo?si=24Aeas1Kls7RDONK',
                                             sharePositionOrigin:
                                                 getWidgetBoundingBox(context),
                                           );

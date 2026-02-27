@@ -91,7 +91,7 @@ class _VideosPageVideo2WidgetState extends State<VideosPageVideo2Widget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
-                                  'assets/images/3a9k2_3.png',
+                                  'assets/images/videos_un_img.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -350,7 +350,7 @@ class _VideosPageVideo2WidgetState extends State<VideosPageVideo2Widget> {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),

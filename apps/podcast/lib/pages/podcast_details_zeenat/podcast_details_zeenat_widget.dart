@@ -1,7 +1,7 @@
 import '/components/choice_chips_widget.dart';
 import '/components/conversation_zeenat_widget.dart';
 import '/components/desktop_footer_widget.dart';
-import '/components/explore_episodes_budget_widget.dart';
+import '/components/explore_episodes_budget_with_container_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_zeenat_details1_widget.dart';
@@ -230,30 +230,9 @@ class _PodcastDetailsZeenatWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 30.0, 0.0, 0.0),
                                           child: Container(
-                                            width: valueOrDefault<double>(
-                                              () {
-                                                if (MediaQuery.sizeOf(context)
-                                                        .width <
-                                                    valueOrDefault<double>(
-                                                      kBreakpointSmall,
-                                                      900.0,
-                                                    )) {
-                                                  return 350;
-                                                } else if (MediaQuery.sizeOf(
-                                                            context)
-                                                        .width >
-                                                    valueOrDefault<double>(
-                                                      kBreakpointLarge,
-                                                      900.0,
-                                                    )) {
-                                                  return 1200;
-                                                } else {
-                                                  return 1200;
-                                                }
-                                              }()
-                                                  .toDouble(),
-                                              1200.0,
-                                            ),
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.85,
                                             height: valueOrDefault<double>(
                                               () {
                                                 if (MediaQuery.sizeOf(context)
@@ -315,35 +294,11 @@ class _PodcastDetailsZeenatWidgetState
                                                             BorderRadius
                                                                 .circular(20.0),
                                                         child: Container(
-                                                          width: valueOrDefault<
-                                                              double>(
-                                                            () {
-                                                              if (MediaQuery.sizeOf(
+                                                          width:
+                                                              MediaQuery.sizeOf(
                                                                           context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 397;
-                                                              } else if (MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .width >
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointLarge,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 1200;
-                                                              } else {
-                                                                return 1200;
-                                                              }
-                                                            }()
-                                                                .toDouble(),
-                                                            1200.0,
-                                                          ),
+                                                                      .width *
+                                                                  1.0,
                                                           height:
                                                               valueOrDefault<
                                                                   double>(
@@ -386,7 +341,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                   0.0, 0.0),
                                                           child: wrapWithModel(
                                                             model: _model
-                                                                .youtubePlayerZeenatModel,
+                                                                .youtubePlayerZeenatModel1,
                                                             updateCallback: () =>
                                                                 safeSetState(
                                                                     () {}),
@@ -403,49 +358,231 @@ class _PodcastDetailsZeenatWidgetState
                                           ),
                                         ),
                                       ),
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context)
-                                                    .width *
-                                                0.75,
-                                            decoration: BoxDecoration(),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                RichText(
-                                                  textScaler:
-                                                      MediaQuery.of(context)
-                                                          .textScaler,
-                                                  text: TextSpan(
-                                                    children: [
-                                                      TextSpan(
-                                                        text:
-                                                            'India\'s MSME sector is resilient but that doesn\'t mean lenders should deploy capital indiscriminately. In this crucial conversation, Zeenat Hamirani, Chief Risk Officer at L&T Finance, breaks down what sustainable MSME growth requires: good data, disciplined decision-making, and moving beyond fragmented credit signals.',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font:
-                                                                      GoogleFonts
-                                                                          .inter(
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                        tablet: false,
+                                        tabletLandscape: false,
+                                        desktop: false,
+                                      ))
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 30.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: valueOrDefault<double>(
+                                                () {
+                                                  if (MediaQuery.sizeOf(context)
+                                                          .width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )) {
+                                                    return 350;
+                                                  } else if (MediaQuery.sizeOf(
+                                                              context)
+                                                          .width >
+                                                      valueOrDefault<double>(
+                                                        kBreakpointLarge,
+                                                        900.0,
+                                                      )) {
+                                                    return 1200;
+                                                  } else {
+                                                    return 1200;
+                                                  }
+                                                }()
+                                                    .toDouble(),
+                                                1200.0,
+                                              ),
+                                              height: valueOrDefault<double>(
+                                                () {
+                                                  if (MediaQuery.sizeOf(context)
+                                                          .width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )) {
+                                                    return 355;
+                                                  } else if (MediaQuery.sizeOf(
+                                                              context)
+                                                          .width >
+                                                      valueOrDefault<double>(
+                                                        kBreakpointLarge,
+                                                        900.0,
+                                                      )) {
+                                                    return 674;
+                                                  } else {
+                                                    return 674;
+                                                  }
+                                                }()
+                                                    .toDouble(),
+                                                674.0,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    blurRadius: 40.0,
+                                                    color: Color(0xFFD0D0D0),
+                                                    offset: Offset(
+                                                      -12.0,
+                                                      12.0,
+                                                    ),
+                                                    spreadRadius: 0.0,
+                                                  )
+                                                ],
+                                                borderRadius:
+                                                    BorderRadius.circular(20.0),
+                                              ),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                    0.0, 0.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Expanded(
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      20.0),
+                                                          child: Container(
+                                                            width:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              () {
+                                                                if (MediaQuery.sizeOf(
                                                                             context)
-                                                                        .bodyMedium
-                                                                        .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                        .width <
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointSmall,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 397;
+                                                                } else if (MediaQuery.sizeOf(
                                                                             context)
-                                                                        .bodyMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  letterSpacing:
-                                                                      0.0,
+                                                                        .width >
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointLarge,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 1200;
+                                                                } else {
+                                                                  return 1200;
+                                                                }
+                                                              }()
+                                                                  .toDouble(),
+                                                              1200.0,
+                                                            ),
+                                                            height:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              () {
+                                                                if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width <
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointSmall,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 355;
+                                                                } else if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width >
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointLarge,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 674;
+                                                                } else {
+                                                                  return 674;
+                                                                }
+                                                              }()
+                                                                  .toDouble(),
+                                                              674.0,
+                                                            ),
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          20.0),
+                                                            ),
+                                                            alignment:
+                                                                AlignmentDirectional(
+                                                                    0.0, 0.0),
+                                                            child:
+                                                                wrapWithModel(
+                                                              model: _model
+                                                                  .youtubePlayerZeenatModel2,
+                                                              updateCallback: () =>
+                                                                  safeSetState(
+                                                                      () {}),
+                                                              child:
+                                                                  YoutubePlayerZeenatWidget(),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                        tablet: false,
+                                        tabletLandscape: false,
+                                      ))
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 20.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.75,
+                                              decoration: BoxDecoration(),
+                                              child: RichText(
+                                                textScaler:
+                                                    MediaQuery.of(context)
+                                                        .textScaler,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text:
+                                                          'India\'s MSME sector is resilient but that doesn\'t mean lenders should deploy capital indiscriminately. In this crucial conversation, Zeenat Hamirani, Chief Risk Officer at L&T Finance, breaks down what sustainable MSME growth requires: good data, disciplined decision-making, and moving beyond fragmented credit signals.',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
                                                                   fontWeight: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -455,37 +592,24 @@ class _PodcastDetailsZeenatWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                      )
-                                                    ],
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
+                                                                fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                          ),
-                                                          color: Colors.black,
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width >
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )
-                                                              ? 12.0
-                                                              : 8.0,
-                                                          letterSpacing: 0.0,
+                                                              ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -497,14 +621,135 @@ class _PodcastDetailsZeenatWidgetState
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                  textAlign: TextAlign.justify,
+                                                        color: Colors.black,
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 12.0
+                                                            : 8.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
                                                 ),
-                                              ],
+                                                textAlign: TextAlign.justify,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        desktop: false,
+                                      ))
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 20.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.85,
+                                              decoration: BoxDecoration(),
+                                              child: RichText(
+                                                textScaler:
+                                                    MediaQuery.of(context)
+                                                        .textScaler,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text:
+                                                          'India\'s MSME sector is resilient but that doesn\'t mean lenders should deploy capital indiscriminately. In this crucial conversation, Zeenat Hamirani, Chief Risk Officer at L&T Finance, breaks down what sustainable MSME growth requires: good data, disciplined decision-making, and moving beyond fragmented credit signals.',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color: Colors.black,
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 12.0
+                                                            : 8.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                                textAlign: TextAlign.justify,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0,
@@ -591,7 +836,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                         padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             20.0,
-                                                                            20.0,
+                                                                            0.0,
                                                                             20.0),
                                                                         child:
                                                                             SingleChildScrollView(
@@ -1259,7 +1504,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(SizedBox(width: 25.0)),
+                                                                                                      ],
                                                                                                     ),
                                                                                                   ),
                                                                                                   Align(
@@ -1268,7 +1513,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                       padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                                                                                                       child: Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
-                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                                         children: [
                                                                                                           Container(
                                                                                                             child: wrapWithModel(
@@ -1290,7 +1535,7 @@ class _PodcastDetailsZeenatWidgetState
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
-                                                                                                        ].divide(SizedBox(width: 25.0)),
+                                                                                                        ],
                                                                                                       ),
                                                                                                     ),
                                                                                                   ),
@@ -1949,12 +2194,12 @@ class _PodcastDetailsZeenatWidgetState
                                                       Container(
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesBudgetModel1,
+                                                              .exploreEpisodesBudgetWithContainerModel1,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ExploreEpisodesBudgetWidget(),
+                                                              ExploreEpisodesBudgetWithContainerWidget(),
                                                         ),
                                                       ),
                                                     ],
@@ -1978,12 +2223,12 @@ class _PodcastDetailsZeenatWidgetState
                                                             BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesBudgetModel2,
+                                                              .exploreEpisodesBudgetWithContainerModel2,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ExploreEpisodesBudgetWidget(),
+                                                              ExploreEpisodesBudgetWithContainerWidget(),
                                                         ),
                                                       ),
                                                     ],

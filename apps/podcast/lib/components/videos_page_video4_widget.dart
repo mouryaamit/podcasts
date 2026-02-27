@@ -350,7 +350,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),

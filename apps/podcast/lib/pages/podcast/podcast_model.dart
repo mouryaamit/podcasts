@@ -1,7 +1,9 @@
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_budget_widget.dart';
+import '/components/explore_episodes_budget_with_container_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/featured_episode_card_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
@@ -36,14 +38,16 @@ class PodcastModel extends FlutterFlowModel<PodcastWidget> {
   late ChoiceChipsModel choiceChipsModel;
   // Model for featuredEpisodeCard component.
   late FeaturedEpisodeCardModel featuredEpisodeCardModel;
+  // Model for ExploreEpisodesBudgetWithContainer component.
+  late ExploreEpisodesBudgetWithContainerModel
+      exploreEpisodesBudgetWithContainerModel;
+  // Model for ExploreEpisodesZeenatWithContainer component.
+  late ExploreEpisodesZeenatWithContainerModel
+      exploreEpisodesZeenatWithContainerModel;
   // Model for ExploreEpisodesBudget component.
-  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel1;
+  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel;
   // Model for ExploreEpisodesZeenat component.
-  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel1;
-  // Model for ExploreEpisodesBudget component.
-  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel2;
-  // Model for ExploreEpisodesZeenat component.
-  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel2;
+  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel;
   // Model for ShortsTirthankar component.
   late ShortsTirthankarModel shortsTirthankarModel;
   // Model for ShortsSrivats component.
@@ -77,13 +81,13 @@ class PodcastModel extends FlutterFlowModel<PodcastWidget> {
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
     featuredEpisodeCardModel =
         createModel(context, () => FeaturedEpisodeCardModel());
-    exploreEpisodesBudgetModel1 =
+    exploreEpisodesBudgetWithContainerModel =
+        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
+    exploreEpisodesZeenatWithContainerModel =
+        createModel(context, () => ExploreEpisodesZeenatWithContainerModel());
+    exploreEpisodesBudgetModel =
         createModel(context, () => ExploreEpisodesBudgetModel());
-    exploreEpisodesZeenatModel1 =
-        createModel(context, () => ExploreEpisodesZeenatModel());
-    exploreEpisodesBudgetModel2 =
-        createModel(context, () => ExploreEpisodesBudgetModel());
-    exploreEpisodesZeenatModel2 =
+    exploreEpisodesZeenatModel =
         createModel(context, () => ExploreEpisodesZeenatModel());
     shortsTirthankarModel = createModel(context, () => ShortsTirthankarModel());
     shortsSrivatsModel = createModel(context, () => ShortsSrivatsModel());
@@ -111,10 +115,10 @@ class PodcastModel extends FlutterFlowModel<PodcastWidget> {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
     featuredEpisodeCardModel.dispose();
-    exploreEpisodesBudgetModel1.dispose();
-    exploreEpisodesZeenatModel1.dispose();
-    exploreEpisodesBudgetModel2.dispose();
-    exploreEpisodesZeenatModel2.dispose();
+    exploreEpisodesBudgetWithContainerModel.dispose();
+    exploreEpisodesZeenatWithContainerModel.dispose();
+    exploreEpisodesBudgetModel.dispose();
+    exploreEpisodesZeenatModel.dispose();
     shortsTirthankarModel.dispose();
     shortsSrivatsModel.dispose();
     shortsZeenatModel.dispose();

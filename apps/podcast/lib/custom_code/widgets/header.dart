@@ -32,17 +32,24 @@ class _HeaderState extends State<Header> {
   Widget _buildLogo() {
     return Padding(
       padding: const EdgeInsets.only(left: 50),
-      child: Image.network(
-        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/harshitha-layouts-9zffxj/assets/teod0zlpx7g6/logo.png',
-        width: 248,
-        height: 65,
-        fit: BoxFit.contain,
-        errorBuilder: (context, error, stackTrace) {
-          return const Text(
-            'Image failed to load',
-            style: TextStyle(color: Colors.red),
+      child: InkWell(
+        onTap: () async {
+          await launchURL(
+            'https://www.sumpoorn.in/home',
           );
         },
+        child: Image.network(
+          'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/harshitha-layouts-9zffxj/assets/teod0zlpx7g6/logo.png',
+          width: 248,
+          height: 65,
+          fit: BoxFit.contain,
+          errorBuilder: (context, error, stackTrace) {
+            return const Text(
+              'Image failed to load',
+              style: TextStyle(color: Colors.red),
+            );
+          },
+        ),
       ),
     );
   }

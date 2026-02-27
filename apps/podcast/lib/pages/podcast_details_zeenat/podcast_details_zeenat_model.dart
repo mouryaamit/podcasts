@@ -1,7 +1,7 @@
 import '/components/choice_chips_widget.dart';
 import '/components/conversation_zeenat_widget.dart';
 import '/components/desktop_footer_widget.dart';
-import '/components/explore_episodes_budget_widget.dart';
+import '/components/explore_episodes_budget_with_container_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_zeenat_details1_widget.dart';
@@ -40,7 +40,9 @@ class PodcastDetailsZeenatModel
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
   // Model for YoutubePlayerZeenat component.
-  late YoutubePlayerZeenatModel youtubePlayerZeenatModel;
+  late YoutubePlayerZeenatModel youtubePlayerZeenatModel1;
+  // Model for YoutubePlayerZeenat component.
+  late YoutubePlayerZeenatModel youtubePlayerZeenatModel2;
   // Model for ShortsZeenat component.
   late ShortsZeenatModel shortsZeenatModel1;
   // Model for ShortsZeenatDetails1 component.
@@ -75,10 +77,12 @@ class PodcastDetailsZeenatModel
   late SpeakerModel speakerModel2;
   // Model for Speaker component.
   late SpeakerModel speakerModel3;
-  // Model for ExploreEpisodesBudget component.
-  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel1;
-  // Model for ExploreEpisodesBudget component.
-  late ExploreEpisodesBudgetModel exploreEpisodesBudgetModel2;
+  // Model for ExploreEpisodesBudgetWithContainer component.
+  late ExploreEpisodesBudgetWithContainerModel
+      exploreEpisodesBudgetWithContainerModel1;
+  // Model for ExploreEpisodesBudgetWithContainer component.
+  late ExploreEpisodesBudgetWithContainerModel
+      exploreEpisodesBudgetWithContainerModel2;
   // Model for MobileFooter component.
   late MobileFooterModel mobileFooterModel;
   // Model for DesktopFooter component.
@@ -88,7 +92,9 @@ class PodcastDetailsZeenatModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerZeenatModel =
+    youtubePlayerZeenatModel1 =
+        createModel(context, () => YoutubePlayerZeenatModel());
+    youtubePlayerZeenatModel2 =
         createModel(context, () => YoutubePlayerZeenatModel());
     shortsZeenatModel1 = createModel(context, () => ShortsZeenatModel());
     shortsZeenatDetails1Model1 =
@@ -115,10 +121,10 @@ class PodcastDetailsZeenatModel
     speakerModel1 = createModel(context, () => SpeakerModel());
     speakerModel2 = createModel(context, () => SpeakerModel());
     speakerModel3 = createModel(context, () => SpeakerModel());
-    exploreEpisodesBudgetModel1 =
-        createModel(context, () => ExploreEpisodesBudgetModel());
-    exploreEpisodesBudgetModel2 =
-        createModel(context, () => ExploreEpisodesBudgetModel());
+    exploreEpisodesBudgetWithContainerModel1 =
+        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
+    exploreEpisodesBudgetWithContainerModel2 =
+        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
     mobileFooterModel = createModel(context, () => MobileFooterModel());
     desktopFooterModel = createModel(context, () => DesktopFooterModel());
   }
@@ -127,7 +133,8 @@ class PodcastDetailsZeenatModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerZeenatModel.dispose();
+    youtubePlayerZeenatModel1.dispose();
+    youtubePlayerZeenatModel2.dispose();
     shortsZeenatModel1.dispose();
     shortsZeenatDetails1Model1.dispose();
     shortsZeenatDetails2Model1.dispose();
@@ -145,8 +152,8 @@ class PodcastDetailsZeenatModel
     speakerModel1.dispose();
     speakerModel2.dispose();
     speakerModel3.dispose();
-    exploreEpisodesBudgetModel1.dispose();
-    exploreEpisodesBudgetModel2.dispose();
+    exploreEpisodesBudgetWithContainerModel1.dispose();
+    exploreEpisodesBudgetWithContainerModel2.dispose();
     mobileFooterModel.dispose();
     desktopFooterModel.dispose();
   }

@@ -1,7 +1,9 @@
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_budget_widget.dart';
+import '/components/explore_episodes_budget_with_container_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/featured_episode_card_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
@@ -320,14 +322,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 tablet: false,
                                               ))
                                                 Container(
-                                                  decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesBudgetModel1,
+                                                        .exploreEpisodesBudgetWithContainerModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
-                                                        ExploreEpisodesBudgetWidget(),
+                                                        ExploreEpisodesBudgetWithContainerWidget(),
                                                   ),
                                                 ),
                                               if (responsiveVisibility(
@@ -336,14 +337,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 tablet: false,
                                               ))
                                                 Container(
-                                                  decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesZeenatModel1,
+                                                        .exploreEpisodesZeenatWithContainerModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
-                                                        ExploreEpisodesZeenatWidget(),
+                                                        ExploreEpisodesZeenatWithContainerWidget(),
                                                   ),
                                                 ),
                                             ],
@@ -370,7 +370,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesBudgetModel2,
+                                                        .exploreEpisodesBudgetModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:
@@ -386,7 +386,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   decoration: BoxDecoration(),
                                                   child: wrapWithModel(
                                                     model: _model
-                                                        .exploreEpisodesZeenatModel2,
+                                                        .exploreEpisodesZeenatModel,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
                                                     child:

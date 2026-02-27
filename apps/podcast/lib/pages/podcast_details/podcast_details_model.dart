@@ -4,6 +4,7 @@ import '/components/budget_timestamp_widget.dart';
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
@@ -39,7 +40,9 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
   // Model for YoutubePlayer component.
-  late YoutubePlayerModel youtubePlayerModel;
+  late YoutubePlayerModel youtubePlayerModel1;
+  // Model for YoutubePlayer component.
+  late YoutubePlayerModel youtubePlayerModel2;
   // Model for ShortsBudgetKrishnan component.
   late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel1;
   // Model for ShortsBudgetLaveesh component.
@@ -78,10 +81,11 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   late SpeakerModel speakerModel4;
   // Model for Speaker component.
   late SpeakerModel speakerModel5;
+  // Model for ExploreEpisodesZeenatWithContainer component.
+  late ExploreEpisodesZeenatWithContainerModel
+      exploreEpisodesZeenatWithContainerModel;
   // Model for ExploreEpisodesZeenat component.
-  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel1;
-  // Model for ExploreEpisodesZeenat component.
-  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel2;
+  late ExploreEpisodesZeenatModel exploreEpisodesZeenatModel;
   // Model for MobileFooter component.
   late MobileFooterModel mobileFooterModel;
   // Model for DesktopFooter component.
@@ -91,7 +95,8 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerModel = createModel(context, () => YoutubePlayerModel());
+    youtubePlayerModel1 = createModel(context, () => YoutubePlayerModel());
+    youtubePlayerModel2 = createModel(context, () => YoutubePlayerModel());
     shortsBudgetKrishnanModel1 =
         createModel(context, () => ShortsBudgetKrishnanModel());
     shortsBudgetLaveeshModel1 =
@@ -121,9 +126,9 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     speakerModel3 = createModel(context, () => SpeakerModel());
     speakerModel4 = createModel(context, () => SpeakerModel());
     speakerModel5 = createModel(context, () => SpeakerModel());
-    exploreEpisodesZeenatModel1 =
-        createModel(context, () => ExploreEpisodesZeenatModel());
-    exploreEpisodesZeenatModel2 =
+    exploreEpisodesZeenatWithContainerModel =
+        createModel(context, () => ExploreEpisodesZeenatWithContainerModel());
+    exploreEpisodesZeenatModel =
         createModel(context, () => ExploreEpisodesZeenatModel());
     mobileFooterModel = createModel(context, () => MobileFooterModel());
     desktopFooterModel = createModel(context, () => DesktopFooterModel());
@@ -133,7 +138,8 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerModel.dispose();
+    youtubePlayerModel1.dispose();
+    youtubePlayerModel2.dispose();
     shortsBudgetKrishnanModel1.dispose();
     shortsBudgetLaveeshModel1.dispose();
     shortsBudgetAnilModel1.dispose();
@@ -153,8 +159,8 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     speakerModel3.dispose();
     speakerModel4.dispose();
     speakerModel5.dispose();
-    exploreEpisodesZeenatModel1.dispose();
-    exploreEpisodesZeenatModel2.dispose();
+    exploreEpisodesZeenatWithContainerModel.dispose();
+    exploreEpisodesZeenatModel.dispose();
     mobileFooterModel.dispose();
     desktopFooterModel.dispose();
   }

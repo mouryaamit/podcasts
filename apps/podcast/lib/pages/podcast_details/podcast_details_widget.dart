@@ -4,6 +4,7 @@ import '/components/budget_timestamp_widget.dart';
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
+import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
@@ -228,30 +229,9 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 30.0, 0.0, 0.0),
                                           child: Container(
-                                            width: valueOrDefault<double>(
-                                              () {
-                                                if (MediaQuery.sizeOf(context)
-                                                        .width <
-                                                    valueOrDefault<double>(
-                                                      kBreakpointSmall,
-                                                      900.0,
-                                                    )) {
-                                                  return 350;
-                                                } else if (MediaQuery.sizeOf(
-                                                            context)
-                                                        .width >
-                                                    valueOrDefault<double>(
-                                                      kBreakpointLarge,
-                                                      900.0,
-                                                    )) {
-                                                  return 1200;
-                                                } else {
-                                                  return 1200;
-                                                }
-                                              }()
-                                                  .toDouble(),
-                                              1200.0,
-                                            ),
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.85,
                                             height: valueOrDefault<double>(
                                               () {
                                                 if (MediaQuery.sizeOf(context)
@@ -260,7 +240,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       kBreakpointSmall,
                                                       900.0,
                                                     )) {
-                                                  return 318;
+                                                  return 345;
                                                 } else if (MediaQuery.sizeOf(
                                                             context)
                                                         .width >
@@ -313,35 +293,11 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             BorderRadius
                                                                 .circular(20.0),
                                                         child: Container(
-                                                          width: valueOrDefault<
-                                                              double>(
-                                                            () {
-                                                              if (MediaQuery.sizeOf(
+                                                          width:
+                                                              MediaQuery.sizeOf(
                                                                           context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 397;
-                                                              } else if (MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .width >
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointLarge,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 1200;
-                                                              } else {
-                                                                return 1200;
-                                                              }
-                                                            }()
-                                                                .toDouble(),
-                                                            1200.0,
-                                                          ),
+                                                                      .width *
+                                                                  1.0,
                                                           height:
                                                               valueOrDefault<
                                                                   double>(
@@ -354,7 +310,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                     kBreakpointSmall,
                                                                     900.0,
                                                                   )) {
-                                                                return 318;
+                                                                return 345;
                                                               } else if (MediaQuery
                                                                           .sizeOf(
                                                                               context)
@@ -389,7 +345,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             child:
                                                                 wrapWithModel(
                                                               model: _model
-                                                                  .youtubePlayerModel,
+                                                                  .youtubePlayerModel1,
                                                               updateCallback: () =>
                                                                   safeSetState(
                                                                       () {}),
@@ -407,6 +363,201 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                           ),
                                         ),
                                       ),
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                        tablet: false,
+                                        tabletLandscape: false,
+                                        desktop: false,
+                                      ))
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 30.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: valueOrDefault<double>(
+                                                () {
+                                                  if (MediaQuery.sizeOf(context)
+                                                          .width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )) {
+                                                    return 350;
+                                                  } else if (MediaQuery.sizeOf(
+                                                              context)
+                                                          .width >
+                                                      valueOrDefault<double>(
+                                                        kBreakpointLarge,
+                                                        900.0,
+                                                      )) {
+                                                    return 1200;
+                                                  } else {
+                                                    return 1200;
+                                                  }
+                                                }()
+                                                    .toDouble(),
+                                                1200.0,
+                                              ),
+                                              height: valueOrDefault<double>(
+                                                () {
+                                                  if (MediaQuery.sizeOf(context)
+                                                          .width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )) {
+                                                    return 318;
+                                                  } else if (MediaQuery.sizeOf(
+                                                              context)
+                                                          .width >
+                                                      valueOrDefault<double>(
+                                                        kBreakpointLarge,
+                                                        900.0,
+                                                      )) {
+                                                    return 674;
+                                                  } else {
+                                                    return 674;
+                                                  }
+                                                }()
+                                                    .toDouble(),
+                                                674.0,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    blurRadius: 40.0,
+                                                    color: Color(0xFFD0D0D0),
+                                                    offset: Offset(
+                                                      -12.0,
+                                                      12.0,
+                                                    ),
+                                                    spreadRadius: 0.0,
+                                                  )
+                                                ],
+                                                borderRadius:
+                                                    BorderRadius.circular(20.0),
+                                              ),
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                    0.0, 0.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Expanded(
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      20.0),
+                                                          child: Container(
+                                                            width:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              () {
+                                                                if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width <
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointSmall,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 397;
+                                                                } else if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width >
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointLarge,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 1200;
+                                                                } else {
+                                                                  return 1200;
+                                                                }
+                                                              }()
+                                                                  .toDouble(),
+                                                              1200.0,
+                                                            ),
+                                                            height:
+                                                                valueOrDefault<
+                                                                    double>(
+                                                              () {
+                                                                if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width <
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointSmall,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 318;
+                                                                } else if (MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width >
+                                                                    valueOrDefault<
+                                                                        double>(
+                                                                      kBreakpointLarge,
+                                                                      900.0,
+                                                                    )) {
+                                                                  return 674;
+                                                                } else {
+                                                                  return 674;
+                                                                }
+                                                              }()
+                                                                  .toDouble(),
+                                                              674.0,
+                                                            ),
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          20.0),
+                                                            ),
+                                                            alignment:
+                                                                AlignmentDirectional(
+                                                                    0.0, 0.0),
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.0, 0.0),
+                                                              child:
+                                                                  wrapWithModel(
+                                                                model: _model
+                                                                    .youtubePlayerModel2,
+                                                                updateCallback: () =>
+                                                                    safeSetState(
+                                                                        () {}),
+                                                                child:
+                                                                    YoutubePlayerWidget(),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                       if (responsiveVisibility(
                                         context: context,
                                         phone: false,
@@ -1375,7 +1526,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(SizedBox(width: 25.0)),
+                                                                                                      ],
                                                                                                     ),
                                                                                                   ),
                                                                                                   Align(
@@ -1407,7 +1558,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
-                                                                                                        ].divide(SizedBox(width: 25.0)),
+                                                                                                        ],
                                                                                                       ),
                                                                                                     ),
                                                                                                   ),
@@ -2108,12 +2259,12 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesZeenatModel1,
+                                                              .exploreEpisodesZeenatWithContainerModel,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ExploreEpisodesZeenatWidget(),
+                                                              ExploreEpisodesZeenatWithContainerWidget(),
                                                         ),
                                                       ),
                                                     ],
@@ -2137,7 +2288,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesZeenatModel2,
+                                                              .exploreEpisodesZeenatModel,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),

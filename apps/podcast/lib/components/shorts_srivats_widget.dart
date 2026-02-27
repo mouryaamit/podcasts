@@ -64,7 +64,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 392.0,
+                width: MediaQuery.sizeOf(context).width * 0.27,
                 height: 557.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -87,16 +87,20 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: 359.0,
+                          width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 359.0,
+                          constraints: BoxConstraints(
+                            minHeight: 359.0,
+                            maxHeight: 359.0,
+                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/2emqy_5.png',
+                              'assets/images/shorts_srivatsram_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -104,7 +108,10 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
-                            width: 359.0,
+                            width: MediaQuery.sizeOf(context).width * 1.0,
+                            constraints: BoxConstraints(
+                              minHeight: 48.0,
+                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -140,7 +147,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
-                            width: 359.0,
+                            width: MediaQuery.sizeOf(context).width * 1.0,
                             decoration: BoxDecoration(),
                             child: Text(
                               'MSME Conversations • August 2025 • 1.31 min',
@@ -314,7 +321,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/shorts_srivats_image.png',
+                              'assets/images/shorts_srivatsram_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
                               fit: BoxFit.cover,
