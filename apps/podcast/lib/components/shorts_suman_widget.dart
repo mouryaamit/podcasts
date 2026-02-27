@@ -97,6 +97,7 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_suman_web'),
                               'assets/images/shorts_suman_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -321,6 +322,7 @@ class _ShortsSumanWidgetState extends State<ShortsSumanWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_suman_m'),
                               'assets/images/shorts_suman_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,

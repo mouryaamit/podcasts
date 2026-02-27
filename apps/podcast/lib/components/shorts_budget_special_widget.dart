@@ -98,6 +98,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_budget_web'),
                               'assets/images/budget_special_shorts.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -323,6 +324,7 @@ class _ShortsBudgetSpecialWidgetState extends State<ShortsBudgetSpecialWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_budget_m'),
                               'assets/images/budget_special_shorts.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,

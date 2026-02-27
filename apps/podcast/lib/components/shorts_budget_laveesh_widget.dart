@@ -98,6 +98,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_laveesh_web'),
                               'assets/images/shorts_budget_laveesh_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -323,6 +324,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_laveesh_m'),
                               'assets/images/shorts_budget_laveesh_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,

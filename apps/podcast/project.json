@@ -7,7 +7,7 @@
     "serve": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "flutter run -d chrome --web-port=4200",
+        "command": "flutter run -d chrome --web-port=4200 --hot",
         "cwd": "apps/podcast"
       }
     },
@@ -18,7 +18,7 @@
       },
       "configurations": {
         "development": {
-          "command": "flutter build web --base-href '/resources/' --output ../../dist/resources_ui"
+          "command": "flutter build web --base-href '/resources/' --output ../../dist/resources_ui --release"
         },
         "production": {
           "command": "flutter build web --base-href '/resources/' --output ../../dist/resources_ui --release"

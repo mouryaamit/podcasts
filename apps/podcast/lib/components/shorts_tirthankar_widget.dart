@@ -97,6 +97,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_thirthankar_web'),
                               'assets/images/shorts_thirthankar_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -321,6 +322,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
+                              key: ValueKey('shorts_thirthankar_m'),
                               'assets/images/shorts_thirthankar_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,

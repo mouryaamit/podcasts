@@ -95,79 +95,68 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                           children: [
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height * 0.3,
+                              height: MediaQuery.sizeOf(context).height *
+                                  (MediaQuery.sizeOf(context).width > 1900.0
+                                      ? 0.2
+                                      : 0.3),
                               decoration: BoxDecoration(),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
+                                  key: ValueKey('exploreEpisode_budget_web'),
                                   'assets/images/budget_explore.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 0.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                decoration: BoxDecoration(),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      constraints: BoxConstraints(
-                                        minHeight: 48.0,
-                                      ),
-                                      decoration: BoxDecoration(),
-                                      child: Text(
-                                        'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w600,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Color(0xFF111827),
-                                              fontSize: 16.0,
-                                              letterSpacing: 0.0,
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    constraints: BoxConstraints(
+                                      minHeight: 48.0,
+                                    ),
+                                    decoration: BoxDecoration(),
+                                    child: Text(
+                                      'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
-                                              lineHeight: 1.5,
                                             ),
-                                      ),
+                                            color: Color(0xFF111827),
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                            lineHeight: 1.5,
+                                          ),
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        'India’s Union Budget 2026 arrives as MSMEs show cautious recovery...',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Color(0xFF374151),
-                                              fontSize: 14.0,
-                                              letterSpacing: 0.0,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Text(
+                                      'India’s Union Budget 2026 arrives as MSMEs show cautious recovery...',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
                                               fontWeight:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -177,11 +166,22 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                        overflow: TextOverflow.clip,
-                                      ),
+                                            color: Color(0xFF374151),
+                                            fontSize: 14.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                      overflow: TextOverflow.clip,
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                             Wrap(
@@ -478,6 +478,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(6.0),
                                 child: Image.asset(
+                                  key: ValueKey('exploreEpisodes_budget_m'),
                                   'assets/images/budget_explore.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
