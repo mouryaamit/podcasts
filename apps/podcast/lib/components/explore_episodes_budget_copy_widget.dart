@@ -8,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'explore_episodes_budget_with_container_model.dart';
-export 'explore_episodes_budget_with_container_model.dart';
+import 'explore_episodes_budget_copy_model.dart';
+export 'explore_episodes_budget_copy_model.dart';
 
-class ExploreEpisodesBudgetWithContainerWidget extends StatefulWidget {
-  const ExploreEpisodesBudgetWithContainerWidget({super.key});
+class ExploreEpisodesBudgetCopyWidget extends StatefulWidget {
+  const ExploreEpisodesBudgetCopyWidget({super.key});
 
   @override
-  State<ExploreEpisodesBudgetWithContainerWidget> createState() =>
-      _ExploreEpisodesBudgetWithContainerWidgetState();
+  State<ExploreEpisodesBudgetCopyWidget> createState() =>
+      _ExploreEpisodesBudgetCopyWidgetState();
 }
 
-class _ExploreEpisodesBudgetWithContainerWidgetState
-    extends State<ExploreEpisodesBudgetWithContainerWidget> {
-  late ExploreEpisodesBudgetWithContainerModel _model;
+class _ExploreEpisodesBudgetCopyWidgetState
+    extends State<ExploreEpisodesBudgetCopyWidget> {
+  late ExploreEpisodesBudgetCopyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -32,8 +32,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
   @override
   void initState() {
     super.initState();
-    _model =
-        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
+    _model = createModel(context, () => ExploreEpisodesBudgetCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -118,34 +117,28 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      constraints: BoxConstraints(
-                                        minHeight: 48.0,
-                                      ),
-                                      decoration: BoxDecoration(),
-                                      child: Text(
-                                        'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w600,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Color(0xFF111827),
-                                              fontSize: 16.0,
-                                              letterSpacing: 0.0,
+                                    Text(
+                                      'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.inter(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
-                                              lineHeight: 1.5,
                                             ),
-                                      ),
+                                            color: Color(0xFF111827),
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                            lineHeight: 1.5,
+                                          ),
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(

@@ -16,7 +16,7 @@
     "update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-podcast --include-assets",
     "serve:podcast:development": "nx run podcast:serve:development",
     "build:podcast:development": "nx run podcast:build-web:development && node tools/scripts/inject-nonce.js resources_ui",
-    "build:podcast:production": "nx run podcast:build-web:production && node tools/scripts/inject-nonce.js resources_ui"
+    "build:podcast:production": "nx run podcast:build-web:production"
 
   },
   "private": true,

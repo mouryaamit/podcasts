@@ -83,16 +83,12 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 359.0,
                           height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -109,9 +105,6 @@ class _ShortsZeenatWidgetState extends State<ShortsZeenatWidget> {
                               0.0, 20.0, 0.0, 0.0),
                           child: Container(
                             width: 359.0,
-                            constraints: BoxConstraints(
-                              minHeight: 48.0,
-                            ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,

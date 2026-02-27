@@ -9,6 +9,7 @@ import '/components/shorts_zeenat_details2_widget.dart';
 import '/components/shorts_zeenat_details3_widget.dart';
 import '/components/shorts_zeenat_widget.dart';
 import '/components/speaker_widget.dart';
+import '/components/youtube_player_with_widget_widget.dart';
 import '/components/zeenat_a_i_summary_widget.dart';
 import '/components/zeenat_timestamp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -382,6 +383,15 @@ class _PodcastDetailsSumitaWidgetState
                                                           alignment:
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
+                                                          child: wrapWithModel(
+                                                            model: _model
+                                                                .youtubePlayerWithWidgetModel,
+                                                            updateCallback: () =>
+                                                                safeSetState(
+                                                                    () {}),
+                                                            child:
+                                                                YoutubePlayerWithWidgetWidget(),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),

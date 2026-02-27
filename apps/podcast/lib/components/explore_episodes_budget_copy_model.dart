@@ -4,15 +4,15 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'explore_episodes_zeenat_with_container_widget.dart'
-    show ExploreEpisodesZeenatWithContainerWidget;
+import 'explore_episodes_budget_copy_widget.dart'
+    show ExploreEpisodesBudgetCopyWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-class ExploreEpisodesZeenatWithContainerModel
-    extends FlutterFlowModel<ExploreEpisodesZeenatWithContainerWidget> {
+class ExploreEpisodesBudgetCopyModel
+    extends FlutterFlowModel<ExploreEpisodesBudgetCopyWidget> {
   @override
   void initState(BuildContext context) {}
 
