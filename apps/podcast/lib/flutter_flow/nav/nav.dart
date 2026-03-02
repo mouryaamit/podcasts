@@ -76,6 +76,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: PodcastDetailsZeenatWidget.routeName,
           path: PodcastDetailsZeenatWidget.routePath,
           builder: (context, params) => PodcastDetailsZeenatWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsTirthankarWidget.routeName,
+          path: PodcastDetailsTirthankarWidget.routePath,
+          builder: (context, params) => PodcastDetailsTirthankarWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsSumanWidget.routeName,
+          path: PodcastDetailsSumanWidget.routePath,
+          builder: (context, params) => PodcastDetailsSumanWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsRahulWidget.routeName,
+          path: PodcastDetailsRahulWidget.routePath,
+          builder: (context, params) => PodcastDetailsRahulWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsSrivatsRamWidget.routeName,
+          path: PodcastDetailsSrivatsRamWidget.routePath,
+          builder: (context, params) => PodcastDetailsSrivatsRamWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
