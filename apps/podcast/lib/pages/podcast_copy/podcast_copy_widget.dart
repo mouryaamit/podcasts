@@ -2,7 +2,7 @@ import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/explore_episodes_budget_widget.dart';
 import '/components/explore_episodes_zeenat_widget.dart';
-import '/components/featured_episode_card_copy_widget.dart';
+import '/components/featured_episode_card_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/shorts_budget_anil_widget.dart';
@@ -143,6 +143,9 @@ class _PodcastCopyWidgetState extends State<PodcastCopyWidget> {
                     Expanded(
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
+                        constraints: BoxConstraints(
+                          maxWidth: 1200.0,
+                        ),
                         decoration: BoxDecoration(),
                         child: SingleChildScrollView(
                           child: Column(
@@ -242,12 +245,11 @@ class _PodcastCopyWidgetState extends State<PodcastCopyWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         wrapWithModel(
-                                          model: _model
-                                              .featuredEpisodeCardCopyModel,
+                                          model:
+                                              _model.featuredEpisodeCardModel,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child:
-                                              FeaturedEpisodeCardCopyWidget(),
+                                          child: FeaturedEpisodeCardWidget(),
                                         ),
                                       ],
                                     ),

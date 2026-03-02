@@ -64,13 +64,9 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                   borderRadius: BorderRadius.circular(12.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.4,
-                    height: MediaQuery.sizeOf(context).width >
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              2000.0,
-                            )
-                        ? 550.0
-                        : 445.0,
+                    height: MediaQuery.sizeOf(context).width >= 1920.0
+                        ? 600.0
+                        : 510.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
@@ -95,16 +91,15 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                           children: [
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height *
-                                  (MediaQuery.sizeOf(context).width > 1900.0
-                                      ? 0.2
-                                      : 0.3),
+                              height: MediaQuery.sizeOf(context).width >= 1920.0
+                                  ? 350.0
+                                  : 300.0,
                               decoration: BoxDecoration(),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
                                   key: ValueKey('exploreEpisode_budget_web'),
-                                  'assets/images/budget_explore.png',
+                                  'assets/images/explore_budget_thumbnail_png.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -194,12 +189,36 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                               verticalDirection: VerticalDirection.down,
                               clipBehavior: Clip.none,
                               children: [
-                                Text(
-                                  'MSME Conversations • February 2026 • 45 min',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.inter(
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0,
+                                      valueOrDefault<double>(
+                                        MediaQuery.sizeOf(context).width >=
+                                                1920.0
+                                            ? 0.0
+                                            : 10.0,
+                                        0.0,
+                                      ),
+                                      0.0,
+                                      0.0),
+                                  child: Text(
+                                    'MSME Conversations • February 2026 • 45 min',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF6B7280),
+                                          fontSize: 13.0,
+                                          letterSpacing: 0.0,
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -209,16 +228,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color: Color(0xFF6B7280),
-                                        fontSize: 13.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -483,7 +493,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -541,7 +551,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead...',
+                                    'India’s Union Budget 2026 arrives as MSMEs show cautious recovery...',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

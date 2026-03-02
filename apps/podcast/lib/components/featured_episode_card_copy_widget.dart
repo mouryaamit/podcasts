@@ -386,7 +386,7 @@ class _FeaturedEpisodeCardCopyWidgetState
                                   borderRadius: BorderRadius.circular(16.0),
                                   child: Image.asset(
                                     'assets/images/Featured_Episode_sumpoorn_podcast_Image_(2).png',
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                   ),
                                 ),
                               ),
@@ -488,7 +488,7 @@ class _FeaturedEpisodeCardCopyWidgetState
                                         height:
                                             MediaQuery.sizeOf(context).height *
                                                 1.0,
-                                        fit: BoxFit.contain,
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
                                   ),

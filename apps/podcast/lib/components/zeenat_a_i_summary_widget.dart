@@ -192,6 +192,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -208,6 +209,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -225,6 +227,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -241,6 +244,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -258,6 +262,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -274,6 +279,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -291,6 +297,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -307,6 +314,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -324,6 +332,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -340,6 +349,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -357,6 +367,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -373,6 +384,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -390,6 +402,7 @@ class _ZeenatAISummaryWidgetState extends State<ZeenatAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:

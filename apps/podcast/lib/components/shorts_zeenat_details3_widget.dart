@@ -90,11 +90,7 @@ class _ShortsZeenatDetails3WidgetState
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -152,7 +148,7 @@ class _ShortsZeenatDetails3WidgetState
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • June 2025 • 1.06 min',
+                              'MSME Conversations • July 2025 • 1.06 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -327,7 +323,7 @@ class _ShortsZeenatDetails3WidgetState
                               'assets/images/shorts_zeenat_details3_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -338,6 +334,9 @@ class _ShortsZeenatDetails3WidgetState
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'What Data Reveals About MSME Resilience?',
@@ -357,6 +356,7 @@ class _ShortsZeenatDetails3WidgetState
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),
@@ -372,7 +372,7 @@ class _ShortsZeenatDetails3WidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 \n• 1.06 min',
+                                'MSME Conversations • July 2025 \n• 1.06 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

@@ -3,7 +3,6 @@ import '/components/budget_conversation_widget.dart';
 import '/components/budget_timestamp_widget.dart';
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
-import '/components/explore_episodes_zeenat_widget.dart';
 import '/components/explore_episodes_zeenat_with_container_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
@@ -283,75 +282,71 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.center,
                                                 children: [
-                                                  Expanded(
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(20.0),
-                                                        child: Container(
-                                                          width:
-                                                              MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width *
-                                                                  1.0,
-                                                          height:
-                                                              valueOrDefault<
-                                                                  double>(
-                                                            () {
-                                                              if (MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 345;
-                                                              } else if (MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .width >
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointLarge,
-                                                                    900.0,
-                                                                  )) {
-                                                                return 674;
-                                                              } else {
-                                                                return 674;
-                                                              }
-                                                            }()
-                                                                .toDouble(),
-                                                            674.0,
-                                                          ),
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20.0),
-                                                          ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0),
+                                                      child: Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                1.0,
+                                                        height: valueOrDefault<
+                                                            double>(
+                                                          () {
+                                                            if (MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width <
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )) {
+                                                              return 345;
+                                                            } else if (MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointLarge,
+                                                                  900.0,
+                                                                )) {
+                                                              return 674;
+                                                            } else {
+                                                              return 674;
+                                                            }
+                                                          }()
+                                                              .toDouble(),
+                                                          674.0,
+                                                        ),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      20.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
-                                                          child: Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
+                                                          child: wrapWithModel(
+                                                            model: _model
+                                                                .youtubePlayerModel1,
+                                                            updateCallback: () =>
+                                                                safeSetState(
+                                                                    () {}),
                                                             child:
-                                                                wrapWithModel(
-                                                              model: _model
-                                                                  .youtubePlayerModel1,
-                                                              updateCallback: () =>
-                                                                  safeSetState(
-                                                                      () {}),
-                                                              child:
-                                                                  YoutubePlayerWidget(),
-                                                            ),
+                                                                YoutubePlayerWidget(),
                                                           ),
                                                         ),
                                                       ),
@@ -454,99 +449,97 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
-                                                    Expanded(
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      20.0),
-                                                          child: Container(
-                                                            width:
-                                                                valueOrDefault<
-                                                                    double>(
-                                                              () {
-                                                                if (MediaQuery.sizeOf(
-                                                                            context)
-                                                                        .width <
-                                                                    valueOrDefault<
-                                                                        double>(
-                                                                      kBreakpointSmall,
-                                                                      900.0,
-                                                                    )) {
-                                                                  return 397;
-                                                                } else if (MediaQuery.sizeOf(
-                                                                            context)
-                                                                        .width >
-                                                                    valueOrDefault<
-                                                                        double>(
-                                                                      kBreakpointLarge,
-                                                                      900.0,
-                                                                    )) {
-                                                                  return 1200;
-                                                                } else {
-                                                                  return 1200;
-                                                                }
-                                                              }()
-                                                                  .toDouble(),
-                                                              1200.0,
-                                                            ),
-                                                            height:
-                                                                valueOrDefault<
-                                                                    double>(
-                                                              () {
-                                                                if (MediaQuery.sizeOf(
-                                                                            context)
-                                                                        .width <
-                                                                    valueOrDefault<
-                                                                        double>(
-                                                                      kBreakpointSmall,
-                                                                      900.0,
-                                                                    )) {
-                                                                  return 318;
-                                                                } else if (MediaQuery.sizeOf(
-                                                                            context)
-                                                                        .width >
-                                                                    valueOrDefault<
-                                                                        double>(
-                                                                      kBreakpointLarge,
-                                                                      900.0,
-                                                                    )) {
-                                                                  return 674;
-                                                                } else {
-                                                                  return 674;
-                                                                }
-                                                              }()
-                                                                  .toDouble(),
-                                                              674.0,
-                                                            ),
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          20.0),
-                                                            ),
+                                                    Align(
+                                                      alignment:
+                                                          AlignmentDirectional(
+                                                              0.0, 0.0),
+                                                      child: ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20.0),
+                                                        child: Container(
+                                                          width: valueOrDefault<
+                                                              double>(
+                                                            () {
+                                                              if (MediaQuery.sizeOf(
+                                                                          context)
+                                                                      .width <
+                                                                  valueOrDefault<
+                                                                      double>(
+                                                                    kBreakpointSmall,
+                                                                    900.0,
+                                                                  )) {
+                                                                return 397;
+                                                              } else if (MediaQuery
+                                                                          .sizeOf(
+                                                                              context)
+                                                                      .width >
+                                                                  valueOrDefault<
+                                                                      double>(
+                                                                    kBreakpointLarge,
+                                                                    900.0,
+                                                                  )) {
+                                                                return 1200;
+                                                              } else {
+                                                                return 1200;
+                                                              }
+                                                            }()
+                                                                .toDouble(),
+                                                            1200.0,
+                                                          ),
+                                                          height:
+                                                              valueOrDefault<
+                                                                  double>(
+                                                            () {
+                                                              if (MediaQuery.sizeOf(
+                                                                          context)
+                                                                      .width <
+                                                                  valueOrDefault<
+                                                                      double>(
+                                                                    kBreakpointSmall,
+                                                                    900.0,
+                                                                  )) {
+                                                                return 318;
+                                                              } else if (MediaQuery
+                                                                          .sizeOf(
+                                                                              context)
+                                                                      .width >
+                                                                  valueOrDefault<
+                                                                      double>(
+                                                                    kBreakpointLarge,
+                                                                    900.0,
+                                                                  )) {
+                                                                return 674;
+                                                              } else {
+                                                                return 674;
+                                                              }
+                                                            }()
+                                                                .toDouble(),
+                                                            674.0,
+                                                          ),
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20.0),
+                                                          ),
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Align(
                                                             alignment:
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
-                                                            child: Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.0, 0.0),
+                                                            child:
+                                                                wrapWithModel(
+                                                              model: _model
+                                                                  .youtubePlayerModel2,
+                                                              updateCallback: () =>
+                                                                  safeSetState(
+                                                                      () {}),
                                                               child:
-                                                                  wrapWithModel(
-                                                                model: _model
-                                                                    .youtubePlayerModel2,
-                                                                updateCallback: () =>
-                                                                    safeSetState(
-                                                                        () {}),
-                                                                child:
-                                                                    YoutubePlayerWidget(),
-                                                              ),
+                                                                  YoutubePlayerWidget(),
                                                             ),
                                                           ),
                                                         ),
@@ -845,7 +838,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                             0.0,
                                                                             20.0,
                                                                             0.0,
-                                                                            20.0),
+                                                                            0.0),
                                                                         child:
                                                                             SingleChildScrollView(
                                                                           scrollDirection:
@@ -1016,34 +1009,72 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           child:
-                                                                              Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                10.0,
-                                                                                0.0,
-                                                                                0.0),
+                                                                              SingleChildScrollView(
                                                                             child:
-                                                                                SingleChildScrollView(
-                                                                              child: Column(
-                                                                                mainAxisSize: MainAxisSize.min,
-                                                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                children: [
-                                                                                  Stack(
-                                                                                    children: [
-                                                                                      Builder(
-                                                                                        builder: (context) {
-                                                                                          if (_model.selectedIndex == 1) {
-                                                                                            return Container(
-                                                                                              width: 945.74,
-                                                                                              decoration: BoxDecoration(),
-                                                                                              child: Column(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                children: [
-                                                                                                  Row(
-                                                                                                    mainAxisSize: MainAxisSize.max,
-                                                                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                    children: [
-                                                                                                      Text(
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.min,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                Stack(
+                                                                                  children: [
+                                                                                    Builder(
+                                                                                      builder: (context) {
+                                                                                        if (_model.selectedIndex == 1) {
+                                                                                          return Container(
+                                                                                            width: 945.74,
+                                                                                            decoration: BoxDecoration(),
+                                                                                            child: Column(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              children: [
+                                                                                                Row(
+                                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                  children: [
+                                                                                                    Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                          0.0,
+                                                                                                          valueOrDefault<double>(
+                                                                                                            () {
+                                                                                                              if (MediaQuery.sizeOf(context).width <
+                                                                                                                  valueOrDefault<double>(
+                                                                                                                    kBreakpointSmall,
+                                                                                                                    900.0,
+                                                                                                                  )) {
+                                                                                                                return 40.0;
+                                                                                                              } else if (MediaQuery.sizeOf(context).width >
+                                                                                                                  valueOrDefault<double>(
+                                                                                                                    kBreakpointLarge,
+                                                                                                                    900.0,
+                                                                                                                  )) {
+                                                                                                                return 0.0;
+                                                                                                              } else {
+                                                                                                                return 0.0;
+                                                                                                              }
+                                                                                                            }(),
+                                                                                                            0.0,
+                                                                                                          ),
+                                                                                                          0.0,
+                                                                                                          valueOrDefault<double>(
+                                                                                                            () {
+                                                                                                              if (MediaQuery.sizeOf(context).width <
+                                                                                                                  valueOrDefault<double>(
+                                                                                                                    kBreakpointSmall,
+                                                                                                                    900.0,
+                                                                                                                  )) {
+                                                                                                                return 12.0;
+                                                                                                              } else if (MediaQuery.sizeOf(context).width >
+                                                                                                                  valueOrDefault<double>(
+                                                                                                                    kBreakpointLarge,
+                                                                                                                    900.0,
+                                                                                                                  )) {
+                                                                                                                return 0.0;
+                                                                                                              } else {
+                                                                                                                return 0.0;
+                                                                                                              }
+                                                                                                            }(),
+                                                                                                            0.0,
+                                                                                                          )),
+                                                                                                      child: Text(
                                                                                                         'Highlights',
                                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                               font: GoogleFonts.mulish(
@@ -1057,73 +1088,96 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                             ),
                                                                                                       ),
-                                                                                                    ],
-                                                                                                  ),
-                                                                                                  Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                    child: SingleChildScrollView(
-                                                                                                      scrollDirection: Axis.horizontal,
-                                                                                                      child: Row(
-                                                                                                        mainAxisSize: MainAxisSize.max,
-                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                        children: [
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetKrishnanModel1,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetKrishnanWidget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetLaveeshModel1,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetLaveeshWidget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetAnilModel1,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetAnilWidget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
-                                                                                                              model: _model.shortsBudgetUnniKrishnanModel1,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsBudgetUnniKrishnanWidget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                        ].divide(SizedBox(width: 15.0)),
-                                                                                                      ),
                                                                                                     ),
+                                                                                                  ],
+                                                                                                ),
+                                                                                                SingleChildScrollView(
+                                                                                                  scrollDirection: Axis.horizontal,
+                                                                                                  child: Row(
+                                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                                                                    children: [
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsBudgetKrishnanModel1,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsBudgetKrishnanWidget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsBudgetLaveeshModel1,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsBudgetLaveeshWidget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsBudgetAnilModel1,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsBudgetAnilWidget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                      Container(
+                                                                                                        child: wrapWithModel(
+                                                                                                          model: _model.shortsBudgetUnniKrishnanModel1,
+                                                                                                          updateCallback: () => safeSetState(() {}),
+                                                                                                          child: ShortsBudgetUnniKrishnanWidget(
+                                                                                                            share: () async {},
+                                                                                                            watchNow: () async {},
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ].divide(SizedBox(width: 15.0)),
                                                                                                   ),
-                                                                                                ],
-                                                                                              ),
-                                                                                            );
-                                                                                          } else if (_model.selectedIndex == 2) {
-                                                                                            return Container(
-                                                                                              child: Column(
-                                                                                                mainAxisSize: MainAxisSize.max,
-                                                                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                                children: [
-                                                                                                  Text(
+                                                                                                ),
+                                                                                              ],
+                                                                                            ),
+                                                                                          );
+                                                                                        } else if (_model.selectedIndex == 2) {
+                                                                                          return Container(
+                                                                                            child: Column(
+                                                                                              mainAxisSize: MainAxisSize.max,
+                                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                              children: [
+                                                                                                Padding(
+                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                      0.0,
+                                                                                                      valueOrDefault<double>(
+                                                                                                        () {
+                                                                                                          if (MediaQuery.sizeOf(context).width <
+                                                                                                              valueOrDefault<double>(
+                                                                                                                kBreakpointSmall,
+                                                                                                                900.0,
+                                                                                                              )) {
+                                                                                                            return 40.0;
+                                                                                                          } else if (MediaQuery.sizeOf(context).width >
+                                                                                                              valueOrDefault<double>(
+                                                                                                                kBreakpointLarge,
+                                                                                                                900.0,
+                                                                                                              )) {
+                                                                                                            return 0.0;
+                                                                                                          } else {
+                                                                                                            return 0.0;
+                                                                                                          }
+                                                                                                        }(),
+                                                                                                        0.0,
+                                                                                                      ),
+                                                                                                      0.0,
+                                                                                                      0.0),
+                                                                                                  child: Text(
                                                                                                     'Timestamp',
                                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                          font: GoogleFonts.inter(
+                                                                                                          font: GoogleFonts.mulish(
                                                                                                             fontWeight: FontWeight.w900,
                                                                                                             fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                           ),
@@ -1134,23 +1188,49 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                           fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                         ),
                                                                                                   ),
-                                                                                                  wrapWithModel(
-                                                                                                    model: _model.budgetTimestampModel1,
-                                                                                                    updateCallback: () => safeSetState(() {}),
-                                                                                                    child: BudgetTimestampWidget(),
-                                                                                                  ),
-                                                                                                ],
-                                                                                              ),
-                                                                                            );
-                                                                                          } else if (_model.selectedIndex == 3) {
-                                                                                            return Column(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              children: [
-                                                                                                Row(
-                                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                  children: [
-                                                                                                    Text(
+                                                                                                ),
+                                                                                                wrapWithModel(
+                                                                                                  model: _model.budgetTimestampModel1,
+                                                                                                  updateCallback: () => safeSetState(() {}),
+                                                                                                  child: BudgetTimestampWidget(),
+                                                                                                ),
+                                                                                              ],
+                                                                                            ),
+                                                                                          );
+                                                                                        } else if (_model.selectedIndex == 3) {
+                                                                                          return Column(
+                                                                                            mainAxisSize: MainAxisSize.max,
+                                                                                            children: [
+                                                                                              Row(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                children: [
+                                                                                                  Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                        0.0,
+                                                                                                        valueOrDefault<double>(
+                                                                                                          () {
+                                                                                                            if (MediaQuery.sizeOf(context).width <
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointSmall,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 40.0;
+                                                                                                            } else if (MediaQuery.sizeOf(context).width >
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointLarge,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 0.0;
+                                                                                                            } else {
+                                                                                                              return 0.0;
+                                                                                                            }
+                                                                                                          }(),
+                                                                                                          0.0,
+                                                                                                        ),
+                                                                                                        0.0,
+                                                                                                        0.0),
+                                                                                                    child: Text(
                                                                                                       'AI Summary',
                                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                             font: GoogleFonts.mulish(
@@ -1164,24 +1244,69 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                             fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ],
-                                                                                                ),
-                                                                                                wrapWithModel(
-                                                                                                  model: _model.budgetAISummaryModel1,
-                                                                                                  updateCallback: () => safeSetState(() {}),
-                                                                                                  child: BudgetAISummaryWidget(),
-                                                                                                ),
-                                                                                              ],
-                                                                                            );
-                                                                                          } else {
-                                                                                            return Column(
-                                                                                              mainAxisSize: MainAxisSize.max,
-                                                                                              children: [
-                                                                                                Row(
-                                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                  children: [
-                                                                                                    Text(
+                                                                                                  ),
+                                                                                                ],
+                                                                                              ),
+                                                                                              wrapWithModel(
+                                                                                                model: _model.budgetAISummaryModel1,
+                                                                                                updateCallback: () => safeSetState(() {}),
+                                                                                                child: BudgetAISummaryWidget(),
+                                                                                              ),
+                                                                                            ],
+                                                                                          );
+                                                                                        } else {
+                                                                                          return Column(
+                                                                                            mainAxisSize: MainAxisSize.max,
+                                                                                            children: [
+                                                                                              Row(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                children: [
+                                                                                                  Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                                        0.0,
+                                                                                                        valueOrDefault<double>(
+                                                                                                          () {
+                                                                                                            if (MediaQuery.sizeOf(context).width <
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointSmall,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 40.0;
+                                                                                                            } else if (MediaQuery.sizeOf(context).width >
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointLarge,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 0.0;
+                                                                                                            } else {
+                                                                                                              return 0.0;
+                                                                                                            }
+                                                                                                          }(),
+                                                                                                          0.0,
+                                                                                                        ),
+                                                                                                        0.0,
+                                                                                                        valueOrDefault<double>(
+                                                                                                          () {
+                                                                                                            if (MediaQuery.sizeOf(context).width <
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointSmall,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 12.0;
+                                                                                                            } else if (MediaQuery.sizeOf(context).width >
+                                                                                                                valueOrDefault<double>(
+                                                                                                                  kBreakpointLarge,
+                                                                                                                  900.0,
+                                                                                                                )) {
+                                                                                                              return 0.0;
+                                                                                                            } else {
+                                                                                                              return 0.0;
+                                                                                                            }
+                                                                                                          }(),
+                                                                                                          0.0,
+                                                                                                        )),
+                                                                                                    child: Text(
                                                                                                       'Conversation',
                                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                             font: GoogleFonts.mulish(
@@ -1195,25 +1320,22 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                             fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ],
-                                                                                                ),
-                                                                                                Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                                                                                                  child: wrapWithModel(
-                                                                                                    model: _model.budgetConversationModel1,
-                                                                                                    updateCallback: () => safeSetState(() {}),
-                                                                                                    child: BudgetConversationWidget(),
                                                                                                   ),
-                                                                                                ),
-                                                                                              ],
-                                                                                            );
-                                                                                          }
-                                                                                        },
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
-                                                                                ],
-                                                                              ),
+                                                                                                ],
+                                                                                              ),
+                                                                                              wrapWithModel(
+                                                                                                model: _model.budgetConversationModel1,
+                                                                                                updateCallback: () => safeSetState(() {}),
+                                                                                                child: BudgetConversationWidget(),
+                                                                                              ),
+                                                                                            ],
+                                                                                          );
+                                                                                        }
+                                                                                      },
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ],
                                                                             ),
                                                                           ),
                                                                         ),
@@ -1568,7 +1690,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                                                                     Text(
                                                                                                       'Timestamp',
                                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                            font: GoogleFonts.inter(
+                                                                                                            font: GoogleFonts.mulish(
                                                                                                               fontWeight: FontWeight.w900,
                                                                                                               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                                                             ),
@@ -1801,7 +1923,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                         900.0,
                                                       )
                                                   ? 50.0
-                                                  : 25.0,
+                                                  : 0.0,
                                               0.0,
                                             ),
                                             0.0,
@@ -1818,41 +1940,77 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                'Guest Experts',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.poppins(
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0,
+                                                        valueOrDefault<double>(
+                                                          () {
+                                                            if (MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width <
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )) {
+                                                              return 40.0;
+                                                            } else if (MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointLarge,
+                                                                  900.0,
+                                                                )) {
+                                                              return 0.0;
+                                                            } else {
+                                                              return 0.0;
+                                                            }
+                                                          }(),
+                                                          0.0,
+                                                        ),
+                                                        0.0,
+                                                        0.0),
+                                                child: Text(
+                                                  'Guest Experts',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font:
+                                                            GoogleFonts.mulish(
+                                                          fontWeight:
+                                                              FontWeight.w900,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            Color(0xFF111827),
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 32.0
+                                                            : 18.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w900,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
-                                                      color: Color(0xFF111827),
-                                                      fontSize: MediaQuery.sizeOf(
-                                                                      context)
-                                                                  .width >
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointSmall,
-                                                                900.0,
-                                                              )
-                                                          ? 32.0
-                                                          : 18.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
+                                                ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -1864,7 +2022,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/ibjji7k96agt/Laveesh_Bhandari.png',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/loeydaftmok8/Lavesh.png',
                                                     name:
                                                         'Dr. Laveesh Bhandari',
                                                     description:
@@ -1882,7 +2040,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/n02qy5xay3n1/Anil_Bharadwaj.png',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/6tztslhmgsvl/anil.png',
                                                     name: 'Mr. Anil Bharadwaj',
                                                     description:
                                                         'Secretary General, FISME. Senior MSME policy advocate specialising in trade, exports, and regulatory reform. Member, Economic Advisory Group, Government of Uttar Pradesh.',
@@ -1899,7 +2057,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/lnrttxd9k9c1/Unnikrishnan.png',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/1li3jv9uytdy/unni.png',
                                                     name:
                                                         'Mr. Unnikrishnan Kottekkat',
                                                     description:
@@ -1935,41 +2093,77 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Text(
-                                                'Index Experts',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0,
+                                                        valueOrDefault<double>(
+                                                          () {
+                                                            if (MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width <
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )) {
+                                                              return 40.0;
+                                                            } else if (MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointLarge,
+                                                                  900.0,
+                                                                )) {
+                                                              return 0.0;
+                                                            } else {
+                                                              return 0.0;
+                                                            }
+                                                          }(),
+                                                          0.0,
+                                                        ),
+                                                        0.0,
+                                                        0.0),
+                                                child: Text(
+                                                  'Index Experts',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font:
+                                                            GoogleFonts.mulish(
+                                                          fontWeight:
+                                                              FontWeight.w900,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            Color(0xFF111827),
+                                                        fontSize: MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width >
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  kBreakpointSmall,
+                                                                  900.0,
+                                                                )
+                                                            ? 32.0
+                                                            : 18.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w900,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
-                                                      color: Color(0xFF111827),
-                                                      fontSize: MediaQuery.sizeOf(
-                                                                      context)
-                                                                  .width >
-                                                              valueOrDefault<
-                                                                  double>(
-                                                                kBreakpointSmall,
-                                                                900.0,
-                                                              )
-                                                          ? 32.0
-                                                          : 18.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
+                                                ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
@@ -1981,7 +2175,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/1qk54y1rx95q/sumita_img.png',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/wk9au2cepy0b/Sumita.png',
                                                     name: 'Dr. Sumita Kale',
                                                     description:
                                                         'Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index.',
@@ -1998,7 +2192,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/e8gprS0m5G3loKTVCTdm/assets/xqf2sg9at77x/narsi_img.png',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/5f42qtescxjb/Narsi.png',
                                                     name: 'Mr. Narasimhan V.',
                                                     description:
                                                         'Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology.',
@@ -2016,7 +2210,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                               MediaQuery.sizeOf(context).width >
                                                       900.0
                                                   ? 50.0
-                                                  : 20.0,
+                                                  : 0.0,
                                               0.0,
                                             ),
                                             0.0,
@@ -2037,44 +2231,104 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  Text(
-                                                    'Explore Podcast',
-                                                    textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0.0,
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  () {
+                                                                    if (MediaQuery.sizeOf(context)
+                                                                            .width <
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointSmall,
+                                                                          900.0,
+                                                                        )) {
+                                                                      return 40.0;
+                                                                    } else if (MediaQuery.sizeOf(context)
+                                                                            .width >
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointLarge,
+                                                                          900.0,
+                                                                        )) {
+                                                                      return 0.0;
+                                                                    } else {
+                                                                      return 0.0;
+                                                                    }
+                                                                  }(),
+                                                                  0.0,
+                                                                ),
+                                                                0.0,
+                                                                valueOrDefault<
+                                                                    double>(
+                                                                  () {
+                                                                    if (MediaQuery.sizeOf(context)
+                                                                            .width <
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointSmall,
+                                                                          900.0,
+                                                                        )) {
+                                                                      return 12.0;
+                                                                    } else if (MediaQuery.sizeOf(context)
+                                                                            .width >
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointLarge,
+                                                                          900.0,
+                                                                        )) {
+                                                                      return 0.0;
+                                                                    } else {
+                                                                      return 0.0;
+                                                                    }
+                                                                  }(),
+                                                                  0.0,
+                                                                )),
+                                                    child: Text(
+                                                      'Explore Podcast',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .mulish(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w900,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF111827),
+                                                                fontSize: MediaQuery.sizeOf(context)
+                                                                            .width <
+                                                                        valueOrDefault<
+                                                                            double>(
+                                                                          kBreakpointSmall,
+                                                                          900.0,
+                                                                        )
+                                                                    ? 24.0
+                                                                    : 32.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w900,
+                                                                fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF111827),
-                                                          fontSize: MediaQuery.sizeOf(
-                                                                          context)
-                                                                      .width <
-                                                                  valueOrDefault<
-                                                                      double>(
-                                                                    kBreakpointSmall,
-                                                                    900.0,
-                                                                  )
-                                                              ? 24.0
-                                                              : 32.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
+                                                              ),
+                                                    ),
                                                   ),
                                                   if (responsiveVisibility(
                                                     context: context,
@@ -2251,7 +2505,7 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                             BoxDecoration(),
                                                         child: wrapWithModel(
                                                           model: _model
-                                                              .exploreEpisodesZeenatWithContainerModel,
+                                                              .exploreEpisodesZeenatWithContainerModel1,
                                                           updateCallback: () =>
                                                               safeSetState(
                                                                   () {}),
@@ -2267,29 +2521,23 @@ class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
                                                 tabletLandscape: false,
                                                 desktop: false,
                                               ))
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 15.0, 0.0, 0.0),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Container(
-                                                        decoration:
-                                                            BoxDecoration(),
-                                                        child: wrapWithModel(
-                                                          model: _model
-                                                              .exploreEpisodesZeenatModel,
-                                                          updateCallback: () =>
-                                                              safeSetState(
-                                                                  () {}),
-                                                          child:
-                                                              ExploreEpisodesZeenatWidget(),
-                                                        ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Container(
+                                                      decoration:
+                                                          BoxDecoration(),
+                                                      child: wrapWithModel(
+                                                        model: _model
+                                                            .exploreEpisodesZeenatWithContainerModel2,
+                                                        updateCallback: () =>
+                                                            safeSetState(() {}),
+                                                        child:
+                                                            ExploreEpisodesZeenatWithContainerWidget(),
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
+                                                  ],
                                                 ),
                                             ],
                                           ),

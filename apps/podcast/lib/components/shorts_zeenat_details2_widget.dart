@@ -90,11 +90,7 @@ class _ShortsZeenatDetails2WidgetState
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -153,7 +149,7 @@ class _ShortsZeenatDetails2WidgetState
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • June 2025 • 1.27 min',
+                              'MSME Conversations • July 2025 • 1.27 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -328,7 +324,7 @@ class _ShortsZeenatDetails2WidgetState
                               'assets/images/shorts_zeenat_details2_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -339,6 +335,9 @@ class _ShortsZeenatDetails2WidgetState
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
@@ -358,6 +357,7 @@ class _ShortsZeenatDetails2WidgetState
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),
@@ -373,7 +373,7 @@ class _ShortsZeenatDetails2WidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
-                                'MSME Conversations • June 2025 \n• 1.27 min',
+                                'MSME Conversations • July 2025 \n• 1.27 min',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

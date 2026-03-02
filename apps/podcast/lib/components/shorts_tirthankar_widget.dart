@@ -88,11 +88,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -326,7 +322,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                               'assets/images/shorts_thirthankar_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -337,6 +333,9 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'How Stricter Listing Rules Cut IPOs But Improved Performance',
@@ -356,6 +355,7 @@ class _ShortsTirthankarWidgetState extends State<ShortsTirthankarWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),

@@ -192,6 +192,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -208,6 +209,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -225,6 +227,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -242,6 +245,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -259,6 +263,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -275,6 +280,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -292,6 +298,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -308,6 +315,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -324,6 +332,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.normal,
@@ -339,6 +348,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -356,6 +366,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -372,6 +383,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -389,6 +401,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:
@@ -405,6 +418,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
@@ -422,6 +436,7 @@ class _BudgetAISummaryWidgetState extends State<BudgetAISummaryWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
+                      color: Colors.black,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                       fontWeight:

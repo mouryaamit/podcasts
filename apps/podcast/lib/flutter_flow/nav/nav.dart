@@ -76,21 +76,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: PodcastDetailsZeenatWidget.routeName,
           path: PodcastDetailsZeenatWidget.routePath,
           builder: (context, params) => PodcastDetailsZeenatWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsSumitaWidget.routeName,
-          path: PodcastDetailsSumitaWidget.routePath,
-          builder: (context, params) => PodcastDetailsSumitaWidget(),
-        ),
-        FFRoute(
-          name: PodcastCopyWidget.routeName,
-          path: PodcastCopyWidget.routePath,
-          builder: (context, params) => PodcastCopyWidget(
-            selectedPage: params.getParam(
-              'selectedPage',
-              ParamType.String,
-            ),
-          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
