@@ -11,6 +11,7 @@ import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
+import '/components/youtube_player_rahul_widget.dart';
 import '/components/youtube_player_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -39,10 +40,10 @@ class PodcastDetailsRahulModel
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
+  // Model for YoutubePlayerRahul component.
+  late YoutubePlayerRahulModel youtubePlayerRahulModel;
   // Model for YoutubePlayer component.
-  late YoutubePlayerModel youtubePlayerModel1;
-  // Model for YoutubePlayer component.
-  late YoutubePlayerModel youtubePlayerModel2;
+  late YoutubePlayerModel youtubePlayerModel;
   // Model for ShortsBudgetKrishnan component.
   late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel1;
   // Model for ShortsBudgetLaveesh component.
@@ -96,8 +97,9 @@ class PodcastDetailsRahulModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerModel1 = createModel(context, () => YoutubePlayerModel());
-    youtubePlayerModel2 = createModel(context, () => YoutubePlayerModel());
+    youtubePlayerRahulModel =
+        createModel(context, () => YoutubePlayerRahulModel());
+    youtubePlayerModel = createModel(context, () => YoutubePlayerModel());
     shortsBudgetKrishnanModel1 =
         createModel(context, () => ShortsBudgetKrishnanModel());
     shortsBudgetLaveeshModel1 =
@@ -139,8 +141,8 @@ class PodcastDetailsRahulModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerModel1.dispose();
-    youtubePlayerModel2.dispose();
+    youtubePlayerRahulModel.dispose();
+    youtubePlayerModel.dispose();
     shortsBudgetKrishnanModel1.dispose();
     shortsBudgetLaveeshModel1.dispose();
     shortsBudgetAnilModel1.dispose();

@@ -11,6 +11,7 @@ import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
+import '/components/youtube_player_suman_widget.dart';
 import '/components/youtube_player_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -336,19 +337,14 @@ class _PodcastDetailsSumanWidgetState extends State<PodcastDetailsSumanWidget> {
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 0.0, 0.0),
-                                                        child: Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.0, 0.0),
-                                                          child: wrapWithModel(
-                                                            model: _model
-                                                                .youtubePlayerModel1,
-                                                            updateCallback: () =>
-                                                                safeSetState(
-                                                                    () {}),
-                                                            child:
-                                                                YoutubePlayerWidget(),
-                                                          ),
+                                                        child: wrapWithModel(
+                                                          model: _model
+                                                              .youtubePlayerSumanModel,
+                                                          updateCallback: () =>
+                                                              safeSetState(
+                                                                  () {}),
+                                                          child:
+                                                              YoutubePlayerSumanWidget(),
                                                         ),
                                                       ),
                                                     ),
@@ -535,7 +531,7 @@ class _PodcastDetailsSumanWidgetState extends State<PodcastDetailsSumanWidget> {
                                                             child:
                                                                 wrapWithModel(
                                                               model: _model
-                                                                  .youtubePlayerModel2,
+                                                                  .youtubePlayerModel,
                                                               updateCallback: () =>
                                                                   safeSetState(
                                                                       () {}),

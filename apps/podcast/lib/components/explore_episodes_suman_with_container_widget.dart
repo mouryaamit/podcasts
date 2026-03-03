@@ -8,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'explore_episodes_budget_with_container_model.dart';
-export 'explore_episodes_budget_with_container_model.dart';
+import 'explore_episodes_suman_with_container_model.dart';
+export 'explore_episodes_suman_with_container_model.dart';
 
-class ExploreEpisodesBudgetWithContainerWidget extends StatefulWidget {
-  const ExploreEpisodesBudgetWithContainerWidget({super.key});
+class ExploreEpisodesSumanWithContainerWidget extends StatefulWidget {
+  const ExploreEpisodesSumanWithContainerWidget({super.key});
 
   @override
-  State<ExploreEpisodesBudgetWithContainerWidget> createState() =>
-      _ExploreEpisodesBudgetWithContainerWidgetState();
+  State<ExploreEpisodesSumanWithContainerWidget> createState() =>
+      _ExploreEpisodesSumanWithContainerWidgetState();
 }
 
-class _ExploreEpisodesBudgetWithContainerWidgetState
-    extends State<ExploreEpisodesBudgetWithContainerWidget> {
-  late ExploreEpisodesBudgetWithContainerModel _model;
+class _ExploreEpisodesSumanWithContainerWidgetState
+    extends State<ExploreEpisodesSumanWithContainerWidget> {
+  late ExploreEpisodesSumanWithContainerModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -33,7 +33,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
   void initState() {
     super.initState();
     _model =
-        createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
+        createModel(context, () => ExploreEpisodesSumanWithContainerModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -99,7 +99,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
                                   key: ValueKey('exploreEpisode_budget_web'),
-                                  'assets/images/explore_budget_thumbnail_png.png',
+                                  'assets/images/explore_suman_thumbnail_png.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -120,7 +120,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                     ),
                                     decoration: BoxDecoration(),
                                     child: Text(
-                                      'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                      'Resilent or Fragile? Decoding India\'s MSME Growth Paradox with SIDBI\'s Chief Economist',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -358,7 +358,8 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                       FFButtonWidget(
                                         onPressed: () async {
                                           context.pushNamed(
-                                              PodcastDetailsWidget.routeName);
+                                              PodcastDetailsSumanWidget
+                                                  .routeName);
                                         },
                                         text: 'Watch Now',
                                         options: FFButtonOptions(
@@ -424,7 +425,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                               ),
                                               onPressed: () async {
                                                 await Share.share(
-                                                  'https://youtu.be/eL6ee7hfAqo?si=24Aeas1Kls7RDONK',
+                                                  'https://youtu.be/zO9ZsZCiZX8?si=d36tb8IuHdcAx-a_',
                                                   sharePositionOrigin:
                                                       getWidgetBoundingBox(
                                                           context),
@@ -489,7 +490,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                 borderRadius: BorderRadius.circular(6.0),
                                 child: Image.asset(
                                   key: ValueKey('exploreEpisodes_budget_m'),
-                                  'assets/images/explore_budget_thumbnail_png.png',
+                                  'assets/images/explore_suman_thumbnail_png.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -511,7 +512,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                    'Resilent or Fragile? Decoding India\'s MSME Growth Paradox with SIDBI\'s Chief Economist',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -788,7 +789,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                   FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
-                                          PodcastDetailsWidget.routeName);
+                                          PodcastDetailsSumanWidget.routeName);
                                     },
                                     text: 'Watch Now',
                                     options: FFButtonOptions(
@@ -845,7 +846,7 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                         ),
                                         onPressed: () async {
                                           await Share.share(
-                                            'https://youtu.be/eL6ee7hfAqo?si=24Aeas1Kls7RDONK',
+                                            'https://youtu.be/zO9ZsZCiZX8?si=d36tb8IuHdcAx-a_',
                                             sharePositionOrigin:
                                                 getWidgetBoundingBox(context),
                                           );

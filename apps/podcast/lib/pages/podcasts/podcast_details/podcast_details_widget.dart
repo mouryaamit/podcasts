@@ -11,7 +11,6 @@ import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/youtube_player_rahul_widget.dart';
 import '/components/youtube_player_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -26,29 +25,29 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'podcast_details_rahul_model.dart';
-export 'podcast_details_rahul_model.dart';
+import 'podcast_details_model.dart';
+export 'podcast_details_model.dart';
 
-class PodcastDetailsRahulWidget extends StatefulWidget {
-  const PodcastDetailsRahulWidget({super.key});
+class PodcastDetailsWidget extends StatefulWidget {
+  const PodcastDetailsWidget({super.key});
 
-  static String routeName = 'PodcastDetailsRahul';
-  static String routePath = '/podcastDetailsRahul';
+  static String routeName = 'PodcastDetails';
+  static String routePath =
+      '/podcast/msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead';
 
   @override
-  State<PodcastDetailsRahulWidget> createState() =>
-      _PodcastDetailsRahulWidgetState();
+  State<PodcastDetailsWidget> createState() => _PodcastDetailsWidgetState();
 }
 
-class _PodcastDetailsRahulWidgetState extends State<PodcastDetailsRahulWidget> {
-  late PodcastDetailsRahulModel _model;
+class _PodcastDetailsWidgetState extends State<PodcastDetailsWidget> {
+  late PodcastDetailsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PodcastDetailsRahulModel());
+    _model = createModel(context, () => PodcastDetailsModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -337,14 +336,19 @@ class _PodcastDetailsRahulWidgetState extends State<PodcastDetailsRahulWidget> {
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 0.0, 0.0),
-                                                        child: wrapWithModel(
-                                                          model: _model
-                                                              .youtubePlayerRahulModel,
-                                                          updateCallback: () =>
-                                                              safeSetState(
-                                                                  () {}),
-                                                          child:
-                                                              YoutubePlayerRahulWidget(),
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: wrapWithModel(
+                                                            model: _model
+                                                                .youtubePlayerModel1,
+                                                            updateCallback: () =>
+                                                                safeSetState(
+                                                                    () {}),
+                                                            child:
+                                                                YoutubePlayerWidget(),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
@@ -531,7 +535,7 @@ class _PodcastDetailsRahulWidgetState extends State<PodcastDetailsRahulWidget> {
                                                             child:
                                                                 wrapWithModel(
                                                               model: _model
-                                                                  .youtubePlayerModel,
+                                                                  .youtubePlayerModel2,
                                                               updateCallback: () =>
                                                                   safeSetState(
                                                                       () {}),

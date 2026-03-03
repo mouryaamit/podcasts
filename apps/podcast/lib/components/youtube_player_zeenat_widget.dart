@@ -225,7 +225,7 @@ class _YoutubePlayerZeenatWidgetState extends State<YoutubePlayerZeenatWidget> {
                             0.0),
                         child: FlutterFlowWebView(
                           content:
-                              'https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_',
+                              'https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_?playsinline=1&rel=0&modestbranding=1',
                           bypass: false,
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: valueOrDefault<double>(

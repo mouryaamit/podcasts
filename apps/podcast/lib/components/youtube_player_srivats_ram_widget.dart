@@ -227,7 +227,7 @@ class _YoutubePlayerSrivatsRamWidgetState
                             0.0),
                         child: FlutterFlowWebView(
                           content:
-                              'https://www.youtube.com/embed/eLxnZ85mbkA?si=k8z2D1fStX6itg1i',
+                              'https://www.youtube.com/embed/eLxnZ85mbkA?si=k8z2D1fStX6itg1i?playsinline=1&rel=0&modestbranding=1',
                           bypass: false,
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: valueOrDefault<double>(

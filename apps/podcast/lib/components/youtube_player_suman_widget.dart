@@ -7,20 +7,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'youtube_player_tirthankar_model.dart';
-export 'youtube_player_tirthankar_model.dart';
+import 'youtube_player_suman_model.dart';
+export 'youtube_player_suman_model.dart';
 
-class YoutubePlayerTirthankarWidget extends StatefulWidget {
-  const YoutubePlayerTirthankarWidget({super.key});
+class YoutubePlayerSumanWidget extends StatefulWidget {
+  const YoutubePlayerSumanWidget({super.key});
 
   @override
-  State<YoutubePlayerTirthankarWidget> createState() =>
-      _YoutubePlayerTirthankarWidgetState();
+  State<YoutubePlayerSumanWidget> createState() =>
+      _YoutubePlayerSumanWidgetState();
 }
 
-class _YoutubePlayerTirthankarWidgetState
-    extends State<YoutubePlayerTirthankarWidget> {
-  late YoutubePlayerTirthankarModel _model;
+class _YoutubePlayerSumanWidgetState extends State<YoutubePlayerSumanWidget> {
+  late YoutubePlayerSumanModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -31,7 +30,7 @@ class _YoutubePlayerTirthankarWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => YoutubePlayerTirthankarModel());
+    _model = createModel(context, () => YoutubePlayerSumanModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -117,7 +116,7 @@ class _YoutubePlayerTirthankarWidgetState
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       decoration: BoxDecoration(),
                       child: Text(
-                        'From ₹44 - ₹4600 Crore: How MSMEs, Retail Investors & Smarter IPOs Are Reshaping Capital Markets',
+                        'Resilient or Fragile? Decoding India\'s MSME Growth Paradox with SIDBI\'s Chief Economist',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.poppins(
@@ -227,7 +226,7 @@ class _YoutubePlayerTirthankarWidgetState
                             0.0),
                         child: FlutterFlowWebView(
                           content:
-                              'https://www.youtube.com/embed/7emcFg25dHY?si=99WG6-TZcDQj4-o7?playsinline=1&rel=0&modestbranding=1',
+                              'https://www.youtube.com/embed/zO9ZsZCiZX8?si=d6xGI7TcHh7H48lg?playsinline=1&rel=0&modestbranding=1',
                           bypass: false,
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: valueOrDefault<double>(
@@ -405,7 +404,7 @@ class _YoutubePlayerTirthankarWidgetState
                         builder: (context) => FFButtonWidget(
                           onPressed: () async {
                             await Share.share(
-                              'https://youtu.be/7emcFg25dHY?si=PPYpy0dd1J0A4y6t',
+                              'https://youtu.be/zO9ZsZCiZX8?si=inpB3ApBA16qD6oH',
                               sharePositionOrigin:
                                   getWidgetBoundingBox(context),
                             );

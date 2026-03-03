@@ -11,7 +11,6 @@ import '/components/shorts_budget_krishnan_widget.dart';
 import '/components/shorts_budget_laveesh_widget.dart';
 import '/components/shorts_budget_unni_krishnan_widget.dart';
 import '/components/speaker_widget.dart';
-import '/components/youtube_player_srivats_ram_widget.dart';
 import '/components/youtube_player_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -19,8 +18,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/index.dart';
-import 'podcast_details_srivats_ram_widget.dart'
-    show PodcastDetailsSrivatsRamWidget;
+import 'podcast_details_widget.dart' show PodcastDetailsWidget;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -29,8 +27,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-class PodcastDetailsSrivatsRamModel
-    extends FlutterFlowModel<PodcastDetailsSrivatsRamWidget> {
+class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   ///  Local state fields for this page.
 
   int selectedIndex = 1;
@@ -41,10 +38,10 @@ class PodcastDetailsSrivatsRamModel
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
-  // Model for YoutubePlayerSrivatsRam component.
-  late YoutubePlayerSrivatsRamModel youtubePlayerSrivatsRamModel;
   // Model for YoutubePlayer component.
-  late YoutubePlayerModel youtubePlayerModel;
+  late YoutubePlayerModel youtubePlayerModel1;
+  // Model for YoutubePlayer component.
+  late YoutubePlayerModel youtubePlayerModel2;
   // Model for ShortsBudgetKrishnan component.
   late ShortsBudgetKrishnanModel shortsBudgetKrishnanModel1;
   // Model for ShortsBudgetLaveesh component.
@@ -98,9 +95,8 @@ class PodcastDetailsSrivatsRamModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerSrivatsRamModel =
-        createModel(context, () => YoutubePlayerSrivatsRamModel());
-    youtubePlayerModel = createModel(context, () => YoutubePlayerModel());
+    youtubePlayerModel1 = createModel(context, () => YoutubePlayerModel());
+    youtubePlayerModel2 = createModel(context, () => YoutubePlayerModel());
     shortsBudgetKrishnanModel1 =
         createModel(context, () => ShortsBudgetKrishnanModel());
     shortsBudgetLaveeshModel1 =
@@ -142,8 +138,8 @@ class PodcastDetailsSrivatsRamModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerSrivatsRamModel.dispose();
-    youtubePlayerModel.dispose();
+    youtubePlayerModel1.dispose();
+    youtubePlayerModel2.dispose();
     shortsBudgetKrishnanModel1.dispose();
     shortsBudgetLaveeshModel1.dispose();
     shortsBudgetAnilModel1.dispose();

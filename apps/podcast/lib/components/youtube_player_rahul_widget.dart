@@ -116,7 +116,7 @@ class _YoutubePlayerRahulWidgetState extends State<YoutubePlayerRahulWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       decoration: BoxDecoration(),
                       child: Text(
-                        'The Real Impact of Trump\'s Tariff Uncertainty & Lessons for India\'s Exporters | MSME Sumpoorn',
+                        'The Real Impact of Trump\'s Tariff Uncertainty & Lessons for India\'s Exporters',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.poppins(
@@ -226,7 +226,7 @@ class _YoutubePlayerRahulWidgetState extends State<YoutubePlayerRahulWidget> {
                             0.0),
                         child: FlutterFlowWebView(
                           content:
-                              'https://www.youtube.com/embed/xAnDzidUwGU?si=h_MNa3MAAoxC4fME',
+                              'https://www.youtube.com/embed/xAnDzidUwGU?si=h_MNa3MAAoxC4fME?playsinline=1&rel=0&modestbranding=1',
                           bypass: false,
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: valueOrDefault<double>(
