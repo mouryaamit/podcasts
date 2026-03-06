@@ -275,8 +275,8 @@ export class TurnoverDistributionComponent implements OnInit {
       .select('#turnover_graph_svg_inner')
       .html('') // clear previous
       .append('svg')
-      // .attr('width', default_width + 2 * margin.right + 15)
-      .attr('width', default_width - 10)
+      .attr('width', default_width + 2 * margin.right)
+      // .attr('width', default_width - 10)
       .attr('id', 'svg_turnover_graph')
       .attr('height', default_height)
       .append('g')
