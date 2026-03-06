@@ -78,19 +78,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => PodcastDetailsZeenatWidget(),
         ),
         FFRoute(
-          name: PodcastDetailsSumitaWidget.routeName,
-          path: PodcastDetailsSumitaWidget.routePath,
-          builder: (context, params) => PodcastDetailsSumitaWidget(),
+          name: PodcastDetailsTirthankarWidget.routeName,
+          path: PodcastDetailsTirthankarWidget.routePath,
+          builder: (context, params) => PodcastDetailsTirthankarWidget(),
         ),
         FFRoute(
-          name: PodcastCopyWidget.routeName,
-          path: PodcastCopyWidget.routePath,
-          builder: (context, params) => PodcastCopyWidget(
-            selectedPage: params.getParam(
-              'selectedPage',
-              ParamType.String,
-            ),
-          ),
+          name: PodcastDetailsSumanWidget.routeName,
+          path: PodcastDetailsSumanWidget.routePath,
+          builder: (context, params) => PodcastDetailsSumanWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsRahulWidget.routeName,
+          path: PodcastDetailsRahulWidget.routePath,
+          builder: (context, params) => PodcastDetailsRahulWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsSrivatsRamWidget.routeName,
+          path: PodcastDetailsSrivatsRamWidget.routePath,
+          builder: (context, params) => PodcastDetailsSrivatsRamWidget(),
+        ),
+        FFRoute(
+          name: PodcastDetailsDeepakWidget.routeName,
+          path: PodcastDetailsDeepakWidget.routePath,
+          builder: (context, params) => PodcastDetailsDeepakWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -218,6 +228,7 @@ class FFRoute {
           return transitionInfo.hasTransition
               ? CustomTransitionPage(
                   key: state.pageKey,
+                  name: state.name,
                   child: child,
                   transitionDuration: transitionInfo.duration,
                   transitionsBuilder:
@@ -235,7 +246,8 @@ class FFRoute {
                     child,
                   ),
                 )
-              : MaterialPage(key: state.pageKey, child: child);
+              : MaterialPage(
+                  key: state.pageKey, name: state.name, child: child);
         },
         routes: routes,
       );

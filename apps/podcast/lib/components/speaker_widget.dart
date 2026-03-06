@@ -80,107 +80,132 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
           width: 1.0,
         ),
       ),
+      alignment: AlignmentDirectional(-1.0, 0.0),
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(
             valueOrDefault<double>(
-              MediaQuery.sizeOf(context).width > 498.0 ? 20.0 : 10.0,
+              MediaQuery.sizeOf(context).width > 900.0 ? 20.0 : 10.0,
               0.0,
             ),
             0.0,
-            20.0,
+            0.0,
             0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Container(
-              decoration: BoxDecoration(),
+            Align(
+              alignment: AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(0.0),
-                  child: Image.network(
-                    widget!.image!,
-                    width: MediaQuery.sizeOf(context).width >
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              900.0,
-                            )
-                        ? 140.0
-                        : 100.0,
-                    fit: BoxFit.contain,
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width >
+                          valueOrDefault<double>(
+                            kBreakpointSmall,
+                            900.0,
+                          )
+                      ? 127.0
+                      : 110.0,
+                  height: MediaQuery.sizeOf(context).width <
+                          valueOrDefault<double>(
+                            kBreakpointSmall,
+                            900.0,
+                          )
+                      ? 100.0
+                      : 123.0,
+                  constraints: BoxConstraints(
+                    minHeight:
+                        MediaQuery.sizeOf(context).width > 900.0 ? 84.0 : 110.0,
+                  ),
+                  decoration: BoxDecoration(),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(0.0),
+                    child: Image.network(
+                      widget!.image!,
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: MediaQuery.sizeOf(context).height * 1.0,
+                      fit: BoxFit.fill,
+                      alignment: Alignment(0.0, 1.0),
+                    ),
                   ),
                 ),
               ),
             ),
             Expanded(
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(
-                    valueOrDefault<double>(
-                      MediaQuery.sizeOf(context).width > 498.0 ? 20.0 : 10.0,
+              child: Align(
+                alignment: AlignmentDirectional(-1.0, -1.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(
+                      valueOrDefault<double>(
+                        MediaQuery.sizeOf(context).width > 498.0 ? 20.0 : 10.0,
+                        0.0,
+                      ),
                       0.0,
-                    ),
-                    0.0,
-                    0.0,
-                    0.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0,
-                            12.0,
+                      0.0,
+                      0.0),
+                  child: Container(
+                    height: MediaQuery.sizeOf(context).width <
                             valueOrDefault<double>(
-                              MediaQuery.sizeOf(context).width > 498.0
-                                  ? 100.0
-                                  : 0.0,
-                              0.0,
-                            ),
-                            12.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
-                              child: Text(
-                                valueOrDefault<String>(
-                                  widget!.name,
-                                  'Name',
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xFF111827),
-                                      fontSize:
-                                          MediaQuery.sizeOf(context).width >
-                                                  valueOrDefault<double>(
-                                                    kBreakpointSmall,
-                                                    900.0,
-                                                  )
-                                              ? 20.0
-                                              : 14.0,
-                                      letterSpacing: 0.0,
+                              kBreakpointSmall,
+                              900.0,
+                            )
+                        ? 170.0
+                        : 130.0,
+                    decoration: BoxDecoration(),
+                    alignment: AlignmentDirectional(-1.0, -1.0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          0.0,
+                          12.0,
+                          valueOrDefault<double>(
+                            MediaQuery.sizeOf(context).width > 498.0
+                                ? 100.0
+                                : 10.0,
+                            0.0,
+                          ),
+                          12.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(-1.0, -1.0),
+                            child: Text(
+                              valueOrDefault<String>(
+                                widget!.name,
+                                'Name',
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                overflow: TextOverflow.visible,
-                              ),
+                                    color: Color(0xFF111827),
+                                    fontSize: MediaQuery.sizeOf(context).width >
+                                            valueOrDefault<double>(
+                                              kBreakpointSmall,
+                                              900.0,
+                                            )
+                                        ? 20.0
+                                        : 14.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                              overflow: TextOverflow.visible,
                             ),
-                            Padding(
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(-1.0, -1.0),
+                            child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0,
                                   valueOrDefault<double>(
@@ -196,7 +221,7 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                   widget!.description,
                                   'Description',
                                 ),
-                                style: GoogleFonts.inter(
+                                style: GoogleFonts.poppins(
                                   color: Color(0xFF6B7280),
                                   fontSize: MediaQuery.sizeOf(context).width >
                                           valueOrDefault<double>(
@@ -209,11 +234,11 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                                 overflow: TextOverflow.visible,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),

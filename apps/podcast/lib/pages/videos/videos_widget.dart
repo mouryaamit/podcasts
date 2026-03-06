@@ -2,13 +2,13 @@ import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
-import '/components/videos_page_video1_widget.dart';
-import '/components/videos_page_video2_widget.dart';
-import '/components/videos_page_video3_widget.dart';
-import '/components/videos_page_video4_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/videos/videos_page_video1/videos_page_video1_widget.dart';
+import '/videos/videos_page_video2/videos_page_video2_widget.dart';
+import '/videos/videos_page_video3/videos_page_video3_widget.dart';
+import '/videos/videos_page_video4/videos_page_video4_widget.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
@@ -199,7 +199,7 @@ class _VideosWidgetState extends State<VideosWidget> {
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 30.0, 0.0, 0.0),
+                                      0.0, 30.0, 0.0, 50.0),
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.85,
@@ -212,73 +212,64 @@ class _VideosWidgetState extends State<VideosWidget> {
                                           phone: false,
                                           tablet: false,
                                         ))
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 30.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Container(
-                                                      child: wrapWithModel(
-                                                        model: _model
-                                                            .videosPageVideo1Model1,
-                                                        updateCallback: () =>
-                                                            safeSetState(() {}),
-                                                        child:
-                                                            VideosPageVideo1Widget(),
-                                                      ),
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
+                                                          .videosPageVideo1Model1,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosPageVideo1Widget(),
                                                     ),
-                                                    Container(
-                                                      child: wrapWithModel(
-                                                        model: _model
-                                                            .videosPageVideo2Model1,
-                                                        updateCallback: () =>
-                                                            safeSetState(() {}),
-                                                        child:
-                                                            VideosPageVideo2Widget(),
-                                                      ),
+                                                  ),
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
+                                                          .videosPageVideo2Model1,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosPageVideo2Widget(),
                                                     ),
-                                                  ].divide(
-                                                      SizedBox(width: 25.0)),
-                                                ),
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Container(
-                                                      child: wrapWithModel(
-                                                        model: _model
-                                                            .videosPageVideo3Model1,
-                                                        updateCallback: () =>
-                                                            safeSetState(() {}),
-                                                        child:
-                                                            VideosPageVideo3Widget(),
-                                                      ),
+                                                  ),
+                                                ].divide(SizedBox(width: 25.0)),
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
+                                                          .videosPageVideo3Model1,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosPageVideo3Widget(),
                                                     ),
-                                                    Container(
-                                                      child: wrapWithModel(
-                                                        model: _model
-                                                            .videosPageVideo4Model1,
-                                                        updateCallback: () =>
-                                                            safeSetState(() {}),
-                                                        child:
-                                                            VideosPageVideo4Widget(),
-                                                      ),
+                                                  ),
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
+                                                          .videosPageVideo4Model1,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosPageVideo4Widget(),
                                                     ),
-                                                  ].divide(
-                                                      SizedBox(width: 25.0)),
-                                                ),
-                                              ].divide(SizedBox(height: 25.0)),
-                                            ),
+                                                  ),
+                                                ].divide(SizedBox(width: 25.0)),
+                                              ),
+                                            ].divide(SizedBox(height: 25.0)),
                                           ),
                                         if (responsiveVisibility(
                                           context: context,

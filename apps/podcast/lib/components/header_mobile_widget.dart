@@ -50,7 +50,7 @@ class _HeaderMobileWidgetState extends State<HeaderMobileWidget> {
       children: [
         Container(
           width: double.infinity,
-          height: 100.0,
+          height: 70.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
           ),
@@ -60,13 +60,22 @@ class _HeaderMobileWidgetState extends State<HeaderMobileWidget> {
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    'assets/images/logo-main_(1).webp',
-                    width: 229.0,
-                    height: 59.45,
-                    fit: BoxFit.contain,
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    await launchURL('https://www.sumpoorn.in/home');
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      'assets/images/logo-main_(1).webp',
+                      width: 225.0,
+                      height: 59.45,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
