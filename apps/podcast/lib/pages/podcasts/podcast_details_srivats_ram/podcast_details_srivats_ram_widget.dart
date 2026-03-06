@@ -6,6 +6,7 @@ import '/components/mobile_footer_widget.dart';
 import '/components/speaker_widget.dart';
 import '/conversation/conversation_srivats/conversation_srivats_widget.dart';
 import '/episodes/explore_episodes_budget_with_container/explore_episodes_budget_with_container_widget.dart';
+import '/episodes/explore_episodes_deepak_with_container/explore_episodes_deepak_with_container_widget.dart';
 import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_with_container_widget.dart';
 import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
 import '/episodes/explore_episodes_tirthankar_with_container/explore_episodes_tirthankar_with_container_widget.dart';
@@ -2465,6 +2466,19 @@ class _PodcastDetailsSrivatsRamWidgetState
                                                                   () {}),
                                                           child:
                                                               ExploreEpisodesTirthankarWithContainerWidget(),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: wrapWithModel(
+                                                          model: _model
+                                                              .exploreEpisodesDeepakWithContainerModel,
+                                                          updateCallback: () =>
+                                                              safeSetState(
+                                                                  () {}),
+                                                          child:
+                                                              ExploreEpisodesDeepakWithContainerWidget(),
                                                         ),
                                                       ),
                                                       Container(

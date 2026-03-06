@@ -320,7 +320,7 @@ class _ConversationDeepakWidgetState extends State<ConversationDeepakWidget> {
                   ),
             ),
             TextSpan(
-              text: 'If exports strengthen, crossing 0.58 is possible.',
+              text: 'If exports strengthen, crossing 0.58 is possible.\n\n',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     font: GoogleFonts.inter(
                       fontWeight:

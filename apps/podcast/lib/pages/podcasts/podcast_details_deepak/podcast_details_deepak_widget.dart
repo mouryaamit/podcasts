@@ -10,14 +10,14 @@ import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_w
 import '/episodes/explore_episodes_srivatsram_with_container/explore_episodes_srivatsram_with_container_widget.dart';
 import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
 import '/episodes/explore_episodes_tirthankar_with_container/explore_episodes_tirthankar_with_container_widget.dart';
+import '/episodes/explore_episodes_zeenat_with_container/explore_episodes_zeenat_with_container_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/players/youtube_player_zeenat/youtube_player_zeenat_widget.dart';
-import '/shorts/shorts_zeenat/shorts_zeenat_widget.dart';
-import '/shorts/shorts_zeenat_details1/shorts_zeenat_details1_widget.dart';
-import '/shorts/shorts_zeenat_details2/shorts_zeenat_details2_widget.dart';
-import '/shorts/shorts_zeenat_details3/shorts_zeenat_details3_widget.dart';
+import '/players/youtube_player_deepak/youtube_player_deepak_widget.dart';
+import '/shorts/shorts_deepak_details1/shorts_deepak_details1_widget.dart';
+import '/shorts/shorts_deepak_details2/shorts_deepak_details2_widget.dart';
+import '/shorts/shorts_deepak_details3/shorts_deepak_details3_widget.dart';
 import '/timestamp/deepak_timestamp/deepak_timestamp_widget.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
@@ -345,12 +345,12 @@ class _PodcastDetailsDeepakWidgetState
                                                                   0.0, 0.0),
                                                           child: wrapWithModel(
                                                             model: _model
-                                                                .youtubePlayerZeenatModel1,
+                                                                .youtubePlayerDeepakModel1,
                                                             updateCallback: () =>
                                                                 safeSetState(
                                                                     () {}),
                                                             child:
-                                                                YoutubePlayerZeenatWidget(),
+                                                                YoutubePlayerDeepakWidget(),
                                                           ),
                                                         ),
                                                       ),
@@ -535,12 +535,12 @@ class _PodcastDetailsDeepakWidgetState
                                                             child:
                                                                 wrapWithModel(
                                                               model: _model
-                                                                  .youtubePlayerZeenatModel2,
+                                                                  .youtubePlayerDeepakModel2,
                                                               updateCallback: () =>
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  YoutubePlayerZeenatWidget(),
+                                                                  YoutubePlayerDeepakWidget(),
                                                             ),
                                                           ),
                                                         ),
@@ -1102,9 +1102,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                     children: [
                                                                                                       Container(
                                                                                                         child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatModel1,
+                                                                                                          model: _model.shortsDeepakDetails1Model1,
                                                                                                           updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatWidget(
+                                                                                                          child: ShortsDeepakDetails1Widget(
                                                                                                             share: () async {},
                                                                                                             watchNow: () async {},
                                                                                                           ),
@@ -1112,9 +1112,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                       ),
                                                                                                       Container(
                                                                                                         child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatDetails1Model1,
+                                                                                                          model: _model.shortsDeepakDetails2Model1,
                                                                                                           updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatDetails1Widget(
+                                                                                                          child: ShortsDeepakDetails2Widget(
                                                                                                             share: () async {},
                                                                                                             watchNow: () async {},
                                                                                                           ),
@@ -1122,19 +1122,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                       ),
                                                                                                       Container(
                                                                                                         child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatDetails2Model1,
+                                                                                                          model: _model.shortsDeepakDetails3Model1,
                                                                                                           updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatDetails2Widget(
-                                                                                                            share: () async {},
-                                                                                                            watchNow: () async {},
-                                                                                                          ),
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                      Container(
-                                                                                                        child: wrapWithModel(
-                                                                                                          model: _model.shortsZeenatDetails3Model1,
-                                                                                                          updateCallback: () => safeSetState(() {}),
-                                                                                                          child: ShortsZeenatDetails3Widget(
+                                                                                                          child: ShortsDeepakDetails3Widget(
                                                                                                             share: () async {},
                                                                                                             watchNow: () async {},
                                                                                                           ),
@@ -1603,9 +1593,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatModel2,
+                                                                                                            model: _model.shortsDeepakDetails1Model2,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsZeenatWidget(
+                                                                                                            child: ShortsDeepakDetails1Widget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -1613,9 +1603,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                         ),
                                                                                                         Container(
                                                                                                           child: wrapWithModel(
-                                                                                                            model: _model.shortsZeenatDetails1Model2,
+                                                                                                            model: _model.shortsDeepakDetails2Model2,
                                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                                            child: ShortsZeenatDetails1Widget(
+                                                                                                            child: ShortsDeepakDetails2Widget(
                                                                                                               share: () async {},
                                                                                                               watchNow: () async {},
                                                                                                             ),
@@ -1634,19 +1624,9 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                         children: [
                                                                                                           Container(
                                                                                                             child: wrapWithModel(
-                                                                                                              model: _model.shortsZeenatDetails2Model2,
+                                                                                                              model: _model.shortsDeepakDetails3Model2,
                                                                                                               updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsZeenatDetails2Widget(
-                                                                                                                share: () async {},
-                                                                                                                watchNow: () async {},
-                                                                                                              ),
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Container(
-                                                                                                            child: wrapWithModel(
-                                                                                                              model: _model.shortsZeenatDetails3Model2,
-                                                                                                              updateCallback: () => safeSetState(() {}),
-                                                                                                              child: ShortsZeenatDetails3Widget(
+                                                                                                              child: ShortsDeepakDetails3Widget(
                                                                                                                 share: () async {},
                                                                                                                 watchNow: () async {},
                                                                                                               ),
@@ -1720,12 +1700,10 @@ class _PodcastDetailsDeepakWidgetState
                                                                                                     ),
                                                                                                   ],
                                                                                                 ),
-                                                                                                Expanded(
-                                                                                                  child: wrapWithModel(
-                                                                                                    model: _model.deepakTimestampModel2,
-                                                                                                    updateCallback: () => safeSetState(() {}),
-                                                                                                    child: DeepakTimestampWidget(),
-                                                                                                  ),
+                                                                                                wrapWithModel(
+                                                                                                  model: _model.deepakTimestampModel2,
+                                                                                                  updateCallback: () => safeSetState(() {}),
+                                                                                                  child: DeepakTimestampWidget(),
                                                                                                 ),
                                                                                               ],
                                                                                             );
@@ -1997,10 +1975,11 @@ class _PodcastDetailsDeepakWidgetState
                                                       safeSetState(() {}),
                                                   child: SpeakerWidget(
                                                     image:
-                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/vrlw0irralpy/Zeenat.png',
-                                                    name: 'Ms. Zeenat Hamirani',
+                                                        'https://storage.googleapis.com/flutterflow-enterprise-india.appspot.com/projects/fkUY25tEnYI3GDwVGhie/assets/8hz57vc8xnck/Deepak.png',
+                                                    name:
+                                                        'Mr. Deepak Karandikar',
                                                     description:
-                                                        'Chief Risk Officer, L&T Finance. Leads enterprise-wide risk and credit oversight, embedding disciplined growth and resilience in India’s NBFC ecosystem.',
+                                                        'Industrialist and former President, MCCIA, Pune. Known for driving lean manufacturing initiatives, institutional development, and policy advocacy on ease of doing business.',
                                                   ),
                                                 ),
                                               ),
@@ -2478,6 +2457,19 @@ class _PodcastDetailsDeepakWidgetState
                                                                   () {}),
                                                           child:
                                                               ExploreEpisodesRahulWithContainerWidget(),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: wrapWithModel(
+                                                          model: _model
+                                                              .exploreEpisodesZeenatWithContainerModel,
+                                                          updateCallback: () =>
+                                                              safeSetState(
+                                                                  () {}),
+                                                          child:
+                                                              ExploreEpisodesZeenatWithContainerWidget(),
                                                         ),
                                                       ),
                                                       Container(

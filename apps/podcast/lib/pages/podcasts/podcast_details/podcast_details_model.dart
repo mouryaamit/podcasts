@@ -5,6 +5,7 @@ import '/components/header_mobile_widget.dart';
 import '/components/mobile_footer_widget.dart';
 import '/components/speaker_widget.dart';
 import '/conversation/budget_conversation/budget_conversation_widget.dart';
+import '/episodes/explore_episodes_deepak_with_container/explore_episodes_deepak_with_container_widget.dart';
 import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_with_container_widget.dart';
 import '/episodes/explore_episodes_srivatsram_with_container/explore_episodes_srivatsram_with_container_widget.dart';
 import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
@@ -87,6 +88,9 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
   // Model for ExploreEpisodesTirthankarWithContainer component.
   late ExploreEpisodesTirthankarWithContainerModel
       exploreEpisodesTirthankarWithContainerModel1;
+  // Model for ExploreEpisodesDeepakWithContainer component.
+  late ExploreEpisodesDeepakWithContainerModel
+      exploreEpisodesDeepakWithContainerModel;
   // Model for ExploreEpisodesSrivatsramWithContainer component.
   late ExploreEpisodesSrivatsramWithContainerModel
       exploreEpisodesSrivatsramWithContainerModel1;
@@ -171,6 +175,8 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     speakerModel5 = createModel(context, () => SpeakerModel());
     exploreEpisodesTirthankarWithContainerModel1 = createModel(
         context, () => ExploreEpisodesTirthankarWithContainerModel());
+    exploreEpisodesDeepakWithContainerModel =
+        createModel(context, () => ExploreEpisodesDeepakWithContainerModel());
     exploreEpisodesSrivatsramWithContainerModel1 = createModel(
         context, () => ExploreEpisodesSrivatsramWithContainerModel());
     exploreEpisodesRahulWithContainerModel1 =
@@ -229,6 +235,7 @@ class PodcastDetailsModel extends FlutterFlowModel<PodcastDetailsWidget> {
     speakerModel4.dispose();
     speakerModel5.dispose();
     exploreEpisodesTirthankarWithContainerModel1.dispose();
+    exploreEpisodesDeepakWithContainerModel.dispose();
     exploreEpisodesSrivatsramWithContainerModel1.dispose();
     exploreEpisodesRahulWithContainerModel1.dispose();
     exploreEpisodesZeenatWithContainerModel1.dispose();

@@ -95,7 +95,7 @@ class _ShortsDeepakDetails3WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat3_web'),
+                              key: ValueKey('shorts_deepak3_web'),
                               'assets/images/shorts_deepak_details3.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -115,7 +115,7 @@ class _ShortsDeepakDetails3WidgetState
                           child: Align(
                             alignment: AlignmentDirectional(-1.0, -1.0),
                             child: Text(
-                              'What Data Reveals about MSME Resilience?',
+                              '₹18 Lakh Crore Unpaid: MSMEs Waiting for Payment',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -142,7 +142,7 @@ class _ShortsDeepakDetails3WidgetState
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(),
                           child: Text(
-                            'MSME Conversations • August 2025 • 1.06 min',
+                            'MSME Conversations • December 2025 • 3.21 min',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -191,9 +191,9 @@ class _ShortsDeepakDetails3WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                                  'https://www.youtube.com/embed/mEFhSHo9v1w?si=zUKthLr8ZtyBA9IK',
                                               title:
-                                                  'What Data Reveals About MSME Resilience?',
+                                                  '₹18 Lakh Crore Unpaid: MSMEs Waiting for Payment',
                                             ),
                                           ),
                                         );
@@ -256,7 +256,7 @@ class _ShortsDeepakDetails3WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                        'https://youtu.be/mEFhSHo9v1w?si=W1lLa9dnB03bi6RU',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );
@@ -312,7 +312,7 @@ class _ShortsDeepakDetails3WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat3_m'),
+                              key: ValueKey('shorts_deepak3_m'),
                               'assets/images/shorts_deepak_details3.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -332,7 +332,7 @@ class _ShortsDeepakDetails3WidgetState
                               ),
                               decoration: BoxDecoration(),
                               child: Text(
-                                'What Data Reveals About MSME Resilience?',
+                                '₹18 Lakh Crore Unpaid: MSMEs Waiting for Payment',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -362,7 +362,7 @@ class _ShortsDeepakDetails3WidgetState
                             width: 255.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • August 2025 \n• 1.06 min',
+                              'MSME Conversations • December 2025 \n• 3.21 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -411,9 +411,9 @@ class _ShortsDeepakDetails3WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                                  'https://www.youtube.com/embed/mEFhSHo9v1w?si=zUKthLr8ZtyBA9IK',
                                               title:
-                                                  'What Data Reveals About MSME Resilience?',
+                                                  '₹18 Lakh Crore Unpaid: MSMEs Waiting for Payment',
                                             ),
                                           ),
                                         );
@@ -476,7 +476,7 @@ class _ShortsDeepakDetails3WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/uJ0HYxLQp-Q?si=jmKpi0pZS-_Zq7N9',
+                                        'https://youtu.be/mEFhSHo9v1w?si=W1lLa9dnB03bi6RU',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );

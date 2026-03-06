@@ -95,7 +95,7 @@ class _ShortsDeepakDetails1WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat1_web'),
+                              key: ValueKey('shorts_deepak1_web'),
                               'assets/images/shorts_deepak_details1.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -115,7 +115,7 @@ class _ShortsDeepakDetails1WidgetState
                           child: Align(
                             alignment: AlignmentDirectional(-1.0, -1.0),
                             child: Text(
-                              'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
+                              '48-Hour Credit & the MSME Digital Revolution ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -142,7 +142,7 @@ class _ShortsDeepakDetails1WidgetState
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(),
                           child: Text(
-                            'MSME Conversations • August 2025 • 1.52 min',
+                            'MSME Conversations • December 2025 • 3.47 min ',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -191,9 +191,9 @@ class _ShortsDeepakDetails1WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/veBfkxTIGuQ?si=01PuSNIfBcXDH3fJ',
+                                                  'https://www.youtube.com/embed/MYgBmspJuzI?si=z_xYNA23aX3k1U_y',
                                               title:
-                                                  'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
+                                                  '48-Hour Credit & the MSME Digital Revolution',
                                             ),
                                           ),
                                         );
@@ -256,7 +256,7 @@ class _ShortsDeepakDetails1WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/veBfkxTIGuQ?si=MO9fHuAEGjwjc3pv',
+                                        'https://youtu.be/MYgBmspJuzI?si=n8Pcs1UPGqh-WVfQ',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );
@@ -312,7 +312,7 @@ class _ShortsDeepakDetails1WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat1_m'),
+                              key: ValueKey('shorts_deepak1_m'),
                               'assets/images/shorts_deepak_details1.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -332,7 +332,7 @@ class _ShortsDeepakDetails1WidgetState
                               ),
                               decoration: BoxDecoration(),
                               child: Text(
-                                'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
+                                '48-Hour Credit & the MSME Digital Revolution ',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -362,7 +362,7 @@ class _ShortsDeepakDetails1WidgetState
                             width: 255.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • August 2025 \n• 1.52 min',
+                              'MSME Conversations • December 2025 \n• 3.47 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -411,9 +411,9 @@ class _ShortsDeepakDetails1WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/veBfkxTIGuQ?si=01PuSNIfBcXDH3fJ',
+                                                  'https://www.youtube.com/embed/MYgBmspJuzI?si=z_xYNA23aX3k1U_y',
                                               title:
-                                                  'Sumpoorn as the Missing Link in MSME Assessment for Financiers',
+                                                  '48-Hour Credit & the MSME Digital Revolution',
                                             ),
                                           ),
                                         );
@@ -476,7 +476,7 @@ class _ShortsDeepakDetails1WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/veBfkxTIGuQ?si=MO9fHuAEGjwjc3pv',
+                                        'https://youtu.be/MYgBmspJuzI?si=n8Pcs1UPGqh-WVfQ',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );

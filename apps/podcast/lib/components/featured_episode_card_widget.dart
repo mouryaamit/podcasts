@@ -140,8 +140,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                         .override(
                                           font: GoogleFonts.mulish(
                                             fontWeight: FontWeight.w900,
-                                          font: GoogleFonts.mulish(
-                                            fontWeight: FontWeight.w900,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -150,7 +148,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                           color: Color(0xFF111827),
                                           fontSize: 32.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w900,
                                           fontWeight: FontWeight.w900,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
@@ -379,7 +376,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                                 child: Image.asset(
                                   key: ValueKey('featureEpisode_web'),
-                                  'assets/images/explore_budget_cover.png',
+                                  'assets/images/budget_explore_webp.webp',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -414,13 +411,11 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
-                                      .bodySmall
                                       .override(
                                         font: GoogleFonts.inter(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .bodySmall
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
@@ -428,7 +423,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
                                         fontStyle: FlutterFlowTheme.of(context)
-                                            .bodySmall
                                             .bodySmall
                                             .fontStyle,
                                       ),
@@ -449,8 +443,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                         .override(
                                           font: GoogleFonts.mulish(
                                             fontWeight: FontWeight.w900,
-                                          font: GoogleFonts.mulish(
-                                            fontWeight: FontWeight.w900,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -459,7 +451,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                           color: Color(0xFF111827),
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w900,
                                           fontWeight: FontWeight.w900,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
@@ -483,14 +474,13 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                       borderRadius: BorderRadius.circular(20.0),
                                       child: Image.asset(
                                         key: ValueKey('featureEpisode_m'),
-                                        'assets/images/explore_budget_cover.png',
+                                        'assets/images/budget_explore_webp.webp',
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 1.0,
                                         height:
                                             MediaQuery.sizeOf(context).height *
                                                 1.0,
-                                        fit: BoxFit.fill,
                                         fit: BoxFit.fill,
                                       ),
                                     ),
@@ -599,7 +589,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                       text: 'Watch Now',
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        height: 40.0,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             17.0, 0.0, 17.0, 0.0),
                                         iconPadding:
@@ -627,7 +616,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                             ),
                                         elevation: 0.0,
                                         borderRadius:
-                                            BorderRadius.circular(7.0),
                                             BorderRadius.circular(7.0),
                                       ),
                                     ),
@@ -693,7 +681,6 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                               color: Color(0xFF1DB954),
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(7.0),
                                                 BorderRadius.circular(7.0),
                                             hoverBorderSide: BorderSide(
                                               color: Color(0xFF1DB954),

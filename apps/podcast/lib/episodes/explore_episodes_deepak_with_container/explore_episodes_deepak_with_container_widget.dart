@@ -98,7 +98,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
-                                  key: ValueKey('exploreEpisode_zeenat_web'),
+                                  key: ValueKey('exploreEpisode_deepak_web'),
                                   'assets/images/Deepak_explore_webp.webp',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
@@ -360,7 +360,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                                       FFButtonWidget(
                                         onPressed: () async {
                                           context.pushNamed(
-                                              PodcastDetailsZeenatWidget
+                                              PodcastDetailsDeepakWidget
                                                   .routeName);
                                         },
                                         text: 'Watch Now',
@@ -426,7 +426,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                                               ),
                                               onPressed: () async {
                                                 await Share.share(
-                                                  'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
+                                                  'https://youtu.be/2CUpoozOBBk?si=WaEu6QhqlHLjZNDO',
                                                   sharePositionOrigin:
                                                       getWidgetBoundingBox(
                                                           context),
@@ -491,7 +491,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(6.0),
                                 child: Image.asset(
-                                  key: ValueKey('exploreEpisode_zeenat_m'),
+                                  key: ValueKey('exploreEpisode_deepak_m'),
                                   'assets/images/Deepak_explore_webp.webp',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   fit: BoxFit.fill,
@@ -571,7 +571,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                                 width: 371.0,
                                 decoration: BoxDecoration(),
                                 child: Text(
-                                  'MSME Conversations • December 2025 \n• 24 min',
+                                  'MSME Conversations • December 2025 • 24 min',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -752,7 +752,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                                   FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
-                                          PodcastDetailsZeenatWidget.routeName);
+                                          PodcastDetailsDeepakWidget.routeName);
                                     },
                                     text: 'Watch Now',
                                     options: FFButtonOptions(
@@ -808,7 +808,7 @@ class _ExploreEpisodesDeepakWithContainerWidgetState
                                         ),
                                         onPressed: () async {
                                           await Share.share(
-                                            'https://youtu.be/hhbeWmcBhHo?si=ke-NEbNxjAgtgCz0',
+                                            'https://youtu.be/2CUpoozOBBk?si=WaEu6QhqlHLjZNDO',
                                             sharePositionOrigin:
                                                 getWidgetBoundingBox(context),
                                           );

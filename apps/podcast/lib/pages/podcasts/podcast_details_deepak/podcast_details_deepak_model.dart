@@ -10,14 +10,14 @@ import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_w
 import '/episodes/explore_episodes_srivatsram_with_container/explore_episodes_srivatsram_with_container_widget.dart';
 import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
 import '/episodes/explore_episodes_tirthankar_with_container/explore_episodes_tirthankar_with_container_widget.dart';
+import '/episodes/explore_episodes_zeenat_with_container/explore_episodes_zeenat_with_container_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/players/youtube_player_zeenat/youtube_player_zeenat_widget.dart';
-import '/shorts/shorts_zeenat/shorts_zeenat_widget.dart';
-import '/shorts/shorts_zeenat_details1/shorts_zeenat_details1_widget.dart';
-import '/shorts/shorts_zeenat_details2/shorts_zeenat_details2_widget.dart';
-import '/shorts/shorts_zeenat_details3/shorts_zeenat_details3_widget.dart';
+import '/players/youtube_player_deepak/youtube_player_deepak_widget.dart';
+import '/shorts/shorts_deepak_details1/shorts_deepak_details1_widget.dart';
+import '/shorts/shorts_deepak_details2/shorts_deepak_details2_widget.dart';
+import '/shorts/shorts_deepak_details3/shorts_deepak_details3_widget.dart';
 import '/timestamp/deepak_timestamp/deepak_timestamp_widget.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
@@ -43,32 +43,28 @@ class PodcastDetailsDeepakModel
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.
   late ChoiceChipsModel choiceChipsModel;
-  // Model for YoutubePlayerZeenat component.
-  late YoutubePlayerZeenatModel youtubePlayerZeenatModel1;
-  // Model for YoutubePlayerZeenat component.
-  late YoutubePlayerZeenatModel youtubePlayerZeenatModel2;
-  // Model for ShortsZeenat component.
-  late ShortsZeenatModel shortsZeenatModel1;
-  // Model for ShortsZeenatDetails1 component.
-  late ShortsZeenatDetails1Model shortsZeenatDetails1Model1;
-  // Model for ShortsZeenatDetails2 component.
-  late ShortsZeenatDetails2Model shortsZeenatDetails2Model1;
-  // Model for ShortsZeenatDetails3 component.
-  late ShortsZeenatDetails3Model shortsZeenatDetails3Model1;
+  // Model for YoutubePlayerDeepak component.
+  late YoutubePlayerDeepakModel youtubePlayerDeepakModel1;
+  // Model for YoutubePlayerDeepak component.
+  late YoutubePlayerDeepakModel youtubePlayerDeepakModel2;
+  // Model for ShortsDeepakDetails1 component.
+  late ShortsDeepakDetails1Model shortsDeepakDetails1Model1;
+  // Model for ShortsDeepakDetails2 component.
+  late ShortsDeepakDetails2Model shortsDeepakDetails2Model1;
+  // Model for ShortsDeepakDetails3 component.
+  late ShortsDeepakDetails3Model shortsDeepakDetails3Model1;
   // Model for DeepakTimestamp component.
   late DeepakTimestampModel deepakTimestampModel1;
   // Model for DeepakAISummary component.
   late DeepakAISummaryModel deepakAISummaryModel1;
   // Model for ConversationDeepak component.
   late ConversationDeepakModel conversationDeepakModel1;
-  // Model for ShortsZeenat component.
-  late ShortsZeenatModel shortsZeenatModel2;
-  // Model for ShortsZeenatDetails1 component.
-  late ShortsZeenatDetails1Model shortsZeenatDetails1Model2;
-  // Model for ShortsZeenatDetails2 component.
-  late ShortsZeenatDetails2Model shortsZeenatDetails2Model2;
-  // Model for ShortsZeenatDetails3 component.
-  late ShortsZeenatDetails3Model shortsZeenatDetails3Model2;
+  // Model for ShortsDeepakDetails1 component.
+  late ShortsDeepakDetails1Model shortsDeepakDetails1Model2;
+  // Model for ShortsDeepakDetails2 component.
+  late ShortsDeepakDetails2Model shortsDeepakDetails2Model2;
+  // Model for ShortsDeepakDetails3 component.
+  late ShortsDeepakDetails3Model shortsDeepakDetails3Model2;
   // Model for DeepakTimestamp component.
   late DeepakTimestampModel deepakTimestampModel2;
   // Model for DeepakAISummary component.
@@ -93,6 +89,9 @@ class PodcastDetailsDeepakModel
   // Model for ExploreEpisodesRahulWithContainer component.
   late ExploreEpisodesRahulWithContainerModel
       exploreEpisodesRahulWithContainerModel1;
+  // Model for ExploreEpisodesZeenatWithContainer component.
+  late ExploreEpisodesZeenatWithContainerModel
+      exploreEpisodesZeenatWithContainerModel;
   // Model for ExploreEpisodesSumanWithContainer component.
   late ExploreEpisodesSumanWithContainerModel
       exploreEpisodesSumanWithContainerModel1;
@@ -135,28 +134,26 @@ class PodcastDetailsDeepakModel
   void initState(BuildContext context) {
     headerMobileModel = createModel(context, () => HeaderMobileModel());
     choiceChipsModel = createModel(context, () => ChoiceChipsModel());
-    youtubePlayerZeenatModel1 =
-        createModel(context, () => YoutubePlayerZeenatModel());
-    youtubePlayerZeenatModel2 =
-        createModel(context, () => YoutubePlayerZeenatModel());
-    shortsZeenatModel1 = createModel(context, () => ShortsZeenatModel());
-    shortsZeenatDetails1Model1 =
-        createModel(context, () => ShortsZeenatDetails1Model());
-    shortsZeenatDetails2Model1 =
-        createModel(context, () => ShortsZeenatDetails2Model());
-    shortsZeenatDetails3Model1 =
-        createModel(context, () => ShortsZeenatDetails3Model());
+    youtubePlayerDeepakModel1 =
+        createModel(context, () => YoutubePlayerDeepakModel());
+    youtubePlayerDeepakModel2 =
+        createModel(context, () => YoutubePlayerDeepakModel());
+    shortsDeepakDetails1Model1 =
+        createModel(context, () => ShortsDeepakDetails1Model());
+    shortsDeepakDetails2Model1 =
+        createModel(context, () => ShortsDeepakDetails2Model());
+    shortsDeepakDetails3Model1 =
+        createModel(context, () => ShortsDeepakDetails3Model());
     deepakTimestampModel1 = createModel(context, () => DeepakTimestampModel());
     deepakAISummaryModel1 = createModel(context, () => DeepakAISummaryModel());
     conversationDeepakModel1 =
         createModel(context, () => ConversationDeepakModel());
-    shortsZeenatModel2 = createModel(context, () => ShortsZeenatModel());
-    shortsZeenatDetails1Model2 =
-        createModel(context, () => ShortsZeenatDetails1Model());
-    shortsZeenatDetails2Model2 =
-        createModel(context, () => ShortsZeenatDetails2Model());
-    shortsZeenatDetails3Model2 =
-        createModel(context, () => ShortsZeenatDetails3Model());
+    shortsDeepakDetails1Model2 =
+        createModel(context, () => ShortsDeepakDetails1Model());
+    shortsDeepakDetails2Model2 =
+        createModel(context, () => ShortsDeepakDetails2Model());
+    shortsDeepakDetails3Model2 =
+        createModel(context, () => ShortsDeepakDetails3Model());
     deepakTimestampModel2 = createModel(context, () => DeepakTimestampModel());
     deepakAISummaryModel2 = createModel(context, () => DeepakAISummaryModel());
     conversationDeepakModel2 =
@@ -172,6 +169,8 @@ class PodcastDetailsDeepakModel
         context, () => ExploreEpisodesSrivatsramWithContainerModel());
     exploreEpisodesRahulWithContainerModel1 =
         createModel(context, () => ExploreEpisodesRahulWithContainerModel());
+    exploreEpisodesZeenatWithContainerModel =
+        createModel(context, () => ExploreEpisodesZeenatWithContainerModel());
     exploreEpisodesSumanWithContainerModel1 =
         createModel(context, () => ExploreEpisodesSumanWithContainerModel());
     exploreEpisodesBudgetWithContainerModel2 =
@@ -202,19 +201,17 @@ class PodcastDetailsDeepakModel
   void dispose() {
     headerMobileModel.dispose();
     choiceChipsModel.dispose();
-    youtubePlayerZeenatModel1.dispose();
-    youtubePlayerZeenatModel2.dispose();
-    shortsZeenatModel1.dispose();
-    shortsZeenatDetails1Model1.dispose();
-    shortsZeenatDetails2Model1.dispose();
-    shortsZeenatDetails3Model1.dispose();
+    youtubePlayerDeepakModel1.dispose();
+    youtubePlayerDeepakModel2.dispose();
+    shortsDeepakDetails1Model1.dispose();
+    shortsDeepakDetails2Model1.dispose();
+    shortsDeepakDetails3Model1.dispose();
     deepakTimestampModel1.dispose();
     deepakAISummaryModel1.dispose();
     conversationDeepakModel1.dispose();
-    shortsZeenatModel2.dispose();
-    shortsZeenatDetails1Model2.dispose();
-    shortsZeenatDetails2Model2.dispose();
-    shortsZeenatDetails3Model2.dispose();
+    shortsDeepakDetails1Model2.dispose();
+    shortsDeepakDetails2Model2.dispose();
+    shortsDeepakDetails3Model2.dispose();
     deepakTimestampModel2.dispose();
     deepakAISummaryModel2.dispose();
     conversationDeepakModel2.dispose();
@@ -225,6 +222,7 @@ class PodcastDetailsDeepakModel
     exploreEpisodesTirthankarWithContainerModel1.dispose();
     exploreEpisodesSrivatsramWithContainerModel1.dispose();
     exploreEpisodesRahulWithContainerModel1.dispose();
+    exploreEpisodesZeenatWithContainerModel.dispose();
     exploreEpisodesSumanWithContainerModel1.dispose();
     exploreEpisodesBudgetWithContainerModel2.dispose();
     exploreEpisodesTirthankarWithContainerModel2.dispose();

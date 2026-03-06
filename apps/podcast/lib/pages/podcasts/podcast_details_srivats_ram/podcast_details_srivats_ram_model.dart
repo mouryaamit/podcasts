@@ -6,6 +6,7 @@ import '/components/mobile_footer_widget.dart';
 import '/components/speaker_widget.dart';
 import '/conversation/conversation_srivats/conversation_srivats_widget.dart';
 import '/episodes/explore_episodes_budget_with_container/explore_episodes_budget_with_container_widget.dart';
+import '/episodes/explore_episodes_deepak_with_container/explore_episodes_deepak_with_container_widget.dart';
 import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_with_container_widget.dart';
 import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
 import '/episodes/explore_episodes_tirthankar_with_container/explore_episodes_tirthankar_with_container_widget.dart';
@@ -84,6 +85,9 @@ class PodcastDetailsSrivatsRamModel
   // Model for ExploreEpisodesTirthankarWithContainer component.
   late ExploreEpisodesTirthankarWithContainerModel
       exploreEpisodesTirthankarWithContainerModel1;
+  // Model for ExploreEpisodesDeepakWithContainer component.
+  late ExploreEpisodesDeepakWithContainerModel
+      exploreEpisodesDeepakWithContainerModel;
   // Model for ExploreEpisodesRahulWithContainer component.
   late ExploreEpisodesRahulWithContainerModel
       exploreEpisodesRahulWithContainerModel1;
@@ -164,6 +168,8 @@ class PodcastDetailsSrivatsRamModel
         createModel(context, () => ExploreEpisodesBudgetWithContainerModel());
     exploreEpisodesTirthankarWithContainerModel1 = createModel(
         context, () => ExploreEpisodesTirthankarWithContainerModel());
+    exploreEpisodesDeepakWithContainerModel =
+        createModel(context, () => ExploreEpisodesDeepakWithContainerModel());
     exploreEpisodesRahulWithContainerModel1 =
         createModel(context, () => ExploreEpisodesRahulWithContainerModel());
     exploreEpisodesZeenatWithContainerModel1 =
@@ -217,6 +223,7 @@ class PodcastDetailsSrivatsRamModel
     speakerModel3.dispose();
     exploreEpisodesBudgetWithContainerModel1.dispose();
     exploreEpisodesTirthankarWithContainerModel1.dispose();
+    exploreEpisodesDeepakWithContainerModel.dispose();
     exploreEpisodesRahulWithContainerModel1.dispose();
     exploreEpisodesZeenatWithContainerModel1.dispose();
     exploreEpisodesSumanWithContainerModel1.dispose();

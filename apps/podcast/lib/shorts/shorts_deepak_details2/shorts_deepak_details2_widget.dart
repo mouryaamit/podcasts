@@ -95,7 +95,7 @@ class _ShortsDeepakDetails2WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat2_web'),
+                              key: ValueKey('shorts_deepak2_web'),
                               'assets/images/shorts_deepak_details2.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -115,7 +115,7 @@ class _ShortsDeepakDetails2WidgetState
                           child: Align(
                             alignment: AlignmentDirectional(-1.0, -1.0),
                             child: Text(
-                              'Digital India’s Real Impact: How Tier 3 & 4 MSMEs are Unlocking Growth',
+                              'Compliance Over Credit: PSBs Failing MSMEs? ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -142,7 +142,7 @@ class _ShortsDeepakDetails2WidgetState
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(),
                           child: Text(
-                            'MSME Conversations • August 2025 • 1.27 min',
+                            'MSME Conversations • December 2025 • 1.50 min',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -191,9 +191,9 @@ class _ShortsDeepakDetails2WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                                  'https://www.youtube.com/embed/twNw7lmaRdc?si=j7bys_kzqz29j9gs',
                                               title:
-                                                  'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
+                                                  'Compliance Over Credit: PSBs Failing MSMEs? ',
                                             ),
                                           ),
                                         );
@@ -256,7 +256,7 @@ class _ShortsDeepakDetails2WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                        'https://youtu.be/twNw7lmaRdc?si=ECK8uGX5WZCfr2zW',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );
@@ -312,7 +312,7 @@ class _ShortsDeepakDetails2WidgetState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              key: ValueKey('shorts_zeenat2_m'),
+                              key: ValueKey('shorts_deepak2_m'),
                               'assets/images/shorts_deepak_details2.webp',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
@@ -332,7 +332,7 @@ class _ShortsDeepakDetails2WidgetState
                               ),
                               decoration: BoxDecoration(),
                               child: Text(
-                                'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
+                                'Compliance Over Credit: PSBs Failing MSMEs? ',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -362,7 +362,7 @@ class _ShortsDeepakDetails2WidgetState
                             width: 255.0,
                             decoration: BoxDecoration(),
                             child: Text(
-                              'MSME Conversations • August 2025 \n• 1.27 min',
+                              'MSME Conversations • December 2025 \n• 1.50 min',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -411,9 +411,9 @@ class _ShortsDeepakDetails2WidgetState
                                           child: WebViewAware(
                                             child: WatchNowDialogWidget(
                                               link:
-                                                  'https://www.youtube.com/embed/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                                  'https://www.youtube.com/embed/twNw7lmaRdc?si=j7bys_kzqz29j9gs',
                                               title:
-                                                  'Digital India’s Real Impact: How Tier 3 & 4 MSMEs Are Unloacking Growth',
+                                                  'Compliance Over Credit: PSBs Failing MSMEs?',
                                             ),
                                           ),
                                         );
@@ -476,7 +476,7 @@ class _ShortsDeepakDetails2WidgetState
                                     ),
                                     onPressed: () async {
                                       await Share.share(
-                                        'https://youtu.be/9uZk68lWeNs?si=MbKOL7Z0XvLddSVi',
+                                        'https://youtu.be/twNw7lmaRdc?si=ECK8uGX5WZCfr2zW',
                                         sharePositionOrigin:
                                             getWidgetBoundingBox(context),
                                       );
