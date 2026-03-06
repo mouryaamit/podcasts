@@ -365,6 +365,80 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                         .fontStyle,
                                               ),
                                         ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0,
+                                            valueOrDefault<double>(
+                                              () {
+                                                if (MediaQuery.sizeOf(context)
+                                                        .width <
+                                                    valueOrDefault<double>(
+                                                      kBreakpointSmall,
+                                                      900.0,
+                                                    )) {
+                                                  return 40.0;
+                                                } else if (MediaQuery.sizeOf(
+                                                            context)
+                                                        .width >
+                                                    valueOrDefault<double>(
+                                                      kBreakpointLarge,
+                                                      900.0,
+                                                    )) {
+                                                  return 0.0;
+                                                } else {
+                                                  return 0.0;
+                                                }
+                                              }(),
+                                              0.0,
+                                            ),
+                                            0.0,
+                                            valueOrDefault<double>(
+                                              () {
+                                                if (MediaQuery.sizeOf(context)
+                                                        .width <
+                                                    valueOrDefault<double>(
+                                                      kBreakpointSmall,
+                                                      900.0,
+                                                    )) {
+                                                  return 12.0;
+                                                } else if (MediaQuery.sizeOf(
+                                                            context)
+                                                        .width >
+                                                    valueOrDefault<double>(
+                                                      kBreakpointLarge,
+                                                      900.0,
+                                                    )) {
+                                                  return 0.0;
+                                                } else {
+                                                  return 0.0;
+                                                }
+                                              }(),
+                                              0.0,
+                                            )),
+                                        child: Text(
+                                          'Explore Episodes',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.mulish(
+                                                  fontWeight: FontWeight.w900,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF404040),
+                                                fontSize: 24.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w900,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        ),
                                       ),
                                       if (responsiveVisibility(
                                         context: context,
@@ -390,8 +464,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.4,
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          0.4,
                                                   child: wrapWithModel(
                                                     model: _model
+                                                        .exploreEpisodesBudgetWithContainerModel1,
                                                         .exploreEpisodesBudgetWithContainerModel1,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
@@ -405,6 +484,10 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 tablet: false,
                                               ))
                                                 Container(
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          0.4,
                                                   width:
                                                       MediaQuery.sizeOf(context)
                                                               .width *

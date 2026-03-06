@@ -96,7 +96,7 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -348,11 +348,11 @@ class _VideosPageVideo1WidgetState extends State<VideosPageVideo1Widget> {
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
                                   key: ValueKey('Video2_m'),
-                                  'assets/images/vnimc_1.png',
+                                  'assets/images/videos_ai_img.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),

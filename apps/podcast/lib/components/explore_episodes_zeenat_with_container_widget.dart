@@ -64,13 +64,9 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                   borderRadius: BorderRadius.circular(12.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.4,
-                    height: MediaQuery.sizeOf(context).width >
-                            valueOrDefault<double>(
-                              kBreakpointSmall,
-                              1700.0,
-                            )
-                        ? 550.0
-                        : 445.0,
+                    height: MediaQuery.sizeOf(context).width >= 1920.0
+                        ? 600.0
+                        : 510.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(12.0),
@@ -95,16 +91,15 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                           children: [
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height *
-                                  (MediaQuery.sizeOf(context).width > 1900.0
-                                      ? 0.2
-                                      : 0.3),
+                              height: MediaQuery.sizeOf(context).width >= 1920.0
+                                  ? 350.0
+                                  : 300.0,
                               decoration: BoxDecoration(),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12.0),
                                 child: Image.asset(
                                   key: ValueKey('exploreEpisode_zeenat_web'),
-                                  'assets/images/explore_zeenat_thumbnail.png',
+                                  'assets/images/explore_zeenat_thumbnail_png_(3).png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -153,7 +148,7 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
-                                      'India’s MSME sector is resilient but that doesn’t mean lenders should deploy...',
+                                      'India’s MSME sector is resilient but that doesn’t mean lenders...',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -195,12 +190,36 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                               verticalDirection: VerticalDirection.down,
                               clipBehavior: Clip.none,
                               children: [
-                                Text(
-                                  'MSME Conversations • June 2025 • 42 min',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.inter(
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0,
+                                      valueOrDefault<double>(
+                                        MediaQuery.sizeOf(context).width >=
+                                                1920.0
+                                            ? 0.0
+                                            : 10.0,
+                                        0.0,
+                                      ),
+                                      0.0,
+                                      0.0),
+                                  child: Text(
+                                    'MSME Conversations • July 2025 • 42 min',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF6B7280),
+                                          fontSize: 13.0,
+                                          letterSpacing: 0.0,
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -210,16 +229,7 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color: Color(0xFF6B7280),
-                                        fontSize: 13.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -478,9 +488,9 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                 borderRadius: BorderRadius.circular(6.0),
                                 child: Image.asset(
                                   key: ValueKey('exploreEpisode_zeenat_m'),
-                                  'assets/images/explore_zeenat_thumbnail.png',
+                                  'assets/images/explore_zeenat_thumbnail_png_(3).png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -538,7 +548,7 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'Practical tips and patterns for inclusive product experiences that work for everyone.',
+                                    'India’s MSME sector is resilient but that doesn’t mean lenders...',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -583,7 +593,7 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'MSME Conversations • June 2025 • 42 min',
+                                    'MSME Conversations • July 2025 • 42 min',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

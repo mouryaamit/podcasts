@@ -89,11 +89,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -328,7 +324,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                               'assets/images/shorts_budget_laveesh_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -339,6 +335,9 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'India’s ‘Plumbing’ Needs Fixing for SME Growth',
@@ -358,6 +357,7 @@ class _ShortsBudgetLaveeshWidgetState extends State<ShortsBudgetLaveeshWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),

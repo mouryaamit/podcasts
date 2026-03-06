@@ -103,7 +103,7 @@ class _ExploreEpisodesZeenatWidgetState
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -189,7 +189,7 @@ class _ExploreEpisodesZeenatWidgetState
                               clipBehavior: Clip.none,
                               children: [
                                 Text(
-                                  'MSME Conversations • June 2025 • 42 min',
+                                  'MSME Conversations • July 2025 • 42 min',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -472,7 +472,7 @@ class _ExploreEpisodesZeenatWidgetState
                                 child: Image.asset(
                                   'assets/images/explore_zeenat_thumbnail.png',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                             ),
@@ -575,7 +575,7 @@ class _ExploreEpisodesZeenatWidgetState
                                 clipBehavior: Clip.antiAlias,
                                 children: [
                                   Text(
-                                    'MSME Conversations • June 2025 • 42 min',
+                                    'MSME Conversations • July 2025 • 42 min',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

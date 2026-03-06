@@ -196,6 +196,7 @@ class _ConversationZeenatWidgetState extends State<ConversationZeenatWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
+                    color: Colors.black,
                     fontSize: 16.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
@@ -268,6 +269,7 @@ class _ConversationZeenatWidgetState extends State<ConversationZeenatWidget> {
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
+                    color: Colors.black,
                     fontSize: 16.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,

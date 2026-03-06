@@ -88,11 +88,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -326,7 +322,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                               'assets/images/shorts_srivatsram_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -337,6 +333,9 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'Is There A Magic Bullet to Aid the Auto Sector?',
@@ -356,6 +355,7 @@ class _ShortsSrivatsWidgetState extends State<ShortsSrivatsWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),

@@ -88,11 +88,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -327,7 +323,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                               'assets/images/shorts_budget_anil_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -338,6 +334,9 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'India\'s MSME Paradox: ₹10,000 Crore Announced, Half Unspent',
@@ -357,6 +356,7 @@ class _ShortsBudgetAnilWidgetState extends State<ShortsBudgetAnilWidget> {
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),

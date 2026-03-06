@@ -90,11 +90,7 @@ class _ShortsBudgetKrishnanWidgetState
                       children: [
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 359.0,
-                          constraints: BoxConstraints(
-                            minHeight: 359.0,
-                            maxHeight: 359.0,
-                          ),
+                          height: 340.0,
                           decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -329,7 +325,7 @@ class _ShortsBudgetKrishnanWidgetState
                               'assets/images/shorts_budget_krishnan_thumbnail.png',
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: MediaQuery.sizeOf(context).height * 1.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -340,6 +336,9 @@ class _ShortsBudgetKrishnanWidgetState
                                 0.0, 15.0, 0.0, 0.0),
                             child: Container(
                               width: 255.0,
+                              constraints: BoxConstraints(
+                                minHeight: 78.0,
+                              ),
                               decoration: BoxDecoration(),
                               child: Text(
                                 'India\'s MSME Export Challenge: What\'s Holding Small Businesses Back?',
@@ -359,6 +358,7 @@ class _ShortsBudgetKrishnanWidgetState
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
+                                      lineHeight: 1.5,
                                     ),
                               ),
                             ),
