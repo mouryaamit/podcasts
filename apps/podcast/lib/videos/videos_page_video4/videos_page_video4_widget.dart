@@ -216,7 +216,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                             },
                                             text: 'Watch Now',
                                             options: FFButtonOptions(
-                                              height: 40.0,
+                                              height: 36.0,
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
@@ -271,7 +271,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                               child: FlutterFlowIconButton(
                                                 borderColor: Color(0xFF1DB954),
                                                 borderRadius: 8.0,
-                                                buttonSize: 40.0,
+                                                buttonSize: 36.0,
                                                 fillColor: Color(0x000FFFFF),
                                                 icon: Icon(
                                                   Icons.ios_share,
@@ -477,7 +477,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                       },
                                       text: 'Watch Now',
                                       options: FFButtonOptions(
-                                        height: 36.0,
+                                        height: 40.0,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         iconPadding:
@@ -522,7 +522,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                       child: FlutterFlowIconButton(
                                         borderColor: Color(0xFF30AC6B),
                                         borderRadius: 7.0,
-                                        buttonSize: 36.0,
+                                        buttonSize: 40.0,
                                         fillColor: Color(0x000FFFFF),
                                         icon: Icon(
                                           Icons.ios_share,
