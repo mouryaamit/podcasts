@@ -293,7 +293,7 @@ export class SectorDistributionComponent implements OnInit {
       .html('')
       .append('svg')
       // .attr('width', default_width)
-      .attr('width', default_width + 2 * margin.right)
+      .attr('width', default_width + 2 * margin.right + 15)
       .attr('height', default_height)
       .attr('id', 'svg_sector_graph')
       .append('g')

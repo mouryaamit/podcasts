@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle('no-scroll');
   }
 
-  openResourcesTab(routeText:any) {
+  openResourcesTab() {
     window.open(`https://www.sumpoorn.in/resources`, '_blank');
   }
 
