@@ -92,7 +92,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
                                   key: ValueKey('Video4_web'),
-                                  'assets/images/YouTube_Thumbnail_(2).png',
+                                  'assets/images/videos_economy_cover.webp',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -216,7 +216,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                             },
                                             text: 'Watch Now',
                                             options: FFButtonOptions(
-                                              height: 44.0,
+                                              height: 40.0,
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
@@ -256,7 +256,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                                   ),
                                               elevation: 0.0,
                                               borderRadius:
-                                                  BorderRadius.circular(10.0),
+                                                  BorderRadius.circular(8.0),
                                             ),
                                           ),
                                         ),
@@ -271,12 +271,12 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                               child: FlutterFlowIconButton(
                                                 borderColor: Color(0xFF1DB954),
                                                 borderRadius: 8.0,
-                                                buttonSize: 36.0,
+                                                buttonSize: 40.0,
                                                 fillColor: Color(0x000FFFFF),
                                                 icon: Icon(
                                                   Icons.ios_share,
                                                   color: Color(0xFF1DB954),
-                                                  size: 22.0,
+                                                  size: 20.0,
                                                 ),
                                                 onPressed: () async {
                                                   await Share.share(
@@ -348,7 +348,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image.asset(
                                   key: ValueKey('Video4_m'),
-                                  'assets/images/videos_sumpoorn_img.png',
+                                  'assets/images/videos_economy_cover.webp',
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
@@ -477,7 +477,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                       },
                                       text: 'Watch Now',
                                       options: FFButtonOptions(
-                                        height: 40.0,
+                                        height: 36.0,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         iconPadding:
@@ -527,7 +527,7 @@ class _VideosPageVideo4WidgetState extends State<VideosPageVideo4Widget> {
                                         icon: Icon(
                                           Icons.ios_share,
                                           color: Color(0xFF30AC6B),
-                                          size: 22.0,
+                                          size: 20.0,
                                         ),
                                         onPressed: () async {
                                           await Share.share(

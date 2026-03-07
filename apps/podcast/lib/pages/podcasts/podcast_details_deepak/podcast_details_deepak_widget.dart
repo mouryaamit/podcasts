@@ -36,7 +36,8 @@ class PodcastDetailsDeepakWidget extends StatefulWidget {
   const PodcastDetailsDeepakWidget({super.key});
 
   static String routeName = 'PodcastDetailsDeepak';
-  static String routePath = '/deepak';
+  static String routePath =
+      '/the-crisis-choking-india-s-6-4-cr-msmes-into-silence';
 
   @override
   State<PodcastDetailsDeepakWidget> createState() =>
