@@ -15,7 +15,7 @@
     "build:angular:production": "nx run angular:build:production --base-href / --aot",
     "build:angular:development2": "nx run angular:build:development --base-href / --aot && node tools/scripts/inject-nonce.js sumpoorn_ui",
     "build:angular:production2": "nx run angular:build:production --base-href / --aot && node tools/scripts/inject-nonce.js sumpoorn_ui",
-    "update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-podcast --include-assets",
+    "update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-development --include-assets",
     "serve:podcast:development": "nx run podcast:serve:development",
     "build:podcast:development": "nx run podcast:build-web:development",
     "build:podcast:production": "nx run podcast:build-web:production",
