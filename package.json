@@ -10,14 +10,14 @@
     "serve:angular": "nx run angular:serve",
     "serve:podcast": "nx run podcast:serve",
 
-    "build:angular:dev": "node tools/scripts/build.js angular DEV",
-    "build:angular:prod": "node tools/scripts/build.js angular PROD",
+    "build:angular:development": "node tools/scripts/build.js angular DEV",
+    "build:angular:production": "node tools/scripts/build.js angular PROD",
 
-    "build:podcast:dev": "node tools/scripts/build.js podcast DEV",
-    "build:podcast:prod": "node tools/scripts/build.js podcast PROD",
+    "build:podcast:development": "node tools/scripts/build.js podcast DEV",
+    "build:podcast:production": "node tools/scripts/build.js podcast PROD",
 
-    "build:podcast:dev:secure": "npm run build:podcast:dev && node tools/scripts/inject-nonce.js resources_ui",
-    "build:podcast:prod:secure": "npm run build:podcast:prod && node tools/scripts/inject-nonce.js resources_ui"
+    "build:podcast:development:secure": "npm run build:podcast:dev && node tools/scripts/inject-nonce.js resources_ui",
+    "build:podcast:production:secure": "npm run build:podcast:prod && node tools/scripts/inject-nonce.js resources_ui"
   },
   "private": true,
   "devDependencies": {
