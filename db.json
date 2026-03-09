@@ -1,13 +1,39 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" },
-    { "id": 4, "title": "Post 4" }
+  "episodes": [
+    {
+      "banner": "budget_explore.png",
+      "heading": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
+      "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
+      "subtext": "India’s Union Budget 2026 arrives as MSMEs show cautious recovery...",
+      "tags": [
+        "MSME Conversations",
+        "February 2026",
+        "45 min"
+      ],
+      "experts": [
+        {
+          "photo": "sumita_circle_img.png",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "photo": "narsi_circle_img.png",
+          "name": "r. Narasimhan V"
+        }
+      ],
+      "featured": true
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "profile": {
     "name": "typicode"
