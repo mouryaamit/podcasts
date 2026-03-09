@@ -5,7 +5,7 @@
 
     "nxReset": "nx reset",
 
-    "export:podcast": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-develop --include-assets",
+    "export:podcast": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-dynamic --include-assets",
         
     "serve:angular": "nx run angular:serve",
     "serve:podcast": "nx run podcast:serve",
