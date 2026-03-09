@@ -1,0 +1,46 @@
+[
+  {
+    "banner": "budget_explore.png",
+    "heading": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
+    "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
+    "subtext": "India’s Union Budget 2026 arrives as MSMEs show cautious recovery...",
+    "tags": [
+      "MSME Conversations",
+      "February 2026",
+      "45 min"
+    ],
+    "experts": [
+      {
+        "photo": "sumita_circle_img.png",
+        "name": "Dr. Sumita Kale"
+      },
+      {
+        "photo": "narsi_circle_img.png",
+        "name": "Mr. Narasimhan V"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "banner": "Tirthankar_explore_webp.webp",
+    "heading": "How MSMEs, Retail Investors & Smarter IPOs Are Reshaping Capital Markets",
+    "slug": "how-msmes-retail-investors-smarter-ipos-are-reshaping-capital-markets",
+    "subtext": "India's capital markets are undergoing a transformation...",
+    "tags": [
+      "MSME Conversations",
+      "anuary 2026",
+      "30 min"
+    ],
+    "experts": [
+      {
+        "photo": "sumita_circle_img.png",
+        "name": "Dr. Sumita Kale"
+      },
+      {
+        "photo": "narsi_circle_img.png",
+        "name": "Mr. Narasimhan V"
+      }
+    ],
+    "featured": false
+  }
+]
