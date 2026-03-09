@@ -1,25 +1,41 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "sumpoorn",
+
+  "affected": {
+    "defaultBase": "master"
+  },
+
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "build-web",
+          "lint"
+        ],
+        "parallel": 3
       }
     }
   },
+
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": ["{options.outputPath}"]
+    },
+
+    "build-web": {
+      "dependsOn": ["^build-web"],
       "inputs": ["production", "^production"]
     },
-    "test": {
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
+
+    "serve": {
+      "cache": false
     },
-    "e2e": {
-      "inputs": ["default", "^production"]
-    },
+
     "lint": {
       "inputs": [
         "default",
@@ -28,30 +44,21 @@
       ]
     }
   },
+
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+
     "production": [
       "default",
-      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
-      "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/.eslintrc.json"
+      "!{projectRoot}/**/*.spec.ts"
     ],
-    "sharedGlobals": []
-  },
-  "generators": {
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
+
+    "sharedGlobals": [
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/nx.json"
+    ]
   }
 }

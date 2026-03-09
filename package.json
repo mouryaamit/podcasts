@@ -2,25 +2,22 @@
   "name": "sumpoorn",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+
     "nxReset": "nx reset",
-    "start": "nx run angular:serve:development",
-    "startProd": "nx run angular:serve:production",
-    "updateTimeStamp": "node tools/scripts/timestamp.js",
-    "_buildDev": "nx run podcast:build-web:development",
-    "buildDev": "npm run updateTimeStamp -- angular:build:development & nx run angular:build:development",
-    "buildProd": "npm run updateTimeStamp -- angular:build:production & nx run angular:build:production",
-    "serve:angular:development": "nx run angular:serve:development",
-    "build:angular:development": "nx run angular:build:development --base-href / --aot",
-    "build:angular:production": "nx run angular:build:production --base-href / --aot",
-    "build:angular:development2": "nx run angular:build:development --base-href / --aot && node tools/scripts/inject-nonce.js sumpoorn_ui",
-    "build:angular:production2": "nx run angular:build:production --base-href / --aot && node tools/scripts/inject-nonce.js sumpoorn_ui",
-    "update:podcast:production": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-development --include-assets",
-    "serve:podcast:development": "nx run podcast:serve:development",
-    "build:podcast:development": "nx run podcast:build-web:development",
-    "build:podcast:production": "nx run podcast:build-web:production",
-    "build:podcast:development2": "nx run podcast:build-web:development && node tools/scripts/inject-nonce.js resources_ui",
-    "build:podcast:production2": "nx run podcast:build-web:production && node tools/scripts/inject-nonce.js resources_ui"
+
+    "export:podcast": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-develop --include-assets",
+        
+    "serve:angular": "nx run angular:serve",
+    "serve:podcast": "nx run podcast:serve",
+
+    "build:angular:dev": "node tools/scripts/build.js angular DEV",
+    "build:angular:prod": "node tools/scripts/build.js angular PROD",
+
+    "build:podcast:dev": "node tools/scripts/build.js podcast DEV",
+    "build:podcast:prod": "node tools/scripts/build.js podcast PROD",
+
+    "build:podcast:dev:secure": "npm run build:podcast:dev && node tools/scripts/inject-nonce.js resources_ui",
+    "build:podcast:prod:secure": "npm run build:podcast:prod && node tools/scripts/inject-nonce.js resources_ui"
   },
   "private": true,
   "devDependencies": {

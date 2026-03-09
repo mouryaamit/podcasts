@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+// apps/angular/src/app/app.module.ts
+
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +50,7 @@ import {
 } from './directive/common.directive';
 import { FormsModule } from '@angular/forms';
 import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe';
+import { initCspNonce } from '../../../../tools/scripts/csp-nonce-initializer';
 
 @NgModule({
   declarations: [
@@ -114,6 +117,11 @@ import { SecondsToTimePipe } from './pipes/seconds-to-time.pipe';
     }),
   ],
   providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initCspNonce,
+      multi: true,
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,

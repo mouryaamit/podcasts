@@ -1,3 +1,7 @@
+// apps/angular/src/main.ts
+
+import '../../../tools/scripts/csp-nonce-patch'; // This applies the nonce patch
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
