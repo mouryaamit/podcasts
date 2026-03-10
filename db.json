@@ -6,31 +6,44 @@
       "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
       "subtext": "India’s Union Budget 2026 arrives as MSMEs show cautious recovery...",
       "tags": [
-        "MSME Conversations",
-        "February 2026",
-        "45 min"
+        "MSME Conversations"
       ],
-      "experts": [
+      "month": "February 2026",
+      "duration": "45 min",
+      "guestExperts": [
         {
-          "photo": "sumita_circle_img.png",
+          "profileImage": "Lavesh.png",
+          "name": "Dr. Laveesh Bhandari",
+        },
+        {
+          "profileImage": "anil.png",
+          "name": "Mr. Anil Bharadwaj",
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "sumita_circle_img.png",
           "name": "Dr. Sumita Kale"
         },
         {
-          "photo": "narsi_circle_img.png",
+          "profileImage": "narsi_circle_img.png",
           "name": "Mr. Narasimhan V"
         }
       ],
+      "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC",
       "featured": true
     },
     {
-      "banner":"Tirthankar_explore_webp.webp",
+      "banner": "Tirthankar_explore_webp.webp",
       "heading": "How MSMEs, Retail Investors & Smarter IPOs Are Reshaping Capital Markets",
       "slug": "how-msmes-retail-investors-smarter-ipos-are-reshaping-capital-markets",
       "subtext": "India's capital markets are undergoing a transformation...",
       "tags": [
-        "MSME Conversations","anuary 2026","30 min"
+        "MSME Conversations"
       ],
-      "experts": [
+      "month": "anuary 2026",
+      "duration": "30 min",
+      "indexExperts": [
         {
           "photo": "sumita_circle_img.png",
           "name": "Dr. Sumita Kale"
@@ -40,22 +53,127 @@
           "name": "Mr. Narasimhan V"
         }
       ],
+      "youtubeShareLink": "https://youtu.be/7emcFg25dHY?si=A3Hy-SN2z9oA8dT3",
       "featured": false
     }
   ],
-  "comments": [
+  "episodesDetails": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some comment",
-      "postId": 1
+      "heading": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
+      "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
+      "youtubeLink": "https://www.youtube.com/embed/eL6ee7hfAqo?playsinline=1&rel=0&modestbranding=1",
+      "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC",
+      "details": [
+        "India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025 uptick. This post-Budget roundtable brings together voices from policy, trade, exports, credit, and fintech to assess whether Budget intent can translate into on-ground execution. In this discussion, experts examine credit and liquidity reforms like mandatory TReDS usage and the new ₹10,000 crore SME Growth Fund, alongside export opportunities from recent FTAs with the EU and UK.",
+        "At the same time, panelists highlight persistent frictions - delayed payments, compliance burden, logistics variability, weak local governance, and limited state capacity. The core question remains: while capital access is improving, can India address land, labour, law, and local execution to truly reimagine MSME growth?"
+      ],
+      "highlights": [
+        {
+          "banner": "shorts_budget_krishnan_thumbnail.png",
+          "heading": "India's MSME Export Challenge: What's Holding Small Businesses Back?",
+          "tags": [
+            "MSME Conversations",
+            "February 2026",
+            "1.47 min"
+          ],
+          "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=mjGVWGshmeU93uU4",
+          "youtubeLink": "https://www.youtube.com/embed/k2eFUgXjDNc?si=LNHdxtzmAgdnRWdY"
+        }
+      ],
+      "timestamps": [
+        {
+          "from": "0:57",
+          "to": "1:41",
+          "title": "Introduction to Sumpoorn Index"
+        },
+        {
+          "from": "1:54",
+          "to": "2:00",
+          "title": "Government's Vision for Small Businesses"
+        }
+      ],
+      "aiSummarys": [
+        {
+          "index": "1",
+          "title": "MSMEs Enter FY26 with Strong Sentiment",
+          "conversations": [
+            "The Sumpoorn Index closed 2025 at 0.60, signaling improving momentum.",
+            "Despite global volatility, MSMEs are entering the new financial year with confidence and stability."
+          ]
+        },
+        {
+          "index": "2",
+          "title": "Budget 2026: Intent Is Clear — Execution Is the Real Test",
+          "subtitle": "The Budget ticks the boxes on:",
+          "conversations": [
+            "Credit access",
+            "Liquidity",
+            "Manufacturing competitiveness",
+            "Trade facilitation",
+            "But the core question remains:",
+            "Can intent translate into ground-level execution?"
+          ]
+        }
+      ],
+      "conversations": [
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Good afternoon, and welcome to this post-Budget roundtable. Today, we have an expert panel to give us views from across the board - Dr. Laveesh Bhandari, President of Centre for Social and Economic Progress that is CSEP, Mr. Anil Bhardwaj, Secretary General for Federation of Indian Small and Medium Enterprises, that is FISME, Mr. Unnikrishnan, who is the Joint Director General of the Federation of Indian Export Organizations, that is FIEO, and Mr. Narasimhan (Narsi), who is our Principal Advisor at Jocata.",
+            "I will just give a very small introduction to Jocata Sumpoorn, which is an index which has been tracking the sales activity of MSME since 2019. It has stayed the course, averaging around 0.57 over the last year, through all the global trade shocks. But in November and December, it moved up; it went to 0.61 in November and 0.60 in December. So, as we stand today, we are looking at a very positive, very rosy picture and the budget has given us this long-term view, which is also setting a path for sustained growth. We are entering the new financial year with very good sentiment. With that context, I would like to begin by asking Laveesh for a broad overview. What is the government's vision for small businesses and where exactly does the budget fit into this vision?"
+          ]
+        },
+        {
+          "title": "Vision, Support, and What’s Missing"
+        },
+        {
+          "speaker": "Laveesh Bhandari",
+          "conversations": [
+            "Thanks, Sumita. Great to be here. Giving credit to the government, within whatever their vision is, they have ticked all the checkboxes. The problem, I feel, lies with the vision itself. The government continues to rely a lot on easing the financial burdens of SMEs and is unable to understand the other issues which are far more important. There's a lot of talk about ease of doing business and deregulation, and we all know that that's a part of India's plumbing. If you're not going to make correction on that side, then we will have to keep on giving different kinds of subsidies or interest.",
+            "The first and foremost problem is that our local governments are just completely dysfunctional. Space or location, the logistical framework required around SMEs - local governments are unable to take these on. The second is this whole issue of various regulations. Governments say they're going to deregulate; it's going to be impossible to do. There are many compliances which are critical in a smooth functioning economy, but the entity that is enforcing these is completely bankrupt of ideas."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "text": [
+            "If there were a couple of things on your wish list for the central government, what do you think they could do?"
+          ]
+        },
+      ],
+      "guestExperts": [
+        {
+          "profileImage": "Lavesh.png",
+          "name": "Dr. Laveesh Bhandari",
+          "description": "President & Senior Fellow at CSEP, leading applied economist focused on livelihoods, reforms, financial inclusion, and energy transition. PhD, Boston University."
+        },
+        {
+          "profileImage": "anil.png",
+          "name": "Mr. Anil Bharadwaj",
+          "description": "Secretary General, FISME. Senior MSME policy advocate specialising in trade, exports, and regulatory reform. Member, Economic Advisory Group, Government of Uttar Pradesh."
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita.png",
+          "name": "Dr. Sumita Kale",
+          "description": "Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index."
+        },
+        {
+          "profileImage": "Narsi.png",
+          "name": "Mr. Narasimhan V.",
+          "description": "Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology."
+        }
+      ]
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "videos": [
+    {
+      "banner": "videos_ai_cover.webp",
+      "title": "AI & Alternative Data: Balancing Efficiency & Risk in SME Financing",
+      "month": "September 2024",
+      "duration": "39.17 min",
+      "youtubeLink": "https://www.youtube.com/embed/dqFPKlCGEZo?si=bJrh9z0-SjyO71S0",
+      "youtubeShareLink": "'https://youtu.be/dqFPKlCGEZo?si=76l8bOYydq1kbWoU'"
+    }
+  ]
 }
