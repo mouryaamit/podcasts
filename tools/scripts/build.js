@@ -1,7 +1,25 @@
 const { execSync } = require("child_process");
 
-const project = process.argv[2];
-const env = process.argv[3] || "DEV";
+/* ---------------------------
+   Parse CLI args
+---------------------------- */
+
+const args = process.argv.slice(2);
+
+const getArg = (name, defaultValue = null) => {
+  const arg = args.find((a) => a.startsWith(`--${name}=`));
+  return arg ? arg.split("=")[1] : defaultValue;
+};
+
+const project = getArg("project");
+const projectType = getArg("type");
+const env = (getArg("env", "DEV")).toUpperCase();
+const distPath = getArg("dist");
+const baseHref = getArg("baseHref", "/");
+
+/* ---------------------------
+   Build metadata
+---------------------------- */
 
 const timestamp = new Date().toISOString();
 const branch = execSync("git rev-parse --abbrev-ref HEAD").toString().trim();
@@ -9,7 +27,7 @@ const commit = execSync("git rev-parse --short HEAD").toString().trim();
 const build = Date.now();
 
 console.log("🚀 Build Starting");
-console.log({ env, timestamp, branch, commit, build });
+console.log({ project, projectType, env, distPath, baseHref });
 
 process.env.BUILD_ENV = env;
 process.env.BUILD_TIMESTAMP = timestamp;
@@ -17,38 +35,53 @@ process.env.BUILD_BRANCH = branch;
 process.env.BUILD_COMMIT = commit;
 process.env.BUILD_NUMBER = build;
 
-let distPath = "";
+/* ---------------------------
+   Angular Build
+---------------------------- */
 
-if (project === "angular") {
+if (projectType === "angular") {
+
+  const configuration = env === "PROD" ? "production" : "development";
 
   execSync(
-    `nx run angular:build:${env === "PROD" ? "production" : "development"}`,
+    `nx run ${project}:build:${configuration} --outputPath=${distPath}`,
     { stdio: "inherit" }
   );
 
-  distPath = "dist/sumpoorn_ui";
-
 }
 
-if (project === "podcast") {
+/* ---------------------------
+   Flutter Build
+---------------------------- */
 
-  execSync(`
+if (projectType === "flutter") {
+
+  execSync(
+    `
 flutter build web \
---base-href /resources/ \
---output ../../dist/resources_ui \
+--base-href ${baseHref} \
+--output ../../${distPath} \
 --dart-define=FLUTTER_WEB_USE_SKIA=false
-`, {
-    cwd: "apps/podcast",
-    stdio: "inherit"
-  });
-
-  distPath = "dist/resources_ui";
+`,
+    {
+      cwd: `apps/${project}`,
+      stdio: "inherit"
+    }
+  );
 
 }
+
+/* ---------------------------
+   Production security
+---------------------------- */
 
 if (env === "PROD") {
   execSync(`node tools/scripts/strip-exif.js ${distPath}`, { stdio: "inherit" });
 }
+
+/* ---------------------------
+   Inject metadata
+---------------------------- */
 
 execSync(
   `node tools/scripts/inject-meta.js ${distPath}/index.html`,
