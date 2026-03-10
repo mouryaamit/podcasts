@@ -15,7 +15,7 @@ const project = getArg("project");
 const projectType = getArg("type");
 const env = (getArg("env", "DEV")).toUpperCase();
 const distPath = getArg("dist");
-const baseHref = getArg("baseHref", "/");
+const baseHref = getArg("baseHref"); // optional
 
 /* ---------------------------
    Build metadata
@@ -42,9 +42,10 @@ process.env.BUILD_NUMBER = build;
 if (projectType === "angular") {
 
   const configuration = env === "PROD" ? "production" : "development";
+  const baseHrefArg = baseHref ? `--base-href=${baseHref}` : "";
 
   execSync(
-    `nx run ${project}:build:${configuration} --outputPath=${distPath}`,
+    `nx run ${project}:build:${configuration} --outputPath=${distPath} ${baseHrefArg}`,
     { stdio: "inherit" }
   );
 
@@ -56,10 +57,12 @@ if (projectType === "angular") {
 
 if (projectType === "flutter") {
 
+  const baseHrefArg = baseHref ? `--base-href ${baseHref}` : "";
+
   execSync(
     `
 flutter build web \
---base-href ${baseHref} \
+${baseHrefArg} \
 --output ../../${distPath} \
 --dart-define=FLUTTER_WEB_USE_SKIA=false
 `,
