@@ -13,11 +13,11 @@
       "guestExperts": [
         {
           "profileImage": "Lavesh.png",
-          "name": "Dr. Laveesh Bhandari",
+          "name": "Dr. Laveesh Bhandari"
         },
         {
           "profileImage": "anil.png",
-          "name": "Mr. Anil Bharadwaj",
+          "name": "Mr. Anil Bharadwaj"
         }
       ],
       "indexExperts": [
@@ -138,7 +138,7 @@
           "text": [
             "If there were a couple of things on your wish list for the central government, what do you think they could do?"
           ]
-        },
+        }
       ],
       "guestExperts": [
         {
