@@ -22,7 +22,7 @@
   "build:podcast:production": "node tools/scripts/build.js --project=podcast --type=flutter --env=PROD --dist=dist/resources_ui --baseHref=/resources/",
 
   "build:podcast:development:secure": "npm run build:podcast:development && node tools/scripts/inject-nonce.js resources_ui",
-  "build:podcast:production:secure": "npm run build:podcast:production && node tools/scripts/inject-nonce.js resources_ui",
+  "build:podcast:production:secure": "npm run build:podcast:production && node tools/scripts/inject-nonce.js resources_ui"
 },
   "private": true,
   "devDependencies": {
