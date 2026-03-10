@@ -3,22 +3,27 @@
   "version": "0.0.0",
   "scripts": {
 
-    "nxReset": "nx reset",
+  "nx:reset": "nx reset",
+  "nx:graph": "nx graph",
+  "nx:projects": "nx show projects",
 
-    "export:podcast": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-dynamic --include-assets",
-        
-    "serve:angular": "nx run angular:serve",
-    "serve:podcast": "nx run podcast:serve",
+  "export:podcast": "dotenv -e .env -- flutterflow export-code --project sumpoorn-yy3mxu --no-parent-folder -d apps/podcast --project-environment Production --branch-name feature-dynamic --include-assets",
 
-    "build:angular:development": "node tools/scripts/build.js angular DEV",
-    "build:angular:production": "node tools/scripts/build.js angular PROD",
+  "serve:angular": "nx run angular:serve",
+  "serve:podcast": "nx run podcast:serve",
 
-    "build:podcast:development": "node tools/scripts/build.js podcast DEV",
-    "build:podcast:production": "node tools/scripts/build.js podcast PROD",
+  "build:angular:development": "node tools/scripts/build.js --project=angular --type=angular --env=DEV --dist=dist/sumpoorn_ui",
+  "build:angular:production": "node tools/scripts/build.js --project=angular --type=angular --env=PROD --dist=dist/sumpoorn_ui",
 
-    "build:podcast:development:secure": "npm run build:podcast:dev && node tools/scripts/inject-nonce.js resources_ui",
-    "build:podcast:production:secure": "npm run build:podcast:prod && node tools/scripts/inject-nonce.js resources_ui"
-  },
+  "build:angular:development:secure": "npm run build:angular:development && node tools/scripts/inject-nonce.js sumpoorn_ui",
+  "build:angular:production:secure": "npm run build:angular:production && node tools/scripts/inject-nonce.js sumpoorn_ui",
+
+  "build:podcast:development": "node tools/scripts/build.js --project=podcast --type=flutter --env=DEV --dist=dist/resources_ui --baseHref=/resources/",
+  "build:podcast:production": "node tools/scripts/build.js --project=podcast --type=flutter --env=PROD --dist=dist/resources_ui --baseHref=/resources/",
+
+  "build:podcast:development:secure": "npm run build:podcast:development && node tools/scripts/inject-nonce.js resources_ui",
+  "build:podcast:production:secure": "npm run build:podcast:production && node tools/scripts/inject-nonce.js resources_ui",
+},
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.13",
