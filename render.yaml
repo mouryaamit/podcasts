@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: podcasts-api
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars: []
+    autoDeploy: true
+    instanceType: "starter"
+    instances: 1
+    healthCheckPath: "/episodes"
+    ports:
+      - 3000

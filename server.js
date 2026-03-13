@@ -33,6 +33,10 @@ app.get('/highlights', (req, res) => {
   res.json(highlights);
 });
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', uptime: process.uptime() });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
