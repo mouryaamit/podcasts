@@ -36,12 +36,34 @@ app.get('/episodes', (req, res) => {
 });
 
 app.get('/videos', (req, res) => {
-  res.json(data.videos);
+  const total = data.videos.length;
+  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+  const perPage = 10;
+  const offset = (page - 1) * perPage;
+  const items = data.videos.slice(offset, offset + perPage);
+
+  res.json({
+    total,
+    page,
+    perPage,
+    items,
+  });
 });
 
 app.get('/highlights', (req, res) => {
   const highlights = data.episodesDetails.flatMap(ep => ep.highlights || []);
-  res.json(highlights);
+  const total = highlights.length;
+  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+  const perPage = 10;
+  const offset = (page - 1) * perPage;
+  const items = highlights.slice(offset, offset + perPage);
+
+  res.json({
+    total,
+    page,
+    perPage,
+    items,
+  });
 });
 
 app.get('/health', (req, res) => {
