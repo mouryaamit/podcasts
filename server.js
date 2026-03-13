@@ -21,7 +21,18 @@ app.get('/episodes', (req, res) => {
     return res.json(filtered);
   }
 
-  res.json(data.episodes);
+  const total = data.episodes.length;
+  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+  const perPage = 10;
+  const offset = (page - 1) * perPage;
+  const items = data.episodes.slice(offset, offset + perPage);
+
+  res.json({
+    total,
+    page,
+    perPage,
+    items,
+  });
 });
 
 app.get('/videos', (req, res) => {
