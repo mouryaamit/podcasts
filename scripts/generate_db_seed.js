@@ -40,8 +40,8 @@ const insertEpisodes = () => {
   const episodes = db.episodes || [];
   write('-- episodes');
   episodes.forEach((ep) => {
-    const cols = ['slug', 'title', 'banner', 'subtext', 'month', 'duration', 'youtube_share_link', 'featured'];
-    const vals = [ep.slug, ep.title, ep.banner, ep.subtext, ep.month, ep.duration, ep.youtubeShareLink, ep.featured];
+    const cols = ['slug', 'title', 'banner', 'month', 'duration', 'youtube_share_link', 'featured'];
+    const vals = [ep.slug, ep.title, ep.banner, ep.month, ep.duration, ep.youtubeShareLink, ep.featured];
     write(`INSERT INTO episodes (${cols.join(', ')}) VALUES (${vals.map(esc).join(', ')});`);
   });
   write('');
