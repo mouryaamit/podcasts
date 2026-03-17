@@ -18,7 +18,7 @@ export interface YoutubeLink {
 
 export interface Episode extends MediaMeta, YoutubeLink {
     slug: string
-    subtext: string
+    subtext?: string
     tags: string[]
     featured: boolean
 
