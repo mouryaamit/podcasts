@@ -23,9 +23,6 @@ public class Episode {
     private String banner;
 
     @Column(nullable = false)
-    private String subtext;
-
-    @Column(nullable = false)
     private String month;
 
     @Column(nullable = false)
@@ -114,14 +111,6 @@ public class Episode {
 
     public void setBanner(String banner) {
         this.banner = banner;
-    }
-
-    public String getSubtext() {
-        return subtext;
-    }
-
-    public void setSubtext(String subtext) {
-        this.subtext = subtext;
     }
 
     public String getMonth() {
