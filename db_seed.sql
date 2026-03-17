@@ -1,8 +1,22 @@
 /* Auto-generated seed file from db-full.json */
-BEGIN;
+START TRANSACTION;
 
 -- Clear existing data
-TRUNCATE videos, conversation_messages, conversation_blocks, ai_summary_conversations, ai_summaries, timestamps, highlight_tags, highlights, episode_details, episode_people, people, episode_tags, episodes RESTART IDENTITY CASCADE;
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE videos;
+TRUNCATE TABLE conversation_messages;
+TRUNCATE TABLE conversation_blocks;
+TRUNCATE TABLE ai_summary_conversations;
+TRUNCATE TABLE ai_summaries;
+TRUNCATE TABLE timestamps;
+TRUNCATE TABLE highlight_tags;
+TRUNCATE TABLE highlights;
+TRUNCATE TABLE episode_details;
+TRUNCATE TABLE episode_people;
+TRUNCATE TABLE people;
+TRUNCATE TABLE episode_tags;
+TRUNCATE TABLE episodes;
+SET FOREIGN_KEY_CHECKS = 1;
 
 -- episodes
 INSERT INTO episodes (slug, title, banner, subtext, month, duration, youtube_share_link, featured) VALUES ('msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead', 'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead', 'Explore_Budget_cover.webp', 'India''s Union Budget 2026 arrives as MSMEs show cautious recovery...', 'February 2026', '45 min', 'https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC', 'true');
