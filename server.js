@@ -36,12 +36,22 @@ app.get('/episodes', (req, res) => {
 
   if (featured !== undefined) {
     const isFeatured = String(featured).toLowerCase() === 'true' || featured === '1';
-    const filtered = data.episodes.filter(ep => ep.featured === isFeatured);
-    const total = filtered.length;
+    const featuredEpisodes = data.episodes.filter(ep => ep.featured === isFeatured);
+    const total = featuredEpisodes.length;
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
     const perPage = 10;
     const offset = (page - 1) * perPage;
-    const items = filtered.slice(offset, offset + perPage);
+    const paginatedEpisodes = featuredEpisodes.slice(offset, offset + perPage);
+    const items = paginatedEpisodes.map(ep => {
+      const epd = data.episodesDetails.find(d => d.slug === ep.slug);
+      if (epd && epd.description.length > 0) {
+        return {
+          ...ep,
+          subtext: epd.description[0]
+        };
+      }
+      return ep;
+    });
     return res.json({
       total,
       page,
@@ -54,7 +64,17 @@ app.get('/episodes', (req, res) => {
   const page = Math.max(1, parseInt(req.query.page, 10) || 1);
   const perPage = 10;
   const offset = (page - 1) * perPage;
-  const items = data.episodes.slice(offset, offset + perPage);
+  const paginatedEpisodes = data.episodes.slice(offset, offset + perPage);
+  const items = paginatedEpisodes.map(ep => {
+    const epd = data.episodesDetails.find(d => d.slug === ep.slug);
+    if (epd && epd.description.length > 0) {
+      return {
+        ...ep,
+        subtext: epd.description[0]
+      };
+    }
+    return ep;
+  });
 
   res.json({
     total,
