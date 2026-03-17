@@ -10,7 +10,12 @@ app.get('/episodes', (req, res) => {
   if (slug) {
     const episode = data.episodesDetails.find(ep => ep.slug === slug);
     if (episode) {
-      return res.json(episode);
+      return res.json({
+        total: 1,
+        page: 1,
+        perPage: 1,
+        items: [episode],
+      });
     }
     return res.status(404).json({ error: 'Episode not found' });
   }
@@ -18,7 +23,17 @@ app.get('/episodes', (req, res) => {
   if (featured !== undefined) {
     const isFeatured = String(featured).toLowerCase() === 'true' || featured === '1';
     const filtered = data.episodes.filter(ep => ep.featured === isFeatured);
-    return res.json(filtered);
+    const total = filtered.length;
+    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+    const perPage = 10;
+    const offset = (page - 1) * perPage;
+    const items = filtered.slice(offset, offset + perPage);
+    return res.json({
+      total,
+      page,
+      perPage,
+      items,
+    });
   }
 
   const total = data.episodes.length;
