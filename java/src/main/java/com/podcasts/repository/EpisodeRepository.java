@@ -16,8 +16,8 @@ public interface EpisodeRepository extends JpaRepository<Episode, java.util.UUID
 
     List<Episode> findByFeaturedTrue();
 
-    @Query("SELECT e FROM Episode e WHERE LOWER(e.title) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR LOWER(e.subtext) LIKE LOWER(CONCAT('%', :searchTerm, '%'))")
-    List<Episode> searchByTitleOrSubtext(@Param("searchTerm") String searchTerm);
+    @Query("SELECT e FROM Episode e WHERE LOWER(e.title) LIKE LOWER(CONCAT('%', :searchTerm, '%'))")
+    List<Episode> searchByTitle(@Param("searchTerm") String searchTerm);
 
     List<Episode> findByTagsContaining(String tag);
 }
