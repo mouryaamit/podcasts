@@ -17,7 +17,6 @@ Represents an episode summary (used by `/episodes` endpoint).
 | `slug`        | TEXT / VARCHAR(255) | Unique index |
 | `title`       | TEXT        | |
 | `banner`      | TEXT        | |
-| `subtext`     | TEXT        | |
 | `month`       | TEXT        | |
 | `duration`    | TEXT        | |
 | `youtube_share_link` | TEXT | |
