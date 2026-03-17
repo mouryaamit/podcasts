@@ -5,14 +5,15 @@ import '/components/mobile_footer_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/videos/videos_content_empty/videos_content_empty_widget.dart';
 import '/videos/videos_page_video1/videos_page_video1_widget.dart';
 import '/videos/videos_page_video2/videos_page_video2_widget.dart';
 import '/videos/videos_page_video3/videos_page_video3_widget.dart';
 import '/videos/videos_page_video4/videos_page_video4_widget.dart';
+import '/videos/videos_page_video5/videos_page_video5_widget.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'videos_model.dart';
@@ -42,11 +43,6 @@ class _VideosWidgetState extends State<VideosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => VideosModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      setDarkModeSetting(context, ThemeMode.light);
-    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -214,6 +210,8 @@ class _VideosWidgetState extends State<VideosWidget> {
                                         ))
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
                                             children: [
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -223,21 +221,21 @@ class _VideosWidgetState extends State<VideosWidget> {
                                                   Container(
                                                     child: wrapWithModel(
                                                       model: _model
-                                                          .videosPageVideo1Model1,
+                                                          .videosPageVideo5Model1,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
                                                       child:
-                                                          VideosPageVideo1Widget(),
+                                                          VideosPageVideo5Widget(),
                                                     ),
                                                   ),
                                                   Container(
                                                     child: wrapWithModel(
                                                       model: _model
-                                                          .videosPageVideo2Model1,
+                                                          .videosPageVideo1Model1,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
                                                       child:
-                                                          VideosPageVideo2Widget(),
+                                                          VideosPageVideo1Widget(),
                                                     ),
                                                   ),
                                                 ].divide(SizedBox(width: 25.0)),
@@ -250,6 +248,16 @@ class _VideosWidgetState extends State<VideosWidget> {
                                                   Container(
                                                     child: wrapWithModel(
                                                       model: _model
+                                                          .videosPageVideo2Model1,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosPageVideo2Widget(),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
                                                           .videosPageVideo3Model1,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
@@ -257,6 +265,13 @@ class _VideosWidgetState extends State<VideosWidget> {
                                                           VideosPageVideo3Widget(),
                                                     ),
                                                   ),
+                                                ].divide(SizedBox(width: 25.0)),
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
                                                   Container(
                                                     child: wrapWithModel(
                                                       model: _model
@@ -265,6 +280,16 @@ class _VideosWidgetState extends State<VideosWidget> {
                                                           safeSetState(() {}),
                                                       child:
                                                           VideosPageVideo4Widget(),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    child: wrapWithModel(
+                                                      model: _model
+                                                          .videosContentEmptyModel,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          VideosContentEmptyWidget(),
                                                     ),
                                                   ),
                                                 ].divide(SizedBox(width: 25.0)),
@@ -283,6 +308,14 @@ class _VideosWidgetState extends State<VideosWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
+                                                wrapWithModel(
+                                                  model: _model
+                                                      .videosPageVideo5Model2,
+                                                  updateCallback: () =>
+                                                      safeSetState(() {}),
+                                                  child:
+                                                      VideosPageVideo5Widget(),
+                                                ),
                                                 wrapWithModel(
                                                   model: _model
                                                       .videosPageVideo1Model2,

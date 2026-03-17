@@ -159,7 +159,7 @@ class _SpeakerWidgetState extends State<SpeakerWidget> {
                           0.0,
                           12.0,
                           valueOrDefault<double>(
-                            MediaQuery.sizeOf(context).width > 498.0
+                            MediaQuery.sizeOf(context).width > 900.0
                                 ? 100.0
                                 : 10.0,
                             0.0,

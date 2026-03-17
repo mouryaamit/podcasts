@@ -1,20 +1,16 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'featured_episode_card_widget.dart' show FeaturedEpisodeCardWidget;
+import 'videos_content1_widget.dart' show VideosContent1Widget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-class FeaturedEpisodeCardModel
-    extends FlutterFlowModel<FeaturedEpisodeCardWidget> {
-  ///  Local state fields for this component.
-
-  dynamic episodeData;
-
+class VideosContent1Model extends FlutterFlowModel<VideosContent1Widget> {
   @override
   void initState(BuildContext context) {}
 

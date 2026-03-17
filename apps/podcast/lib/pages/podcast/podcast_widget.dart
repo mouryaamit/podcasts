@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/featured_episode_card_widget.dart';
@@ -72,7 +73,19 @@ class _PodcastWidgetState extends State<PodcastWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      setDarkModeSetting(context, ThemeMode.light);
+      _model.featuredEpisodeRes =
+          await ApiHostGroup.featuredEpisodesCall.call();
+
+      if ((_model.featuredEpisodeRes?.succeeded ?? true)) {
+        _model.featuredEpisodes = getJsonField(
+          (_model.featuredEpisodeRes?.jsonBody ?? ''),
+          r'''$.items''',
+          true,
+        )!
+            .toList()
+            .cast<dynamic>();
+        safeSetState(() {});
+      }
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
@@ -263,7 +276,11 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                 _model.featuredEpisodeCardModel,
                                             updateCallback: () =>
                                                 safeSetState(() {}),
-                                            child: FeaturedEpisodeCardWidget(),
+                                            child: FeaturedEpisodeCardWidget(
+                                              episodeData: _model
+                                                  .featuredEpisodes
+                                                  .firstOrNull!,
+                                            ),
                                           ),
                                         ),
                                       ],

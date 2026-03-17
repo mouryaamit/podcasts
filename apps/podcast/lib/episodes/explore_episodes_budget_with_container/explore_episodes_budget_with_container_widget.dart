@@ -745,8 +745,20 @@ class _ExploreEpisodesBudgetWithContainerWidgetState
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
+                                      if (Navigator.of(context).canPop()) {
+                                        context.pop();
+                                      }
                                       context.pushNamed(
-                                          PodcastDetailsWidget.routeName);
+                                        PodcastDetailsWidget.routeName,
+                                        extra: <String, dynamic>{
+                                          '__transition_info__': TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.fade,
+                                            duration: Duration(milliseconds: 0),
+                                          ),
+                                        },
+                                      );
                                     },
                                     text: 'Watch Now',
                                     options: FFButtonOptions(

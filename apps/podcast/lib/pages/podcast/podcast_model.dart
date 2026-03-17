@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/components/choice_chips_widget.dart';
 import '/components/desktop_footer_widget.dart';
 import '/components/featured_episode_card_widget.dart';
@@ -45,8 +46,23 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class PodcastModel extends FlutterFlowModel<PodcastWidget> {
+  ///  Local state fields for this page.
+
+  List<dynamic> featuredEpisodes = [];
+  void addToFeaturedEpisodes(dynamic item) => featuredEpisodes.add(item);
+  void removeFromFeaturedEpisodes(dynamic item) =>
+      featuredEpisodes.remove(item);
+  void removeAtIndexFromFeaturedEpisodes(int index) =>
+      featuredEpisodes.removeAt(index);
+  void insertAtIndexInFeaturedEpisodes(int index, dynamic item) =>
+      featuredEpisodes.insert(index, item);
+  void updateFeaturedEpisodesAtIndex(int index, Function(dynamic) updateFn) =>
+      featuredEpisodes[index] = updateFn(featuredEpisodes[index]);
+
   ///  State fields for stateful widgets in this page.
 
+  // Stores action output result for [Backend Call - API (featured episodes)] action in Podcast widget.
+  ApiCallResponse? featuredEpisodeRes;
   // Model for HeaderMobile component.
   late HeaderMobileModel headerMobileModel;
   // Model for ChoiceChips component.

@@ -11,7 +11,12 @@ import 'featured_episode_card_model.dart';
 export 'featured_episode_card_model.dart';
 
 class FeaturedEpisodeCardWidget extends StatefulWidget {
-  const FeaturedEpisodeCardWidget({super.key});
+  const FeaturedEpisodeCardWidget({
+    super.key,
+    required this.episodeData,
+  });
+
+  final dynamic episodeData;
 
   @override
   State<FeaturedEpisodeCardWidget> createState() =>
@@ -132,7 +137,10 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   ),
                                   decoration: BoxDecoration(),
                                   child: Text(
-                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                    getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.title''',
+                                    ).toString(),
                                     textAlign: TextAlign.start,
                                     maxLines: 3,
                                     style: FlutterFlowTheme.of(context)
@@ -168,37 +176,36 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                     maxWidth: 510.0,
                                   ),
                                   decoration: BoxDecoration(),
-                                  child: Text(
-                                    'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025...',
-                                    maxLines: 4,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF6B7280),
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                          lineHeight: 1.5,
-                                        ),
-                                  ),
                                 ),
+                              ),
+                              Text(
+                                getJsonField(
+                                  widget!.episodeData,
+                                  r'''$.subtext''',
+                                ).toString(),
+                                maxLines: 4,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xFF6B7280),
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                      lineHeight: 1.5,
+                                    ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -209,7 +216,25 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   ),
                                   decoration: BoxDecoration(),
                                   child: Text(
-                                    'Mr. Unnikrishnan Kottekkat • Dr. Laveesh Bhandari • Mr. Anil Bhardwaj \n • Dr. Sumita Kale • Mr. Narasimhan V • 45 min',
+                                    '${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.guestExperts[0].name''',
+                                    ).toString()} • ${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.guestExperts[1].name''',
+                                    ).toString()} • ${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.guestExperts[2].name''',
+                                    ).toString()} • ${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.indexExperts[0].name''',
+                                    ).toString()} • ${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.indexExperts[1].name''',
+                                    ).toString()} • ${getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.duration''',
+                                    ).toString()}',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -247,8 +272,22 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
+                                        if (Navigator.of(context).canPop()) {
+                                          context.pop();
+                                        }
                                         context.pushNamed(
-                                            PodcastDetailsWidget.routeName);
+                                          PodcastDetailsWidget.routeName,
+                                          extra: <String, dynamic>{
+                                            '__transition_info__':
+                                                TransitionInfo(
+                                              hasTransition: true,
+                                              transitionType:
+                                                  PageTransitionType.fade,
+                                              duration:
+                                                  Duration(milliseconds: 0),
+                                            ),
+                                          },
+                                        );
                                       },
                                       text: 'Watch Now',
                                       options: FFButtonOptions(
@@ -435,7 +474,10 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   width: 440.0,
                                   decoration: BoxDecoration(),
                                   child: Text(
-                                    'MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead',
+                                    getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.title''',
+                                    ).toString(),
                                     textAlign: TextAlign.start,
                                     maxLines: 3,
                                     style: FlutterFlowTheme.of(context)
@@ -494,7 +536,10 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   width: 510.0,
                                   decoration: BoxDecoration(),
                                   child: Text(
-                                    'India’s Union Budget 2026 arrives as MSMEs show cautious recovery, reflected in the Sumpoorn Index’s late-2025...',
+                                    getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.subtext''',
+                                    ).toString(),
                                     maxLines: 4,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -542,7 +587,25 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                     clipBehavior: Clip.none,
                                     children: [
                                       Text(
-                                        'Mr. Unnikrishnan Kottekkat • Dr. Laveesh Bhandari • Mr. Anil Bhardwaj • Dr. Sumita Kale • Mr. Narasimhan V • 45 min',
+                                        '${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.guestExperts[0].name''',
+                                        ).toString()} • ${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.guestExperts[1].name''',
+                                        ).toString()} • ${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.guestExperts[2].name''',
+                                        ).toString()} • ${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.indexExperts[0].name''',
+                                        ).toString()} • ${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.indexExperts[1].name''',
+                                        ).toString()} • ${getJsonField(
+                                          widget!.episodeData,
+                                          r'''$.duration''',
+                                        ).toString()}',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
