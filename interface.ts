@@ -80,3 +80,11 @@ export interface PaginatedResponse<T> {
     perPage: number
     items: T[]
 }
+
+export interface EpisodeResponse extends PaginatedResponse<Episode> {}
+
+export interface EpisodeDetailResponse extends PaginatedResponse<EpisodeDetail> {}
+
+export interface HighlightResponse extends PaginatedResponse<Highlight> {}
+
+export interface VideoResponse extends PaginatedResponse<Video> {}
