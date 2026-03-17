@@ -2,7 +2,7 @@ package com.podcasts.service;
 
 import com.podcasts.dto.EpisodeResponse;
 import com.podcasts.model.Episode;
-import com.podcasts.repository.EpisodeRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +18,9 @@ public class EpisodeService {
 
     @Autowired
     private EpisodeRepository episodeRepository;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     public List<EpisodeResponse> getAllEpisodes() {
         return episodeRepository.findAll().stream()
@@ -42,7 +45,7 @@ public class EpisodeService {
     }
 
     public List<EpisodeResponse> searchEpisodes(String searchTerm) {
-        return episodeRepository.searchByTitleOrSubtext(searchTerm).stream()
+        return episodeRepository.searchByTitle(searchTerm).stream()
                 .map(this::convertToResponse)
                 .collect(Collectors.toList());
     }
@@ -59,7 +62,16 @@ public class EpisodeService {
         response.setSlug(episode.getSlug());
         response.setTitle(episode.getTitle());
         response.setBanner(episode.getBanner());
-        response.setSubtext(episode.getSubtext());
+        if (episode.getEpisodeDetails() != null && episode.getEpisodeDetails().getDescription() != null) {
+            try {
+                List<String> descriptions = objectMapper.readValue(episode.getEpisodeDetails().getDescription(), List.class);
+                if (!descriptions.isEmpty()) {
+                    response.setSubtext(descriptions.get(0));
+                }
+            } catch (Exception e) {
+                // Log or handle parsing error
+            }
+        }
         response.setMonth(episode.getMonth());
         response.setDuration(episode.getDuration());
         response.setYoutubeShareLink(episode.getYoutubeShareLink());
