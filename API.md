@@ -1,9 +1,5 @@
 # Podcasts API (Request/Response Reference)
 
-This document describes the HTTP API used by the current Node/Express implementation. A Java developer can use these endpoint definitions and request/response shapes to build a similar API backed by a database.
-
----
-
 ## Conventions
 
 - All list endpoints are **paginated** using the same response structure.
@@ -261,7 +257,3 @@ The model shapes in `interface.ts` match the JSON structures used here.
 - `Episode` / `EpisodeDetail` model (including `highlights`)
 - `Highlight` model (same shape as highlights in the array)
 - `Video` model
-
----
-
-This document should let a Java developer implement the same API behavior against a database.
