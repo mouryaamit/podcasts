@@ -7,7 +7,6 @@ CREATE TABLE episodes (
   slug VARCHAR(255) NOT NULL UNIQUE,
   title VARCHAR(255) NOT NULL,
   banner VARCHAR(255) NOT NULL,
-  subtext TEXT NOT NULL,
   month VARCHAR(50) NOT NULL,
   duration VARCHAR(50) NOT NULL,
   youtube_share_link VARCHAR(255) NOT NULL,
