@@ -176,36 +176,41 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                     maxWidth: 510.0,
                                   ),
                                   decoration: BoxDecoration(),
+                                  child: Text(
+                                    getJsonField(
+                                      widget!.episodeData,
+                                      r'''$.subtext''',
+                                    ).toString(),
+                                    maxLines: 2,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF6B7280),
+                                          fontSize: 16.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                          lineHeight: 1.5,
+                                        ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                getJsonField(
-                                  widget!.episodeData,
-                                  r'''$.subtext''',
-                                ).toString(),
-                                maxLines: 4,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xFF6B7280),
-                                      fontSize: 16.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                      lineHeight: 1.5,
-                                    ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
