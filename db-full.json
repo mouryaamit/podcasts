@@ -56,7 +56,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/7emcFg25dHY?si=A3Hy-SN2z9oA8dT3",
-      "featured": true
+      "featured": false
     },
     {
       "banner": "Explore_Deepak_cover.webp",
@@ -83,7 +83,7 @@
     {
       "banner": "Explore_Srivats_cover.webp",
       "title": "GST 2.0 vs. 50% US Tariffs: Can India's Manufacturing MSMEs Survive?",
-      "slug": "podcast/gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive",
+      "slug": "gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive",
       "tags": [
         "MSME Conversations"
       ],
@@ -100,12 +100,12 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/eLxnZ85mbkA?si=V7ivFPzTk7_Zyqtp",
-      "featured": false
+      "featured": true
     },
     {
       "banner": "Explore_Rahul_cover.webp",
       "title": "The Real Impact of Trump's Tariff Uncertainty & Lessons for India's Exporters",
-      "slug": "podcast/the-real-impact-of-trumps-tariff-uncertainty-lessons-for-indias-exporters",
+      "slug": "the-real-impact-of-trumps-tariff-uncertainty-lessons-for-indias-exporters",
       "tags": [
         "MSME Conversations"
       ],
@@ -127,7 +127,7 @@
     {
       "banner": "Explore_Zeenat_cover.webp",
       "title": "From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit",
-      "slug": "podcast/from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit",
+      "slug": "from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit",
       "tags": [
         "MSME Conversations"
       ],
@@ -149,7 +149,7 @@
     {
       "banner": "Explore_Suman_cover.webp",
       "title": "Decoding India's MSME Growth Paradox with SIDBI's Chief Economist",
-      "slug": "podcast/decoding-indias-msme-growth-paradox-with-sidbis-chief-economist",
+      "slug": "decoding-indias-msme-growth-paradox-with-sidbis-chief-economist",
       "tags": [
         "MSME Conversations"
       ],
@@ -1344,7 +1344,7 @@
     },
     {
       "title": "GST 2.0 vs. 50% US Tariffs: Can India's Manufacturing MSMEs Survive?",
-      "slug": "podcast/gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive",
+      "slug": "gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive",
       "youtubeLink": "https://www.youtube.com/embed/eLxnZ85mbkA?si=k8z2D1fStX6itg1i?playsinline=1&rel=0&modestbranding=1",
       "youtubeShareLink": "https://youtu.be/eLxnZ85mbkA?si=GpHhOKBZdTd44FW7",
       "description": [
@@ -2237,7 +2237,7 @@
     },
     {
       "title": "From Fast Money to Smart Money: How Data, Discipline can Rewrite MSME Credit",
-      "slug": "podcast/from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit",
+      "slug": "from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit",
       "youtubeLink": "https://www.youtube.com/embed/hhbeWmcBhHo?si=f4b4CCQVHP9vOIT_?playsinline=1&rel=0&modestbranding=1",
       "youtubeShareLink": "https://youtu.be/hhbeWmcBhHo?si=c-wAocSnHz9KPxdu",
       "description": [
@@ -2575,7 +2575,7 @@
     },
     {
       "title": "Resilient or Fragile? Decoding India's MSME Growth Paradox with SIDBI's Chief Economist",
-      "slug": "podcast/decoding-indias-msme-growth-paradox-with-sidbis-chief-economist",
+      "slug": "decoding-indias-msme-growth-paradox-with-sidbis-chief-economist",
       "youtubeLink": "https://www.youtube.com/embed/zO9ZsZCiZX8?si=d6xGI7TcHh7H48lg?playsinline=1&rel=0&modestbranding=1",
       "youtubeShareLink": "https://youtu.be/zO9ZsZCiZX8?si=inpB3ApBA16qD6oH",
       "description": [
