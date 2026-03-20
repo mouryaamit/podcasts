@@ -38,8 +38,8 @@ app.get('/episodes', (req, res) => {
     const isFeatured = String(featured).toLowerCase() === 'true' || featured === '1';
     const featuredEpisodes = data.episodes.filter(ep => ep.featured === isFeatured);
     const total = featuredEpisodes.length;
-    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-    const perPage = 10;
+    const page = Math.max(1, parseInt(req.query.page, 100) || 1);
+    const perPage = 100;
     const offset = (page - 1) * perPage;
     const paginatedEpisodes = featuredEpisodes.slice(offset, offset + perPage);
     const items = paginatedEpisodes.map(ep => {
@@ -61,8 +61,8 @@ app.get('/episodes', (req, res) => {
   }
 
   const total = data.episodes.length;
-  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-  const perPage = 10;
+  const page = Math.max(1, parseInt(req.query.page, 100) || 1);
+  const perPage = 100;
   const offset = (page - 1) * perPage;
   const paginatedEpisodes = data.episodes.slice(offset, offset + perPage);
   const items = paginatedEpisodes.map(ep => {
@@ -90,8 +90,8 @@ app.get('/episodes', (req, res) => {
  */
 app.get('/videos', (req, res) => {
   const total = data.videos.length;
-  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-  const perPage = 10;
+  const page = Math.max(1, parseInt(req.query.page, 100) || 1);
+  const perPage = 100;
   const offset = (page - 1) * perPage;
   const items = data.videos.slice(offset, offset + perPage);
 
@@ -110,8 +110,8 @@ app.get('/videos', (req, res) => {
 app.get('/highlights', (req, res) => {
   const highlights = data.episodesDetails.flatMap(ep => ep.highlights || []);
   const total = highlights.length;
-  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-  const perPage = 10;
+  const page = Math.max(1, parseInt(req.query.page, 100) || 1);
+  const perPage = 100;
   const offset = (page - 1) * perPage;
   const items = highlights.slice(offset, offset + perPage);
 

@@ -51,8 +51,8 @@ app.get('/episodes', (req: Request, res: Response<EpisodeResponse | any>): void 
       (ep) => ep.featured === isFeatured
     );
     const total = filtered.length;
-    const page = Math.max(1, parseInt(req.query.page as string, 10) || 1);
-    const perPage = 10;
+    const page = Math.max(1, parseInt(req.query.page as string, 100) || 1);
+    const perPage = 100;
     const offset = (page - 1) * perPage;
     const items = filtered.slice(offset, offset + perPage);
     res.json({
@@ -65,8 +65,8 @@ app.get('/episodes', (req: Request, res: Response<EpisodeResponse | any>): void 
   }
 
   const total = typedData.episodes.length;
-  const page = Math.max(1, parseInt(req.query.page as string, 10) || 1);
-  const perPage = 10;
+  const page = Math.max(1, parseInt(req.query.page as string, 100) || 1);
+  const perPage = 100;
   const offset = (page - 1) * perPage;
   const items = typedData.episodes.slice(offset, offset + perPage);
 
@@ -83,8 +83,8 @@ app.get('/episodes', (req: Request, res: Response<EpisodeResponse | any>): void 
  */
 app.get('/videos', (req: Request, res: Response<VideoResponse>): void => {
   const total = typedData.videos.length;
-  const page = Math.max(1, parseInt(req.query.page as string, 10) || 1);
-  const perPage = 10;
+  const page = Math.max(1, parseInt(req.query.page as string, 100) || 1);
+  const perPage = 100;
   const offset = (page - 1) * perPage;
   const items = typedData.videos.slice(offset, offset + perPage);
 
@@ -106,8 +106,8 @@ app.get(
       (ep) => ep.highlights || []
     );
     const total = highlights.length;
-    const page = Math.max(1, parseInt(req.query.page as string, 10) || 1);
-    const perPage = 10;
+    const page = Math.max(1, parseInt(req.query.page as string, 100) || 1);
+    const perPage = 100;
     const offset = (page - 1) * perPage;
     const items = highlights.slice(offset, offset + perPage);
 
