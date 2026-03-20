@@ -34,7 +34,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC",
-      "featured": false
+      "featured": true
     },
     {
       "banner": "Explore_Tirthankar_cover.webp",
@@ -100,7 +100,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/eLxnZ85mbkA?si=V7ivFPzTk7_Zyqtp",
-      "featured": true
+      "featured": false
     },
     {
       "banner": "Explore_Rahul_cover.webp",
