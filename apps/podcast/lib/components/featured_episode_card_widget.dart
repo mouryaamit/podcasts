@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,6 +50,8 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Align(
       alignment: AlignmentDirectional(0.0, 0.0),
       child: Padding(
@@ -138,7 +141,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     getJsonField(
-                                      widget!.episodeData,
+                                      FFAppState().featuredEpisodeResponse,
                                       r'''$.title''',
                                     ).toString(),
                                     textAlign: TextAlign.start,
@@ -178,7 +181,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     getJsonField(
-                                      widget!.episodeData,
+                                      FFAppState().featuredEpisodeResponse,
                                       r'''$.subtext''',
                                     ).toString(),
                                     maxLines: 2,
@@ -221,25 +224,17 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   ),
                                   decoration: BoxDecoration(),
                                   child: Text(
-                                    '${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.guestExperts[0].name''',
-                                    ).toString()} • ${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.guestExperts[1].name''',
-                                    ).toString()} • ${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.guestExperts[2].name''',
-                                    ).toString()} • ${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.indexExperts[0].name''',
-                                    ).toString()} • ${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.indexExperts[1].name''',
-                                    ).toString()} • ${getJsonField(
-                                      widget!.episodeData,
-                                      r'''$.duration''',
-                                    ).toString()}',
+                                    functions.formateFeaturedExperts(
+                                        getJsonField(
+                                          FFAppState().featuredEpisodeResponse,
+                                          r'''$.guestExperts''',
+                                          true,
+                                        ),
+                                        getJsonField(
+                                          FFAppState().featuredEpisodeResponse,
+                                          r'''$.indexExperts''',
+                                          true,
+                                        )),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -277,21 +272,18 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        if (Navigator.of(context).canPop()) {
-                                          context.pop();
-                                        }
                                         context.pushNamed(
                                           PodcastDetailsWidget.routeName,
-                                          extra: <String, dynamic>{
-                                            '__transition_info__':
-                                                TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType:
-                                                  PageTransitionType.fade,
-                                              duration:
-                                                  Duration(milliseconds: 0),
+                                          pathParameters: {
+                                            'slug': serializeParam(
+                                              getJsonField(
+                                                FFAppState()
+                                                    .featuredEpisodeResponse,
+                                                r'''$.slug''',
+                                              ).toString(),
+                                              ParamType.String,
                                             ),
-                                          },
+                                          }.withoutNulls,
                                         );
                                       },
                                       text: 'Watch Now',
@@ -334,7 +326,10 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             await Share.share(
-                                              'https://youtu.be/eL6ee7hfAqo?si=ShAL8Es83NwTpPvZ',
+                                              getJsonField(
+                                                widget!.episodeData,
+                                                r'''$.youtubeShareLink''',
+                                              ).toString(),
                                               sharePositionOrigin:
                                                   getWidgetBoundingBox(context),
                                             );
@@ -480,7 +475,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     getJsonField(
-                                      widget!.episodeData,
+                                      FFAppState().featuredEpisodeResponse,
                                       r'''$.title''',
                                     ).toString(),
                                     textAlign: TextAlign.start,
@@ -542,7 +537,7 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                   decoration: BoxDecoration(),
                                   child: Text(
                                     getJsonField(
-                                      widget!.episodeData,
+                                      FFAppState().featuredEpisodeResponse,
                                       r'''$.subtext''',
                                     ).toString(),
                                     maxLines: 4,
@@ -592,25 +587,19 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                     clipBehavior: Clip.none,
                                     children: [
                                       Text(
-                                        '${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.guestExperts[0].name''',
-                                        ).toString()} • ${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.guestExperts[1].name''',
-                                        ).toString()} • ${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.guestExperts[2].name''',
-                                        ).toString()} • ${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.indexExperts[0].name''',
-                                        ).toString()} • ${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.indexExperts[1].name''',
-                                        ).toString()} • ${getJsonField(
-                                          widget!.episodeData,
-                                          r'''$.duration''',
-                                        ).toString()}',
+                                        functions.formateFeaturedExperts(
+                                            getJsonField(
+                                              FFAppState()
+                                                  .featuredEpisodeResponse,
+                                              r'''$.guestExperts''',
+                                              true,
+                                            ),
+                                            getJsonField(
+                                              FFAppState()
+                                                  .featuredEpisodeResponse,
+                                              r'''$.indexExperts''',
+                                              true,
+                                            )),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -652,7 +641,17 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                     FFButtonWidget(
                                       onPressed: () async {
                                         context.pushNamed(
-                                            PodcastDetailsWidget.routeName);
+                                          PodcastDetailsWidget.routeName,
+                                          pathParameters: {
+                                            'slug': serializeParam(
+                                              getJsonField(
+                                                widget!.episodeData,
+                                                r'''$.slug''',
+                                              ).toString(),
+                                              ParamType.String,
+                                            ),
+                                          }.withoutNulls,
+                                        );
                                       },
                                       text: 'Watch Now',
                                       options: FFButtonOptions(
@@ -694,7 +693,11 @@ class _FeaturedEpisodeCardWidgetState extends State<FeaturedEpisodeCardWidget> {
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             await Share.share(
-                                              'https://youtu.be/eL6ee7hfAqo?si=ShAL8Es83NwTpPvZ',
+                                              getJsonField(
+                                                FFAppState()
+                                                    .featuredEpisodeResponse,
+                                                r'''$.youtubeShareLink''',
+                                              ).toString(),
                                               sharePositionOrigin:
                                                   getWidgetBoundingBox(context),
                                             );

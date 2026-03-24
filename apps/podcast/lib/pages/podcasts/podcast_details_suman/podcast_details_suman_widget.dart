@@ -37,7 +37,7 @@ class PodcastDetailsSumanWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetailsSuman';
   static String routePath =
-      '/podcast/decoding-indias-msme-growth-paradox-with-sidbis-chief-economist';
+      '/old-podcast/decoding-indias-msme-growth-paradox-with-sidbis-chief-economist';
 
   @override
   State<PodcastDetailsSumanWidget> createState() =>

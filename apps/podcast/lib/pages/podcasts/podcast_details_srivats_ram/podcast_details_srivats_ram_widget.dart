@@ -37,7 +37,7 @@ class PodcastDetailsSrivatsRamWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetailsSrivatsRam';
   static String routePath =
-      '/podcast/gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive';
+      '/old-podcast/gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive';
 
   @override
   State<PodcastDetailsSrivatsRamWidget> createState() =>

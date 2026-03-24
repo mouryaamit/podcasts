@@ -37,7 +37,7 @@ class PodcastDetailsZeenatWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetailsZeenat';
   static String routePath =
-      '/podcast/from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit';
+      '/old-podcast/from-fast-money-to-smart-money-how-data-discipline-can-rewrite-msme-credit';
 
   @override
   State<PodcastDetailsZeenatWidget> createState() =>

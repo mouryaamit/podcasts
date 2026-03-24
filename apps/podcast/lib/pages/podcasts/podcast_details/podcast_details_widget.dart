@@ -37,7 +37,7 @@ class PodcastDetailsWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetails';
   static String routePath =
-      '/podcast/msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead';
+      '/old-podcast/msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead';
 
   @override
   State<PodcastDetailsWidget> createState() => _PodcastDetailsWidgetState();

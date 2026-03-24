@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/structs/index.dart';
+
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/lat_lng.dart';
@@ -58,11 +60,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: PodcastDetailsWidget.routeName,
-          path: PodcastDetailsWidget.routePath,
-          builder: (context, params) => PodcastDetailsWidget(),
-        ),
-        FFRoute(
           name: VideosWidget.routeName,
           path: VideosWidget.routePath,
           builder: (context, params) => VideosWidget(
@@ -73,34 +70,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: PodcastDetailsZeenatWidget.routeName,
-          path: PodcastDetailsZeenatWidget.routePath,
-          builder: (context, params) => PodcastDetailsZeenatWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsTirthankarWidget.routeName,
-          path: PodcastDetailsTirthankarWidget.routePath,
-          builder: (context, params) => PodcastDetailsTirthankarWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsSumanWidget.routeName,
-          path: PodcastDetailsSumanWidget.routePath,
-          builder: (context, params) => PodcastDetailsSumanWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsRahulWidget.routeName,
-          path: PodcastDetailsRahulWidget.routePath,
-          builder: (context, params) => PodcastDetailsRahulWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsSrivatsRamWidget.routeName,
-          path: PodcastDetailsSrivatsRamWidget.routePath,
-          builder: (context, params) => PodcastDetailsSrivatsRamWidget(),
-        ),
-        FFRoute(
-          name: PodcastDetailsDeepakWidget.routeName,
-          path: PodcastDetailsDeepakWidget.routePath,
-          builder: (context, params) => PodcastDetailsDeepakWidget(),
+          name: PodcastDetailsWidget.routeName,
+          path: PodcastDetailsWidget.routePath,
+          builder: (context, params) => PodcastDetailsWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -172,6 +149,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -189,6 +167,7 @@ class FFParameters {
       param,
       type,
       isList,
+      structBuilder: structBuilder,
     );
   }
 }

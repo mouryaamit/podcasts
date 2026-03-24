@@ -70,8 +70,8 @@ class _HeaderMobileWidgetState extends State<HeaderMobileWidget> {
                   },
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      'assets/images/logo-main_(1).webp',
+                    child: Image.network(
+                      '/images/assets/',
                       width: 225.0,
                       height: 59.45,
                       fit: BoxFit.contain,

@@ -1,48 +1,24 @@
-import '/backend/api_requests/api_calls.dart';
-import '/components/choice_chips_widget.dart';
-import '/components/desktop_footer_widget.dart';
-import '/components/featured_episode_card_widget.dart';
+import '/components/explore_episode_widget.dart';
+import '/components/footer_desktop_widget.dart';
+import '/components/footer_mobile_widget.dart';
 import '/components/header_mobile_widget.dart';
-import '/components/mobile_footer_widget.dart';
-import '/episodes/explore_episodes_budget_with_container/explore_episodes_budget_with_container_widget.dart';
-import '/episodes/explore_episodes_deepak_with_container/explore_episodes_deepak_with_container_widget.dart';
-import '/episodes/explore_episodes_rahul_with_container/explore_episodes_rahul_with_container_widget.dart';
-import '/episodes/explore_episodes_srivatsram_with_container/explore_episodes_srivatsram_with_container_widget.dart';
-import '/episodes/explore_episodes_suman_with_container/explore_episodes_suman_with_container_widget.dart';
-import '/episodes/explore_episodes_tirthankar_with_container/explore_episodes_tirthankar_with_container_widget.dart';
-import '/episodes/explore_episodes_zeenat_with_container/explore_episodes_zeenat_with_container_widget.dart';
+import '/components/subscribe_form_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/shorts/shorts_budget_anil/shorts_budget_anil_widget.dart';
-import '/shorts/shorts_budget_krishnan/shorts_budget_krishnan_widget.dart';
-import '/shorts/shorts_budget_laveesh/shorts_budget_laveesh_widget.dart';
-import '/shorts/shorts_budget_unni_krishnan/shorts_budget_unni_krishnan_widget.dart';
-import '/shorts/shorts_deepak_details1/shorts_deepak_details1_widget.dart';
-import '/shorts/shorts_deepak_details2/shorts_deepak_details2_widget.dart';
-import '/shorts/shorts_deepak_details3/shorts_deepak_details3_widget.dart';
-import '/shorts/shorts_rahul_details1/shorts_rahul_details1_widget.dart';
-import '/shorts/shorts_rahul_details2/shorts_rahul_details2_widget.dart';
-import '/shorts/shorts_rahul_details3/shorts_rahul_details3_widget.dart';
-import '/shorts/shorts_srivats/shorts_srivats_widget.dart';
-import '/shorts/shorts_srivats_details1/shorts_srivats_details1_widget.dart';
-import '/shorts/shorts_srivats_details2/shorts_srivats_details2_widget.dart';
-import '/shorts/shorts_suman/shorts_suman_widget.dart';
-import '/shorts/shorts_suman_details1/shorts_suman_details1_widget.dart';
-import '/shorts/shorts_suman_details2/shorts_suman_details2_widget.dart';
-import '/shorts/shorts_tirthankar/shorts_tirthankar_widget.dart';
-import '/shorts/shorts_tirthankar_details1/shorts_tirthankar_details1_widget.dart';
-import '/shorts/shorts_tirthankar_details2/shorts_tirthankar_details2_widget.dart';
-import '/shorts/shorts_zeenat/shorts_zeenat_widget.dart';
-import '/shorts/shorts_zeenat_details1/shorts_zeenat_details1_widget.dart';
-import '/shorts/shorts_zeenat_details2/shorts_zeenat_details2_widget.dart';
-import '/shorts/shorts_zeenat_details3/shorts_zeenat_details3_widget.dart';
+import '/pages/podcast/choice_chips/choice_chips_widget.dart';
+import '/pages/podcast/featured_episode/featured_episode_widget.dart';
+import '/pages/shorts_dynamic/shorts_dynamic_widget.dart';
 import 'dart:ui';
 import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'podcast_model.dart';
 export 'podcast_model.dart';
 
@@ -73,19 +49,8 @@ class _PodcastWidgetState extends State<PodcastWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      _model.featuredEpisodeRes =
-          await ApiHostGroup.featuredEpisodesCall.call();
-
-      if ((_model.featuredEpisodeRes?.succeeded ?? true)) {
-        _model.featuredEpisodes = getJsonField(
-          (_model.featuredEpisodeRes?.jsonBody ?? ''),
-          r'''$.items''',
-          true,
-        )!
-            .toList()
-            .cast<dynamic>();
-        safeSetState(() {});
-      }
+      await _model.podcastPageOnLoad(context);
+      safeSetState(() {});
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
@@ -100,6 +65,8 @@ class _PodcastWidgetState extends State<PodcastWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -108,13 +75,64 @@ class _PodcastWidgetState extends State<PodcastWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        floatingActionButton: Builder(
+          builder: (context) => FloatingActionButton.extended(
+            onPressed: () async {
+              await showDialog(
+                barrierColor: Color(0x66000000),
+                barrierDismissible: false,
+                context: context,
+                builder: (dialogContext) {
+                  return Dialog(
+                    elevation: 0,
+                    insetPadding: EdgeInsets.zero,
+                    backgroundColor: Colors.transparent,
+                    alignment: AlignmentDirectional(0.0, 1.0)
+                        .resolve(Directionality.of(context)),
+                    child: WebViewAware(
+                      child: GestureDetector(
+                        onTap: () {
+                          FocusScope.of(dialogContext).unfocus();
+                          FocusManager.instance.primaryFocus?.unfocus();
+                        },
+                        child: Container(
+                          height: 760.0,
+                          child: SubscribeFormWidget(),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            backgroundColor: Color(0xFF25BB61),
+            elevation: 8.0,
+            label: Text(
+              'Subscribe',
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    font: GoogleFonts.poppins(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+                    fontSize: 12.0,
+                    letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
+            ),
+          ),
+        ),
         body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              if (MediaQuery.sizeOf(context).width > 1025.0)
+              if (MediaQuery.sizeOf(context).width >= 1200.0)
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 120.0,
@@ -140,7 +158,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                     ),
                   ),
                 ),
-              if (MediaQuery.sizeOf(context).width < 1025.0)
+              if (MediaQuery.sizeOf(context).width < 1200.0)
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   decoration: BoxDecoration(
@@ -234,57 +252,254 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                               ),
                               Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 30.0, 0.0, 0.0),
-                                  child: Container(
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.85,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 40.0,
-                                          color: Color(0x33000000),
-                                          offset: Offset(
-                                            -12.0,
-                                            12.0,
-                                          ),
-                                          spreadRadius: 0.0,
-                                        )
-                                      ],
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      border: Border.all(
-                                        color: Color(0xFFD0D0D0),
-                                        width: 0.3,
+                                child: Container(
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.85,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Builder(
+                                        builder: (context) {
+                                          if (functions.getLength(FFAppState()
+                                                  .featuredEpisodesResponse
+                                                  .toList()) >
+                                              1) {
+                                            return Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 30.0, 0.0, 0.0),
+                                              child: Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.85,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      blurRadius: 40.0,
+                                                      color: Color(0x33000000),
+                                                      offset: Offset(
+                                                        -12.0,
+                                                        12.0,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  shape: BoxShape.rectangle,
+                                                  border: Border.all(
+                                                    width: 0.3,
+                                                  ),
+                                                ),
+                                                alignment: AlignmentDirectional(
+                                                    0.0, 0.0),
+                                                child: Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          0.0, 0.0),
+                                                  child: Builder(
+                                                    builder: (context) {
+                                                      final featuredEpisodesList =
+                                                          FFAppState()
+                                                              .featuredEpisodesResponse
+                                                              .toList();
+
+                                                      return Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                0.85,
+                                                        height: 420.0,
+                                                        child: Stack(
+                                                          children: [
+                                                            PageView.builder(
+                                                              controller: _model
+                                                                      .pageViewController ??=
+                                                                  PageController(
+                                                                      initialPage: max(
+                                                                          0,
+                                                                          min(0,
+                                                                              featuredEpisodesList.length - 1))),
+                                                              scrollDirection:
+                                                                  Axis.horizontal,
+                                                              itemCount:
+                                                                  featuredEpisodesList
+                                                                      .length,
+                                                              itemBuilder: (context,
+                                                                  featuredEpisodesListIndex) {
+                                                                final featuredEpisodesListItem =
+                                                                    featuredEpisodesList[
+                                                                        featuredEpisodesListIndex];
+                                                                return Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .center,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    wrapWithModel(
+                                                                      model: _model
+                                                                          .featuredEpisodeModels1
+                                                                          .getModel(
+                                                                        'featureEpisode_${featuredEpisodesListIndex.toString()}',
+                                                                        featuredEpisodesListIndex,
+                                                                      ),
+                                                                      updateCallback:
+                                                                          () =>
+                                                                              safeSetState(() {}),
+                                                                      child:
+                                                                          FeaturedEpisodeWidget(
+                                                                        key:
+                                                                            Key(
+                                                                          'Keyd03_${'featureEpisode_${featuredEpisodesListIndex.toString()}'}',
+                                                                        ),
+                                                                        featuredEpisodeData:
+                                                                            featuredEpisodesListItem,
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                );
+                                                              },
+                                                            ),
+                                                            Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.0, 1.0),
+                                                              child: smooth_page_indicator
+                                                                  .SmoothPageIndicator(
+                                                                controller: _model
+                                                                        .pageViewController ??=
+                                                                    PageController(
+                                                                        initialPage: max(
+                                                                            0,
+                                                                            min(0,
+                                                                                featuredEpisodesList.length - 1))),
+                                                                count:
+                                                                    featuredEpisodesList
+                                                                        .length,
+                                                                axisDirection: Axis
+                                                                    .horizontal,
+                                                                onDotClicked:
+                                                                    (i) async {
+                                                                  await _model
+                                                                      .pageViewController!
+                                                                      .animateToPage(
+                                                                    i,
+                                                                    duration: Duration(
+                                                                        milliseconds:
+                                                                            500),
+                                                                    curve: Curves
+                                                                        .ease,
+                                                                  );
+                                                                  safeSetState(
+                                                                      () {});
+                                                                },
+                                                                effect: smooth_page_indicator
+                                                                    .SlideEffect(
+                                                                  spacing: 8.0,
+                                                                  radius: 8.0,
+                                                                  dotWidth: 8.0,
+                                                                  dotHeight:
+                                                                      8.0,
+                                                                  dotColor: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .accent1,
+                                                                  activeDotColor:
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
+                                                                  paintStyle:
+                                                                      PaintingStyle
+                                                                          .stroke,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          } else {
+                                            return Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 30.0, 0.0, 0.0),
+                                              child: Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.85,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      blurRadius: 40.0,
+                                                      color: Color(0x33000000),
+                                                      offset: Offset(
+                                                        -12.0,
+                                                        12.0,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20.0),
+                                                  border: Border.all(
+                                                    width: 0.3,
+                                                  ),
+                                                ),
+                                                alignment: AlignmentDirectional(
+                                                    0.0, 0.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    wrapWithModel(
+                                                      model: _model
+                                                          .featuredEpisodeModel2,
+                                                      updateCallback: () =>
+                                                          safeSetState(() {}),
+                                                      child:
+                                                          FeaturedEpisodeWidget(
+                                                        featuredEpisodeData:
+                                                            getJsonField(
+                                                          FFAppState()
+                                                              .featuredEpisodesResponse
+                                                              .firstOrNull,
+                                                          r'''$''',
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                        },
                                       ),
-                                    ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Align(
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: wrapWithModel(
-                                            model:
-                                                _model.featuredEpisodeCardModel,
-                                            updateCallback: () =>
-                                                safeSetState(() {}),
-                                            child: FeaturedEpisodeCardWidget(
-                                              episodeData: _model
-                                                  .featuredEpisodes
-                                                  .firstOrNull!,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -306,7 +521,9 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                 child: Container(
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.85,
-                                  decoration: BoxDecoration(),
+                                  decoration: BoxDecoration(
+                                    color: Color(0x00FFFFFF),
+                                  ),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -340,26 +557,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                             ),
                                             0.0,
                                             valueOrDefault<double>(
-                                              () {
-                                                if (MediaQuery.sizeOf(context)
-                                                        .width <
-                                                    valueOrDefault<double>(
-                                                      kBreakpointSmall,
-                                                      900.0,
-                                                    )) {
-                                                  return 12.0;
-                                                } else if (MediaQuery.sizeOf(
-                                                            context)
-                                                        .width >
-                                                    valueOrDefault<double>(
-                                                      kBreakpointLarge,
-                                                      900.0,
-                                                    )) {
-                                                  return 0.0;
-                                                } else {
-                                                  return 0.0;
-                                                }
-                                              }(),
+                                              MediaQuery.sizeOf(context).width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        900.0,
+                                                      )
+                                                  ? 12.0
+                                                  : 20.0,
                                               0.0,
                                             )),
                                         child: Text(
@@ -387,332 +591,60 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                               ),
                                         ),
                                       ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesBudgetWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesBudgetWithContainerWidget(),
-                                                  ),
-                                                ),
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesTirthankarWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesTirthankarWithContainerWidget(),
-                                                  ),
-                                                ),
-                                            ],
-                                          ),
-                                        ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesDeepakWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesDeepakWithContainerWidget(),
-                                                  ),
-                                                ),
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  decoration: BoxDecoration(),
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesSrivatsramWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesSrivatsramWithContainerWidget(),
-                                                  ),
-                                                ),
-                                            ],
-                                          ),
-                                        ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesRahulWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesRahulWithContainerWidget(),
-                                                  ),
-                                                ),
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  decoration: BoxDecoration(),
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesZeenatWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesZeenatWithContainerWidget(),
-                                                  ),
-                                                ),
-                                            ],
-                                          ),
-                                        ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        phone: false,
-                                        tablet: false,
-                                      ))
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 20.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              if (responsiveVisibility(
-                                                context: context,
-                                                phone: false,
-                                                tablet: false,
-                                              ))
-                                                Container(
-                                                  width:
-                                                      MediaQuery.sizeOf(context)
-                                                              .width *
-                                                          0.4,
-                                                  decoration: BoxDecoration(),
-                                                  child: wrapWithModel(
-                                                    model: _model
-                                                        .exploreEpisodesSumanWithContainerModel1,
-                                                    updateCallback: () =>
-                                                        safeSetState(() {}),
-                                                    child:
-                                                        ExploreEpisodesSumanWithContainerWidget(),
-                                                  ),
-                                                ),
-                                            ],
-                                          ),
-                                        ),
-                                      if (responsiveVisibility(
-                                        context: context,
-                                        tabletLandscape: false,
-                                        desktop: false,
-                                      ))
-                                        Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesBudgetWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesBudgetWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesTirthankarWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesTirthankarWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesDeepakWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesDeepakWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesSrivatsramWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesSrivatsramWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesRahulWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesRahulWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesZeenatWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesZeenatWithContainerWidget(),
-                                                ),
-                                              ),
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              tabletLandscape: false,
-                                              desktop: false,
-                                            ))
-                                              Container(
-                                                decoration: BoxDecoration(),
-                                                child: wrapWithModel(
-                                                  model: _model
-                                                      .exploreEpisodesSumanWithContainerModel2,
-                                                  updateCallback: () =>
-                                                      safeSetState(() {}),
-                                                  child:
-                                                      ExploreEpisodesSumanWithContainerWidget(),
-                                                ),
-                                              ),
-                                          ].divide(SizedBox(height: 20.0)),
-                                        ),
+                                      Builder(
+                                        builder: (context) {
+                                          final dynamicEpisodes = FFAppState()
+                                              .exploreEpisodesResponse
+                                              .toList();
+
+                                          return GridView.builder(
+                                            padding: EdgeInsets.zero,
+                                            gridDelegate:
+                                                SliverGridDelegateWithFixedCrossAxisCount(
+                                              crossAxisCount: MediaQuery.sizeOf(
+                                                              context)
+                                                          .width <
+                                                      valueOrDefault<double>(
+                                                        kBreakpointSmall,
+                                                        600.0,
+                                                      )
+                                                  ? 1
+                                                  : 2,
+                                              crossAxisSpacing: 60.0,
+                                              mainAxisSpacing: 10.0,
+                                              childAspectRatio: () {
+                                                if (MediaQuery.sizeOf(context)
+                                                        .width <
+                                                    600.0) {
+                                                  return 0.67;
+                                                } else if (MediaQuery.sizeOf(
+                                                            context)
+                                                        .width <
+                                                    1400.0) {
+                                                  return 1.0;
+                                                } else {
+                                                  return 1.1;
+                                                }
+                                              }(),
+                                            ),
+                                            shrinkWrap: true,
+                                            scrollDirection: Axis.vertical,
+                                            itemCount: dynamicEpisodes.length,
+                                            itemBuilder: (context,
+                                                dynamicEpisodesIndex) {
+                                              final dynamicEpisodesItem =
+                                                  dynamicEpisodes[
+                                                      dynamicEpisodesIndex];
+                                              return ExploreEpisodeWidget(
+                                                key: Key(
+                                                    'Keyzll_${dynamicEpisodesIndex}_of_${dynamicEpisodes.length}'),
+                                                episodesData:
+                                                    dynamicEpisodesItem,
+                                              );
+                                            },
+                                          );
+                                        },
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -721,13 +653,13 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0,
                                     valueOrDefault<double>(
-                                      MediaQuery.sizeOf(context).width <
+                                      MediaQuery.sizeOf(context).width >
                                               valueOrDefault<double>(
                                                 kBreakpointSmall,
                                                 900.0,
                                               )
-                                          ? 25.0
-                                          : 50.0,
+                                          ? 50.0
+                                          : 20.0,
                                       0.0,
                                     ),
                                     0.0,
@@ -736,8 +668,7 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.85,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                    color: Color(0x00FFFFFF),
                                   ),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -778,30 +709,15 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                                   ),
                                                   0.0,
                                                   valueOrDefault<double>(
-                                                    () {
-                                                      if (MediaQuery.sizeOf(
-                                                                  context)
-                                                              .width <
-                                                          valueOrDefault<
-                                                              double>(
-                                                            kBreakpointSmall,
-                                                            900.0,
-                                                          )) {
-                                                        return 12.0;
-                                                      } else if (MediaQuery
-                                                                  .sizeOf(
-                                                                      context)
-                                                              .width >
-                                                          valueOrDefault<
-                                                              double>(
-                                                            kBreakpointLarge,
-                                                            900.0,
-                                                          )) {
-                                                        return 12.0;
-                                                      } else {
-                                                        return 12.0;
-                                                      }
-                                                    }(),
+                                                    MediaQuery.sizeOf(context)
+                                                                .width <
+                                                            valueOrDefault<
+                                                                double>(
+                                                              kBreakpointSmall,
+                                                              900.0,
+                                                            )
+                                                        ? 12.0
+                                                        : 20.0,
                                                     0.0,
                                                   )),
                                           child: Text(
@@ -831,316 +747,51 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                           ),
                                         ),
                                       ),
-                                      SingleChildScrollView(
-                                        scrollDirection: Axis.horizontal,
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsBudgetKrishnanModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsBudgetKrishnanWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsBudgetLaveeshModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsBudgetLaveeshWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsBudgetAnilModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child: ShortsBudgetAnilWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsBudgetUnniKrishnanModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsBudgetUnniKrishnanWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsTirthankarModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child: ShortsTirthankarWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsTirthankarDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsTirthankarDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsTirthankarDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsTirthankarDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsDeepakDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsDeepakDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsDeepakDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsDeepakDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsDeepakDetails3Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsDeepakDetails3Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model:
-                                                    _model.shortsSrivatsModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child: ShortsSrivatsWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsSrivatsDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsSrivatsDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsSrivatsDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsSrivatsDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsRahulDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsRahulDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsRahulDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsRahulDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsRahulDetails3Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsRahulDetails3Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model.shortsZeenatModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child: ShortsZeenatWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsZeenatDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsZeenatDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsZeenatDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsZeenatDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsZeenatDetails3Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsZeenatDetails3Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model.shortsSumanModel,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child: ShortsSumanWidget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsSumanDetails1Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsSumanDetails1Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(),
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .shortsSumanDetails2Model,
-                                                updateCallback: () =>
-                                                    safeSetState(() {}),
-                                                child:
-                                                    ShortsSumanDetails2Widget(
-                                                  share: () async {},
-                                                  watchNow: () async {},
-                                                ),
-                                              ),
-                                            ),
-                                          ].divide(SizedBox(width: 20.0)),
+                                      Container(
+                                        width: double.infinity,
+                                        height:
+                                            MediaQuery.sizeOf(context).width <
+                                                    valueOrDefault<double>(
+                                                      kBreakpointSmall,
+                                                      900.0,
+                                                    )
+                                                ? 451.0
+                                                : 527.0,
+                                        decoration: BoxDecoration(),
+                                        child: Builder(
+                                          builder: (context) {
+                                            final dynamicHighlights =
+                                                FFAppState()
+                                                    .HighlightsResponse
+                                                    .toList();
+
+                                            return ListView.builder(
+                                              padding: EdgeInsets.zero,
+                                              shrinkWrap: true,
+                                              scrollDirection: Axis.horizontal,
+                                              itemCount:
+                                                  dynamicHighlights.length,
+                                              itemBuilder: (context,
+                                                  dynamicHighlightsIndex) {
+                                                final dynamicHighlightsItem =
+                                                    dynamicHighlights[
+                                                        dynamicHighlightsIndex];
+                                                return Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 20.0, 0.0),
+                                                  child: ShortsDynamicWidget(
+                                                    key: Key(
+                                                        'Key3oq_${dynamicHighlightsIndex}_of_${dynamicHighlights.length}'),
+                                                    highlightsData:
+                                                        dynamicHighlightsItem,
+                                                    share: () async {},
+                                                    watchNow: () async {},
+                                                  ),
+                                                );
+                                              },
+                                            );
+                                          },
                                         ),
                                       ),
                                     ],
@@ -1157,10 +808,10 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                       phone: false,
                                     ))
                                       wrapWithModel(
-                                        model: _model.desktopFooterModel,
+                                        model: _model.footerDesktopModel,
                                         updateCallback: () =>
                                             safeSetState(() {}),
-                                        child: DesktopFooterWidget(),
+                                        child: FooterDesktopWidget(),
                                       ),
                                     if (responsiveVisibility(
                                       context: context,
@@ -1169,10 +820,10 @@ class _PodcastWidgetState extends State<PodcastWidget> {
                                       desktop: false,
                                     ))
                                       wrapWithModel(
-                                        model: _model.mobileFooterModel,
+                                        model: _model.footerMobileModel,
                                         updateCallback: () =>
                                             safeSetState(() {}),
-                                        child: MobileFooterWidget(),
+                                        child: FooterMobileWidget(),
                                       ),
                                   ],
                                 ),

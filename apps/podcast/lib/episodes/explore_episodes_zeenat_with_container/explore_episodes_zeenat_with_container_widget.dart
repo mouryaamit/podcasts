@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -358,10 +357,8 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       FFButtonWidget(
-                                        onPressed: () async {
-                                          context.pushNamed(
-                                              PodcastDetailsZeenatWidget
-                                                  .routeName);
+                                        onPressed: () {
+                                          print('Button pressed ...');
                                         },
                                         text: 'Watch Now',
                                         options: FFButtonOptions(
@@ -750,9 +747,8 @@ class _ExploreEpisodesZeenatWithContainerWidgetState
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   FFButtonWidget(
-                                    onPressed: () async {
-                                      context.pushNamed(
-                                          PodcastDetailsZeenatWidget.routeName);
+                                    onPressed: () {
+                                      print('Button pressed ...');
                                     },
                                     text: 'Watch Now',
                                     options: FFButtonOptions(

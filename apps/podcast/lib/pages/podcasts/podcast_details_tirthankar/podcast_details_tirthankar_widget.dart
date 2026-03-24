@@ -37,7 +37,7 @@ class PodcastDetailsTirthankarWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetailsTirthankar';
   static String routePath =
-      '/podcast/how-msmes-retail-investors-smarter-ipos-are-reshaping-capital-markets';
+      '/old-podcast/how-msmes-retail-investors-smarter-ipos-are-reshaping-capital-markets';
 
   @override
   State<PodcastDetailsTirthankarWidget> createState() =>

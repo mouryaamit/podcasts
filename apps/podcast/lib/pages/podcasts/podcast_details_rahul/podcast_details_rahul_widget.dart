@@ -37,7 +37,7 @@ class PodcastDetailsRahulWidget extends StatefulWidget {
 
   static String routeName = 'PodcastDetailsRahul';
   static String routePath =
-      '/podcast/the-real-impact-of-trumps-tariff-uncertainty-lessons-for-indias-exporters';
+      '/old-podcast/the-real-impact-of-trumps-tariff-uncertainty-lessons-for-indias-exporters';
 
   @override
   State<PodcastDetailsRahulWidget> createState() =>
