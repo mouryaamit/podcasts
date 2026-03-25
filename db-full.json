@@ -37,6 +37,42 @@
       "featured": true
     },
     {
+      "banner": "Explore_Budget_cover.webp",
+      "title": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
+      "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
+      "tags": [
+        "MSME Conversations"
+      ],
+      "month": "February 2026",
+      "duration": "45 min",
+      "guestExperts": [
+        {
+          "profileImage": "Unnikrishnan.webp",
+          "name": "Mr. Unnikrishnan Kottekkat"
+        },
+        {
+          "profileImage": "Lavesh.webp",
+          "name": "Dr. Laveesh Bhandari"
+        },
+        {
+          "profileImage": "Anil.webp",
+          "name": "Mr. Anil Bharadwaj"
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita_circle.webp",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "profileImage": "Narasimhan_circle.webp",
+          "name": "Mr. Narasimhan V"
+        }
+      ],
+      "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC",
+      "featured": true
+    },
+    {
       "banner": "Explore_Tirthankar_cover.webp",
       "title": "How MSMEs, Retail Investors & Smarter IPOs Are Reshaping Capital Markets",
       "slug": "how-msmes-retail-investors-smarter-ipos-are-reshaping-capital-markets",
