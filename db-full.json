@@ -674,19 +674,9 @@
       ],
       "guestExperts": [
         {
-          "profileImage": "Lavesh.webp",
-          "name": "Dr. Laveesh Bhandari",
-          "description": "President & Senior Fellow at CSEP, leading applied economist focused on livelihoods, reforms, financial inclusion, and energy transition. PhD, Boston University."
-        },
-        {
-          "profileImage": "Anil.webp",
-          "name": "Mr. Anil Bharadwaj",
-          "description": "Secretary General, FISME. Senior MSME policy advocate specialising in trade, exports, and regulatory reform. Member, Economic Advisory Group, Government of Uttar Pradesh."
-        },
-        {
-          "profileImage": "Unnikrishnan.webp",
-          "name": "Mr. Unnikrishnan Kottekkat",
-          "description": "Joint Director General, FIEO. Trade facilitation leader focused on export strategy, policy engagement, and strengthening India’s global competitiveness."
+          "profileImage": "Arjun.webp",
+          "name": "Mr. Arjun Gadre",
+          "description": "Managing Director, Gadre Marine Export. Leads one of India’s biggest seafood brands, with deep expertise in value-added processing, global supply chains, and marine export competitiveness."
         }
       ],
       "indexExperts": [
