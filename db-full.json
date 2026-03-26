@@ -256,441 +256,338 @@
       ],
       "timestamps": [
         {
-          "from": "0:57",
-          "to": "1:41",
-          "title": "Introduction to Sumpoorn Index"
+          "from": "0:00",
+          "to": "3:45",
+          "title": "Market Analysis & Export Trends"
         },
         {
-          "from": "1:54",
-          "to": "2:00",
-          "title": "Government's Vision for Small Businesses"
+          "from": "3:46",
+          "to": "7:00",
+          "title": "US Tariffs & Ecuador Parity"
         },
         {
-          "from": "3:24",
-          "to": "3:51",
-          "title": "Dysfunctional Local Governments"
+          "from": "7:01",
+          "to": "12:00",
+          "title": "Geopolitics & Alternative Markets (Russia/China)"
         },
         {
-          "from": "4:45",
-          "to": "5:26",
-          "title": "Empowering Local Government Managers"
+          "from": "12:01",
+          "to": "16:30",
+          "title": "UK & EU FTA Implications"
         },
         {
-          "from": "5:42",
-          "to": "7:42",
-          "title": "EU-FTA Deal and Export Opportunities"
+          "from": "16:31",
+          "to": "24:19",
+          "title": "Raw Material & Sustainability Limits"
         },
         {
-          "from": "8:11",
-          "to": "9:10",
-          "title": "India's Manufacturing Landscape for Export"
+          "from": "24:20",
+          "to": "33:59",
+          "title": "Domestic Retail Challenges & HoReCa Growth"
         },
         {
-          "from": "10:09",
-          "to": "11:26",
-          "title": "Budget's Focus Areas"
+          "from": "34:00",
+          "to": "36:11",
+          "title": "Climate Change & Cyclones"
         },
         {
-          "from": "11:32",
-          "to": "12:29",
-          "title": "Mechanism"
-        },
-        {
-          "from": "13:36",
-          "to": "14:32",
-          "title": "Key Beneficiary Industries from FTAs"
-        },
-        {
-          "from": "15:04",
-          "to": "18:03",
-          "title": "Budget Measures for TReDS"
-        },
-        {
-          "from": "19:55",
-          "to": "21:22",
-          "title": "Champion MSMEs and SME Growth Fund"
-        },
-        {
-          "from": "22:41",
-          "to": "26:02",
-          "title": "Expediting Import/Export Clearances"
-        },
-        {
-          "from": "27:24",
-          "to": "29:50",
-          "title": "Focus on 200 Legacy Clusters"
-        },
-        {
-          "from": "31:01",
-          "to": "32:18",
-          "title": "Capacity of State at Local Level"
-        },
-        {
-          "from": "32:27",
-          "to": "33:31",
-          "title": "Ground Rules for MSME Growth Fund"
-        },
-        {
-          "from": "33:48",
-          "to": "34:59",
-          "title": "Reducing Compliance Burden"
-        },
-        {
-          "from": "35:38",
-          "to": "38:48",
-          "title": "Year Ahead Outlook and Risks"
-        },
-        {
-          "from": "39:00",
-          "to": "40:33",
-          "title": "Long-Term Constraints for MSME Growth"
-        },
-        {
-          "from": "41:21",
-          "to": "43:36",
-          "title": "Role of MSMEs and Government in Opportunities"
+          "from": "36:12",
+          "to": "37:44",
+          "title": "Closing Comments"
         }
       ],
-      "aiSummaries": [
+     "aiSummaries": [
         {
           "index": "1",
-          "title": "MSMEs Enter FY26 with Strong Sentiment",
+          "title": "MSME Resilience Holds — Index Signals Strength Beneath Volatility",
           "conversations": [
-            "The Sumpoorn Index closed 2025 at 0.60, signaling improving momentum.",
-            "Despite global volatility, MSMEs are entering the new financial year with confidence and stability."
+            "The Sumpoorn Index rises to 0.62 in January 2026, the highest in ten months.",
+            "Despite tariffs, geopolitical disruptions, and freight shocks, MSME sales activity shows sustained expansion."
           ]
         },
         {
           "index": "2",
-          "title": "Budget 2026: Intent Is Clear — Execution Is the Real Test",
-          "subtitle": "The Budget ticks the boxes on:",
+          "title": "Marine Exports Surge — Seasonal Cycles + Supply Chain Stickiness",
           "conversations": [
-            "Credit access",
-            "Liquidity",
-            "Manufacturing competitiveness",
-            "Trade facilitation",
-            "But the core question remains:",
-            "Can intent translate into ground-level execution?"
+            "January’s double-digit export growth is driven by Easter/Lent demand cycles.",
+            "Pre-committed contracts and long production lead times prevented disruption from tariff shocks."
           ]
         },
         {
           "index": "3",
-          "title": "Trade Opportunity: EU-FTA & US Tariff Shifts",
+          "title": "Tariff Shock Absorbed — Not Passed Down the Value Chain",
           "conversations": [
-            "Access to a 27-country EU market.",
-            "Potential USD 33 billion export opportunity.",
-            "Labour-intensive sectors (textiles, garments, processed food) stand to gain",
-            "But competitiveness depends on upgrading manufacturing capability."
+            "The 50% US tariff was largely absorbed by global retailers due to supply constraints.",
+            "Strong buyer-supplier relationships protected Indian exporters in the short term."
           ]
         },
         {
           "index": "4",
-          "title": "The CBAM Challenge",
+          "title": "Market Diversification Accelerates Under Pressure",
           "conversations": [
-            " The Carbon Border Adjustment Mechanism (CBAM) remains a key gap.",
-            "Without an EU-aligned carbon framework, MSMEs may struggle to scale exports to Europe."
+            "Exports expanded into UK, EU, China, Japan, and Russia.",
+            "Russia, in particular, emerged as a new growth market following regulatory easing."
           ]
         },
         {
           "index": "5",
-          "title": "Delayed Payments: TReDS Gets a Structural Push",
+          "title": "Geopolitical Disruption Impacts Costs, Not Trade Flows",
           "conversations": [
-            "Mandatory CPSE participation.",
-            "Digital invoice trail.",
-            "CGTMSE-linked protection for lenders.",
-            "This could significantly improve MSME liquidity — if enforced rigorously."
+            "Red Sea rerouting had already normalised shipping patterns.",
+            "The real risk lies in freight volatility, with container costs spiking up to 4–5x during disruptions."
           ]
         },
         {
           "index": "6",
-          "title": "₹10,000 Crore SME Growth Fund: Equity Gets Attention",
+          "title": "FTAs Mark a Structural Inflection Point for Value-Added Exports",
           "conversations": [
-            "Access to equity remains a scaling bottleneck.",
-            "The Growth Fund aims to support “champion SMEs” — but operational clarity and speed of deployment will matter."
+            "New FTAs (UK, EFTA, EU upcoming) reduce duty disadvantages for Indian exporters.",
+            "This levels the playing field with Vietnam, Indonesia, and Bangladesh in premium markets."
           ]
         },
         {
           "index": "7",
-          "title": "Clusters Need More Than Announcements",
+          "title": "From Volume to Value — The Core Constraint Is Raw Material",
           "conversations": [
-            "200 legacy clusters identified, but no additional allocation for cluster development.",
-            "Infrastructure gaps, connectivity, and shared facilities remain key constraints."
+            "India is #2 globally in seafood volume but only #7–8 in value.",
+            "Future growth must come from value addition, not increased production, due to ecological limits."
           ]
         },
         {
           "index": "8",
-          "title": "State Capacity Is the Real Constraint",
-          "subtitle": "Recurring theme across speakers:",
+          "title": "MSMEs Face a Structural Ceiling — But Niche Advantages Persist",
           "conversations": [
-            "Land, labour, law, logistics, and local governance.",
-            "Without empowering local administrators and improving execution capacity, structural bottlenecks will persist."
+            "Limited raw material supply restricts broad-based MSME expansion.",
+            "However, MSMEs near landing centres retain sourcing advantages that large players cannot replicate."
           ]
         },
         {
           "index": "9",
-          "title": "Compliance & Justice Gaps Remain",
-          "subtitle": "Budget largely silent on:",
+          "title": "Domestic Market Remains Underdeveloped and Fragmented",
           "conversations": [
-            "Contract enforcement",
-            "Reducing compliance burden",
-            "Access to justice",
-            "Ease of doing business still requires deeper reform."
+            "Retail distribution is constrained by lack of cold-chain infrastructure and shelf space.",
+            "Growth is concentrated in HoReCa and quick-commerce channels, not traditional retail."
           ]
         },
         {
           "index": "10",
-          "title": "Technology & Competitiveness Are Non-Negotiable",
-          "subtitle": "MSMEs must:",
+          "title": "Climate Change Is a Real, Operational Risk",
           "conversations": [
-            "Adopt AI & technology",
-            "Improve production efficiency",
-            "Upgrade capabilities",
-            "With FTAs opening markets, global competition is no longer optional — it’s immediate."
+            "Delayed monsoons, rising cyclones, and shifting fish migration patterns are already impacting supply.",
+            "Marine sector volatility is increasingly tied to environmental changes, not just market dynamics."
           ]
         },
         {
           "index": "11",
-          "title": "One-Year Outlook: Cautiously Optimistic",
+          "title": "Outlook: Opportunity Is Real — Execution Will Decide Outcomes",
           "conversations": [
-            "Short-term outlook: positive momentum.",
-            "Long-term transformation depends on fixing fundamentals — Land, labour, law, logistics, and local governance."
+            "FTAs, labour advantage, and currency movement position India strongly for the next export cycle.",
+            "However, success will depend on shifting to value-added exports and adapting to structural constraints."
           ]
         }
       ],
       "conversations": [
         {
-          "speaker": "Sumita Kale",
+          "title": "Sumpoorn MSME Conversations - March '26"
+        },
+        {
           "conversations": [
-            "Good afternoon, and welcome to this post-Budget roundtable. Today, we have an expert panel to give us views from across the board - Dr. Laveesh Bhandari, President of Centre for Social and Economic Progress that is CSEP, Mr. Anil Bhardwaj, Secretary General for Federation of Indian Small and Medium Enterprises, that is FISME, Mr. Unnikrishnan, who is the Joint Director General of the Federation of Indian Export Organizations, that is FIEO, and Mr. Narasimhan (Narsi), who is our Principal Advisor at Jocata.",
-            "I will just give a very small introduction to Jocata Sumpoorn, which is an index which has been tracking the sales activity of MSME since 2019. It has stayed the course, averaging around 0.57 over the last year, through all the global trade shocks. But in November and December, it moved up; it went to 0.61 in November and 0.60 in December. So, as we stand today, we are looking at a very positive, very rosy picture and the budget has given us this long-term view, which is also setting a path for sustained growth. We are entering the new financial year with very good sentiment. With that context, I would like to begin by asking Laveesh for a broad overview. What is the government's vision for small businesses and where exactly does the budget fit into this vision?"
+            "Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Mr. Arjun Gadre. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.",
+            "India's MSMEs have shown remarkable resilience through a year of sustained global uncertainty. Tariff shocks, geopolitical disruption, and volatile freight markets tested the sector - and it held. The SIDBI-Jocata Sumpoorn Index, which tracks sales activity of credit-seeking MSMEs, tells that story clearly: averaging 0.57 between April and September 2025, it climbed to 0.62 in January 2026, the highest reading in ten months. Within this broader picture of MSME resilience, certain sectors are pulling ahead. Marine exports are one of them. January 2026 saw double-digit growth in seafood exports, earning a specific mention from the Ministry of Commerce as one of the top-performing export categories of the month – an excellent result given the headwinds of the past year. It is this combination of macro-level MSME strength and sector-level outperformance that makes marine an interesting sector to examine what is working, and what remains unresolved, in India's export economy.",
+            "This edition of Sumpoorn MSME Conversations brings in Mr. Arjun Gadre, Managing Director of Gadre Marine Exports, to help us understand what is driving this momentum, and the outlook going ahead."
           ]
         },
         {
-          "title": "Vision, Support, and What’s Missing"
-        },
-        {
-          "speaker": "Laveesh Bhandari",
-          "conversations": [
-            "Thanks, Sumita. Great to be here. Giving credit to the government, within whatever their vision is, they have ticked all the checkboxes. The problem, I feel, lies with the vision itself. The government continues to rely a lot on easing the financial burdens of SMEs and is unable to understand the other issues which are far more important. There's a lot of talk about ease of doing business and deregulation, and we all know that that's a part of India's plumbing. If you're not going to make correction on that side, then we will have to keep on giving different kinds of subsidies or interest.",
-            "The first and foremost problem is that our local governments are just completely dysfunctional. Space or location, the logistical framework required around SMEs - local governments are unable to take these on. The second is this whole issue of various regulations. Governments say they're going to deregulate; it's going to be impossible to do. There are many compliances which are critical in a smooth functioning economy, but the entity that is enforcing these is completely bankrupt of ideas."
-          ]
+          "title": "Riding the January Wave "
         },
         {
           "speaker": "Sumita Kale",
           "conversations": [
-            "If there were a couple of things on your wish list for the central government, what do you think they could do?"
+            "January has done very well for marine exports with double-digit growth, flagged by the Ministry of Commerce as a standout category. Given all the upheaval of the past year, how did the industry pull this off? And now, with war active in the Gulf, how do you see this unfolding in the short term?"
           ]
         },
         {
-          "speaker": "Laveesh Bhandari",
+          "speaker": "Arjun Gadre",
           "conversations": [
-            "I think we really need to learn from China. When the managers of the local governments were both empowered and made accountable for the economic growth in those areas, they are the ones who will need to do a whole lot of changes that are required at the local level. It's going to be impossible to operate from Delhi to say that an industrial park out here needs to have plug and play. You have to empower local administrators - mayors, municipal CEOs, district officials, and make them accountable for small-scale sector outcomes. That’s the single biggest change I would make. And just to add one more thing: if you don’t fix that, then whatever else the government does will only move things marginally - better here, worse there. The fundamentals won’t change."
+            "There are two main reasons behind the surge you are seeing in January. One, there are always buying cycles, and you have to read January in that context. Most buying for Christmas sales happens in September, October, November. January sales are predominantly for Easter and Lent - the two peak seafood consumption periods in America and Europe. So, part of what you're seeing is the seasonal cycle doing its job. December is a net consumption month at the customer's end; the product was already sold out of India months earlier.",
+            "The other thing to understand is that the 50% US tariff came into effect in late July. By that point, contracts were already signed. Supply chains for large retailers don't shift quickly, especially for a commodity like shrimp, which has a four-month lead time from seeding in the farm, to grow-out, to processing, to sale. Supermarkets simply couldn't find alternative sources at short notice, and Ecuador, which had already unseated India as the top supplier of aquaculture shrimp to the US, was already at capacity. So the tariff ended up being absorbed by the American retailers themselves, not by Indian exporters. That's how strong the supply chain relationship was. Had it continued into the next buying cycle, things might have shifted more drastically. But now the US Supreme Court scrapped the tariff regime entirely changing the outlook going ahead completely.",
+            "Secondly, what also happened in parallel is that Indian exporters began actively developing alternative markets - the UK, Europe, China, Japan, Russia. The Russian market is worth calling out specifically. Russia had been very restrictive - only a few Indian plants were certified to export there. With our government efforts, a Russian delegation visited India around September-October, and after that, many more processing plants were authorised to supply. So, the diversification that people had been talking about for years accelerated actually under pressure. By January, you had the old markets reopening and the new ones already activated."
           ]
         },
         {
-          "speaker": "Sumita Kale",
+          "speaker": "Narasimhan V.",
           "conversations": [
-            "So, what you’re really asking for is change at the ground level. That’s clear. Thank you, Laveesh.",
-            "Narsi, if you would like to come in now?"
+            "You mentioned the four-month lead time and contracts already in place. With war now active in the Gulf, how are those contracts being fulfilled, particularly the westward traffic? And is product expiry a real and present risk for frozen goods in transit?"
           ]
         },
         {
-          "title": "Trade, FTAs, and the Export Moment"
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
+          "speaker": "Arjun Gadre",
           "conversations": [
-            "Hello World Thanks, Sumita, I just want to bring in two elements right away. First, the EU-FTA that was signed just days before the Budget. Second, the recent and somewhat unexpected movement from the US on reciprocal tariffs.Access to a 27-country EU market is something we’ve been waiting for, and it helps de-risk our exposure to the US. At the same time, we’ve seen indications that close to USD 33 billion of exports may move into a zero-tariff line, potentially covering about 70% of trade.",
-            "These are very large numbers. So, before I get ahead of myself, let me bring in Mr. Unnikrishnan. Where do you see immediate action happening, and what needs to change for MSMEs to take advantage quickly?"
+            "There is less disruption than people fear, for two reasons. The Houthi activity in the Red Sea last year had already pushed most shipping off the Suez Canal route and around the Horn of Africa - that transition was already done before this latest escalation. Traffic to the western coast of the US goes via Singapore and through the Pacific, so there's no disruption there either. The rerouting around Africa adds a couple of weeks to Europe-bound shipments, but frozen product has a long enough shelf life that this doesn't create an expiry risk in any meaningful way.",
+            "The real concern at this moment is freight rates. A standard 24-ton frozen container from Mumbai to the US East Coast typically runs between $4,500 and $5,000. During disruptions, that can spike to $20,000 or $22,000. There are also fuel surcharges coming in. And because only a few shipping lines handle this trade globally, any shock creates an artificial shortage of capacity. That hits the bottom line directly. But in terms of actual trade flow, I don't see a massive disruption. The routes have already adapted."
           ]
         },
         {
-          "speaker": "K. Unnikrishnan",
+          "title": "FTAs: The Structural Shift "
+        },
+        {
+          "speaker": "Narasimhan V.",
           "conversations": [
-            "At the outset, thank you for inviting me and for these very good questions, which are very relevant today. If you look at India’s manufacturing landscape, we largely produce low-technology products. Globally, about 84% of trade today is in medium- and high-technology products, and that segment is growing fast. India’s share in this category is only about 24%.Last year, India exported over USD 85 billion to the US alone. Of this, 56% came from MSMEs. So, when we talk about opening EU and US markets, manufacturing capability becomes critical. The Budget sends a clear signal on manufacturing competitiveness, infrastructure, and logistics. Our logistics costs are still around 10-12%, compared to single digits globally.That said, one major issue remains unaddressed: CBAM, the Carbon Border Adjustment Mechanism. MSMEs will find it difficult to access EU markets without an EU-approved carbon credit framework. Labour-intensive sectors - textiles, garments, chemicals, agriculture, processed food are likely to see immediate benefits, because labour cost is where India has a natural advantage."
+            "Looking at the numbers, marine exports were around $7.45 billion last year. This year, through January, we're tracking at roughly $7.2 billion, suggesting a broadly flat year, even with China partially substituting for the US. US exports were $2.6 billion in 2024-25; by December 2025 that had fallen to around $1.8 billion. China has been absorbing some of the shift. Where do you see exports evolving from here?"
           ]
         },
         {
-          "speaker": "Narasimhan Venkatesan",
+          "speaker": "Arjun Gadre",
           "conversations": [
-            "Fantastic – that sets the context. Over to you, Sumita."
-          ]
-        },
-        {
-          "title": "Delayed Payments and TReDS"
-        },
-        {
-          "speaker": "Sumita Kale",
-          "conversations": [
-            "Coming back to fundamentals - one of the on-the-ground challenges for micro businesses is delayed payments. And FISME has also done a path-breaking study with GAME and C2FO recently on this issue.",
-            "This Budget has announced four measures to strengthen TReDS. Anilji, how significant do you think these measures are, and how soon might we see change?"
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "Thank you, Sumita. If I had to describe this Budget in one phrase: no big bang, but a steady hand. TReDS has been facing structural problems. Most buyers, particularly CPSEs, are registered but have not been transacting or allowing invoices to be uploaded. The government has now made it mandatory. TReDS has become a clearing house for payments. You will have a clear digital trail available on the platform; you would know who is paying in time and who is not. Previously, banks found it difficult to finance MSMEs whose credit ratings were not good. Now, because they have linked it with CGTMSE, this problem is taken care of; there is insurance available in case of default. I am sure the number of financed invoices is going to jump after making things mandatory for CPSEs. Both Laveeshji and previous speakers pointed out that MSMEs suffer from a problem of scale. This budget announced a Rs 10,000 crore SME growth fund to help in facilitating access to equity. Equity is one of the major bottlenecks because of which MSMEs have not been able to scale up. However, if you look at the Ministry of MSME, they were only able to spend 50% of their allocation last year. That is the question of the state capacity to utilize funds. From a macro perspective, this reinforces a credit-heavy growth strategy and not a capability-building strategy."
-          ]
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
-          "conversations": [
-            "To that point on mandatory transactions, we have about 316 CPSEs onboarded, but most weren't transacting. Anilji, how dramatically do you see this scaling now that it’s 'must-do'?"
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "It is no longer a choice. Because it is through TReDS only that you can make the payment, it becomes a clearing house. If you are not paying in time, those invoices convert into negotiable instruments financed by banks. This creates a much-needed lift in liquidity."
-          ]
-        },
-        {
-          "title": "Logistics, Clearances, and Ground Reality"
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
-          "conversations": [
-            "If I may add one more question - this is to the broader group. Beyond payments, there is the physical movement of goods. The budget refers to the National Trade Facilitation Plan 2.0 with a goal of two-day clearance. Unnikrishnan, what changes at the ground level to make that a reality?"
-          ]
-        },
-        {
-          "speaker": "K. Unnikrishnan",
-          "conversations": [
-            "That is a very valid question. Many times, manufacturers are forced to stop production because there is no predictability of clearance of cargo. The Finance Minister talked about investing in technology, especially AI, so that clearances can happen without manual intervention. Today, the customs system does not interact with other government agency systems like DGFT or the RBI. There are a lot of mismatches of data. A single-window clearance practically is going to help the trade industry clear cargo much faster."
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "I would like to add here also, see there are a couple of things to be noted. First, the experience of cargo getting cleared either for export or for import differs very widely within India. So, if it is JNPT or Haldia port, the differences are enormous. So, with the same rule, set of rules and with the same kind of infrastructure, digital infrastructure, single window, etc., the experience of exporters and importers varies from place to place, number one. So, that means there is still a lot of manual involvement in the process and that is why the difference. The second is that in the recent meeting of the Board of Trade, a presentation was made and very soon we will have a single interface for all the agencies that have to say something with regards to export and imports, whether it is testing lab, whether it is certificate of origin, whether it is different agencies involved in the process, all of them are connected to one single interface and I think that is the vision. I think if it is realized, it can have a dramatic impact going forward."
-          ]
-        },
-        {
-          "title": "Clusters, Capacity, and the Local State"
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
-          "conversations": [
-            " Thank you. One more question, sir. There is going to be a large focus on the 200 legacy clusters and de-bottlenecking them from an infra perspective. If that be so, and I just went through the clusters also, starting with I have the data which says textiles form 40 clusters, we have engineering 30, handicrafts 25, so on and so forth. How many MSMEs would be comprised in these clusters? Because I think that could be a very humongous number where they once again get better capacitized as you all already mentioned in the beginning. How are you going to make sure that they are all now rendered capable to produce and export as well as from a domestic perspective and get the benefit of both the FTA and the budget announcements?"
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "If I may take that first - while the Budget talks about 200 legacy clusters, there’s no additional allocation for the Ministry of MSME. The Cluster Development Programme remains at ₹431 crore, unchanged. What exactly will be done for these clusters, and with what funding, isn’t clear yet, this still feels more like an idea than an operational plan. Most of these clusters are overwhelmingly MSME-driven and face basic gaps in infrastructure and technology."
-          ]
-        },
-        {
-          "speaker": "K. Unnikrishnan",
-          "conversations": [
-            "Just to add - many clusters struggle because of weak connectivity, lack of common facilities like effluent treatment and shared infrastructure, and poor access to raw materials. Unless these basics are fixed, cluster-level interventions won’t move the needle."
-          ]
-        },
-        {
-          "speaker": "Laveesh Bhandari",
-          "conversations": [
-            "I’d also like to add that a lot of the issues related to clusters are problems of local governance - roads, effluent treatment, water. All that the central government can do is provide finance because that mechanism is working relatively efficiently. You have to go through the local governance system and that is where the problem is."
-          ]
-        },
-        {
-          "speaker": " Anil Bhardwaj",
-          "conversations": [
-            "Actually, I just wanted to come here and add to what the question that Laveeshji has raised about the municipalities and the capacity of the state at the local level. A couple of very important announcements have been made, pledging allocation of 5,000 crore over 5 years for tier 2 and tier 3 cities. The Finance Commission has doubled the allocation to local municipalities to 7.91 lakh crore. For the first time, it is mandatory that they get their accounts audited and put into the public domain. This may address the issues Laveeshji raised by capacitating the local bodies."
-          ]
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
-          "conversations": [
-            "Hello World  And from the SME growth fund perspective, where 10,000 crores has been allocated, how do we see the ground level action now emanating? Because the process of identification talks about champion SMEs, which are going to be future ready from an export potential perspective, from having demonstrated the production efficiencies, so on and so forth. If that be so, do you see certain immediate guidelines, regulations being notified, so that the selection of these SMEs can happen very rapidly, so that the funds get made available, etc. So, it is an interesting thing for us to look at as to how the SMEs are going to be enabled to avail this excellent opportunity."
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "Hello World In all probability, SIDBI is going to be heading this fund. And I think it could be, there could be two ways. One, some part of it would be used for creating as a mother fund and, you know, there will be daughter funds created for different segments, maybe different sectors also. This is one way of going about doing it. And second is that SIDBI has its own direct connect with MSMEs.",
-            "And MSMEs through, for example, there is an institution called Center of Excellence for Aspiring SMEs which FISME and IFCI has set up and SIDBI is also involved. We have an MOU. So, there are a number of MSMEs that are coming to us that are interested in raising funds with the help of external equity.",
-            "So, I think we have good numbers already present. There is a demand also. So, spending this money should not be a problem."
-          ]
-        },
-        {
-          "title": "Compliance and Legal Frictions"
-        },
-        {
-          "speaker": "Sumita Kale",
-          "conversations": [
-            "Wonderful. So, you know, we have all our newsletters and our commentary that goes out to regular readers. They have sent in some questions and one of them is a little link to what we have been talking about, is that how does the budget concretely reduce the compliance burden for MSMEs beyond intent statements?",
-            "The question is, are there any measurable time that a small business can expect? Are we looking at a quarter? Are we looking at rolling some?"
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "I do not think there is any concrete initiative in the budget that would reduce the cost of compliance. The budget is almost completely silent with regards to improving access to justice and enforcement of contracts, an area where India is at the bottom of the heap."
-          ]
-        },
-        {
-          "title": "Risks and the Year Ahead"
-        },
-        {
-          "speaker": "Sumita Kale",
-          "conversations": [
-            "I’d like to ask all of you if you could share some concluding remarks - you know where we are today, we have had a very turbulent year, lot of uncertainty, thanks to Trump tariffs and then the war and there has been a lot of upheavals. And we have sailed through this quite well. Everything is looking really, very rosy. So, it just makes us wonder, what are the risks that you would expect small businesses to prep for at this stage? How do you see the year ahead panning out?"
-          ]
-        },
-        {
-          "speaker": "K. Unnikrishnan",
-          "conversations": [
-            "I’d like to answer that first. One important aspect as far as MSME is concerned is involving technology. Unless they adopt technology and, you know, even as a labour-oriented production, unless you use technology, artificial intelligence, etc., it will be very difficult in the coming years. And how we can be more competitive in production that makes you profitable and makes you, you know, grow. So that is an area which one has to use technology and artificial intelligence and see that they invest in that. Especially this is the time where government is also putting in a lot of money and a lot of funding also available with organizations like SIDBI, especially on technology upgradation fund also now being extended during this budget also. I'm sure that unless they do their homework well, it will be very difficult for them to survive in the competitive environment especially. We are also opening our market for global players. Even MSMEs, UK, UK is dominated by MSME players. So, we have a FTA and we also open up many sectors. So, we have to be competitive with them. And, unless we prepare ourselves now, it will be very difficult in coming years."
-          ]
-        },
-        {
-          "speaker": "Anil Bhardwaj",
-          "conversations": [
-            "We need to set things right to take advantage of emerging opportunities. Currently, we have an adversarial ecosystem in India; that's why majority of people are interested in the services sector rather than the manufacturing space. We have to work on regulations, access to technology, and scale."
-          ]
-        },
-        {
-          "speaker": "Laveesh Bhandari",
-          "conversations": [
-            "We have worked on labour laws, but there is a long path ahead; they are not flexible at the micro and small level. Space is also a very big problem; we need large amounts of space around every single city where SMEs can set up. No SME can afford to go to court for anything; they work on reputation and personal networks. These are long-term constraints. But for the next one year, I think it's a phenomenal path ahead."
-          ]
-        },
-        {
-          "speaker": "Narasimhan Venkatesan",
-          "conversations": [
-            "MSMEs have demonstrated a lot of resilience in the face of adverse events. This is a once-in-a-lifetime opportunity to get access to a huge market. Digitally, the data infrastructure (DPI) has helped MSMEs become much more comfortable managing their business. The government is doing its bit, but strengthening awareness of the schemes from the MSME side would be a great step.",
-            "But notwithstanding that, what is it that they should be doing from their side from here on, to not be caught by surprise? And what is it that they would expect from the government to operationalize these policies quickly is perhaps what will allow them to ride the crest of this opportunity that is probably a once-in-a-lifetime opportunity to get started into getting access to a huge market and to become global players, albeit as SMEs.",
-            "So, it's very, very positive to see this. I'm hopeful that MSMEs should also step forward and seek the required help and assistance that I'm sure is available and building the awareness. Because from Jocata’s side, for example, we do help MSMEs understand their own businesses by fetching consent-based information about themselves, such as GST, etc., of their own performances. And when we hold the mirror to them, they are themselves surprised as to the facets of their performance and non-performance and allows them to introspect and get course correction done. So in a way, digitally, the data infrastructure, the DPI has helped a lot of MSMEs to become much more comfortable with fetching the data with the help of fintechs like us and starting to make sense out of it, both from managing the business as well as from even establishing their behavioural collateral with the institutions. So that's also what I see as a great thing.",
-            "So overall, I think the sentiment is the best that one can expect. And it would take two hands to clap. The government is doing its bit, but I guess being aware of the schemes, being aware of who to approach, if this is strengthened from the MSME side through various important bodies, associations, etc., I think it would be a great step to help them all move forward more confidently. That's my take on this."
+            "China is a short-term phenomenon. It's absorbed what wasn't going to America, but the percentage of value-added seafood going out of India is still very limited - we're largely sending raw commodity. China is also now a net importer of seafood at scale, but it's not a strategic market for building up value-added export capability.",
+            "The real story of change in the marine industry for India is the FTAs. Right now, Indian exporters pay 14.5% duty on Chapter 16 value-added products and 4.5% on Chapter 3 raw seafood going into EU markets. Countries like Indonesia, Bangladesh, and Vietnam had preferential access that India didn't. What was particularly frustrating is that a significant portion of Indian raw seafood was going to Thailand and Vietnam, getting reprocessed into value-added product, and then sold into the EU at a lower duty - because rules of origin treat an HSN code change as a change of origin. So, our own raw material was reaching European consumers at a price advantage over what we could offer directly from India.",
+            "The FTAs will change that. The Norway-Iceland-Switzerland-Liechtenstein FTA is expected to be operationalised very soon. The UK FTA should come into force after parliamentary ratification around June or July. The EU agreement will take another twelve months or so. These are genuinely significant events - they put Indian exporters on a level playing field with Southeast Asian competitors in these markets for the first time."
           ]
         },
         {
           "speaker": "Sumita Kale",
           "conversations": [
-            "To conclude, we can say that the budget is an accounting exercise and an intent statement. Capital is being taken care of to a large extent. But the fundamentals to reimagine MSMEs are again going to be land, labour, law, and state capacity. These are the things we have to work on over the long term together.",
-            "Thank you all for joining us."
+            "So this changes the entire production and export equation? How does it play out for competition in eastern markets - Vietnam, Bangladesh, and so on?"
           ]
-        } 
-      ],
-      "guestExperts": [
-        {
-          "profileImage": "Arjun.webp",
-          "name": "Mr. Arjun Gadre",
-          "description": "Managing Director, Gadre Marine Export. Leads one of India’s biggest seafood brands, with deep expertise in value-added processing, global supply chains, and marine export competitiveness."
-        }
-      ],
-      "indexExperts": [
-        {
-          "profileImage": "Sumita.webp",
-          "name": "Dr. Sumita Kale",
-          "description": "Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index."
         },
         {
-          "profileImage": "Narasimhan.webp",
-          "name": "Mr. Narasimhan V.",
-          "description": "Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology."
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "On the eastern side, barriers remain. Vietnam and Indonesia have preferential treatment in Japan. Vietnam can send products into China without import duty. So India hasn't gained ground there. But in the western markets, where the premium for value-added product is highest, the playing field is now levelling.",
+            "The government has set ambitious targets for seafood export growth. But in today's terms, if the focus stays on raw commodity, you can only grow exports by growing raw material supply, which means doubling the farms. That's just not going to happen. We are number two in the world by seafood volume, but only seventh or eighth by value. Thailand and Vietnam are second and third in value with far smaller volumes, because their value per unit is so much higher. That's the gap we now have the market access to close."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "And is the upstream supply chain - shrimp farming on the East Coast, around Vizag, Orissa, Andhra Pradesh - geared up to meet increased demand if this opportunity is to be fully realised?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "I want to be precise here. Increasing raw material supply alone will not grow our exports in dollar terms - we need to add value to existing raw material. That's the real lever. On processing capacity, the answer is yes - there is enough. Average utilisation across Indian seafood processing plants is less than 50%, because capacities are built for peak harvest which lasts only about 60 to 70 days a year, then tapers down. The capacity is sitting there underutilised.",
+            "But there is a structural constraint on raw material growth that people don't discuss enough. All aquaculture shrimp production depends on fishmeal, which is produced from sea-caught fish. So, on one hand, you're pulling wild fish out of the sea to convert into fishmeal to feed the aqua farm. As aquaculture has grown, sea-caught product has actually declined - there's been a degrowth in that category. Sustainable fishing practices are not well implemented. My own business is entirely based on sea-caught product, and my fraternity gets directly affected when aquaculture expands, because high-value table fish ends up being converted into cheap fishmeal. There is a concept of Maximum Sustainable Yield - the sea can only give so much biomass sustainably. Growth for this sector therefore has to be revenue-based and value-based, not volumetric."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "So, the duty structure change has created an enabler to harness existing processing capacity - the market access is now there, and the constraint is on the raw material side, not the processing side."
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Exactly. And on logistics and cold storage - that's not a bottleneck either. Because of the peak and trough in harvesting cycles, everybody has built enough storage capacity to produce, store, and sell over time. There could be isolated instances of shortage, but no critical constraint in the supply chain. We have been lobbying for these FTAs for years. Now that they're here, the ball is in our court."
+          ]
+        },
+        {
+          "title": "Back to Competitiveness: The Ecuador Factor"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "You mentioned Ecuador earlier - they've gained significant ground in the US market during this period. How does India stack up now that the tariff situation has resolved?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Ecuador increased its supply to America by around 20% over the last year, because they were sitting at 10% import duty while India had jumped to 50%. Naturally, buyers shifted. But Ecuador has real constraints - a shortage of skilled labour and sheer workforce numbers. All the labour-intensive, value-added processing work that India is very good at, they cannot do at scale. So India still has that advantage.",
+            "Now with tariffs normalised, and the rupee having depreciated against the dollar, India has actually become more competitive in dollar terms than before. The old supply chains to the United States will start firing again. The combination of tariff parity, labour advantage, and currency movement puts India in a strong position going into the next buying cycle."
+          ]
+        },
+        {
+          "title": "The Domestic Puzzle "
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Let's turn to the domestic market. What does that picture look like?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "A lot more challenging than export. You have to look at it in two channels: retail and HoReCa - hotels, restaurants, catering.",
+            "On the retail side, the picture is bleak. We are one of the biggest seafood brands in India, and our challenge is that you need a tremendous number of feet on street to conduct sales here. Whether it's a mom-and-pop store or a modern trade retailer, buying and distribution still happens more or less at the store level - four packets here, five packets there. That significantly increases the complexity and cost of distribution.",
+            "The bigger problem is that there is almost no organised frozen shelf space for non-vegetarian products. In Pune, Dorabjee will have a large display. But in Nature's Basket or Star Bazaar - the only real modern retailers still operating at scale - the freezer sections are tiny and dominated by chicken. No shelf space, no visibility, no offtake. And above-the-line marketing is so expensive now, competing for eyeballs against everything else, that it's not a viable option for a product like ours.",
+            "There is also a policy issue I'll name directly. The two largest organised retailers in India do not stock non-vegetarian products at all, and they are permitted to make that choice. I think it is discriminatory. A shrimp farmer and a potato farmer should be seen in the same light. This is something the government should address.",
+            "The MRP structure compounds all of this. The cost of running a refrigerated freezer -electricity, premium floor space in high real estate areas is very high. Fixed MRPs don't allow retailers to improve revenue per square foot. That's why modern retail is perishing. I've heard that two lakh kirana stores have shut in Mumbai alone. Blinkit and similar platforms work precisely because they operate from cheaper locations without the frontage premium. Somebody needs to think about an indexed MRP framework tied to real estate costs, or physical retailers won't survive. The silver lining is direct-to-consumer platforms - Blinkit, Instamart, Amazon, where we are seeing genuine improvement in sales.",
+            "The HoReCa segment is a completely different story. Our own sales are 80-85% hotel, restaurant, and catering, growing at 25-30% year on year. The demand is there, especially in the mid-market B-category restaurants and bars that need quick-turnaround, portion-controlled, consistent, cost-effective products that reduce kitchen time. Skilled manpower is a challenge in India - not every kitchen has the chefs to produce exciting dishes from scratch. Ready-to-cook, processed seafood solves that problem, and that segment is growing very well.",
+            "The honest summary of the domestic market is that the whole world is looking at India as a market, and we are forced to look outside because we lack the domestic infrastructure to distribute effectively."
+          ]
+        },
+        {
+          "title": "MSMEs in Marine: Room to Grow?"
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "There are close to 700 MPEDA-registered entities in the sector. Many are MSMEs - upstream, processing, or trading. Is there space for them to grow and capture the FTA opportunity?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "The short answer is no - not in terms of expanding the number of players. The supply side has a hard limit on available raw material, and that constrains how much room there is for more entities to enter and scale.",
+            "The MSMEs that will do well are those that pivot to value-added products - buying raw commodity from processors doing commodity work, adding value, and selling into the market. The ones that stay in pure commodity processing will face more pressure and consolidation. There is also a mindset challenge. When you're used to running 50 or 60 tons a day during a glut of raw material, shifting to a value-added line that runs at 8 to 10 tons a day requires different skills, different management, and a willingness to re-skill your people. That transition is not easy.",
+            "That said, there is a natural structural advantage to being small in this sector. Sea-caught fish is highly perishable and bought in a completely unorganised way - there is no index or auction system like tea or coffee. Large companies cannot efficiently source from every harbour on a daily basis. MSMEs that are physically close to landing centres, with established local sourcing relationships, have a role that large players cannot easily replicate. Access to raw material is the key variable. If you have fish, you can sell fish. You cannot create fish just because you have an order."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "So, in some cases, there's actually an advantage to staying small?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Absolutely. Everybody wants to grow, but you can only grow as much fish as you can procure. The raw material is the ceiling."
+          ]
+        },
+        {
+          "title": "Climate at Sea"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "We keep hearing about climate risks, ocean warming, erratic weather. Are you seeing any impact of this in practice, in what comes in from the sea?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Definitely. The most visible change is the delayed monsoon - it now extends well into November, sometimes touching December, where it used to end cleanly in September. That disrupts fishing cycles and affects fish spawning, because monsoon runoff carries nutrients through rivers that support breeding. The volume of monsoon also matters - a good monsoon means better nutrition in the water and more fish spawned.",
+            "There is also a significant event called the Indian Ocean Dipole - the temperature differential between the eastern and western Indian Ocean - which has a major effect on fish migration patterns. That event used to occur every eight to nine years. The frequency has shortened considerably. Fish are very sensitive to minor temperature changes, and as migration patterns shift, so does what lands at our harbours — both the type and the quantity.",
+            "Cyclones on the east coast are a growing factor. Every cyclone forces boats back to harbour. A typical fishing sortie is five to eight days. When a cyclone hits, boats come back, wait in harbour for two to three days, then go out again and return in another seven. So almost ten days of a thirty-day month can be lost with no fish landing. The number of cyclones on the Arabian Sea has increased - which the research has confirmed. And cyclones are a product of warmer sea surface temperatures. This is climate change playing out in very direct, operational terms for this sector."
+          ]
+        },
+        {
+          "title": "Closing Reflections"
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "This has been a very enriching conversation. When we scheduled it, we were bracing for bad news - tariff uncertainty, war risk, a difficult outlook. What we've heard instead is that the immediate risks are more manageable than feared, the FTA opportunity is genuinely transformative, and the sector has shown remarkable resilience. The note of caution we take away is that MSMEs in this sector face structural constraints that will limit how broadly the growth gets distributed - and that is worth factoring into how we read the index data in the months ahead."
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "That captures it well. The opportunity is real. India is number two in the world by seafood volume but only seventh or eighth by value. The FTAs give us the chance to close that gap - to add value here rather than export our raw material to be processed elsewhere and sold back into markets we should be competing in directly. The infrastructure is there. The markets are opening. Now it is a question of execution and mindset."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Thank you so much, Arjun. This was a genuine masterclass. We came in knowing very little about this sector and we're leaving with a much clearer picture of both the opportunity and the constraints. Thank you for your time and your candour."
+          ]
         }
       ]
+ 
     },
     {
       "title": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
