@@ -81,6 +81,28 @@
       "featured": false
     },
     {
+      "banner": "Explore_Sumita_Narasimhan_cover.webp",
+      "title": "Macro Index to MSME Intelligence: Sumpoorn at 2 | EP6",
+      "slug": "podcast/macro-index-to-msme-intelligence-sumpoorn-at-2",
+      "tags": [
+        "MSME Conversations"
+      ],
+      "month": "November 2025",
+      "duration": "32 min",
+      "indexExperts": [
+        {
+          "profileImage": "Sumita_circle.webp",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "profileImage": "Narasimhan_circle.webp",
+          "name": "Mr. Narasimhan V"
+        }
+      ],
+      "youtubeShareLink": "https://youtu.be/K2MAmj5ni28?si=W_fyhPlMsj9DfDWa",
+      "featured": false
+    },
+    {
       "banner": "Explore_Srivats_cover.webp",
       "title": "GST 2.0 vs. 50% US Tariffs: Can India's Manufacturing MSMEs Survive?",
       "slug": "gst-2-0-vs-50-us-tariffs-can-indias-manufacturing-msmes-survive",
@@ -1349,6 +1371,395 @@
           "profileImage": "Deepak.webp",
           "name": "Mr. Deepak Karandikar",
           "description": "Industrialist and former President, MCCIA, Pune. Known for driving lean manufacturing initiatives, institutional development, and policy advocacy on ease of doing business."
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita.webp",
+          "name": "Dr. Sumita Kale",
+          "description": "Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index."
+        },
+        {
+          "profileImage": "Narasimhan.webp",
+          "name": "Mr. Narasimhan V.",
+          "description": "Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology."
+        }
+      ]
+    },
+    {
+      "title": "Macro Index to MSME Intelligence: Sumpoorn at 2",
+      "slug": "podcast/macro-index-to-msme-intelligence-sumpoorn-at-2",
+      "youtubeLink": "https://www.youtube.com/embed/K2MAmj5ni28?si=W_fyhPlMsj9DfDWa?playsinline=1&rel=0&modestbranding=1",
+      "youtubeShareLink": "https://youtu.be/K2MAmj5ni28?si=W_fyhPlMsj9DfDWa",
+      "description": [
+        "Two years ago, Sumpoorn set out to do something that no existing economic index was doing — measure India's MSME economy honestly, without bias, and through the lens of the enterprises that actually drive it. On this second anniversary episode, we take stock of how far that mission has come, what the latest data is telling us about the state of the Indian economy, and where Sumpoorn is headed next. The answer to that last question is both ambitious and deeply practical."
+      ],
+      "highlights": [
+        {
+          "banner": "Highlights_SumitaKale_details1_cover.webp",
+          "title": "Meet Sumpoorn: India's First and Only MSME Economic Activity Index",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "November 2025",
+          "duration": "1.23 min",
+          "youtubeLink": "https://www.youtube.com/embed/I7EOLbY8HKM?si=kJz4f4DizQzDKAs0",
+          "youtubeShareLink": "https://youtu.be/I7EOLbY8HKM?si=kJz4f4DizQzDKAs0"
+        },
+        {
+          "banner": "Highlights_Narasimhan_details1_cover.webp",
+          "title": "Tariff Fears, Export Opportunity",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "November 2025",
+          "duration": "1.23 min",
+          "youtubeLink": "https://www.youtube.com/embed/imJGegOC_54?si=TWFebLyX2JaJ0LDh",
+          "youtubeShareLink": "https://youtu.be/imJGegOC_54?si=DyOciXS3uMFxHCz_"
+        }
+      ],
+      "timestamps": [
+        {
+          "from": "0:00",
+          "to": "0:47",
+          "title": "Opening Introduction & September MSME Index"
+        },
+        {
+          "from": "0:49",
+          "to": "2:09",
+          "title": "Manufacturing Sales Growth Moderation Discussion"
+        },
+        {
+          "from": "1:13",
+          "to": "1:25",
+          "title": "Unstable Times - Weather & Tariffs"
+        },
+        {
+          "from": "2:09",
+          "to": "2:46",
+          "title": "Diwali Festive Season Consumption Surge Analysis"
+        },
+        {
+          "from": "2:46",
+          "to": "4:32",
+          "title": "Two-Wheeler Sales Surge Analysis (50% Growth)"
+        },
+        {
+          "from": "4:32",
+          "to": "6:43",
+          "title": "Passenger Vehicle Sales Performance (Maruti, Tata, etc.)"
+        },
+        {
+          "from": "6:43",
+          "to": "8:22",
+          "title": "E-Way Bill Volume Pickup Discussion"
+        },
+        {
+          "from": "8:22",
+          "to": "9:43",
+          "title": "Export Diversification Strategy & Results"
+        },
+        {
+          "from": "9:43",
+          "to": "10:56",
+          "title": "Monsoon Disruption & State-Level Impacts"
+        },
+        {
+          "from": "10:56",
+          "to": "13:18",
+          "title": "Credit Data Trends (Vehicles, Durables, Gold)"
+        },
+        {
+          "from": "13:18",
+          "to": "14:54",
+          "title": "State-Level Index Performance (Maharashtra, UP, etc.) "
+        },
+        {
+          "from": "14:54",
+          "to": "18:51",
+          "title": "GST Collections Overview for October"
+        },
+        {
+          "from": "18:51",
+          "to": "22:40",
+          "title": "Sumpoorn 2nd Anniversary & Actionable Intelligence Focus"
+        },
+        {
+          "from": "22:40",
+          "to": "26:29",
+          "title": "Industrial Cluster Mapping for Risk Assessment"
+        },
+        {
+          "from": "26:29",
+          "to": "30:52",
+          "title": "Real-Time Flood & Monsoon Analysis Use Cases"
+        },
+        {
+          "from": "30:52",
+          "to": "32:08",
+          "title": "Final Discussion & Closing Remarks"
+        }
+
+      ],
+      "aiSummaries": [
+        {
+          "index": "1",
+          "title": "MSME Growth Holds — Expansion Without Acceleration",
+          "conversations": [
+            "The Sumpoorn Index remains at 0.58, signalling mild expansion.",
+            "Growth continues, but momentum across MSME sales remains subdued."
+          ]
+        },
+        {
+          "index": "2",
+          "title": "Festive Demand Lifts Consumption — Manufacturing Stays Soft",
+          "conversations": [
+            "Record Diwali sales drove a sharp consumption uptick.",
+            "However, manufacturing growth moderated, with rising pessimism among firms."
+          ]
+        },
+        {
+          "index": "3",
+          "title": "Auto Sector Signals Uneven Recovery",
+          "conversations": [
+            "Two-wheelers surged nearly 50% YoY, reflecting strong mass-market demand.",
+            "Passenger vehicles showed mixed performance, indicating cautious high-value consumption."
+          ]
+        },
+        {
+          "index": "4",
+          "title": "Logistics Activity Reinforces Underlying Momentum",
+          "conversations": [
+            "Strong growth in e-way bill volumes points to continued movement in goods and supply chains.",
+            "Baseline economic activity remains intact despite sectoral divergence."
+          ]
+        },
+        {
+          "index": "5",
+          "title": "Export Resilience Driven by Diversification",
+          "conversations": [
+            "Weakness in US exports was offset by strong growth in China, Vietnam, and Thailand (~60%).",
+            "India’s exporters are actively reducing dependence on a single market."
+          ]
+        },
+        {
+          "index": "6",
+          "title": "Credit Trends Signal Emerging Stress",
+          "conversations": [
+            "Vehicle loan growth remains soft, while consumer durable credit contracts.",
+            "Meanwhile, gold loans surge, indicating shifting borrower behaviour and liquidity pressures."
+          ]
+        },
+        {
+          "index": "7",
+          "title": "State-Level Divergence Will Shape the Index",
+          "conversations": [
+            "Maharashtra shows strong improvement in MSME activity.",
+            "Declines in key states like Karnataka and Telangana highlight uneven regional recovery."
+          ]
+        },
+        {
+          "index": "8",
+          "title": "Localised Disruptions Are Increasingly Material",
+          "conversations": [
+            "Floods and erratic weather are impacting MSMEs at a district level.",
+            "Performance is becoming more granular and location-specific."
+          ]
+        },
+        {
+          "index": "9",
+          "title": "Sumpoorn Evolves — From Index to Intelligence Platform",
+          "conversations": [
+            "The focus is shifting from a single number to state, sector, and cluster-level insights.",
+            "Deeper data integration is enabling more meaningful analysis."
+          ]
+        },
+        {
+          "index": "10",
+          "title": "From Insight to Action — The Next Phase of Value Creation",
+          "conversations": [
+            "Sumpoorn aims to translate macro signals into borrower- and portfolio-level decisions.",
+            "The shift from measurement to actionability will define its next phase."
+          ]
+        }
+      ],
+      "conversations": [
+        {
+          "title": "The State of MSME Sales and the Festival Season Boom"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Good afternoon everyone, and welcome to the Sumpoorn MSME Conversations this month. We have the Sumpoorn number for September at 0.58, which is exactly the same level as last year. Last month it stood at 0.57, so a slight uptick in September. Essentially, what we have been seeing over the past few months has been a muted pace of growth for MSME sales activity.",
+            "This is also validated by the latest SIDBI MSME Outlook Survey Round 4 Q2 FY25 results for manufacturing firms. The survey showed that just 47% of the manufacturing firms surveyed showed sales growth in Q2, compared to 54% in Q1. So, there is a slight moderation in the second quarter. The pessimism also is a little higher in the second quarter for manufacturing, about 15% of the MSME manufacturers showed pessimism as far as the sales growth is concerned in Q2 compared to only 7% in Q1. When it comes to services, however, the survey showed that the growth has been much stronger and more positive.",
+            "On the other hand, we’ve just gone through a fantastic Diwali season, with record-breaking sales, the highest ever for this period. So, Narsi, what’s your impression of the festival season that just concluded?"
+          ]
+        },
+        {
+          "speaker": "Narasimhan V:",
+          "conversations": [
+            "The season cheer seems to be very robust from what I could conclude based on various pieces of data. One number that really stands out is two-wheelers - October sales touched 3.15 million units versus 2.07 million last year, nearly 50 percent growth. It’s a cheerful reading, and I don’t think one could ask for anything better.",
+            "September, of course, wasn’t all that great but understandably so, with demand waiting for the GST 2.0 transmission that came only around the third week. Sales started picking up from September 22 onwards. Offers were out through the month but translated into concrete numbers only in October, helped by the festive season.",
+            "To me, the auto sector, along with FMCG and even QSR, is always very indicative of economic activity and consumer confidence. But if you look at light motor vehicles, the passenger vehicles, I would have expected stronger numbers. Given their higher ticket sizes, people take more time to decide and choose models carefully. So perhaps demand isn’t yet in full bloom as far as consumption goes.",
+            "Still, the numbers for four-wheelers are encouraging. Maruti has been a standout with 18 percent year-on-year growth, followedby Tata Motors at 13 percent and Mahindra at 9 percent. Skoda-Volkswagen collectively showed 34 percent growth - volumes are smaller, but impressive since much of it is in high-value cars. The surprising ones were Hyundai and Honda, which recorded declines. So, a bit of a mixed bag there.",
+            " I’ve taken two-wheelers and four-wheelers as representative of the auto sector, though we should also watch heavy commercial vehicles - the LCVs, MCVs and MHCVs, where the picture is also mixed for now. But I’m sure these numbers will begin showing a stronger pickup soon. "
+          ]
+        },
+        {
+          "title": "Logistics, Diversified Exports, and the Credit Conundrum"
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "One interesting reinforcing data point is e-way bill volumes. There’s been a noticeable pickup in their velocity. Sumita, do you think this suggests a broader revival in economic activity?"
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Yes, for September, e-way bills hit a record high - over 20% year-on-year growth, which is quite robust. Even on the export front, the earlier concerns seem to have eased somewhat because diversification strategies are paying off.",
+            "Merchandise exports rose by 6.7% in September, even though shipments to the US, our largest market, fell by 11.9%. For marine products, exports to the US declined, but shipments to China, Vietnam, and Thailand rose by around 60%. So overall, there’s clear evidence that India’s exporters are moving away from US dependence."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "That’s reassuring to see. Another factor that you were concerned about even last month was the disruptions from heavy rain. What’s your view now?"
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Punjab and Rajasthan are still seeing some impact, but overall, the country has caught up and stabilized. However, at a disaggregated level, there are localised effects, both for firms and bank portfolios, and we will go into that later in this conversation."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Right. Coming to the credit side, I noticed vehicle loan growth for September 2025 was pretty soft, roughly 7%. That’s a bit of a surprise, isn’t it?"
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Yes, similar growth in October too for vehicle loans. Two other signals in the credit data are worth noting - one, credit for consumer durables has negative growth; and two, gold loans continue to grow strongly, with more than 100% year-on-year growth in October."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "If consumer durable loans are declining, that’s worrying, isn’t it?"
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "It is a concern, and it probably explains why we still aren’t seeing a big boost in MSME sales activity through the Sumpoorn Index. "
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "I also noticed Maharashtra recorded the highest improvement in its Sumpoorn Index, from 0.53 to 0.64. But Karnataka, Telangana, and West Bengal have declined. The real lift for the national index will depend on how these states perform.",
+            "Actually, while much has been written about GST collections, growth has been among the lowest we’ve seen in a year."
+          ]
+        },
+        {
+          "title": "Sumpoorn’s Evolution: From Index to Actionable Insights"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            " Let’s bring Namrata in now. Hi Namrata, good to have you with us to tell us what’s been happening under the hood with the Sumpoorn team."
+          ]
+        },
+        {
+          "speaker": "Namrata Rao",
+          "conversations": [
+            "Hi everyone, good afternoon. I’m Namrata, part of the Executive Office at Jocata. I’ve been involved with the Sumpoorn initiative since we started, and we’re celebrating the second anniversary on the 10th since our launch.",
+            "A lot has been happening behind the scenes. We work closely with clients - financial institutions, banks, NBFCs, our patron SIDBI, as well as partners and think tanks. I thought we’d do something different this month and share a few glimpses of what’s been going on, bits of which everyone hears in the commentary every month. ",
+            " Narsi, you stole my thunder! I was actually going to talk about the state indices, but you’ve already touched on them! For everyone listening, we’ve been focusing on states with high MSME activity, especially Maharashtra and Uttar Pradesh, and we’ll be releasing that analysis in our upcoming annual report, along with a sector focus on auto, which we unpack every month.  In fact, last month on our conversation series, we had Mr. Srivats Ram, MD of Wheels India, who gave us valuable insights from the sector and his perspective.",
+            "Some of the other things we’ve been working on are the flood impact dashboard and monsoon disruption analyses. I know we have opposing views here - Narsi feels the impact hasn’t been very significant, while Sumita believes we’ll see more of the impact in the value chain over time, both primary and secondary. ",
+            "This is a bit of what’s been happening at our end. Maybe, Narsi, Sumita, from your perspectives - you’ve been guiding us. What would you say is the goal with Sumpoorn now? How are we unpacking and continuously looking at the different layers affecting the sector and the movement of the index?"
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Well, I think I’ll probably end up repeating myself!",
+            "When we look at Sumpoorn as a whole, the initial vision was to create a country-level MSME Economic Activity Index that was truly representative of the sector, without any undue bias across geographies or sizes. MSMEs range widely in turnover, even under the revised definition, and we wanted a framework that captured that diversity and reflected real economic activity through the lens of credit-seeking companies.",
+            "That seems to have been reasonably achieved, though there are always challenges. The next layer is the disaggregation: how states are performing, how industries compare, and which clusters show distinct patterns.",
+            "My pet area, of course, is auto. When we look at the auto sector, ancillaries tend to stay close to OEMs, MSMEs cluster around them because of logistics and inventory management needs. Sumita and I were recently discussing how working capital efficiency has changed with just-in-time stock management. Proximity and clustering are now central to MSME competitiveness in supply chains.",
+            "Presenting the behaviour of these clusters - by industry, state, or district, is going to dramatically improve how lenders assess risk for working capital, bridge finance, capacity expansion, or trade finance. That’s where Sumpoorn’s insights become very powerful.",
+            "And with so much data around us, almost to the point of paralysis, the real challenge is putting it together meaningfully, so we can interpret MSME health better."
+          ]
+        },
+        {
+          "speaker": "Namrata Rao",
+          "conversations": [
+            "Exactly. The data is disconnected. Different stakeholders hold different pieces. Our effort is to bring them together into a cohesive view.",
+            "It’s not as simple as asking ChatGPT what’s happening in a sector and getting a few numbers, it’s about building a system that helps us read the data in context and with credibility."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "I completely agree. The first step is always to collect and organize the data properly, to create logical libraries and foundations. From what I understand, the Sumpoorn team is already doing that groundwork, and I’m confident we’ll be able to derive very meaningful insights from it soon."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "For me, two years ago when you first came to me with the idea of an MSME Economic Activity Index, I was genuinely excited because there was nothing like it. No national-level, high-frequency MSME indicator existed.",
+            " It filled a real gap. Initially, of course, there was euphoria - something new! But over time, we realized that if we stayed at just the macro level, Sumpoorn would become “another indicator”, like IIP or PMI. That’s when we started going deeper into granular data and connecting it to real-world problems. ",
+            "Take the monsoon analysis, for example. Instead of just noting that certain districts were flooded, we matched rainfall data with our MSME and bank datasets to see which firms and portfolios were actually impacted. That’s a unique space for us to provide practical, timely insight that has helped our clients. "
+          ]
+        },
+        {
+          "speaker": "Namrata Rao",
+          "conversations": [
+            "A perfect use case."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Absolutely. It’s not just about saying the economy is growing at 6%. It’s about helping a bank understand which part of its portfolio is at risk, how its clients are affected, how their counterparties are impacted, and doing this quickly.",
+            "I’m genuinely impressed by the team, the vision, and the response from clients who’ve appreciated these insights. When you said it’s been two years, I realized how far we’ve come -  from reporting one number to building something much deeper."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Exactly. And Sumita, you summed it up well. The goal of Sumpoorn is to deliver actionable insights that are relevant to our stakeholders.",
+            "We’re deeply connected to the lending ecosystem, from financial crime prevention to credit assessment and digital lending. Sumpoorn complements that by translating macro signals into borrower- and portfolio-level implications.",
+            "Ultimately, the idea is to help institutions reallocate risk capital, identify sectoral opportunities, and refine how they engage with borrowers. Transforming Sumpoorn from something with mere curiosity value into a platform that reveals the layers beneath the index - that’s where the real impact lies."
+          ]
+        },
+        {
+          "speaker": "Namrata Rao",
+          "conversations": [
+            "I agree. Our guest speakers like, Ms. Zeenat Hamirani who joined us in June, have been strong supporters of the index. When we present to them, we realize that while they have internal signals within their portfolios, having an external, sector-wide perspective adds real value. It helps them make more informed decisions."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "There’s still a lot to do. We’ve just begun. The key is to stay focused and deliver in stages, so clients can immediately benefit, whether in how business and risk teams collaborate, or how they engage borrowers. That’s when we’ll have truly met their expectations."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "A final note to our listeners - if you have comments, questions, or research ideas for your business or operations, do reach out to us. We’d love to hear from you.",
+            "That brings us to the end of this afternoon’s conversation. Namrata, Narsi, thank you so much."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Thank you so much"
+          ]
         }
       ],
       "indexExperts": [
