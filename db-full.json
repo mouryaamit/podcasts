@@ -34,7 +34,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/eL6ee7hfAqo?si=4ytuSofESouU66mC",
-      "featured": true
+      "featured": false
     },
     {
       "banner": "Explore_Tirthankar_cover.webp",
@@ -166,6 +166,28 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/zO9ZsZCiZX8?si=d36tb8IuHdcAx-a_",
+      "featured": false
+    },
+    {
+      "banner": "Explore_SumanChowdury_cover.webp",
+      "title": "MSME Credit Is Rising — Why the ₹30L Cr Gap? | EP1",
+      "slug": "podcast/msme-credit-is-rising-why-the-30l-cr-gap",
+      "tags": [
+        "MSME Conversations"
+      ],
+      "month": "April 2025",
+      "duration": "26 min",
+      "indexExperts": [
+        {
+          "profileImage": "Sumita_circle.webp",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "profileImage": "Narasimhan_circle.webp",
+          "name": "Mr. Narasimhan V"
+        }
+      ],
+      "youtubeShareLink": "https://youtu.be/PD3cgZBTVRE?si=FgfrWS0j85xr_sjY",
       "featured": false
     }
   ],
@@ -2852,6 +2874,479 @@
           ]
         }
  
+      ],
+      "guestExperts": [
+        {
+          "profileImage": "Suman.webp",
+          "name": "Mr. Suman Chowdhury",
+          "description": "Chief Economist, SIDBI. Leads macroeconomic and financial sector research, guiding MSME policy insight and strengthening India’s inclusive credit architecture."
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita.webp",
+          "name": "Dr. Sumita Kale",
+          "description": "Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index."
+        },
+        {
+          "profileImage": "Narasimhan.webp",
+          "name": "Mr. Narasimhan V.",
+          "description": "Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology."
+        }
+      ]
+    },
+    {
+      "title": "MSME Credit Is Rising — Why the ₹30L Cr Gap?",
+      "slug": "podcast/msme-credit-is-rising-why-the-30l-cr-gap",
+      "youtubeLink": "https://www.youtube.com/embed/PD3cgZBTVRE?si=FgfrWS0j85xr_sjY?playsinline=1&rel=0&modestbranding=1",
+      "youtubeShareLink": "https://youtu.be/PD3cgZBTVRE?si=FgfrWS0j85xr_sjY",
+      "description": [
+        "India’s latest GDP numbers surprised on the upside — but what does that really mean for MSMEs on the ground?",
+        "In this episode of MSME Sumpoorn, SIDBI’s Suman Chowdhury unpacks the data behind the headlines and explains where optimism is justified — and where caution is warranted."
+      ],
+      "highlights": [
+        {
+          "banner": "Highlights_SumanChowdury_details1_cover.webp",
+          "title": "Cool Summer, Slower Demand | Sumpoorn Conversations",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "April 2025",
+          "duration": "1.45 min",
+          "youtubeLink": "https://www.youtube.com/embed/g5nQplQ1LlI?si=ke5WMHaA-UHH1jXz",
+          "youtubeShareLink": "https://youtu.be/g5nQplQ1LlI?si=ke5WMHaA-UHH1jXz"
+        },
+        {
+          "banner": "Highlights_SumanChowdury_details2_cover.webp",
+          "title": "Tariff Fears, Export Opportunity",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "April 2025",
+          "duration": "1.49 min",
+          "youtubeLink": "https://www.youtube.com/embed/Jq6BcurYGY0?si=H42WXGqBwORvzuMq",
+          "youtubeShareLink": "https://youtu.be/Jq6BcurYGY0?si=4FIHMCGdZMuzH6XX"
+        },
+        {
+          "banner": "Highlights_SumanChowdury_details3_cover.webp",
+          "title": "MSME Lending Grows — Why the ₹30L Cr Gap?",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "April 2025",
+          "duration": "2.09 min",
+          "youtubeLink": "https://www.youtube.com/embed/b4UW0wZp3T8?si=1clAV6Xi7L_zlRss",
+          "youtubeShareLink": "https://youtu.be/b4UW0wZp3T8?si=wltuY4NJSk3MDtvo"
+        }
+      ],
+      "timestamps": [
+        {
+          "from": "0:22",
+          "to": "1:27",
+          "title": "GDP Surprise and Drivers"
+        },
+        {
+          "from": "1:27",
+          "to": "3:00",
+          "title": "Export Opportunities for MSMEs"
+        },
+        {
+          "from": "3:00",
+          "to": "4:27",
+          "title": "FY26 Outlook and Risks"
+        },
+        {
+          "from": "4:31",
+          "to": "7:29",
+          "title": "SAMP Data Analysis"
+        },
+        {
+          "from": "7:29",
+          "to": "10:28",
+          "title": "MSME Credit Gap"
+        },
+        {
+          "from": "10:28",
+          "to": "11:00",
+          "title": "Disbursement Slowdown"
+        },
+        {
+          "from": "11:00",
+          "to": "12:47",
+          "title": "CGTMSSE Impact"
+        },
+        {
+          "from": "12:47",
+          "to": "15:13",
+          "title": "Gold Loan Regulations"
+        },
+        {
+          "from": "15:13",
+          "to": "17:15",
+          "title": "Urban vs. Rural Consumption"
+        },
+        {
+          "from": "18:18",
+          "to": "21:58",
+          "title": "Seasonal Impact on Sales"
+        },
+        {
+          "from": "21:58",
+          "to": "23:59",
+          "title": "SIDBI Initiatives"
+        },
+        {
+          "from": "23:59",
+          "to": "25:47",
+          "title": "Future Risks"
+        }
+      ],
+      "aiSummaries": [
+        {
+          "index": "1",
+          "title": "Growth Surprises — Strong GDP, But Moderation Ahead",
+          "conversations": [
+            "FY25 closed at 6.5% growth, with Q4 at 7.4%, beating expectations.",
+            "FY26 outlook moderates to ~6.3–6.4% amid global uncertainty."
+          ]
+        },
+        {
+          "index": "2",
+          "title": "Public Capex Drives Momentum — Elections Behind Us",
+          "conversations": [
+            "A sharp pickup in government spending in Q4 supported growth.",
+            "Capex remains a key lever for sustaining economic momentum."
+          ]
+        },
+        {
+          "index": "3",
+          "title": "Tariff Uncertainty Creates Export Opportunity",
+          "conversations": [
+            "Front-loading of exports in April–May boosted MSME-linked sectors.",
+            "Engineering goods, garments, plastics, and gems saw strong growth."
+          ]
+        },
+        {
+          "index": "4",
+          "title": "Manufacturing Lags — Growth Led by Other Sectors",
+          "conversations": [
+            "Core manufacturing remains subdued despite overall GDP strength.",
+            "Growth is being supported more by agriculture, construction, and services."
+          ]
+        },
+        {
+          "index": "5",
+          "title": "Consumption Trends Are Mixed — Rural Holds, Urban Softens",
+          "conversations": [
+            "Urban demand shows signs of slowdown, especially in discretionary categories.",
+            "Rural demand, supported by tractors and agri-linked activity, remains resilient."
+          ]
+        },
+        {
+          "index": "6",
+          "title": "Sumpoorn Signals Stability — Seasonal Softness, Not Structural Weakness",
+          "conversations": [
+            "April Index at 0.56, slightly higher than previous years.",
+            "Post-March moderation reflects seasonality, not a demand collapse."
+          ]
+        },
+        {
+          "index": "7",
+          "title": "Credit Growth Remains Strong — But Access Gaps Persist",
+          "conversations": [
+            "MSME credit grew ~18.5% YoY, supported by policy and PSL push.",
+            "Yet, a ₹30 lakh crore credit gap highlights persistent access challenges."
+          ]
+        },
+        {
+          "index": "8",
+          "title": "Disbursement Slowdown Signals Caution",
+          "conversations": [
+            "Despite strong portfolio growth, disbursements in small and medium segments are declining.",
+            "Lenders appear cautious amid external volatility and regulatory tightening."
+          ]
+        },
+        {
+          "index": "9",
+          "title": "Policy Support Expands — But Structural Questions Remain",
+          "conversations": [
+            "CGTMSE guarantees surged 51% YoY, boosting collateral-free lending.",
+            "However, regulatory changes (e.g., FLDG constraints) may impact NBFC lending models."
+          ]
+        },
+        {
+          "index": "10",
+          "title": "Outlook: Stable but Watchful — Dependent on Monsoon, Capex, and Global Trends",
+          "conversations": [
+            "May likely to remain flat to slightly soft, with no major demand triggers.",
+            "Future momentum hinges on monsoon strength, capex revival, and export continuity."
+          ]
+        }
+      ],
+      "conversations": [
+        {
+          "speaker": "Sumita Kale & Narasimhan V",
+          "conversations": [
+            "Welcome, Mr. Suman, great to have you join us"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Thanks a lot, Dr. Sumita and Mr. Narasimhan. It’s a pleasure to be part of this conversation"
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "So, we are looking forward to hearing your views on the economy at large, and how you feel small businesses, in particular, have been impacted. What do you feel is the broad trend going ahead?"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Should we start with a quick overview of the economy? We’ve seen the latest GDP data for the last quarter of FY25. It’s been a pleasant surprise; it surpassed expectations. GDP growth came in at 7.4% for Q4, which helped the total GDP growth for the year reach 6.5%. Most economists’ forecasts, as I understand, were lower than that.",
+            "So, from that perspective, it definitely was a surprise. I think one of the key drivers of this better-than-expected performance was clearly the pickup in public capex. It was in a slowdown last year because of general elections, but it really picked up in the last quarter. Another important trend was the export opportunity created in April and May because of tariff uncertainty. There was a window where a lot of front-loading of exports happened, and that’s what’s reflected in the export data for March and April. April in particular was good.",
+            "Merchandise exports actually rose by 10.3% in April, non-petroleum exports specifically. If you look at some goods where MSMEs are present, sectors like engineering goods saw 18.5% YoY growth, readymade garments 14.4%. These are much stronger numbers, showing it was an opportunity. Gems and jewellery grew 10.7%, plastic products 34%. So, I believe MSMEs have benefited from the tariff uncertainty. It’s not across the board, but in certain sectors, MSME exporters gained.",
+            "Coming back to the economy, we’ve started on a good note. Of course, the forecast for FY26 is a bit moderate, somewhere around 6.3% to 6.4%, a slight moderation compared to FY25. The key reason is global uncertainty - how tariff policies will shape up, and how they’ll impact global markets, which are also uncertain. Those are the risk factors. On the positive side, we have a forecast of a favourable monsoon and low inflation, which is a comfort factor. This will also help the RBI Monetary Policy Committee take decisions on rate cuts. It looks like there will probably be another 50 basis point rate cut this fiscal*. So, all these factors are positive. The downside can happen due to global factors. That’s largely the economic landscape I see."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Right. I would largely agree with you, Mr. Suman, but perhaps we could look at a couple of aspects. One important thing would be that even when we looked at the IIP, and certain aspects, especially the GVA, it came in at 6.4%. I’m just tempering our optimism somewhat. When you break it down into sectoral growth, as you rightly noted from an MSME perspective, most of the support came from agriculture, construction, and services. So, core manufacturing didn't deliver the bolstering support one would have expected. That has a very direct correlation with the IIP numbers as well.",
+            "And then, looking at a very important thing that should always be considered, given that MSMEs are operating in a very specific, almost 'guardrail boundary' situation, present only in certain industries and actively in trading, we looked at the Retailer Association of India’s survey data. Some numbers have moderated. This covers about nine sectors - Quick Service Restaurants (QSR), apparel, gems and jewellery - basically the consumption side.",
+            "To add another layer, it’s important to look at listed bellwethers like Blue Star, Voltas, and Amber – especially in the air conditioning segment. They usually give a good read on personal consumption. But even there, it’s been subdued. And if you look at footwear sales, brands like Relaxo at the lower end, or Metro at the higher end aren’t seeing the kind of pick-up we’d expect post school re-openings. There is a visible quietening. So, it’s a mixed bag."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Yes...Urban consumption has been in a bit of slowdown mode since last year with improved rural demand supporting the overall consumption numbers. In April-May, another factor had some impact on consumer goods sales – a less intensive summer and early rains in many parts of the country. It reduced the demand for products such as cold beverages, ice creams and even air conditioners."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Which brings me to Sumpoorn - where we look at data from a sales perspective, covering B2B & B2C. So, we’re looking at it from the consumption perspective, either for production or end consumption. Those numbers have moderated a bit, and we’re hoping May will be slightly better, or perhaps flattish. We also looked at the historic indices of April ’24 and April ’23, and it’s coming almost close."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "It was actually 0.53 in April ’23. 0.55 in ’24, and April ’25, 0.56. So, slightly better is what I see."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "It is, it is."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "It’s slightly better, so it’s some comfort. But as a steep fall compared to March, I don’t think we need to be too worried. As you rightly pointed out, there were a lot of front-loaded sales in March; inventories were pushed out. So, naturally, April has been a soft month."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Yes, it’s seasonal."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Correct. Let’s see how May comes up."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Just wanted to point out that if you look at the first four months of this year, every month is higher than the corresponding month of the previous year. Plus, H1 of FY25's range is lower than the range for the second half of FY25. So, we do have a sense of resilience coming through Sumpoorn also."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Yes. And tractor sales are pretty interesting, Dr. Sumita. We discussed this just this morning."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "That’s right. Tractor sales have grown. What I read is 8% in April, and I think May numbers also look good for Mahindra, based on sales…"
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "…Mahindra published today: 10% growth in tractor sales. Escorts Kubota has also reported a 0.7% increase in total tractor sales (domestic plus exports), largely driven by exports as domestic sales dipped by 2%. If the three top big names are delivering steady numbers, that’s another big tick mark. I expect this to be important good news from a rural consumption perspective. Credit off-take for two-wheelers and other auto consumption items is significantly a function of rural demand. If that starts picking up, I think April would have been reasonably compensated."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "True, true."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Actually, I had another question when it comes to credit. We felt that the landscape has been changing quite dramatically over the past year due to certain regulatory changes concerning unsecured lending, the clamp down on personal loans. There’s been a lot of portfolio shifts for banks and NBFCs. Your SIDBI surveys have also pointed out that things are good, but small businesses are a little wary of getting credit. Am I right?"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "You know, Dr. Sumita, MSMEs always have issues with access to credit, and credit challenges are there; I don’t think that will go away very quickly. Recently, in one study, we estimated the total credit gap in the MSME sector, including micro-enterprises, is around ₹30 lakh crore. What you’re saying is right: there are issues with unsecured loans due to regulatory tightening. You must have seen that microfinance portfolio outstanding is actually coming down; there’s negative growth. NBFC portfolios are also showing lesser growth. RBI data on MSME PSL grew 18.5% YoY in April. So, I think the MSME portfolio overall is still looking good."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Yes, agreed."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "What I’m trying to say is the growth in the MSME portfolio of banks is still fairly positive. Because of many factors: policy push, different government programs, including MUDRA, I think the momentum is still on. But at the same time, as per the latest TransUnion CIBIL MSME Pulse report, disbursements have slowed down in the small and medium MSME segments. So, there’s a negative growth in disbursement in the last quarter, perhaps because of the volatile external environment. We have to see what happens this current quarter."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            " I would like for us to discuss another quick point -very specifically, from your perspective, Mr. Suman, is the fact that CGTMSE has been doing stellar work. Guarantees are up very significantly by 51% YoY. But do you see potential adverse pressure, given that the RBI has advised that FLDG (First Loss Default Guarantee) is not permitted for loans already covered under CGTMSE? Is this going to be a problem for NBFC lending, etc.? I’m not speaking specific to SIDBI itself, but do you see this being somewhat adverse for the flow of credit?"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "We are still assessing that. As we know, CGTMSE coverage has been increasing, and this is one of the factors that has helped enhance credit exposure for MSMEs, enabling banks and NBFCs to give collateral-free loans. Clearly, it’s been a game-changer, and we see coverage steadily increasing. The quantum of coverage was also enhanced in the last budget from ₹5 crore to ₹10 crore. So, on the CGTMSE part, things are going well. But to your specific question on FLDG’s impact – there is still more assessment needed."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Since we’re looking ahead, what do you think the May 2025 Sumpoorn number might look like?"
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "I’d say it’ll be close to April. I don’t see any major new trigger for demand unless CapEx really kicks off or the monsoon is especially strong. April’s GST collections were phenomenal, right?"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Yes, absolutely."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "So maybe larger sectors are doing well and that’s driving collections. But overall, I’d guess May won’t look very different from May ’24."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "I agree. The flash GST numbers for May show a 16.4% rise. But it’s not translating into visible consumption yet."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Exactly."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "So, we’ll have to see how domestic consumption shapes up. Exports have looked better the last couple of months - if that continues, it might improve sentiment."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Is there anything new on SIDBI’s end that could help MSMEs?"
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Nothing brand new, but GST Sahay is picking up. It’s still in early stages but has reached a ₹200 crore portfolio and is growing. We’re optimistic about it. The focus is on expanding digital lending."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Right."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "We’re also exploring support for MSME CapEx, especially in services like hospitality. With domestic tourism rising, there’s scope to support hotel investments in the mid-market segment."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "One thing we haven’t mentioned is the sudden COVID uptick. While it doesn’t seem serious, it’s still an unpredictable factor."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "That’s true."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Personally, I think May might see a slight dip - maybe down to 0.55 - because of unexpected rains disrupting operations in several cities."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "That could be a factor."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Yes, it could swing a point either way. But an upside would surprise me."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "And we had disruptions from Operation Sindoor too, which affected travel."
+          ]
+        },
+        {
+          "speaker": "Suman Chowdhury",
+          "conversations": [
+            "Yes, that’s right. Those disruptions might have an impact."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V",
+          "conversations": [
+            "Agreed. Let’s wait and watch."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "On that note, thank you so much, Mr. Suman. It was a pleasure having you with us. Let’s see what May brings - and whether our hunches hold."
+          ]
+        }
       ],
       "guestExperts": [
         {
