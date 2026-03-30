@@ -1,6 +1,34 @@
 {
   "episodes": [
     {
+      "banner": "Explore_Arjun_cover.webp",
+      "title": "FTAs, Freight & Fish: India’s $7B Opportunity",
+      "slug": "podcast/ftas-freight-fish-india-s-7b-opportunity",
+      "tags": [
+        "MSME Conversations"
+      ],
+      "month": "March 2026",
+      "duration": "38 min",
+      "guestExperts": [
+        {
+          "profileImage": "Arjun.webp",
+          "name": "Mr. Arjun Gadre"
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita_circle.webp",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "profileImage": "Narasimhan_circle.webp",
+          "name": "Mr. Narasimhan V"
+        }
+      ],
+      "youtubeShareLink": "https://youtu.be/yvrnVBmpJ8I?si=XH5JJD7FVMSG4yJM",
+      "featured": true
+    },
+    {
       "banner": "Explore_Budget_cover.webp",
       "title": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
       "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
@@ -214,6 +242,397 @@
     }
   ],
   "episodesDetails": [
+     {
+      "title": "FTAs, Freight & Fish: India’s $7B Opportunity",
+      "slug": "podcast/ftas-freight-fish-india-s-7b-opportunity",
+      "youtubeLink": "https://www.youtube.com/embed/yvrnVBmpJ8I?si=egX3VQ9cuutidKlk",
+      "youtubeShareLink": "https://youtu.be/yvrnVBmpJ8I?si=XH5JJD7FVMSG4yJM",
+      "description": [
+        "India's marine exports hit a 10-month high in January. The UK FTA is weeks away from ratification. American retailers absorbed the tariff shock so Indian exporters didn't have to. On paper, the seafood sector is riding a wave.",
+        "But dig deeper, and the picture is more complicated. MSMEs face a raw material ceiling they cannot break through. Domestic retail is structurally hostile to non-vegetarian products. And climate change is quietly rewriting the rules of the ocean itself.",
+        "In this conversation, Arjun Gadre, MD of Gadre Marine Exports, delivers a frank, expert assessment of where India's seafood industry stands — what's working, what's broken, and why the ball is now firmly in the industry's court."
+      ],
+      "highlights": [
+        {
+          "banner": "Highlights_Arjun_details1_cover.webp",
+          "title": "Climate Change Disrupts India’s Fisheries",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "March 2026",
+          "duration": "2.08 min",
+          "youtubeLink": "https://www.youtube.com/embed/4WdLYQ3xacQ?si=5rXDEHFVwR2bNevF",
+          "youtubeShareLink": "https://youtu.be/4WdLYQ3xacQ?si=th5v8tbAJr_Iw8YU"
+        },
+        {
+          "banner": "Highlights_Arjun_details2_cover.webp",
+          "title": "Red Sea Crisis: Why Ships Reroute via Africa",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "March 2026",
+          "duration": "0.50 min",
+          "youtubeLink": "https://www.youtube.com/embed/TuMC4BmRLMw?si=POa7fHa1ZnoB82JL",
+          "youtubeShareLink": "https://youtu.be/TuMC4BmRLMw?si=fA1oY3HPOf4owWrt"
+        },
+        {
+          "banner": "Highlights_Arjun_details3_cover.webp",
+          "title": "Retail Bias in India’s Seafood Market?",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "March 2026",
+          "duration": "2.53 min",
+          "youtubeLink": "https://www.youtube.com/embed/p7QZAYM0bDM?si=zBOqkeFz3PGw22SR",
+          "youtubeShareLink": "https://youtu.be/p7QZAYM0bDM?si=D0zt4o9F6nB8P_1a"
+        },
+        {
+          "banner": "Highlights_Arjun_details4_cover.webp",
+          "title": "#2 in Volume, #7 in Value: India’s Seafood Gap",
+          "tags": [
+            "MSME Conversations"
+          ],
+          "month": "March 2026",
+          "duration": "2.38 min",
+          "youtubeLink": "https://www.youtube.com/embed/CCXIIB53Zf8?si=69aXhHZvGnvviAyJ",
+          "youtubeShareLink": "https://youtu.be/CCXIIB53Zf8?si=bKiOCCfwXXori0za"
+        }
+      ],
+      "timestamps": [
+        {
+          "from": "0:00",
+          "to": "3:45",
+          "title": "Market Analysis & Export Trends"
+        },
+        {
+          "from": "3:46",
+          "to": "7:00",
+          "title": "US Tariffs & Ecuador Parity"
+        },
+        {
+          "from": "7:01",
+          "to": "12:00",
+          "title": "Geopolitics & Alternative Markets (Russia/China)"
+        },
+        {
+          "from": "12:01",
+          "to": "16:30",
+          "title": "UK & EU FTA Implications"
+        },
+        {
+          "from": "16:31",
+          "to": "24:19",
+          "title": "Raw Material & Sustainability Limits"
+        },
+        {
+          "from": "24:20",
+          "to": "33:59",
+          "title": "Domestic Retail Challenges & HoReCa Growth"
+        },
+        {
+          "from": "34:00",
+          "to": "36:11",
+          "title": "Climate Change & Cyclones"
+        },
+        {
+          "from": "36:12",
+          "to": "37:44",
+          "title": "Closing Comments"
+        }
+      ],
+     "aiSummaries": [
+        {
+          "index": "1",
+          "title": "MSME Resilience Holds — Index Signals Strength Beneath Volatility",
+          "conversations": [
+            "The Sumpoorn Index rises to 0.62 in January 2026, the highest in ten months.",
+            "Despite tariffs, geopolitical disruptions, and freight shocks, MSME sales activity shows sustained expansion."
+          ]
+        },
+        {
+          "index": "2",
+          "title": "Marine Exports Surge — Seasonal Cycles + Supply Chain Stickiness",
+          "conversations": [
+            "January’s double-digit export growth is driven by Easter/Lent demand cycles.",
+            "Pre-committed contracts and long production lead times prevented disruption from tariff shocks."
+          ]
+        },
+        {
+          "index": "3",
+          "title": "Tariff Shock Absorbed — Not Passed Down the Value Chain",
+          "conversations": [
+            "The 50% US tariff was largely absorbed by global retailers due to supply constraints.",
+            "Strong buyer-supplier relationships protected Indian exporters in the short term."
+          ]
+        },
+        {
+          "index": "4",
+          "title": "Market Diversification Accelerates Under Pressure",
+          "conversations": [
+            "Exports expanded into UK, EU, China, Japan, and Russia.",
+            "Russia, in particular, emerged as a new growth market following regulatory easing."
+          ]
+        },
+        {
+          "index": "5",
+          "title": "Geopolitical Disruption Impacts Costs, Not Trade Flows",
+          "conversations": [
+            "Red Sea rerouting had already normalised shipping patterns.",
+            "The real risk lies in freight volatility, with container costs spiking up to 4–5x during disruptions."
+          ]
+        },
+        {
+          "index": "6",
+          "title": "FTAs Mark a Structural Inflection Point for Value-Added Exports",
+          "conversations": [
+            "New FTAs (UK, EFTA, EU upcoming) reduce duty disadvantages for Indian exporters.",
+            "This levels the playing field with Vietnam, Indonesia, and Bangladesh in premium markets."
+          ]
+        },
+        {
+          "index": "7",
+          "title": "From Volume to Value — The Core Constraint Is Raw Material",
+          "conversations": [
+            "India is #2 globally in seafood volume but only #7–8 in value.",
+            "Future growth must come from value addition, not increased production, due to ecological limits."
+          ]
+        },
+        {
+          "index": "8",
+          "title": "MSMEs Face a Structural Ceiling — But Niche Advantages Persist",
+          "conversations": [
+            "Limited raw material supply restricts broad-based MSME expansion.",
+            "However, MSMEs near landing centres retain sourcing advantages that large players cannot replicate."
+          ]
+        },
+        {
+          "index": "9",
+          "title": "Domestic Market Remains Underdeveloped and Fragmented",
+          "conversations": [
+            "Retail distribution is constrained by lack of cold-chain infrastructure and shelf space.",
+            "Growth is concentrated in HoReCa and quick-commerce channels, not traditional retail."
+          ]
+        },
+        {
+          "index": "10",
+          "title": "Climate Change Is a Real, Operational Risk",
+          "conversations": [
+            "Delayed monsoons, rising cyclones, and shifting fish migration patterns are already impacting supply.",
+            "Marine sector volatility is increasingly tied to environmental changes, not just market dynamics."
+          ]
+        },
+        {
+          "index": "11",
+          "title": "Outlook: Opportunity Is Real — Execution Will Decide Outcomes",
+          "conversations": [
+            "FTAs, labour advantage, and currency movement position India strongly for the next export cycle.",
+            "However, success will depend on shifting to value-added exports and adapting to structural constraints."
+          ]
+        }
+      ],
+      "conversations": [
+        {
+          "title": "Sumpoorn MSME Conversations - March '26"
+        },
+        {
+          "conversations": [
+            "Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Mr. Arjun Gadre. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.",
+            "India's MSMEs have shown remarkable resilience through a year of sustained global uncertainty. Tariff shocks, geopolitical disruption, and volatile freight markets tested the sector - and it held. The SIDBI-Jocata Sumpoorn Index, which tracks sales activity of credit-seeking MSMEs, tells that story clearly: averaging 0.57 between April and September 2025, it climbed to 0.62 in January 2026, the highest reading in ten months. Within this broader picture of MSME resilience, certain sectors are pulling ahead. Marine exports are one of them. January 2026 saw double-digit growth in seafood exports, earning a specific mention from the Ministry of Commerce as one of the top-performing export categories of the month – an excellent result given the headwinds of the past year. It is this combination of macro-level MSME strength and sector-level outperformance that makes marine an interesting sector to examine what is working, and what remains unresolved, in India's export economy.",
+            "This edition of Sumpoorn MSME Conversations brings in Mr. Arjun Gadre, Managing Director of Gadre Marine Exports, to help us understand what is driving this momentum, and the outlook going ahead."
+          ]
+        },
+        {
+          "title": "Riding the January Wave "
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "January has done very well for marine exports with double-digit growth, flagged by the Ministry of Commerce as a standout category. Given all the upheaval of the past year, how did the industry pull this off? And now, with war active in the Gulf, how do you see this unfolding in the short term?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "There are two main reasons behind the surge you are seeing in January. One, there are always buying cycles, and you have to read January in that context. Most buying for Christmas sales happens in September, October, November. January sales are predominantly for Easter and Lent - the two peak seafood consumption periods in America and Europe. So, part of what you're seeing is the seasonal cycle doing its job. December is a net consumption month at the customer's end; the product was already sold out of India months earlier.",
+            "The other thing to understand is that the 50% US tariff came into effect in late July. By that point, contracts were already signed. Supply chains for large retailers don't shift quickly, especially for a commodity like shrimp, which has a four-month lead time from seeding in the farm, to grow-out, to processing, to sale. Supermarkets simply couldn't find alternative sources at short notice, and Ecuador, which had already unseated India as the top supplier of aquaculture shrimp to the US, was already at capacity. So the tariff ended up being absorbed by the American retailers themselves, not by Indian exporters. That's how strong the supply chain relationship was. Had it continued into the next buying cycle, things might have shifted more drastically. But now the US Supreme Court scrapped the tariff regime entirely changing the outlook going ahead completely.",
+            "Secondly, what also happened in parallel is that Indian exporters began actively developing alternative markets - the UK, Europe, China, Japan, Russia. The Russian market is worth calling out specifically. Russia had been very restrictive - only a few Indian plants were certified to export there. With our government efforts, a Russian delegation visited India around September-October, and after that, many more processing plants were authorised to supply. So, the diversification that people had been talking about for years accelerated actually under pressure. By January, you had the old markets reopening and the new ones already activated."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "You mentioned the four-month lead time and contracts already in place. With war now active in the Gulf, how are those contracts being fulfilled, particularly the westward traffic? And is product expiry a real and present risk for frozen goods in transit?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "There is less disruption than people fear, for two reasons. The Houthi activity in the Red Sea last year had already pushed most shipping off the Suez Canal route and around the Horn of Africa - that transition was already done before this latest escalation. Traffic to the western coast of the US goes via Singapore and through the Pacific, so there's no disruption there either. The rerouting around Africa adds a couple of weeks to Europe-bound shipments, but frozen product has a long enough shelf life that this doesn't create an expiry risk in any meaningful way.",
+            "The real concern at this moment is freight rates. A standard 24-ton frozen container from Mumbai to the US East Coast typically runs between $4,500 and $5,000. During disruptions, that can spike to $20,000 or $22,000. There are also fuel surcharges coming in. And because only a few shipping lines handle this trade globally, any shock creates an artificial shortage of capacity. That hits the bottom line directly. But in terms of actual trade flow, I don't see a massive disruption. The routes have already adapted."
+          ]
+        },
+        {
+          "title": "FTAs: The Structural Shift "
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "Looking at the numbers, marine exports were around $7.45 billion last year. This year, through January, we're tracking at roughly $7.2 billion, suggesting a broadly flat year, even with China partially substituting for the US. US exports were $2.6 billion in 2024-25; by December 2025 that had fallen to around $1.8 billion. China has been absorbing some of the shift. Where do you see exports evolving from here?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "China is a short-term phenomenon. It's absorbed what wasn't going to America, but the percentage of value-added seafood going out of India is still very limited - we're largely sending raw commodity. China is also now a net importer of seafood at scale, but it's not a strategic market for building up value-added export capability.",
+            "The real story of change in the marine industry for India is the FTAs. Right now, Indian exporters pay 14.5% duty on Chapter 16 value-added products and 4.5% on Chapter 3 raw seafood going into EU markets. Countries like Indonesia, Bangladesh, and Vietnam had preferential access that India didn't. What was particularly frustrating is that a significant portion of Indian raw seafood was going to Thailand and Vietnam, getting reprocessed into value-added product, and then sold into the EU at a lower duty - because rules of origin treat an HSN code change as a change of origin. So, our own raw material was reaching European consumers at a price advantage over what we could offer directly from India.",
+            "The FTAs will change that. The Norway-Iceland-Switzerland-Liechtenstein FTA is expected to be operationalised very soon. The UK FTA should come into force after parliamentary ratification around June or July. The EU agreement will take another twelve months or so. These are genuinely significant events - they put Indian exporters on a level playing field with Southeast Asian competitors in these markets for the first time."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "So this changes the entire production and export equation? How does it play out for competition in eastern markets - Vietnam, Bangladesh, and so on?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "On the eastern side, barriers remain. Vietnam and Indonesia have preferential treatment in Japan. Vietnam can send products into China without import duty. So India hasn't gained ground there. But in the western markets, where the premium for value-added product is highest, the playing field is now levelling.",
+            "The government has set ambitious targets for seafood export growth. But in today's terms, if the focus stays on raw commodity, you can only grow exports by growing raw material supply, which means doubling the farms. That's just not going to happen. We are number two in the world by seafood volume, but only seventh or eighth by value. Thailand and Vietnam are second and third in value with far smaller volumes, because their value per unit is so much higher. That's the gap we now have the market access to close."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "And is the upstream supply chain - shrimp farming on the East Coast, around Vizag, Orissa, Andhra Pradesh - geared up to meet increased demand if this opportunity is to be fully realised?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "I want to be precise here. Increasing raw material supply alone will not grow our exports in dollar terms - we need to add value to existing raw material. That's the real lever. On processing capacity, the answer is yes - there is enough. Average utilisation across Indian seafood processing plants is less than 50%, because capacities are built for peak harvest which lasts only about 60 to 70 days a year, then tapers down. The capacity is sitting there underutilised.",
+            "But there is a structural constraint on raw material growth that people don't discuss enough. All aquaculture shrimp production depends on fishmeal, which is produced from sea-caught fish. So, on one hand, you're pulling wild fish out of the sea to convert into fishmeal to feed the aqua farm. As aquaculture has grown, sea-caught product has actually declined - there's been a degrowth in that category. Sustainable fishing practices are not well implemented. My own business is entirely based on sea-caught product, and my fraternity gets directly affected when aquaculture expands, because high-value table fish ends up being converted into cheap fishmeal. There is a concept of Maximum Sustainable Yield - the sea can only give so much biomass sustainably. Growth for this sector therefore has to be revenue-based and value-based, not volumetric."
+          ]
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "So, the duty structure change has created an enabler to harness existing processing capacity - the market access is now there, and the constraint is on the raw material side, not the processing side."
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Exactly. And on logistics and cold storage - that's not a bottleneck either. Because of the peak and trough in harvesting cycles, everybody has built enough storage capacity to produce, store, and sell over time. There could be isolated instances of shortage, but no critical constraint in the supply chain. We have been lobbying for these FTAs for years. Now that they're here, the ball is in our court."
+          ]
+        },
+        {
+          "title": "Back to Competitiveness: The Ecuador Factor"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "You mentioned Ecuador earlier - they've gained significant ground in the US market during this period. How does India stack up now that the tariff situation has resolved?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Ecuador increased its supply to America by around 20% over the last year, because they were sitting at 10% import duty while India had jumped to 50%. Naturally, buyers shifted. But Ecuador has real constraints - a shortage of skilled labour and sheer workforce numbers. All the labour-intensive, value-added processing work that India is very good at, they cannot do at scale. So India still has that advantage.",
+            "Now with tariffs normalised, and the rupee having depreciated against the dollar, India has actually become more competitive in dollar terms than before. The old supply chains to the United States will start firing again. The combination of tariff parity, labour advantage, and currency movement puts India in a strong position going into the next buying cycle."
+          ]
+        },
+        {
+          "title": "The Domestic Puzzle "
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Let's turn to the domestic market. What does that picture look like?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "A lot more challenging than export. You have to look at it in two channels: retail and HoReCa - hotels, restaurants, catering.",
+            "On the retail side, the picture is bleak. We are one of the biggest seafood brands in India, and our challenge is that you need a tremendous number of feet on street to conduct sales here. Whether it's a mom-and-pop store or a modern trade retailer, buying and distribution still happens more or less at the store level - four packets here, five packets there. That significantly increases the complexity and cost of distribution.",
+            "The bigger problem is that there is almost no organised frozen shelf space for non-vegetarian products. In Pune, Dorabjee will have a large display. But in Nature's Basket or Star Bazaar - the only real modern retailers still operating at scale - the freezer sections are tiny and dominated by chicken. No shelf space, no visibility, no offtake. And above-the-line marketing is so expensive now, competing for eyeballs against everything else, that it's not a viable option for a product like ours.",
+            "There is also a policy issue I'll name directly. The two largest organised retailers in India do not stock non-vegetarian products at all, and they are permitted to make that choice. I think it is discriminatory. A shrimp farmer and a potato farmer should be seen in the same light. This is something the government should address.",
+            "The MRP structure compounds all of this. The cost of running a refrigerated freezer -electricity, premium floor space in high real estate areas is very high. Fixed MRPs don't allow retailers to improve revenue per square foot. That's why modern retail is perishing. I've heard that two lakh kirana stores have shut in Mumbai alone. Blinkit and similar platforms work precisely because they operate from cheaper locations without the frontage premium. Somebody needs to think about an indexed MRP framework tied to real estate costs, or physical retailers won't survive. The silver lining is direct-to-consumer platforms - Blinkit, Instamart, Amazon, where we are seeing genuine improvement in sales.",
+            "The HoReCa segment is a completely different story. Our own sales are 80-85% hotel, restaurant, and catering, growing at 25-30% year on year. The demand is there, especially in the mid-market B-category restaurants and bars that need quick-turnaround, portion-controlled, consistent, cost-effective products that reduce kitchen time. Skilled manpower is a challenge in India - not every kitchen has the chefs to produce exciting dishes from scratch. Ready-to-cook, processed seafood solves that problem, and that segment is growing very well.",
+            "The honest summary of the domestic market is that the whole world is looking at India as a market, and we are forced to look outside because we lack the domestic infrastructure to distribute effectively."
+          ]
+        },
+        {
+          "title": "MSMEs in Marine: Room to Grow?"
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "There are close to 700 MPEDA-registered entities in the sector. Many are MSMEs - upstream, processing, or trading. Is there space for them to grow and capture the FTA opportunity?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "The short answer is no - not in terms of expanding the number of players. The supply side has a hard limit on available raw material, and that constrains how much room there is for more entities to enter and scale.",
+            "The MSMEs that will do well are those that pivot to value-added products - buying raw commodity from processors doing commodity work, adding value, and selling into the market. The ones that stay in pure commodity processing will face more pressure and consolidation. There is also a mindset challenge. When you're used to running 50 or 60 tons a day during a glut of raw material, shifting to a value-added line that runs at 8 to 10 tons a day requires different skills, different management, and a willingness to re-skill your people. That transition is not easy.",
+            "That said, there is a natural structural advantage to being small in this sector. Sea-caught fish is highly perishable and bought in a completely unorganised way - there is no index or auction system like tea or coffee. Large companies cannot efficiently source from every harbour on a daily basis. MSMEs that are physically close to landing centres, with established local sourcing relationships, have a role that large players cannot easily replicate. Access to raw material is the key variable. If you have fish, you can sell fish. You cannot create fish just because you have an order."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "So, in some cases, there's actually an advantage to staying small?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Absolutely. Everybody wants to grow, but you can only grow as much fish as you can procure. The raw material is the ceiling."
+          ]
+        },
+        {
+          "title": "Climate at Sea"
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "We keep hearing about climate risks, ocean warming, erratic weather. Are you seeing any impact of this in practice, in what comes in from the sea?"
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "Definitely. The most visible change is the delayed monsoon - it now extends well into November, sometimes touching December, where it used to end cleanly in September. That disrupts fishing cycles and affects fish spawning, because monsoon runoff carries nutrients through rivers that support breeding. The volume of monsoon also matters - a good monsoon means better nutrition in the water and more fish spawned.",
+            "There is also a significant event called the Indian Ocean Dipole - the temperature differential between the eastern and western Indian Ocean - which has a major effect on fish migration patterns. That event used to occur every eight to nine years. The frequency has shortened considerably. Fish are very sensitive to minor temperature changes, and as migration patterns shift, so does what lands at our harbours — both the type and the quantity.",
+            "Cyclones on the east coast are a growing factor. Every cyclone forces boats back to harbour. A typical fishing sortie is five to eight days. When a cyclone hits, boats come back, wait in harbour for two to three days, then go out again and return in another seven. So almost ten days of a thirty-day month can be lost with no fish landing. The number of cyclones on the Arabian Sea has increased - which the research has confirmed. And cyclones are a product of warmer sea surface temperatures. This is climate change playing out in very direct, operational terms for this sector."
+          ]
+        },
+        {
+          "title": "Closing Reflections"
+        },
+        {
+          "speaker": "Narasimhan V.",
+          "conversations": [
+            "This has been a very enriching conversation. When we scheduled it, we were bracing for bad news - tariff uncertainty, war risk, a difficult outlook. What we've heard instead is that the immediate risks are more manageable than feared, the FTA opportunity is genuinely transformative, and the sector has shown remarkable resilience. The note of caution we take away is that MSMEs in this sector face structural constraints that will limit how broadly the growth gets distributed - and that is worth factoring into how we read the index data in the months ahead."
+          ]
+        },
+        {
+          "speaker": "Arjun Gadre",
+          "conversations": [
+            "That captures it well. The opportunity is real. India is number two in the world by seafood volume but only seventh or eighth by value. The FTAs give us the chance to close that gap - to add value here rather than export our raw material to be processed elsewhere and sold back into markets we should be competing in directly. The infrastructure is there. The markets are opening. Now it is a question of execution and mindset."
+          ]
+        },
+        {
+          "speaker": "Sumita Kale",
+          "conversations": [
+            "Thank you so much, Arjun. This was a genuine masterclass. We came in knowing very little about this sector and we're leaving with a much clearer picture of both the opportunity and the constraints. Thank you for your time and your candour."
+          ]
+        }
+      ]
+ 
+    },
     {
       "title": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
       "slug": "msmes-at-a-turning-point-budget-2026-ftas-and-the-road-ahead",
