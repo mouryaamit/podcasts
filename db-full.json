@@ -436,7 +436,6 @@
         },
         {
           "conversations": [
-            "Disclaimer: This article is based on a recorded conversation between Dr. Sumita Kale, Mr. Narasimhan V, and Mr. Arjun Gadre. It has been edited for clarity, coherence, and length. While care has been taken to preserve the accuracy and intent of the discussion, this version may not reflect the full extent of the original conversation. The views expressed remain those of the individual speakers.",
             "India's MSMEs have shown remarkable resilience through a year of sustained global uncertainty. Tariff shocks, geopolitical disruption, and volatile freight markets tested the sector - and it held. The SIDBI-Jocata Sumpoorn Index, which tracks sales activity of credit-seeking MSMEs, tells that story clearly: averaging 0.57 between April and September 2025, it climbed to 0.62 in January 2026, the highest reading in ten months. Within this broader picture of MSME resilience, certain sectors are pulling ahead. Marine exports are one of them. January 2026 saw double-digit growth in seafood exports, earning a specific mention from the Ministry of Commerce as one of the top-performing export categories of the month – an excellent result given the headwinds of the past year. It is this combination of macro-level MSME strength and sector-level outperformance that makes marine an interesting sector to examine what is working, and what remains unresolved, in India's export economy.",
             "This edition of Sumpoorn MSME Conversations brings in Mr. Arjun Gadre, Managing Director of Gadre Marine Exports, to help us understand what is driving this momentum, and the outlook going ahead."
           ]
@@ -630,8 +629,26 @@
             "Thank you so much, Arjun. This was a genuine masterclass. We came in knowing very little about this sector and we're leaving with a much clearer picture of both the opportunity and the constraints. Thank you for your time and your candour."
           ]
         }
+      ],
+      "guestExperts": [
+        {
+          "profileImage": "Arjun.webp",
+          "name": "Mr. Arjun Gadre",
+          "description": "Managing Director, Gadre Marine Export. Leads one of India’s biggest seafood brands, with deep expertise in value-added processing, global supply chains, and marine export competitiveness."
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita.webp",
+          "name": "Dr. Sumita Kale",
+          "description": "Principal Economist, Jocata; CEO & Senior Fellow, Indicus Foundation. Distinguished macroeconomist shaping financial inclusion discourse, and has been instrumental in shaping the Sumpoorn Index."
+        },
+        {
+          "profileImage": "Narasimhan.webp",
+          "name": "Mr. Narasimhan V.",
+          "description": "Principal Advisor & Chief Architect, Sumpoorn. Former Group COO, Dun & Bradstreet (South Asia, Middle East, Africa). As the architect of Sumpoorn, he brings deep expertise in credit analytics and economic intelligence to its methodology."
+        }
       ]
- 
     },
     {
       "title": "MSMEs at a Turning Point: Budget 2026, FTAs, and the Road Ahead",
