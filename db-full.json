@@ -1,8 +1,36 @@
 {
   "episodes": [
     {
+      "banner": "Explore_Anil_cover.webp",
+      "title": "War, Costs & MSMEs: India's Plastic Crisis | S2 EP1",
+      "slug": "podcast/war-costs-msmes-indias-plastic-crisis",
+      "tags": [
+        "MSME Conversations"
+      ],
+      "month": "April 2026",
+      "duration": "33 min",
+      "guestExperts": [
+        {
+          "profileImage": "AnilVennam.webp",
+          "name": "Mr. Anil Reddy Vennam"
+        }
+      ],
+      "indexExperts": [
+        {
+          "profileImage": "Sumita_circle.webp",
+          "name": "Dr. Sumita Kale"
+        },
+        {
+          "profileImage": "Narasimhan_circle.webp",
+          "name": "Mr. Narasimhan V"
+        }
+      ],
+      "youtubeShareLink": "https://youtu.be/zlkMbVIMN3E?si=ag66bZnlRArZKlju",
+      "featured": false
+    },
+    {
       "banner": "Explore_Arjun_cover.webp",
-      "title": "FTAs, Freight & Fish: India’s $7B Opportunity",
+      "title": "FTAs, Freight & Fish: India’s $7B Opportunity | S1 EP10",
       "slug": "podcast/ftas-freight-fish-india-s-7b-opportunity",
       "tags": [
         "MSME Conversations"
@@ -26,7 +54,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/yvrnVBmpJ8I?si=XH5JJD7FVMSG4yJM",
-      "featured": true
+      "featured": false
     },
     {
       "banner": "Explore_Budget_cover.webp",
@@ -150,7 +178,7 @@
         }
       ],
       "youtubeShareLink": "https://youtu.be/eLxnZ85mbkA?si=V7ivFPzTk7_Zyqtp",
-      "featured": false
+      "featured": true
     },
     {
       "banner": "Explore_Rahul_cover.webp",
@@ -4608,7 +4636,7 @@
   "videos": [
     {
       "banner": "Videos_content6_cover.webp",
-      "title": "Will West Asia Crisis Derail Indian MSMEs Growth Recovery? | Sumpoorn Index",
+      "title": "Will West Asia Crisis Derail Indian MSMEs Growth Recovery? | Sumpoorn Index",
       "month": "April 2026",
       "duration": "2.25 min",
       "youtubeLink": "https://www.youtube.com/embed/sAyffDUEAb0?si=m4tkFeE0OkRmAItx",
